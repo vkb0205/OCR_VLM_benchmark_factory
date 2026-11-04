@@ -1,0 +1,112 @@
+{
+  "variables": {
+    "industry": "điện tử gia dụng",
+    "company_size": "small",
+    "fiscal_year": 2025
+  },
+  "source": "seed_122.json",
+  "values": {
+    "board_paragraph": [
+      "The Company specializes in the design, assembly and distribution of energy-efficient household electronic equipment, including cooktop controllers, smart fans and power-monitoring sockets. Products are sold through regional dealers in Central Vietnam and the Company-operated e-commerce channel.",
+      "Gross profit margins have been maintained through proactive component purchasing in line with plans and a reduction in the defective-product rate.",
+      "The Company has maintained an appropriate level of liquidity, positive cash flows from operating activities and has incurred no new material long-term borrowings.",
+      "In the coming year, the Board of Management plans to expand its range of power-quality monitoring equipment and increase the proportion of components sourced domestically. The Company will continue to invest in safety testing, enhance warranty services and develop a demand forecasting system for each dealer. These plans will be carried out within the limits of existing funding and production capacity.",
+      "Members perform their duties in accordance with the Charter and resolutions of the Board of Directors.",
+      "The financial statements for the year {year} were audited by {auditor}. The Board of Management is responsible for preparing and fairly presenting the financial statements in accordance with Vietnamese Accounting Standards and the prevailing enterprise accounting regime, and for maintaining the internal controls necessary to ensure that the financial statements are free from material misstatement, whether due to fraud or error.",
+      "From the end of the financial year to the date of signing this report, no events requiring adjustment or additional disclosure have occurred other than those presented. The Board of Management considers that the Company has adequate resources to continue operating for the foreseeable future and confirms that the going concern assumptions used are appropriate."
+    ],
+    "auditor_paragraphs": [
+      "The report reflects the Company's transactions and balances for the financial year ended on the same date.",
+      "The Board of Management is responsible for the preparation and fair presentation of the financial statements; selecting appropriate accounting policies; making reasonable estimates; and maintaining the internal controls that the Board of Management determines are necessary to ensure that the financial statements are free from material misstatement, whether due to fraud or error.",
+      "Our responsibility is to express an opinion on the financial statements based on the results of our audit. We conducted our work in accordance with Vietnamese Standards on Auditing. These standards require us to comply with ethical requirements and to plan and perform the audit to obtain reasonable assurance as to whether the financial statements are free from material misstatement.",
+      "An audit involves performing procedures to obtain audit evidence regarding the amounts and disclosures in the financial statements. The procedures selected depend on the auditor's judgment, including the assessment of the risks of material misstatement. We also evaluate the appropriateness of the accounting policies and estimates, as well as the overall presentation of the financial statements.",
+      "We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our unmodified audit opinion. During the audit, we identified no matters that would change the opinion expressed in this report. The comparative figures for the year {prev} have been reviewed appropriately for presentation purposes.",
+      "This audit report is issued on the same date as the financial statements and is intended solely for the use of the Company's shareholders, Board of Directors and Board of Management. We accept no responsibility to any other party using this report for an inappropriate purpose."
+    ],
+    "board_title": "REPORT OF THE BOARD OF MANAGEMENT",
+    "auditor_title": "INDEPENDENT AUDITOR'S REPORT",
+    "auditor_addressee": "To: The Shareholders and Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "B09. General information",
+        "paragraphs": [
+          "The Company operates in the assembly and distribution of household electronic equipment sector.",
+          "The product range includes cooktop controllers, smart fans and power-monitoring sockets. The Company sells to dealers and end consumers through approved channels. There are no subsidiaries or associates, and no consolidation transactions took place during the period."
+        ],
+        "table": true
+      },
+      {
+        "title": "B10. Significant accounting policies",
+        "paragraphs": [
+          "Revenue is recognized when control of the goods transfers and the amount can be reliably measured. Inventories are accounted for using the weighted average method; expenses are recognized in the period in which they are incurred. Immaterial foreign currency items are translated at the exchange rate prevailing on the transaction date.",
+          "Assets are presented at cost less accumulated depreciation or provisions. Accounting estimates are reviewed at each reporting date. Any changes in estimates are recognized in the period in which the change occurs and in the relevant subsequent periods."
+        ],
+        "table": true
+      },
+      {
+        "title": "B11. Cash and cash equivalents",
+        "paragraphs": [
+          "Cash comprises cash on hand and demand deposits with banks. The Company had no cash equivalents at the reporting date. Bank accounts are reconciled periodically to the accounting records, and there are no significant restrictions on their use.",
+          "The closing balance increased as cash collections from sales improved, although the Company incurred expenditure on testing equipment and replenished key components. The Board of Management has identified no unusual liquidity risk arising from the existing cash balance."
+        ],
+        "table": true
+      },
+      {
+        "title": "B12. Short-term receivables",
+        "paragraphs": [
+          "Receivables are recorded at their carrying amounts less estimated impairment provisions. The Board of Management assesses each balance based on its aging, payment history and updated information from dealers.",
+          "Prepayments to suppliers mainly relate to reserving components in accordance with the production plan for the first quarter of the following year. Other receivables comprise transportation cost reimbursements and short-term deposits."
+        ],
+        "table": true
+      },
+      {
+        "title": "B13. Inventories",
+        "paragraphs": [
+          "Inventories comprise circuit boards, components, work in progress and finished goods. Provisions for inventory write-downs are made for slow-moving items or items whose net realizable value is below cost. The year-end stocktake was carried out with the participation of the warehouse, accounting and production departments.",
+          "During the year, the Company increased its inventory of components for the power-monitoring socket product line to mitigate supply disruptions. Certain old casing models were classified separately, and a provision was recorded based on their estimated recoverable value."
+        ],
+        "table": true
+      },
+      {
+        "title": "B14. Property, plant and equipment and construction in progress",
+        "paragraphs": [
+          "The Company capitalizes direct costs incurred to bring equipment to the condition necessary for it to be capable of operating as intended.",
+          "During the period, the Company completed an electrical safety testing area and brought part of its automated assembly equipment into use. Construction in progress at year end comprises items that have not been accepted and do not yet qualify for recognition as an increase in cost."
+        ],
+        "table": true
+      },
+      {
+        "title": "B15. Liabilities and taxes",
+        "paragraphs": [
+          "Borrowings are recognized at the proceeds received; interest expense is recognized over time. Current corporate income tax is calculated on taxable income in accordance with prevailing regulations. The Company had no material overdue debts at the reporting date.",
+          "Trade payables increased in line with the volume of component purchases. Taxes payable and employee payables are settled according to the normal schedule. Long-term borrowings are used to finance machinery and are repayable in equal principal installments over the coming years."
+        ],
+        "table": true
+      },
+      {
+        "title": "B16. Equity",
+        "paragraphs": [
+          "The development investment fund is appropriated from profits of prior years pursuant to a resolution of the General Meeting of Shareholders. Profit after tax for the current period is retained to supplement working capital and fund testing investment.",
+          "The Company has not issued new shares, repurchased shares or granted any shareholder special rights beyond those set out in the Charter. The distribution of profits will be considered at the next annual meeting after the financial statements have been approved."
+        ],
+        "table": true
+      },
+      {
+        "title": "B17. Revenue and expenses",
+        "paragraphs": [
+          "Revenue is derived primarily from sales of household equipment and components to domestic dealers. Revenue is presented net of deductions. Cost of sales increased in line with volume, while the gross profit margin improved due to a higher proportion of higher-value-added products.",
+          "Selling expenses include transportation, warranty, commissions and product communications. Administrative expenses comprise salaries, service rentals and operating costs. The Board of Management regularly compares budgets with actual results to limit expenditures that do not create value."
+        ],
+        "table": true
+      },
+      {
+        "title": "B18. Events after the reporting period",
+        "paragraphs": [
+          "Component purchase contracts and orders received after the closing date are ordinary-course business transactions.",
+          "The Board of Management has reviewed liquidity, production plans and existing commitments through the date of signing the report. There are no disputes, asset losses or legal changes that would materially affect the figures presented."
+        ],
+        "table": false
+      }
+    ]
+  }
+}

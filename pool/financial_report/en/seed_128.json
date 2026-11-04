@@ -1,0 +1,109 @@
+{
+  "variables": {
+    "industry": "vật liệu xây dựng",
+    "company_size": "medium",
+    "fiscal_year": 2025
+  },
+  "source": "seed_128.json",
+  "values": {
+    "board_paragraph": [
+      "In {year}, the Company maintained a customer network comprising regional distributors in the midland areas, construction teams, and small and medium-sized construction enterprises.",
+      "Key products include large-format porcelain tiles, decorative ceramic tiles, and skirting accessories. The Company does not use third-party brands and sells products under direct contracts with agents. The Board of Management focuses on controlling glaze material norms, reducing raw material loss, and adjusting production plans in line with actual demand.",
+      "Cost of sales continued to be affected by fuel and clay, but gross profit margin improved due to a product mix with a higher proportion of porcelain.",
+      "Receivables are reviewed by each agent, while inventory is physically counted and provided for in accordance with current regulations.",
+      "In {next}, the Company plans to complete the glaze mixing area, expand the large-format tile group, and increase the proportion of orders under project contracts. The Board of Management will continue to monitor fuel prices, customer credit terms, and the progress of debt collection. The objective is selective growth, ensuring product quality, and maintaining stable operating cash flow.",
+      "The financial statements were audited by {auditor} under the contract signed with the Company.",
+      "The Board of Management is responsible for preparing and presenting the financial statements fairly and truthfully in accordance with the Vietnamese corporate accounting regime and relevant regulations. The Board of Management has maintained the internal control system necessary to ensure that the financial statements are free from material misstatement, whether due to fraud or error.",
+      "After the end of the accounting period, the Company signed additional contracts to supply tiles for residential projects in Phu Tho and Yen Bai."
+    ],
+    "auditor_paragraphs": [
+      "The Board of Management is responsible for selecting accounting policies, accounting estimates, and maintaining necessary internal control.",
+      "Our responsibility is to express an opinion on the financial statements based on the results of our audit. We conducted our audit in accordance with Vietnamese Standards on Auditing. Those standards require that auditors comply with ethical requirements and plan and perform procedures to obtain reasonable assurance that the financial statements are free from material misstatement.",
+      "An audit includes performing procedures to obtain audit evidence about the amounts and disclosures in the financial statements. The procedures selected depend on the auditor's judgment, including the assessment of the risks of material misstatement, whether due to fraud or error. We also assess the appropriateness of accounting policies and the reasonableness of accounting estimates made by the Board of Management.",
+      "We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our audit opinion. During the audit, we reviewed documentation on inventory, agent receivables and payables, fixed assets, bank loans, and accrued taxes. No material limitation on the scope of the audit was noted.",
+      "This audit report is prepared for the purpose of providing information to the shareholders and the Board of Directors of the Company. We are not responsible for the use of the report for any other purpose. No events occurring after the date of the financial statements have changed this independent audit opinion."
+    ],
+    "board_title": "REPORT OF THE BOARD OF MANAGEMENT",
+    "auditor_title": "INDEPENDENT AUDITOR'S REPORT",
+    "auditor_addressee": "To: The Shareholders and the Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "B09-DN.1. Nature of Operations",
+        "paragraphs": [
+          "The principal business activity is the production of wall and floor tiles, decorative tiles, and finishing accessories. The currency used in accounting is the Vietnamese dong."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN.2. Significant Accounting Policies",
+        "paragraphs": [
+          "The financial statements are prepared on an accrual basis, in accordance with the Vietnamese corporate accounting regime. Inventory is recognized at the lower of cost and net realizable value; inventory issued is calculated using the weighted average method."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN.3. Cash and Cash Equivalents",
+        "paragraphs": [
+          "Cash comprises cash on hand and non-term bank deposits. Cash equivalents are deposits with an original term of no more than three months that are readily convertible into cash and are subject to an insignificant risk of changes in value. The Company periodically reconciles bank balances with the accounting records."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN.4. Receivables",
+        "paragraphs": [
+          "Receivables are recognized at carrying amount after deducting the provision for doubtful debts. The Company assesses recoverability based on ageing, payment history, and updated information from each customer. Long-overdue debts are considered separately and submitted to competent authority for approval of handling measures."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN.5. Inventory",
+        "paragraphs": [
+          "Inventory comprises clay, glaze, fuel, work in progress, finished goods, and merchandise. Cost includes purchase costs, processing costs, and other directly related costs. The Company performs year-end physical counts at the raw material warehouse and finished goods warehouse; a provision for decline in value is recognized when net realizable value is lower than cost."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN.6. Fixed Assets",
+        "paragraphs": [
+          "Tangible fixed assets mainly comprise factory buildings, kilns, tile pressing lines, and vehicles. During the year, the Company completed several items of renovation of the material mixing line and put them into use after acceptance. No fixed assets are pledged to third parties other than those presented in the borrowings note."
+        ],
+        "table": false
+      },
+      {
+        "title": "B09-DN.7. Borrowings and Finance Lease Liabilities",
+        "paragraphs": [
+          "Borrowings are recognized at the amount actually received and classified as short-term or long-term according to the repayment term. Interest expense is recognized in profit or loss, except for the portion eligible for capitalization in accordance with regulations. The Company has repaid principal and interest on time under credit contracts signed with lending institutions."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN.8. Owners' Equity",
+        "paragraphs": [
+          "Dividends are recognized when a resolution of the General Meeting of Shareholders is issued. Undistributed profit after tax is used to supplement working capital, make appropriations to funds, and pay dividends in accordance with approved decisions."
+        ],
+        "table": false
+      },
+      {
+        "title": "B09-DN.9. Revenue and Cost of Sales",
+        "paragraphs": [
+          "Revenue from sales is recognized when the significant risks and rewards of ownership of the products have been transferred to the customer, the Company no longer retains management rights as owner, and the ability to obtain economic benefits is reasonably certain. Revenue is presented net of discounts and sales deductions."
+        ],
+        "table": false
+      },
+      {
+        "title": "B09-DN.10. Corporate Income Tax",
+        "paragraphs": [
+          "Current corporate income tax expense is calculated on taxable income for the year at the applicable tax rate. Deferred tax is determined on temporary differences between the carrying amounts of assets and liabilities and their tax bases. The Company has declared and paid taxes within the prescribed deadlines."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN.11. Events after the End of the Accounting Period",
+        "paragraphs": [
+          "The Board of Management has reviewed transactions arising up to the date of signing the report and has not identified any indication of a material impact on the Company's ability to continue as a going concern."
+        ],
+        "table": false
+      }
+    ]
+  }
+}

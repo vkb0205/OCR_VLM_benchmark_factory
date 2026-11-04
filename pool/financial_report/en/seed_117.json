@@ -1,0 +1,127 @@
+{
+  "variables": {
+    "industry": "vật liệu xây dựng",
+    "company_size": "small",
+    "fiscal_year": 2023
+  },
+  "source": "seed_117.json",
+  "values": {
+    "board_paragraph": [
+      "The Company manufactures ceramic wall tiles, floor tiles and finishing accessories for civil construction works. The plant has continuous pressing and firing lines, using clay, kaolin and colored glaze purchased from domestic suppliers.",
+      "During {year}, the Company's principal activities were the production and distribution of wall and floor tiles through agents in the Central Coast region and certain construction contractors. Sales volume increased thanks to completed residential projects after the rainy season. The Company maintained a policy of batch-by-batch glaze color inspection, delivery against purchase orders and prudent management of agent receivables.",
+      "Profit margins were affected by increases in gas and transportation costs, but improvements in the body formulation, reductions in the defective rate and adjustments to the product mix supported the overall results. The Board of Management considers these results to be consistent with the plan approved by the Board of Directors.",
+      "The loans were used mainly to supplement working capital and finance equipment. The Company monitors debt aging, inventory levels and agent credit limits monthly to control liquidity risk.",
+      "The Board of Management will prioritize occupational safety, energy savings, quality control and receivables collection. The plan was developed on the basis of existing market demand and available financial resources.",
+      "The financial statements for the year {year} were audited by {auditor} under a contract signed during the year.",
+      "The Board of Management is responsible for the true and fair preparation and presentation of the financial statements in accordance with prevailing Vietnamese accounting standards and regime. The Board of Management has maintained the necessary internal control system, kept adequate records and assessed the Company's ability to continue as a going concern. No material events have arisen after the end of the accounting period that require adjustment or additional disclosure beyond the matters stated."
+    ],
+    "auditor_paragraphs": [
+      "The Board of Management is responsible for the true and fair preparation and presentation of the financial statements in accordance with Vietnamese accounting standards and regime. This responsibility includes designing, implementing and maintaining internal control relevant to the preparation of financial statements that are free from material misstatement, whether due to fraud or error.",
+      "In preparing the financial statements, the Board of Management is responsible for assessing the Company's ability to continue as a going concern, disclosing related matters where necessary, and using the going concern basis of accounting unless there is an intention to liquidate, cease operations or there is no other realistic alternative.",
+      "Our responsibility is to express an opinion on the financial statements based on the results of our audit. We conducted our audit in accordance with Vietnamese auditing standards. Those standards require that we comply with ethical requirements and plan and perform the audit to obtain reasonable assurance about whether the financial statements are free from material misstatement.",
+      "The audit involves performing procedures to obtain audit evidence about the amounts and disclosures in the financial statements. The procedures selected depend on the auditor's judgment, including the assessment of the risks of material misstatement, whether due to fraud or error. In assessing risks, the auditor considers relevant internal control.",
+      "We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our unqualified audit opinion. The audit also includes evaluating the appropriateness of accounting policies used and the reasonableness of accounting estimates, as well as evaluating the overall presentation of the financial statements.",
+      "Based on the evidence obtained, we have not identified any matter that causes us to believe that the financial statements do not present fairly, in all material respects, the financial position, results of operations and cash flows of the Company. This auditor's report is issued for the purpose of the Company's financial statements for the year {year}."
+    ],
+    "board_title": "REPORT OF THE BOARD OF MANAGEMENT",
+    "auditor_title": "INDEPENDENT AUDITOR'S REPORT",
+    "auditor_addressee": "To: The Shareholders and the Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "1. Nature of operations",
+        "paragraphs": [
+          "The principal business activity is the manufacture of ceramic tiles, floor tiles and the trading of finishing materials. The Company has a plant at the Tan Lap Building Materials Production Cluster and a network of agents in the Central region.",
+          "The currency used in accounting records and in the presentation of the financial statements is Vietnamese dong."
+        ],
+        "table": false
+      },
+      {
+        "title": "2. Basis of preparation and significant accounting policies",
+        "paragraphs": [
+          "The financial statements are prepared on an accrual basis, under the historical cost convention and on the going concern assumption. Foreign currency transactions that are not material are translated at the actual transaction rate.",
+          "Revenue is recognized when the significant risks and rewards of ownership of the goods have been transferred to the customer, the Company no longer retains managerial control over the goods as owner, and the ability to receive economic benefits is reasonably certain. Expenses are recognized in matching with revenue and according to the nature of the transaction."
+        ],
+        "table": false
+      },
+      {
+        "title": "3. Cash and cash equivalents",
+        "paragraphs": [
+          "Cash comprises cash on hand and demand bank deposits. The Company reconciles cash on hand weekly and bank balances monthly. Deposits with an original maturity of no more than three months and readily convertible into a known amount of cash are presented as cash equivalents."
+        ],
+        "table": true
+      },
+      {
+        "title": "4. Trade receivables and other receivables",
+        "paragraphs": [
+          "Receivables are presented at carrying amount net of allowance for doubtful debts. The Board of Management assesses recoverability based on payment history, debt confirmations and information on the operating condition of each customer. Overdue balances are monitored separately and have specific collection plans.",
+          "During the year, no receivables were used by the Company as collateral for loans. There were no material receivables from related parties other than the transactions disclosed in accordance with regulations."
+        ],
+        "table": true
+      },
+      {
+        "title": "5. Inventories",
+        "paragraphs": [
+          "Inventories are measured at the lower of cost and net realizable value. The cost of raw materials is determined using the weighted average method; the cost of finished goods includes direct materials, direct labor and manufacturing overhead allocated based on normal capacity.",
+          "The Company performs a physical count at the end of each month and makes an allowance for slow-moving goods, color defects or goods no longer suitable for market designs. During the year {year}, the allowance increased due to the revaluation of certain batches of old-size tiles."
+        ],
+        "table": true
+      },
+      {
+        "title": "6. Fixed assets",
+        "paragraphs": [
+          "Tangible fixed assets are stated at cost less accumulated depreciation. Cost includes the purchase price and directly attributable costs of bringing the asset to the condition ready for its intended use.",
+          "Depreciation expense for the year is allocated to cost of sales, selling expenses and general and administrative expenses according to the purpose of use."
+        ],
+        "table": true
+      },
+      {
+        "title": "7. Borrowings and accrued expenses",
+        "paragraphs": [
+          "Borrowings are recognized at the amount actually received and classified as short-term or long-term according to the remaining settlement term at the end of the accounting period. Interest expense is recognized in finance costs for the period, except for the portion eligible for capitalization to construction in progress. The Company complies with the basic terms of the credit agreements.",
+          "Short-term borrowings are mainly used to purchase raw materials and pay transportation costs. Long-term borrowings are used to invest in kiln equipment and are secured by part of the plant's machinery."
+        ],
+        "table": true
+      },
+      {
+        "title": "8. Owners' equity",
+        "paragraphs": [
+          "Shareholders have voting rights and are entitled to dividends in accordance with resolutions of the General Meeting of Shareholders. The Company has not issued preference shares and does not hold treasury shares.",
+          "Retained earnings after tax are used to supplement business capital, make fund appropriations and pay dividends in accordance with valid resolutions."
+        ],
+        "table": true
+      },
+      {
+        "title": "9. Revenue and cost of sales",
+        "paragraphs": [
+          "Revenue from tile sales is recognized based on invoices and delivery notes accepted by customers. Trade discounts, sales returns and sales allowances are recorded as reductions in revenue. The Company's revenue is not concentrated on any single customer to the extent that it creates a material dependency risk.",
+          "Cost of sales reflects raw materials, labor, depreciation and manufacturing overhead allocated to goods sold. The Board of Management reviews the body formulation norms and loss rates after each quarter to improve resource efficiency."
+        ],
+        "table": true
+      },
+      {
+        "title": "10. Corporate income tax",
+        "paragraphs": [
+          "Current corporate income tax expense is calculated on taxable income for the year at the prevailing tax rate. The Company files provisional quarterly declarations and finalizes settlement after the end of the year. Taxes payable are reconciled with the tax authority in accordance with regulations.",
+          "Deferred tax assets are recognized only when it is probable that future economic benefits will be realized."
+        ],
+        "table": true
+      },
+      {
+        "title": "11. Transactions and balances with related parties",
+        "paragraphs": [
+          "The Company's related parties include members of the Board of Directors, the Board of Management and individuals with control or significant influence. Transactions with related parties are carried out on normal commercial terms and approved according to authority.",
+          "During the year {year}, no material loans, guarantees or purchases or sales of goods with related parties arose. Remuneration and salaries of management members are recorded in general and administrative expenses in accordance with the Company's policy."
+        ],
+        "table": true
+      },
+      {
+        "title": "12. Commitments and events after the end of the accounting period",
+        "paragraphs": [
+          "The Company has commitments to pay land rent and infrastructure service fees under long-term contracts for the production area. Payments are allocated to expenses over the benefit period. The Company has no significant capital investment commitments not reflected other than the construction in progress disclosed.",
+          "From the end of the accounting period to the date of issuance of the financial statements, no events have arisen that would significantly change the amounts presented or materially affect the Company's ability to continue as a going concern. The Board of Management continues to monitor fuel prices and the construction market during the implementation of the plan for {next}."
+        ],
+        "table": true
+      }
+    ]
+  }
+}

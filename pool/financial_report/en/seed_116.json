@@ -1,0 +1,130 @@
+{
+  "variables": {
+    "industry": "nông sản xuất khẩu",
+    "company_size": "large",
+    "fiscal_year": 2025
+  },
+  "source": "seed_116.json",
+  "values": {
+    "board_paragraph": [
+      "{company} operates in the export agricultural products sector, focusing on the procurement, preliminary processing, and packaging of fragrant rice, cashew nuts, and dried fruit. Products are delivered under contracts to food distributors in Asia, the Middle East, and certain European markets.",
+      "In {year}, the Company expanded its linked growing areas with farming households, applied electronic logs to each raw material lot, and increased cold storage capacity. The quality control department increased sampling frequency, while the logistics department coordinated vessel schedules to reduce container dwell time. These measures helped the Company maintain the consistency of export goods amid fluctuating freight costs and exchange rates.",
+      "Growth results came from higher output of bagged rice and dried fruit, an improved customer mix, and tighter control of plant loss norms. Financial costs continued to be closely monitored due to the large working capital requirement.",
+      "Inventories increased in line with the plan to reserve raw materials at the beginning of the crop season, but receivables were classified by aging and credit limit. Management regularly reviewed collection schedules and payment obligations to banks.",
+      "In {next}, the Company plans to prioritize products with clear traceability, increase the proportion of packaging to each customer's specific specifications, and complete an energy-saving drying line. New investments will be considered based on cash flow efficiency, supply capacity, and the quarantine requirements of each market. The Company is also preparing cargo insurance arrangements for long-haul routes.",
+      "The Board of Directors and the Board of General Directors performed their duties in accordance with the charter, resolutions of the General Meeting of Shareholders, and internal governance regulations. Meetings during the year focused on raw material sources, export quality, warehouse safety, and credit risk management. The list of key personnel is presented in the table attached to this report; there were no changes that disrupted executive operations.",
+      "The Board of General Directors is responsible for preparing and presenting the financial statements truthfully and fairly, selecting appropriate accounting policies, and maintaining the necessary internal control system. The Company reconciled data among the general ledger, warehouse records, and customer receivables. The statements were prepared on a going concern basis; estimates for provisions and taxes were considered based on available information.",
+      "{auditor} was engaged to audit the financial statements for the year {year}. According to the assessment of the Board of General Directors, no material events requiring adjustment of the figures occurred from the end of the accounting period to the date of signing the report. A long-term supply contract was renewed after the reporting date, but this was consistent with the business plan and did not change the items presented.",
+      "The Board of General Directors acknowledges the cooperation of employees, linked growing areas, customers, and transport partners over the past year. The Company continues to aim to increase the value of agricultural products through processing, reduce post-harvest losses, and maintain financial discipline. Revenue, profit, assets, and owners' equity indicators are presented consistently with the financial statements prepared."
+    ],
+    "auditor_paragraphs": [
+      "The report is prepared in Vietnamese dong and presents comparative figures for the previous year.",
+      "The Board of General Directors is responsible for preparing and fairly presenting the financial statements and for designing the internal controls necessary to ensure that the statements are free from material misstatement, whether due to fraud or error. This responsibility includes selecting appropriate accounting policies, making reasonable estimates, and assessing the Company's ability to continue as a going concern.",
+      "Our responsibility is to express an opinion on the financial statements based on the results of our audit. We conducted our audit in accordance with Vietnamese auditing standards. Those standards require us to comply with ethical requirements and to plan and perform procedures to obtain reasonable assurance that the financial statements are free from material misstatement.",
+      "An audit involves performing procedures to obtain evidence about the amounts and disclosures in the financial statements. The procedures selected depend on the auditor's judgment, including the assessment of the risks of material misstatement, whether due to fraud or error. In assessing those risks, the auditor considers relevant internal controls but does not express an opinion on the effectiveness of those controls.",
+      "We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our audit opinion. During the audit, we communicated with the Board of Directors and the Board of General Directors regarding the scope, schedule, significant findings, and matters to be noted in the preparation of the financial statements.",
+      "Based on the evidence obtained, we issue an unqualified opinion on the Company's financial statements for the year {year}. These financial statements are prepared for the purpose of providing financial information to shareholders and related parties; the notes are an integral part and should be read together with the main statements."
+    ],
+    "board_title": "REPORT OF THE BOARD OF GENERAL DIRECTORS",
+    "auditor_title": "INDEPENDENT AUDITOR'S REPORT",
+    "auditor_addressee": "To: The Shareholders and the Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "01. Operating characteristics",
+        "paragraphs": [
+          "The currency used for recording and presentation is Vietnamese dong. The Company organizes its operations under seasonal contracts and long-term delivery contracts.",
+          "During the year, the Company maintained a network of links with farming households, preliminary processing facilities, and transport providers. There are no dependent branches of material size outside the main production site. The Board of General Directors assesses that the Company has sufficient resources to continue operating normally for at least twelve months from the date of preparing the report."
+        ],
+        "table": true
+      },
+      {
+        "title": "02. Significant accounting policies",
+        "paragraphs": [
+          "The financial statements are prepared in accordance with the Vietnamese Corporate Accounting Regime and current regulations on the preparation and presentation of financial statements. Assets are recognized at historical cost, except for items required to be revalued or provided for under regulations. Export revenue is recognized when the Company has transferred substantially all risks and rewards, it is probable that economic benefits will be received, and the amount can be measured reliably.",
+          "Inventories are measured at the lower of cost and net realizable value. Cost of goods issued is determined using the weighted average method. Receivables are assessed for provision based on aging, payment history, and information on customers' ability to pay."
+        ],
+        "table": true
+      },
+      {
+        "title": "03. Cash and cash equivalents",
+        "paragraphs": [
+          "Cash comprises cash on hand and balances in non-term bank deposits. Cash equivalents are short-term investments with original maturities of no more than three months from the date of purchase, readily convertible into a known amount of cash, and subject to insignificant risk of changes in value. The Company reconciles bank balances monthly and counts cash on hand in accordance with internal regulations.",
+          "Cash balances at year-end increased compared with the beginning of the year due to improved cash flows from operating activities, although the Company disbursed funds for the drying line and paid dividends. A portion of deposits is held at banks that handle export payments and is not restricted in use."
+        ],
+        "table": true
+      },
+      {
+        "title": "04. Trade receivables and other receivables",
+        "paragraphs": [
+          "Trade receivables mainly arise from deliveries of agricultural products under bank transfer payment terms. The Company monitors receivables by contract, payment currency, and credit term. Before signing a new contract, the sales department assesses commercial information, transaction history, and limits approved by the Board of General Directors.",
+          "A provision for doubtful receivables is made for amounts showing indicators of impaired recoverability. During the year, the Company strengthened receivable confirmations and collection of overdue amounts. The Board of General Directors did not identify any other receivables with material risk beyond the amounts reflected in the financial statements."
+        ],
+        "table": true
+      },
+      {
+        "title": "05. Inventories",
+        "paragraphs": [
+          "Inventories comprise paddy raw material, cashew nuts, fresh fruit, packaged finished goods, and production supplies. Raw materials are checked for moisture, impurities, and origin before warehousing. Warehouses are divided by product type, receipt date, and inspection status. Purchase cost includes the purchase price, transport and handling costs, and other directly related costs.",
+          "At year-end, raw material quantities increased because the Company proactively purchased at harvest time to secure orders in early the following year. Net realizable value is determined based on estimated selling price less costs to complete and selling costs. The provision reflects slow-moving lots or lots with estimated selling prices below cost."
+        ],
+        "table": true
+      },
+      {
+        "title": "06. Fixed assets and construction in progress",
+        "paragraphs": [
+          "The Company's tangible fixed assets include factory buildings, cleaning machines, drying lines, packaging equipment, transport vehicles, and management equipment. Cost is recognized when the asset is ready for use. Routine repair costs are recognized as expenses in the period; upgrades that increase capacity or extend useful life are capitalized in accordance with regulations.",
+          "In {year}, the Company continued constructing cold storage and installing automated drying equipment. Construction in progress is accumulated by project and is not depreciated until completed and put into use. The Board of General Directors reviewed indicators of impairment and did not recognize additional losses beyond the amounts presented."
+        ],
+        "table": true
+      },
+      {
+        "title": "07. Borrowings and financial obligations",
+        "paragraphs": [
+          "Short-term borrowings are used to supplement working capital for the procurement season and to pay for raw materials. Long-term borrowings mainly finance factory buildings, cold storage, and processing lines. Interest rates are determined under credit agreements and may be adjusted periodically. The Company monitors limit covenants, collateral, and repayment schedules using monthly cash flow plans.",
+          "Certain borrowings are secured by land use rights, factory buildings, and machinery. Borrowing costs are recognized in profit or loss, except for the portion eligible for capitalization during the construction investment period."
+        ],
+        "table": true
+      },
+      {
+        "title": "08. Owners' equity and undistributed profit",
+        "paragraphs": [
+          "Share premium arose from previous issuances. The development investment fund is appropriated under resolutions of the General Meeting of Shareholders to expand warehouses, upgrade equipment, and develop raw material areas.",
+          "Undistributed profit after tax at year-end comprises the cumulative amount at the beginning of the period and the profit for {year} after considering distributions. The Company paid dividends under the adopted resolution and retained part of the profit to supplement capital for its investment plan. Future distributions depend on business results and shareholder approval."
+        ],
+        "table": true
+      },
+      {
+        "title": "09. Revenue and cost of sales",
+        "paragraphs": [
+          "Revenue is classified by product group and recognized when control of the goods has been transferred under the delivery terms. Export revenue is translated at the transaction exchange rate at the time of recognition. Revenue deductions comprise trade discounts, returned goods, and quality-based support for shipment lots, determined on the basis of reconciliation records with customers.",
+          "Cost of sales includes raw material costs, direct labor, processing costs, and allocated manufacturing overhead. The Company analyzes gross margins by product group to adjust procurement plans and selling prices. Contracts with multiple-delivery terms are tracked separately by accepted quantities."
+        ],
+        "table": true
+      },
+      {
+        "title": "10. Corporate income tax",
+        "paragraphs": [
+          "Current corporate income tax expense is calculated on the year's taxable income at the applicable tax rate and with adjustments under tax law. The Company declares, makes provisional payments, and finalizes tax in accordance with regulations. Non-deductible expenses for tax purposes are tracked separately in the finalization records and do not change accounting expense other than the recognized difference.",
+          "Deferred tax assets and liabilities are recognized for deductible or taxable temporary differences to the extent that it is probable that taxable profit will be available for utilization. The Board of General Directors reviewed taxes related to export activities, value added tax, and contractor tax, if any."
+        ],
+        "table": true
+      },
+      {
+        "title": "11. Transactions with related parties",
+        "paragraphs": [
+          "The Company's related parties comprise members of the Board of Directors, the Board of General Directors, and entities over which these individuals have control or significant influence. Related party transactions are carried out on approved commercial terms and are supported by complete contracts and documents. The Company did not recognize any preferential loans or material guarantees for management personnel.",
+          "Remuneration and benefits of management personnel are determined under resolutions and salary regulations. Year-end payables are settled according to the normal schedule. The Board of General Directors confirms that there were no unusual related party transactions not disclosed in these financial statements."
+        ],
+        "table": true
+      },
+      {
+        "title": "12. Commitments and events after the reporting date",
+        "paragraphs": [
+          "The Company has commitments to purchase raw materials on a seasonal basis and commitments to lease certain cold storage equipment. These commitments were entered into under normal business conditions, and payment amounts depend on delivered volumes and acceptance progress. The Company also has obligations to pay land rent, insurance, and logistics services under contracts that remain in force.",
+          "These events do not provide evidence of conditions that existed at the balance sheet date and do not require adjustment of the figures. There were no litigation or unusual events requiring additional recognition."
+        ],
+        "table": true
+      }
+    ]
+  }
+}

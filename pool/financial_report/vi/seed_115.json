@@ -1,0 +1,94 @@
+{
+ "variables": {
+  "industry": "cơ khí chế tạo",
+  "company_size": "small",
+  "fiscal_year": 2023
+ },
+ "source": "seed_115.json",
+ "values": {
+  "board_paragraph": [
+   "Công ty duy trì hệ thống kiểm tra kích thước tại từng công đoạn.",
+   "Trong năm {year}, hoạt động chính của Công ty là nhận gia công chi tiết thép, chế tạo băng tải và sửa chữa thiết bị công nghiệp. Khách hàng chủ yếu là các đơn vị sản xuất xi măng, gạch không nung và cơ khí phụ trợ trong khu vực phía Bắc. Đơn hàng được ký theo từng đợt, thời hạn giao hàng từ ba đến mười tuần, thanh toán phần lớn bằng chuyển khoản sau nghiệm thu.",
+   "Biên lợi nhuận được cải thiện nhờ điều chỉnh định mức vật tư, giảm phế phẩm và tăng tỷ trọng sản phẩm khung bệ có giá trị gia tăng. Công ty không phát sinh sự kiện bất thường làm ảnh hưởng trọng yếu đến kết quả kinh doanh.",
+   "Công ty duy trì khả năng thanh toán ngắn hạn và không có khoản vay quá hạn.",
+   "Trong năm tới, Ban Tổng Giám đốc dự kiến mở rộng nhóm khách hàng trong lĩnh vực thiết bị môi trường, đầu tư bổ sung một máy cắt laser công suất vừa và chuẩn hóa dữ liệu định mức. Công ty sẽ kiểm soát chặt thời gian thu hồi công nợ, ưu tiên hợp đồng có điều khoản tạm ứng và tiếp tục đào tạo thợ hàn, thợ tiện theo yêu cầu kỹ thuật của từng sản phẩm.",
+   "Hội đồng quản trị và Ban Tổng Giám đốc gồm các thành viên nêu tại bảng dưới đây. Báo cáo tài chính năm {year} được kiểm toán bởi {auditor}. Ban Tổng Giám đốc chịu trách nhiệm lập, trình bày trung thực báo cáo tài chính theo Chuẩn mực kế toán Việt Nam và chế độ kế toán doanh nghiệp hiện hành; đồng thời xác nhận rằng sau ngày kết thúc kỳ kế toán không có sự kiện cần điều chỉnh hoặc thuyết minh bổ sung ngoài các nội dung đã trình bày.",
+   "Cơ khí chế tạo là ngành nghề cốt lõi của Công ty, đòi hỏi phối hợp chặt chẽ giữa thiết kế, chuẩn bị phôi, gia công cơ khí và nghiệm thu tại hiện trường. Trong năm, các tổ trưởng sản xuất cập nhật tiến độ theo ngày, đối chiếu bản vẽ với phiếu công nghệ và ghi nhận nguyên nhân của mọi lần sửa chữa. Cách tổ chức này giúp Công ty giữ ổn định chất lượng trong khi vẫn đáp ứng các đơn hàng có thời gian giao ngắn.",
+   "Ban Tổng Giám đốc cũng chú trọng an toàn lao động và sử dụng vật tư tiết kiệm. Người lao động được hướng dẫn kiểm tra máy trước ca, phân loại phoi thép và bảo quản dụng cụ đo trong tủ chuyên dụng. Chi phí bảo dưỡng được lập kế hoạch theo giờ vận hành, còn các thiết bị có dấu hiệu giảm độ chính xác được đưa ra khỏi lịch sản xuất để hiệu chỉnh trước khi tiếp tục sử dụng.",
+   "Các hợp đồng mới được xem xét trên cả ba phương diện là khả năng đáp ứng kỹ thuật, biên lợi nhuận và điều kiện thanh toán. Công ty không phụ thuộc vào một khách hàng duy nhất; doanh thu phân bổ cho nhiều đơn hàng theo mùa. Ban điều hành sẽ tiếp tục cải thiện hồ sơ truy xuất vật liệu, tăng tỷ lệ giao hàng đúng hạn và duy trì trao đổi thường xuyên với khách hàng sau nghiệm thu.",
+   "Công tác quản trị dòng tiền được thực hiện theo tuần và theo từng lệnh sản xuất. Các khoản thu từ hợp đồng gia công được đối chiếu với biên bản nghiệm thu, trong khi các khoản chi mua thép và chi phí nhân công được phân loại theo công đoạn. Ban lãnh đạo xem xét hạn mức mua hàng, số ngày tồn kho và tuổi nợ trong mỗi cuộc họp điều hành để duy trì nguồn vốn lưu động phù hợp."
+  ],
+  "auditor_paragraphs": [
+   "Ban Tổng Giám đốc chịu trách nhiệm về việc lập và trình bày trung thực báo cáo tài chính, lựa chọn chính sách kế toán thích hợp, duy trì kiểm soát nội bộ cần thiết và đánh giá khả năng hoạt động liên tục của Công ty. Trách nhiệm này bao gồm việc ngăn ngừa, phát hiện sai sót và gian lận trong phạm vi hợp lý.",
+   "Trách nhiệm của chúng tôi là đưa ra ý kiến về báo cáo tài chính dựa trên kết quả kiểm toán. Chúng tôi đã thực hiện kiểm toán theo các chuẩn mực kiểm toán Việt Nam. Các chuẩn mực này yêu cầu kiểm toán viên tuân thủ yêu cầu đạo đức và lập kế hoạch, thực hiện kiểm toán để đạt được sự đảm bảo hợp lý rằng báo cáo tài chính không còn sai sót trọng yếu.",
+   "Công việc kiểm toán bao gồm thực hiện các thủ tục để thu thập bằng chứng về số liệu và thuyết minh trên báo cáo tài chính. Việc lựa chọn thủ tục phụ thuộc vào xét đoán của kiểm toán viên, bao gồm đánh giá rủi ro có sai sót trọng yếu do gian lận hoặc nhầm lẫn. Chúng tôi cũng đánh giá tính phù hợp của chính sách kế toán và các ước tính kế toán của Ban Tổng Giám đốc.",
+   "Chúng tôi tin rằng các bằng chứng kiểm toán đã thu thập là đầy đủ và thích hợp làm cơ sở cho ý kiến kiểm toán.",
+   "Không có vấn đề nào được xác định trong quá trình kiểm toán mà chúng tôi cho rằng cần trình bày như một vấn đề trọng yếu riêng biệt. Báo cáo này được phát hành cho các cổ đông và Hội đồng quản trị Công ty, chỉ nhằm mục đích báo cáo kết quả kiểm toán báo cáo tài chính nêu trên."
+  ],
+  "board_title": "BÁO CÁO CỦA BAN TỔNG GIÁM ĐỐC",
+  "auditor_title": "BÁO CÁO KIỂM TOÁN ĐỘC LẬP",
+  "auditor_addressee": "Kính gửi: các cổ đông và Hội đồng quản trị {company}",
+  "notes": [
+   {
+    "title": "Chính sách kế toán và đặc điểm hoạt động",
+    "paragraphs": [
+     "Báo cáo được lập bằng đồng Việt Nam theo chế độ kế toán doanh nghiệp và các Chuẩn mực kế toán Việt Nam áp dụng cho hoạt động của Công ty.",
+     "Ban Tổng Giám đốc chịu trách nhiệm duy trì sổ kế toán, chứng từ và quy trình phê duyệt phù hợp. Các chính sách được áp dụng nhất quán giữa các kỳ, trừ khi có yêu cầu mới của pháp luật hoặc chuẩn mực."
+    ],
+    "table": true
+   },
+   {
+    "title": "Tiền và tương đương tiền",
+    "paragraphs": [
+     "Tiền bao gồm tiền mặt tại quỹ và tiền gửi không kỳ hạn tại ngân hàng. Công ty không có khoản tiền nào bị hạn chế sử dụng tại ngày kết thúc kỳ kế toán. Các khoản tương đương tiền là tiền gửi có thời hạn không quá ba tháng, có khả năng chuyển đổi dễ dàng thành lượng tiền xác định."
+    ],
+    "table": true
+   },
+   {
+    "title": "Phải thu khách hàng",
+    "paragraphs": [
+     "Các khoản phải thu được trình bày theo giá trị ghi sổ sau khi trừ dự phòng cho các khoản có dấu hiệu khó thu hồi. Ban Tổng Giám đốc đánh giá tuổi nợ, lịch sử thanh toán và thông tin tài chính của từng khách hàng để xác định mức dự phòng.",
+     "Công ty duy trì quy trình xác nhận công nợ với từng khách hàng vào cuối tháng. Những khoản phát sinh chậm thanh toán được báo cáo riêng cho Ban Tổng Giám đốc, kèm theo lịch thu hồi và người phụ trách. Các số dư ngoại tệ, nếu có, được đánh giá theo tỷ giá phù hợp; trong năm Công ty không phát sinh chênh lệch tỷ giá đáng kể. Hồ sơ giao nhận, phiếu kiểm tra chất lượng và biên bản nghiệm thu được lưu cùng bộ chứng từ bán hàng để phục vụ đối chiếu."
+    ],
+    "table": false
+   },
+   {
+    "title": "Hàng tồn kho",
+    "paragraphs": [
+     "Hàng tồn kho gồm thép tấm, vật tư hàn, chi tiết đang gia công và thành phẩm chờ giao. Hàng tồn kho được xác định theo giá thấp hơn giữa giá gốc và giá trị thuần có thể thực hiện; giá xuất kho được tính theo phương pháp bình quân gia quyền."
+    ],
+    "table": true
+   },
+   {
+    "title": "Tài sản cố định",
+    "paragraphs": [
+     "Máy cắt, máy tiện và thiết bị hàn được kiểm tra định kỳ về tình trạng hoạt động. Chi phí sửa chữa thường xuyên được ghi nhận vào chi phí sản xuất.",
+     "Ban điều hành đánh giá khả năng sinh lợi của từng nhóm thiết bị và lập kế hoạch bảo dưỡng theo lịch sử sử dụng. Tài sản không còn đáp ứng yêu cầu kỹ thuật được xem xét thanh lý sau khi có phê duyệt phù hợp. Công ty bảo quản máy móc trong khu vực có mái che, thực hiện kiểm định thiết bị nâng và trang bị phương tiện bảo hộ cho người lao động theo quy định nội bộ."
+    ],
+    "table": false
+   },
+   {
+    "title": "Nợ vay và nghĩa vụ thuế",
+    "paragraphs": [
+     "Các khoản vay được ghi nhận theo số tiền thực nhận và phân loại ngắn hạn, dài hạn theo thời hạn thanh toán. Lãi vay được ghi nhận theo kỳ phát sinh. Thuế giá trị gia tăng và thuế thu nhập doanh nghiệp được kê khai, nộp theo quy định hiện hành."
+    ],
+    "table": true
+   },
+   {
+    "title": "Vốn chủ sở hữu",
+    "paragraphs": [
+     "Vốn góp của chủ sở hữu được ghi nhận theo số thực góp; lợi nhuận sau thuế chưa phân phối được theo dõi riêng cho số lũy kế các năm trước và kết quả của năm hiện hành. Việc phân phối lợi nhuận được thực hiện theo nghị quyết của Đại hội đồng cổ đông và khả năng thanh toán của Công ty."
+    ],
+    "table": true
+   },
+   {
+    "title": "Doanh thu và chi phí",
+    "paragraphs": [
+     "Doanh thu chế tạo được ghi nhận theo giá trị hợp đồng sau khi trừ các khoản giảm trừ, khi sản phẩm đã được nghiệm thu và quyền kiểm soát chuyển giao cho khách hàng. Chi phí được ghi nhận phù hợp với doanh thu trong kỳ.",
+     "Các khoản giảm trừ doanh thu được kiểm tra trên cơ sở hóa đơn điều chỉnh và biên bản thống nhất với khách hàng. Giá vốn bao gồm vật liệu trực tiếp, nhân công trực tiếp và chi phí sản xuất chung phân bổ cho sản phẩm hoàn thành. Chi phí bán hàng và quản lý doanh nghiệp được theo dõi theo bộ phận, giúp Ban Tổng Giám đốc đánh giá hiệu quả từng kênh phục vụ. Các ước tính kế toán được rà soát khi có thông tin mới và điều chỉnh prospectively nếu cần thiết."
+    ],
+    "table": true
+   }
+  ]
+ }
+}

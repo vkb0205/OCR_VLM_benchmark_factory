@@ -1,0 +1,115 @@
+{
+  "variables": {
+    "industry": "phân phối dược phẩm",
+    "company_size": "medium",
+    "fiscal_year": 2025
+  },
+  "source": "seed_131.json",
+  "values": {
+    "board_paragraph": [
+      "In {year}, the Company maintained warehouses that met storage requirements, strengthened expiry-date controls, and expanded route-based deliveries. These results reflected increased sales volume, a stable customer mix, and lower operating costs at delivery and collection points.",
+      "The Board of Management conducted monthly reconciliations of receivables and payables, reviewed slow-moving inventory, and maintained adequate provisions based on expected recoverability.",
+      "Borrowings were used primarily to fund seasonal working capital requirements and invest in warehouse equipment. The Company fulfilled its tax, insurance, and employee payment obligations in full; as of the reporting date, there were no material overdue debts requiring separate disclosure.",
+      "In {next}, the Company plans to upgrade its batch-tracking software, complete an additional transit warehouse, and expand its product range with products that have stable supply sources. The Board of Management will prioritize controlling profit margins, reducing collection times, and selecting partners with transparent quality records, while ensuring that storage requirements are not compromised in pursuit of sales growth.",
+      "Members performed their duties in accordance with the charter, approved resolutions, and internal delegation of authority regulations.",
+      "The financial statements for {year} were audited by {auditor}. The Board of Management is responsible for preparing the statements in accordance with Vietnamese accounting standards and regulations, maintaining necessary internal controls, and providing the auditors with complete documentation. The audit opinion is unqualified.",
+      "After the end of the accounting period, the Company entered into framework agreements with several pharmacies in the midland region to expand its distribution channel; this event did not require adjustment to the figures presented. Apart from the matter described above, the Board of Management is not aware of any other material events affecting the Company’s ability to continue as a going concern."
+    ],
+    "auditor_paragraphs": [
+      "The report is prepared in Vietnamese dong and reflects the Company’s principal accounting policies.",
+      "The Board of Management is responsible for preparing and fairly presenting the financial statements, selecting appropriate accounting policies, making reasonable estimates, maintaining necessary internal controls to ensure that the financial statements are free from material misstatement, whether due to fraud or error, and assessing the Company’s ability to continue as a going concern when preparing the statements.",
+      "Our responsibility is to express an opinion on the financial statements based on our audit. We conducted our audit in accordance with Vietnamese Standards on Auditing. These standards require us to comply with ethical requirements and to plan and perform procedures to obtain reasonable assurance as to whether the financial statements are free from material misstatement.",
+      "An audit involves performing procedures to obtain evidence about the amounts and disclosures in the financial statements. The procedures selected depend on the auditor’s judgment, including the assessment of the risks of material misstatement, whether due to fraud or error. In assessing those risks, we consider internal controls relevant to the preparation of the financial statements in order to design appropriate procedures.",
+      "We also evaluate the appropriateness of the accounting policies used, the reasonableness of accounting estimates, and the overall presentation. We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our unqualified opinion on the financial statements for {year}."
+    ],
+    "board_title": "BOARD OF MANAGEMENT’S REPORT",
+    "auditor_title": "INDEPENDENT AUDITOR’S REPORT",
+    "auditor_addressee": "To: The Shareholders and Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "1. Nature of operations",
+        "paragraphs": [
+          "{company} operates in the distribution of pharmaceuticals and healthcare products. The Company purchases products from domestic and international suppliers, stores them under the conditions stated on their labels, and then distributes them to hospitals, pharmacies, and clinics. The normal business cycle is less than twelve months."
+        ],
+        "table": true
+      },
+      {
+        "title": "2. Principal accounting policies",
+        "paragraphs": [
+          "The reporting currency is Vietnamese dong. Assets and liabilities are recognized at historical cost, except for items required to be measured in accordance with current regulations. Revenue is recognized when control of goods has been transferred and collectability is reasonably assured."
+        ],
+        "table": true
+      },
+      {
+        "title": "3. Cash and cash equivalents",
+        "paragraphs": [
+          "The Company’s cash comprises cash on hand and bank deposits used for routine payments. Cash equivalents are term deposits with maturities of no more than three months that are readily convertible into cash and subject to an insignificant risk of changes in value. The Board of Management reconciles bank balances monthly and conducts cash counts in accordance with internal regulations."
+        ],
+        "table": false
+      },
+      {
+        "title": "4. Trade receivables",
+        "paragraphs": [
+          "Trade receivables are recognized at their recoverable amount. The Company classifies receivables by age, credit limit, and each customer’s payment history. Provisions are made for receivables showing signs of doubtful recovery. During the year, the Company increased receivables confirmations with pharmacy chains and adjusted payment terms for customer groups with seasonal sales."
+        ],
+        "table": false
+      },
+      {
+        "title": "5. Inventories",
+        "paragraphs": [
+          "Inventories primarily comprise finished pharmaceuticals, packaging materials, and healthcare products. Inventory is tracked by batch, expiry date, and storage conditions. Closing inventory is stated at the lower of cost and net realizable value. Provisions are recognized for products nearing expiry, slow-moving products, or products with an expected selling price below cost."
+        ],
+        "table": true
+      },
+      {
+        "title": "6. Fixed assets",
+        "paragraphs": [
+          "The Company’s tangible fixed assets comprise delivery vehicles, cold-storage equipment, shelving, and office equipment. Intangible assets primarily comprise distribution management software. Routine repair costs are recognized as expenses in the period, while investments that increase capacity or extend useful lives are capitalized in accordance with regulations."
+        ],
+        "table": false
+      },
+      {
+        "title": "7. Borrowings and finance lease liabilities",
+        "paragraphs": [
+          "The Company uses short-term borrowings to supplement working capital and pay for inventory purchases. Long-term borrowings are used to finance storage equipment and vehicles. Interest costs are recognized as finance expenses over the borrowing period. The Company separately monitors principal and interest repayment dates and covenant terms; as of year-end, there were no material breaches of credit agreements."
+        ],
+        "table": true
+      },
+      {
+        "title": "8. Equity",
+        "paragraphs": [
+          "Profit after tax is distributed in accordance with resolutions of the General Meeting of Shareholders, with a portion allocated to the development investment fund and the remainder retained to support business operations. The Company has not issued preference shares or convertible instruments. Shareholders’ rights and obligations are governed by the Company’s charter."
+        ],
+        "table": true
+      },
+      {
+        "title": "9. Revenue and cost of sales",
+        "paragraphs": [
+          "Revenue from sales is recognized when goods have been delivered, accepted by the customer, and the Company no longer retains significant control over them. Revenue is presented net of trade discounts, sales returns, and sales allowances. Cost of sales includes purchase costs, import costs, transportation, and other direct costs of bringing goods to the warehouse and making them available for sale."
+        ],
+        "table": false
+      },
+      {
+        "title": "10. Corporate income tax",
+        "paragraphs": [
+          "Current corporate income tax expense is calculated on taxable income at the applicable tax rate for the year. The Company files tax returns, makes provisional payments, and settles tax in accordance with regulations. Deferred tax assets and liabilities are recognized on temporary differences to the extent that sufficient evidence exists of the availability of future taxable profits against which the tax benefits can be utilized. Other taxes are recognized according to the nature of the transactions."
+        ],
+        "table": true
+      },
+      {
+        "title": "11. Related-party transactions",
+        "paragraphs": [
+          "The Company’s related parties include members of the Board of Directors, the Board of Management, and individuals with significant influence. Related-party transactions are conducted under normal commercial terms and approved by the authorized parties. During {year}, there were no loans, guarantees, or unusual related-party transactions requiring separate disclosure apart from the remuneration and salaries recorded."
+        ],
+        "table": false
+      },
+      {
+        "title": "12. Events after the end of the accounting period",
+        "paragraphs": [
+          "These agreements did not create revenue or expense obligations as of the end of the accounting period and did not change the figures in the financial statements. Apart from the event described above, no material events requiring adjustment or additional disclosure occurred."
+        ],
+        "table": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "variables": {
+    "industry": "dệt may",
+    "company_size": "small",
+    "fiscal_year": 2025
+  },
+  "source": "seed_146.json",
+  "values": {
+    "board_paragraph": [
+      "{company} operates in the textile and garment sector, specializing in blended yarn spinning, greige fabric weaving and fabric finishing for domestic garment factories. Its factory is located in the Tan Loc production area and uses ring spinning lines and medium-scale air-jet looms. The Company maintains an energy-efficient production orientation, conducts quality control by each lot and prioritizes raw materials with traceability.",
+      "In {year}, the Company signed additional orders for uniform fabric and protective fabric from customers in the Central region, and shifted its product mix toward blended fabric groups with better profit margins. Yarn output increased slightly, and the rework rate decreased thanks to improvements in the yarn sizing stage. Sales activities were organized on a contract basis, limiting finished goods inventory and keeping customer receivables stable.",
+      "Raw material costs increased but were offset by equipment productivity and a higher proportion of finished products. The Board of Management closely monitored cash flow, maintained tax obligations and made necessary investments in the dust treatment system, control electrical system and fire prevention and fighting system.",
+      "Owners' equity increased due to retained earnings for the period.",
+      "In {next}, the Company plans to focus on polyester-cotton blended fabric, increase the proportion of orders with fixed delivery schedules and expand its specialized garment customer base. The investment plan prioritizes moisture measuring equipment, replacement of low-efficiency motors and software for monitoring consumption by machine. The Board of Management considers that the market remains competitive; therefore, its sales policy will be tied to delivery capacity, stable quality and receivable control.",
+      "The financial statements were audited by {auditor}. The Board of Management is responsible for preparing the financial statements truthfully, maintaining books and records and an appropriate control system.",
+      "The Board of Management has considered events arising after the end of the accounting period. As of the date of issuance of the report, the Company has not identified any material events requiring adjustment to the figures or additional disclosure beyond those presented in the notes.",
+      "The Board of Management confirms that it has presented the principal accounting policies, significant estimates and information on transactions with related parties in accordance with applicable regulations."
+    ],
+    "auditor_paragraphs": [
+      "The Board of Management is responsible for the preparation and fair presentation of the financial statements in accordance with the applicable financial reporting framework. This responsibility includes designing the internal control necessary to ensure that the financial statements are free from material misstatement, whether due to fraud or error, selecting appropriate accounting policies and making reasonable estimates in the circumstances.",
+      "Our responsibility is to express an opinion on the financial statements based on the results of our audit. We conducted our audit in accordance with Vietnamese Standards on Auditing. Those standards require that we comply with ethical requirements and plan and perform the audit to obtain reasonable assurance about whether the financial statements are free from material misstatement.",
+      "An audit involves performing procedures to obtain audit evidence about the amounts and disclosures in the financial statements. The selection of procedures depends on the auditor's judgment, including the assessment of the risks of material misstatement, whether due to fraud or error. In assessing those risks, the auditor considers internal control relevant to the preparation of the financial statements.",
+      "We also evaluate the appropriateness of accounting policies, the reasonableness of accounting estimates and the overall presentation of the financial statements. We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our unqualified audit opinion. No matters have modified this opinion.",
+      "{auditor} has examined events between the end of the accounting period and the date the report was prepared. The Board of Management has provided sufficient accounting records, contracts, reconciliation minutes and necessary explanations. The information in the Board of Management's report is consistent with the audited financial statements.",
+      "The unqualified audit opinion is issued for use by the Company's shareholders, Board of Directors and Board of Management within the scope of current law."
+    ],
+    "board_title": "REPORT OF THE BOARD OF MANAGEMENT",
+    "auditor_title": "INDEPENDENT AUDITOR'S REPORT",
+    "auditor_addressee": "To the Shareholders and the Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "B09-DN 1. Nature of operations",
+        "paragraphs": [
+          "The Company's principal activities are yarn spinning, fabric weaving and finishing of textile products. The normal production cycle is less than twelve months. The Company sells its products to garment enterprises and domestic distributors."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN 2. Basis of preparation",
+        "paragraphs": [
+          "The financial statements are prepared on a historical cost basis, except for items required to be measured under applicable regulations. The Board of Management assesses that the Company has sufficient resources to continue operating in the near future."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN 3. Cash and cash equivalents policy",
+        "paragraphs": [
+          "Cash includes cash on hand and non-term bank deposits. Investments with a recovery period of no more than three months from the date of purchase, readily convertible into cash and subject to insignificant risk of changes in value, are classified as cash equivalents. The Company reconciles bank balances periodically and records any differences."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN 4. Trade receivables",
+        "paragraphs": [
+          "Trade receivables are recorded at carrying amount, net of provision for doubtful debts. The Company considers aging, payment history and financial information of each customer to estimate losses. Long-overdue balances are provided for based on individual assessment. During the year, no significant receivable was subject to legal dispute."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN 5. Inventories",
+        "paragraphs": [
+          "Inventories are recorded at the lower of cost and net realizable value. Cost of raw materials and finished goods includes purchase cost, processing cost and directly related costs. Issue prices are calculated using the weighted average method. Provision for decline in value is made when net realizable value is lower than cost and is reversed when conditions change."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN 6. Fixed assets",
+        "paragraphs": [
+          "Tangible fixed assets are presented at cost less accumulated depreciation. Cost includes purchase price and costs of bringing the asset to the condition ready for use. Textile machinery and equipment are depreciated over eight to ten years; factories and works are depreciated over ten to twenty years."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN 7. Liabilities and borrowings",
+        "paragraphs": [
+          "Liabilities are recognized when the Company has a present obligation arising from past events and settlement is expected to result in an outflow of economic benefits. Borrowings are recorded at the amount received, net of transaction costs allocated if material. Interest expense is recognized in profit or loss over time, except for the portion eligible for capitalization. The Company had no overdue borrowings at the reporting date."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN 8. Owners' equity",
+        "paragraphs": [
+          "Owners' contributed capital is recorded at the actual amount contributed. Retained earnings reflect cumulative results after profit distribution and appropriation to reserves in accordance with resolutions of the General Meeting of Shareholders."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN 9. Revenue and taxes",
+        "paragraphs": [
+          "Sales revenue is recognized when the significant risks and rewards of ownership of the products have been transferred to the customer, the Company no longer retains management rights as owner and revenue and related costs can be reliably measured. Current corporate income tax is calculated on taxable income at the current tax rate. Financial income mainly comprises deposit interest."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN 10. Production and selling expenses",
+        "paragraphs": [
+          "Expenses are recognized on an accrual basis, matching revenue in the period. Production costs comprise direct materials, direct labor and manufacturing overhead allocated based on normal capacity. Selling expenses and general and administrative expenses are classified by function. The Board of Management regularly reviews consumption norms and accrued expense levels."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN 11. Related party transactions",
+        "paragraphs": [
+          "Related parties comprise members of the Board of Directors, the Board of Management and individuals capable of controlling or significantly influencing the Company. During the year, the Company had no significant purchase or sale transactions with related parties. Remuneration and salaries of management personnel were approved under internal regulations and fully accounted for."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN 12. Events after the end of the accounting period",
+        "paragraphs": [
+          "The Company continues production according to plan, has received a number of orders for delivery in the first quarter of {next} and is carrying out periodic maintenance of weaving machines. The Board of Management assesses that these events are consistent with normal operations."
+        ],
+        "table": true
+      }
+    ]
+  }
+}

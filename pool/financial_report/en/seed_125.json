@@ -1,0 +1,109 @@
+{
+  "variables": {
+    "industry": "vật liệu xây dựng",
+    "company_size": "small",
+    "fiscal_year": 2025
+  },
+  "source": "seed_125.json",
+  "values": {
+    "board_paragraph": [
+      "The products are distributed to construction material dealers and civil contractors in the Northeast region.",
+      "In {year}, the Company maintained stable output and put a new garden paving brick mold into operation. The Board of Management controlled material, transportation and selling costs on an order-by-order basis.",
+      "The Company continued to maintain short-term solvency and had no overdue borrowings.",
+      "The orientation for {next} is to expand the dealer network, increase the proportion of stone waste used in the mix and complete the output quality control process. The Company plans to invest in additional medium-capacity edge-cutting equipment, prioritizing own funds and cash flow from operating activities. The main risks identified are fluctuations in cement prices, freight rates and seasonal construction demand.",
+      "The Board of Management is responsible for organizing production activities, preserving capital and presenting the financial statements truthfully. The statements were audited by {auditor} under the contract signed for the fiscal year {year}.",
+      "The Board of Management is responsible for preparing the financial statements in accordance with current Vietnamese accounting standards and regime, selecting appropriate accounting policies, maintaining the internal control system and assessing going concern. Based on its understanding, no material events after the end of the accounting period require adjustment or additional disclosure other than those already presented.",
+      "At the Bai Moc workshop, the Company arranged maintenance schedules by shift and monitored aggregate moisture using separate inspection forms. This practice helped reduce the rate of products requiring rework, shorten delivery times and clarify the responsibilities of each production team. Supply contracts are reviewed for acceptance terms before dispatch, thereby limiting disputes over color, size and quantity.",
+      "During the year, the Company provided safety training for press machine operators and added a dust treatment procedure in the crushing area. Management also maintained periodic dialogue with employees, encouraging proposals for mold improvements and electricity savings. These measures provide a foundation for controlled output expansion in the next fiscal year."
+    ],
+    "auditor_paragraphs": [
+      "The responsibilities of the Board of Management include designing, implementing and maintaining internal control relevant to the preparation of financial statements that are free from material misstatement, whether due to fraud or error; selecting appropriate accounting policies; and making reasonable accounting estimates.",
+      "The auditor's responsibility is to express an opinion on the financial statements based on the results of the audit. We conducted our audit in accordance with Vietnamese Standards on Auditing. Those standards require that the auditor comply with ethical requirements and plan and perform the audit to obtain reasonable assurance.",
+      "The audit involves performing procedures to obtain audit evidence about the amounts and disclosures in the financial statements. The procedures selected depend on the auditor's judgment, including the assessment of the risks of material misstatement, whether due to fraud or error, and consideration of relevant internal control.",
+      "We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our audit opinion. The audit also includes evaluating the appropriateness of accounting policies, the reasonableness of accounting estimates and the overall presentation of the financial statements.",
+      "No other matters were identified during the audit that need to be presented as a key audit matter in this independent auditor's report."
+    ],
+    "board_title": "REPORT OF THE BOARD OF MANAGEMENT",
+    "auditor_title": "INDEPENDENT AUDITOR'S REPORT",
+    "auditor_addressee": "To: The Shareholders and the Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "1. Nature of Operations",
+        "paragraphs": [
+          "The principal business activity is the production of non-fired bricks, paving stones and concrete components. The currency used for recording and presentation is Vietnamese dong."
+        ],
+        "table": false
+      },
+      {
+        "title": "2. Significant Accounting Policies",
+        "paragraphs": [
+          "The financial statements are prepared in accordance with the Vietnamese corporate accounting regime and on a historical cost basis. Inventories are measured using the weighted average method; production costs are accumulated by product group."
+        ],
+        "table": false
+      },
+      {
+        "title": "3. Cash and Cash Equivalents",
+        "paragraphs": [
+          "The Company's cash comprises cash on hand and bank deposit balances used for regular payments. The Company had no cash equivalents subject to restriction as at the end of the accounting period."
+        ],
+        "table": true
+      },
+      {
+        "title": "4. Short-term Receivables",
+        "paragraphs": [
+          "Receivables arise mainly from sales of bricks and paving stones to dealers, contractors and project customers. The Board of Management considers all receivables to be collectible and no provision is required as at the reporting date."
+        ],
+        "table": true
+      },
+      {
+        "title": "5. Inventories",
+        "paragraphs": [
+          "Inventories comprise cement, sand, stone fines, product molds, work in progress and finished goods. The Company conducts year-end stocktakes by warehouse; carrying amounts do not exceed net realizable value."
+        ],
+        "table": true
+      },
+      {
+        "title": "6. Fixed Assets",
+        "paragraphs": [
+          "The Company's tangible fixed assets are mainly press machines, mixers, shaping molds, factory buildings and transportation vehicles. Assets are recognized when it is probable that future economic benefits will be obtained and the cost can be measured reliably."
+        ],
+        "table": true
+      },
+      {
+        "title": "7. Liabilities and Borrowings",
+        "paragraphs": [
+          "Trade payables are settled under normal commercial terms. Short-term and long-term borrowings are used to supplement working capital and invest in equipment; interest rates are agreed under each contract, and no additional collateral was provided during the year."
+        ],
+        "table": true
+      },
+      {
+        "title": "8. Owners' Equity",
+        "paragraphs": [
+          "Undistributed profit after tax is used to supplement business capital and pay owner benefits in accordance with approved resolutions. The Company did not issue shares during the year."
+        ],
+        "table": true
+      },
+      {
+        "title": "9. Revenue and Cost of Sales",
+        "paragraphs": [
+          "Revenue is recognized when goods have been delivered, control has been transferred and the Company no longer retains management rights as owner. Cost of sales includes raw material costs, direct labor, depreciation and production overhead allocated reasonably based on output."
+        ],
+        "table": true
+      },
+      {
+        "title": "10. Taxes and Amounts Payable to the State",
+        "paragraphs": [
+          "The Company declares value added tax using the deduction method and corporate income tax in accordance with current regulations. Corporate income tax expense for {year} is determined on taxable profit after considering deductible and non-deductible expenses."
+        ],
+        "table": true
+      },
+      {
+        "title": "11. Events after the End of the Accounting Period",
+        "paragraphs": [
+          "From the end of the accounting period to the date of issuance of the financial statements, the Company continued normal operations and no material events arose requiring adjustment to the figures or separate presentation. The Board of Management has not identified any indication that would change the going concern assumption."
+        ],
+        "table": false
+      }
+    ]
+  }
+}

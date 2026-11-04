@@ -1,0 +1,127 @@
+{
+  "variables": {
+    "industry": "nông sản xuất khẩu",
+    "company_size": "small",
+    "fiscal_year": 2025
+  },
+  "source": "seed_126.json",
+  "values": {
+    "board_paragraph": [
+      "The company operates a cleaning and packaging facility, working with small-scale growing areas in the Central Highlands.",
+      "In {year}, the company maintained seasonal export contracts with customers in East Asia and the Middle East, while also opening a new sales channel for packaged roasted cashews. Color-sensor sorting helped reduce the rate of returned goods and improve shipment quality.",
+      "Gross margin improved through better control of losses, although international freight costs remained affected by fuel prices and exchange-rate fluctuations.",
+      "Equity increased through retained earnings; the company continued to maintain a prudent level of short-term credit facilities.",
+      "The Board of Management expects to focus on standardizing traceability, expanding growing areas that meet safe farming standards, and increasing the proportion of value-added packaged products. The company will prioritize investment in a medium-sized cold storage facility and improve demand forecasting ahead of the harvest season.",
+      "The financial statements for {year} were audited by {auditor}. Members were assigned clear responsibilities and coordinated with the auditors in providing records and explanations of figures, while also monitoring the implementation of post-audit recommendations.",
+      "The Board of Management is responsible for preparing and fairly presenting the financial statements in accordance with Vietnamese Accounting Standards and the prevailing Vietnamese corporate accounting regime. Accounting records, supporting documents, and the internal control system are maintained in a manner appropriate to the scale of operations. The Board of Management regularly reviews purchasing, inventory counting, payment approval, and receivables management processes to mitigate risks in export operations. Internal reports are presented periodically to enable management to monitor cash flows, product quality, and delivery progress.",
+      "After the end of the accounting period, no material events occurred that would significantly change the figures presented. The Board of Management confirms that the financial statements fairly reflect the company’s financial position and operating results."
+    ],
+    "auditor_paragraphs": [
+      "The Board of Management is responsible for preparing and fairly presenting the financial statements in accordance with Vietnamese Accounting Standards, the Vietnamese corporate accounting regime, and relevant legal requirements. This responsibility includes designing and maintaining necessary internal controls. The Board of Management ensures that accounting policies are applied consistently, estimates are made prudently, and transactions are recorded completely and supported by appropriate documentation.",
+      "Our responsibility is to express an opinion on the financial statements based on the results of our audit. We conducted our audit in accordance with Vietnamese Standards on Auditing. These standards require us to comply with ethical requirements and to plan and perform the audit to obtain reasonable assurance.",
+      "An audit involves performing procedures to obtain evidence about the amounts and disclosures in the financial statements. The procedures selected depend on the auditor’s judgment, including the assessment of the risks of material misstatement, whether due to fraud or error.",
+      "We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our audit opinion. We have also considered the consistency of the accounting policies and the significant estimates made by the Board of Management.",
+      "{auditor} is responsible for issuing this report based on the audit documentation prepared for the accounting period {year}. The report is signed within the scope of the service agreement entered into with the company."
+    ],
+    "board_title": "REPORT OF THE BOARD OF MANAGEMENT",
+    "auditor_title": "INDEPENDENT AUDITOR’S REPORT",
+    "auditor_addressee": "To: The Shareholders and Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "1. Business activities",
+        "paragraphs": [
+          "The company operates in the procurement, preliminary processing, packaging, and export of agricultural products.",
+          "The currency used in the accounting records is the Vietnamese dong. Foreign currency transactions are translated at the actual exchange rate on the transaction date and revalued in accordance with prevailing regulations."
+        ],
+        "table": true
+      },
+      {
+        "title": "2. Significant accounting policies",
+        "paragraphs": [
+          "The financial statements are prepared in accordance with the Vietnamese corporate accounting regime, with accounting policies for revenue recognition, inventories, fixed assets, and financial instruments applied consistently. Inventories are valued using the weighted average method and accounted for using the perpetual inventory method.",
+          "Export revenue is recognized when control of the goods has been transferred in accordance with the delivery terms in the contract."
+        ],
+        "table": true
+      },
+      {
+        "title": "3. Cash and cash equivalents",
+        "paragraphs": [
+          "Year-end cash comprises demand deposits held at domestic banks and cash on hand. The company periodically reviews bank balances; no cash was restricted from use at the reporting date.",
+          "Cash equivalents are defined as term deposits with an original term of no more than three months from the date of investment that are readily convertible into cash."
+        ],
+        "table": true
+      },
+      {
+        "title": "4. Trade and other receivables",
+        "paragraphs": [
+          "Trade receivables primarily comprise amounts due from importers under contracts for shipments at year-end. The Board of Management assesses recoverability based on payment history and receivables confirmation letters.",
+          "An allowance for doubtful debts is recognized for balances showing indications of impaired recoverability."
+        ],
+        "table": true
+      },
+      {
+        "title": "5. Inventories",
+        "paragraphs": [
+          "Inventories comprise raw cashews, cleaned pepper, roasted coffee, and packaging materials. Goods are stored by batch, and actual quantities are reconciled with warehouse records at period-end.",
+          "An allowance for inventory write-downs is recognized based on the net realizable value of slow-moving batches or batches subject to changes in quality."
+        ],
+        "table": true
+      },
+      {
+        "title": "6. Fixed assets and construction in progress",
+        "paragraphs": [
+          "Tangible fixed assets consist mainly of drying lines, sorting machines, packaging warehouses, and transport vehicles. During the year, the company brought an energy-efficient dryer into use and continued renovations to the packaging area.",
+          "Construction in progress at year-end comprises the initial design and installation costs of a cold storage facility, which is expected to be completed in {next}."
+        ],
+        "table": true
+      },
+      {
+        "title": "7. Loans and liabilities",
+        "paragraphs": [
+          "Short-term loans are used to supplement seasonal working capital and bear floating interest rates as agreed with the banks. Long-term loans finance equipment investments and are repaid according to a periodic repayment schedule.",
+          "The company had no overdue debt and complied with the principal terms of its credit agreements at the reporting date."
+        ],
+        "table": true
+      },
+      {
+        "title": "8. Equity",
+        "paragraphs": [
+          "Undistributed after-tax profits are used to supplement working capital and to appropriate funds in accordance with shareholder resolutions.",
+          "The company has not issued shares to the public; basic earnings per share is calculated using the weighted average number of ordinary shares."
+        ],
+        "table": true
+      },
+      {
+        "title": "9. Revenue and expenses",
+        "paragraphs": [
+          "Net revenue increased due to higher export volumes of cashews and pepper than in the prior year. Revenue deductions comprise trade discounts and quality adjustments under contracts.",
+          "Selling expenses comprise freight, inspection, and agency commissions; general and administrative expenses comprise office personnel, outsourced services, and operating expenses."
+        ],
+        "table": true
+      },
+      {
+        "title": "10. Taxes and amounts payable to the State",
+        "paragraphs": [
+          "The company declares value added tax using the credit method and corporate income tax at the prevailing tax rate. Corporate income tax expense for {year} is recognized based on taxable profit after adjustment for nondeductible expenses.",
+          "Tax returns are prepared and filed on time in accordance with the filing schedule set by the relevant tax authority."
+        ],
+        "table": true
+      },
+      {
+        "title": "11. Related-party transactions",
+        "paragraphs": [
+          "The company’s related parties include members of the Board of Directors, the Board of Management, and their related persons. During the year, no material sales or purchases with related parties occurred, other than remuneration and salaries in accordance with internal policies.",
+          "Amounts payable to management personnel have been fully recognized in expenses for the period."
+        ],
+        "table": false
+      },
+      {
+        "title": "12. Events after the end of the accounting period",
+        "paragraphs": [
+          "The company continues to operate normally, and orders for early {next} are being fulfilled according to plan."
+        ],
+        "table": false
+      }
+    ]
+  }
+}

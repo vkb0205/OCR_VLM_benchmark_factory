@@ -1,0 +1,116 @@
+{
+  "variables": {
+    "industry": "cơ khí chế tạo",
+    "company_size": "large",
+    "fiscal_year": 2023
+  },
+  "source": "seed_124.json",
+  "values": {
+    "board_paragraph": [
+      "The Company operates steel casting, CNC machining, heat treatment and assembly workshops, serving customers in the port equipment, cement and energy industries.",
+      "In {year}, the Company maintained stable production and completed numerous orders for load-bearing structures and replacement parts with tight tolerance requirements. The domestic market accounted for the majority share; some products were delivered to industrial contractors in Laos and Cambodia. The Board of Management focused on controlling quality, occupational safety, delivery schedules and metal consumption.",
+      "Financial expenses remained significant due to higher working capital loan interest rates in the first half of the year.",
+      "The Company maintained credit limits and fully met its due payment obligations.",
+      "In {next}, the Company plans to expand its five-axis machining line, upgrade its dust treatment system and develop a product group of large-sized gearbox housings. The Board of Management will prioritize contracts with material price adjustment clauses, increase the localization rate of cast blanks and use traceability software for each shipment lot.",
+      "The members fully attended meetings on production planning, investment budgeting and risk management. There were no changes in key personnel that disrupted operations or affected approval and control authority at the Company.",
+      "The financial statements for {year} were audited by {auditor}, an entity selected by the Company pursuant to a resolution of the Board of Directors. The Board of Management provided the necessary records, books and explanations, and cooperated with the auditors in confirming receivables and payables, taking inventory and assessing the condition of fixed assets.",
+      "The Board of Management is responsible for preparing and fairly presenting the financial statements in accordance with the Vietnamese corporate accounting regime and relevant regulations. To our knowledge, there were no material events after the end of the accounting period that require adjustment or additional disclosure beyond those already stated in this report."
+    ],
+    "auditor_paragraphs": [
+      "The Board of Management is responsible for preparing and presenting the financial statements, selecting appropriate accounting policies, maintaining the necessary internal control system and assessing the Company's ability to continue as a going concern. This responsibility includes safeguarding assets and detecting and preventing errors or fraud.",
+      "Our responsibility is to express an opinion on the financial statements based on the results of our audit. We conducted our audit in accordance with Vietnamese Standards on Auditing. Those standards require that we comply with ethical requirements and plan and perform the audit to obtain reasonable assurance that the financial statements are free from material misstatement.",
+      "An audit involves performing procedures to obtain evidence about the amounts and disclosures in the financial statements. The procedures selected depend on the auditor's judgment, including the assessment of the risks of material misstatement due to fraud or error. In assessing those risks, we consider relevant internal controls.",
+      "We also evaluate the appropriateness of accounting policies, the reasonableness of accounting estimates and the overall presentation of the financial statements. We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our audit opinion.",
+      "In addition to the matters presented in the financial statements, we have not identified any events after the end of the accounting period that would require a change to this unmodified opinion."
+    ],
+    "board_title": "REPORT OF THE BOARD OF MANAGEMENT",
+    "auditor_title": "INDEPENDENT AUDITOR'S REPORT",
+    "auditor_addressee": "To: the shareholders and the Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "1. Nature of Operations",
+        "paragraphs": [
+          "The principal business activities are casting, forging, machining and assembly of mechanical machinery and equipment. The accounting currency is Vietnamese dong. The normal production cycle does not exceed twelve months."
+        ],
+        "table": false
+      },
+      {
+        "title": "2. Significant Accounting Policies",
+        "paragraphs": [
+          "The financial statements are prepared in accordance with the Vietnamese corporate accounting regime, applying the historical cost principle and the going concern assumption. Revenue is recognized when the significant risks and rewards have been transferred. Inventories are measured using the weighted average method; qualifying borrowing costs are capitalized during the construction investment period."
+        ],
+        "table": false
+      },
+      {
+        "title": "3. Cash and Cash Equivalents",
+        "paragraphs": [
+          "Cash includes cash on hand and demand bank deposits. Cash equivalents are deposits with an original maturity of no more than three months that are readily convertible into cash and are subject to an insignificant risk of changes in value."
+        ],
+        "table": true
+      },
+      {
+        "title": "4. Receivables",
+        "paragraphs": [
+          "Receivables are presented at their carrying amount net of provisions. The Company regularly reconciles balances with industrial customers and assesses recoverability based on payment history, collateral and updated information as at the reporting date."
+        ],
+        "table": true
+      },
+      {
+        "title": "5. Inventories",
+        "paragraphs": [
+          "Inventories comprise steel raw materials, cast blanks, work in progress, finished goods and spare parts. The Company makes provisions for slow-moving materials or products whose net realizable value is lower than cost. The year-end inventory count did not identify any material shortages."
+        ],
+        "table": true
+      },
+      {
+        "title": "6. Fixed Assets",
+        "paragraphs": [
+          "Historical cost comprises the purchase price and directly attributable costs of bringing the asset to a condition ready for use. During the year, the Company put a CNC machining center and a new heat treatment system into operation."
+        ],
+        "table": true
+      },
+      {
+        "title": "7. Borrowings and Finance Lease Liabilities",
+        "paragraphs": [
+          "Borrowings are used for working capital, equipment purchases and factory construction. Interest rates are applied in accordance with the credit agreement for each period. Collateral mainly comprises machinery, land use rights and inventories under the Company's control."
+        ],
+        "table": true
+      },
+      {
+        "title": "8. Owners' Equity",
+        "paragraphs": [
+          "Profit after tax is distributed in accordance with resolutions of the General Meeting of Shareholders, including appropriations to the development investment fund and payment of cash dividends."
+        ],
+        "table": true
+      },
+      {
+        "title": "9. Revenue and Cost of Sales",
+        "paragraphs": [
+          "Revenue arises mainly from the sale of cast components, machined assemblies and industrial repair services. Contracts are determined on an order-by-order basis; revenue is recognized when the products are accepted and control transfers to the customer. Cost of sales comprises raw materials, labor and allocated manufacturing overheads."
+        ],
+        "table": true
+      },
+      {
+        "title": "10. Corporate Income Tax",
+        "paragraphs": [
+          "Current corporate income tax expense is calculated on taxable income at the applicable tax rate. The Company has declared and paid taxes and fees arising in accordance with regulations. Deferred tax assets and liabilities are recognized for temporary differences that are deductible or taxable in the future."
+        ],
+        "table": false
+      },
+      {
+        "title": "11. Related Party Transactions",
+        "paragraphs": [
+          "Related party transactions arise under normal commercial terms, are approved in accordance with authority and are recorded at contract value. During the year, there were no preferential loans, guarantees or unusual commitments with key management personnel."
+        ],
+        "table": false
+      },
+      {
+        "title": "12. Events after the End of the Accounting Period",
+        "paragraphs": [
+          "The Board of Management has assessed that the Company will continue to operate normally for at least the next twelve months."
+        ],
+        "table": false
+      }
+    ]
+  }
+}

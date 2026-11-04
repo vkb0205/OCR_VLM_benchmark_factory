@@ -1,0 +1,119 @@
+lang:
+  vi:
+    fields: &id001
+    - id: title
+      kind: text
+      cat: title
+      optional: false
+    - id: authors
+      kind: authors
+      cat: text_block
+      optional: false
+    - id: affiliations
+      kind: text
+      cat: text_block
+      optional: false
+      many:
+      - 1
+      - 5
+    - id: abstract
+      kind: text
+      cat: text_block
+      optional: false
+    - id: abstract_alt
+      kind: text
+      cat: text_block
+      optional: true
+    - id: keywords
+      kind: text
+      cat: text_block
+      optional: false
+    - id: keywords_alt
+      kind: text
+      cat: text_block
+      optional: true
+    - id: body
+      kind: article
+      cat: text_block
+      optional: false
+    - id: references
+      kind: references
+      cat: text_block
+      optional: false
+    - id: acknowledgement
+      kind: text
+      cat: text_block
+      optional: true
+    - id: journal
+      kind: text
+      cat: header
+      optional: true
+    variables:
+      field:
+      - materials modelling
+      - signal processing
+      - robotics
+      - hydrology
+      - linguistics
+      - ecology
+      - transport
+      - energy storage
+      - computer vision
+      - acoustics
+  en:
+    fields: *id001
+    variables:
+      field:
+      - materials modelling research
+      - signal processing research
+      - robotics research
+      - hydrology research
+      - linguistics research
+      - ecology research
+      - transport research
+      - energy storage research
+      - computer vision research
+      - acoustics research
+language_variable: lang
+variables:
+  lang:
+  - vi
+  - en
+  field:
+  - materials modelling
+  - signal processing
+  - robotics
+  - hydrology
+  - linguistics
+  - ecology
+  - transport
+  - energy storage
+  - computer vision
+  - acoustics
+  paper_length:
+  - short
+  - medium
+  - long
+  citation_style:
+  - numeric
+  - author_year
+prompt: Write an academic paper in {{ lang }} about {{ field }}, with {{ paper_length
+  }} length and {{ citation_style }} citations.
+design:
+  fixed_labels:
+    vi:
+      title_page: ['{n} / {total}']
+      body: ['BÀI BÁO NGHIÊN CỨU', '{n} / {total}']
+      references: ['BÀI BÁO NGHIÊN CỨU', '{n} / {total}']
+      appendix: ['BÀI BÁO NGHIÊN CỨU', '{n} / {total}']
+    en:
+      title_page: ['{n} / {total}']
+      body: ['RESEARCH ARTICLE', '{n} / {total}']
+      references: ['RESEARCH ARTICLE', '{n} / {total}']
+      appendix: ['RESEARCH ARTICLE', '{n} / {total}']
+forbidden_words:
+- sample
+- synthetic
+- fictional
+- placeholder
+- example.invalid

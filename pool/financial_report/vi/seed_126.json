@@ -1,0 +1,127 @@
+{
+ "variables": {
+  "industry": "nông sản xuất khẩu",
+  "company_size": "small",
+  "fiscal_year": 2025
+ },
+ "source": "seed_126.json",
+ "values": {
+  "board_paragraph": [
+   "Doanh nghiệp vận hành một cơ sở làm sạch và đóng gói, liên kết với các vùng nguyên liệu nhỏ ở khu vực Tây Nguyên.",
+   "Trong năm {year}, công ty duy trì các hợp đồng xuất khẩu theo mùa với khách hàng tại Đông Á và Trung Đông, đồng thời mở thêm kênh bán hạt điều rang đóng gói. Quy trình phân loại bằng cảm biến màu giúp giảm tỷ lệ hàng bị trả lại và nâng chất lượng lô hàng.",
+   "Biên lợi nhuận được cải thiện nhờ kiểm soát hao hụt, nhưng chi phí vận chuyển quốc tế vẫn chịu ảnh hưởng của giá nhiên liệu và biến động tỷ giá.",
+   "Vốn chủ sở hữu tăng nhờ lợi nhuận giữ lại; công ty vẫn duy trì hạn mức tín dụng ngắn hạn ở mức thận trọng.",
+   "Ban Tổng Giám đốc dự kiến tập trung chuẩn hóa truy xuất nguồn gốc, mở rộng vùng nguyên liệu đạt tiêu chuẩn canh tác an toàn và nâng tỷ trọng sản phẩm đóng gói có giá trị gia tăng. Công ty sẽ ưu tiên đầu tư kho mát quy mô vừa và cải thiện dự báo nhu cầu trước mùa thu hoạch.",
+   "Báo cáo tài chính năm {year} được kiểm toán bởi {auditor}. Các thành viên phân công rõ trách nhiệm, phối hợp với kiểm toán viên trong việc cung cấp hồ sơ và giải trình số liệu, đồng thời giám sát việc thực hiện các kiến nghị sau kiểm toán.",
+   "Ban Tổng Giám đốc chịu trách nhiệm lập và trình bày trung thực, hợp lý báo cáo tài chính theo Chuẩn mực kế toán Việt Nam và chế độ kế toán doanh nghiệp hiện hành. Các sổ sách, chứng từ và hệ thống kiểm soát nội bộ được duy trì phù hợp với quy mô hoạt động. Ban Tổng Giám đốc thường xuyên rà soát các quy trình mua hàng, kiểm kê, phê duyệt thanh toán và quản lý công nợ để hạn chế rủi ro trong hoạt động xuất khẩu. Các báo cáo nội bộ được trình bày định kỳ để lãnh đạo theo dõi dòng tiền, chất lượng hàng hóa và tiến độ giao nhận.",
+   "Sau ngày kết thúc kỳ kế toán, không phát sinh sự kiện trọng yếu nào làm thay đổi đáng kể các số liệu đã trình bày. Ban Tổng Giám đốc xác nhận báo cáo tài chính đã phản ánh hợp lý tình hình tài chính và kết quả hoạt động của công ty."
+  ],
+  "auditor_paragraphs": [
+   "Ban Tổng Giám đốc chịu trách nhiệm lập và trình bày trung thực, hợp lý báo cáo tài chính theo Chuẩn mực kế toán Việt Nam, chế độ kế toán doanh nghiệp Việt Nam và các quy định pháp lý có liên quan. Trách nhiệm này bao gồm thiết kế và duy trì kiểm soát nội bộ cần thiết. Ban Tổng Giám đốc bảo đảm các chính sách kế toán được áp dụng nhất quán, các ước tính được xem xét thận trọng và các giao dịch được ghi nhận đầy đủ, có chứng từ phù hợp.",
+   "Trách nhiệm của chúng tôi là đưa ra ý kiến về báo cáo tài chính dựa trên kết quả cuộc kiểm toán. Chúng tôi đã thực hiện kiểm toán theo các Chuẩn mực kiểm toán Việt Nam. Các chuẩn mực này yêu cầu chúng tôi tuân thủ yêu cầu đạo đức và lập kế hoạch, thực hiện kiểm toán để đạt được sự đảm bảo hợp lý.",
+   "Cuộc kiểm toán bao gồm thực hiện các thủ tục nhằm thu thập bằng chứng về các số liệu và thuyết minh trên báo cáo tài chính. Các thủ tục được lựa chọn dựa trên xét đoán của kiểm toán viên, bao gồm đánh giá rủi ro sai sót trọng yếu do gian lận hoặc nhầm lẫn.",
+   "Chúng tôi tin rằng các bằng chứng kiểm toán mà chúng tôi đã thu thập là đầy đủ và thích hợp làm cơ sở cho ý kiến kiểm toán của chúng tôi. Chúng tôi cũng đã xem xét tính nhất quán của các chính sách kế toán và các ước tính quan trọng do Ban Tổng Giám đốc thực hiện.",
+   "{auditor} chịu trách nhiệm phát hành báo cáo này trên cơ sở hồ sơ kiểm toán được lập cho kỳ kế toán {year}. Báo cáo được ký trong phạm vi hợp đồng dịch vụ đã thống nhất với công ty."
+  ],
+  "board_title": "BÁO CÁO CỦA BAN TỔNG GIÁM ĐỐC",
+  "auditor_title": "BÁO CÁO KIỂM TOÁN ĐỘC LẬP",
+  "auditor_addressee": "Kính gửi: Các cổ đông và Hội đồng quản trị {company}",
+  "notes": [
+   {
+    "title": "1. Đặc điểm hoạt động",
+    "paragraphs": [
+     "Công ty hoạt động trong lĩnh vực thu mua, sơ chế, đóng gói và xuất khẩu nông sản.",
+     "Đơn vị tiền tệ sử dụng trong ghi chép là đồng Việt Nam. Các giao dịch bằng ngoại tệ được quy đổi theo tỷ giá giao dịch thực tế tại ngày phát sinh và đánh giá lại theo quy định hiện hành."
+    ],
+    "table": true
+   },
+   {
+    "title": "2. Chính sách kế toán chủ yếu",
+    "paragraphs": [
+     "Báo cáo được lập theo chế độ kế toán doanh nghiệp Việt Nam và áp dụng nhất quán các chính sách về ghi nhận doanh thu, hàng tồn kho, tài sản cố định và công cụ tài chính. Hàng tồn kho được tính theo phương pháp bình quân gia quyền và hạch toán theo phương pháp kê khai thường xuyên.",
+     "Doanh thu xuất khẩu được ghi nhận khi quyền kiểm soát hàng hóa đã chuyển giao theo điều kiện giao hàng trong hợp đồng."
+    ],
+    "table": true
+   },
+   {
+    "title": "3. Tiền và các khoản tương đương tiền",
+    "paragraphs": [
+     "Tiền cuối năm gồm tiền gửi thanh toán tại các ngân hàng trong nước và tiền mặt tại quỹ. Công ty rà soát số dư ngân hàng định kỳ, không có khoản tiền nào bị hạn chế sử dụng tại ngày báo cáo.",
+     "Các khoản tương đương tiền được xác định là tiền gửi có kỳ hạn không quá ba tháng kể từ ngày đầu tư và có khả năng chuyển đổi dễ dàng thành tiền."
+    ],
+    "table": true
+   },
+   {
+    "title": "4. Phải thu khách hàng và khoản phải thu khác",
+    "paragraphs": [
+     "Phải thu khách hàng chủ yếu là số tiền còn phải thu từ các nhà nhập khẩu theo hợp đồng giao hàng cuối năm. Ban Tổng Giám đốc đánh giá khả năng thu hồi dựa trên lịch sử thanh toán và thư xác nhận công nợ.",
+     "Dự phòng phải thu khó đòi được lập cho các khoản có dấu hiệu suy giảm khả năng thu hồi."
+    ],
+    "table": true
+   },
+   {
+    "title": "5. Hàng tồn kho",
+    "paragraphs": [
+     "Hàng tồn kho gồm điều thô, tiêu đã làm sạch, cà phê rang và vật tư bao bì. Hàng được bảo quản theo từng lô, có đối chiếu khối lượng thực tế với sổ kho vào cuối kỳ.",
+     "Dự phòng giảm giá hàng tồn kho được trích lập trên cơ sở giá trị thuần có thể thực hiện được của các lô hàng chậm luân chuyển hoặc có biến động chất lượng."
+    ],
+    "table": true
+   },
+   {
+    "title": "6. Tài sản cố định và chi phí xây dựng cơ bản",
+    "paragraphs": [
+     "Tài sản cố định hữu hình chủ yếu là dây chuyền sấy, máy phân loại, kho đóng gói và phương tiện vận chuyển. Trong năm, công ty đưa vào sử dụng một máy sấy tiết kiệm năng lượng và tiếp tục cải tạo khu vực đóng gói.",
+     "Chi phí xây dựng cơ bản dở dang cuối năm là chi phí thiết kế và lắp đặt ban đầu của kho mát dự kiến hoàn thành trong năm {next}."
+    ],
+    "table": true
+   },
+   {
+    "title": "7. Các khoản vay và nợ phải trả",
+    "paragraphs": [
+     "Các khoản vay ngắn hạn được sử dụng để bổ sung vốn lưu động theo mùa vụ, với lãi suất thả nổi theo thỏa thuận với ngân hàng. Khoản vay dài hạn phục vụ đầu tư thiết bị và được trả theo lịch định kỳ.",
+     "Công ty không có khoản nợ quá hạn và đã tuân thủ các điều kiện chủ yếu của hợp đồng tín dụng tại ngày báo cáo."
+    ],
+    "table": true
+   },
+   {
+    "title": "8. Vốn chủ sở hữu",
+    "paragraphs": [
+     "Lợi nhuận sau thuế chưa phân phối được sử dụng để bổ sung vốn lưu động và trích lập quỹ theo nghị quyết của cổ đông.",
+     "Công ty chưa phát hành cổ phiếu ra công chúng; Lãi cơ bản trên cổ phiếu được tính trên số cổ phần phổ thông bình quân gia quyền."
+    ],
+    "table": true
+   },
+   {
+    "title": "9. Doanh thu và chi phí",
+    "paragraphs": [
+     "Doanh thu thuần tăng nhờ sản lượng điều và tiêu xuất khẩu cao hơn năm trước. Các khoản giảm trừ doanh thu là chiết khấu thương mại và điều chỉnh chất lượng theo hợp đồng.",
+     "Chi phí bán hàng gồm cước vận chuyển, kiểm định và hoa hồng đại lý; chi phí quản lý doanh nghiệp gồm nhân sự văn phòng, dịch vụ thuê ngoài và chi phí điều hành."
+    ],
+    "table": true
+   },
+   {
+    "title": "10. Thuế và các khoản phải nộp Nhà nước",
+    "paragraphs": [
+     "Công ty kê khai thuế giá trị gia tăng theo phương pháp khấu trừ và thuế thu nhập doanh nghiệp theo mức thuế suất hiện hành. Chi phí thuế thu nhập doanh nghiệp năm {year} được ghi nhận trên cơ sở lợi nhuận tính thuế sau khi điều chỉnh các khoản không được trừ.",
+     "Các tờ khai thuế được lập và nộp đúng hạn theo lịch kê khai của cơ quan thuế quản lý."
+    ],
+    "table": true
+   },
+   {
+    "title": "11. Giao dịch với các bên liên quan",
+    "paragraphs": [
+     "Các bên liên quan của công ty gồm thành viên Hội đồng quản trị, Ban Tổng Giám đốc và người có liên quan. Trong năm không phát sinh giao dịch bán hàng hoặc mua hàng trọng yếu với các bên liên quan ngoài các khoản thù lao và tiền lương theo chính sách nội bộ.",
+     "Các khoản phải trả cho nhân sự quản lý đã được ghi nhận đầy đủ trong chi phí của kỳ."
+    ],
+    "table": false
+   },
+   {
+    "title": "12. Sự kiện sau ngày kết thúc kỳ kế toán",
+    "paragraphs": [
+     "Công ty tiếp tục hoạt động bình thường và các đơn hàng đầu năm {next} đang được thực hiện theo kế hoạch."
+    ],
+    "table": false
+   }
+  ]
+ }
+}

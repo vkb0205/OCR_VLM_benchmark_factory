@@ -1,0 +1,115 @@
+{
+ "variables": {
+  "industry": "chế biến thực phẩm",
+  "company_size": "small",
+  "fiscal_year": 2024
+ },
+ "source": "seed_140.json",
+ "values": {
+  "board_paragraph": [
+   "Công ty hoạt động trong ngành chế biến thực phẩm, tập trung vào các loại hạt rang, thanh ngũ cốc và sốt gia vị đóng gói. Quy mô sản xuất được tổ chức theo hướng tiết kiệm năng lượng, kiểm soát nguyên liệu đầu vào và duy trì truy xuất nguồn gốc.",
+   "Công ty duy trì khả năng thanh toán và không có khoản vay quá hạn.",
+   "Ban Tổng Giám đốc đã triển khai kế hoạch nâng cấp hệ thống sấy hạt và bổ sung thiết bị kiểm tra độ ẩm. Khoản đầu tư này dự kiến giúp ổn định chất lượng trong mùa cao điểm, đồng thời giảm tỷ lệ hao hụt nguyên liệu. Các hợp đồng nguyên liệu chủ yếu được ký theo mùa vụ với điều khoản giao hàng từng đợt.",
+   "Triển vọng năm {next} được đánh giá tích cực nhưng vẫn phụ thuộc vào sức mua và giá nguyên liệu nông sản. Công ty sẽ mở rộng kênh bán hàng trực tuyến thông qua nhà phân phối, phát triển bao bì có thể tái chế và kiểm soát chặt công nợ khách hàng. Ban Tổng Giám đốc không dự kiến thay đổi đáng kể mô hình hoạt động hiện tại.",
+   "Hội đồng quản trị giám sát định kỳ hoạt động và xem xét các báo cáo quản trị hàng tháng.",
+   "Báo cáo tài chính năm {year} được kiểm toán bởi {auditor}. Ban Tổng Giám đốc chịu trách nhiệm lập báo cáo theo các chuẩn mực và chế độ kế toán Việt Nam, duy trì kiểm soát nội bộ phù hợp, bảo vệ tài sản và cung cấp đầy đủ hồ sơ cần thiết cho cuộc kiểm toán.",
+   "Sau ngày kết thúc kỳ kế toán, Công ty không phát sinh sự kiện trọng yếu nào cần điều chỉnh hoặc trình bày bổ sung ngoài các thông tin đã nêu trong thuyết minh. Ban Tổng Giám đốc xác nhận báo cáo tài chính phản ánh trung thực, hợp lý tình hình tài chính và kết quả hoạt động của Công ty tại ngày lập báo cáo."
+  ],
+  "auditor_paragraphs": [
+   "Ban Tổng Giám đốc chịu trách nhiệm lập và trình bày trung thực báo cáo tài chính theo các chuẩn mực và quy định kế toán hiện hành. Trách nhiệm này bao gồm thiết kế, thực hiện và duy trì kiểm soát nội bộ cần thiết để báo cáo không có sai sót trọng yếu do gian lận hoặc nhầm lẫn.",
+   "Trách nhiệm của chúng tôi là đưa ra ý kiến về báo cáo tài chính dựa trên kết quả cuộc kiểm toán. Chúng tôi đã thực hiện kiểm toán theo các chuẩn mực kiểm toán Việt Nam. Các chuẩn mực này yêu cầu chúng tôi tuân thủ chuẩn mực đạo đức và lập kế hoạch, thực hiện thủ tục để đạt được sự đảm bảo hợp lý.",
+   "Cuộc kiểm toán bao gồm thực hiện các thủ tục nhằm thu thập bằng chứng về các số liệu và thuyết minh trên báo cáo tài chính. Các thủ tục được lựa chọn dựa trên xét đoán của kiểm toán viên, bao gồm đánh giá rủi ro sai sót trọng yếu do gian lận hoặc nhầm lẫn và xem xét kiểm soát liên quan.",
+   "Chúng tôi tin tưởng rằng các bằng chứng kiểm toán đã thu thập là đầy đủ và thích hợp làm cơ sở cho ý kiến kiểm toán chấp nhận toàn phần. Không có vấn đề nào cần nêu thành đoạn cơ sở cho ý kiến ngoại trừ hoặc vấn đề cần nhấn mạnh.",
+   "Các số liệu so sánh của năm trước được trình bày phù hợp với chính sách kế toán áp dụng."
+  ],
+  "board_title": "BÁO CÁO CỦA BAN TỔNG GIÁM ĐỐC",
+  "auditor_title": "BÁO CÁO KIỂM TOÁN ĐỘC LẬP",
+  "auditor_addressee": "Kính gửi: Các cổ đông và Hội đồng quản trị {company}",
+  "notes": [
+   {
+    "title": "1. Đặc điểm hoạt động",
+    "paragraphs": [
+     "Trụ sở đặt tại Cụm sản xuất An Lạc. Ngành nghề chính là chế biến và đóng gói thực phẩm từ ngũ cốc, hạt và gia vị. Công ty có một xưởng sản xuất và mạng lưới phân phối tại miền Trung."
+    ],
+    "table": true
+   },
+   {
+    "title": "2. Chính sách kế toán chủ yếu",
+    "paragraphs": [
+     "Báo cáo được lập theo chế độ kế toán doanh nghiệp Việt Nam và áp dụng nguyên tắc giá gốc. Doanh thu được ghi nhận khi hàng hóa đã giao và quyền kiểm soát chuyển cho khách hàng. Hàng tồn kho được tính theo phương pháp bình quân gia quyền, chi phí được phân loại phù hợp với chức năng."
+    ],
+    "table": true
+   },
+   {
+    "title": "3. Tiền và tương đương tiền",
+    "paragraphs": [
+     "Tiền và các khoản tương đương tiền bao gồm tiền mặt tại quỹ, tiền gửi ngân hàng không kỳ hạn và các khoản đầu tư có thời hạn thu hồi không quá ba tháng. Số dư cuối năm tăng do dòng tiền từ hoạt động kinh doanh được cải thiện và Công ty kiểm soát lịch thanh toán nhà cung cấp."
+    ],
+    "table": true
+   },
+   {
+    "title": "4. Phải thu khách hàng",
+    "paragraphs": [
+     "Các khoản phải thu khách hàng phát sinh từ hoạt động bán thành phẩm theo điều khoản tín dụng thông thường từ mười lăm đến bốn mươi lăm ngày. Ban Tổng Giám đốc đánh giá không có khoản phải thu trọng yếu quá hạn không được dự phòng. Công ty thực hiện đối chiếu công nợ theo tháng với các nhà phân phối."
+    ],
+    "table": true
+   },
+   {
+    "title": "5. Hàng tồn kho",
+    "paragraphs": [
+     "Hàng tồn kho gồm nguyên liệu hạt, bao bì, sản phẩm dở dang và thành phẩm. Nguyên liệu được bảo quản theo lô và kiểm kê định kỳ. Dự phòng giảm giá được trích lập cho các lô chậm luân chuyển khi giá trị thuần có thể thực hiện thấp hơn giá gốc. Cuối năm không có hàng tồn kho dùng để thế chấp khoản vay."
+    ],
+    "table": true
+   },
+   {
+    "title": "6. Tài sản cố định",
+    "paragraphs": [
+     "Tài sản cố định hữu hình chủ yếu là nhà xưởng, dây chuyền rang, máy đóng gói và phương tiện vận chuyển. Trong năm Công ty mua thêm thiết bị sấy và cải tạo khu vực kho. Tài sản được kiểm tra khả năng hoạt động định kỳ; không có dấu hiệu suy giảm trọng yếu cần ghi giảm ngoài khoản hao mòn lũy kế đã trình bày."
+    ],
+    "table": true
+   },
+   {
+    "title": "7. Vay và nợ thuê tài chính",
+    "paragraphs": [
+     "Các khoản vay được dùng để bổ sung vốn lưu động và tài trợ một phần thiết bị sản xuất. Lãi suất vay được thỏa thuận theo từng hợp đồng và chi phí lãi vay được ghi nhận vào kết quả kinh doanh. Công ty tuân thủ các điều khoản thanh toán, không có khoản nợ quá hạn tại ngày kết thúc năm."
+    ],
+    "table": true
+   },
+   {
+    "title": "8. Vốn chủ sở hữu",
+    "paragraphs": [
+     "Lợi nhuận sau thuế được phân phối theo nghị quyết của Đại hội đồng cổ đông và phần còn lại được giữ lại để bổ sung vốn kinh doanh. Quỹ đầu tư phát triển được sử dụng cho mục đích đầu tư theo phê duyệt nội bộ."
+    ],
+    "table": true
+   },
+   {
+    "title": "9. Doanh thu và giá vốn",
+    "paragraphs": [
+     "Doanh thu thuần đến từ các sản phẩm hạt rang, thanh ngũ cốc và sốt gia vị đóng gói. Doanh thu được ghi nhận sau khi giao hàng và khách hàng chấp nhận hàng. Giá vốn bao gồm nguyên liệu, nhân công trực tiếp, chi phí sản xuất chung phân bổ và chi phí bao bì trực tiếp. Chính sách chiết khấu được trừ vào doanh thu khi xác định."
+    ],
+    "table": true
+   },
+   {
+    "title": "10. Thuế thu nhập doanh nghiệp",
+    "paragraphs": [
+     "Chi phí thuế thu nhập doanh nghiệp hiện hành được tính trên thu nhập chịu thuế theo thuế suất hiện hành. Công ty đã kê khai và nộp các khoản thuế theo quy định, đồng thời không ghi nhận thuế thu nhập hoãn lại do không phát sinh chênh lệch tạm thời trọng yếu cần ghi nhận tại ngày báo cáo."
+    ],
+    "table": true
+   },
+   {
+    "title": "11. Giao dịch với các bên liên quan",
+    "paragraphs": [
+     "Trong năm, Công ty không phát sinh giao dịch trọng yếu với các bên liên quan ngoài tiền lương và thù lao đã được phê duyệt cho thành viên quản lý. Các khoản này được hạch toán vào chi phí quản lý doanh nghiệp theo chính sách của Công ty. Không có số dư phải thu, phải trả trọng yếu với bên liên quan tại ngày kết thúc năm."
+    ],
+    "table": false
+   },
+   {
+    "title": "12. Cam kết và sự kiện sau ngày báo cáo",
+    "paragraphs": [
+     "Công ty có các hợp đồng mua nguyên liệu và thuê dịch vụ vận chuyển phục vụ hoạt động bình thường, không có cam kết vốn chưa thực hiện trọng yếu. Ban Tổng Giám đốc tiếp tục theo dõi giá nguyên liệu và sức mua thị trường."
+    ],
+    "table": false
+   }
+  ]
+ }
+}

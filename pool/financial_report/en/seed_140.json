@@ -1,0 +1,115 @@
+{
+  "variables": {
+    "industry": "chế biến thực phẩm",
+    "company_size": "small",
+    "fiscal_year": 2024
+  },
+  "source": "seed_140.json",
+  "values": {
+    "board_paragraph": [
+      "The Company operates in the food processing industry, focusing on roasted nuts, cereal bars and packaged seasoning sauces. Production is organized with an emphasis on energy efficiency, control of input materials and maintenance of traceability.",
+      "The Company maintains liquidity and has no overdue borrowings.",
+      "The Board of Management has implemented a plan to upgrade the nut drying system and install additional moisture testing equipment. This investment is expected to help stabilize quality during peak season and reduce raw material loss rates. Raw material contracts are mainly signed on a seasonal basis with batch delivery terms.",
+      "The outlook for {next} is assessed as positive but still depends on purchasing power and agricultural raw material prices. The Company will expand online sales channels through distributors, develop recyclable packaging and tighten control over customer receivables. The Board of Management does not expect significant changes to the current operating model.",
+      "The Board of Directors periodically supervises operations and reviews monthly management reports.",
+      "The financial statements for {year} were audited by {auditor}. The Board of Management is responsible for preparing the financial statements in accordance with Vietnamese accounting standards and regulations, maintaining appropriate internal control, safeguarding assets and providing all necessary records for the audit.",
+      "After the end of the accounting period, no significant events occurred that require adjustment or additional disclosure beyond the information presented in the notes. The Board of Management confirms that the financial statements give a true and fair view of the Company's financial position and operating results as at the date of preparation."
+    ],
+    "auditor_paragraphs": [
+      "The Board of Management is responsible for preparing and fairly presenting the financial statements in accordance with current accounting standards and regulations. This responsibility includes designing, implementing and maintaining the internal controls necessary to ensure that the financial statements are free from material misstatement, whether due to fraud or error.",
+      "Our responsibility is to express an opinion on the financial statements based on the results of our audit. We conducted our audit in accordance with Vietnamese auditing standards. Those standards require that we comply with ethical requirements and plan and perform procedures to obtain reasonable assurance.",
+      "The audit involves performing procedures to obtain evidence about the amounts and disclosures in the financial statements. The procedures selected depend on the auditor's judgment, including the assessment of the risks of material misstatement, whether due to fraud or error, and consideration of internal controls relevant to the audit.",
+      "We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our unqualified audit opinion. There are no matters to be presented as a basis for a qualified opinion or as an emphasis of matter.",
+      "The comparative figures for the prior year are presented consistently with the accounting policies applied."
+    ],
+    "board_title": "REPORT OF THE BOARD OF MANAGEMENT",
+    "auditor_title": "INDEPENDENT AUDITOR'S REPORT",
+    "auditor_addressee": "To: The Shareholders and the Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "1. Nature of Operations",
+        "paragraphs": [
+          "The head office is located at An Lac Production Cluster. The principal business activity is processing and packaging food products from cereals, nuts and spices. The Company has one production facility and a distribution network in the Central region."
+        ],
+        "table": true
+      },
+      {
+        "title": "2. Significant Accounting Policies",
+        "paragraphs": [
+          "The financial statements are prepared in accordance with the Vietnamese Enterprise Accounting System and apply the historical cost convention. Revenue is recognized when goods have been delivered and control has transferred to the customer. Inventories are measured using the weighted average method, and costs are classified appropriately by function."
+        ],
+        "table": true
+      },
+      {
+        "title": "3. Cash and Cash Equivalents",
+        "paragraphs": [
+          "Cash and cash equivalents comprise cash on hand, non-term bank deposits and investments with original maturities of not more than three months. The year-end balance increased due to improved cash flow from operating activities and the Company's control of supplier payment schedules."
+        ],
+        "table": true
+      },
+      {
+        "title": "4. Trade Receivables",
+        "paragraphs": [
+          "Trade receivables arise from sales of finished goods under normal credit terms of fifteen to forty-five days. The Board of Management has assessed that there are no material overdue receivables that have not been provided for. The Company performs monthly reconciliation of balances with distributors."
+        ],
+        "table": true
+      },
+      {
+        "title": "5. Inventories",
+        "paragraphs": [
+          "Inventories comprise nut raw materials, packaging, work in progress and finished goods. Raw materials are stored by lot and physically counted periodically. A provision for decline in value is made for slow-moving lots when net realizable value is lower than cost. At year-end, no inventories were pledged as security for borrowings."
+        ],
+        "table": true
+      },
+      {
+        "title": "6. Fixed Assets",
+        "paragraphs": [
+          "Tangible fixed assets mainly comprise the factory building, roasting line, packaging machines and transport vehicles. During the year, the Company purchased additional drying equipment and renovated the warehouse area. Assets are periodically tested for operating capacity; there is no indication of material impairment requiring write-down beyond the accumulated depreciation presented."
+        ],
+        "table": true
+      },
+      {
+        "title": "7. Borrowings and Finance Lease Liabilities",
+        "paragraphs": [
+          "Borrowings are used to supplement working capital and partially finance production equipment. Interest rates are agreed under each contract, and interest expense is recognized in profit or loss. The Company complies with payment terms and has no overdue debts at the year-end date."
+        ],
+        "table": true
+      },
+      {
+        "title": "8. Owner's Equity",
+        "paragraphs": [
+          "Profit after tax is distributed in accordance with the resolution of the General Meeting of Shareholders, and the remaining amount is retained to supplement business capital. The development investment fund is used for investment purposes subject to internal approval."
+        ],
+        "table": true
+      },
+      {
+        "title": "9. Revenue and Cost of Sales",
+        "paragraphs": [
+          "Net revenue comes from roasted nut products, cereal bars and packaged seasoning sauces. Revenue is recognized after delivery and customer acceptance of the goods. Cost of sales includes raw materials, direct labor, allocated production overhead and direct packaging costs. Discount policies are deducted from revenue when determined."
+        ],
+        "table": true
+      },
+      {
+        "title": "10. Corporate Income Tax",
+        "paragraphs": [
+          "Current corporate income tax expense is calculated on taxable income at the applicable tax rate. The Company has declared and paid taxes in accordance with regulations and has not recognized deferred income tax because no material temporary differences requiring recognition arose at the reporting date."
+        ],
+        "table": true
+      },
+      {
+        "title": "11. Related Party Transactions",
+        "paragraphs": [
+          "During the year, the Company had no material related party transactions other than salaries and remuneration approved for management members. These amounts are recorded in enterprise management expenses in accordance with the Company's policies. There are no material related party receivables or payables at the year-end date."
+        ],
+        "table": false
+      },
+      {
+        "title": "12. Commitments and Events after the Reporting Date",
+        "paragraphs": [
+          "The Company has contracts to purchase raw materials and lease transportation services for normal operations, and there are no material outstanding capital commitments. The Board of Management continues to monitor raw material prices and market purchasing power."
+        ],
+        "table": false
+      }
+    ]
+  }
+}

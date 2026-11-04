@@ -1,0 +1,112 @@
+{
+  "variables": {
+    "industry": "nhựa kỹ thuật",
+    "company_size": "small",
+    "fiscal_year": 2025
+  },
+  "source": "seed_106.json",
+  "values": {
+    "board_paragraph": [
+      "The Company manufactures wear-resistant plastic components, chemical conduits and technical trays for domestic mechanical, electronics and water treatment plants.",
+      "In {year}, the Company's principal activities were compounding engineering plastic pellets, injection molding to drawings, finishing, and dimensional inspection using in-house measuring equipment. The engineering department also completed a product group for high-temperature environments, helping the product portfolio become less dependent on standard orders.",
+      "Results improved due to a lower defect rate, a slight increase in the selling price of chemical-resistant components, and controlled borrowing costs. The Board of Management maintained a batch-by-batch quality inspection policy.",
+      "Borrowings were allocated in line with the raw material purchasing cycle, and there were no material overdue debts.",
+      "In the coming year, the Company plans to expand its anti-static plastic component group and increase the controlled use of recycled materials. The Board of Management will prioritize investment in new molds, operator training and upgrading the scrap recovery system. The business plan is based on orders discussed with existing customers but is still reviewed periodically in response to fluctuations in plastic pellet prices.",
+      "{auditor} was selected by the Board of Directors to audit the financial statements for the year {year}.",
+      "The Board of Management is responsible for preparing and presenting the financial statements fairly and reasonably in accordance with the current Vietnamese accounting standards and enterprise accounting regime. This responsibility includes maintaining necessary internal controls, selecting appropriate accounting policies and assessing the ability to continue as a going concern. The Board of Management confirms that no events after the end of the accounting period require adjustment or additional disclosure beyond those stated in the notes."
+    ],
+    "auditor_paragraphs": [
+      "We have performed an independent audit of the financial statements of {company} for the year {year}. The set comprises the statement of financial position, the statement of profit or loss, the statement of cash flows and the accompanying notes, with comparative figures for {prev}. The Board of Management approved the set for issue.",
+      "Recognition, measurement and presentation are carried out in accordance with Vietnamese accounting standards, the enterprise accounting regime and relevant current regulations.",
+      "The Board of Management is responsible for organizing the accounting function, preparing the reports in accordance with regulations and providing complete information. That responsibility includes establishing an appropriate control system, selecting accounting methods suitable for plastic injection molding operations, reviewing significant estimates and assessing the Company's ability to continue operating.",
+      "Our responsibility as auditors is to express an independent conclusion based on the procedures performed. We comply with Vietnamese auditing standards and professional ethical principles and plan the audit with the necessary degree of care to identify material misstatements in the financial information.",
+      "During the engagement, we performed sample-based document testing, reconciled balances with external confirmations, observed physical inventory counts and reviewed estimates prepared by the Company. The scope of procedures was determined by risk assessment, including risks of fraud or error; the assessment of the control system was solely for the purpose of designing procedures, not for certifying the operating effectiveness of the system.",
+      "The evidence obtained indicates that the accounting basis and the policies applied are appropriate and consistent with the prior period; we consider this evidence sufficient and appropriate to express an unqualified opinion. There were no significant limitations on the scope of the audit and no uncorrected material misstatements were identified.",
+      "From the end of the financial year to the date of signing the report, we are not aware of any matter requiring adjustment to the figures or additional material disclosure. The audit report is issued for the shareholders, the Board of Directors and those legally entitled to use it, for reference together with the report of the Board of Management."
+    ],
+    "board_title": "REPORT OF THE BOARD OF MANAGEMENT",
+    "auditor_title": "INDEPENDENT AUDITOR'S REPORT",
+    "auditor_addressee": "To: The Shareholders and the Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "B09. Nature of operations and basis of preparation",
+        "paragraphs": [
+          "The Company operates in the engineering plastics sector, manufacturing injection-molded components, conduits and chemical-resistant fittings. The financial statements are prepared in Vietnamese dong on a historical cost basis and on a going concern assumption.",
+          "The accounting policies are applied consistently with the prior year, except for mandatory changes under new regulations effective during the period."
+        ],
+        "table": true
+      },
+      {
+        "title": "B10. Cash and cash equivalents",
+        "paragraphs": [
+          "The Company's cash comprises cash on hand and bank deposits used for purchasing raw materials, paying salaries and making payments to customers. Cash equivalents are term deposits with maturities of no more than three months that are readily convertible into cash and subject to an insignificant risk of changes in value.",
+          "The Company periodically reconciles bank balances with statements from the banks providing payment services. No cash was restricted as at the end of the accounting period."
+        ],
+        "table": true
+      },
+      {
+        "title": "B11. Receivables",
+        "paragraphs": [
+          "Trade receivables are recognized at their recoverable amount. The Company monitors receivables by individual order and assesses ageing at the end of the period. A provision is made for amounts showing indicators of impairment in recoverability after considering payment history, collateral and discussions with customers.",
+          "Other receivables mainly comprise advances for mold purchases, freight reimbursements and small deposits. The Board of Management does not consider any receivable other than the amounts provided for to be subject to material risk."
+        ],
+        "table": true
+      },
+      {
+        "title": "B12. Inventories",
+        "paragraphs": [
+          "Inventories are recognized at the lower of cost and net realizable value. The cost of raw materials, finished goods and work in progress is determined using the weighted average method. Production overhead is allocated based on the normal capacity of the injection molding line.",
+          "The Company makes a provision for impairment of slow-moving plastic pellets, molds no longer suitable for orders and finished goods whose estimated selling price is below cost. Inventories are stored at the factory warehouse, and the year-end physical count is attended by the production and accounting departments."
+        ],
+        "table": true
+      },
+      {
+        "title": "B13. Fixed assets and work-in-progress costs",
+        "paragraphs": [
+          "Long-term prepaid expenses are amortized evenly over the benefit period, mainly mold maintenance fees and prepaid warehouse rental."
+        ],
+        "table": true
+      },
+      {
+        "title": "B14. Liabilities",
+        "paragraphs": [
+          "Liabilities are classified as current when the Company has an obligation to settle them within twelve months from the end of the accounting period. Trade payables mainly arise from the purchase of plastic pellets, additives, packaging and mold processing services.",
+          "Borrowings are secured by assets belonging to the machinery line under credit agreements. The Company separately monitors principal and interest payable and assesses its ability to meet payment obligations in the monthly cash flow plan."
+        ],
+        "table": true
+      },
+      {
+        "title": "B15. Equity",
+        "paragraphs": [
+          "Each share carries one voting right and the right to receive dividends in accordance with resolutions of the General Meeting of Shareholders.",
+          "Undistributed profit after tax is used in accordance with the decision of the General Meeting of Shareholders after fulfilling tax obligations and other financial obligations."
+        ],
+        "table": true
+      },
+      {
+        "title": "B16. Revenue and cost of sales",
+        "paragraphs": [
+          "Revenue is recognized when the products have been delivered and accepted by the customer under the contract terms, or when processing services have been completed. Revenue excludes value added tax. Discounts and returned goods are deducted from revenue when they arise and are adequately supported.",
+          "Revenue in {year} increased thanks to the chemical-resistant component group and orders for fittings for water treatment systems. Cost of sales includes direct materials, direct labor, machinery depreciation and reasonably allocated production overhead."
+        ],
+        "table": true
+      },
+      {
+        "title": "B17. Corporate income tax expense",
+        "paragraphs": [
+          "Current corporate income tax expense is calculated on the taxable income of the year at the tax rate applicable to the Company. The Company declares and pays tax in accordance with current regulations and reconciles the tax payable with its internal finalization records before issuing the financial statements.",
+          "Deferred income tax is determined on temporary differences between the carrying amounts of assets and liabilities and their tax bases. At the end of the period, the Company recognizes deferred tax liabilities related to depreciation differences in accordance with regulations."
+        ],
+        "table": true
+      },
+      {
+        "title": "B18. Significant transactions and events",
+        "paragraphs": [
+          "The Company purchases raw materials from multiple domestic suppliers; revenue is spread across customers in the mechanical, electronics and water treatment industries, so the Board of Management assesses concentration risk as manageable.",
+          "Up to the date of issuing the report, no significant payment obligations have arisen from transactions and no adjustment to the {year} figures is required."
+        ],
+        "table": true
+      }
+    ]
+  }
+}

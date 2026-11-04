@@ -1,0 +1,114 @@
+{
+  "variables": {
+    "industry": "cơ khí chế tạo",
+    "company_size": "small",
+    "fiscal_year": 2025
+  },
+  "source": "seed_119.json",
+  "values": {
+    "board_paragraph": [
+      "The Company serves equipment contractors, agricultural processing facilities and domestic industrial customers. It is a small-scale mechanical engineering and manufacturing enterprise.",
+      "In {year}, the Company's revenue increased thanks to contracts for the manufacture of conveyors, machine frames and drive shafts that were accepted on schedule. The Board of General Directors maintained policies for inspecting input materials, standardizing production orders and controlling electricity consumption.",
+      "Receivables are monitored by contract; there are no significant overdue receivables requiring additional provisions. The Company continues to ensure its ability to settle obligations when due.",
+      "The Company continues to make selective investments in CNC lathes and measuring and testing equipment, while expanding the range of spare parts for packaging lines. In {next}, the Board of General Directors plans to increase the proportion of orders with maintenance contracts, improve equipment utilization rates and seek customers in the northern midland region. These plans will be implemented in line with actual capital resources and production capacity.",
+      "The Board of Directors and the Board of General Directors during the year comprised the members presented in the table below. The Company maintains an independent accounting department headed by the Chief Accountant. The financial statements for {year} were audited by {auditor} under the contract signed with the Company. The Chief Accountant is responsible for organizing the archiving of documents, reconciling receivables and payables, and providing the necessary records to the auditors. The Board of Directors supervises the reporting process, reviews significant estimates and approves the statements before issuance.",
+      "The Board of General Directors is responsible for preparing and fairly presenting the financial statements in accordance with the Vietnamese corporate accounting regime and relevant regulations. After the end of the accounting period, no material events occurred that affect the figures presented or require adjustment in these financial statements."
+    ],
+    "auditor_paragraphs": [
+      "These financial statements are prepared and are the responsibility of the Company.",
+      "The Board of General Directors is responsible for the preparation of the financial statements, the selection and application of appropriate accounting policies, and the maintenance of such internal control as is necessary to ensure that the statements are free from material misstatement, whether due to fraud or error. The Board of General Directors is also responsible for assessing the Company's ability to continue as a going concern.",
+      "Our responsibility is to express an opinion on the financial statements based on the results of our audit. We conducted our audit in accordance with Vietnamese auditing standards. Those standards require that we comply with ethical requirements and plan and perform the audit to obtain reasonable assurance that the financial statements are free from material misstatement.",
+      "An audit involves performing procedures to obtain audit evidence about the amounts and disclosures in the financial statements. The procedures selected depend on the auditor's judgment, including the assessment of the risks of material misstatement, whether due to fraud or error. We also evaluate the appropriateness of accounting policies and accounting estimates.",
+      "We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our unqualified audit opinion. Apart from the matters presented in the notes, we have not identified any matters requiring emphasis or adjustment in the financial statements for {year}."
+    ],
+    "board_title": "REPORT OF THE BOARD OF GENERAL DIRECTORS",
+    "auditor_title": "INDEPENDENT AUDITOR'S REPORT",
+    "auditor_addressee": "To: The Shareholders and the Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "1. Nature of Operations",
+        "paragraphs": [
+          "The principal business activities are mechanical processing, structural fabrication and repair of industrial equipment. The Company has one factory in Tan Lap Production Cluster, has no branches and had no transactions with dependent units in {year}. Production activities are organized according to monthly plans and individual orders, with acceptance records kept together with delivery and receipt documents. The Company regularly provides occupational safety training and inspects lifting equipment at the factory."
+        ],
+        "table": true
+      },
+      {
+        "title": "2. Basis of Preparation and Accounting Policies",
+        "paragraphs": [
+          "The financial statements are prepared in Vietnamese dong, in accordance with the Vietnamese corporate accounting regime and on the assumption that the Company is a going concern. Assets and liabilities are recognized at historical cost, except for items presented at recoverable value. Revenue is recognized when the significant risks and rewards have been transferred to the customer, in accordance with the acceptance terms in the contract."
+        ],
+        "table": true
+      },
+      {
+        "title": "3. Cash and Cash Equivalents",
+        "paragraphs": [
+          "The Company's cash comprises cash on hand and bank deposits in Vietnamese dong. Cash balances are reconciled with bank statements and the year-end cash count minutes."
+        ],
+        "table": true
+      },
+      {
+        "title": "4. Trade Receivables",
+        "paragraphs": [
+          "Trade receivables arise mainly from progress-based manufacturing contracts. The Company monitors receivables by customer and payment term. Provisions are made for amounts showing signs of difficult recovery on the basis of an individual assessment of each item, without using customer information outside the accounting records system."
+        ],
+        "table": true
+      },
+      {
+        "title": "5. Inventories",
+        "paragraphs": [
+          "Inventories comprise steel plates, section steel, auxiliary materials, semi-finished goods and finished goods awaiting delivery. Inventory value is determined at the lower of cost and net realizable value. Production costs are accumulated by production order and allocated to finished products according to appropriate norms."
+        ],
+        "table": true
+      },
+      {
+        "title": "6. Fixed Assets",
+        "paragraphs": [
+          "During the year, the Company purchased additional processing equipment and a measuring and testing system for the mechanical workshop. No fixed assets were pledged other than the assets securing the long-term loan disclosed in the notes."
+        ],
+        "table": true
+      },
+      {
+        "title": "7. Borrowings and Finance Lease Liabilities",
+        "paragraphs": [
+          "Borrowings are used to supplement working capital and invest in equipment. Interest rates are determined under the credit contract for each period; interest expense is recognized in profit or loss as incurred. The Company had no foreign currency borrowings at the end of the financial year."
+        ],
+        "table": true
+      },
+      {
+        "title": "8. Equity",
+        "paragraphs": [
+          "Undistributed after-tax profit is used to supplement working capital and make fund appropriations in accordance with resolutions of the General Meeting of Shareholders."
+        ],
+        "table": true
+      },
+      {
+        "title": "9. Revenue and Cost of Sales",
+        "paragraphs": [
+          "Revenue from sales of goods and provision of services in {year} is revenue from the fabrication of steel structures, transmission assemblies and repair services. Revenue is recognized when goods are accepted and control is transferred. Cost of sales comprises direct materials, direct labor and allocated manufacturing overhead."
+        ],
+        "table": true
+      },
+      {
+        "title": "10. Taxes and Amounts Payable to the State",
+        "paragraphs": [
+          "The Company declares value added tax under the deduction method and declares corporate income tax in accordance with current regulations. Current corporate income tax expense is calculated on the taxable income of the year after adjusting for non-deductible items. The Company did not recognize any deferred tax assets during the year."
+        ],
+        "table": true
+      },
+      {
+        "title": "11. Transactions and Balances with Related Parties",
+        "paragraphs": [
+          "Key management personnel receive salaries and remuneration in accordance with approved resolutions. The Company had no material purchases or sales of goods with related parties in {year}. Amounts payable to management were settled during the period and there were no unusual balances at the end of the year."
+        ],
+        "table": true
+      },
+      {
+        "title": "12. Events After the End of the Accounting Period",
+        "paragraphs": [
+          "The Board of General Directors assesses that the Company continues to have sufficient resources to maintain operations and fulfill the contracts signed for the following year. The Company has reviewed its contracts, receivables and payables, inventories and cash flow plan after the closing date. The results of the review did not indicate any contingent liabilities or new losses requiring recognition. The report was approved for issuance by the Board of General Directors after completion of the audit procedures and internal reconciliation of figures."
+        ],
+        "table": false
+      }
+    ]
+  }
+}

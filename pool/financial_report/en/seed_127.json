@@ -1,0 +1,101 @@
+{
+  "variables": {
+    "industry": "sản xuất bao bì giấy",
+    "company_size": "large",
+    "fiscal_year": 2025
+  },
+  "source": "seed_127.json",
+  "values": {
+    "board_paragraph": [
+      "In {year}, the Company maintained stable output, commissioned an automatic die-cutting line, and expanded its portfolio of recyclable packaging. The profit margin improved through control of paper waste and optimization of machine run schedules. This result is consistent with the large scale of a paper packaging manufacturer with a stable distribution network.",
+      "The Company maintained good solvency, and long-term loans were allocated in line with cash flows from operating activities.",
+      "The Board of Management plans to continue investing in ink-saving printing technology, increase sheet paper capacity, and develop products for the export supply chain. The Company will prioritize raw materials with certified origin and increase the rate of scrap recovery in its workshops.",
+      "The financial statements for the year {year} were audited by {auditor}. The Board of Management is responsible for preparing the financial statements truthfully, selecting appropriate accounting policies, maintaining internal control, and providing complete records to the auditors.",
+      "After the end of the accounting period, the Company signed an additional carton supply contract with a food distribution customer, and no material events occurred that would change the figures presented. The Board of Management assessed that the going concern basis is appropriate.",
+      "The Board of Management presents this report together with the audited financial statements and believes that the reports fairly reflect the Company's financial position, business results, and cash flows for the year {year}. The Company continues to review raw material purchase contracts, ensuring that payables are reconciled periodically and that receivables are collected in accordance with the signed terms."
+    ],
+    "auditor_paragraphs": [
+      "The Board of Management is responsible for preparing and fairly presenting the financial statements in accordance with the Vietnamese corporate accounting regime, maintaining the internal control necessary for the statements to be free from material misstatement due to fraud or error, and assessing the Company's ability to continue as a going concern.",
+      "Our responsibility is to express an opinion on the financial statements based on our audit. We conducted our work in accordance with Vietnamese auditing standards, complied with professional ethics requirements, and planned our work to obtain reasonable assurance that the financial statements are free from material misstatement.",
+      "The audit work includes performing procedures to obtain evidence about the figures and disclosures in the financial statements. The procedures selected are based on the auditor's judgment, including assessing the risks of material misstatement due to fraud or error and considering relevant internal control.",
+      "We believe that the audit evidence obtained is sufficient and appropriate to provide a basis for our unqualified audit opinion. The accounting policies applied and the estimates made by the Board of Management have been considered in light of the Company's circumstances.",
+      "In addition to the matters stated above, we have not identified any issue requiring modification of our opinion on the financial statements for the year {year}."
+    ],
+    "board_title": "REPORT OF THE BOARD OF MANAGEMENT",
+    "auditor_title": "INDEPENDENT AUDITOR'S REPORT",
+    "auditor_addressee": "To the Shareholders and the Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "B09-DN. Nature of operations",
+        "paragraphs": [
+          "The Company's principal activity is the manufacture of sheet paper, cartons, and printed paper packaging. The normal production cycle is less than three months, and there are no significant seasonal operations."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN. Significant accounting policies",
+        "paragraphs": [
+          "The financial statements are prepared in Vietnamese Dong in accordance with the Vietnamese corporate accounting regime and on a historical cost basis.",
+          "Cash items with an original maturity of no more than three months are presented as cash equivalents. Provisions are recognized when there is evidence of a present obligation and the loss can be reliably estimated."
+        ],
+        "table": false
+      },
+      {
+        "title": "B09-DN. Cash and cash equivalents",
+        "paragraphs": [
+          "The Company's cash comprises cash on hand and bank deposits used for regular payments. Short-term deposits are considered based on their original maturity and ability to be converted quickly into cash, with no significant restrictions on use."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN. Trade receivables",
+        "paragraphs": [
+          "Receivables arise mainly from the sale of cartons and sheet paper under approved credit limits. The Company monitors the aging of each customer's receivables, makes provisions for amounts showing indicators of impairment, and has no material receivables from related parties."
+        ],
+        "table": false
+      },
+      {
+        "title": "B09-DN. Inventories",
+        "paragraphs": [
+          "Inventories comprise paper rolls, chemicals, printing ink, work in progress, and finished goods. Inventories are recorded at the lower of cost and net realizable value; provisions are made for slow-moving materials and obsolete products."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN. Fixed assets",
+        "paragraphs": [
+          "Tangible fixed assets consist mainly of corrugating machines, printing machines, die-cutting lines, and factory buildings. The Company performs periodic maintenance to maintain capacity and operational safety."
+        ],
+        "table": false
+      },
+      {
+        "title": "B09-DN. Borrowings and finance lease liabilities",
+        "paragraphs": [
+          "Borrowings are used to finance working capital and line investments. Interest rates are agreed under each contract, and interest expense is recognized in profit or loss when incurred. The Company complies with the main financial covenants and has not breached any payment obligations."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN. Owners' equity",
+        "paragraphs": [
+          "Owners' contributed capital is recorded at the amount actually contributed. Profit after tax is distributed in accordance with the resolution of the General Meeting of Shareholders, after appropriation to the development investment fund and fulfillment of tax obligations. The Company did not issue preference shares during the year."
+        ],
+        "table": false
+      },
+      {
+        "title": "B09-DN. Revenue and expenses",
+        "paragraphs": [
+          "Sales revenue is recognized when the products have been delivered and accepted by the customer in accordance with the contract terms. Expenses are recognized in matching with revenue, including the cost of paper and materials, direct labor, machinery depreciation, selling expenses, and general and administrative expenses."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN. Corporate income tax",
+        "paragraphs": [
+          "The Company applies the corporate income tax rate in accordance with current regulations. Current tax is calculated on taxable income for the period, while deferred tax reflects temporary differences between the carrying amounts and tax bases of assets and liabilities."
+        ],
+        "table": false
+      }
+    ]
+  }
+}

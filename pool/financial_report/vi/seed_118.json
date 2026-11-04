@@ -1,0 +1,105 @@
+{
+ "variables": {
+  "industry": "dệt may",
+  "company_size": "medium",
+  "fiscal_year": 2023
+ },
+ "source": "seed_118.json",
+ "values": {
+  "board_paragraph": [
+   "Sản phẩm chủ lực là vải cotton pha, áo khoác nhẹ và đồ mặc nhà, được tiêu thụ qua các nhà mua hàng khu vực châu Á.",
+   "Trong năm {year}, công ty duy trì đơn hàng ổn định từ các khách hàng tại Nhật Bản, Hàn Quốc và thị trường nội địa. Ban Tổng Giám đốc đã tập trung kiểm soát định mức tiêu hao, giảm hàng chậm luân chuyển và nâng tỷ lệ giao hàng đúng hạn.",
+   "Hàng tồn kho tăng để đáp ứng lịch giao hàng quý đầu năm sau, trong khi các khoản phải thu được theo dõi theo từng hợp đồng và giới hạn tín dụng.",
+   "Công ty tiếp tục hoàn thiện dây chuyền hoàn tất vải tiết kiệm nước, triển khai hệ thống theo dõi năng lượng theo từng phân xưởng và đào tạo công nhân về an toàn hóa chất. Năm {next}, Ban Tổng Giám đốc dự kiến mở rộng nhóm sản phẩm vải tái chế, duy trì khách hàng hiện hữu và tìm kiếm đơn hàng có chu kỳ sản xuất ổn định. Các kế hoạch này sẽ được thực hiện trong giới hạn vốn và năng lực hiện có.",
+   "Ban Tổng Giám đốc chịu trách nhiệm lập và trình bày trung thực, hợp lý báo cáo tài chính theo Chuẩn mực kế toán Việt Nam, Chế độ kế toán doanh nghiệp và các quy định hiện hành. Theo hiểu biết của Ban Tổng Giám đốc, không có sự kiện trọng yếu phát sinh sau ngày kết thúc kỳ kế toán cần điều chỉnh hoặc trình bày bổ sung ngoài các nội dung đã nêu trong thuyết minh.",
+   "Trong năm, công ty không thay đổi ngành nghề kinh doanh, không phát hành thêm cổ phần và không phát sinh tranh chấp lớn với khách hàng hoặc nhà cung cấp. hợp đồng này phục vụ kế hoạch giao hàng và chưa làm phát sinh nghĩa vụ trọng yếu tại ngày lập báo cáo.",
+   "Ban Tổng Giám đốc đánh giá công ty có đủ nguồn lực để tiếp tục hoạt động trong tương lai gần. Các khoản vay đến hạn được lập kế hoạch thanh toán từ dòng tiền kinh doanh, còn các khoản phải thu được đối chiếu định kỳ.",
+   "Ban Tổng Giám đốc trân trọng cảm ơn người lao động, khách hàng, ngân hàng và các đối tác đã đồng hành cùng công ty trong năm {year}. Công ty sẽ tiếp tục nâng cao chất lượng sản phẩm, minh bạch thông tin và sử dụng hiệu quả nguồn lực để tạo nền tảng tăng trưởng bền vững."
+  ],
+  "auditor_paragraphs": [
+   "Ban Tổng Giám đốc chịu trách nhiệm lập và trình bày báo cáo tài chính theo các quy định áp dụng, duy trì kiểm soát nội bộ cần thiết để bảo đảm báo cáo không có sai sót trọng yếu do gian lận hoặc nhầm lẫn, đồng thời đánh giá khả năng hoạt động liên tục của Công ty.",
+   "Trách nhiệm của chúng tôi là đưa ra ý kiến về báo cáo tài chính dựa trên kết quả kiểm toán. Chúng tôi đã thực hiện công việc theo các Chuẩn mực kiểm toán Việt Nam. Các chuẩn mực này yêu cầu chúng tôi tuân thủ yêu cầu đạo đức và lập kế hoạch, thực hiện kiểm toán để đạt được sự đảm bảo hợp lý về việc báo cáo tài chính có còn sai sót trọng yếu hay không.",
+   "Kiểm toán bao gồm thực hiện các thủ tục nhằm thu thập bằng chứng về các số liệu và thuyết minh trên báo cáo tài chính. Các thủ tục được lựa chọn dựa trên xét đoán của kiểm toán viên, bao gồm đánh giá rủi ro sai sót trọng yếu. Chúng tôi cũng đánh giá tính phù hợp của chính sách kế toán, các ước tính kế toán và cách trình bày tổng thể.",
+   "Chúng tôi tin rằng các bằng chứng kiểm toán thu thập được là đầy đủ và thích hợp làm cơ sở cho ý kiến kiểm toán của chúng tôi. Các sổ kế toán, chứng từ và tài liệu được cung cấp đã được đối chiếu với các thông tin trình bày trong báo cáo tài chính trong phạm vi cần thiết cho cuộc kiểm toán.",
+   "Không có vấn đề nào khiến chúng tôi phải đưa ra ý kiến ngoại trừ, ý kiến trái ngược hoặc từ chối đưa ra ý kiến. Báo cáo kiểm toán này chỉ được phát hành cùng với báo cáo tài chính năm {year} của Công ty và nhằm phục vụ các cổ đông, Hội đồng quản trị cùng các bên có quyền sử dụng hợp pháp.",
+   "Căn cứ các công việc đã thực hiện, chúng tôi đưa ra ý kiến chấp nhận toàn phần đối với báo cáo tài chính năm {year} của Công ty. Các sự kiện phát sinh sau ngày khóa sổ đã được Ban Tổng Giám đốc xem xét và trình bày theo yêu cầu hiện hành khi có ảnh hưởng trọng yếu."
+  ],
+  "board_title": "BÁO CÁO CỦA BAN TỔNG GIÁM ĐỐC",
+  "auditor_title": "BÁO CÁO KIỂM TOÁN ĐỘC LẬP",
+  "auditor_addressee": "Kính gửi các cổ đông và Hội đồng quản trị {company}",
+  "notes": [
+   {
+    "title": "B09 — Đặc điểm hoạt động và chính sách kế toán",
+    "paragraphs": [
+     "Công ty hoạt động trong lĩnh vực kéo sợi, dệt và may mặc. Báo cáo được lập bằng đồng Việt Nam theo cơ sở giá gốc, phù hợp với Chế độ kế toán doanh nghiệp và các quy định áp dụng cho kỳ kế toán năm {year}.",
+     "Các chính sách kế toán được áp dụng nhất quán với năm trước. Ban Tổng Giám đốc sử dụng các ước tính hợp lý về thời gian khấu hao, dự phòng và khả năng thu hồi công nợ; các ước tính này được xem xét khi có thông tin mới."
+    ],
+    "table": true
+   },
+   {
+    "title": "B10 — Tiền và tương đương tiền",
+    "paragraphs": [
+     "Tiền bao gồm tiền mặt tại quỹ và số dư tiền gửi ngân hàng. Công ty không có khoản tương đương tiền có kỳ hạn ban đầu không quá ba tháng tại ngày báo cáo. Các tài khoản ngân hàng được đối chiếu hàng tháng với sổ phụ và xác nhận khi cần thiết.",
+     "Số dư tiền cuối năm tăng nhờ dòng tiền kinh doanh và khoản vay ngắn hạn bổ sung cho mùa giao hàng."
+    ],
+    "table": true
+   },
+   {
+    "title": "B11 — Các khoản phải thu",
+    "paragraphs": [
+     "Phải thu khách hàng được ghi nhận theo giá trị hóa đơn, trừ dự phòng tổn thất nếu có bằng chứng về khả năng không thu hồi. Công ty theo dõi tuổi nợ theo từng khách hàng và hợp đồng, đồng thời thực hiện đối chiếu công nợ trước khi khóa sổ.",
+     "Các khách hàng xuất khẩu được đánh giá theo lịch sử giao dịch và xác nhận đơn hàng; Ban Tổng Giám đốc không nhận thấy khoản phải thu nào cần trích lập dự phòng bổ sung."
+    ],
+    "table": true
+   },
+   {
+    "title": "B12 — Hàng tồn kho",
+    "paragraphs": [
+     "Hàng tồn kho được ghi nhận theo giá thấp hơn giữa giá gốc và giá trị thuần có thể thực hiện. Giá gốc nguyên liệu được tính theo phương pháp bình quân gia quyền; chi phí sản xuất được phân bổ theo công suất bình thường. Dự phòng được lập cho hàng chậm luân chuyển và lỗi mốt.",
+     "Cuối năm, nguyên liệu chiếm tỷ trọng lớn do công ty chuẩn bị cho các đơn hàng đã ký của quý I năm {next}. Công ty thực hiện kiểm kê tại các kho và phân xưởng, lập biên bản đối với vải lỗi, phụ liệu hư hỏng và hàng cần xử lý."
+    ],
+    "table": true
+   },
+   {
+    "title": "B13 — Tài sản cố định",
+    "paragraphs": [
+     "Chi phí sửa chữa thường xuyên được ghi nhận vào chi phí trong kỳ.",
+     "Trong năm, công ty mua thêm máy dệt kim, máy hoàn tất và thiết bị kiểm tra màu. Các tài sản đã đưa vào sử dụng được trích khấu hao từ tháng bắt đầu vận hành; không có tài sản cố định đem thế chấp ngoài các thiết bị thuộc khoản vay đầu tư."
+    ],
+    "table": true
+   },
+   {
+    "title": "B14 — Chi phí trả trước và thuế",
+    "paragraphs": [
+     "Chi phí trả trước được phân bổ theo thời hạn hưởng lợi. Thuế thu nhập doanh nghiệp hiện hành được tính trên thu nhập chịu thuế theo thuế suất hiện hành. Thuế hoãn lại được ghi nhận cho chênh lệch tạm thời được khấu trừ hoặc phải chịu, khi có đủ cơ sở chắc chắn.",
+     "Công ty kê khai thuế giá trị gia tăng theo phương pháp khấu trừ. Thuế thu nhập doanh nghiệp năm {year} được tính trên lợi nhuận chịu thuế sau các điều chỉnh theo quy định; số thuế đã nộp được đối chiếu với cơ quan thuế trong phạm vi hồ sơ hiện có."
+    ],
+    "table": true
+   },
+   {
+    "title": "B15 — Nợ phải trả",
+    "paragraphs": [
+     "Các khoản phải trả được ghi nhận theo số phải thanh toán. Vay ngắn hạn phục vụ vốn lưu động và vay dài hạn tài trợ thiết bị được phân loại theo thời hạn còn lại.",
+     "Công ty duy trì hạn mức tín dụng tại hai ngân hàng để bảo đảm thanh toán nguyên liệu và tiền lương. công ty chưa vi phạm điều khoản trọng yếu nào của hợp đồng vay."
+    ],
+    "table": true
+   },
+   {
+    "title": "B16 — Vốn chủ sở hữu",
+    "paragraphs": [
+     "Vốn góp được ghi nhận theo số thực góp của cổ đông. Lợi nhuận sau thuế chưa phân phối phản ánh lợi nhuận lũy kế sau khi trích lập quỹ và chia cổ tức theo nghị quyết hợp lệ.",
+     "Công ty không phát hành thêm cổ phần trong năm {year} và không mua lại cổ phiếu. Việc phân phối lợi nhuận sẽ được quyết định tại Đại hội đồng cổ đông thường niên."
+    ],
+    "table": true
+   },
+   {
+    "title": "B17 — Doanh thu, chi phí và sự kiện sau ngày kết thúc kỳ",
+    "paragraphs": [
+     "Doanh thu bán hàng được ghi nhận khi sản phẩm đã giao, khách hàng chấp nhận và quyền kiểm soát cùng phần lớn rủi ro đã chuyển giao. Doanh thu gia công được ghi nhận theo khối lượng hoàn thành được nghiệm thu. Các khoản giảm trừ được trình bày riêng trước doanh thu thuần.",
+     "Công ty đã kê khai các loại thuế theo quy định và không có khoản truy thu trọng yếu tại ngày lập báo cáo."
+    ],
+    "table": true
+   }
+  ]
+ }
+}

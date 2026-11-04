@@ -1,0 +1,127 @@
+{
+  "variables": {
+    "industry": "phân phối dược phẩm",
+    "company_size": "large",
+    "fiscal_year": 2025
+  },
+  "source": "seed_135.json",
+  "values": {
+    "board_paragraph": [
+      "The warehouse network meets storage requirements for each temperature group, has lot traceability software, and has a recall procedure that is tested periodically.",
+      "The Board of Management focuses on controlling expiry dates, improving the quality of inventory forecasts, negotiating payment terms with suppliers, and maintaining cold-chain delivery services. Selling expenses increased in line with the scale of the network, but the expense-to-revenue ratio remained within the planned threshold.",
+      "The Company maintains appropriate credit limits, has no overdue loans, and has made provisions for receivables and slow-moving inventory in accordance with its accounting policy.",
+      "The outlook for {next} is based on continued growth in healthcare demand, together with higher requirements from medical facilities for lot data, temperature, and delivery times. The Company expects to complete the automated distribution center in Cao Nguyen, expand the range of cold-stored biological products, and invest further in sales data analytics. These plans are implemented on a prudent basis, ensuring capital safety and compliance with industry regulations.",
+      "The members have performed their duties in accordance with the Company's charter, resolutions of the Board of Directors, and the Company's internal control regulations.",
+      "The financial statements for {year} were audited by {auditor}, an independent audit firm selected by the Company in accordance with a resolution of the General Meeting of Shareholders. The Board of Management is responsible for preparing the financial statements fairly, selecting appropriate accounting policies, maintaining necessary internal control, and providing records to the auditors. In the assessment of the Board of Management, no material events occurred after the end of the accounting period that require adjustment or additional disclosure beyond the notes presented."
+    ],
+    "auditor_paragraphs": [
+      "The report is prepared in Vietnamese dong in accordance with the Vietnamese corporate accounting regime and relevant regulations.",
+      "The Board of Management is responsible for the fair preparation and presentation of the financial statements in accordance with the applicable financial reporting framework, and is responsible for such internal control as the Board of Management determines is necessary to ensure that the financial statements are free from material misstatement, whether due to fraud or error. This responsibility includes selecting appropriate accounting policies and accounting estimates.",
+      "Our responsibility is to express an opinion on the financial statements based on the results of our audit. We conducted our audit in accordance with Vietnamese Standards on Auditing. Those standards require that we comply with ethical standards and plan and perform the audit to obtain reasonable assurance that the financial statements are free from material misstatement.",
+      "An audit involves performing procedures to obtain audit evidence about the amounts and disclosures in the financial statements. The procedures selected depend on the auditor's judgment, including the assessment of the risks of material misstatement, whether due to fraud or error. In making those risk assessments, the auditor considers internal control relevant to the preparation of the financial statements in order to design appropriate procedures.",
+      "We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our unqualified audit opinion. During the audit, we communicated with the Board of Management regarding the scope, timetable, significant findings, and internal control matters requiring attention. We did not identify any material exceptions.",
+      "Our report was signed after completion of the necessary audit procedures and is based on records, explanations, and confirmations provided by the Company. No scope limitation on the audit was imposed by the Board of Management.",
+      "Our audit opinion is unqualified. This report is issued solely to the shareholders and the Board of Directors of the Company and is not intended to serve the purposes of any other party. We accept no responsibility for the use of this report for purposes other than those stated above, except where otherwise required by law."
+    ],
+    "board_title": "REPORT OF THE BOARD OF MANAGEMENT",
+    "auditor_title": "INDEPENDENT AUDITOR'S REPORT",
+    "auditor_addressee": "To the Shareholders and the Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "1. Nature of Operations",
+        "paragraphs": [
+          "The principal business activity is the distribution of pharmaceuticals, consumable medical supplies, and healthcare products to hospitals, pharmacies, and clinics.",
+          "The currency used in accounting records and presentation is Vietnamese dong."
+        ],
+        "table": true
+      },
+      {
+        "title": "2. Significant Accounting Policies",
+        "paragraphs": [
+          "Revenue is recognized when control of the goods has been transferred and the Company no longer has significant obligations in respect of the goods sold. Amounts with an original maturity of no more than three months are considered cash equivalents when they are highly liquid and the risk of changes in value is insignificant.",
+          "Inventories are measured at the lower of cost and net realizable value. Cost comprises purchase costs and directly related costs. Provisions are made for slow-moving, damaged, or near-expiry inventory based on an assessment of each batch."
+        ],
+        "table": true
+      },
+      {
+        "title": "3. Cash and Cash Equivalents",
+        "paragraphs": [
+          "The Company's cash comprises cash on hand and demand deposits at banks selected under the treasury management process. At the end of the period, all deposit balances were reconciled with bank confirmations. The Company has no material restricted cash and no indications of insolvency arose over the next twelve months."
+        ],
+        "table": true
+      },
+      {
+        "title": "4. Trade Receivables",
+        "paragraphs": [
+          "Trade receivables arise mainly from the delivery of medicines under distribution contracts to hospitals, pharmacies, and clinics. The Company monitors the ageing of receivables by customer, reconciles balances monthly, and recognizes provisions where there is evidence of irrecoverability. No receivables were used as collateral for loans at the reporting date.",
+          "The Board of Management assesses that credit risk concentration is manageable due to customer diversification and credit limits. Overdue amounts are classified by due date, payment history, and collateral, if any."
+        ],
+        "table": true
+      },
+      {
+        "title": "5. Inventories",
+        "paragraphs": [
+          "The Company performs cycle counts, manages storage conditions using sensors, and applies the first-expiry-first-out principle for batches with earlier expiry dates. Inventory write-down provisions are determined based on inventory age, registration status, consumption ability, and estimated disposal costs.",
+          "During the year, the Company did not recognize any major losses due to damaged goods. Certain short-shelf-life batches were distributed under a separate control program, ensuring no impact on product quality or customer interests."
+        ],
+        "table": true
+      },
+      {
+        "title": "6. Fixed Assets",
+        "paragraphs": [
+          "Tangible fixed assets mainly comprise warehouses, sorting lines, specialized transport vehicles, and temperature control equipment. Assets are recognized when future economic benefits are probable and the cost can be measured reliably. Routine repair costs are recognized in profit or loss; improvement costs that increase capacity or extend useful life are capitalized.",
+          "During {year}, the Company completed the upgrade of the Nam Khe warehouse and placed additional refrigerated vehicles into use. Construction in progress at the end of the period comprises design and construction costs for the Cao Nguyen automated center that had not yet been accepted."
+        ],
+        "table": true
+      },
+      {
+        "title": "7. Borrowings and Finance Lease Liabilities",
+        "paragraphs": [
+          "Borrowings are used to finance working capital and warehouse logistics investments and bear floating interest rates as agreed with banks. The Company has fully met its interest and principal repayment obligations, and no loans breached material covenants. Short-term debts maturing in {next} are classified in accordance with their payment terms at the reporting date.",
+          "The Board of Management monitors liquidity risk through weekly cash flow forecasts and maintains unused credit limits. Guarantee commitments, if any, are disclosed in the loan documentation and do not change the presentation nature of the financial statements."
+        ],
+        "table": true
+      },
+      {
+        "title": "8. Equity",
+        "paragraphs": [
+          "During the year, the Company did not issue or repurchase shares. The development investment fund increased due to distribution from prior-year profit in accordance with a resolution of the General Meeting of Shareholders. Profit after tax for the period is presented separately within undistributed profit and does not include distributions after the reporting date.",
+          "The Company maintains a capital preservation policy and prioritizes resources for warehouse upgrades, traceability technology, and training of pharmaceutical personnel. Profit distribution is considered based on business results, tax obligations, and working capital needs."
+        ],
+        "table": true
+      },
+      {
+        "title": "9. Revenue and Cost of Sales",
+        "paragraphs": [
+          "Sales revenue is allocated by customer group and delivery area. Net revenue for {year} increased due to higher volumes of prescription medicines and consumable supplies, while deductions mainly comprised contractual trade discounts and returns within expected limits. Cost of sales is determined by batch and includes purchase costs, inbound transportation costs, and necessary inspection costs.",
+          "Discounts are estimated based on actual sales and the terms agreed with customers."
+        ],
+        "table": true
+      },
+      {
+        "title": "10. Taxes and Amounts Payable to the State",
+        "paragraphs": [
+          "The Company declares value-added tax under the deduction method and corporate income tax at the prevailing tax rate applicable to distribution activities. Current tax is calculated on taxable income after adjusting for non-deductible items. Deferred tax is recognized for temporary differences between carrying amounts and tax bases when the recognition criteria are met.",
+          "The Company has paid taxes due in accordance with its tax returns and has not received any inspection conclusion that would give rise to unrecognized material obligations. Tax finalization may change based on the results of inspections by the competent authority."
+        ],
+        "table": true
+      },
+      {
+        "title": "11. Operating Expenses",
+        "paragraphs": [
+          "Selling expenses comprise salaries of sales staff, transportation, cold storage, commissions, and trade support under approved policies. General and administrative expenses comprise management salaries, information technology services, office rent, depreciation, and administrative costs. Expenses are recognized on the matching principle with revenue and are controlled against the budget of each unit.",
+          "During {year}, selling expenses increased with the number of delivery routes and service points. The Company continues to assess route efficiency, reduce failed deliveries, and standardize storage norms to limit losses."
+        ],
+        "table": true
+      },
+      {
+        "title": "12. Events after the End of the Accounting Period",
+        "paragraphs": [
+          "Contracts are performed under purchase orders and stage-by-stage agreed prices and had not generated revenue at the end of the accounting period. The Board of Management has considered events occurring up to the date of signing the report and has not identified any event requiring adjustment to the amounts presented.",
+          "Construction of the Cao Nguyen automated distribution center continues in accordance with the approved schedule. Funding is expected to be arranged from operating cash flow and existing credit limits; the Company has not entered into any new guarantee commitments that would materially affect the financial statements."
+        ],
+        "table": true
+      }
+    ]
+  }
+}

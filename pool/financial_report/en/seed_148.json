@@ -1,0 +1,126 @@
+{
+  "variables": {
+    "industry": "logistics",
+    "company_size": "large",
+    "fiscal_year": 2025
+  },
+  "source": "seed_148.json",
+  "values": {
+    "board_paragraph": [
+      "The Company operates a fleet of tractor-trailers and box trucks, as well as a multi-temperature warehousing network across three economic regions.",
+      "The Board of Management prioritizes controlling fuel consumption standards, improving vehicle turnaround schedules, and digitizing delivery documentation, thereby maintaining a stable gross profit margin amid rising vehicle repair costs.",
+      "This result reflects growth in integrated logistics services, finance income from term deposits, and the restructuring of underperforming routes. Administrative expenses are monitored by responsibility center; provisions for receivables and inventories are recognized prudently based on reconciliation records as of the closing date.",
+      "In {next}, the Company plans to expand transportation capacity by replacing some trucks with fuel-efficient vehicles, upgrading its warehouse management system, and signing additional consumer goods distribution contracts. The Board of Management will continue to assess foreign exchange, fuel price, cargo safety, and customer credit risks. Planned targets are based on existing warehouse capacity, signed contracts, and a prudent assessment of financial capacity.",
+      "The financial statements were audited by {auditor} under an approved service contract.",
+      "The Board of Management is responsible for preparing and fairly presenting the financial statements in accordance with Vietnamese Accounting Regulations for Enterprises and relevant requirements. We have maintained accounting records, an internal control system, expense approval procedures, and asset safeguarding measures appropriate to the scale of operations. No material events arose after the end of the accounting period requiring adjustment or additional disclosure beyond the matters stated in this report."
+    ],
+    "auditor_paragraphs": [
+      "The Board of Management is responsible for the preparation and fair presentation of the financial statements; selecting appropriate accounting policies; making reasonable estimates; maintaining necessary internal controls to ensure that the financial statements are free from material misstatement, whether due to fraud or error; and assessing the Company’s ability to continue as a going concern.",
+      "Our responsibility is to express an opinion on the financial statements based on our audit. We conducted our audit in accordance with Vietnamese Standards on Auditing. Those standards require us to comply with ethical requirements and to plan and perform procedures to obtain reasonable assurance that the financial statements are free from material misstatement.",
+      "An audit involves performing procedures to obtain audit evidence about the amounts and disclosures in the financial statements. The procedures selected depend on the auditor’s judgment, including the assessment of the risks of material misstatement of the financial statements, whether due to fraud or error. We also evaluate the appropriateness of the accounting policies, the reasonableness of estimates, and the overall presentation.",
+      "We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for an unmodified audit opinion. During the audit, we communicated with the Board of Management and the Board of Directors regarding the scope and timing of the audit, significant findings, and any significant deficiencies in internal control, if any.",
+      "The comparative figures in this report are presented in accordance with consistently applied accounting policies and have been reconciled to the Company’s accounting records.",
+      "No matters arose after the end of the accounting period that, in our judgment, would change the opinion expressed above. This auditor’s report is prepared for the Company’s shareholders and Board of Directors and is not intended for use by any other party without the written approval of {auditor}."
+    ],
+    "board_title": "REPORT OF THE BOARD OF MANAGEMENT",
+    "auditor_title": "INDEPENDENT AUDITOR’S REPORT",
+    "auditor_addressee": "To the Shareholders and Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "B09-DN 1. Business characteristics",
+        "paragraphs": [
+          "Customers are grouped into industrial manufacturing, retail, and e-commerce segments. Operations are conducted within the territory of Vietnam; there are no dependent units with separate legal entity status."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN 2. Basis of preparation and accounting policies",
+        "paragraphs": [
+          "The financial statements are prepared in Vietnamese dong, on the historical cost basis, in accordance with Vietnamese Accounting Regulations for Enterprises and Vietnamese Accounting Standards issued by the Ministry of Finance. Foreign currency transactions are translated at the actual exchange rates prevailing on the transaction dates.",
+          "Service revenue is recognized when transportation or warehousing services have been completed based on the stage of performance and the Company has a right to receive payment. Expenses are recognized on the matching basis. Term deposits with a maturity of no more than three months from the date of deposit, which are readily convertible and subject to insignificant risk, are presented as cash equivalents."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN 3. Cash and cash equivalents",
+        "paragraphs": [
+          "Cash comprises cash on hand and balances in current accounts. Cash equivalents comprise short-term deposits managed to meet regular payment requirements. The Company performs monthly bank reconciliations, and there are no significant restrictions on cash balances at the reporting date.",
+          "The year-end balance increased because cash flows from operating activities were sufficient to cover vehicle investment expenditure. A portion of deposits is pledged as collateral for short-term credit facilities; this restricted portion is disclosed separately in the loan documentation."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN 4. Financial investments",
+        "paragraphs": [
+          "Trading securities comprise certificates of deposit and other negotiable instruments acquired for short-term liquidity management purposes. Investments classified as held to maturity have terms ranging from three months to two years and are recorded at cost plus accrued interest. A provision for impairment is recognized when the recoverable amount is lower than the carrying amount.",
+          "The Company holds an investment in an associate that provides vehicle maintenance services. This investment is accounted for at cost because the Company does not have significant influence."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN 5. Trade and other receivables",
+        "paragraphs": [
+          "Trade receivables arise from completed transportation, warehousing, and delivery services. The Company classifies receivables by aging for each contract, sends periodic reconciliation statements, and recognizes provisions for balances showing signs of being doubtful. No receivables are pledged as collateral other than those disclosed in the credit agreements.",
+          "Long-term receivables mainly comprise deposits for warehouse lease agreements and service security deposits. Other receivables comprise reimbursements of transportation costs, employee advances, and accrued interest on deposits. The Board of Management believes that the provision adequately reflects expected credit losses."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN 6. Inventories",
+        "paragraphs": [
+          "Inventories comprise fuel, spare parts, packaging materials, pallets, and work-in-progress service costs. Cost is determined using the weighted average method and includes purchase costs, transportation costs to the warehouse, and related processing costs. Slow-moving inventories are reviewed based on inventory aging and usage plans.",
+          "During the year, the Company increased its spare parts stock to ensure fleet availability and implemented barcodes at its main warehouses. No inventories are pledged as collateral for loans. A provision for impairment is recognized for damaged supplies and packaging no longer suitable for customer specifications."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN 7. Property, plant and equipment and investment property",
+        "paragraphs": [
+          "Property, plant and equipment mainly comprise transportation vehicles, warehouses, material-handling equipment, and office equipment. Cost is recognized when an asset is ready for use; major repair costs are capitalized when the recognition criteria are met.",
+          "Intangible assets comprise dispatch software, licenses for the warehouse management system, and rights to use the order management program. During the year, the Company completed the Binh Trieu cold-storage warehouse and disposed of several vehicles that had reached the end of their economic lives."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN 8. Borrowings and finance lease liabilities",
+        "paragraphs": [
+          "Borrowings are contracted with domestic credit institutions, mainly to invest in vehicles and warehousing facilities and to supplement working capital. Interest rates are floating under the respective agreements, and interest is recognized as finance costs using the effective interest method. The Company complies with the agreed collateral and liquidity ratio covenants.",
+          "Long-term borrowings decreased as the Company made repayments according to schedule, while short-term borrowings increased due to additional financing for the peak season. The Board of Management has prepared a cash flow plan for the twelve months following the reporting date and assessed that the Company has sufficient capacity to settle its obligations as they fall due."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN 9. Equity",
+        "paragraphs": [
+          "Shareholders have equal voting rights per share and are entitled to dividends in accordance with resolutions of the General Meeting of Shareholders. Share premium arose from previous share issues, net of directly related costs.",
+          "Undistributed after-tax profits are used to appropriate funds, pay dividends, and supplement working capital as decided by the competent authority. The remaining balance is retained to fund the warehouse expansion program."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN 10. Revenue, expenses and taxes",
+        "paragraphs": [
+          "Transportation service revenue is recognized based on completed volumes and delivery records; warehousing revenue is allocated over the period in which the service is provided. Unearned revenue comprises amounts received from customers in advance for future service periods. Fuel costs, driver salaries, depreciation, and outsourced services are allocated by route, contract, and operating center.",
+          "Current corporate income tax expense is calculated on taxable income at the applicable tax rate. Deferred tax arises mainly from timing differences in depreciation and provisions. The Company has declared and paid taxes and fees in accordance with notices from the relevant authorities; there are no material tax disputes that have not been reflected."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN 11. Financial instruments and risk management",
+        "paragraphs": [
+          "The Company’s financial instruments comprise cash, short-term investments, receivables, payables, and borrowings. The carrying amounts of these instruments do not differ materially from their fair values because of their short maturities or interest rates that are adjusted to market rates. The Company manages credit risk through customer credit limits and contract approval procedures.",
+          "Liquidity risk is controlled through weekly cash flow planning, backup credit facilities, and reconciliation of balances. Foreign exchange risk arising from purchases of imported equipment is insignificant; the Board of Management monitors foreign currency balances and may use forward contracts if transaction volumes increase."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN 12. Related parties and events after the reporting date",
+        "paragraphs": [
+          "Related parties comprise members of the Board of Directors, the Board of Management, and entities over which management personnel have significant influence. Related-party transactions are conducted on normal commercial terms, approved in accordance with internal regulations, and disclosed when material. During the year, there were no special loans or guarantees provided to management personnel.",
+          "These commitments are being fulfilled within the approved capital plan and have not given rise to obligations requiring adjustments to amounts at the reporting date. The Board of Management is not aware of any events that materially affect the Company’s ability to continue as a going concern."
+        ],
+        "table": true
+      }
+    ]
+  }
+}

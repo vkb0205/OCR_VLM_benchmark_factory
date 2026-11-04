@@ -1,0 +1,411 @@
+{
+  "variables": {
+    "lang": "vi",
+    "field": "materials modelling",
+    "paper_length": "long",
+    "citation_style": "author_year"
+  },
+  "values": {
+    "title": "Đánh giá độ ổn định của khoảng dự báo dưới dịch nền trong vật liệu giả lập",
+    "authors": [
+      {
+        "name": "An M. Mô phỏng",
+        "affiliations": [
+          1
+        ],
+        "corresponding": false
+      },
+      {
+        "name": "Bình Q. Giả lập",
+        "affiliations": [
+          1,
+          2
+        ],
+        "email": "bq@auroraresearch.org",
+        "corresponding": true
+      }
+    ],
+    "affiliations": [
+      "Đơn vị Vật liệu Tổng hợp Aurora-7",
+      "Phòng Phân tích Giả lập Cánh Diều"
+    ],
+    "abstract": "Bài viết mở rộng một quy trình giả lập để kiểm tra sai lệch nền, mật độ lấy mẫu và độ hiệu chuẩn của khoảng dự báo. Các lô được giữ độc lập trong quá trình chia tập, còn mọi ngưỡng và quy tắc dừng được cố định trước khi đánh giá. Phân tích bổ sung xem xét ảnh hưởng của các nhóm có số điểm khác nhau, độ nhạy theo quy mô nhiễu và khả năng phục hồi khi một phần chuỗi bị thiếu. Kết quả cho thấy phép chuẩn hóa bền vững thường giảm sai lệch trung vị nhưng không bảo đảm bao phủ đồng đều ở mọi lô. Bộ số liệu chỉ là sản phẩm tổng hợp nhằm minh họa một phương pháp kiểm tra có thể tái lập.",
+    "keywords": "độ ẩm; tín hiệu giả lập; chuẩn hóa; sai lệch nền; khoảng tin cậy",
+    "acknowledgement": "Các nhóm rà soát giả lập đã kiểm tra tính nhất quán của bảng, đồ thị và mã quy trình.",
+    "body": [
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "1. Mở đầu"
+      },
+      {
+        "type": "paragraph",
+        "text": "Các phép đo mô phỏng thường được dùng để tách riêng ảnh hưởng của nền tín hiệu khỏi ảnh hưởng của nhiễu ngẫu nhiên. Trong bài này, mỗi mẫu là một chuỗi cường độ không có nguồn gốc từ phép đo thật; độ ẩm chỉ là biến mục tiêu được gán theo quy tắc đã biết. Cách dựng dữ liệu như vậy cho phép chúng tôi kiểm tra độ nhạy của ước lượng khi cùng một vật liệu giả lập được quan sát ở nhiều mật độ lấy mẫu. Đại lượng chuẩn hóa $z=(x-b)/s$ đưa chuỗi về thang chung, trong đó $b$ là nền và $s$ là độ phân tán. Các lựa chọn này được đặt trước khi so sánh để tránh đổi phương pháp sau khi nhìn kết quả \\cite{1,2}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Câu hỏi nghiên cứu là liệu một khoảng dự báo có giữ được độ bao phủ khi nền dịch chuyển hay không. Những công trình giả lập trước đây thường báo cáo sai số trung bình, nhưng một giá trị trung bình có thể che khuất các lô khó và các điểm ngoại lệ \\cite{3,4}. Vì vậy chúng tôi theo dõi đồng thời sai lệch tuyệt đối, độ rộng khoảng và tỷ lệ bao phủ. Ký hiệu $e_i=\\hat m_i-m_i$ mô tả chênh lệch của mẫu thứ $i$; dấu của $e_i$ cũng được giữ lại để phân biệt xu hướng đánh giá cao với đánh giá thấp. Một ghi chú về quy ước chia lô được lưu tại đây\\fn{Mọi số liệu trong bài được sinh từ bộ quy tắc giả lập và không phải kết quả đo ngoài thực địa.}."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "2. Thiết kế mô phỏng"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "2.1. Tạo lô và phép đo"
+      },
+      {
+        "type": "paragraph",
+        "text": "Chúng tôi tạo 24 lô tổng hợp với cùng miền giá trị mục tiêu nhưng khác mật độ điểm, biên độ nhiễu và độ nghiêng nền. Mỗi lô có 160 chuỗi, sau đó được chia theo mã lô để các quan sát gần nhau không rơi vào cả tập huấn luyện lẫn tập đánh giá. Thành phần tín hiệu hữu ích có dạng $u(t)=a\\exp(-kt)$, còn nền thay đổi theo một hàm tuyến tính nhỏ và nhiễu được lấy từ một phân phối đối xứng. Hạt giống ngẫu nhiên được lưu cùng cấu hình nên có thể tái tạo từng lần chạy. Các tham số cực đoan được giới hạn trước để mô hình không học một tín hiệu không khả thi do phép dựng số học."
+      },
+      {
+        "type": "paragraph",
+        "text": "Ba thủ tục được đối chiếu gồm chuẩn hóa toàn cục, chuẩn hóa theo lô và chuẩn hóa bền vững dựa trên trung vị. Chúng tôi dùng cùng một bộ đặc trưng và cùng số vòng cập nhật cho cả ba thủ tục, nhờ đó thay đổi duy nhất là phép biến đổi đầu vào. Với mỗi lần chạy, giá trị nền được ước lượng từ đoạn không có tín hiệu; hệ số tỷ lệ được tính từ độ lệch tuyệt đối trung vị thay vì cực đại. Công thức cập nhật $\\theta_{r+1}=\\theta_r-\\eta g_r$ được áp dụng với tốc độ học cố định, còn điểm dừng dựa trên sai số của tập hiệu chỉnh. Thiết kế này làm cho khác biệt quan sát được có thể quy về chuẩn hóa thay vì lịch huấn luyện \\cite{5,6}."
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Chia dữ liệu theo lô trước khi tạo các tập con.",
+          "Ước lượng nền chỉ từ đoạn tín hiệu đã quy định.",
+          "Giữ nguyên hạt giống và lịch cập nhật giữa các phương pháp."
+        ]
+      },
+      {
+        "type": "equation",
+        "id": "eq:loss",
+        "latex": "L(\\theta)=\\frac{1}{n}\\sum_{i=1}^{n}(\\hat m_i-m_i)^2",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Hàm mất mát bình phương được dùng để tối ưu tham số, nhưng kết luận không chỉ dựa trên hàm này. Để kiểm tra độ ổn định, chúng tôi tính độ rộng khoảng dự báo $w_i=q_{0.95,i}-q_{0.05,i}$ và tỷ lệ mục tiêu nằm giữa hai mốc. Việc tách riêng chỉ số tối ưu khỏi chỉ số báo cáo giúp giảm nguy cơ diễn giải một tiêu chí theo cách thuận lợi cho phương pháp. Những ngưỡng đánh giá được cố định bằng tập hiệu chỉnh và không thay đổi khi kiểm tra các lô có nền dịch chuyển."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "3. Kết quả"
+      },
+      {
+        "type": "paragraph",
+        "text": "Bảng tổng hợp cho thấy chuẩn hóa bền vững có sai lệch tuyệt đối trung vị thấp nhất ở nhóm lô dịch nền, trong khi chuẩn hóa theo lô giữ ưu thế ở các chuỗi thưa. Chênh lệch giữa hai phương pháp nhỏ hơn độ dao động giữa các lần sinh dữ liệu ở nhóm mật độ cao. Chúng tôi vì thế không xem thứ hạng trung bình là một quy tắc áp dụng cho mọi tình huống. Từng lô được giữ lại trong phân tích để người đọc nhận thấy nơi nào phép chuẩn hóa giúp ích và nơi nào tác dụng biến mất. Kết quả của bảng được diễn giải cùng biểu đồ phân tán lô tại \\ref{tab:errors} và xu hướng bao phủ tại \\ref{fig:coverage}."
+      },
+      {
+        "type": "table",
+        "id": "tab:errors",
+        "caption": "Sai lệch và độ rộng khoảng theo phương pháp",
+        "header": [
+          [
+            {
+              "text": "Phương pháp",
+              "rowspan": 2
+            },
+            {
+              "text": "Chỉ số đánh giá",
+              "colspan": 2
+            }
+          ],
+          [
+            "Sai lệch trung vị",
+            "Độ rộng khoảng"
+          ]
+        ],
+        "rows": [
+          [
+            "Toàn cục",
+            "0,084",
+            "0,31"
+          ],
+          [
+            "Theo lô",
+            "0,071",
+            "0,34"
+          ],
+          [
+            "Bền vững",
+            "0,058",
+            "0,29"
+          ]
+        ],
+        "note": "Các trị số chỉ minh họa cho dữ liệu tổng hợp; mỗi ô được làm tròn đến hai chữ số thập phân.",
+        "table_style": "full_grid"
+      },
+      {
+        "type": "chart",
+        "id": "fig:coverage",
+        "caption": "Bao phủ khoảng theo mật độ lấy mẫu",
+        "chart_type": "line",
+        "labels": [
+          "thưa",
+          "vừa",
+          "dày",
+          "rất dày"
+        ],
+        "series": [
+          {
+            "name": "bền vững",
+            "values": [
+              0.82,
+              0.88,
+              0.91,
+              0.92
+            ],
+            "errors": [
+              0.04,
+              0.03,
+              0.02,
+              0.02
+            ]
+          },
+          {
+            "name": "toàn cục",
+            "values": [
+              0.74,
+              0.81,
+              0.89,
+              0.91
+            ]
+          }
+        ],
+        "x_label": "mật độ điểm",
+        "y_label": "tỷ lệ bao phủ"
+      },
+      {
+        "type": "equation",
+        "id": "eq:aligned",
+        "latex": "\\begin{aligned}\\bar e &= \\frac{1}{n}\\sum_i e_i \\\\ s_e^2 &= \\frac{1}{n-1}\\sum_i(e_i-\\bar e)^2\\end{aligned}",
+        "numbered": true
+      },
+      {
+        "type": "figure",
+        "id": "fig:pipeline",
+        "figure_type": "block_diagram",
+        "caption": "Luồng tạo và đánh giá chuỗi tín hiệu",
+        "description": "Sơ đồ giả lập thể hiện dữ liệu đi qua ba công đoạn độc lập trước khi so sánh chỉ số.",
+        "labels": [
+          "Sinh chuỗi",
+          "Ước lượng nền",
+          "Chuẩn hóa",
+          "Đánh giá"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Độ bao phủ của phương pháp bền vững tăng theo mật độ điểm rồi gần như ổn định, còn độ rộng khoảng giảm nhẹ khi số quan sát đủ lớn. Biểu đồ không cho thấy quan hệ tuyến tính hoàn hảo; đường cong được nối giữa các nhóm chỉ nhằm chỉ rõ thứ tự mật độ. Công thức $c_j=n_j/N_j$ biểu thị tỷ lệ bao phủ trong nhóm $j$, và mẫu số của mỗi nhóm được công bố trong dữ liệu tổng hợp. Chúng tôi kiểm tra thêm các giá trị biên để bảo đảm không có một nhóm rất nhỏ làm thay đổi kết luận. Đường xu hướng và sơ đồ quy trình cần được đọc cùng nhau tại \\ref{fig:coverage} và \\ref{fig:pipeline}."
+      },
+      {
+        "type": "equation",
+        "id": "eq:interval",
+        "latex": "I_i=[\\hat m_i-q_i,\\hat m_i+q_i]",
+        "numbered": true
+      },
+      {
+        "type": "box",
+        "kind": "theorem",
+        "title": "Mệnh đề ổn định",
+        "text": "Nếu sai số nền bị chặn bởi một hằng số và hệ số tỷ lệ dương, phép chuẩn hóa bền vững không khuếch đại độ lệch tuyệt đối quá hệ số tỷ lệ nghịch đã công bố."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "4. Thảo luận"
+      },
+      {
+        "type": "paragraph",
+        "text": "Kết quả phù hợp với giả thuyết rằng trung vị ít nhạy với một số điểm nền cực đoan, nhưng không chứng minh rằng phép biến đổi này luôn tốt hơn. Khi dữ liệu thưa, ước lượng trung vị có phương sai lớn hơn và khoảng dự báo trở nên rộng. Những giới hạn đó xuất hiện rõ trong các lô có ít quan sát, nơi cả độ bao phủ lẫn sai lệch thay đổi theo cách sinh nền. Chúng tôi đã giữ các lô khó trong bảng thay vì loại bỏ chúng sau khi xem kết quả. Lựa chọn ấy giúp người đọc thấy giới hạn vận hành thay vì chỉ thấy mức trung bình thuận lợi \\cite{7,8}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Bộ thử nghiệm chỉ chứa quy tắc toán học đã biết, do đó chưa phản ánh lỗi thiết bị, sai số ghi nhãn hoặc thay đổi hóa học của vật liệu. Một nghiên cứu tiếp theo có thể đưa thêm các dạng nền phi tuyến nhưng cần công bố rõ điều kiện sinh để không biến dữ liệu giả lập thành tuyên bố thực nghiệm. Với thiết kế hiện tại, kết luận hẹp nhất và có thể lặp lại là lựa chọn chuẩn hóa ảnh hưởng đến độ ổn định của khoảng trong các lô có nền thay đổi. Công thức $d_i=|e_i|$ vẫn hữu ích để đọc sai lệch, nhưng phải đi kèm tỷ lệ bao phủ và mô tả cách chia lô."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "5. Kết luận"
+      },
+      {
+        "type": "paragraph",
+        "text": "Quy trình cho thấy có thể kiểm tra riêng ảnh hưởng của nền và mật độ bằng dữ liệu mô phỏng có kiểm soát. Chuẩn hóa bền vững đạt sai lệch trung vị thấp hơn trong nhóm dịch nền, còn nhóm lấy mẫu thưa vẫn cần được xem xét cẩn trọng. Bảng, biểu đồ và sơ đồ cung cấp ba góc nhìn bổ sung về chỉ số, độ bao phủ và luồng xử lý. Các con số không phải dự báo cho vật liệu thật; chúng là ví dụ tái lập để phát triển phép đánh giá. Mọi cấu hình và kết quả đều gắn với quy ước sinh dữ liệu được mô tả trong bài."
+      },
+      {
+        "type": "paragraph",
+        "text": "Phân tích độ nhạy được tổ chức theo ba trục: dịch chuyển nền, cường độ nhiễu và số điểm hữu ích trong một chuỗi. Mỗi trục có bốn mức đã xác định trước, trong khi các yếu tố còn lại được giữ cố định để hạn chế diễn giải nhầm giữa hiệu ứng chính và tương tác. Độ lệch tuyệt đối trung vị được tính riêng cho từng ô thiết kế, sau đó tổng hợp theo lô chứ không gộp tất cả quan sát ngay từ đầu. Cách làm này giữ lại cấu trúc phân cấp của thí nghiệm và cho phép nhận ra một phương pháp chỉ hoạt động tốt ở vài nhóm. Đại lượng $s_b$ biểu thị độ lớn dịch nền trong kịch bản thứ b; nó được chuẩn hóa theo khoảng tham số đã công bố để so sánh các lần chạy."
+      },
+      {
+        "type": "paragraph",
+        "text": "Khi số điểm hữu ích giảm, cả ba thủ tục đều tạo khoảng rộng hơn, nhưng mức tăng không giống nhau. Chuẩn hóa toàn cục nhạy với các lô có nền cao vì một thang chung phải bao phủ những dải khác biệt lớn. Chuẩn hóa theo lô thích nghi hơn nhưng ước lượng vị trí trở nên bất ổn khi phần nền quan sát được quá ngắn. Phép dùng trung vị giảm ảnh hưởng của đuôi dài, song vẫn cần tối thiểu một số điểm nền để xác định thang. Chúng tôi báo cáo từng điều kiện thay vì đưa ra một con số duy nhất, bởi độ rộng khoảng tự nó không cho biết liệu khoảng ấy có bao phủ giá trị mục tiêu. Sai số chuẩn $u_i$ vì thế được đọc cùng tỷ lệ bao phủ theo lô."
+      },
+      {
+        "type": "paragraph",
+        "text": "Một phép kiểm tra bổ sung bỏ ngẫu nhiên một phần các điểm đầu chuỗi trước khi ước lượng nền. Tỷ lệ bỏ được đặt ở mức thấp, vừa và cao; với mỗi mức, cùng một mặt nạ thiếu được áp dụng cho ba phương pháp. Kết quả cho thấy độ lệch của phương pháp toàn cục tăng đều khi điểm nền bị mất, còn phương pháp theo lô có biến thiên lớn giữa các lần lặp. Đường trung vị ít thay đổi hơn nhưng độ rộng khoảng tăng rõ ở nhóm thiếu nhiều. Những quan sát này cho thấy độ bền trước ngoại lệ không đồng nghĩa với độ bền trước thiếu dữ liệu. Phép thử không mô phỏng cơ chế mất điểm có chủ đích, do đó không thể dùng để suy rộng sang mọi dạng lỗi ghi nhận."
+      },
+      {
+        "type": "paragraph",
+        "text": "Chúng tôi tách bất định giữa các lần sinh khỏi bất định bên trong một lần sinh bằng cách giữ một tập hạt giống riêng cho kiểm tra. Mỗi hạt giống tạo ra một ma trận mới nhưng không thay đổi cấu trúc kịch bản, cho phép so sánh phân phối kết quả thay vì một lần chạy thuận tiện. Trung vị của sai lệch giảm trong phần lớn kịch bản, nhưng thứ hạng của hai phương pháp đứng đầu đôi khi đổi chỗ khi số điểm thấp. Khoảng phân vị giữa các hạt giống được đưa vào bảng phụ để tránh nhầm độ ổn định trung bình với tính nhất quán của từng lô. Với $R$ lần tái sinh, ước lượng $\\tilde e=\\operatorname{median}(e_1,\\ldots,e_R)$ mô tả tâm của phân phối kiểm tra."
+      },
+      {
+        "type": "paragraph",
+        "text": "Phép kiểm tra hiệu chuẩn so sánh tần suất mục tiêu nằm trong các khoảng danh nghĩa với mức đã đặt ra trước. Một phương pháp có thể đạt sai số điểm thấp nhưng tạo khoảng quá hẹp; khi đó các dự báo trông chính xác nhưng bỏ sót nhiều giá trị. Ngược lại, khoảng rất rộng có thể đạt bao phủ cao mà ít hữu ích cho quyết định. Vì vậy chúng tôi trình bày đồng thời độ bao phủ và độ rộng chuẩn hóa, đồng thời không chọn ngưỡng sau khi xem đường cong. Các nhóm có số mẫu nhỏ được ghi rõ mẫu số để người đọc không diễn giải một tỷ lệ dao động như bằng chứng chắc chắn. Thống kê $p_j=k_j/n_j$ chỉ có ý nghĩa khi $n_j$ được xem cùng giá trị ước lượng."
+      },
+      {
+        "type": "paragraph",
+        "text": "Bảng phân tích mở rộng chia kịch bản theo bốn mức dịch nền và ba mức mật độ. Các hàng không phải phép đo độc lập của vật liệu; chúng là kết quả của các quy tắc sinh dữ liệu được kiểm soát. Chúng tôi giữ cách đặt tên ngắn để bảng có thể được đọc trên một trang ngang, nhưng định nghĩa đầy đủ của từng mức nằm trong phần mô tả phương pháp. Ô có độ bao phủ thấp nhất vẫn được giữ lại vì nó nêu rõ giới hạn của cách chuẩn hóa. Nếu bỏ ô ấy, mức trung bình sẽ tăng và tạo một ấn tượng quá lạc quan. Tham chiếu tới bảng và quy trình được nối trực tiếp với phần phân tích để người đọc tra cứu các lựa chọn thực hiện."
+      },
+      {
+        "type": "paragraph",
+        "text": "Để kiểm tra khả năng tái lập, quy trình được viết thành các bước có đầu vào và đầu ra rõ ràng. Trạng thái sinh chuỗi, phân hoạch lô, ước lượng nền, biến đổi đặc trưng và tính chỉ số được ghi thành các sự kiện riêng. Không có bước nào tự động thay đổi dữ liệu sau khi thấy kết quả đánh giá. Một lần chạy mới cần cùng cấu hình, phiên bản bộ tạo và hạt giống mới; do đó có thể phân biệt tái lập một lần chạy với tái sinh một mẫu thử. Mã giả dưới đây lược bỏ chi tiết lưu trữ nhưng giữ thứ tự thao tác, đặc biệt là việc khóa phép chia tập trước khi tính tham số chuẩn hóa. Mọi ngưỡng được truyền tường minh thay vì lấy từ giá trị mặc định không được công bố."
+      },
+      {
+        "type": "paragraph",
+        "text": "Sơ đồ đa bảng thể hiện ba thành phần của đánh giá: phân phối sai lệch, đường hiệu chuẩn và số lượng quan sát còn lại sau lọc. Các bảng con chia sẻ cùng trục kịch bản để so sánh ngang, nhưng mỗi bảng con có thang riêng nhằm tránh làm phẳng những biến thiên nhỏ. Nhãn (a), (b) và (c) chỉ ra phép đo được trình bày, không phải ba thí nghiệm độc lập. Khi đọc cùng bảng nhạy cảm, sơ đồ cho thấy trường hợp có sai lệch thấp không nhất thiết có độ bao phủ cao. Tất cả đường và giá trị trong hình đều được dựng từ dữ liệu giả lập, không chứa ảnh hoặc bản đồ thu thập bên ngoài. Bộ mô tả hình ghi lại phép tạo từng bảng con."
+      },
+      {
+        "type": "paragraph",
+        "text": "Một giới hạn quan trọng là các biến mục tiêu trong bộ sinh tuân theo phân phối đã biết. Dữ liệu thực có thể chứa sự phụ thuộc theo thời gian, biến đổi giữa thiết bị và sai số nhãn không đối xứng; những thành phần đó chưa có trong kịch bản hiện tại. Chúng tôi cũng chưa kiểm tra liệu một phép chuẩn hóa được chọn ở lô này có duy trì lợi ích khi áp dụng cho miền khác. Kết luận nên được hiểu là so sánh có điều kiện trên thiết kế giả lập, không phải khuyến nghị chọn một thủ tục duy nhất. Công thức $\\Delta_r=\\hat m_r-m_r$ làm rõ đại lượng đối chiếu, nhưng không khắc phục được giới hạn trong giả định tạo dữ liệu."
+      },
+      {
+        "type": "paragraph",
+        "text": "Phân tích theo lô hỗ trợ một quyết định thực hành có phạm vi hẹp: báo cáo nhiều tiêu chí và nêu rõ mật độ quan sát thay vì chỉ xếp hạng phương pháp. Nếu một đơn vị tạo dữ liệu muốn dùng quy trình này như phép kiểm tra nội bộ, họ nên công khai cách tạo lô, ngưỡng dừng và cách tính khoảng. Một thử nghiệm mới cần đánh giá riêng các mức nền chưa có trong bộ tham số hiện tại. Chúng tôi không khuyến nghị suy luận về khả năng đo độ ẩm của bất kỳ vật liệu thật nào dựa trên kết quả này. Giá trị của bộ ví dụ nằm ở khả năng tái lập đường đi từ tín hiệu tổng hợp đến bảng kết quả và ở việc làm lộ các điều kiện mà phép chuẩn hóa mất ổn định."
+      },
+      {
+        "type": "paragraph",
+        "text": "Các phép thử bổ sung được tóm tắt tại \\\\ref{tab:sensitivity}, trong khi thứ tự xử lý có thể đối chiếu với \\\\ref{alg:procedure} và ba bảng con ở \\\\ref{fig:residuals}. Phương trình không đánh số dưới đây chỉ định nghĩa một đại lượng phụ được dùng khi kiểm tra."
+      },
+      {
+        "type": "table",
+        "id": "tab:sensitivity",
+        "caption": "Độ nhạy theo mức dịch nền và mật độ",
+        "header": [
+          [
+            "Dịch nền",
+            "Mật độ",
+            "Sai lệch",
+            "Bao phủ"
+          ]
+        ],
+        "rows": [
+          [
+            "thấp",
+            "thưa",
+            "0,061",
+            "0,84"
+          ],
+          [
+            "vừa",
+            "vừa",
+            "0,072",
+            "0,89"
+          ],
+          [
+            "cao",
+            "dày",
+            "0,095",
+            "0,91"
+          ]
+        ],
+        "note": "Giá trị được tổng hợp trên các lần sinh giả lập.",
+        "landscape": true
+      },
+      {
+        "type": "figure",
+        "id": "fig:residuals",
+        "figure_type": "multi_panel",
+        "caption": "Ba góc nhìn của phép kiểm tra độ ổn định",
+        "description": "Hình nhiều bảng con gồm phân phối sai lệch, hiệu chuẩn và số điểm còn lại.",
+        "labels": [],
+        "panels": [
+          {
+            "figure_type": "image_panel",
+            "description": "Dải sai lệch theo lô",
+            "labels": [
+              "lô thấp",
+              "lô cao"
+            ]
+          },
+          {
+            "figure_type": "architecture",
+            "description": "Luồng hiệu chuẩn theo nhóm",
+            "labels": [
+              "Tạo lô",
+              "Khớp khoảng",
+              "Đếm bao phủ"
+            ]
+          },
+          {
+            "figure_type": "image_panel",
+            "description": "Số điểm sau khi lọc",
+            "labels": [
+              "ban đầu",
+              "còn lại"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "id": "alg:procedure",
+        "caption": "Quy trình đánh giá theo lô",
+        "language": "pseudocode",
+        "lines": [
+          "for batch in batches:",
+          "  split = lock_split(batch)",
+          "  base = estimate_baseline(split.train)",
+          "  model = fit(normalize(split.train, base))",
+          "  interval = predict(model, split.test)",
+          "  report(error, width, coverage)"
+        ]
+      },
+      {
+        "type": "equation",
+        "latex": "\\delta=\\frac{1}{R}\\sum_{r=1}^{R}|e_r|",
+        "numbered": false
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "6. Phụ lục: cấu hình và tiêu chí"
+      },
+      {
+        "type": "paragraph",
+        "text": "Phần phụ lục ghi lại các tiêu chí cần giữ cố định khi tái lập ví dụ. Trước khi sinh dữ liệu, cần lưu số lô, số chuỗi mỗi lô, miền mục tiêu, phân phối nhiễu, cách tạo nền và hạt giống. Trước khi đánh giá, cần khóa danh sách đặc trưng, tốc độ học, tiêu chí dừng, mức khoảng và quy tắc tổng hợp. Một thay đổi ở bất kỳ lựa chọn nào cũng tạo thành một cấu hình mới và phải được mô tả cùng kết quả. Tệp cấu hình giả lập được xem là một phần của minh chứng phương pháp, không phải phụ lục hành chính. Người đọc có thể dùng danh sách này để tái tạo cả trường hợp thuận lợi lẫn trường hợp sai lệch cao."
+      }
+    ],
+    "references": [
+      {
+        "text": "An, M. (2021). Quy tắc tạo chuỗi vật liệu giả lập. Bản ghi Aurora, 1(1), 1–8.",
+        "cite": "An, 2021"
+      },
+      {
+        "text": "Bình, Q. (2022). Phân tích nền trong tín hiệu tổng hợp. Tuyển tập Mô phỏng, 2(1), 9–16.",
+        "cite": "Bình, 2022"
+      },
+      {
+        "text": "Cánh Diều, P. (2020). Đánh giá sai số theo từng lô. Ghi chú Giả lập, 1(2), 17–24.",
+        "cite": "Cánh Diều, 2020"
+      },
+      {
+        "text": "Dải, T. (2023). Khoảng dự báo trong quy trình tổng hợp. Sổ tay Aurora, 3(1), 25–32.",
+        "cite": "Dải, 2023"
+      },
+      {
+        "text": "E. Mẫu và F. Giả. (2021). Chuẩn hóa bền vững có kiểm soát. Tập san Tưởng tượng, 4(2), 33–40.",
+        "cite": "Mẫu và Giả, 2021"
+      },
+      {
+        "text": "Gió, N. (2024). Tách tập theo cấu trúc sinh mẫu. Báo cáo Kỹ thuật Aurora, 2(3), 41–48.",
+        "cite": "Gió, 2024"
+      },
+      {
+        "text": "Hạt, L. (2022). Độ nhạy của thống kê trung vị. Bản thảo Giả lập, 5(1), 49–56.",
+        "cite": "Hạt, 2022"
+      },
+      {
+        "text": "Ích, V. (2023). Kiểm tra bao phủ cho dữ liệu tạo sinh. Tuyển tập Cánh Diều, 6(2), 57–64.",
+        "cite": "Ích, 2023"
+      }
+    ],
+    "journal": "Tạp chí Mô phỏng Aurora Lam Sơn, tập 3, số 1, trang 11–27; nhận ngày 04/02/2026, chấp nhận ngày 19/03/2026"
+  }
+}

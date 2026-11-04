@@ -1,0 +1,96 @@
+{
+ "variables": {
+  "industry": "nhựa kỹ thuật",
+  "company_size": "small",
+  "fiscal_year": 2024
+ },
+ "source": "seed_144.json",
+ "values": {
+  "board_paragraph": [
+   "Sản phẩm của công ty được cung cấp cho các nhà lắp ráp thiết bị điện, máy bơm và phụ tùng cơ khí trong nước.",
+   "Trong năm {year}, công ty duy trì sản xuất ổn định, tập trung vào các chi tiết polyamide gia cường sợi thủy tinh và khay kỹ thuật dùng trong tủ điều khiển. Ban Tổng Giám đốc đã ưu tiên kiểm soát tỷ lệ phế phẩm, đàm phán lại lịch giao hạt nhựa và điều chỉnh giá bán theo biến động nguyên liệu.",
+   "Triển vọng năm {next} được xây dựng trên cơ sở các hợp đồng nguyên tắc đã ký với khách hàng sản xuất thiết bị điện và nhóm khách hàng gia dụng công nghiệp. Công ty dự kiến hoàn thiện khuôn cho hai dòng chi tiết mới, nâng tỷ lệ tái sử dụng bavia phù hợp tiêu chuẩn kỹ thuật và mở rộng kiểm tra độ bền nhiệt. Rủi ro chính vẫn là giá hạt nhựa nhập khẩu, thời gian giao khuôn và sức ép cạnh tranh về giá; các rủi ro này được theo dõi trong kế hoạch mua hàng và báo giá.",
+   "Hội đồng quản trị giám sát định hướng kinh doanh, ngân sách đầu tư và hệ thống kiểm soát nội bộ. Không có thay đổi trọng yếu về cơ cấu quản trị sau ngày kết thúc kỳ kế toán cần điều chỉnh vào số liệu đã trình bày.",
+   "Báo cáo tài chính năm {year} được kiểm toán bởi {auditor}, theo hợp đồng dịch vụ đã được Hội đồng quản trị phê duyệt. Ban Tổng Giám đốc chịu trách nhiệm lập báo cáo phù hợp với chế độ kế toán doanh nghiệp Việt Nam, lựa chọn chính sách kế toán thích hợp, duy trì kiểm soát nội bộ và bảo đảm tài sản được quản lý đúng mục đích. Theo đánh giá của Ban Tổng Giám đốc, công ty có khả năng tiếp tục hoạt động bình thường trong tương lai gần.",
+   "Ban Tổng Giám đốc xác nhận đã xem xét các sự kiện phát sinh từ ngày kết thúc kỳ kế toán đến ngày ký báo cáo. Công ty không phát sinh vụ kiện, cam kết mua sắm hoặc tổn thất tài sản có ảnh hưởng trọng yếu đến báo cáo tài chính. giao dịch này là hoạt động đầu tư thông thường và không làm thay đổi số liệu năm {year}.",
+   "Ban Tổng Giám đốc trình bày báo cáo này cùng các báo cáo tài chính và thuyết minh kèm theo để cổ đông xem xét. Mục tiêu trong kỳ tới là giữ vững chất lượng lô hàng, nâng hiệu suất sử dụng máy, phát triển vật liệu có hàm lượng tái chế phù hợp và duy trì biên lợi nhuận đủ để trả nợ đầu tư. Các chỉ tiêu tài chính được theo dõi hàng tháng, kết hợp với chỉ tiêu giao hàng đúng hạn và tỷ lệ sản phẩm đạt ngay lần kiểm tra đầu tiên."
+  ],
+  "auditor_paragraphs": [
+   "Báo cáo được lập bằng đồng Việt Nam và do Ban Tổng Giám đốc chịu trách nhiệm phát hành.",
+   "Ban Tổng Giám đốc chịu trách nhiệm về việc lập và trình bày báo cáo tài chính trung thực, hợp lý; lựa chọn và áp dụng chính sách kế toán thích hợp; thực hiện các ước tính kế toán hợp lý; đồng thời thiết kế, thực hiện và duy trì kiểm soát nội bộ cần thiết để báo cáo không còn sai sót trọng yếu do gian lận hoặc nhầm lẫn. Trách nhiệm này cũng bao gồm đánh giá khả năng hoạt động liên tục của công ty.",
+   "Trách nhiệm của chúng tôi là đưa ra ý kiến về báo cáo tài chính dựa trên kết quả kiểm toán. Chúng tôi đã thực hiện kiểm toán theo các chuẩn mực kiểm toán Việt Nam. Các chuẩn mực này yêu cầu chúng tôi tuân thủ yêu cầu đạo đức nghề nghiệp, lập kế hoạch và thực hiện thủ tục kiểm toán để đạt được sự đảm bảo hợp lý về việc báo cáo tài chính có còn sai sót trọng yếu hay không.",
+   "Một cuộc kiểm toán bao gồm thực hiện các thủ tục nhằm thu thập bằng chứng về các số liệu và thuyết minh trên báo cáo tài chính. Việc lựa chọn thủ tục phụ thuộc vào xét đoán của kiểm toán viên, bao gồm đánh giá rủi ro có sai sót trọng yếu do gian lận hoặc nhầm lẫn. Khi đánh giá rủi ro, kiểm toán viên xem xét kiểm soát nội bộ liên quan, nhưng không nhằm đưa ra ý kiến về hiệu quả của kiểm soát nội bộ.",
+   "Chúng tôi tin tưởng rằng các bằng chứng kiểm toán đã thu thập là đầy đủ và thích hợp làm cơ sở cho ý kiến kiểm toán. Trong quá trình thực hiện, chúng tôi đã trao đổi với Ban Tổng Giám đốc và những người chịu trách nhiệm quản trị về phạm vi, thời gian kiểm toán, các phát hiện quan trọng và những khiếm khuyết kiểm soát nội bộ đáng lưu ý. Chúng tôi duy trì tính độc lập với công ty.",
+   "Ngoài các vấn đề đã nêu trong báo cáo, chúng tôi không nhận thấy sự kiện hoặc điều kiện nào cho thấy có nghi ngờ trọng yếu về khả năng hoạt động liên tục của công ty tại ngày phát hành báo cáo. Ý kiến kiểm toán của chúng tôi là ý kiến chấp nhận toàn phần. Báo cáo này được lập cho mục đích cung cấp thông tin cho cổ đông và Hội đồng quản trị, không nhằm phục vụ một đối tượng sử dụng riêng biệt khác."
+  ],
+  "board_title": "BÁO CÁO CỦA BAN TỔNG GIÁM ĐỐC",
+  "auditor_title": "BÁO CÁO KIỂM TOÁN ĐỘC LẬP",
+  "auditor_addressee": "Kính gửi cổ đông và Hội đồng quản trị {company}",
+  "notes": [
+   {
+    "title": "THUYẾT MINH BÁO CÁO TÀI CHÍNH",
+    "paragraphs": [
+     "Các số liệu được làm tròn khi trình bày, còn số liệu trong bảng là số nguyên đồng.",
+     "Ban Tổng Giám đốc đánh giá công ty có đủ nguồn lực để tiếp tục hoạt động trong vòng mười hai tháng kể từ ngày lập báo cáo. Các chính sách kế toán được áp dụng nhất quán với năm trước, trừ những thay đổi bắt buộc theo quy định hiện hành."
+    ],
+    "table": true
+   },
+   {
+    "title": "2. Tiền và tương đương tiền",
+    "paragraphs": [
+     "Tiền gửi ngân hàng được ghi nhận theo số dư xác nhận cuối kỳ. Công ty không có khoản tiền bị hạn chế sử dụng. Các khoản tương đương tiền được xác định theo kỳ hạn gốc ngắn và có khả năng chuyển đổi nhanh thành tiền.",
+     "Dòng tiền hoạt động tăng nhờ thu hồi công nợ, dù công ty đã tăng lượng nguyên liệu dự trữ cho đơn hàng đầu năm."
+    ],
+    "table": true
+   },
+   {
+    "title": "3. Phải thu khách hàng",
+    "paragraphs": [
+     "Các khoản phải thu được theo dõi theo từng khách hàng và ghi nhận theo giá trị có thể thu hồi. Bộ phận kinh doanh đối chiếu công nợ hàng tháng, đồng thời trích lập dự phòng khi có bằng chứng về rủi ro thanh toán.",
+     "Phần lớn số dư cuối kỳ là công nợ của khách hàng sản xuất thiết bị điện, có lịch thanh toán trong quý đầu năm {next}."
+    ],
+    "table": true
+   },
+   {
+    "title": "4. Hàng tồn kho",
+    "paragraphs": [
+     "Hàng tồn kho gồm hạt nhựa, phụ gia, khuôn đang sử dụng và thành phẩm chờ giao. Hàng tồn kho được ghi nhận theo giá thấp hơn giữa giá gốc và giá trị thuần có thể thực hiện được.",
+     "Dự phòng cuối kỳ phản ánh một số mã hạt màu và bán thành phẩm chậm luân chuyển, được rà soát theo kế hoạch sản xuất."
+    ],
+    "table": true
+   },
+   {
+    "title": "5. Tài sản cố định",
+    "paragraphs": [
+     "Máy ép phun, máy sấy và thiết bị kiểm tra được theo dõi riêng theo nguyên giá và hao mòn lũy kế.",
+     "Trong năm, công ty đưa vào sử dụng một bộ điều khiển nhiệt và nâng cấp hệ thống cấp liệu; không có tài sản cố định đem cầm cố ngoài các tài sản bảo đảm cho khoản vay dài hạn."
+    ],
+    "table": true
+   },
+   {
+    "title": "6. Vay và nợ thuê tài chính",
+    "paragraphs": [
+     "Các khoản vay được ghi nhận theo số tiền thực nhận và phân loại ngắn hạn, dài hạn theo thời hạn thanh toán. Chi phí lãi vay được ghi nhận vào chi phí tài chính trong kỳ, trừ phần đủ điều kiện vốn hóa.",
+     "Khoản vay dài hạn dùng để đầu tư máy ép và cải tạo nhà xưởng, được trả theo lịch quý. Công ty tuân thủ các điều khoản tài chính đã cam kết với tổ chức tín dụng."
+    ],
+    "table": true
+   },
+   {
+    "title": "7. Vốn chủ sở hữu",
+    "paragraphs": [
+     "Lợi nhuận sau thuế được phân phối theo nghị quyết của Đại hội đồng cổ đông sau khi hoàn tất nghĩa vụ thuế và trích lập quỹ.",
+     "Quỹ đầu tư phát triển tăng do phân phối từ lợi nhuận năm trước. Công ty chưa phát hành thêm cổ phiếu và không mua lại cổ phiếu trong kỳ."
+    ],
+    "table": true
+   },
+   {
+    "title": "8. Doanh thu và thuế",
+    "paragraphs": [
+     "Doanh thu được ghi nhận khi sản phẩm đã giao và quyền kiểm soát chuyển cho khách hàng theo điều khoản hợp đồng. Doanh thu thuần đã loại trừ các khoản giảm giá và hàng bán bị trả lại.",
+     "Thuế thu nhập doanh nghiệp hiện hành được tính trên thu nhập chịu thuế theo thuế suất áp dụng. Công ty kê khai thuế giá trị gia tăng theo phương pháp khấu trừ và không có nghĩa vụ thuế quá hạn trọng yếu."
+    ],
+    "table": true
+   }
+  ]
+ }
+}

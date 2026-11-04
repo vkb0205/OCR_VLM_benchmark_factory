@@ -1,0 +1,115 @@
+{
+ "variables": {
+  "industry": "phân phối dược phẩm",
+  "company_size": "medium",
+  "fiscal_year": 2025
+ },
+ "source": "seed_131.json",
+ "values": {
+  "board_paragraph": [
+   "Trong năm {year}, Công ty duy trì hệ thống kho đạt yêu cầu bảo quản, tăng cường kiểm soát hạn dùng và mở rộng giao hàng theo tuyến. Kết quả này phản ánh sản lượng tăng, cơ cấu khách hàng ổn định và việc tiết giảm chi phí vận hành tại các điểm giao nhận.",
+   "Ban Tổng Giám đốc đã tổ chức đối chiếu công nợ theo tháng, rà soát hàng chậm luân chuyển và duy trì dự phòng phù hợp với khả năng thu hồi.",
+   "Các khoản vay được sử dụng chủ yếu để bổ sung vốn lưu động theo mùa vụ và đầu tư thiết bị kho. Công ty thực hiện đầy đủ nghĩa vụ thuế, bảo hiểm và thanh toán cho người lao động; không có khoản nợ quá hạn trọng yếu cần trình bày riêng tại ngày lập báo cáo.",
+   "Năm {next}, Công ty dự kiến nâng cấp phần mềm truy xuất lô hàng, hoàn thiện thêm một kho trung chuyển và mở rộng danh mục sản phẩm có nguồn cung ổn định. Ban Tổng Giám đốc sẽ ưu tiên kiểm soát biên lợi nhuận, giảm thời gian thu tiền và lựa chọn đối tác có hồ sơ chất lượng minh bạch, đồng thời không đánh đổi yêu cầu bảo quản để chạy theo tăng trưởng doanh số.",
+   "Các thành viên thực hiện nhiệm vụ theo điều lệ, nghị quyết được thông qua và quy chế phân quyền nội bộ.",
+   "Báo cáo tài chính năm {year} được kiểm toán bởi {auditor}. Ban Tổng Giám đốc chịu trách nhiệm lập báo cáo theo chuẩn mực và chế độ kế toán Việt Nam, duy trì kiểm soát nội bộ cần thiết, đồng thời cung cấp hồ sơ đầy đủ cho kiểm toán viên. Ý kiến kiểm toán là ý kiến chấp nhận toàn phần.",
+   "Sau ngày kết thúc kỳ kế toán, Công ty ký thỏa thuận nguyên tắc với một số nhà thuốc khu vực trung du để mở rộng kênh phân phối; sự kiện này không làm phát sinh điều chỉnh đối với số liệu đã trình bày. Ngoài nội dung trên, Ban Tổng Giám đốc không nhận thấy sự kiện trọng yếu nào khác ảnh hưởng đến hoạt động liên tục của Công ty."
+  ],
+  "auditor_paragraphs": [
+   "Báo cáo được lập bằng đồng Việt Nam và phản ánh các chính sách kế toán chủ yếu của Công ty.",
+   "Ban Tổng Giám đốc chịu trách nhiệm lập và trình bày trung thực báo cáo tài chính, lựa chọn chính sách kế toán thích hợp, thực hiện các ước tính hợp lý, duy trì kiểm soát nội bộ cần thiết để báo cáo không có sai sót trọng yếu do gian lận hoặc nhầm lẫn, và đánh giá khả năng hoạt động liên tục của Công ty trong quá trình lập báo cáo.",
+   "Trách nhiệm của chúng tôi là đưa ra ý kiến về báo cáo tài chính dựa trên kết quả kiểm toán. Chúng tôi đã thực hiện kiểm toán theo các chuẩn mực kiểm toán Việt Nam. Các chuẩn mực này yêu cầu chúng tôi tuân thủ yêu cầu đạo đức và lập kế hoạch, thực hiện thủ tục để đạt được sự đảm bảo hợp lý về việc báo cáo tài chính có còn sai sót trọng yếu hay không.",
+   "Một cuộc kiểm toán bao gồm thực hiện thủ tục để thu thập bằng chứng về các số liệu và thuyết minh trên báo cáo tài chính. Các thủ tục được lựa chọn dựa trên xét đoán của kiểm toán viên, bao gồm đánh giá rủi ro sai sót trọng yếu do gian lận hoặc nhầm lẫn. Khi đánh giá rủi ro, chúng tôi xem xét kiểm soát nội bộ liên quan đến việc lập báo cáo để thiết kế thủ tục phù hợp.",
+   "Chúng tôi cũng đánh giá tính thích hợp của các chính sách kế toán được sử dụng, tính hợp lý của các ước tính kế toán và cách trình bày tổng thể. Chúng tôi tin rằng các bằng chứng kiểm toán đã thu thập là đầy đủ và thích hợp để làm cơ sở cho ý kiến kiểm toán chấp nhận toàn phần của chúng tôi đối với báo cáo tài chính năm {year}."
+  ],
+  "board_title": "BÁO CÁO CỦA BAN TỔNG GIÁM ĐỐC",
+  "auditor_title": "BÁO CÁO KIỂM TOÁN ĐỘC LẬP",
+  "auditor_addressee": "Kính gửi: Các cổ đông và Hội đồng quản trị {company}",
+  "notes": [
+   {
+    "title": "1. Đặc điểm hoạt động",
+    "paragraphs": [
+     "{company} hoạt động trong lĩnh vực phân phối dược phẩm và sản phẩm chăm sóc sức khỏe. Công ty mua hàng từ các nhà cung cấp trong và ngoài nước, bảo quản theo điều kiện ghi trên nhãn, sau đó phân phối cho bệnh viện, nhà thuốc và phòng khám. Chu kỳ kinh doanh thông thường dưới mười hai tháng."
+    ],
+    "table": true
+   },
+   {
+    "title": "2. Chính sách kế toán chủ yếu",
+    "paragraphs": [
+     "Đơn vị tiền tệ sử dụng là đồng Việt Nam. Tài sản và nợ phải trả được ghi nhận theo giá gốc, ngoại trừ các khoản được yêu cầu đánh giá theo quy định hiện hành. Doanh thu được ghi nhận khi quyền kiểm soát hàng hóa đã chuyển giao và khả năng thu tiền được xác định hợp lý."
+    ],
+    "table": true
+   },
+   {
+    "title": "3. Tiền và tương đương tiền",
+    "paragraphs": [
+     "Tiền của Công ty gồm tiền mặt tại quỹ và tiền gửi ngân hàng phục vụ thanh toán thường xuyên. Các khoản tương đương tiền là tiền gửi có kỳ hạn không quá ba tháng, có khả năng chuyển đổi dễ dàng thành tiền và ít rủi ro về thay đổi giá trị. Ban Tổng Giám đốc thực hiện đối chiếu số dư ngân hàng hàng tháng và kiểm kê quỹ theo quy chế nội bộ."
+    ],
+    "table": false
+   },
+   {
+    "title": "4. Phải thu khách hàng",
+    "paragraphs": [
+     "Các khoản phải thu khách hàng được ghi nhận theo giá trị có thể thu hồi. Công ty phân loại công nợ theo tuổi nợ, hạn mức tín dụng và lịch sử thanh toán của từng khách hàng. Dự phòng được lập cho các khoản có dấu hiệu khó thu hồi. Trong năm, Công ty tăng cường xác nhận công nợ với hệ thống nhà thuốc và điều chỉnh thời hạn thanh toán đối với nhóm khách hàng có doanh số mùa vụ."
+    ],
+    "table": false
+   },
+   {
+    "title": "5. Hàng tồn kho",
+    "paragraphs": [
+     "Hàng tồn kho chủ yếu là thuốc thành phẩm, vật tư đóng gói và sản phẩm chăm sóc sức khỏe. Hàng được theo dõi theo lô, hạn dùng và điều kiện bảo quản. Giá trị tồn kho cuối kỳ được trình bày theo giá thấp hơn giữa giá gốc và giá trị thuần có thể thực hiện. Dự phòng được ghi nhận cho hàng cận hạn, chậm luân chuyển hoặc có giá bán dự kiến thấp hơn giá vốn."
+    ],
+    "table": true
+   },
+   {
+    "title": "6. Tài sản cố định",
+    "paragraphs": [
+     "Tài sản cố định hữu hình của Công ty gồm xe giao hàng, thiết bị kho lạnh, giá kệ và thiết bị văn phòng. Tài sản vô hình chủ yếu là phần mềm quản lý phân phối. Chi phí sửa chữa thường xuyên được ghi nhận vào chi phí trong kỳ, còn khoản đầu tư làm tăng công suất hoặc kéo dài thời gian sử dụng được vốn hóa theo quy định."
+    ],
+    "table": false
+   },
+   {
+    "title": "7. Vay và nợ thuê tài chính",
+    "paragraphs": [
+     "Các khoản vay ngắn hạn được Công ty sử dụng để bổ sung vốn lưu động và thanh toán đơn hàng nhập kho. Khoản vay dài hạn dùng cho thiết bị bảo quản và phương tiện vận chuyển. Chi phí lãi vay được ghi nhận vào chi phí tài chính theo thời gian vay. Công ty theo dõi riêng hạn trả gốc, lãi và các điều kiện cam kết; tại ngày kết thúc năm không có vi phạm trọng yếu đối với các hợp đồng tín dụng."
+    ],
+    "table": true
+   },
+   {
+    "title": "8. Vốn chủ sở hữu",
+    "paragraphs": [
+     "Lợi nhuận sau thuế được phân phối theo nghị quyết của Đại hội đồng cổ đông, trong đó một phần được bổ sung quỹ đầu tư phát triển và phần còn lại được giữ lại để phục vụ hoạt động kinh doanh. Công ty chưa phát hành cổ phiếu ưu đãi hoặc công cụ chuyển đổi. Quyền và nghĩa vụ của cổ đông được thực hiện theo điều lệ Công ty."
+    ],
+    "table": true
+   },
+   {
+    "title": "9. Doanh thu và giá vốn",
+    "paragraphs": [
+     "Doanh thu bán hàng được ghi nhận khi hàng hóa đã giao, khách hàng chấp nhận và Công ty không còn quyền kiểm soát đáng kể đối với hàng hóa. Doanh thu được trình bày sau khi trừ chiết khấu thương mại, hàng bán bị trả lại và giảm giá hàng bán. Giá vốn bao gồm giá mua, chi phí nhập khẩu, vận chuyển và các chi phí trực tiếp liên quan đến việc đưa hàng về kho và sẵn sàng bán."
+    ],
+    "table": false
+   },
+   {
+    "title": "10. Thuế thu nhập doanh nghiệp",
+    "paragraphs": [
+     "Chi phí thuế thu nhập doanh nghiệp hiện hành được tính trên thu nhập chịu thuế và thuế suất áp dụng trong năm. Công ty thực hiện kê khai, tạm nộp và quyết toán thuế theo quy định. Tài sản và nợ thuế thu nhập hoãn lại được ghi nhận trên các chênh lệch tạm thời, trong phạm vi có đủ bằng chứng về khả năng sử dụng lợi ích thuế trong tương lai. Các sắc thuế khác được ghi nhận theo bản chất giao dịch."
+    ],
+    "table": true
+   },
+   {
+    "title": "11. Giao dịch với bên liên quan",
+    "paragraphs": [
+     "Các bên liên quan của Công ty gồm thành viên Hội đồng quản trị, Ban Tổng Giám đốc và các cá nhân có ảnh hưởng đáng kể. Giao dịch với bên liên quan được thực hiện theo điều kiện thương mại thông thường và được phê duyệt theo thẩm quyền. Trong năm {year} không phát sinh khoản vay, bảo lãnh hoặc giao dịch bất thường với bên liên quan cần trình bày riêng ngoài các khoản thù lao và tiền lương đã hạch toán."
+    ],
+    "table": false
+   },
+   {
+    "title": "12. Sự kiện sau ngày kết thúc kỳ kế toán",
+    "paragraphs": [
+     "Các thỏa thuận này chưa tạo ra nghĩa vụ doanh thu hoặc chi phí tại ngày kết thúc kỳ kế toán và không làm thay đổi số liệu trong báo cáo tài chính. Ngoài sự kiện đã nêu, không có sự kiện trọng yếu nào phát sinh cần điều chỉnh hoặc thuyết minh bổ sung."
+    ],
+    "table": false
+   }
+  ]
+ }
+}

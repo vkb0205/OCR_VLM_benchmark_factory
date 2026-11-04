@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "benchmark-factory"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = ["pydantic>=2,<3", "jinja2", "playwright", "pillow", "pyyaml", "pytest", "anthropic>=2", "openai>=1"]
+
+[project.scripts]
+factory = "factory.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["factory*"]
+namespaces = true
+
+[tool.setuptools.package-data]
+"factory" = ["../configs/*.yaml", "../configs/doc_types/*", "../designs/**/*", "render/fonts/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+cache_dir = ".cache/pytest"

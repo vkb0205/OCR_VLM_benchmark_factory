@@ -1,0 +1,94 @@
+{
+  "variables": {
+    "industry": "chế biến thực phẩm",
+    "company_size": "small",
+    "fiscal_year": 2024
+  },
+  "source": "seed_149.json",
+  "values": {
+    "board_paragraph": [
+      "The factory uses raw materials sourced from local fruit and vegetable growers and applies temperature-control and batch-traceability procedures. Products are distributed through food agents, institutional kitchens, and selected shops specializing in local products.",
+      "In {year}, the Company maintained stable production, added a medium-capacity freeze-drying line, and expanded its institutional-kitchen customer base. Profit margins improved as a result of reduced raw-material wastage and an adjusted product mix, although transportation and packaging costs increased in the final quarter of the year.",
+      "The Company maintained its short-term solvency, fulfilled all tax obligations, and had no overdue loans.",
+      "In {next}, the Board of General Directors expects to continue prioritizing products with stable raw-material supplies, improving packaging, and signing additional recurring supply contracts. The main risks are seasonal fluctuations, refrigeration and electricity costs, and increasingly stringent food safety documentation requirements. The Company will manage inventory by expiry date, diversify its sourcing regions, and maintain cash flow reserves for off-peak months.",
+      "The members performed their duties in accordance with the Company’s charter and resolutions.",
+      "The financial statements for {year} were audited by {auditor} under the signed engagement contract. The Board of General Directors is responsible for preparing truthful financial statements, selecting appropriate accounting policies, maintaining necessary internal controls, and providing records to the auditor. No material events requiring adjustment or additional disclosure occurred after the end of the accounting period."
+    ],
+    "auditor_paragraphs": [
+      "The Board of General Directors is responsible for preparing and presenting the financial statements in accordance with applicable regulations, selecting appropriate accounting policies, making reasonable estimates, and maintaining the internal controls necessary to ensure that the financial statements are free from material misstatement, whether due to fraud or error.",
+      "Our responsibility is to express an opinion on the financial statements based on the results of our audit. We conducted our audit in accordance with Vietnamese Standards on Auditing, complied with the relevant ethical requirements, and planned and performed procedures to obtain sufficient appropriate evidence.",
+      "Audit procedures include assessing risks, testing evidence supporting amounts and disclosures, evaluating accounting policies and significant estimates, and assessing the overall presentation of the financial statements. We believe that the evidence obtained provides a sufficient basis for our audit opinion.",
+      "We identified no matters that would change the opinion expressed above. The financial statements have been prepared on a going-concern basis; the assumptions and information provided by the Board of General Directors are consistent with the audit records within the scope of the audit.",
+      "In addition to the matters presented above, we noted no events occurring after the end of the accounting period that require adjustment or separate disclosure in the financial statements for {year}."
+    ],
+    "board_title": "REPORT OF THE BOARD OF GENERAL DIRECTORS",
+    "auditor_title": "INDEPENDENT AUDITOR’S REPORT",
+    "auditor_addressee": "To the Shareholders and the Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "B09-DN. Operating characteristics",
+        "paragraphs": [
+          "The Company purchases raw materials from affiliated growing regions, manufactures products at one factory, and sells primarily in the domestic market."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN. Basis of preparation",
+        "paragraphs": [
+          "The financial statements are prepared in Vietnamese dong in accordance with the enterprise accounting regime and applicable Vietnamese Accounting Standards. Transactions are recorded on an accrual basis, except for cash flow information, which is presented using the indirect method. Prior-year figures have been reclassified consistently for comparison."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN. Significant accounting policies",
+        "paragraphs": [
+          "Cash and cash equivalents comprise cash on hand, bank deposits, and investments with maturities of no more than three months. Inventories are recognized at the lower of cost and net realizable value, with cost of inventories issued calculated using the weighted-average method. Revenue is recognized when goods are delivered and control is transferred."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN. Cash and cash equivalents",
+        "paragraphs": [
+          "The Company has no cash equivalents or restricted cash. The closing cash balance increased due to positive operating cash flows and the collection of some receivables.",
+          "Cash is managed in accordance with internally approved limits, with monthly bank reconciliations and payment authorization delegated to each level of management."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN. Trade receivables",
+        "paragraphs": [
+          "The Company assesses the aging of receivables by customer and recognizes an allowance for balances showing signs of impairment. There are no material receivables from members of the Board of Directors or the Board of General Directors."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN. Inventories",
+        "paragraphs": [
+          "Inventories comprise fruit and vegetable raw materials, packaging, work in process, and finished goods. The Company tracks expiry dates by batch, performs a year-end stocktake, and recognizes an allowance for slow-moving inventories. At the reporting date, inventory levels support contracts for delivery in the first quarter of the following year."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN. Fixed assets",
+        "paragraphs": [
+          "Tangible fixed assets consist primarily of factory buildings, dryers, packaging equipment, and vehicles. Routine repair costs are recognized in the income statement as incurred."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN. Borrowings",
+        "paragraphs": [
+          "Borrowings are used to finance working capital and investment in the freeze-drying line. Interest rates are floating, as agreed with credit institutions, and are recognized as finance costs in the relevant period. The Company has complied with payment terms and had no overdue loans at the reporting date."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN. Equity",
+        "paragraphs": [
+          "The development investment fund increased through retained earnings in accordance with a resolution of the General Meeting of Shareholders."
+        ],
+        "table": true
+      }
+    ]
+  }
+}

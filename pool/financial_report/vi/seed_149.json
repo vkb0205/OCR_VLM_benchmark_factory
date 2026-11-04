@@ -1,0 +1,94 @@
+{
+ "variables": {
+  "industry": "chế biến thực phẩm",
+  "company_size": "small",
+  "fiscal_year": 2024
+ },
+ "source": "seed_149.json",
+ "values": {
+  "board_paragraph": [
+   "Nhà máy sử dụng nguyên liệu từ các hộ trồng rau quả trong vùng, áp dụng quy trình kiểm soát nhiệt độ và truy xuất theo lô. Sản phẩm được phân phối qua đại lý thực phẩm, bếp ăn tập thể và một số cửa hàng chuyên sản phẩm địa phương.",
+   "Trong năm {year}, Công ty duy trì sản xuất ổn định, bổ sung dây chuyền sấy lạnh công suất vừa và mở rộng nhóm khách hàng bếp ăn. Biên lợi nhuận được cải thiện nhờ giảm hao hụt nguyên liệu và điều chỉnh cơ cấu sản phẩm, dù chi phí vận chuyển và bao bì tăng trong quý cuối năm.",
+   "Công ty duy trì khả năng thanh toán ngắn hạn, thực hiện đầy đủ nghĩa vụ thuế và không có khoản vay quá hạn.",
+   "Ban Tổng Giám đốc dự kiến năm {next} tiếp tục ưu tiên các sản phẩm có nguồn nguyên liệu ổn định, cải tiến bao bì và ký thêm hợp đồng cung cấp định kỳ. Rủi ro chính là biến động mùa vụ, chi phí điện lạnh và yêu cầu ngày càng cao về hồ sơ an toàn thực phẩm. Công ty sẽ kiểm soát tồn kho theo hạn sử dụng, đa dạng hóa vùng mua và duy trì dự phòng dòng tiền cho các tháng thấp điểm.",
+   "Các thành viên thực hiện nhiệm vụ theo điều lệ và nghị quyết của Công ty.",
+   "Báo cáo tài chính năm {year} được kiểm toán bởi {auditor} theo hợp đồng đã ký. Ban Tổng Giám đốc chịu trách nhiệm lập báo cáo trung thực, lựa chọn chính sách kế toán phù hợp, duy trì kiểm soát nội bộ cần thiết và cung cấp hồ sơ cho kiểm toán viên. Sau ngày kết thúc kỳ kế toán không phát sinh sự kiện trọng yếu cần điều chỉnh hoặc công bố bổ sung."
+  ],
+  "auditor_paragraphs": [
+   "Ban Tổng Giám đốc chịu trách nhiệm lập và trình bày báo cáo tài chính theo quy định, lựa chọn chính sách kế toán thích hợp, thực hiện các ước tính hợp lý và duy trì kiểm soát nội bộ cần thiết để báo cáo không còn sai sót trọng yếu do gian lận hoặc nhầm lẫn.",
+   "Trách nhiệm của chúng tôi là đưa ra ý kiến về báo cáo tài chính dựa trên kết quả kiểm toán. Chúng tôi đã thực hiện công việc theo các chuẩn mực kiểm toán Việt Nam, tuân thủ yêu cầu đạo đức nghề nghiệp và lập kế hoạch, thực hiện thủ tục để thu thập đầy đủ bằng chứng thích hợp.",
+   "Các thủ tục kiểm toán bao gồm đánh giá rủi ro, kiểm tra thử các bằng chứng về số liệu và thuyết minh, đánh giá chính sách kế toán và các ước tính quan trọng, cũng như đánh giá cách trình bày tổng thể của báo cáo tài chính. Chúng tôi tin rằng bằng chứng đã thu thập là cơ sở đầy đủ cho ý kiến kiểm toán.",
+   "Chúng tôi không phát hiện vấn đề nào làm thay đổi ý kiến nêu trên. Báo cáo tài chính được lập trên cơ sở hoạt động liên tục; các giả định và thông tin do Ban Tổng Giám đốc cung cấp phù hợp với hồ sơ kiểm toán trong phạm vi cuộc kiểm toán.",
+   "Ngoài các nội dung đã trình bày, chúng tôi không ghi nhận sự kiện phát sinh sau ngày kết thúc kỳ kế toán cần điều chỉnh hoặc công bố riêng trong báo cáo tài chính năm {year}."
+  ],
+  "board_title": "BÁO CÁO CỦA BAN TỔNG GIÁM ĐỐC",
+  "auditor_title": "BÁO CÁO KIỂM TOÁN ĐỘC LẬP",
+  "auditor_addressee": "Kính gửi cổ đông và Hội đồng quản trị {company}",
+  "notes": [
+   {
+    "title": "B09-DN. Đặc điểm hoạt động",
+    "paragraphs": [
+     "Công ty mua nguyên liệu từ các vùng trồng liên kết, sản xuất tại một nhà máy và tiêu thụ chủ yếu trong nước."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN. Cơ sở lập báo cáo",
+    "paragraphs": [
+     "Báo cáo tài chính được lập bằng đồng Việt Nam theo chế độ kế toán doanh nghiệp và các Chuẩn mực kế toán Việt Nam áp dụng. Các giao dịch được ghi nhận theo cơ sở dồn tích, ngoại trừ thông tin dòng tiền trình bày theo phương pháp gián tiếp. Số liệu năm trước được phân loại nhất quán để so sánh."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN. Chính sách kế toán chủ yếu",
+    "paragraphs": [
+     "Tiền và các khoản tương đương tiền gồm tiền mặt, tiền gửi ngân hàng và khoản đầu tư có thời hạn thu hồi không quá ba tháng. Hàng tồn kho được ghi nhận theo giá thấp hơn giữa giá gốc và giá trị thuần có thể thực hiện, giá xuất kho tính theo bình quân gia quyền. Doanh thu ghi nhận khi hàng hóa được giao và quyền kiểm soát chuyển giao."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN. Tiền và tương đương tiền",
+    "paragraphs": [
+     "Công ty không có khoản tương đương tiền hoặc tiền bị hạn chế sử dụng. Số dư tiền cuối kỳ tăng do dòng tiền kinh doanh dương và thu hồi một phần công nợ.",
+     "Việc quản lý tiền được thực hiện theo hạn mức phê duyệt nội bộ, đối chiếu ngân hàng hàng tháng và phân quyền thanh toán cho từng cấp quản lý."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN. Phải thu khách hàng",
+    "paragraphs": [
+     "Công ty đánh giá tuổi nợ theo từng khách hàng và trích lập dự phòng cho số dư có dấu hiệu suy giảm. Không có khoản phải thu trọng yếu từ thành viên Hội đồng quản trị hoặc Ban Tổng Giám đốc."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN. Hàng tồn kho",
+    "paragraphs": [
+     "Hàng tồn kho gồm nguyên liệu rau quả, bao bì, sản phẩm đang chế biến và thành phẩm. Công ty theo dõi hạn sử dụng theo lô, kiểm kê cuối năm và trích lập dự phòng cho hàng chậm luân chuyển. Tại ngày báo cáo, lượng tồn kho phục vụ các hợp đồng giao trong quý đầu năm sau."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN. Tài sản cố định",
+    "paragraphs": [
+     "Tài sản cố định hữu hình chủ yếu là nhà xưởng, máy sấy, thiết bị đóng gói và phương tiện vận chuyển. Chi phí sửa chữa thường xuyên được ghi nhận vào kết quả kinh doanh khi phát sinh."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN. Các khoản vay",
+    "paragraphs": [
+     "Các khoản vay được sử dụng để tài trợ vốn lưu động và đầu tư dây chuyền sấy lạnh. Lãi suất thả nổi theo thỏa thuận với tổ chức tín dụng và được ghi nhận vào chi phí tài chính theo kỳ. Công ty tuân thủ các điều khoản thanh toán và không có khoản vay quá hạn tại ngày báo cáo."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN. Vốn chủ sở hữu",
+    "paragraphs": [
+     "Quỹ đầu tư phát triển tăng từ lợi nhuận giữ lại theo nghị quyết của Đại hội đồng cổ đông."
+    ],
+    "table": true
+   }
+  ]
+ }
+}

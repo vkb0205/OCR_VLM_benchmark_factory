@@ -1,0 +1,112 @@
+{
+ "variables": {
+  "industry": "điện tử gia dụng",
+  "company_size": "small",
+  "fiscal_year": 2025
+ },
+ "source": "seed_122.json",
+ "values": {
+  "board_paragraph": [
+   "Công ty chuyên thiết kế, lắp ráp và phân phối thiết bị điện tử gia dụng tiết kiệm điện, gồm bộ điều khiển bếp, quạt thông minh và ổ cắm đo điện. Sản phẩm được bán qua đại lý khu vực miền Trung và kênh thương mại điện tử do công ty vận hành.",
+   "Biên lợi nhuận gộp được duy trì nhờ chủ động mua linh kiện theo kế hoạch và giảm tỷ lệ hàng lỗi.",
+   "Công ty duy trì khả năng thanh toán phù hợp, dòng tiền từ hoạt động kinh doanh dương và không phát sinh khoản vay dài hạn mới trọng yếu.",
+   "Trong năm tới, Ban Tổng Giám đốc dự kiến mở rộng dòng thiết bị theo dõi chất lượng điện và tăng tỷ trọng linh kiện có nguồn cung trong nước. Công ty sẽ tiếp tục đầu tư kiểm thử an toàn, hoàn thiện dịch vụ bảo hành và xây dựng hệ thống dự báo nhu cầu theo từng đại lý. Các kế hoạch này được thực hiện trong giới hạn nguồn vốn và năng lực sản xuất hiện có.",
+   "Các thành viên thực hiện nhiệm vụ theo Điều lệ và nghị quyết của Hội đồng quản trị.",
+   "Báo cáo tài chính năm {year} được kiểm toán bởi {auditor}. Ban Tổng Giám đốc chịu trách nhiệm lập, trình bày trung thực báo cáo tài chính theo Chuẩn mực kế toán Việt Nam và chế độ kế toán doanh nghiệp hiện hành, đồng thời duy trì kiểm soát nội bộ cần thiết để báo cáo không có sai sót trọng yếu do gian lận hoặc nhầm lẫn.",
+   "Sau ngày kết thúc niên độ đến ngày ký báo cáo này, Công ty không phát sinh sự kiện nào cần điều chỉnh hoặc thuyết minh bổ sung ngoài các nội dung đã trình bày. Ban Tổng Giám đốc đánh giá Công ty có đủ nguồn lực để tiếp tục hoạt động trong tương lai gần và xác nhận các giả định hoạt động liên tục được sử dụng là phù hợp."
+  ],
+  "auditor_paragraphs": [
+   "Báo cáo phản ánh các giao dịch và số dư của Công ty cho năm tài chính kết thúc cùng ngày.",
+   "Ban Tổng Giám đốc chịu trách nhiệm về việc lập và trình bày báo cáo tài chính trung thực, hợp lý; lựa chọn chính sách kế toán thích hợp; thực hiện các ước tính hợp lý; và duy trì kiểm soát nội bộ mà Ban Tổng Giám đốc xác định là cần thiết để báo cáo không còn sai sót trọng yếu do gian lận hoặc nhầm lẫn.",
+   "Trách nhiệm của chúng tôi là đưa ra ý kiến về báo cáo tài chính dựa trên kết quả cuộc kiểm toán. Chúng tôi đã thực hiện công việc theo các chuẩn mực kiểm toán Việt Nam. Các chuẩn mực này yêu cầu chúng tôi tuân thủ chuẩn mực đạo đức và lập kế hoạch, thực hiện kiểm toán để đạt được sự đảm bảo hợp lý rằng báo cáo tài chính không có sai sót trọng yếu.",
+   "Công việc kiểm toán bao gồm thực hiện các thủ tục để thu thập bằng chứng kiểm toán về các số liệu và thuyết minh trên báo cáo tài chính. Các thủ tục được lựa chọn dựa trên xét đoán của kiểm toán viên, bao gồm đánh giá rủi ro sai sót trọng yếu. Chúng tôi cũng đánh giá tính thích hợp của chính sách kế toán và các ước tính kế toán, cũng như cách trình bày tổng thể của báo cáo.",
+   "Chúng tôi tin rằng các bằng chứng kiểm toán đã thu thập là đầy đủ và thích hợp làm cơ sở cho ý kiến kiểm toán chấp nhận toàn phần. Trong quá trình kiểm toán, chúng tôi không nhận thấy vấn đề nào làm thay đổi ý kiến nêu trong báo cáo này. Các số liệu so sánh cho năm {prev} đã được xem xét phù hợp với mục đích trình bày.",
+   "Báo cáo kiểm toán này được phát hành cùng ngày với báo cáo tài chính và chỉ nhằm phục vụ các cổ đông, Hội đồng quản trị và Ban Tổng Giám đốc của Công ty. Chúng tôi không chịu trách nhiệm đối với bên khác sử dụng báo cáo này cho mục đích không phù hợp."
+  ],
+  "board_title": "BÁO CÁO CỦA BAN TỔNG GIÁM ĐỐC",
+  "auditor_title": "BÁO CÁO KIỂM TOÁN ĐỘC LẬP",
+  "auditor_addressee": "Kính gửi: Các cổ đông và Hội đồng quản trị {company}",
+  "notes": [
+   {
+    "title": "B09. Thông tin chung",
+    "paragraphs": [
+     "Công ty hoạt động trong lĩnh vực lắp ráp và phân phối thiết bị điện tử gia dụng.",
+     "Danh mục sản phẩm gồm bộ điều khiển bếp, quạt thông minh và ổ cắm đo điện. Công ty bán hàng cho đại lý và người tiêu dùng cuối cùng thông qua các kênh đã được phê duyệt. Không có công ty con, công ty liên kết hoặc giao dịch hợp nhất trong kỳ."
+    ],
+    "table": true
+   },
+   {
+    "title": "B10. Chính sách kế toán chủ yếu",
+    "paragraphs": [
+     "Doanh thu được ghi nhận khi quyền kiểm soát hàng hóa chuyển giao và số tiền có thể xác định đáng tin cậy. Hàng tồn kho được tính theo phương pháp bình quân gia quyền; chi phí được ghi nhận phù hợp với kỳ phát sinh. Các khoản mục ngoại tệ không trọng yếu được quy đổi theo tỷ giá giao dịch tại ngày phát sinh.",
+     "Tài sản được trình bày theo nguyên giá sau khi trừ khấu hao hoặc dự phòng. Ước tính kế toán được rà soát tại mỗi ngày lập báo cáo. Việc thay đổi ước tính, nếu có, được ghi nhận vào kỳ phát sinh thay đổi và các kỳ liên quan."
+    ],
+    "table": true
+   },
+   {
+    "title": "B11. Tiền và các khoản tương đương tiền",
+    "paragraphs": [
+     "Tiền bao gồm tiền mặt tại quỹ và tiền gửi ngân hàng không kỳ hạn. Công ty không có khoản tương đương tiền tại ngày lập báo cáo. Các tài khoản ngân hàng được đối chiếu định kỳ với sổ kế toán và không có hạn chế đáng kể về quyền sử dụng.",
+     "Số dư cuối kỳ tăng do dòng tiền bán hàng được thu hồi tốt hơn, dù Công ty đã chi cho máy kiểm thử và bổ sung linh kiện chủ lực. Ban Tổng Giám đốc không nhận thấy rủi ro thanh khoản bất thường từ số dư tiền hiện có."
+    ],
+    "table": true
+   },
+   {
+    "title": "B12. Phải thu ngắn hạn",
+    "paragraphs": [
+     "Các khoản phải thu được ghi nhận theo giá trị ghi sổ sau khi trừ dự phòng tổn thất ước tính. Ban Tổng Giám đốc đánh giá từng khoản theo tuổi nợ, lịch sử thanh toán và thông tin cập nhật từ đại lý.",
+     "Khoản trả trước cho người bán chủ yếu phục vụ việc giữ chỗ linh kiện theo kế hoạch sản xuất quý đầu năm sau. Phải thu khác gồm khoản hoàn lại chi phí vận chuyển và khoản ký quỹ ngắn hạn."
+    ],
+    "table": true
+   },
+   {
+    "title": "B13. Hàng tồn kho",
+    "paragraphs": [
+     "Hàng tồn kho gồm bo mạch, linh kiện, sản phẩm dở dang và thành phẩm. Dự phòng giảm giá được lập cho các mặt hàng chậm luân chuyển hoặc có giá trị thuần có thể thực hiện thấp hơn giá gốc. Việc kiểm kê cuối năm được thực hiện với sự tham gia của bộ phận kho, kế toán và sản xuất.",
+     "Trong năm, Công ty tăng mức dự trữ linh kiện cho dòng ổ cắm đo điện để hạn chế gián đoạn nguồn cung. Một số mẫu vỏ cũ được phân loại riêng và đã trích lập dự phòng theo giá trị ước tính có thể thu hồi."
+    ],
+    "table": true
+   },
+   {
+    "title": "B14. Tài sản cố định và xây dựng cơ bản",
+    "paragraphs": [
+     "Công ty vốn hóa các khoản chi trực tiếp để đưa thiết bị vào trạng thái sẵn sàng vận hành.",
+     "Trong kỳ, Công ty hoàn thành khu kiểm thử an toàn điện và đưa vào sử dụng một phần máy lắp ráp tự động. Chi phí xây dựng cơ bản dở dang cuối kỳ là các hạng mục chưa nghiệm thu, chưa đủ điều kiện ghi tăng nguyên giá."
+    ],
+    "table": true
+   },
+   {
+    "title": "B15. Nợ phải trả và thuế",
+    "paragraphs": [
+     "Các khoản vay được ghi nhận theo số tiền nhận được; chi phí lãi vay được ghi nhận theo thời gian. Thuế thu nhập doanh nghiệp hiện hành được tính trên thu nhập chịu thuế theo quy định hiện hành. Công ty không có khoản nợ quá hạn trọng yếu tại ngày lập báo cáo.",
+     "Phải trả người bán tăng tương ứng với quy mô mua linh kiện. Các khoản thuế và phải trả người lao động được thanh toán theo lịch thông thường. Khoản vay dài hạn được sử dụng cho máy móc và có lịch trả gốc đều trong các năm tiếp theo."
+    ],
+    "table": true
+   },
+   {
+    "title": "B16. Vốn chủ sở hữu",
+    "paragraphs": [
+     "Quỹ đầu tư phát triển được trích từ lợi nhuận các năm trước theo nghị quyết của Đại hội đồng cổ đông. Lợi nhuận sau thuế kỳ này được giữ lại để bổ sung vốn lưu động và đầu tư kiểm thử.",
+     "Công ty chưa phát hành cổ phiếu mới, không mua lại cổ phiếu và không có cổ đông nào có quyền đặc biệt ngoài các quyền theo Điều lệ. Việc phân phối lợi nhuận sẽ được xem xét tại kỳ họp thường niên sau khi báo cáo tài chính được thông qua."
+    ],
+    "table": true
+   },
+   {
+    "title": "B17. Doanh thu và chi phí",
+    "paragraphs": [
+     "Doanh thu chủ yếu đến từ bán thiết bị và linh kiện gia dụng cho các đại lý trong nước. Doanh thu được trình bày sau khi loại trừ các khoản giảm trừ. Giá vốn tăng theo sản lượng nhưng tỷ lệ lợi nhuận gộp cải thiện nhờ tỷ trọng sản phẩm có giá trị gia tăng cao hơn.",
+     "Chi phí bán hàng gồm vận chuyển, bảo hành, hoa hồng và truyền thông sản phẩm. Chi phí quản lý gồm tiền lương, thuê dịch vụ và chi phí điều hành. Ban Tổng Giám đốc thường xuyên đối chiếu ngân sách với thực tế để hạn chế các khoản chi không tạo giá trị."
+    ],
+    "table": true
+   },
+   {
+    "title": "B18. Sự kiện sau ngày kết thúc kỳ kế toán",
+    "paragraphs": [
+     "Các hợp đồng mua linh kiện và đơn đặt hàng nhận sau ngày khóa sổ là những giao dịch thông thường trong hoạt động kinh doanh.",
+     "Ban Tổng Giám đốc đã xem xét khả năng thanh toán, kế hoạch sản xuất và các cam kết hiện có đến ngày ký báo cáo. Không có tranh chấp, tổn thất tài sản hoặc thay đổi pháp lý nào làm ảnh hưởng trọng yếu đến các số liệu đã trình bày."
+    ],
+    "table": false
+   }
+  ]
+ }
+}

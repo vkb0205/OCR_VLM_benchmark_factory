@@ -1,0 +1,107 @@
+{
+ "variables": {
+  "industry": "vật liệu xây dựng",
+  "company_size": "large",
+  "fiscal_year": 2023
+ },
+ "source": "seed_114.json",
+ "values": {
+  "board_paragraph": [
+   "{company} hoạt động trong lĩnh vực sản xuất xi măng hỗn hợp, gạch bê tông nhẹ và phụ gia khoáng cho công trình dân dụng, công nghiệp. Công ty duy trì hệ thống quản lý chất lượng, phòng thử nghiệm vật liệu và đội ngũ kỹ thuật chuyên trách.",
+   "Sản lượng xi măng bao tăng nhờ các hợp đồng cung ứng cho dự án hạ tầng, trong khi sản phẩm gạch nhẹ được mở rộng tại các đại lý xây dựng. Ban Tổng Giám đốc đã kiểm soát chi phí nhiên liệu, tối ưu lịch bảo dưỡng và duy trì tiến độ giao hàng.",
+   "Dòng tiền từ hoạt động kinh doanh dương, bảo đảm các nghĩa vụ thanh toán thường xuyên và kế hoạch đầu tư đã được phê duyệt.",
+   "Công ty tiếp tục ưu tiên phát triển các sản phẩm có hàm lượng phụ gia khoáng cao, giảm tiêu hao nhiệt và đáp ứng tiêu chuẩn môi trường. Các giả định về giá nguyên liệu, nhu cầu xây dựng và lãi suất được theo dõi định kỳ.",
+   "Hội đồng quản trị và Ban Tổng Giám đốc gồm các thành viên có kinh nghiệm trong sản xuất vật liệu, tài chính và quản trị chuỗi cung ứng. Báo cáo tài chính năm {year} được kiểm toán bởi {auditor}, một đơn vị kiểm toán độc lập được lựa chọn theo nghị quyết của Đại hội đồng cổ đông. Công ty cung cấp đầy đủ hồ sơ, sổ sách và giải trình cần thiết cho cuộc kiểm toán.",
+   "Ban Tổng Giám đốc chịu trách nhiệm lập và trình bày trung thực, hợp lý báo cáo tài chính theo chế độ kế toán doanh nghiệp Việt Nam và các quy định có liên quan. Sau ngày kết thúc kỳ kế toán, không phát sinh sự kiện trọng yếu nào làm thay đổi các số liệu đã trình bày. Ban Tổng Giám đốc xác nhận báo cáo này đã được xem xét, phê duyệt và công bố trong phạm vi trách nhiệm của mình."
+  ],
+  "auditor_paragraphs": [
+   "Các số liệu so sánh là số liệu năm {prev} đã được trình bày lại phù hợp khi cần thiết.",
+   "Trách nhiệm của Ban Tổng Giám đốc là lập và trình bày trung thực, hợp lý báo cáo tài chính theo chế độ kế toán doanh nghiệp Việt Nam, đồng thời thiết lập các kiểm soát nội bộ cần thiết để bảo đảm báo cáo không có sai sót trọng yếu do gian lận hoặc nhầm lẫn. Ban Tổng Giám đốc cũng chịu trách nhiệm đánh giá khả năng hoạt động liên tục và công bố các vấn đề liên quan trong thuyết minh báo cáo tài chính.",
+   "Trách nhiệm của chúng tôi là đưa ra ý kiến về báo cáo tài chính dựa trên kết quả cuộc kiểm toán. Chúng tôi đã thực hiện kiểm toán theo các chuẩn mực kiểm toán Việt Nam. Các chuẩn mực này yêu cầu kiểm toán viên tuân thủ yêu cầu đạo đức nghề nghiệp, lập kế hoạch và thực hiện thủ tục nhằm đạt được sự đảm bảo hợp lý về việc báo cáo tài chính có còn sai sót trọng yếu hay không.",
+   "Công việc kiểm toán bao gồm thực hiện các thủ tục để thu thập bằng chứng kiểm toán về số liệu và thông tin trình bày trong báo cáo tài chính. Các thủ tục được lựa chọn dựa trên xét đoán của kiểm toán viên, bao gồm đánh giá rủi ro sai sót trọng yếu, xem xét kiểm soát nội bộ liên quan, kiểm tra cơ sở của số liệu, đối chiếu chứng từ và đánh giá các ước tính kế toán của Ban Tổng Giám đốc.",
+   "Chúng tôi tin tưởng rằng các bằng chứng kiểm toán đã thu thập là đầy đủ và thích hợp làm cơ sở cho ý kiến kiểm toán."
+  ],
+  "board_title": "BÁO CÁO CỦA BAN TỔNG GIÁM ĐỐC",
+  "auditor_title": "BÁO CÁO KIỂM TOÁN ĐỘC LẬP",
+  "auditor_addressee": "Kính gửi cổ đông và Hội đồng quản trị {company}",
+  "notes": [
+   {
+    "title": "B09. Đặc điểm hoạt động",
+    "paragraphs": [
+     "Công ty sản xuất xi măng hỗn hợp, gạch bê tông nhẹ và phụ gia khoáng. Đơn vị tiền tệ sử dụng là đồng Việt Nam.",
+     "Trong năm, hoạt động sản xuất được duy trì tại nhà máy Nam Hạ, không có thay đổi trọng yếu về ngành nghề, quyền kiểm soát hoặc chính sách phân phối. Công ty bán hàng thông qua đại lý và hợp đồng trực tiếp với nhà thầu. Báo cáo tài chính được lập trên cơ sở giả định hoạt động liên tục, phù hợp với tình hình thanh khoản và các cam kết tín dụng hiện tại."
+    ],
+    "table": true
+   },
+   {
+    "title": "B10. Chính sách kế toán chủ yếu",
+    "paragraphs": [
+     "Tài sản được ghi nhận theo giá gốc, ngoại trừ các khoản mục được yêu cầu đánh giá theo quy định. Doanh thu được ghi nhận khi phần lớn rủi ro và lợi ích đã chuyển giao, có khả năng thu được lợi ích kinh tế và xác định được giá trị.",
+     "Hàng tồn kho được tính theo phương pháp bình quân gia quyền và hạch toán theo phương pháp kê khai thường xuyên. Chi phí đi vay liên quan trực tiếp đến tài sản dở dang đủ điều kiện được vốn hóa trong thời gian xây dựng. Thuế thu nhập doanh nghiệp hiện hành được xác định trên thu nhập chịu thuế và thuế suất áp dụng tại ngày lập báo cáo."
+    ],
+    "table": false
+   },
+   {
+    "title": "B11. Tiền và các khoản tương đương tiền",
+    "paragraphs": [
+     "Tiền bao gồm tiền mặt tại quỹ và tiền gửi ngân hàng không kỳ hạn. Các khoản tương đương tiền là khoản đầu tư có thời hạn thu hồi không quá ba tháng kể từ ngày mua, có khả năng chuyển đổi dễ dàng thành tiền và ít rủi ro về thay đổi giá trị. Công ty thực hiện đối chiếu ngân hàng hàng tháng và không có hạn chế trọng yếu đối với số dư tiền cuối năm."
+    ],
+    "table": true
+   },
+   {
+    "title": "B12. Phải thu và hàng tồn kho",
+    "paragraphs": [
+     "Phải thu khách hàng phát sinh chủ yếu từ các hợp đồng bán xi măng và gạch cho đại lý, nhà thầu trong nước. Công ty đánh giá tuổi nợ từng khách hàng, trích lập dự phòng đối với khoản có dấu hiệu khó thu hồi và thường xuyên gửi xác nhận công nợ. Hàng tồn kho gồm nguyên liệu đá vôi, phụ gia, clinker, bao bì và thành phẩm; hàng chậm luân chuyển được xem xét giảm giá theo giá trị thuần có thể thực hiện.",
+     "Trong năm, sản lượng tiêu thụ tăng làm số dư thành phẩm và nguyên vật liệu tăng theo. Không có hàng tồn kho cầm cố cho các khoản vay tại ngày báo cáo. Các khoản dự phòng được lập trên cơ sở hồ sơ thu hồi, lịch sử thanh toán và dự kiến giá bán, phù hợp với chính sách kế toán áp dụng nhất quán."
+    ],
+    "table": true
+   },
+   {
+    "title": "B13. Tài sản cố định và xây dựng cơ bản dở dang",
+    "paragraphs": [
+     "Tài sản cố định hữu hình chủ yếu là dây chuyền nghiền, lò sấy, máy đóng bao, nhà xưởng và phương tiện vận tải. Tài sản cố định vô hình là phần mềm quản trị sản xuất và quyền sử dụng hệ thống điều khiển, được phân bổ theo thời gian sử dụng dự kiến. Công ty kiểm kê tài sản định kỳ và không ghi nhận tổn thất trọng yếu.",
+     "Chi phí xây dựng cơ bản dở dang trong năm tập trung vào dây chuyền nghiền Nam Hạ và hạng mục cải tạo kho chứa. Các khoản chi được tập hợp theo từng dự án, có hồ sơ nghiệm thu và được chuyển sang tài sản cố định khi đưa vào sử dụng. Ban Tổng Giám đốc dự kiến hoàn thành phần chính của dự án trong năm {next}, tùy tiến độ thiết bị và cấp phép vận hành."
+    ],
+    "table": true
+   },
+   {
+    "title": "B14. Đầu tư tài chính và chi phí dài hạn",
+    "paragraphs": [
+     "Khoản đầu tư dài hạn của Công ty là phần vốn góp vào một đơn vị liên kết cung cấp phụ gia khoáng, được theo dõi theo giá gốc và xem xét dự phòng khi có bằng chứng suy giảm. Công ty không có khoản đầu tư vào cổ phiếu niêm yết tại ngày kết thúc kỳ kế toán. Chi phí trả trước dài hạn gồm chi phí sửa chữa lớn, phí bảo hiểm nhà máy và chi phí chuẩn bị sản xuất được phân bổ phù hợp với thời gian hưởng lợi."
+    ],
+    "table": true
+   },
+   {
+    "title": "B15. Nợ phải trả và vay",
+    "paragraphs": [
+     "Nợ ngắn hạn gồm công nợ mua nguyên liệu, khoản người mua trả trước, thuế và các khoản phải nộp, tiền lương, chi phí phải trả, khoản phải trả khác và dư nợ vay đến hạn. Công ty phân loại khoản vay theo thời hạn thanh toán tại ngày báo cáo. Các hợp đồng tín dụng quy định một số cam kết về thanh khoản và tài sản bảo đảm; Công ty đã tuân thủ các điều khoản trọng yếu trong năm.",
+     "Nợ dài hạn chủ yếu là khoản vay đầu tư dây chuyền và khoản phải trả dài hạn khác. Lãi suất vay được thỏa thuận theo từng hợp đồng và được ghi nhận vào chi phí tài chính, ngoại trừ phần đủ điều kiện vốn hóa."
+    ],
+    "table": true
+   },
+   {
+    "title": "B16. Vốn chủ sở hữu",
+    "paragraphs": [
+     "Tất cả cổ phần đã được phát hành và thanh toán đầy đủ. Thặng dư vốn cổ phần phát sinh từ các đợt phát hành trước đây. Quỹ đầu tư phát triển được trích lập theo nghị quyết của Đại hội đồng cổ đông và dùng cho hoạt động đầu tư mở rộng.",
+     "Lợi nhuận sau thuế chưa phân phối cuối năm gồm lợi nhuận lũy kế đến cuối kỳ trước và lợi nhuận sau thuế năm nay sau khi phân phối cổ tức. Trong năm, Công ty đã chi cổ tức bằng tiền theo nghị quyết được thông qua. Không có cổ phiếu quỹ và không có hạn chế đáng kể đối với việc phân phối lợi nhuận còn lại."
+    ],
+    "table": true
+   },
+   {
+    "title": "B17. Doanh thu, chi phí và thuế",
+    "paragraphs": [
+     "Doanh thu của Công ty phát sinh từ bán xi măng, gạch bê tông nhẹ và phụ gia khoáng. Doanh thu được trình bày sau các khoản chiết khấu thương mại, giảm giá và hàng bán bị trả lại. Giá vốn bao gồm nguyên vật liệu trực tiếp, nhân công, khấu hao và chi phí sản xuất chung. Chi phí bán hàng gồm vận chuyển, hoa hồng đại lý và hỗ trợ thị trường; chi phí quản lý gồm nhân sự, hành chính và dịch vụ mua ngoài.",
+     "Thuế thu nhập doanh nghiệp hiện hành được tính theo thuế suất phổ thông áp dụng cho hoạt động sản xuất. Công ty kê khai thuế giá trị gia tăng theo phương pháp khấu trừ và thực hiện đầy đủ nghĩa vụ thuế theo hồ sơ đã nộp. Các khoản thuế phải nộp cuối năm được đối chiếu với cơ quan thuế theo quy định."
+    ],
+    "table": true
+   },
+   {
+    "title": "B18. Sự kiện sau ngày kết thúc kỳ kế toán",
+    "paragraphs": [
+     "Từ ngày kết thúc kỳ kế toán đến ngày phát hành báo cáo tài chính, Công ty đã ký biên bản nghiệm thu một phần hạng mục kho chứa thuộc dự án Nam Hạ và tiếp tục hoàn thiện thủ tục đưa tài sản vào sử dụng. Ngoài nội dung nêu trên, không có sự kiện trọng yếu khác cần điều chỉnh hoặc thuyết minh bổ sung."
+    ],
+    "table": false
+   }
+  ]
+ }
+}

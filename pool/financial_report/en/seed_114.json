@@ -1,0 +1,107 @@
+{
+  "variables": {
+    "industry": "vật liệu xây dựng",
+    "company_size": "large",
+    "fiscal_year": 2023
+  },
+  "source": "seed_114.json",
+  "values": {
+    "board_paragraph": [
+      "{company} operates in the production of blended cement, lightweight concrete bricks, and mineral admixtures for civil and industrial construction. The Company maintains a quality management system, a materials testing laboratory, and a dedicated technical team.",
+      "Bagged cement output increased thanks to supply contracts for infrastructure projects, while lightweight brick products were expanded through construction materials dealers. The Board of General Directors controlled fuel costs, optimized maintenance schedules, and maintained delivery progress.",
+      "Cash flows from operating activities were positive, ensuring regular payment obligations and the approved investment plan.",
+      "The Company continues to prioritize the development of products with a high content of mineral admixtures, reducing heat consumption and meeting environmental standards. Assumptions regarding raw material prices, construction demand, and interest rates are monitored periodically.",
+      "The Board of Directors and the Board of General Directors comprise members with experience in materials production, finance, and supply chain management. The financial statements for the year {year} were audited by {auditor}, an independent audit firm selected in accordance with a resolution of the General Meeting of Shareholders. The Company provided all necessary records, books, and explanations for the audit.",
+      "The Board of General Directors is responsible for preparing and presenting fairly, in all material respects, the financial statements in accordance with the Vietnamese corporate accounting regime and relevant regulations. After the end of the accounting period, no material events occurred that would change the figures presented. The Board of General Directors confirms that this report has been reviewed, approved, and published within the scope of its responsibilities."
+    ],
+    "auditor_paragraphs": [
+      "The comparative figures are those for the year {prev}, restated where necessary.",
+      "The responsibility of the Board of General Directors is to prepare and present fairly, in all material respects, the financial statements in accordance with the Vietnamese corporate accounting regime, and to establish such internal controls as are necessary to ensure that the financial statements are free from material misstatement, whether due to fraud or error. The Board of General Directors is also responsible for assessing the Company's ability to continue as a going concern and disclosing matters related thereto in the notes to the financial statements.",
+      "Our responsibility is to express an opinion on the financial statements based on the results of our audit. We conducted our audit in accordance with Vietnamese Standards on Auditing. Those standards require that auditors comply with ethical requirements and plan and perform procedures to obtain reasonable assurance about whether the financial statements are free from material misstatement.",
+      "The audit work includes performing procedures to obtain audit evidence about the amounts and disclosures in the financial statements. The procedures selected depend on the auditor's judgment, including the assessment of risks of material misstatement, consideration of relevant internal controls, examining the basis of amounts, vouching supporting documents, and evaluating the accounting estimates of the Board of General Directors.",
+      "We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our audit opinion."
+    ],
+    "board_title": "REPORT OF THE BOARD OF GENERAL DIRECTORS",
+    "auditor_title": "INDEPENDENT AUDITOR'S REPORT",
+    "auditor_addressee": "To the Shareholders and the Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "B09. Nature of operations",
+        "paragraphs": [
+          "The Company produces blended cement, lightweight concrete bricks, and mineral admixtures. The reporting currency is the Vietnamese dong.",
+          "During the year, production operations were maintained at the Nam Ha plant, with no material changes in business lines, control rights, or distribution policies. The Company sells products through dealers and directly under contracts with contractors. The financial statements have been prepared on a going concern basis, consistent with the current liquidity position and existing credit commitments."
+        ],
+        "table": true
+      },
+      {
+        "title": "B10. Significant accounting policies",
+        "paragraphs": [
+          "Assets are recognized at historical cost, except for items required to be revalued under prevailing regulations. Revenue is recognized when the significant risks and rewards of ownership have been transferred, it is probable that economic benefits will flow to the Company, and the amount can be measured reliably.",
+          "Inventories are measured using the weighted average method and accounted for under the perpetual inventory method. Borrowing costs directly attributable to qualifying assets under construction are capitalized during the construction period. Current corporate income tax is determined on taxable income and the tax rates applicable at the reporting date."
+        ],
+        "table": false
+      },
+      {
+        "title": "B11. Cash and cash equivalents",
+        "paragraphs": [
+          "Cash comprises cash on hand and non-term bank deposits. Cash equivalents are investments with maturities of no more than three months from the date of purchase, which are readily convertible into cash and subject to insignificant risk of changes in value. The Company performs monthly bank reconciliations, and there are no material restrictions on year-end cash balances."
+        ],
+        "table": true
+      },
+      {
+        "title": "B12. Receivables and inventories",
+        "paragraphs": [
+          "Trade receivables arise mainly from contracts for the sale of cement and bricks to domestic dealers and contractors. The Company assesses the aging of each customer's balances, provides allowances for balances that show indications of being difficult to collect, and regularly sends balance confirmations. Inventories comprise limestone raw materials, admixtures, clinker, packaging, and finished goods; slow-moving inventories are considered for write-down to net realizable value.",
+          "During the year, increased sales volume led to corresponding increases in finished goods and raw material balances. No inventories were pledged as security for loans at the reporting date. Provisions are made based on collection files, payment history, and estimated selling prices, consistent with consistently applied accounting policies."
+        ],
+        "table": true
+      },
+      {
+        "title": "B13. Fixed assets and construction in progress",
+        "paragraphs": [
+          "Tangible fixed assets mainly comprise grinding lines, drying kilns, packing machines, factory buildings, and transportation vehicles. Intangible fixed assets are production management software and rights to use the control system, which are amortized over their estimated useful lives. The Company conducts periodic physical counts of assets and has not recognized any material losses.",
+          "Construction in progress during the year focused on the Nam Ha grinding line and the warehouse renovation item. Expenditures are accumulated by project, supported by acceptance records, and transferred to fixed assets when placed into use. The Board of General Directors expects to complete the main part of the project in {next}, subject to equipment progress and operating permits."
+        ],
+        "table": true
+      },
+      {
+        "title": "B14. Financial investments and long-term expenses",
+        "paragraphs": [
+          "The Company's long-term investment is a capital contribution to an associate that supplies mineral admixtures, carried at historical cost and reviewed for allowance when there is evidence of impairment. The Company had no investments in listed shares at the end of the accounting period. Long-term prepaid expenses comprise major repair costs, plant insurance premiums, and production preparation costs, which are allocated over the periods benefiting from them."
+        ],
+        "table": true
+      },
+      {
+        "title": "B15. Liabilities and borrowings",
+        "paragraphs": [
+          "Current liabilities comprise payables for raw material purchases, advances from buyers, taxes and amounts payable to the State, salaries, accrued expenses, other payables, and current maturities of borrowings. The Company classifies borrowings according to their maturity at the reporting date. The credit agreements stipulate certain liquidity and collateral covenants; the Company complied with the material terms during the year.",
+          "Long-term liabilities mainly comprise borrowings for line investment and other long-term payables. Interest rates on borrowings are agreed under each contract and recognized in finance costs, except for the portion eligible for capitalization."
+        ],
+        "table": true
+      },
+      {
+        "title": "B16. Owners' equity",
+        "paragraphs": [
+          "All shares have been fully issued and paid up. Share premium arose from previous issuance rounds. The development investment fund is appropriated under resolutions of the General Meeting of Shareholders and used for business expansion investment activities.",
+          "Undistributed after-tax profit at year-end comprises accumulated profits up to the end of the prior period and the current year's after-tax profit after dividend distribution. During the year, the Company paid cash dividends under an approved resolution. There are no treasury shares and no significant restrictions on the distribution of remaining profits."
+        ],
+        "table": true
+      },
+      {
+        "title": "B17. Revenue, expenses, and taxes",
+        "paragraphs": [
+          "The Company's revenue arises from the sale of cement, lightweight concrete bricks, and mineral admixtures. Revenue is presented net of trade discounts, rebates, and returned goods. Cost of goods sold includes direct materials, labor, depreciation, and manufacturing overhead. Selling expenses comprise transportation, dealer commissions, and market support; administrative expenses comprise personnel, administration, and purchased services.",
+          "Current corporate income tax is calculated at the general tax rate applicable to manufacturing activities. The Company declares value added tax under the deduction method and fully fulfills its tax obligations in accordance with the filed records. Year-end tax payables are reconciled with the tax authority in accordance with regulations."
+        ],
+        "table": true
+      },
+      {
+        "title": "B18. Events after the end of the accounting period",
+        "paragraphs": [
+          "From the end of the accounting period to the date of issuance of the financial statements, the Company signed a partial acceptance minutes for a warehouse item under the Nam Ha project and continued to complete procedures for placing the asset into use. Apart from the above, there were no other material events requiring adjustment or additional disclosure."
+        ],
+        "table": false
+      }
+    ]
+  }
+}

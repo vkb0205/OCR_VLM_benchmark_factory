@@ -1,0 +1,16 @@
+.venv/
+out/
+.work/
+.cache/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+build/
+.env
+.doc_local
+
+dataset/
+dataset.tmp/
+*.log
+.dataset
+.out

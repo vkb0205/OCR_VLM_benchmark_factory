@@ -1,0 +1,106 @@
+{
+  "variables": {
+    "industry": "phân phối dược phẩm",
+    "company_size": "medium",
+    "fiscal_year": 2023
+  },
+  "source": "seed_150.json",
+  "values": {
+    "board_paragraph": [
+      "The customer network comprises independent pharmacies, private clinics and healthcare facilities in the delta region. The Board of Management maintains the principles of on-time delivery, batch traceability and strict expiry-date control.",
+      "The Company does not depend on any single customer; all contracts are reviewed for credit limits, payment terms and storage requirements before approval.",
+      "Gross margin is protected through renegotiation of purchase discounts and reduction of warehouse shrinkage. Selling expenses increased due to the opening of additional delivery routes, while administrative expenses are controlled within budget. Provisions for receivables and inventories are reviewed based on ageing, expiry dates, turnover and actual recall information.",
+      "Borrowings are used primarily to finance seasonal working capital.",
+      "The Board of Directors regularly reviews receivables reports, inventory by batch, utilization of credit limits and warehouse safety indicators. The Company expects to complete real-time temperature monitoring software in {next}, provide additional training for pharmacy staff and expand cooperation with regional pharmacy chains, subject to ensuring funding and compliance with specialized regulations.",
+      "The financial statements for the year {year} were audited by {auditor}. The Board of Management is responsible for preparing the financial statements truthfully, selecting appropriate accounting policies, maintaining internal control and safeguarding accounting records. After the end of the accounting period, the Company did not have any material events requiring adjustment or additional disclosure. The Board of Management has reviewed all receivables, inventories and tax obligations before approving these financial statements.",
+      "The financial statements have been prepared on a going concern basis because the Company has sufficient working capital, receivables are monitored regularly and there is no plan for liquidation or significant curtailment of operations. Accounting estimates have been reviewed based on information available at the signing date.",
+      "During the year, the Company handled slow-moving batches through an internal redistribution program and recognized provisions at net realizable value. Several new warehouse equipment items were put into use from the third quarter, helping reduce counting discrepancies. There were no abnormal transactions with members of the Board of Management that changed the nature of business results. The Company continues to prioritize patient safety, origin transparency and credit discipline in all commercial decisions."
+    ],
+    "auditor_paragraphs": [
+      "These statements present the prior-year comparative figures, which have been presented under the same accounting policies.",
+      "The Board of Management is responsible for the preparation and fair presentation of the financial statements in accordance with the framework set out above, and for such internal control as the Board of Management determines is necessary to enable the preparation of financial statements that are free from material misstatement, whether due to fraud or error. This responsibility includes selecting policies, making estimates and maintaining appropriate accounting records.",
+      "Our responsibility is to express an opinion on the financial statements based on the results of the audit. We conducted our audit in accordance with Vietnamese Standards on Auditing. Those standards require us to comply with ethical requirements and to plan and perform the audit to obtain reasonable assurance about whether the financial statements are free from material misstatement. The audit includes examining selected evidence and evaluating estimates.",
+      "We performed audit procedures on revenue, cost of goods sold, inventories, trade receivables, trade payables, cash and borrowings. We also assessed the overall presentation, structure of the statements and the notes, including whether the financial statements reflect the transactions and events in a manner that achieves fair presentation. We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our audit opinion.",
+      "During the audit, we communicated with the Board of Management regarding the scope, planned timetable and significant findings, including any notable deficiencies in internal control. We also confirmed our independence, compliance with applicable ethical requirements and notified them of relationships that may affect objectivity. No matters were identified that would change the unqualified opinion below.",
+      "Based on the procedures performed and the evidence obtained, we express an unqualified opinion. The accompanying notes are an integral part of the financial statements and provide information necessary for users to understand the Company's accounting policies, material items and commitments. This report is issued for use together with the Company's financial statements for the year {year}.",
+      "We did not identify any events occurring between the end of the financial year and the date of the audit report that require adjustment or additional disclosure in the financial statements. The assessment of going concern is the responsibility of the Board of Management; the auditor's responsibility is to consider the appropriateness of the use of this assumption and to conclude whether a material uncertainty requiring disclosure exists."
+    ],
+    "board_title": "REPORT OF THE BOARD OF MANAGEMENT",
+    "auditor_title": "INDEPENDENT AUDITOR'S REPORT",
+    "auditor_addressee": "To: The Shareholders and the Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "B09. Basis of preparation and principal accounting policies",
+        "paragraphs": [
+          "The financial statements are prepared on the historical cost basis, except for items required to be measured at fair value. Foreign currency transactions are translated at the actual exchange rate on the transaction date, and monetary items are revalued at the end of the period in accordance with current regulations.",
+          "The Company recognizes revenue when control of the goods is transferred to the customer and the probability of obtaining economic benefits is reasonably determined. Expenses are recognized matching revenue and on an accrual basis. Estimates of provisions, useful lives for depreciation and recoverability of receivables are reviewed at the reporting date."
+        ],
+        "table": true
+      },
+      {
+        "title": "B10. Cash and cash equivalents",
+        "paragraphs": [
+          "The Company's cash comprises cash on hand and demand deposits at banks selected based on liquidity safety criteria. Cash equivalents are deposits with an original maturity of not more than three months, readily convertible into cash and subject to insignificant risk of changes in value. The Board of Management reconciles bank balances monthly and performs a cash count at the end of each reporting period.",
+          "Any differences between the accounting records and bank confirmations are investigated and adjusted before the report is issued."
+        ],
+        "table": true
+      },
+      {
+        "title": "B11. Trade receivables and provisions",
+        "paragraphs": [
+          "Trade receivables are presented at carrying amount after deducting the provision for doubtful debts. The Company classifies receivables by customer, location, payment term and transaction history. For pharmacies and clinics, credit limits are approved before delivery; overdue amounts are monitored separately and have collection plans. Provisions are made for estimated losses based on ageing, collateral and ability to pay.",
+          "During the year, the Company strengthened written receivable confirmations and reconciliation through the delivery portal. Certain short-term overdue amounts were collected after the closing date. There were no material related-party receivables that had not been disclosed."
+        ],
+        "table": true
+      },
+      {
+        "title": "B12. Inventories",
+        "paragraphs": [
+          "Inventories comprise finished pharmaceuticals, health supplements, medical supplies and returnable packaging. Inventories are recognized at the lower of cost and net realizable value. Cost includes purchase price, non-deductible taxes, transportation costs and directly related expenses. The Company tracks inventories by item code, batch number and expiry date, and performs cyclical counts at the central warehouse and route warehouses.",
+          "Provisions for inventory write-downs are recognized for slow-moving goods, goods with short remaining shelf life or indications of selling price declines. The management approves plans for redistribution, return to suppliers or destruction by batch; all plans must have traceability records and confirmation from the quality control department."
+        ],
+        "table": true
+      },
+      {
+        "title": "B13. Fixed assets and long-term assets",
+        "paragraphs": [
+          "Tangible fixed assets are recognized at cost less accumulated depreciation. Cost comprises the purchase price and direct costs of bringing the asset to a condition ready for use. The Company assesses impairment indicators when there are adverse changes in capacity, technical condition or the planned use of assets.",
+          "The Company has not recognized any finance lease assets. Assets no longer usable are liquidated under an approval process, and the difference is recognized in other income or expenses."
+        ],
+        "table": true
+      },
+      {
+        "title": "B14. Liabilities and borrowings",
+        "paragraphs": [
+          "Trade payables are recognized at the amounts payable per invoices and delivery records. The Company manages payment terms by supplier, prioritizing a stable supply of pharmaceuticals and avoiding significant penalty interest. Short-term and long-term borrowings are classified according to their remaining term at the reporting date. Borrowing costs are recognized as expenses on an accrual basis and in accordance with credit agreements.",
+          "Collateral for borrowings comprises warehouse use rights, transportation vehicles and certain assets formed from borrowed capital under agreements with banks. The Company paid principal and interest on time up to the report issuance date and did not breach any material terms of the credit agreements."
+        ],
+        "table": true
+      },
+      {
+        "title": "B15. Owner's equity",
+        "paragraphs": [
+          "The Company did not issue preference shares and had no treasury shares at the reporting date. The development investment fund is appropriated from after-tax profit in accordance with the resolution of the General Meeting of Shareholders and is used for warehouse upgrading projects, information technology systems and personnel training.",
+          "Undistributed after-tax profit comprises the cumulative balance at the beginning of the period and the profit for the current period after considering distribution. The Board of Directors will submit the profit distribution plan for {year} to the General Meeting of Shareholders for approval."
+        ],
+        "table": true
+      },
+      {
+        "title": "B16. Revenue and expenses",
+        "paragraphs": [
+          "Net revenue for {year} arose mainly from the sale of finished pharmaceuticals and medical supplies to domestic customers. Revenue is recognized after goods are delivered, accepted by the customer and the Company can determine its right to receive payment. Trade discounts, sales returns and price reductions are deducted from revenue. Selling expenses include delivery, route warehouses, sales staff and customer care programs.",
+          "General and administrative expenses comprise office personnel costs, depreciation, purchased services, insurance and compliance costs. Finance costs are mainly borrowing interest. Other income for the year is proceeds from the liquidation of certain old warehouse shelves; other expenses are costs of handling goods no longer meeting circulation requirements."
+        ],
+        "table": true
+      },
+      {
+        "title": "B17. Taxes and commitments",
+        "paragraphs": [
+          "The Company files value-added tax, corporate income tax, personal income tax and other payables in accordance with regulations. Current corporate income tax expense is calculated on taxable income and the applicable tax rate. Tax payables are reconciled with periodic returns and paid on schedule. The Company has not recognized any material tax disputes at the reporting date.",
+          "The Company leases certain route warehouses under short-term contracts and engages transportation services on a trip-by-trip basis. Purchase commitments are generally established by purchase orders that can be adjusted according to actual needs; therefore, no significant long-term capital commitments requiring separate disclosure have arisen."
+        ],
+        "table": true
+      }
+    ]
+  }
+}

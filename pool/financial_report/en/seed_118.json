@@ -1,0 +1,105 @@
+{
+  "variables": {
+    "industry": "dệt may",
+    "company_size": "medium",
+    "fiscal_year": 2023
+  },
+  "source": "seed_118.json",
+  "values": {
+    "board_paragraph": [
+      "The key products are cotton-blend fabric, lightweight jackets, and loungewear, sold through Asian regional buyers.",
+      "In {year}, the Company maintained stable orders from customers in Japan, Korea, and the domestic market. The Board of General Directors focused on controlling consumption norms, reducing slow-moving inventory, and improving the on-time delivery rate.",
+      "Inventories increased to meet delivery schedules in the first quarter of next year, while receivables are monitored by contract and credit limit.",
+      "The Company continued to improve its water-saving fabric finishing line, deploy an energy monitoring system by workshop, and train workers on chemical safety. In {next}, the Board of General Directors plans to expand the recycled fabric product group, retain existing customers, and seek orders with stable production cycles. These plans will be implemented within existing capital and capacity limits.",
+      "The Board of General Directors is responsible for preparing and fairly presenting the financial statements in accordance with Vietnamese Accounting Standards, the Corporate Accounting Regime, and applicable regulations. To the best knowledge of the Board of General Directors, no material events occurred after the end of the accounting period that require adjustment or additional disclosure beyond those stated in the notes.",
+      "During the year, the Company did not change its business lines, did not issue additional shares, and had no major disputes with customers or suppliers. This contract serves the delivery plan and has not given rise to any material obligations at the reporting date.",
+      "The Board of General Directors assesses that the Company has sufficient resources to continue operating in the near future. Maturing loans are planned to be repaid from operating cash flow, while receivables are reconciled periodically.",
+      "The Board of General Directors sincerely thanks the employees, customers, banks, and partners who accompanied the Company in {year}. The Company will continue to improve product quality, enhance information transparency, and use resources efficiently to create a foundation for sustainable growth."
+    ],
+    "auditor_paragraphs": [
+      "The Board of General Directors is responsible for preparing and presenting the financial statements in accordance with applicable regulations, maintaining the necessary internal control to ensure that the financial statements are free from material misstatement due to fraud or error, and assessing the Company's ability to continue as a going concern.",
+      "Our responsibility is to express an opinion on the financial statements based on the results of our audit. We conducted our work in accordance with Vietnamese Standards on Auditing. Those standards require us to comply with ethical requirements and to plan and perform the audit to obtain reasonable assurance about whether the financial statements are free from material misstatement.",
+      "An audit includes performing procedures to obtain evidence about the amounts and disclosures in the financial statements. The procedures selected depend on the auditor's judgment, including the assessment of risks of material misstatement. We also assess the appropriateness of accounting policies, accounting estimates, and the overall presentation.",
+      "We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our audit opinion. The accounting records, vouchers, and documents provided have been reconciled with the information presented in the financial statements to the extent necessary for the audit.",
+      "No matter has caused us to issue a qualified opinion, an adverse opinion, or a disclaimer of opinion. This audit report is issued only together with the Company's {year} financial statements and is intended for the shareholders, the Board of Directors, and parties with the legal right to use it.",
+      "Based on the work performed, we issue an unqualified opinion on the Company's {year} financial statements. Events occurring after the balance sheet date have been considered and disclosed by the Board of General Directors in accordance with current requirements where material."
+    ],
+    "board_title": "REPORT OF THE BOARD OF GENERAL DIRECTORS",
+    "auditor_title": "INDEPENDENT AUDITOR'S REPORT",
+    "auditor_addressee": "To the Shareholders and the Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "B09 — Nature of Operations and Accounting Policies",
+        "paragraphs": [
+          "The Company operates in spinning, weaving, and garment manufacturing. The financial statements are prepared in Vietnamese dong on a historical cost basis, consistent with the Corporate Accounting Regime and regulations applicable to the annual accounting period {year}.",
+          "The accounting policies are applied consistently with the prior year. The Board of General Directors uses reasonable estimates of depreciation periods, provisions, and recoverability of receivables; these estimates are reviewed when new information becomes available."
+        ],
+        "table": true
+      },
+      {
+        "title": "B10 — Cash and Cash Equivalents",
+        "paragraphs": [
+          "Cash includes cash on hand and bank deposit balances. The Company had no cash equivalents with original maturities of three months or less at the reporting date. Bank accounts are reconciled monthly with bank statements and confirmed when necessary.",
+          "The year-end cash balance increased due to operating cash flow and a short-term loan supplementing the delivery season."
+        ],
+        "table": true
+      },
+      {
+        "title": "B11 — Receivables",
+        "paragraphs": [
+          "Trade receivables are recorded at invoice value, less provision for losses where there is evidence of uncollectibility. The Company monitors aging by customer and contract, and reconciles receivable balances before closing the books.",
+          "Export customers are assessed based on transaction history and order confirmations; the Board of General Directors did not identify any receivables requiring additional provision."
+        ],
+        "table": true
+      },
+      {
+        "title": "B12 — Inventories",
+        "paragraphs": [
+          "Inventories are recorded at the lower of cost and net realizable value. Raw material cost is calculated using the weighted average method; production costs are allocated based on normal capacity. Provision is made for slow-moving and obsolete inventory.",
+          "At year-end, raw materials accounted for a large proportion because the Company prepared for signed orders in the first quarter of {next}. The Company performs stock counts at warehouses and workshops and prepares minutes for defective fabric, damaged accessories, and goods requiring disposal."
+        ],
+        "table": true
+      },
+      {
+        "title": "B13 — Fixed Assets",
+        "paragraphs": [
+          "Recurring repair costs are recognized as expenses in the period.",
+          "During the year, the Company purchased additional knitting machines, finishing machines, and color inspection equipment. Assets put into use are depreciated from the month operations begin; no fixed assets are pledged other than equipment under the investment loan."
+        ],
+        "table": true
+      },
+      {
+        "title": "B14 — Prepaid Expenses and Taxes",
+        "paragraphs": [
+          "Prepaid expenses are amortized over the benefit period. Current corporate income tax is calculated on taxable income at the current tax rate. Deferred tax is recognized for deductible or taxable temporary differences where there is sufficient certainty.",
+          "The Company declares value-added tax using the deduction method. Corporate income tax for {year} is calculated on taxable profit after adjustments in accordance with regulations; tax paid is reconciled with the tax authority within the existing records."
+        ],
+        "table": true
+      },
+      {
+        "title": "B15 — Liabilities",
+        "paragraphs": [
+          "Payables are recorded at the amounts to be paid. Short-term loans for working capital and long-term loans financing equipment are classified by remaining term.",
+          "The Company maintains credit limits at two banks to ensure payment for raw materials and salaries. The Company has not breached any material terms of the loan agreements."
+        ],
+        "table": true
+      },
+      {
+        "title": "B16 — Owners' Equity",
+        "paragraphs": [
+          "Contributed capital is recorded at the amount actually contributed by shareholders. Retained earnings after tax reflect accumulated profit after appropriating funds and distributing dividends in accordance with valid resolutions.",
+          "The Company did not issue additional shares in {year} and did not repurchase shares. Profit distribution will be decided at the Annual General Meeting of Shareholders."
+        ],
+        "table": true
+      },
+      {
+        "title": "B17 — Revenue, Expenses and Events after the End of the Period",
+        "paragraphs": [
+          "Sales revenue is recognized when products have been delivered, accepted by the customer, and control and substantially all risks have been transferred. Processing revenue is recognized based on completed volume accepted. Deductions are presented separately before net revenue.",
+          "The Company has declared taxes in accordance with regulations and has no material tax arrears at the reporting date."
+        ],
+        "table": true
+      }
+    ]
+  }
+}

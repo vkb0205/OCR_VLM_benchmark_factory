@@ -1,0 +1,122 @@
+{
+  "variables": {
+    "industry": "logistics",
+    "company_size": "small",
+    "fiscal_year": 2024
+  },
+  "source": "seed_132.json",
+  "values": {
+    "board_paragraph": [
+      "The Company provides freight consolidation, fixed-route delivery, and storage services for packaged agricultural products to customers in the region. The dispatch network is designed to be flexible, serving both full-truckload and consolidated shipments.",
+      "In {year}, the Company maintained routes linking the coastal region to the Southern distribution center and implemented journey tracking software.",
+      "This result reflects efforts in vehicle coordination, negotiation of delivery schedules, and monitoring of fuel consumption norms across the entire network.",
+      "The Company continues to prioritize load control, fuel efficiency, driver training, and improving the on-time delivery rate.",
+      "The financial statements for {year} have been audited by {auditor} under a contract signed during the year. Members responsible for each area participated in reviewing budgets, operational risks, service quality, and the achievement of financial targets before the report was approved.",
+      "The Board of General Directors is responsible for preparing financial statements that are true and fair, selecting appropriate accounting policies, and maintaining the necessary control system. The Board reviewed receivables, tax obligations, and going concern before approving the report.",
+      "After the end of the accounting period, the Company had no material events requiring adjustment or additional disclosure."
+    ],
+    "auditor_paragraphs": [
+      "The Board of General Directors is responsible for preparing and presenting the financial statements in accordance with the applicable framework, maintaining such internal control as is necessary to ensure that the financial statements are free from material misstatement, whether due to fraud or error, and assessing the Company's ability to continue as a going concern.",
+      "Our responsibility is to express an opinion on the financial statements based on the results of our audit. We conducted our work in accordance with Vietnamese Standards on Auditing; those standards require compliance with professional ethics and planning and performing procedures to obtain reasonable assurance.",
+      "The audit includes performing procedures to obtain evidence about the amounts and disclosures. The selection of procedures depends on the auditor's judgment, including the assessment of the risks of material misstatement. We also consider accounting policies, accounting estimates, and the overall presentation.",
+      "We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for the unqualified audit opinion stated above. Debt confirmations, physical asset counts, and bank transaction testing were performed according to the agreed plan.",
+      "Other than the matters presented in the report, we have not identified any events after the end of the accounting period that require adjustment to the financial statements. This report is issued based on the information and explanations provided by the Company up to the signing date."
+    ],
+    "board_title": "REPORT OF THE BOARD OF GENERAL DIRECTORS",
+    "auditor_title": "INDEPENDENT AUDITOR'S REPORT",
+    "auditor_addressee": "To the Shareholders and the Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "2. Significant accounting policies",
+        "paragraphs": [
+          "Transportation revenue is recognized when the service is completed according to the delivery record; warehouse revenue is allocated over the period in which the service is provided."
+        ],
+        "table": true
+      },
+      {
+        "title": "3. Cash and cash equivalents",
+        "paragraphs": [
+          "Cash includes cash on hand and demand bank deposits. Cash equivalents are deposits with original maturities of no more than three months that are readily convertible into cash and subject to insignificant risk of changes in value."
+        ],
+        "table": true
+      },
+      {
+        "title": "4. Held-to-maturity investments",
+        "paragraphs": [
+          "The short-term investment is a term deposit at a domestic credit institution with a maturity of less than twelve months. The Company assesses that this amount is fully recoverable and has not made a provision."
+        ],
+        "table": true
+      },
+      {
+        "title": "5. Trade receivables",
+        "paragraphs": [
+          "Receivables arise mainly from completed transportation services. The Board of General Directors regularly reconciles outstanding balances and assesses recoverability; a provision is recognized for balances with indications of impairment."
+        ],
+        "table": true
+      },
+      {
+        "title": "6. Inventories",
+        "paragraphs": [
+          "Inventories comprise fuel, spare parts, and packaging materials used for operations. Inventories are recognized at the lower of cost and net realizable value."
+        ],
+        "table": true
+      },
+      {
+        "title": "7. Other current assets",
+        "paragraphs": [
+          "Short-term prepaid expenses mainly comprise vehicle insurance and contractual software fees. Deductible value added tax is reconciled with periodic declaration records, and there are no significant overdue amounts."
+        ],
+        "table": true
+      },
+      {
+        "title": "8. Fixed assets",
+        "paragraphs": [
+          "Tangible fixed assets mainly comprise trucks, prime movers, trailers, and warehouse equipment. Cost and accumulated depreciation are tracked separately for each asset group; routine repair costs are recognized in profit or loss."
+        ],
+        "table": true
+      },
+      {
+        "title": "9. Construction in progress costs",
+        "paragraphs": [
+          "Construction in progress costs are design and renovation costs for the cargo consolidation area at the new collection point. The works were not yet eligible for use at the reporting date, so no depreciation has been recorded. The Company continues to track each item separately."
+        ],
+        "table": true
+      },
+      {
+        "title": "10. Other non-current assets",
+        "paragraphs": [
+          "Long-term prepaid expenses include prepaid warehouse rent and tool and supplies costs allocated over multiple periods. These amounts are allocated in accordance with the periods over which the economic benefits are received."
+        ],
+        "table": true
+      },
+      {
+        "title": "11. Current liabilities",
+        "paragraphs": [
+          "Current liabilities include payables to fuel suppliers, accrued salaries and insurance, taxes payable, and accrued expenses. The Company had no material overdue debts at the end of the accounting period."
+        ],
+        "table": true
+      },
+      {
+        "title": "12. Borrowings and finance lease liabilities",
+        "paragraphs": [
+          "Borrowings are used to invest in vehicles and supplement working capital. Interest rates are determined under each contract, and no collateral has been pledged other than the vehicles purchased with the borrowed funds. The Company complies with the payment terms."
+        ],
+        "table": true
+      },
+      {
+        "title": "13. Owners' equity",
+        "paragraphs": [
+          "Undistributed profit after tax increased during the year after appropriation to the development investment fund in accordance with the resolution of the General Meeting of Shareholders."
+        ],
+        "table": true
+      },
+      {
+        "title": "14. Revenue",
+        "paragraphs": [
+          "Revenue is recognized when the service performance obligation has been fulfilled and the customer has accepted the result."
+        ],
+        "table": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,105 @@
+{
+ "variables": {
+  "industry": "điện tử gia dụng",
+  "company_size": "small",
+  "fiscal_year": 2025
+ },
+ "source": "seed_141.json",
+ "values": {
+  "board_paragraph": [
+   "Sản phẩm chủ lực gồm nồi điều khiển nhiệt, máy lọc không khí và bộ điều khiển nhà ở nhỏ. Công ty duy trì nhà xưởng quy mô vừa, chú trọng kiểm tra an toàn điện và truy xuất linh kiện.",
+   "Trong năm {year}, Công ty bán hàng thông qua các đại lý điện máy ở khu vực duyên hải và kênh thương mại trực tuyến do Công ty vận hành. Hoạt động sản xuất được tổ chức ổn định, với dây chuyền lắp ráp bộ điều khiển được cải tiến trong quý ba.",
+   "Hàng tồn kho được theo dõi theo từng nhóm linh kiện và thành phẩm, dự phòng giảm giá được ghi nhận theo đánh giá cuối kỳ. Công ty thanh toán các khoản vay và nghĩa vụ với người bán theo lịch đã cam kết, không có khoản nợ quá hạn trọng yếu.",
+   "Kế hoạch năm {next} ưu tiên vốn lưu động cho sản phẩm lọc không khí và nâng cấp phần mềm quản lý kho. Các chỉ tiêu này sẽ được điều chỉnh theo sức mua và chi phí linh kiện thực tế.",
+   "Ban Tổng Giám đốc chịu trách nhiệm tổ chức hoạt động sản xuất kinh doanh, duy trì hệ thống kiểm soát nội bộ và trình bày trung thực báo cáo tài chính. Báo cáo được kiểm toán bởi {auditor}.",
+   "Sau ngày kết thúc niên độ, Công ty đã ký phụ lục cung ứng linh kiện với một nhà cung cấp trong nước và hoàn tất kế hoạch bảo dưỡng định kỳ dây chuyền lắp ráp. Không phát sinh sự kiện nào sau ngày khóa sổ cần điều chỉnh hoặc thuyết minh bổ sung ngoài các nội dung đã trình bày trong báo cáo tài chính. Ban Tổng Giám đốc xác nhận đã xem xét các sự kiện này trước ngày ký báo cáo."
+  ],
+  "auditor_paragraphs": [
+   "Ban Tổng Giám đốc chịu trách nhiệm lập và trình bày báo cáo tài chính theo các quy định áp dụng, đồng thời chịu trách nhiệm về kiểm soát nội bộ mà Ban Tổng Giám đốc xác định là cần thiết để bảo đảm báo cáo tài chính không có sai sót trọng yếu do gian lận hoặc nhầm lẫn.",
+   "Trách nhiệm của chúng tôi là đưa ra ý kiến về báo cáo tài chính dựa trên kết quả cuộc kiểm toán. Chúng tôi đã thực hiện công việc theo các chuẩn mực kiểm toán Việt Nam. Các chuẩn mực này yêu cầu chúng tôi tuân thủ yêu cầu đạo đức và lập kế hoạch, thực hiện kiểm toán để đạt được sự đảm bảo hợp lý về việc báo cáo tài chính có còn sai sót trọng yếu hay không.",
+   "Một cuộc kiểm toán bao gồm thực hiện các thủ tục nhằm thu thập bằng chứng kiểm toán về các số liệu và thuyết minh trên báo cáo tài chính. Việc lựa chọn thủ tục phụ thuộc vào xét đoán của kiểm toán viên, bao gồm đánh giá rủi ro có sai sót trọng yếu do gian lận hoặc nhầm lẫn. Khi đánh giá rủi ro, kiểm toán viên xem xét kiểm soát nội bộ liên quan.",
+   "Chúng tôi tin tưởng rằng các bằng chứng kiểm toán mà chúng tôi đã thu thập là đầy đủ và thích hợp làm cơ sở cho ý kiến kiểm toán chấp nhận toàn phần. Các chính sách kế toán được áp dụng nhất quán và các ước tính trọng yếu được xem xét trên cơ sở thông tin hiện có tại ngày lập báo cáo.",
+   "Ngoài các vấn đề đã trình bày trong phần thuyết minh, chúng tôi không nhận thấy vấn đề nào khiến chúng tôi cho rằng báo cáo tài chính không được lập, trên các khía cạnh trọng yếu, phù hợp với các quy định kế toán hiện hành của Việt Nam."
+  ],
+  "board_title": "BÁO CÁO CỦA BAN TỔNG GIÁM ĐỐC",
+  "auditor_title": "BÁO CÁO KIỂM TOÁN ĐỘC LẬP",
+  "auditor_addressee": "Kính gửi: Các cổ đông và Hội đồng quản trị {company}",
+  "notes": [
+   {
+    "title": "B09. Tiền và các khoản tương đương tiền",
+    "paragraphs": [
+     "Tiền bao gồm tiền mặt tại quỹ và tiền gửi ngân hàng không kỳ hạn bằng đồng Việt Nam. Các khoản tương đương tiền là tiền gửi có kỳ hạn ban đầu không quá ba tháng, có khả năng chuyển đổi dễ dàng thành tiền và ít rủi ro về thay đổi giá trị. Công ty thực hiện đối chiếu số dư với ngân hàng định kỳ."
+    ],
+    "table": true
+   },
+   {
+    "title": "B10. Đầu tư tài chính ngắn hạn",
+    "paragraphs": [
+     "Chứng khoán kinh doanh được ghi nhận theo giá gốc và dự phòng được lập khi giá trị có thể thu hồi thấp hơn giá gốc. Các khoản tiền gửi nắm giữ đến ngày đáo hạn được phân loại theo thời hạn và khả năng thu hồi. Ban Tổng Giám đốc đánh giá không có khoản đầu tư nào cần xử lý ngoài dự phòng đã ghi nhận."
+    ],
+    "table": true
+   },
+   {
+    "title": "B11. Các khoản phải thu",
+    "paragraphs": [
+     "Phải thu khách hàng phát sinh từ việc bán thiết bị và linh kiện theo điều khoản tín dụng thông thường. Công ty theo dõi tuổi nợ theo từng đại lý, thực hiện đối chiếu cuối năm và trích lập dự phòng đối với khoản có dấu hiệu suy giảm khả năng thu hồi. Không có khoản phải thu trọng yếu từ bên liên quan chưa được thuyết minh.",
+     "Khoản trả trước cho người bán chủ yếu phục vụ đặt linh kiện theo đơn hàng sản xuất quý đầu năm sau."
+    ],
+    "table": true
+   },
+   {
+    "title": "B12. Hàng tồn kho",
+    "paragraphs": [
+     "Hàng tồn kho được ghi nhận theo giá thấp hơn giữa giá gốc và giá trị thuần có thể thực hiện được. Giá gốc linh kiện và thành phẩm bao gồm chi phí mua, chi phí chế biến và chi phí liên quan trực tiếp. Công ty kiểm kê thực tế tại ngày khóa sổ và lập dự phòng cho mẫu hàng chậm luân chuyển."
+    ],
+    "table": true
+   },
+   {
+    "title": "B13. Tài sản ngắn hạn khác",
+    "paragraphs": [
+     "Chi phí trả trước ngắn hạn gồm phí bảo hiểm, công cụ dụng cụ và chi phí gian hàng được phân bổ theo thời gian hưởng lợi. Thuế giá trị gia tăng được khấu trừ được theo dõi theo từng hóa đơn hợp lệ. Các khoản phải thu Nhà nước là số thuế nộp thừa đang chờ bù trừ."
+    ],
+    "table": true
+   },
+   {
+    "title": "B15. Tài sản cố định",
+    "paragraphs": [
+     "Công ty rà soát thời gian sử dụng và dấu hiệu suy giảm vào cuối mỗi kỳ kế toán.",
+     "Trong năm, Công ty đưa vào sử dụng một số thiết bị kiểm tra mạch và thanh lý một thiết bị đã hết thời gian sử dụng."
+    ],
+    "table": true
+   },
+   {
+    "title": "B20. Nợ phải trả ngắn hạn",
+    "paragraphs": [
+     "Các khoản phải trả người bán phát sinh từ mua linh kiện, bao bì và dịch vụ vận chuyển. Công ty ghi nhận thuế, tiền lương và chi phí phải trả trên cơ sở nghĩa vụ phát sinh đến ngày báo cáo. Các khoản vay ngắn hạn được bảo đảm bằng hàng tồn kho và tài sản hình thành từ vốn vay theo hợp đồng với tổ chức tín dụng."
+    ],
+    "table": true
+   },
+   {
+    "title": "B22. Vốn chủ sở hữu",
+    "paragraphs": [
+     "Thặng dư vốn cổ phần hình thành từ phát hành cổ phần trước đây. Lợi nhuận sau thuế chưa phân phối được sử dụng theo nghị quyết của Đại hội đồng cổ đông và không có hạn chế đặc biệt ngoài quy định pháp luật.",
+     "Trong năm {year}, Công ty không phát hành thêm cổ phần và đã phân phối lợi nhuận theo nghị quyết được thông qua."
+    ],
+    "table": true
+   },
+   {
+    "title": "B23. Doanh thu",
+    "paragraphs": [
+     "Doanh thu bán hàng được ghi nhận khi Công ty đã chuyển giao phần lớn rủi ro và lợi ích gắn liền với quyền sở hữu sản phẩm cho khách hàng, không còn quyền quản lý như người sở hữu và có khả năng thu được lợi ích kinh tế. Doanh thu được trình bày sau khi trừ chiết khấu thương mại, hàng bán bị trả lại và giảm giá hàng bán.",
+     "Doanh thu dịch vụ bảo hành được ghi nhận theo mức độ hoàn thành của nghĩa vụ cung cấp dịch vụ."
+    ],
+    "table": true
+   },
+   {
+    "title": "B30. Thuế thu nhập doanh nghiệp",
+    "paragraphs": [
+     "Chi phí thuế thu nhập doanh nghiệp hiện hành được tính trên thu nhập chịu thuế trong năm theo thuế suất áp dụng. Thu nhập chịu thuế được xác định từ lợi nhuận kế toán trước thuế sau khi điều chỉnh các khoản không được khấu trừ theo quy định. Công ty đã kê khai và tạm nộp thuế theo thời hạn của cơ quan thuế.",
+     "Tài sản thuế thu nhập hoãn lại được ghi nhận đối với chênh lệch tạm thời có khả năng thu hồi trong tương lai."
+    ],
+    "table": true
+   }
+  ]
+ }
+}

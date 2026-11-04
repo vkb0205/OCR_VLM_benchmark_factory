@@ -1,0 +1,108 @@
+{
+  "variables": {
+    "industry": "nhựa kỹ thuật",
+    "company_size": "large",
+    "fiscal_year": 2025
+  },
+  "source": "seed_103.json",
+  "values": {
+    "board_paragraph": [
+      "{company} manufactures engineering plastic pellets, precision injection-moulded parts and polymer component assemblies for electrical equipment, machinery and transportation vehicles. The Company operates two workshops in the Ben Ngoc industrial area, serving industrial customers under long-term contracts and maintaining its books in Vietnamese dong.",
+      "In {year}, the Company completed an automated injection-moulding line, increased the use of certified recycled materials and strengthened its testing laboratory. Raw material purchases are scheduled in line with orders, while mould control and dimensional stability are checked before each delivery.",
+      "The increase was driven by higher output of precision components, an improved product mix and energy savings from the injection-moulding machines.",
+      "The Company maintains appropriate credit facilities, monitors the ageing of customer receivables and allocates capital to its factory expansion programme.",
+      "In {next}, the Board of Management plans to develop additional heat-resistant materials and plastic assemblies with enhanced traceability requirements. New investments will be assessed based on capacity, payback potential and environmental safety. The Company will also continue training technicians and diversifying its sources of plastic pellets.",
+      "The Board of Directors and the Board of Management operate in accordance with the promulgated governance regulations and meet periodically to review orders, quality, cash flows and operational risks. The Company appointed {auditor} to audit its financial statements for {year}.",
+      "The Board of Management is responsible for preparing financial statements that present fairly, selecting appropriate accounting policies and maintaining the necessary internal control system. Estimates relating to provisions, depreciation, taxes and warranty obligations are reviewed based on reliable information available at the reporting date.",
+      "After the end of the financial year, the Company entered into several additional component supply orders, but no events requiring adjustments to the figures arose. The financial statements have been prepared on a going concern basis; the Board of Management has assessed cash flows, borrowing obligations and production plans for the following twelve months.",
+      "The Board of Management acknowledges the cooperation of employees, suppliers and customers in maintaining technical standards. The Company will continue to prioritise occupational safety, energy efficiency and transparency in financial reporting in all investment decisions."
+    ],
+    "auditor_paragraphs": [
+      "The Board of Management is responsible for the preparation of financial statements that present fairly and for the necessary internal control.",
+      "Our responsibility is to express an opinion on the financial statements based on our audit. We conducted our audit in accordance with Vietnamese Standards on Auditing. These standards require us to comply with ethical requirements, plan and perform procedures to obtain reasonable assurance that the financial statements are free from material misstatement.",
+      "An audit involves performing procedures to obtain audit evidence about the amounts and disclosures. The procedures selected depend on the auditor’s judgement, including the assessment of the risks of material misstatement, whether due to fraud or error. We also evaluate the accounting policies, accounting estimates and overall presentation.",
+      "We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our audit opinion. During the audit, we communicated with the Board of Management regarding the scope of work, expected timing and significant findings, including any significant internal control deficiencies identified.",
+      "This audit report has been prepared for the information of the shareholders and the Board of Directors. The Company remains responsible for its assets, production data and obligations arising from customer contracts. Our opinion is not modified in respect of events arising after the reporting date that do not require adjustment."
+    ],
+    "board_title": "REPORT OF THE BOARD OF MANAGEMENT",
+    "auditor_title": "INDEPENDENT AUDITOR’S REPORT",
+    "auditor_addressee": "To: The Shareholders and the Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "1. Business activities",
+        "paragraphs": [
+          "The principal activities are the manufacture of engineering plastic products, injection moulding of components and mould processing for industrial customers.",
+          "The accounting currency is the Vietnamese dong. The Company’s head office and two workshops are located in the Tan Luu production area.",
+          "Related party transactions, if any, are assessed based on their substance and terms. Management maintains approval delegations, reconciles figures and retains supporting documents to facilitate the independent audit."
+        ],
+        "table": false
+      },
+      {
+        "title": "2. Significant accounting policies",
+        "paragraphs": [
+          "Assets are recognised at cost, except for items presented in accordance with specific requirements. Revenue is recognised when control of the products is transferred and the amount can be measured reliably.",
+          "Foreign currency monetary items are translated at the actual exchange rates applicable to the transactions. Inventories are measured using the weighted average method and accounted for under the perpetual inventory method."
+        ],
+        "table": false
+      },
+      {
+        "title": "3. Cash and cash equivalents",
+        "paragraphs": [
+          "The Company’s deposits are held with credit institutions under demand deposit agreements. Cash equivalents comprise deposits with original maturities of no more than three months that are readily convertible to cash and subject to an insignificant risk of changes in value."
+        ],
+        "table": true
+      },
+      {
+        "title": "4. Trade receivables",
+        "paragraphs": [
+          "Trade receivables principally arise from the sale of components and plastic pellets under contracts. The Company assesses recoverability based on ageing, payment history and each customer’s financial information. Provisions are recognised for receivables showing indications of impairment."
+        ],
+        "table": true
+      },
+      {
+        "title": "5. Inventories",
+        "paragraphs": [
+          "Inventories comprise plastic pellets, additives, moulds in use, work in progress and finished goods. Inventories are measured at the lower of cost and net realisable value. The Company conducts a year-end stocktake and provides for slow-moving materials."
+        ],
+        "table": true
+      },
+      {
+        "title": "6. Property, plant and equipment",
+        "paragraphs": [
+          "Property, plant and equipment principally comprise injection-moulding machines, mixing lines, factory buildings and testing equipment. Major repair costs are allocated over the period of benefit. Intangible assets comprise production control software and rights to use the mould design system.",
+          "During the year, the Company commissioned an automated injection-moulding line and continued construction of an inspection area. Assets are maintained in accordance with technical schedules and tested for impairment when indicators of impairment arise."
+        ],
+        "table": true
+      },
+      {
+        "title": "7. Borrowings and finance lease liabilities",
+        "paragraphs": [
+          "Borrowings are used for working capital and machinery investment. Interest is charged at agreed rates, which vary by contract. The Company complies with its financial covenants and classifies amounts due within twelve months as current liabilities."
+        ],
+        "table": true
+      },
+      {
+        "title": "8. Equity",
+        "paragraphs": [
+          "The owners’ contributed capital is divided into ordinary shares carrying equal voting rights. Profit after tax is distributed in accordance with resolutions of the General Meeting of Shareholders after appropriations to funds and settlement of obligations to the State. The Company has no preference shares."
+        ],
+        "table": true
+      },
+      {
+        "title": "9. Revenue and taxes",
+        "paragraphs": [
+          "Revenue is generated from the sale of engineering plastic pellets and injection-moulded components, and from mould processing services. Contracts generally provide for deliveries in batches, acceptance based on dimensional standards and payment within thirty to ninety days.",
+          "Current corporate income tax is calculated on taxable income at the applicable tax rate. The Company files value added tax and personal income tax returns and pays other amounts due in accordance with regulations."
+        ],
+        "table": true
+      },
+      {
+        "title": "10. Events after the reporting period",
+        "paragraphs": [
+          "The Board of Management continues to monitor new orders, raw material prices and borrowing obligations as part of its operating plan for {next}."
+        ],
+        "table": false
+      }
+    ]
+  }
+}

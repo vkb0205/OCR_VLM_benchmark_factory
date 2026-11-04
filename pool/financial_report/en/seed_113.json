@@ -1,0 +1,123 @@
+{
+  "variables": {
+    "industry": "sản xuất bao bì giấy",
+    "company_size": "large",
+    "fiscal_year": 2025
+  },
+  "source": "seed_113.json",
+  "values": {
+    "board_paragraph": [
+      "During {year}, the Company maintained a customer network of food, beverage, pharmaceutical and consumer goods enterprises in the North and Central regions.",
+      "The Company's principal activities comprise the production of corrugated cartons, multi-ply paper bags, offset-printed boxes and honeycomb paper used for cushioning goods. The Company sources a portion of its roll paper, glue and printing ink under long-term supply contracts. The corrugator, flexographic printing and automatic die-cutting systems are operated according to a periodic maintenance plan to ensure quality and delivery deadlines.",
+      "The Board of Management notes that the packaging market for indirect exports through domestic customers grew steadily in the second half of the year.",
+      "Current assets increased due to high delivery volumes in the final quarter, while fixed assets increased after the die-cutting line and automated warehouse were put into operation. The Company continued to maintain its solvency and comply with the borrowing limits under its credit agreements.",
+      "In {next}, the Company plans to expand capacity for moisture-resistant cartons, increase the proportion of recycled materials and implement an integrated order management system. The Board of Management will prioritize occupational safety, material savings, receivables control and the development of recyclable packaging solutions to meet increasingly stringent customer requirements.",
+      "The financial statements for {year} were audited by {auditor} under the contract signed with the Company. The Board of Management is responsible for organizing the internal control system, selecting appropriate accounting policies and preparing financial statements that are true and fair in accordance with Vietnamese Accounting Standards and the current enterprise accounting regime.",
+      "After the end of the accounting period, the Company signed several orders to supply packaging for the peak season, but no material events requiring adjustment of the figures have arisen. The Board of Management confirms that there have been no significant changes in ownership, disputes or guarantee commitments other than those presented in the notes, and believes that the Company will continue to operate normally."
+    ],
+    "auditor_paragraphs": [
+      "The basis for our audit opinion is the audit conducted in accordance with Vietnamese Standards on Auditing. Those standards require auditors to comply with ethical requirements and to plan and perform the audit to obtain reasonable assurance about whether the financial statements are free from material misstatement.",
+      "The Board of Management is responsible for the preparation and fair presentation of the financial statements, selecting appropriate accounting policies, making reasonable estimates and maintaining the internal control necessary to ensure that the financial statements are free from material misstatement, whether due to fraud or error.",
+      "Our responsibility is to express an opinion on the financial statements based on the audit evidence obtained. We assess risks, design appropriate procedures, consider relevant controls, evaluate accounting policies and estimates, and also consider the appropriateness of the going concern assumption.",
+      "We believe that the audit evidence obtained is sufficient and appropriate to provide a basis for our unqualified audit opinion. Our procedures also included reconciliation of material balances, testing of transactions on a sample basis and review of the presentation and overall structure of the financial statements.",
+      "Other than the matters presented in the notes, we have not identified any events that require separate disclosure in the audit report. This report is issued to the Company's shareholders and Board of Directors within the agreed scope of work and is not intended to serve any other purpose."
+    ],
+    "board_title": "REPORT OF THE BOARD OF MANAGEMENT",
+    "auditor_title": "INDEPENDENT AUDITOR'S REPORT",
+    "auditor_addressee": "To the Shareholders and the Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "B09-DN. Nature of operations",
+        "paragraphs": [
+          "The principal business activity is the production of cartons, paper bags, printed paper boxes and paper cushioning materials. The currency used is the Vietnamese dong.",
+          "The Company has one factory and two distribution centers in the North Central region. Products are sold directly to industrial customers under contracts and delivered according to the production plan."
+        ],
+        "table": false
+      },
+      {
+        "title": "B09-DN. Significant accounting policies",
+        "paragraphs": [
+          "Assets are recorded at historical cost, except for items required to be remeasured under current regulations. Revenue is recognized when control of the goods has been transferred and the Company has the right to receive payment."
+        ],
+        "table": false
+      },
+      {
+        "title": "B09-DN. Cash and cash equivalents",
+        "paragraphs": [
+          "Cash comprises cash on hand and non-term bank deposits. Cash equivalents are deposits with an original maturity of no more than three months that are readily convertible into cash and are subject to an insignificant risk of changes in value."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN. Trade receivables",
+        "paragraphs": [
+          "Receivables are presented at carrying amount after deducting the allowance for doubtful receivables. The Company analyzes the aging of receivables by customer, monitors credit limits and makes allowances for receivables showing signs of impairment in collectability."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN. Inventories",
+        "paragraphs": [
+          "Inventories are measured at the lower of cost and net realizable value. The cost of raw materials is determined using the weighted average method; work in progress and finished goods include direct material costs, labor costs and allocated production overhead."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN. Fixed assets",
+        "paragraphs": [
+          "Major repair costs are recognized in accordance with their nature and the period of benefit."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN. Borrowings and finance lease liabilities",
+        "paragraphs": [
+          "Borrowings are initially recognized at the amount received and presented at the amount outstanding. Borrowing costs directly attributable to a qualifying asset are capitalized during the construction period; other costs are recognized in profit or loss for the period. The Company complies with material financial covenants."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN. Owners' equity",
+        "paragraphs": [
+          "Profit after tax is distributed in accordance with the resolution of the General Meeting of Shareholders after fulfilling tax obligations and offsetting accumulated losses, if any."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN. Revenue and cost of sales",
+        "paragraphs": [
+          "Revenue for {year} mainly comes from corrugated cartons and multi-ply paper bags. Revenue is recognized at the fair value of the consideration received, excluding value added tax and deductions. Cost of sales is determined based on the actual cost of goods sold."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN. Corporate income tax",
+        "paragraphs": [
+          "Current corporate income tax expense is determined on the taxable income for the year at the applicable tax rate. Deferred tax assets and liabilities are recognized for temporary differences, except in cases where recognition is not permitted under regulations. The Company has declared and paid taxes due."
+        ],
+        "table": false
+      },
+      {
+        "title": "B09-DN. Events after the end of the accounting period",
+        "paragraphs": [
+          "The Board of Management continues to assess new orders and supply capacity for {next}."
+        ],
+        "table": false
+      },
+      {
+        "title": "B09-DN. Commitments and contingent liabilities",
+        "paragraphs": [
+          "As at the reporting date, the Company has no material capital commitments or contingent liabilities other than raw material purchase contracts, asset leases and commercial guarantees arising in the ordinary course of business. Commitments are monitored in the accounting system and reviewed periodically by the Board of Management."
+        ],
+        "table": true
+      },
+      {
+        "title": "B09-DN. Commitments and contingent liabilities",
+        "paragraphs": [
+          "As at the reporting date, the Company has no material capital commitments or contingent liabilities other than raw material purchase contracts, asset leases and commercial guarantees arising in the ordinary course of business. Commitments are monitored in the accounting system and reviewed periodically by the Board of Management."
+        ],
+        "table": true
+      }
+    ]
+  }
+}

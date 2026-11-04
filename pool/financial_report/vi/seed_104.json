@@ -1,0 +1,126 @@
+{
+ "variables": {
+  "industry": "sản xuất bao bì giấy",
+  "company_size": "small",
+  "fiscal_year": 2025
+ },
+ "source": "seed_104.json",
+ "values": {
+  "board_paragraph": [
+   "Công ty gia công túi giấy, hộp carton in flexo và khay giấy định hình cho các cơ sở chế biến nông sản, cửa hàng bán lẻ và doanh nghiệp thực phẩm trong nước.",
+   "Sản lượng tăng nhờ lịch giao hàng ổn định và tỷ lệ giấy tái chế trong một số dòng sản phẩm được nâng lên. Công ty kiểm soát định mức keo, mực in và phế liệu bằng phiếu theo dõi theo từng lệnh sản xuất; các sản phẩm lỗi được phân loại để thu hồi nguyên liệu.",
+   "hàng tồn kho tăng theo kế hoạch dự trữ giấy cuộn và bán thành phẩm phục vụ đơn hàng đầu quý sau.",
+   "Năm {next}, Công ty dự kiến tập trung vào bao bì có khả năng tái chế, cải thiện độ chính xác của khuôn bế và mở rộng dịch vụ in số lượng vừa. Ban Tổng Giám đốc sẽ tiếp tục đánh giá nhà cung cấp giấy, tăng kiểm soát công nợ khách hàng và bố trí ngân sách bảo trì phòng ngừa. Các rủi ro chính là giá nguyên liệu, thời gian giao hàng và yêu cầu môi trường của khách hàng; Công ty đã xây dựng danh sách nhà cung cấp thay thế để giảm ảnh hưởng.",
+   "Báo cáo tài chính được kiểm toán bởi {auditor}, một đơn vị kiểm toán độc lập do Hội đồng quản trị lựa chọn. Ban Tổng Giám đốc chịu trách nhiệm lập, trình bày trung thực báo cáo và duy trì kiểm soát nội bộ cần thiết.",
+   "Sau ngày kết thúc năm tài chính, Công ty không phát sinh sự kiện trọng yếu cần điều chỉnh hoặc công bố bổ sung trên báo cáo tài chính. giao dịch này nằm trong hoạt động kinh doanh thông thường.",
+   "Ban Tổng Giám đốc xác nhận đã cung cấp đầy đủ sổ kế toán, chứng từ và giải trình cần thiết cho đơn vị kiểm toán. Các chính sách kế toán trình bày trong phần thuyết minh được áp dụng nhất quán giữa hai năm, ngoại trừ những thay đổi bắt buộc theo quy định hiện hành."
+  ],
+  "auditor_paragraphs": [
+   "Ban Tổng Giám đốc chịu trách nhiệm về việc lập và trình bày trung thực báo cáo tài chính theo khuôn khổ áp dụng, đồng thời chịu trách nhiệm về kiểm soát nội bộ mà Ban Tổng Giám đốc xác định là cần thiết để bảo đảm báo cáo không có sai sót trọng yếu do gian lận hoặc nhầm lẫn. Trách nhiệm này bao gồm lựa chọn chính sách kế toán thích hợp và đưa ra các ước tính hợp lý.",
+   "Trách nhiệm của chúng tôi là đưa ra ý kiến về báo cáo tài chính dựa trên kết quả cuộc kiểm toán. Chúng tôi đã thực hiện công việc theo các Chuẩn mực kiểm toán Việt Nam. Các chuẩn mực này yêu cầu chúng tôi tuân thủ chuẩn mực đạo đức nghề nghiệp và lập kế hoạch, thực hiện kiểm toán để đạt được sự đảm bảo hợp lý về việc báo cáo tài chính có còn sai sót trọng yếu hay không.",
+   "Một cuộc kiểm toán bao gồm thực hiện các thủ tục để thu thập bằng chứng kiểm toán về các số liệu và thông tin trình bày trên báo cáo tài chính. Việc lựa chọn thủ tục phụ thuộc vào xét đoán của kiểm toán viên, bao gồm đánh giá rủi ro có sai sót trọng yếu do gian lận hoặc nhầm lẫn. Chúng tôi cũng đánh giá tính phù hợp của chính sách kế toán, các ước tính và cách trình bày tổng thể.",
+   "Chúng tôi tin tưởng rằng các bằng chứng kiểm toán đã thu thập được là đầy đủ và thích hợp làm cơ sở cho ý kiến kiểm toán của chúng tôi. Cuộc kiểm toán được thực hiện độc lập với Công ty theo các yêu cầu đạo đức nghề nghiệp áp dụng cho kiểm toán báo cáo tài chính tại Việt Nam. Chúng tôi đã nhận được sự hợp tác và giải trình cần thiết từ Ban Tổng Giám đốc cùng các bộ phận liên quan.",
+   "Cơ sở cho ý kiến kiểm toán không phải là ý kiến có sửa đổi. Sau khi xem xét các vấn đề trọng yếu, chúng tôi không nhận thấy sự kiện hoặc điều kiện nào cho thấy có sự không chắc chắn trọng yếu có thể dẫn đến nghi ngờ đáng kể về khả năng hoạt động liên tục của Công ty. Các thông tin khác trong báo cáo thường niên, nếu có, không làm thay đổi ý kiến của chúng tôi.",
+   "Theo ý kiến của chúng tôi, báo cáo tài chính của {company} đã được lập phù hợp với các quy định hiện hành. Báo cáo này được phát hành cùng ngày với báo cáo của Ban Tổng Giám đốc và chỉ nhằm phục vụ các cổ đông, Hội đồng quản trị và những người sử dụng báo cáo theo quy định."
+  ],
+  "board_title": "BÁO CÁO CỦA BAN TỔNG GIÁM ĐỐC",
+  "auditor_title": "BÁO CÁO KIỂM TOÁN ĐỘC LẬP",
+  "auditor_addressee": "Kính gửi: Các cổ đông và Hội đồng quản trị {company}",
+  "notes": [
+   {
+    "title": "B09. Đặc điểm hoạt động và cơ sở lập báo cáo",
+    "paragraphs": [
+     "Sản phẩm gồm túi giấy, hộp carton in và khay giấy định hình. Báo cáo được lập bằng đồng Việt Nam, theo cơ sở giá gốc và giả định Công ty tiếp tục hoạt động bình thường trong tương lai gần.",
+     "Số liệu năm trước được trình bày để so sánh và đã được phân loại nhất quán với năm nay."
+    ],
+    "table": true
+   },
+   {
+    "title": "B10. Chính sách kế toán chủ yếu",
+    "paragraphs": [
+     "Các giao dịch bằng ngoại tệ, nếu phát sinh, được quy đổi theo tỷ giá giao dịch thực tế tại ngày phát sinh; các khoản mục tiền tệ có gốc ngoại tệ cuối kỳ được đánh giá lại theo tỷ giá cuối kỳ. Doanh thu được ghi nhận khi quyền kiểm soát sản phẩm đã chuyển giao cho khách hàng và số tiền có thể xác định đáng tin cậy.",
+     "Chi phí được ghi nhận phù hợp với doanh thu liên quan. Hàng tồn kho được tính theo giá bình quân gia quyền và ghi nhận theo giá thấp hơn giữa giá gốc và giá trị thuần có thể thực hiện được."
+    ],
+    "table": true
+   },
+   {
+    "title": "B11. Tiền và các khoản tương đương tiền",
+    "paragraphs": [
+     "Tiền bao gồm tiền mặt tại quỹ và tiền gửi ngân hàng không kỳ hạn. Các khoản tương đương tiền là khoản đầu tư ngắn hạn có thời hạn thu hồi không quá ba tháng kể từ ngày mua, có khả năng chuyển đổi dễ dàng thành một lượng tiền xác định và ít rủi ro về thay đổi giá trị.",
+     "Cuối năm, Công ty duy trì số dư tiền đủ phục vụ mua nguyên liệu, trả lương và thanh toán các khoản vay đến hạn. Không có khoản tiền nào bị hạn chế sử dụng theo hợp đồng tín dụng tại ngày lập báo cáo."
+    ],
+    "table": true
+   },
+   {
+    "title": "B12. Phải thu khách hàng và phải thu khác",
+    "paragraphs": [
+     "Phải thu khách hàng phát sinh chủ yếu từ việc giao hộp carton và túi giấy theo hợp đồng. Công ty thực hiện đối chiếu công nợ hàng tháng, phân nhóm theo thời hạn và trích lập dự phòng đối với các khoản có dấu hiệu khó thu hồi. Ban Tổng Giám đốc đánh giá không có khoản phải thu trọng yếu ngoài các thông tin đã trình bày.",
+     "Phải thu khác gồm tiền ký quỹ thuê thiết bị và các khoản bồi hoàn chi phí vận chuyển đang chờ đối chiếu. Các khoản này được thu hồi theo điều khoản hợp đồng và không có tài sản thế chấp kèm theo."
+    ],
+    "table": true
+   },
+   {
+    "title": "B13. Hàng tồn kho",
+    "paragraphs": [
+     "Hàng tồn kho gồm giấy cuộn, mực in, keo dán, bán thành phẩm và thành phẩm đóng gói. Giá trị hàng tồn kho cuối kỳ phản ánh kế hoạch giao hàng trong tháng đầu năm sau.",
+     "Dự phòng giảm giá được ghi nhận cho các cuộn giấy bị ẩm, vật tư chậm luân chuyển và thành phẩm có quy cách không còn phù hợp. Không có hàng tồn kho dùng để thế chấp cho khoản vay tại ngày báo cáo."
+    ],
+    "table": true
+   },
+   {
+    "title": "B14. Tài sản cố định và chi phí xây dựng cơ bản",
+    "paragraphs": [
+     "Trong năm, Công ty hoàn thành việc lắp đặt một máy bế bán tự động và nâng cấp hệ thống hút bụi. Tài sản được ghi nhận theo nguyên giá bao gồm giá mua và chi phí trực tiếp để đưa tài sản vào trạng thái sẵn sàng sử dụng. Khấu hao được tính từ tháng tài sản đưa vào vận hành.",
+     "Công ty dự kiến hoàn thành hạng mục này trong quý II năm {next}. Không có cam kết mua sắm tài sản cố định trọng yếu chưa ghi nhận ngoài kế hoạch được phê duyệt."
+    ],
+    "table": true
+   },
+   {
+    "title": "B15. Nợ phải trả và các khoản vay",
+    "paragraphs": [
+     "Thuế và các khoản phải nộp Nhà nước được đối chiếu với tờ khai định kỳ.",
+     "Khoản vay dài hạn được bảo đảm bằng máy móc thiết bị và quyền sử dụng nhà xưởng theo hợp đồng tín dụng. Lãi suất vay được thỏa thuận theo từng khế ước và chi phí lãi vay được ghi nhận vào kết quả kinh doanh trong kỳ phát sinh."
+    ],
+    "table": true
+   },
+   {
+    "title": "B16. Vốn chủ sở hữu",
+    "paragraphs": [
+     "Công ty không phát hành cổ phiếu ưu đãi, trái phiếu chuyển đổi hoặc công cụ vốn khác. Quyền biểu quyết và quyền nhận cổ tức gắn với số vốn đã góp.",
+     "Hội đồng quản trị chưa đề xuất chia cổ tức cho năm {year} tại ngày phát hành báo cáo; việc phân phối lợi nhuận sẽ được xem xét theo kết quả kinh doanh và nhu cầu vốn lưu động."
+    ],
+    "table": true
+   },
+   {
+    "title": "B17. Doanh thu và giá vốn",
+    "paragraphs": [
+     "Doanh thu được phân loại theo nhóm sản phẩm và ghi nhận khi khách hàng nhận hàng theo điều kiện giao hàng đã thỏa thuận. Các khoản giảm trừ doanh thu trong năm là chiết khấu thương mại cho đơn hàng có sản lượng lớn và hàng bán bị trả lại do sai quy cách. Giá vốn bao gồm nguyên vật liệu trực tiếp, nhân công trực tiếp và chi phí sản xuất chung phân bổ.",
+     "Năm {year}, sản lượng hộp carton tăng trong khi tỷ lệ phế liệu giảm. Một phần chi phí vận chuyển được thu theo từng đơn hàng và đã được phản ánh trong doanh thu hoặc chi phí phù hợp với bản chất giao dịch."
+    ],
+    "table": true
+   },
+   {
+    "title": "B18. Chi phí, thuế và các giao dịch khác",
+    "paragraphs": [
+     "Thuế thu nhập doanh nghiệp hiện hành được tính trên thu nhập chịu thuế theo quy định hiện hành, sau khi xem xét các khoản chi phí được trừ. Thuế thu nhập hoãn lại phát sinh từ chênh lệch tạm thời giữa giá trị ghi sổ và cơ sở tính thuế của một số tài sản; số dư được đánh giá lại tại ngày kết thúc kỳ kế toán."
+    ],
+    "table": true
+   },
+   {
+    "title": "B19. Công cụ tài chính và quản trị rủi ro",
+    "paragraphs": [
+     "Các công cụ tài chính của Công ty gồm tiền, phải thu, phải trả và các khoản vay. Rủi ro tín dụng tập trung ở một số khách hàng mua theo hạn mức; Công ty giảm rủi ro bằng xét duyệt hạn mức, yêu cầu đặt cọc cho đơn hàng mới và đối chiếu tuổi nợ hàng tháng. Rủi ro thanh khoản được quản lý qua kế hoạch dòng tiền tuần.",
+     "Rủi ro giá nguyên vật liệu được theo dõi bằng báo giá của nhiều nhà cung cấp. Ban Tổng Giám đốc không sử dụng công cụ phái sinh trong năm. Giá trị ghi sổ của các khoản mục tài chính xấp xỉ giá trị hợp lý do thời gian đáo hạn ngắn hoặc lãi suất được điều chỉnh theo thị trường."
+    ],
+    "table": true
+   },
+   {
+    "title": "B20. Sự kiện sau ngày kết thúc kỳ kế toán",
+    "paragraphs": [
+     "Hội đồng quản trị chịu trách nhiệm xem xét báo cáo theo thẩm quyền và không có kế hoạch thay đổi đáng kể cơ cấu hoạt động sau ngày phát hành."
+    ],
+    "table": true
+   }
+  ]
+ }
+}

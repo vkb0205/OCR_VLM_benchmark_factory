@@ -1,0 +1,116 @@
+{
+ "variables": {
+  "industry": "cơ khí chế tạo",
+  "company_size": "large",
+  "fiscal_year": 2023
+ },
+ "source": "seed_124.json",
+ "values": {
+  "board_paragraph": [
+   "Công ty vận hành các phân xưởng đúc thép, gia công CNC, nhiệt luyện và lắp ráp, phục vụ khách hàng trong ngành thiết bị cảng, xi măng và năng lượng.",
+   "Trong năm {year}, Công ty duy trì sản xuất ổn định, hoàn thành nhiều đơn hàng kết cấu chịu tải và phụ tùng thay thế có yêu cầu dung sai chặt. Thị trường trong nước chiếm tỷ trọng chủ yếu; một phần sản phẩm được giao cho các nhà thầu công nghiệp tại Lào và Campuchia. Ban Tổng Giám đốc tập trung kiểm soát chất lượng, an toàn lao động, tiến độ giao hàng và tiêu hao kim loại.",
+   "Chi phí tài chính vẫn ở mức đáng kể do lãi suất vay vốn lưu động tăng trong nửa đầu năm.",
+   "Công ty duy trì các hạn mức tín dụng và đáp ứng đầy đủ nghĩa vụ thanh toán đến hạn.",
+   "Năm {next}, Công ty dự kiến mở rộng dây chuyền gia công năm trục, nâng cấp hệ thống xử lý bụi và phát triển nhóm sản phẩm vỏ hộp giảm tốc cỡ lớn. Ban Tổng Giám đốc sẽ ưu tiên các hợp đồng có điều khoản điều chỉnh giá vật tư, tăng tỷ lệ nội địa hóa phôi đúc và sử dụng phần mềm truy xuất nguồn gốc cho từng lô hàng.",
+   "Các thành viên đã tham gia đầy đủ những cuộc họp về kế hoạch sản xuất, ngân sách đầu tư và quản trị rủi ro. Không có thay đổi nhân sự chủ chốt nào làm gián đoạn hoạt động hoặc ảnh hưởng đến quyền phê duyệt và kiểm soát tại Công ty.",
+   "Báo cáo tài chính năm {year} được kiểm toán bởi {auditor}, một đơn vị được Công ty lựa chọn theo nghị quyết của Hội đồng quản trị. Ban Tổng Giám đốc đã cung cấp hồ sơ, sổ sách và các giải trình cần thiết, đồng thời phối hợp với kiểm toán viên trong việc xác nhận công nợ, kiểm kê hàng tồn kho và đánh giá hiện trạng tài sản cố định.",
+   "Ban Tổng Giám đốc chịu trách nhiệm lập và trình bày trung thực, hợp lý báo cáo tài chính theo chế độ kế toán doanh nghiệp Việt Nam và các quy định liên quan. Theo hiểu biết của chúng tôi, không có sự kiện trọng yếu phát sinh sau ngày kết thúc kỳ kế toán cần điều chỉnh hoặc thuyết minh bổ sung ngoài các nội dung đã nêu trong báo cáo này."
+  ],
+  "auditor_paragraphs": [
+   "Ban Tổng Giám đốc chịu trách nhiệm lập, trình bày báo cáo tài chính, lựa chọn chính sách kế toán thích hợp, duy trì hệ thống kiểm soát nội bộ cần thiết và đánh giá khả năng hoạt động liên tục của Công ty. Trách nhiệm này bao gồm việc bảo vệ tài sản và phát hiện, ngăn ngừa sai sót hoặc gian lận.",
+   "Trách nhiệm của chúng tôi là đưa ra ý kiến về báo cáo tài chính dựa trên kết quả kiểm toán. Chúng tôi đã thực hiện kiểm toán theo Chuẩn mực kiểm toán Việt Nam. Các chuẩn mực này yêu cầu chúng tôi tuân thủ yêu cầu đạo đức, lập kế hoạch và thực hiện kiểm toán để đạt được sự đảm bảo hợp lý về việc báo cáo không còn sai sót trọng yếu.",
+   "Công việc kiểm toán bao gồm thực hiện các thủ tục nhằm thu thập bằng chứng về số liệu và thuyết minh trên báo cáo tài chính. Các thủ tục được lựa chọn dựa trên xét đoán của kiểm toán viên, bao gồm đánh giá rủi ro sai sót trọng yếu do gian lận hoặc nhầm lẫn. Khi đánh giá rủi ro, chúng tôi xem xét kiểm soát nội bộ liên quan.",
+   "Chúng tôi cũng đánh giá tính thích hợp của các chính sách kế toán, tính hợp lý của các ước tính kế toán và cách trình bày tổng thể của báo cáo tài chính. Chúng tôi tin tưởng rằng các bằng chứng kiểm toán đã thu thập là đầy đủ và thích hợp làm cơ sở cho ý kiến kiểm toán của chúng tôi.",
+   "Ngoài các vấn đề đã trình bày trong báo cáo tài chính, chúng tôi không nhận thấy sự kiện nào phát sinh sau ngày kết thúc kỳ kế toán cần làm thay đổi ý kiến không sửa đổi này."
+  ],
+  "board_title": "BÁO CÁO CỦA BAN TỔNG GIÁM ĐỐC",
+  "auditor_title": "BÁO CÁO KIỂM TOÁN ĐỘC LẬP",
+  "auditor_addressee": "Kính gửi: các cổ đông và Hội đồng quản trị {company}",
+  "notes": [
+   {
+    "title": "1. Đặc điểm hoạt động",
+    "paragraphs": [
+     "Ngành nghề chính là đúc, rèn, gia công và lắp ráp máy móc, thiết bị cơ khí. Đơn vị tiền tệ sử dụng trong kế toán là đồng Việt Nam. Chu kỳ sản xuất thông thường không quá mười hai tháng."
+    ],
+    "table": false
+   },
+   {
+    "title": "2. Chính sách kế toán chủ yếu",
+    "paragraphs": [
+     "Báo cáo được lập theo chế độ kế toán doanh nghiệp Việt Nam, áp dụng nguyên tắc giá gốc và giả định hoạt động liên tục. Doanh thu được ghi nhận khi phần lớn rủi ro và lợi ích đã chuyển giao. Hàng tồn kho được tính theo phương pháp bình quân gia quyền; chi phí đi vay đủ điều kiện được vốn hóa trong thời gian đầu tư xây dựng."
+    ],
+    "table": false
+   },
+   {
+    "title": "3. Tiền và các khoản tương đương tiền",
+    "paragraphs": [
+     "Tiền bao gồm tiền mặt và tiền gửi ngân hàng không kỳ hạn. Các khoản tương đương tiền là tiền gửi có kỳ hạn gốc không quá ba tháng, có khả năng chuyển đổi dễ dàng thành tiền và ít rủi ro về thay đổi giá trị."
+    ],
+    "table": true
+   },
+   {
+    "title": "4. Phải thu",
+    "paragraphs": [
+     "Các khoản phải thu được trình bày theo giá trị ghi sổ sau khi trừ dự phòng. Công ty thường xuyên đối chiếu công nợ với khách hàng công nghiệp và đánh giá khả năng thu hồi dựa trên lịch sử thanh toán, tài sản bảo đảm và thông tin cập nhật tại ngày lập báo cáo."
+    ],
+    "table": true
+   },
+   {
+    "title": "5. Hàng tồn kho",
+    "paragraphs": [
+     "Hàng tồn kho gồm nguyên vật liệu thép, phôi đúc, sản phẩm dở dang, thành phẩm và phụ tùng. Công ty trích lập dự phòng cho vật tư chậm luân chuyển hoặc sản phẩm có giá trị thuần thấp hơn giá gốc. Kết quả kiểm kê cuối năm không phát hiện thiếu hụt trọng yếu."
+    ],
+    "table": true
+   },
+   {
+    "title": "6. Tài sản cố định",
+    "paragraphs": [
+     "Nguyên giá được ghi nhận gồm giá mua và chi phí trực tiếp để đưa tài sản vào trạng thái sẵn sàng sử dụng. Trong năm, Công ty đưa vào vận hành một trung tâm gia công CNC và hệ thống xử lý nhiệt mới."
+    ],
+    "table": true
+   },
+   {
+    "title": "7. Vay và nợ thuê tài chính",
+    "paragraphs": [
+     "Các khoản vay được sử dụng cho vốn lưu động, mua thiết bị và xây dựng nhà xưởng. Lãi suất áp dụng theo hợp đồng tín dụng từng thời kỳ. Tài sản thế chấp chủ yếu là máy móc, quyền sử dụng đất và hàng tồn kho thuộc quyền kiểm soát của Công ty."
+    ],
+    "table": true
+   },
+   {
+    "title": "8. Vốn chủ sở hữu",
+    "paragraphs": [
+     "Lợi nhuận sau thuế được phân phối theo nghị quyết Đại hội đồng cổ đông, trong đó có trích quỹ đầu tư phát triển và chi trả cổ tức bằng tiền."
+    ],
+    "table": true
+   },
+   {
+    "title": "9. Doanh thu và giá vốn",
+    "paragraphs": [
+     "Doanh thu phát sinh chủ yếu từ bán chi tiết đúc, cụm máy gia công và dịch vụ sửa chữa công nghiệp. Hợp đồng được xác định theo từng đơn hàng; doanh thu được ghi nhận khi sản phẩm được nghiệm thu và quyền kiểm soát chuyển cho khách hàng. Giá vốn bao gồm nguyên vật liệu, nhân công và chi phí sản xuất chung phân bổ."
+    ],
+    "table": true
+   },
+   {
+    "title": "10. Thuế thu nhập doanh nghiệp",
+    "paragraphs": [
+     "Chi phí thuế thu nhập doanh nghiệp hiện hành được tính trên thu nhập chịu thuế theo thuế suất hiện hành. Công ty đã kê khai và nộp các khoản thuế, phí phát sinh theo quy định. Tài sản và thuế thu nhập hoãn lại được ghi nhận cho các chênh lệch tạm thời có khả năng khấu trừ hoặc phải chịu thuế trong tương lai."
+    ],
+    "table": false
+   },
+   {
+    "title": "11. Giao dịch với các bên liên quan",
+    "paragraphs": [
+     "Các giao dịch với bên liên quan phát sinh trong điều kiện thương mại thông thường, được phê duyệt theo thẩm quyền và ghi nhận theo giá trị hợp đồng. Trong năm không có khoản vay ưu đãi, bảo lãnh hoặc cam kết bất thường với thành viên quản lý chủ chốt."
+    ],
+    "table": false
+   },
+   {
+    "title": "12. Sự kiện sau ngày kết thúc kỳ kế toán",
+    "paragraphs": [
+     "Ban Tổng Giám đốc đánh giá Công ty tiếp tục hoạt động bình thường trong ít nhất mười hai tháng tiếp theo."
+    ],
+    "table": false
+   }
+  ]
+ }
+}

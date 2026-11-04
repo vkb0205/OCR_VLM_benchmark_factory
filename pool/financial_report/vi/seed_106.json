@@ -1,0 +1,112 @@
+{
+ "variables": {
+  "industry": "nhựa kỹ thuật",
+  "company_size": "small",
+  "fiscal_year": 2025
+ },
+ "source": "seed_106.json",
+ "values": {
+  "board_paragraph": [
+   "Công ty chế tạo chi tiết nhựa chịu mài mòn, ống dẫn hóa chất và khay kỹ thuật cho các nhà máy cơ khí, điện tử và xử lý nước trong nước.",
+   "Trong năm {year}, hoạt động chính của Công ty là phối trộn hạt nhựa kỹ thuật, ép phun theo bản vẽ, gia công hoàn thiện và kiểm tra kích thước bằng thiết bị đo nội bộ. Bộ phận kỹ thuật cũng hoàn thiện một nhóm sản phẩm dùng cho môi trường có nhiệt độ cao, giúp danh mục hàng hóa bớt phụ thuộc vào các đơn hàng phổ thông.",
+   "Kết quả cải thiện nhờ tỷ lệ phế phẩm giảm, giá bán các chi tiết chịu hóa chất tăng nhẹ và chi phí lãi vay được kiểm soát. Ban Tổng Giám đốc đã duy trì chính sách kiểm tra chất lượng theo từng lô.",
+   "Các khoản vay được phân bổ phù hợp với chu kỳ mua nguyên vật liệu và chưa có khoản nợ quá hạn trọng yếu.",
+   "Trong năm tới, Công ty dự kiến mở rộng nhóm chi tiết nhựa chống tĩnh điện và tăng tỷ lệ sử dụng vật liệu tái sinh có kiểm soát. Ban Tổng Giám đốc sẽ ưu tiên đầu tư khuôn mới, đào tạo người vận hành và nâng cấp hệ thống thu hồi phế liệu. Kế hoạch kinh doanh được xây dựng trên cơ sở các đơn đặt hàng đã trao đổi với khách hàng hiện hữu, nhưng vẫn được rà soát định kỳ trước biến động giá hạt nhựa.",
+   "{auditor} được Hội đồng quản trị lựa chọn kiểm toán báo cáo tài chính năm {year}.",
+   "Ban Tổng Giám đốc chịu trách nhiệm lập và trình bày trung thực, hợp lý báo cáo tài chính theo chuẩn mực và chế độ kế toán doanh nghiệp Việt Nam hiện hành. Trách nhiệm này bao gồm duy trì kiểm soát nội bộ cần thiết, lựa chọn chính sách kế toán phù hợp và đánh giá khả năng hoạt động liên tục. Ban Tổng Giám đốc xác nhận chưa phát sinh sự kiện sau ngày kết thúc kỳ kế toán cần điều chỉnh hoặc trình bày bổ sung ngoài các nội dung đã nêu trong thuyết minh."
+  ],
+  "auditor_paragraphs": [
+   "Chúng tôi đã thực hiện cuộc kiểm tra độc lập đối với bộ báo cáo tài chính năm {year} của {company}. Hồ sơ gồm báo cáo tình hình tài chính, báo cáo kết quả kinh doanh, báo cáo dòng tiền và phần giải trình kèm theo, với số liệu đối chiếu của năm {prev}. Ban Tổng Giám đốc đã phê duyệt bộ hồ sơ để phát hành.",
+   "Việc ghi nhận, đo lường và trình bày được thực hiện theo chuẩn mực kế toán Việt Nam, chế độ kế toán doanh nghiệp và các quy định hiện hành có liên quan.",
+   "Ban Tổng Giám đốc có trách nhiệm tổ chức công tác kế toán, lập báo cáo đúng quy định và cung cấp thông tin đầy đủ. Trách nhiệm đó bao gồm xây dựng hệ thống kiểm soát thích hợp, lựa chọn phương pháp kế toán phù hợp với hoạt động ép nhựa, xem xét các ước tính quan trọng và đánh giá khả năng tiếp tục vận hành của doanh nghiệp.",
+   "Phần việc của kiểm toán viên là đưa ra kết luận độc lập trên cơ sở các thủ tục đã thực hiện. Chúng tôi tuân thủ chuẩn mực kiểm toán Việt Nam và các nguyên tắc đạo đức nghề nghiệp, đồng thời lập kế hoạch kiểm tra với mức độ thận trọng cần thiết để nhận diện sai lệch trọng yếu trong thông tin tài chính.",
+   "Trong quá trình làm việc, chúng tôi kiểm tra chọn mẫu chứng từ, đối chiếu số dư với xác nhận bên ngoài, quan sát kiểm kê và xem xét các ước tính do Công ty lập. Phạm vi thủ tục được xác định theo đánh giá rủi ro, trong đó có rủi ro do gian lận hoặc nhầm lẫn; việc đánh giá hệ thống kiểm soát chỉ nhằm thiết kế thủ tục, không phải để chứng nhận hiệu quả vận hành của hệ thống.",
+   "Bằng chứng thu thập được cho thấy cơ sở kế toán và các chính sách áp dụng là phù hợp, nhất quán với kỳ trước; chúng tôi cho rằng bằng chứng này đủ thích hợp để đưa ra ý kiến chấp nhận toàn phần. Không có hạn chế đáng kể nào trong phạm vi kiểm tra và không phát hiện sai lệch trọng yếu chưa được điều chỉnh.",
+   "Qua thời điểm kết thúc năm tài chính đến ngày ký báo cáo, chúng tôi không biết sự việc nào cần sửa đổi số liệu hoặc bổ sung thuyết minh trọng yếu. Báo cáo kiểm toán được phát hành để các cổ đông, Hội đồng quản trị và những người có quyền sử dụng theo pháp luật tham khảo cùng với báo cáo của Ban Tổng Giám đốc."
+  ],
+  "board_title": "BÁO CÁO CỦA BAN TỔNG GIÁM ĐỐC",
+  "auditor_title": "BÁO CÁO KIỂM TOÁN ĐỘC LẬP",
+  "auditor_addressee": "Kính gửi: Các cổ đông và Hội đồng quản trị {company}",
+  "notes": [
+   {
+    "title": "B09. Đặc điểm hoạt động và cơ sở lập báo cáo",
+    "paragraphs": [
+     "Công ty hoạt động trong lĩnh vực nhựa kỹ thuật, sản xuất chi tiết ép phun, ống dẫn và phụ kiện chịu hóa chất. Báo cáo được lập bằng đồng Việt Nam, trên cơ sở giá gốc và giả định Công ty tiếp tục hoạt động bình thường trong tương lai gần.",
+     "Các chính sách kế toán được áp dụng nhất quán với năm trước, ngoại trừ những thay đổi bắt buộc theo quy định mới có hiệu lực trong kỳ."
+    ],
+    "table": true
+   },
+   {
+    "title": "B10. Tiền và các khoản tương đương tiền",
+    "paragraphs": [
+     "Tiền của Công ty gồm tiền mặt tại quỹ và tiền gửi ngân hàng phục vụ mua nguyên liệu, trả lương và thanh toán khách hàng. Các khoản tương đương tiền là tiền gửi có kỳ hạn không quá ba tháng, có khả năng chuyển đổi dễ dàng thành tiền và ít rủi ro biến động giá trị.",
+     "Công ty đối chiếu số dư ngân hàng định kỳ với sao kê của các ngân hàng cung cấp dịch vụ thanh toán. Không có khoản tiền nào bị hạn chế sử dụng tại ngày kết thúc kỳ kế toán."
+    ],
+    "table": true
+   },
+   {
+    "title": "B11. Các khoản phải thu",
+    "paragraphs": [
+     "Phải thu khách hàng được ghi nhận theo giá trị có thể thu hồi. Công ty theo dõi công nợ theo từng đơn hàng và đánh giá tuổi nợ vào cuối kỳ. Dự phòng được lập cho các khoản có dấu hiệu suy giảm khả năng thu hồi sau khi xem xét lịch sử thanh toán, tài sản bảo đảm và trao đổi với khách hàng.",
+     "Phải thu khác chủ yếu là khoản hoàn ứng mua khuôn, tiền bồi hoàn vận chuyển và khoản ký quỹ nhỏ. Ban Tổng Giám đốc không nhận thấy khoản phải thu nào ngoài số đã trích lập có rủi ro trọng yếu."
+    ],
+    "table": true
+   },
+   {
+    "title": "B12. Hàng tồn kho",
+    "paragraphs": [
+     "Hàng tồn kho được ghi nhận theo giá thấp hơn giữa giá gốc và giá trị thuần có thể thực hiện. Giá gốc nguyên liệu, thành phẩm và sản phẩm dở dang được xác định theo phương pháp bình quân gia quyền. Chi phí sản xuất chung được phân bổ dựa trên công suất bình thường của dây chuyền ép phun.",
+     "Công ty lập dự phòng giảm giá cho hạt nhựa chậm luân chuyển, khuôn không còn phù hợp với đơn hàng và thành phẩm có giá bán dự kiến thấp hơn giá vốn. Hàng tồn kho được bảo quản tại kho nhà máy và kiểm kê cuối năm có sự tham gia của bộ phận sản xuất và kế toán."
+    ],
+    "table": true
+   },
+   {
+    "title": "B13. Tài sản cố định và chi phí dở dang",
+    "paragraphs": [
+     "Chi phí trả trước dài hạn được phân bổ đều theo thời hạn hưởng lợi, chủ yếu là phí bảo trì khuôn và phí thuê kho trả trước."
+    ],
+    "table": true
+   },
+   {
+    "title": "B14. Các khoản nợ phải trả",
+    "paragraphs": [
+     "Nợ phải trả được phân loại ngắn hạn khi Công ty có nghĩa vụ thanh toán trong vòng mười hai tháng kể từ ngày kết thúc kỳ kế toán. Phải trả người bán chủ yếu phát sinh từ việc mua hạt nhựa, phụ gia, bao bì và dịch vụ gia công khuôn.",
+     "Các khoản vay được bảo đảm bằng tài sản thuộc dây chuyền máy móc theo hợp đồng tín dụng. Công ty theo dõi riêng phần gốc và lãi phải trả, đồng thời đánh giá khả năng đáp ứng các nghĩa vụ thanh toán trong kế hoạch dòng tiền hàng tháng."
+    ],
+    "table": true
+   },
+   {
+    "title": "B15. Vốn chủ sở hữu",
+    "paragraphs": [
+     "Mỗi cổ phần có một quyền biểu quyết và quyền nhận cổ tức theo nghị quyết của Đại hội đồng cổ đông.",
+     "Lợi nhuận sau thuế chưa phân phối được sử dụng theo quyết định của Đại hội đồng cổ đông sau khi hoàn thành nghĩa vụ thuế và các nghĩa vụ tài chính khác."
+    ],
+    "table": true
+   },
+   {
+    "title": "B16. Doanh thu và giá vốn",
+    "paragraphs": [
+     "Doanh thu được ghi nhận khi sản phẩm đã được giao và khách hàng chấp nhận theo điều khoản hợp đồng, hoặc khi dịch vụ gia công đã hoàn thành. Doanh thu không bao gồm thuế giá trị gia tăng. Khoản giảm giá và hàng bán bị trả lại được ghi giảm doanh thu khi phát sinh và có đủ căn cứ.",
+     "Doanh thu năm {year} tăng nhờ nhóm chi tiết chống hóa chất và đơn hàng phụ kiện cho hệ thống xử lý nước. Giá vốn bao gồm nguyên liệu trực tiếp, nhân công trực tiếp, khấu hao máy móc và chi phí sản xuất chung được phân bổ hợp lý."
+    ],
+    "table": true
+   },
+   {
+    "title": "B17. Chi phí thuế thu nhập doanh nghiệp",
+    "paragraphs": [
+     "Chi phí thuế thu nhập doanh nghiệp hiện hành được tính trên thu nhập chịu thuế của năm theo thuế suất áp dụng cho Công ty. Công ty kê khai và nộp thuế theo quy định hiện hành, đồng thời đối chiếu số thuế phải nộp với hồ sơ quyết toán nội bộ trước khi phát hành báo cáo.",
+     "Thuế thu nhập hoãn lại được xác định trên các chênh lệch tạm thời giữa giá trị ghi sổ của tài sản, nợ phải trả và cơ sở tính thuế. Tại ngày kết thúc kỳ, Công ty ghi nhận khoản thuế hoãn lại phải trả liên quan đến chênh lệch khấu hao theo quy định."
+    ],
+    "table": true
+   },
+   {
+    "title": "B18. Giao dịch và sự kiện trọng yếu",
+    "paragraphs": [
+     "Công ty mua nguyên vật liệu từ nhiều nhà cung cấp trong nước; Doanh thu phân tán cho các khách hàng trong ngành cơ khí, điện tử và xử lý nước, nên Ban Tổng Giám đốc đánh giá rủi ro tập trung là ở mức có thể kiểm soát.",
+     "Đến ngày phát hành báo cáo, giao dịch chưa phát sinh nghĩa vụ thanh toán trọng yếu và không cần điều chỉnh số liệu năm {year}."
+    ],
+    "table": true
+   }
+  ]
+ }
+}

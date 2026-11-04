@@ -1,0 +1,122 @@
+{
+ "variables": {
+  "industry": "logistics",
+  "company_size": "small",
+  "fiscal_year": 2024
+ },
+ "source": "seed_132.json",
+ "values": {
+  "board_paragraph": [
+   "Công ty cung cấp dịch vụ gom hàng, giao nhận theo tuyến cố định và lưu giữ hàng nông sản đóng gói cho khách hàng trong vùng. Mạng lưới điều phối được xây dựng theo hướng linh hoạt, phục vụ cả chuyến nguyên xe và chuyến ghép.",
+   "Trong năm {year}, doanh nghiệp duy trì các tuyến nối vùng duyên hải với trung tâm phân phối phía Nam, đồng thời đưa vào sử dụng phần mềm theo dõi hành trình.",
+   "Kết quả này phản ánh nỗ lực điều phối phương tiện, thương lượng lịch giao và giám sát định mức nhiên liệu trong toàn bộ mạng lưới.",
+   "Công ty tiếp tục ưu tiên kiểm soát tải trọng, tiết kiệm nhiên liệu, đào tạo lái xe và nâng tỷ lệ giao hàng đúng hẹn.",
+   "Báo cáo tài chính năm {year} đã được kiểm toán bởi {auditor} theo hợp đồng ký trong năm. Các thành viên phụ trách từng mảng đã tham gia xem xét dự toán, rủi ro vận hành, chất lượng dịch vụ và việc thực hiện các chỉ tiêu tài chính trước khi báo cáo được phê duyệt.",
+   "Ban Tổng Giám đốc chịu trách nhiệm lập báo cáo tài chính trung thực, hợp lý, lựa chọn chính sách kế toán phù hợp và duy trì hệ thống kiểm soát cần thiết. Ban đã xem xét các khoản phải thu, nghĩa vụ thuế và khả năng hoạt động liên tục trước khi phê duyệt báo cáo.",
+   "Sau ngày kết thúc kỳ kế toán, Công ty không phát sinh sự kiện trọng yếu nào phải điều chỉnh hoặc công bố bổ sung."
+  ],
+  "auditor_paragraphs": [
+   "Ban Tổng Giám đốc chịu trách nhiệm lập và trình bày báo cáo tài chính theo khuôn khổ áp dụng, duy trì kiểm soát nội bộ cần thiết để bảo đảm báo cáo không có sai sót trọng yếu do gian lận hoặc nhầm lẫn, đồng thời đánh giá khả năng hoạt động liên tục của Công ty.",
+   "Trách nhiệm của chúng tôi là đưa ra ý kiến về báo cáo tài chính dựa trên kết quả kiểm toán. Chúng tôi đã thực hiện công việc theo các chuẩn mực kiểm toán Việt Nam; các chuẩn mực này yêu cầu tuân thủ đạo đức nghề nghiệp và lập kế hoạch, thực hiện thủ tục để đạt được sự đảm bảo hợp lý.",
+   "Cuộc kiểm toán bao gồm thực hiện các thủ tục nhằm thu thập bằng chứng về số liệu và thuyết minh. Việc lựa chọn thủ tục phụ thuộc vào xét đoán của kiểm toán viên, bao gồm đánh giá rủi ro sai sót trọng yếu. Chúng tôi cũng xem xét chính sách kế toán, ước tính kế toán và cách trình bày tổng thể.",
+   "Chúng tôi tin rằng bằng chứng kiểm toán thu thập được là đầy đủ và thích hợp làm cơ sở cho ý kiến kiểm toán không ngoại trừ nêu trên. Các xác nhận công nợ, kiểm kê tài sản và kiểm tra giao dịch ngân hàng đã được thực hiện theo kế hoạch đã thống nhất.",
+   "Ngoài các vấn đề đã trình bày trong báo cáo, chúng tôi không nhận thấy sự kiện nào sau ngày kết thúc kỳ kế toán cần điều chỉnh báo cáo tài chính. Báo cáo này được phát hành trên cơ sở thông tin và giải trình do Công ty cung cấp đến ngày ký."
+  ],
+  "board_title": "BÁO CÁO CỦA BAN TỔNG GIÁM ĐỐC",
+  "auditor_title": "BÁO CÁO KIỂM TOÁN ĐỘC LẬP",
+  "auditor_addressee": "Kính gửi các cổ đông và Hội đồng quản trị {company}",
+  "notes": [
+   {
+    "title": "2. Chính sách kế toán chủ yếu",
+    "paragraphs": [
+     "Doanh thu vận tải được ghi nhận khi dịch vụ hoàn thành theo biên bản giao nhận; doanh thu kho được phân bổ theo thời gian cung cấp dịch vụ."
+    ],
+    "table": true
+   },
+   {
+    "title": "3. Tiền và các khoản tương đương tiền",
+    "paragraphs": [
+     "Tiền bao gồm tiền mặt tại quỹ và tiền gửi ngân hàng không kỳ hạn. Các khoản tương đương tiền là tiền gửi có thời hạn gốc không quá ba tháng, có khả năng chuyển đổi dễ dàng thành tiền và ít rủi ro về thay đổi giá trị."
+    ],
+    "table": true
+   },
+   {
+    "title": "4. Đầu tư nắm giữ đến ngày đáo hạn",
+    "paragraphs": [
+     "Khoản đầu tư ngắn hạn là tiền gửi có kỳ hạn tại tổ chức tín dụng trong nước, thời hạn đáo hạn dưới mười hai tháng. Công ty đánh giá khoản này có khả năng thu hồi đầy đủ và không trích lập dự phòng."
+    ],
+    "table": true
+   },
+   {
+    "title": "5. Phải thu khách hàng",
+    "paragraphs": [
+     "Các khoản phải thu phát sinh chủ yếu từ dịch vụ vận tải đã hoàn thành. Ban Tổng Giám đốc thường xuyên đối chiếu công nợ và đánh giá khả năng thu hồi; dự phòng được ghi nhận cho số dư có dấu hiệu tổn thất."
+    ],
+    "table": true
+   },
+   {
+    "title": "6. Hàng tồn kho",
+    "paragraphs": [
+     "Hàng tồn kho gồm nhiên liệu, phụ tùng thay thế và vật tư đóng gói phục vụ khai thác. Hàng tồn kho được ghi nhận theo giá thấp hơn giữa giá gốc và giá trị thuần có thể thực hiện được."
+    ],
+    "table": true
+   },
+   {
+    "title": "7. Tài sản ngắn hạn khác",
+    "paragraphs": [
+     "Chi phí trả trước ngắn hạn chủ yếu là bảo hiểm phương tiện và phí phần mềm theo hợp đồng. Thuế giá trị gia tăng được khấu trừ được đối chiếu với hồ sơ kê khai định kỳ và không có khoản quá hạn đáng kể."
+    ],
+    "table": true
+   },
+   {
+    "title": "8. Tài sản cố định",
+    "paragraphs": [
+     "Tài sản cố định hữu hình chủ yếu là xe tải, đầu kéo, rơ-moóc và thiết bị kho. Nguyên giá và hao mòn lũy kế được theo dõi riêng cho từng nhóm tài sản; chi phí sửa chữa thường xuyên được ghi nhận vào kết quả kinh doanh."
+    ],
+    "table": true
+   },
+   {
+    "title": "9. Chi phí xây dựng cơ bản dở dang",
+    "paragraphs": [
+     "Chi phí dở dang là các khoản thiết kế và cải tạo khu vực tập kết hàng tại điểm gom mới. Công trình chưa đủ điều kiện đưa vào sử dụng tại ngày báo cáo nên chưa trích khấu hao. Công ty tiếp tục theo dõi riêng từng hạng mục."
+    ],
+    "table": true
+   },
+   {
+    "title": "10. Tài sản dài hạn khác",
+    "paragraphs": [
+     "Chi phí trả trước dài hạn gồm phí thuê kho trả trước và chi phí công cụ dụng cụ phân bổ cho nhiều kỳ. Các khoản này được phân bổ phù hợp với thời gian hưởng lợi kinh tế."
+    ],
+    "table": true
+   },
+   {
+    "title": "11. Nợ ngắn hạn",
+    "paragraphs": [
+     "Nợ ngắn hạn bao gồm phải trả nhà cung cấp nhiên liệu, lương và bảo hiểm phải trả, thuế phải nộp cùng các chi phí đã trích trước. Công ty không có khoản nợ quá hạn thanh toán trọng yếu tại ngày kết thúc kỳ kế toán."
+    ],
+    "table": true
+   },
+   {
+    "title": "12. Vay và nợ thuê tài chính",
+    "paragraphs": [
+     "Các khoản vay được dùng để đầu tư phương tiện và bổ sung vốn lưu động. Lãi suất được xác định theo từng hợp đồng và không có tài sản thế chấp phát sinh ngoài các phương tiện mua bằng vốn vay. Công ty tuân thủ các điều khoản thanh toán."
+    ],
+    "table": true
+   },
+   {
+    "title": "13. Vốn chủ sở hữu",
+    "paragraphs": [
+     "Lợi nhuận sau thuế chưa phân phối tăng trong năm sau khi trích quỹ đầu tư phát triển theo nghị quyết của Đại hội đồng cổ đông."
+    ],
+    "table": true
+   },
+   {
+    "title": "14. Doanh thu",
+    "paragraphs": [
+     "Doanh thu được ghi nhận khi nghĩa vụ cung cấp dịch vụ đã hoàn thành và khách hàng chấp nhận kết quả."
+    ],
+    "table": true
+   }
+  ]
+ }
+}

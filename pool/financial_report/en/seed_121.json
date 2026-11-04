@@ -1,0 +1,125 @@
+{
+  "variables": {
+    "industry": "chế biến thực phẩm",
+    "company_size": "small",
+    "fiscal_year": 2025
+  },
+  "source": "seed_121.json",
+  "values": {
+    "board_paragraph": [
+      "The Company operates a low-temperature drying workshop, a mixing line, and a packaging area that meet food safety and hygiene requirements.",
+      "The main products include dried banana slices, roasted lotus seeds, and instant cereal mixes. The Company's customers are clean food store chains, distributors in the Central region, and collective kitchens. In {year}, the Company added two wholesale channels and improved moisture-proof packaging.",
+      "Selling expenses increased due to market expansion, but gross profit margin improved thanks to reduced raw material losses.",
+      "The Company maintained short-term solvency, controlled inventory by expiration date, and had no overdue loans.",
+      "The investment plan was implemented in stages, in line with cash flow and raw material risk management capacity.",
+      "The Board of General Directors is responsible for preparing and fairly presenting the financial statements in accordance with the Vietnamese enterprise accounting regime. The Board maintained an appropriate internal control system, kept complete records, and assessed accounting estimates on a prudent basis.",
+      "No material events occurred after the end of the accounting period that require adjustment or additional disclosure other than those already stated in the notes. The Board of General Directors confirms that the Company will continue to operate normally in the near future."
+    ],
+    "auditor_paragraphs": [
+      "In the opinion of the Board of General Directors, the financial statements were prepared and presented in accordance with Vietnamese Accounting Standards, the Vietnamese enterprise accounting regime, and relevant legal regulations. The Board of General Directors is responsible for selecting appropriate accounting policies.",
+      "The responsibilities of the Board of General Directors include designing and maintaining the internal control necessary to ensure that the financial statements are free from material misstatement due to fraud or error, selecting reasonable estimates, and assessing the Company's ability to continue as a going concern.",
+      "Our responsibility is to express an opinion on the financial statements based on the results of our audit. We conducted our audit in accordance with Vietnamese Auditing Standards, complied with professional ethics requirements, and planned the audit to obtain reasonable assurance.",
+      "The audit work includes performing procedures to obtain evidence about the amounts and disclosures. The procedures selected depend on the auditor's judgment, including assessing the risks of material misstatement, considering relevant internal controls, and testing the basis of accounting estimates.",
+      "We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our audit opinion. The accounting policies applied are presented consistently, and material transactions have been recorded in accordance with the records provided by the Company.",
+      "{auditor} is responsible for the above opinion within the scope of the audit contract signed with the Company."
+    ],
+    "board_title": "REPORT OF THE BOARD OF GENERAL DIRECTORS",
+    "auditor_title": "INDEPENDENT AUDITOR'S REPORT",
+    "auditor_addressee": "To the Shareholders and the Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "1. Nature of Operations",
+        "paragraphs": [
+          "The Company operates in the processing and packaging of agricultural products. The currency used for recording is Vietnamese dong.",
+          "The products are mainly consumed domestically through distributors and clean food stores. The Company had no subsidiaries, joint ventures, or independent branches as at the reporting date."
+        ],
+        "table": true
+      },
+      {
+        "title": "2. Significant Accounting Policies",
+        "paragraphs": [
+          "The financial statements are prepared in accordance with the Vietnamese enterprise accounting regime and apply the perpetual inventory method to inventories. Revenue is recognized when the significant risks and rewards associated with the goods have been transferred to the customer, in accordance with the delivery terms.",
+          "Borrowing costs are recognized as expenses in the period, except for the portion eligible for capitalization in accordance with regulations."
+        ],
+        "table": true
+      },
+      {
+        "title": "3. Cash and Cash Equivalents",
+        "paragraphs": [
+          "The Company's cash includes cash on hand and demand deposits at commercial banks. Cash equivalents are deposits with original maturities of not more than three months and are readily convertible into cash."
+        ],
+        "table": true
+      },
+      {
+        "title": "4. Trade and Other Receivables",
+        "paragraphs": [
+          "Receivables are presented at carrying amount after deducting the allowance for doubtful debts. The Board of General Directors periodically assesses the aging, payment history, and financial capacity of each customer to determine an appropriate allowance.",
+          "As at the end of the accounting period, the Company had no receivables used as collateral for borrowing obligations."
+        ],
+        "table": true
+      },
+      {
+        "title": "5. Inventories",
+        "paragraphs": [
+          "Inventories comprise agricultural raw materials, packaging, work in progress, and finished goods. Inventories are recorded at the lower of cost and net realizable value. Cost includes purchase costs, processing costs, and other directly related costs.",
+          "During the year, the Company reviewed expiration dates and made a provision for certain slow-moving raw material lots."
+        ],
+        "table": true
+      },
+      {
+        "title": "6. Fixed Assets",
+        "paragraphs": [
+          "Tangible fixed assets mainly comprise factory buildings, dryers, mixing lines, and packaging equipment.",
+          "In {year}, the Company completed the installation of a new dryer and renovated the packaging area. The Board of General Directors did not identify any indicators of material impairment of assets as at the reporting date."
+        ],
+        "table": true
+      },
+      {
+        "title": "7. Liabilities and Borrowings",
+        "paragraphs": [
+          "Liabilities are recognized at the amounts payable. Borrowings are classified as short-term or long-term based on the remaining repayment period as at the end of the accounting period. The Company complied with the key terms of the credit agreements and had no breaches of payment obligations.",
+          "Long-term borrowings are partly secured by the right to use the factory and machinery under agreements with the bank. Interest rates on borrowings during the year fluctuated according to notices from the lender."
+        ],
+        "table": true
+      },
+      {
+        "title": "8. Owner's Equity",
+        "paragraphs": [
+          "Undistributed profit after tax is used to supplement working capital and to make fund appropriations in accordance with resolutions of the General Meeting of Shareholders."
+        ],
+        "table": true
+      },
+      {
+        "title": "9. Revenue and Cost of Goods Sold",
+        "paragraphs": [
+          "Net revenue for {year} is revenue from product sales after deducting discounts and returned goods. The Company recognizes revenue when the customer accepts the goods and control has been transferred. Cost of goods sold includes raw materials, direct labor, and allocated manufacturing overhead.",
+          "Revenue increased due to the sales volume of roasted lotus seeds and cereal mixes."
+        ],
+        "table": true
+      },
+      {
+        "title": "10. Expenses and Corporate Income Tax",
+        "paragraphs": [
+          "Selling expenses comprise transportation, promotion, commissions, and sales personnel expenses. General and administrative expenses comprise management personnel expenses, purchased services, depreciation, and administrative expenses. Expenses are recognized on the matching principle with revenue.",
+          "Current corporate income tax expense is calculated on taxable income at the prevailing tax rate. The Company has paid taxes incurred in accordance with notices from the tax authority and has no material tax disputes."
+        ],
+        "table": true
+      },
+      {
+        "title": "11. Related Party Transactions",
+        "paragraphs": [
+          "The Company's related parties include members of the Board of Directors, the Board of General Directors, and individuals with significant influence. In {year}, the Company had no related-party purchase or sale transactions other than remuneration and salaries under approved regulations.",
+          "Remuneration and benefits of the Board of General Directors are paid under labor contracts and resolutions of the Board of Directors. Period-end payables have no material balances other than salaries and short-term bonuses."
+        ],
+        "table": true
+      },
+      {
+        "title": "12. Commitments and Events after the End of the Accounting Period",
+        "paragraphs": [
+          "This commitment will be fulfilled in {next} from working capital and existing credit facilities."
+        ],
+        "table": true
+      }
+    ]
+  }
+}

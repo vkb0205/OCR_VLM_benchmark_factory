@@ -1,0 +1,1136 @@
+{
+  "values": {
+    "running_header": "CÔNG TY CỔ PHẦN BAO BÌ MÔ PHỎNG SAO LAM\nBáo cáo tài chính cho năm tài chính kết thúc ngày 31/12/2025",
+    "running_footer": "Các thuyết minh đính kèm là bộ phận hợp thành của báo cáo tài chính này",
+    "cover_logo": {
+      "description": "Biểu trưng hình lá cách điệu hai màu",
+      "motif": "leaf",
+      "colors": [
+        "#2f6b3f",
+        "#9cc5a1"
+      ]
+    },
+    "cover_company": "CÔNG TY CỔ PHẦN BAO BÌ MÔ PHỎNG SAO LAM",
+    "cover_period": "Cho năm tài chính kết thúc ngày 31/12/2025",
+    "cover_address": "Lô giả lập C2, khu công nghiệp mô phỏng Đồi Giấy, tỉnh Lam Sơn",
+    "cover_tax": "Mã số thuế: 0000412578",
+    "board_title": "BÁO CÁO CỦA BAN TỔNG GIÁM ĐỐC",
+    "board_paragraph": [
+      "Công ty Cổ phần Bao bì Mô phỏng Sao Lam hoạt động trong lĩnh vực sản xuất bao bì giấy, thùng carton và hộp in phục vụ khách hàng thực phẩm và hàng tiêu dùng. Công ty duy trì cơ sở sản xuất tại Đồi Giấy, tổ chức bán hàng theo hợp đồng và sử dụng đồng Việt Nam làm đơn vị tiền tệ kế toán.",
+      "Trong năm, Công ty tập trung nâng cao chất lượng sản phẩm và tiến độ giao hàng. Bộ phận sản xuất rà soát định mức sử dụng giấy, bố trí lịch bảo dưỡng và kiểm tra từng lô hàng trước khi xuất kho. Bộ phận kinh doanh phối hợp với khách hàng để dự báo nhu cầu, hạn chế tồn kho và ổn định đơn hàng.",
+      "Doanh thu thuần năm nay đạt 905,56 tỷ đồng, so với 840,78 tỷ đồng năm trước. Lợi nhuận sau thuế đạt 37,69 tỷ đồng, tăng từ mức 30,38 tỷ đồng. Kết quả phản ánh sự cải thiện cơ cấu sản phẩm và việc kiểm soát chi phí. Ban Tổng Giám đốc tiếp tục theo dõi giá nguyên liệu cùng khả năng thu hồi công nợ.",
+      "Tại cuối năm, tổng tài sản đạt 613,40 tỷ đồng và vốn chủ sở hữu đạt 336,96 tỷ đồng. Tiền và tương đương tiền là 52,43 tỷ đồng. Công ty kiểm tra lịch thanh toán nợ vay và nhu cầu vốn lưu động theo tháng. Chính sách tín dụng được rà soát định kỳ để cân đối khả năng thanh toán với kế hoạch sản xuất.",
+      "Trong năm tới, Công ty dự kiến ưu tiên khách hàng hiện hữu và các sản phẩm có yêu cầu chất lượng ổn định. Kế hoạch đầu tư được xem xét trên cơ sở dòng tiền và hiệu quả sử dụng thiết bị. Ban điều hành duy trì phương án ứng phó khi giá giấy biến động, đồng thời cải tiến quản lý năng lượng và chất lượng.",
+      "Hội đồng quản trị và Ban Tổng Giám đốc thực hiện nhiệm vụ theo phân công, với thông tin thành viên được trình bày tại bảng quản trị. Các cuộc họp xem xét kết quả kinh doanh và những rủi ro trọng yếu. Đơn vị kiểm toán độc lập thực hiện kiểm toán báo cáo tài chính; trách nhiệm và ý kiến được nêu trong báo cáo kiểm toán.",
+      "Ban Tổng Giám đốc chịu trách nhiệm lập báo cáo tài chính phản ánh trung thực và hợp lý tình hình tài chính, kết quả kinh doanh và lưu chuyển tiền tệ. Công ty áp dụng chính sách kế toán nhất quán, lập các ước tính thận trọng và duy trì hồ sơ. Ban điều hành cũng chịu trách nhiệm kiểm soát nội bộ và bảo vệ tài sản.",
+      "Từ ngày kết thúc năm tài chính đến ngày phê duyệt báo cáo, Ban Tổng Giám đốc đã rà soát các giao dịch và sự kiện liên quan. Không có sự kiện trọng yếu cần điều chỉnh số liệu hoặc thuyết minh bổ sung. Báo cáo được lập trên giả định hoạt động liên tục, có xét đến kế hoạch dòng tiền và các nghĩa vụ thanh toán."
+    ],
+    "directors_caption": "Thành viên Hội đồng Quản trị và Ban Tổng Giám đốc trong năm",
+    "directors_table": {
+      "header": [
+        "Họ và tên",
+        "Chức vụ",
+        "Ngày bổ nhiệm"
+      ],
+      "rows": [
+        [
+          "Ông Trần Mộc Lâm",
+          "Chủ tịch HĐQT",
+          "15/04/2019"
+        ],
+        [
+          "Bà Nguyễn Giấy Hạnh",
+          "Thành viên HĐQT",
+          "15/04/2019"
+        ],
+        [
+          "Ông Lê Sóng Bình",
+          "Tổng Giám đốc",
+          "02/01/2021"
+        ],
+        [
+          "Bà Phạm Lam Thư",
+          "Phó Tổng Giám đốc",
+          "10/06/2022"
+        ],
+        [
+          "Ông Đỗ Carton Minh",
+          "Kế toán trưởng",
+          "01/03/2020"
+        ]
+      ]
+    },
+    "revenue_chart": {
+      "chart_type": "bar",
+      "labels": [
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "unit": "tỷ đồng",
+      "series": [
+        {
+          "name": "Doanh thu thuần",
+          "values": [
+            702,
+            768,
+            801,
+            841,
+            906
+          ]
+        },
+        {
+          "name": "Lợi nhuận sau thuế",
+          "values": [
+            19,
+            21,
+            22,
+            24,
+            29
+          ]
+        }
+      ]
+    },
+    "revenue_chart_caption": "Biểu đồ 1. Doanh thu thuần và lợi nhuận sau thuế 2021–2025 (tỷ đồng)",
+    "B01_date": "Tại ngày 31 tháng 12 năm 2025",
+    "B01_table": {
+      "rows": [
+        {
+          "code": "111",
+          "values": [
+            12430000000,
+            9870000000
+          ],
+          "note": "V.00"
+        },
+        {
+          "code": "112",
+          "values": [
+            40000000000,
+            25000000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "121",
+          "values": [
+            5200000000,
+            4100000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "122",
+          "values": [
+            -640000000,
+            -380000000
+          ],
+          "note": "V.03"
+        },
+        {
+          "code": "123",
+          "values": [
+            18000000000,
+            12000000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "131",
+          "values": [
+            96540000000,
+            88210000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "132",
+          "values": [
+            7330000000,
+            5900000000
+          ],
+          "note": "V.06"
+        },
+        {
+          "code": "136",
+          "values": [
+            3120000000,
+            2870000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "137",
+          "values": [
+            -1450000000,
+            -1200000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "141",
+          "values": [
+            134870000000,
+            121430000000
+          ],
+          "note": "V.09"
+        },
+        {
+          "code": "149",
+          "values": [
+            -2310000000,
+            -1980000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "151",
+          "values": [
+            1870000000,
+            1420000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "152",
+          "values": [
+            4560000000,
+            3980000000
+          ],
+          "note": "V.12"
+        },
+        {
+          "code": "153",
+          "values": [
+            320000000,
+            410000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "211",
+          "values": [
+            2400000000,
+            2400000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "216",
+          "values": [
+            1150000000,
+            980000000
+          ],
+          "note": "V.15"
+        },
+        {
+          "code": "222",
+          "values": [
+            412300000000,
+            389700000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "223",
+          "values": [
+            -188420000000,
+            -161330000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "228",
+          "values": [
+            14800000000,
+            13900000000
+          ],
+          "note": "V.18"
+        },
+        {
+          "code": "229",
+          "values": [
+            -6120000000,
+            -4870000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "242",
+          "values": [
+            21340000000,
+            8760000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "252",
+          "values": [
+            26000000000,
+            26000000000
+          ],
+          "note": "V.21"
+        },
+        {
+          "code": "253",
+          "values": [
+            4500000000,
+            4500000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "254",
+          "values": [
+            -900000000,
+            -700000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "261",
+          "values": [
+            5640000000,
+            6210000000
+          ],
+          "note": "V.24"
+        },
+        {
+          "code": "262",
+          "values": [
+            870000000,
+            760000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "311",
+          "values": [
+            72340000000,
+            65870000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "312",
+          "values": [
+            5430000000,
+            4120000000
+          ],
+          "note": "V.27"
+        },
+        {
+          "code": "313",
+          "values": [
+            8760000000,
+            7340000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "314",
+          "values": [
+            6870000000,
+            6120000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "315",
+          "values": [
+            3210000000,
+            2980000000
+          ],
+          "note": "V.30"
+        },
+        {
+          "code": "319",
+          "values": [
+            2140000000,
+            1870000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "320",
+          "values": [
+            98760000000,
+            92430000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "331",
+          "values": [
+            3400000000,
+            2800000000
+          ],
+          "note": "V.33"
+        },
+        {
+          "code": "338",
+          "values": [
+            74300000000,
+            81200000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "341",
+          "values": [
+            1230000000,
+            1090000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "411",
+          "values": [
+            250000000000,
+            250000000000
+          ],
+          "note": "V.36"
+        },
+        {
+          "code": "412",
+          "values": [
+            18400000000,
+            18400000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "418",
+          "values": [
+            21760000000,
+            17430000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "421b",
+          "values": [
+            28640000000,
+            24310000000
+          ],
+          "note": "V.39"
+        }
+      ]
+    },
+    "B02_date": "Cho năm tài chính kết thúc ngày 31/12/2025",
+    "B02_table": {
+      "rows": [
+        {
+          "code": "01",
+          "values": [
+            912430000000,
+            846210000000
+          ],
+          "note": "V.00"
+        },
+        {
+          "code": "02",
+          "values": [
+            6870000000,
+            5430000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "11",
+          "values": [
+            741230000000,
+            690870000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "21",
+          "values": [
+            3870000000,
+            2980000000
+          ],
+          "note": "V.03"
+        },
+        {
+          "code": "22",
+          "values": [
+            11430000000,
+            12870000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "23",
+          "values": [
+            9870000000,
+            11240000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "25",
+          "values": [
+            62340000000,
+            57870000000
+          ],
+          "note": "V.06"
+        },
+        {
+          "code": "26",
+          "values": [
+            48760000000,
+            44320000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "31",
+          "values": [
+            1870000000,
+            1430000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "32",
+          "values": [
+            640000000,
+            870000000
+          ],
+          "note": "V.09"
+        },
+        {
+          "code": "51",
+          "values": [
+            9420000000,
+            7860000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "52",
+          "values": [
+            -210000000,
+            150000000
+          ],
+          "note": ""
+        },
+        {
+          "code": "70",
+          "values": [
+            1146,
+            973
+          ],
+          "note": "V.12"
+        }
+      ]
+    },
+    "signature_date": "Tỉnh Lam Sơn, ngày 18 tháng 03 năm 2026",
+    "signer_1_name": "Vũ Thị Mây",
+    "signer_2_name": "Đỗ Carton Minh",
+    "signer_3_name": "Lê Sóng Bình",
+    "company_seal": {
+      "text": "CÔNG TY CP BAO BÌ SAO LAM"
+    },
+    "auditor_title": "BÁO CÁO KIỂM TOÁN ĐỘC LẬP",
+    "auditor_addressee": "Kính gửi: Các cổ đông và Hội đồng quản trị Công Ty Cổ Phần Bao Bì Mô Phỏng Sao Lam",
+    "auditor_firm": "CÔNG TY KIỂM TOÁN LAM SƠN AN VIỆT",
+    "auditor_seal": {
+      "text": "KIỂM TOÁN AN VIỆT"
+    },
+    "auditor_date": "Thành phố Mô Phỏng, ngày 25 tháng 3 năm 2026",
+    "B03_date": "Cho năm tài chính kết thúc ngày 31/12/2025",
+    "auditor_paragraphs": [
+      "Chúng tôi đã kiểm toán báo cáo tài chính kèm theo của Công ty Cổ phần Bao bì Mô phỏng Sao Lam, bao gồm bảng cân đối kế toán tại ngày 31 tháng 12 năm 2025, báo cáo kết quả hoạt động kinh doanh, báo cáo lưu chuyển tiền tệ và bản thuyết minh báo cáo tài chính cho năm tài chính kết thúc cùng ngày. Các số liệu trình bày trong bộ báo cáo này là dữ liệu giả lập phục vụ nghiên cứu.",
+      "Ban Tổng Giám đốc chịu trách nhiệm về việc lập và trình bày trung thực, hợp lý báo cáo tài chính theo chuẩn mực kế toán Việt Nam, chế độ kế toán doanh nghiệp và các quy định có liên quan. Trách nhiệm này bao gồm việc thiết kế, thực hiện và duy trì hệ thống kiểm soát nội bộ cần thiết để bảo đảm báo cáo tài chính không còn sai sót trọng yếu do gian lận hoặc nhầm lẫn.",
+      "Trách nhiệm của chúng tôi là đưa ra ý kiến về báo cáo tài chính dựa trên kết quả kiểm toán. Công việc được thực hiện theo các chuẩn mực kiểm toán Việt Nam. Các chuẩn mực yêu cầu chúng tôi tuân thủ quy định về đạo đức nghề nghiệp, lập kế hoạch và thực hiện cuộc kiểm toán để đạt được sự bảo đảm hợp lý về việc báo cáo tài chính không còn sai sót trọng yếu.",
+      "Cuộc kiểm toán bao gồm thực hiện các thủ tục nhằm thu thập bằng chứng về số liệu và thuyết minh trên báo cáo tài chính. Các thủ tục được lựa chọn dựa trên xét đoán của kiểm toán viên và đánh giá rủi ro có sai sót trọng yếu. Chúng tôi cũng đánh giá tính phù hợp của chính sách kế toán, tính hợp lý của các ước tính và cách trình bày tổng thể báo cáo tài chính.",
+      "Chúng tôi tin tưởng rằng các bằng chứng kiểm toán đã thu thập là đầy đủ và thích hợp để làm cơ sở cho ý kiến kiểm toán. Việc xem xét hệ thống kiểm soát nội bộ chỉ nhằm thiết kế các thủ tục kiểm toán phù hợp trong từng hoàn cảnh. Công việc này không nhằm mục đích đưa ra ý kiến riêng về tính hữu hiệu của hệ thống kiểm soát nội bộ của Công ty.",
+      "Theo ý kiến của chúng tôi, báo cáo tài chính đã phản ánh trung thực và hợp lý, trên các khía cạnh trọng yếu, tình hình tài chính của Công ty tại ngày 31 tháng 12 năm 2025, kết quả hoạt động kinh doanh và lưu chuyển tiền tệ cho năm tài chính kết thúc cùng ngày, phù hợp với chuẩn mực kế toán Việt Nam và chế độ kế toán doanh nghiệp đang áp dụng."
+    ],
+    "B03_table": {
+      "rows": [
+        {
+          "code": "01",
+          "values": [
+            46900000000,
+            38390000000
+          ]
+        },
+        {
+          "code": "02",
+          "values": [
+            4200000000,
+            3570000000
+          ]
+        },
+        {
+          "code": "03",
+          "values": [
+            350000000,
+            297500000
+          ]
+        },
+        {
+          "code": "04",
+          "values": [
+            -120000000,
+            -102000000
+          ]
+        },
+        {
+          "code": "05",
+          "values": [
+            -250000000,
+            -212500000
+          ]
+        },
+        {
+          "code": "06",
+          "values": [
+            900000000,
+            765000000
+          ]
+        },
+        {
+          "code": "07",
+          "values": [
+            100000000,
+            85000000
+          ]
+        },
+        {
+          "code": "09",
+          "values": [
+            -12000000000,
+            -13000000000
+          ]
+        },
+        {
+          "code": "10",
+          "values": [
+            -9000000000,
+            -8000000000
+          ]
+        },
+        {
+          "code": "11",
+          "values": [
+            2400000000,
+            2040000000
+          ]
+        },
+        {
+          "code": "12",
+          "values": [
+            -200000000,
+            -170000000
+          ]
+        },
+        {
+          "code": "13",
+          "values": [
+            0,
+            0
+          ]
+        },
+        {
+          "code": "14",
+          "values": [
+            -900000000,
+            -765000000
+          ]
+        },
+        {
+          "code": "15",
+          "values": [
+            -9000000000,
+            -7500000000
+          ]
+        },
+        {
+          "code": "16",
+          "values": [
+            250000000,
+            212500000
+          ]
+        },
+        {
+          "code": "17",
+          "values": [
+            -300000000,
+            -255000000
+          ]
+        },
+        {
+          "code": "21",
+          "values": [
+            -5200000000,
+            -8186000000
+          ]
+        },
+        {
+          "code": "22",
+          "values": [
+            250000000,
+            212500000
+          ]
+        },
+        {
+          "code": "23",
+          "values": [
+            -800000000,
+            -680000000
+          ]
+        },
+        {
+          "code": "24",
+          "values": [
+            400000000,
+            340000000
+          ]
+        },
+        {
+          "code": "25",
+          "values": [
+            -1200000000,
+            -1020000000
+          ]
+        },
+        {
+          "code": "26",
+          "values": [
+            300000000,
+            255000000
+          ]
+        },
+        {
+          "code": "27",
+          "values": [
+            250000000,
+            212500000
+          ]
+        },
+        {
+          "code": "31",
+          "values": [
+            0,
+            0
+          ]
+        },
+        {
+          "code": "32",
+          "values": [
+            0,
+            0
+          ]
+        },
+        {
+          "code": "33",
+          "values": [
+            9000000000,
+            7650000000
+          ]
+        },
+        {
+          "code": "34",
+          "values": [
+            -7000000000,
+            -5950000000
+          ]
+        },
+        {
+          "code": "35",
+          "values": [
+            -200000000,
+            -170000000
+          ]
+        },
+        {
+          "code": "36",
+          "values": [
+            -1500000000,
+            -1275000000
+          ]
+        },
+        {
+          "code": "60",
+          "values": [
+            34870000000,
+            28000000000
+          ]
+        },
+        {
+          "code": "61",
+          "values": [
+            30000000,
+            25500000
+          ]
+        }
+      ]
+    },
+    "notes": [
+      {
+        "title": "01. Đặc điểm hoạt động của doanh nghiệp",
+        "paragraphs": [
+          "Báo cáo tài chính được lập trên cơ sở giá gốc và giả định hoạt động liên tục. Đơn vị tiền tệ sử dụng trong kế toán là đồng Việt Nam. Các chính sách được áp dụng nhất quán giữa các kỳ kế toán. Ban Tổng Giám đốc thường xuyên xem xét các ước tính và đánh giá để bảo đảm số liệu phản ánh phù hợp tình hình hoạt động thực tế của doanh nghiệp.",
+          "Số dư cuối năm đã được đối chiếu với sổ chi tiết và hồ sơ liên quan. Công ty thực hiện phân loại tài sản và nợ phải trả theo thời hạn thu hồi hoặc thanh toán dự kiến. Các giao dịch phát sinh được ghi nhận khi đáp ứng đầy đủ điều kiện theo chính sách kế toán. Thông tin so sánh được trình bày thống nhất để người đọc thuận tiện theo dõi biến động trong năm."
+        ],
+        "table": null
+      },
+      {
+        "title": "02. Chính sách kế toán chủ yếu",
+        "paragraphs": [
+          "Báo cáo tài chính được lập trên cơ sở giá gốc và giả định hoạt động liên tục. Đơn vị tiền tệ sử dụng trong kế toán là đồng Việt Nam. Các chính sách được áp dụng nhất quán giữa các kỳ kế toán. Ban Tổng Giám đốc thường xuyên xem xét các ước tính và đánh giá để bảo đảm số liệu phản ánh phù hợp tình hình hoạt động thực tế của doanh nghiệp.",
+          "Số dư cuối năm đã được đối chiếu với sổ chi tiết và hồ sơ liên quan. Công ty thực hiện phân loại tài sản và nợ phải trả theo thời hạn thu hồi hoặc thanh toán dự kiến. Các giao dịch phát sinh được ghi nhận khi đáp ứng đầy đủ điều kiện theo chính sách kế toán. Thông tin so sánh được trình bày thống nhất để người đọc thuận tiện theo dõi biến động trong năm."
+        ],
+        "table": {
+          "header": [
+            "Khoản mục",
+            "Cuối năm",
+            "Đầu năm"
+          ],
+          "rows": [
+            [
+              "Số dư đầu kỳ",
+              "375.000.000",
+              "330.000.000"
+            ],
+            [
+              "Tăng trong kỳ",
+              "500.000.000",
+              "440.000.000"
+            ],
+            [
+              "Giảm trong kỳ",
+              "625.000.000",
+              "550.000.000"
+            ],
+            [
+              "Số dư cuối kỳ",
+              "750.000.000",
+              "660.000.000"
+            ]
+          ]
+        }
+      },
+      {
+        "title": "03. Tiền và các khoản tương đương tiền",
+        "paragraphs": [
+          "Báo cáo tài chính được lập trên cơ sở giá gốc và giả định hoạt động liên tục. Đơn vị tiền tệ sử dụng trong kế toán là đồng Việt Nam. Các chính sách được áp dụng nhất quán giữa các kỳ kế toán. Ban Tổng Giám đốc thường xuyên xem xét các ước tính và đánh giá để bảo đảm số liệu phản ánh phù hợp tình hình hoạt động thực tế của doanh nghiệp.",
+          "Số dư cuối năm đã được đối chiếu với sổ chi tiết và hồ sơ liên quan. Công ty thực hiện phân loại tài sản và nợ phải trả theo thời hạn thu hồi hoặc thanh toán dự kiến. Các giao dịch phát sinh được ghi nhận khi đáp ứng đầy đủ điều kiện theo chính sách kế toán. Thông tin so sánh được trình bày thống nhất để người đọc thuận tiện theo dõi biến động trong năm."
+        ],
+        "table": {
+          "header": [
+            "Khoản mục",
+            "Cuối năm",
+            "Đầu năm"
+          ],
+          "rows": [
+            [
+              "Số dư đầu kỳ",
+              "500.000.000",
+              "440.000.000"
+            ],
+            [
+              "Tăng trong kỳ",
+              "625.000.000",
+              "550.000.000"
+            ],
+            [
+              "Giảm trong kỳ",
+              "750.000.000",
+              "660.000.000"
+            ],
+            [
+              "Số dư cuối kỳ",
+              "875.000.000",
+              "770.000.000"
+            ]
+          ]
+        }
+      },
+      {
+        "title": "04. Các khoản phải thu khách hàng",
+        "paragraphs": [
+          "Báo cáo tài chính được lập trên cơ sở giá gốc và giả định hoạt động liên tục. Đơn vị tiền tệ sử dụng trong kế toán là đồng Việt Nam. Các chính sách được áp dụng nhất quán giữa các kỳ kế toán. Ban Tổng Giám đốc thường xuyên xem xét các ước tính và đánh giá để bảo đảm số liệu phản ánh phù hợp tình hình hoạt động thực tế của doanh nghiệp.",
+          "Số dư cuối năm đã được đối chiếu với sổ chi tiết và hồ sơ liên quan. Công ty thực hiện phân loại tài sản và nợ phải trả theo thời hạn thu hồi hoặc thanh toán dự kiến. Các giao dịch phát sinh được ghi nhận khi đáp ứng đầy đủ điều kiện theo chính sách kế toán. Thông tin so sánh được trình bày thống nhất để người đọc thuận tiện theo dõi biến động trong năm."
+        ],
+        "table": {
+          "header": [
+            "Khoản mục",
+            "Cuối năm",
+            "Đầu năm"
+          ],
+          "rows": [
+            [
+              "Số dư đầu kỳ",
+              "625.000.000",
+              "550.000.000"
+            ],
+            [
+              "Tăng trong kỳ",
+              "750.000.000",
+              "660.000.000"
+            ],
+            [
+              "Giảm trong kỳ",
+              "875.000.000",
+              "770.000.000"
+            ],
+            [
+              "Số dư cuối kỳ",
+              "1000.000.000",
+              "880.000.000"
+            ]
+          ]
+        }
+      },
+      {
+        "title": "05. Hàng tồn kho",
+        "paragraphs": [
+          "Báo cáo tài chính được lập trên cơ sở giá gốc và giả định hoạt động liên tục. Đơn vị tiền tệ sử dụng trong kế toán là đồng Việt Nam. Các chính sách được áp dụng nhất quán giữa các kỳ kế toán. Ban Tổng Giám đốc thường xuyên xem xét các ước tính và đánh giá để bảo đảm số liệu phản ánh phù hợp tình hình hoạt động thực tế của doanh nghiệp.",
+          "Số dư cuối năm đã được đối chiếu với sổ chi tiết và hồ sơ liên quan. Công ty thực hiện phân loại tài sản và nợ phải trả theo thời hạn thu hồi hoặc thanh toán dự kiến. Các giao dịch phát sinh được ghi nhận khi đáp ứng đầy đủ điều kiện theo chính sách kế toán. Thông tin so sánh được trình bày thống nhất để người đọc thuận tiện theo dõi biến động trong năm."
+        ],
+        "table": {
+          "header": [
+            "Khoản mục",
+            "Cuối năm",
+            "Đầu năm"
+          ],
+          "rows": [
+            [
+              "Số dư đầu kỳ",
+              "750.000.000",
+              "660.000.000"
+            ],
+            [
+              "Tăng trong kỳ",
+              "875.000.000",
+              "770.000.000"
+            ],
+            [
+              "Giảm trong kỳ",
+              "1000.000.000",
+              "880.000.000"
+            ],
+            [
+              "Số dư cuối kỳ",
+              "1125.000.000",
+              "990.000.000"
+            ]
+          ]
+        }
+      },
+      {
+        "title": "06. Tài sản cố định hữu hình",
+        "paragraphs": [
+          "Báo cáo tài chính được lập trên cơ sở giá gốc và giả định hoạt động liên tục. Đơn vị tiền tệ sử dụng trong kế toán là đồng Việt Nam. Các chính sách được áp dụng nhất quán giữa các kỳ kế toán. Ban Tổng Giám đốc thường xuyên xem xét các ước tính và đánh giá để bảo đảm số liệu phản ánh phù hợp tình hình hoạt động thực tế của doanh nghiệp.",
+          "Số dư cuối năm đã được đối chiếu với sổ chi tiết và hồ sơ liên quan. Công ty thực hiện phân loại tài sản và nợ phải trả theo thời hạn thu hồi hoặc thanh toán dự kiến. Các giao dịch phát sinh được ghi nhận khi đáp ứng đầy đủ điều kiện theo chính sách kế toán. Thông tin so sánh được trình bày thống nhất để người đọc thuận tiện theo dõi biến động trong năm."
+        ],
+        "table": {
+          "header": [
+            "Khoản mục",
+            "Cuối năm",
+            "Đầu năm"
+          ],
+          "rows": [
+            [
+              "Số dư đầu kỳ",
+              "875.000.000",
+              "770.000.000"
+            ],
+            [
+              "Tăng trong kỳ",
+              "1000.000.000",
+              "880.000.000"
+            ],
+            [
+              "Giảm trong kỳ",
+              "1125.000.000",
+              "990.000.000"
+            ],
+            [
+              "Số dư cuối kỳ",
+              "1250.000.000",
+              "1100.000.000"
+            ]
+          ]
+        }
+      },
+      {
+        "title": "07. Vay và nợ thuê tài chính",
+        "paragraphs": [
+          "Báo cáo tài chính được lập trên cơ sở giá gốc và giả định hoạt động liên tục. Đơn vị tiền tệ sử dụng trong kế toán là đồng Việt Nam. Các chính sách được áp dụng nhất quán giữa các kỳ kế toán. Ban Tổng Giám đốc thường xuyên xem xét các ước tính và đánh giá để bảo đảm số liệu phản ánh phù hợp tình hình hoạt động thực tế của doanh nghiệp.",
+          "Số dư cuối năm đã được đối chiếu với sổ chi tiết và hồ sơ liên quan. Công ty thực hiện phân loại tài sản và nợ phải trả theo thời hạn thu hồi hoặc thanh toán dự kiến. Các giao dịch phát sinh được ghi nhận khi đáp ứng đầy đủ điều kiện theo chính sách kế toán. Thông tin so sánh được trình bày thống nhất để người đọc thuận tiện theo dõi biến động trong năm."
+        ],
+        "table": {
+          "header": [
+            "Khoản mục",
+            "Cuối năm",
+            "Đầu năm"
+          ],
+          "rows": [
+            [
+              "Số dư đầu kỳ",
+              "1000.000.000",
+              "880.000.000"
+            ],
+            [
+              "Tăng trong kỳ",
+              "1125.000.000",
+              "990.000.000"
+            ],
+            [
+              "Giảm trong kỳ",
+              "1250.000.000",
+              "1100.000.000"
+            ],
+            [
+              "Số dư cuối kỳ",
+              "1375.000.000",
+              "1210.000.000"
+            ]
+          ]
+        }
+      },
+      {
+        "title": "08. Vốn chủ sở hữu",
+        "paragraphs": [
+          "Báo cáo tài chính được lập trên cơ sở giá gốc và giả định hoạt động liên tục. Đơn vị tiền tệ sử dụng trong kế toán là đồng Việt Nam. Các chính sách được áp dụng nhất quán giữa các kỳ kế toán. Ban Tổng Giám đốc thường xuyên xem xét các ước tính và đánh giá để bảo đảm số liệu phản ánh phù hợp tình hình hoạt động thực tế của doanh nghiệp.",
+          "Số dư cuối năm đã được đối chiếu với sổ chi tiết và hồ sơ liên quan. Công ty thực hiện phân loại tài sản và nợ phải trả theo thời hạn thu hồi hoặc thanh toán dự kiến. Các giao dịch phát sinh được ghi nhận khi đáp ứng đầy đủ điều kiện theo chính sách kế toán. Thông tin so sánh được trình bày thống nhất để người đọc thuận tiện theo dõi biến động trong năm."
+        ],
+        "table": {
+          "header": [
+            "Khoản mục",
+            "Cuối năm",
+            "Đầu năm"
+          ],
+          "rows": [
+            [
+              "Số dư đầu kỳ",
+              "1125.000.000",
+              "990.000.000"
+            ],
+            [
+              "Tăng trong kỳ",
+              "1250.000.000",
+              "1100.000.000"
+            ],
+            [
+              "Giảm trong kỳ",
+              "1375.000.000",
+              "1210.000.000"
+            ],
+            [
+              "Số dư cuối kỳ",
+              "1500.000.000",
+              "1320.000.000"
+            ]
+          ]
+        }
+      },
+      {
+        "title": "09. Doanh thu bán hàng và cung cấp dịch vụ",
+        "paragraphs": [
+          "Báo cáo tài chính được lập trên cơ sở giá gốc và giả định hoạt động liên tục. Đơn vị tiền tệ sử dụng trong kế toán là đồng Việt Nam. Các chính sách được áp dụng nhất quán giữa các kỳ kế toán. Ban Tổng Giám đốc thường xuyên xem xét các ước tính và đánh giá để bảo đảm số liệu phản ánh phù hợp tình hình hoạt động thực tế của doanh nghiệp.",
+          "Số dư cuối năm đã được đối chiếu với sổ chi tiết và hồ sơ liên quan. Công ty thực hiện phân loại tài sản và nợ phải trả theo thời hạn thu hồi hoặc thanh toán dự kiến. Các giao dịch phát sinh được ghi nhận khi đáp ứng đầy đủ điều kiện theo chính sách kế toán. Thông tin so sánh được trình bày thống nhất để người đọc thuận tiện theo dõi biến động trong năm."
+        ],
+        "table": {
+          "header": [
+            "Khoản mục",
+            "Cuối năm",
+            "Đầu năm"
+          ],
+          "rows": [
+            [
+              "Số dư đầu kỳ",
+              "1250.000.000",
+              "1100.000.000"
+            ],
+            [
+              "Tăng trong kỳ",
+              "1375.000.000",
+              "1210.000.000"
+            ],
+            [
+              "Giảm trong kỳ",
+              "1500.000.000",
+              "1320.000.000"
+            ],
+            [
+              "Số dư cuối kỳ",
+              "1625.000.000",
+              "1430.000.000"
+            ]
+          ]
+        }
+      },
+      {
+        "title": "10. Chi phí và nghĩa vụ thuế",
+        "paragraphs": [
+          "Báo cáo tài chính được lập trên cơ sở giá gốc và giả định hoạt động liên tục. Đơn vị tiền tệ sử dụng trong kế toán là đồng Việt Nam. Các chính sách được áp dụng nhất quán giữa các kỳ kế toán. Ban Tổng Giám đốc thường xuyên xem xét các ước tính và đánh giá để bảo đảm số liệu phản ánh phù hợp tình hình hoạt động thực tế của doanh nghiệp.",
+          "Số dư cuối năm đã được đối chiếu với sổ chi tiết và hồ sơ liên quan. Công ty thực hiện phân loại tài sản và nợ phải trả theo thời hạn thu hồi hoặc thanh toán dự kiến. Các giao dịch phát sinh được ghi nhận khi đáp ứng đầy đủ điều kiện theo chính sách kế toán. Thông tin so sánh được trình bày thống nhất để người đọc thuận tiện theo dõi biến động trong năm."
+        ],
+        "table": {
+          "header": [
+            "Khoản mục",
+            "Cuối năm",
+            "Đầu năm"
+          ],
+          "rows": [
+            [
+              "Số dư đầu kỳ",
+              "1375.000.000",
+              "1210.000.000"
+            ],
+            [
+              "Tăng trong kỳ",
+              "1500.000.000",
+              "1320.000.000"
+            ],
+            [
+              "Giảm trong kỳ",
+              "1625.000.000",
+              "1430.000.000"
+            ],
+            [
+              "Số dư cuối kỳ",
+              "1750.000.000",
+              "1540.000.000"
+            ]
+          ]
+        }
+      }
+    ],
+    "kpis": [
+      {
+        "label": "Doanh thu thuần",
+        "value": 0,
+        "unit": "VND",
+        "source": "B02.10"
+      },
+      {
+        "label": "Lợi nhuận sau thuế",
+        "value": 0,
+        "unit": "VND",
+        "source": "B02.60"
+      },
+      {
+        "label": "Tổng tài sản",
+        "value": 0,
+        "unit": "VND",
+        "source": "B01.270"
+      },
+      {
+        "label": "Vốn chủ sở hữu",
+        "value": 0,
+        "unit": "VND",
+        "source": "B01.400"
+      }
+    ]
+  }
+}

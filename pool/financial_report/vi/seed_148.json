@@ -1,0 +1,126 @@
+{
+ "variables": {
+  "industry": "logistics",
+  "company_size": "large",
+  "fiscal_year": 2025
+ },
+ "source": "seed_148.json",
+ "values": {
+  "board_paragraph": [
+   "doanh nghiệp vận hành đội xe đầu kéo, xe tải thùng và hệ thống kho đa nhiệt độ tại ba vùng kinh tế.",
+   "Ban Tổng Giám đốc ưu tiên kiểm soát định mức nhiên liệu, cải thiện lịch quay đầu xe và số hóa chứng từ giao nhận, qua đó giữ biên lợi nhuận gộp ổn định trong bối cảnh chi phí sửa chữa phương tiện tăng.",
+   "Kết quả này phản ánh tăng trưởng của dịch vụ kho vận tích hợp, thu nhập tài chính từ tiền gửi có kỳ hạn và việc tái cơ cấu các tuyến có hiệu suất thấp. Chi phí quản lý được theo dõi theo trung tâm trách nhiệm; các khoản dự phòng công nợ và hàng tồn kho được ghi nhận thận trọng theo hồ sơ đối chiếu tại ngày khóa sổ.",
+   "Năm {next}, Công ty dự kiến tăng năng lực vận chuyển bằng việc thay thế một phần xe tải bằng phương tiện tiết kiệm nhiên liệu, nâng cấp hệ thống quản lý kho và ký thêm hợp đồng phân phối hàng tiêu dùng. Ban Tổng Giám đốc sẽ tiếp tục đánh giá rủi ro tỷ giá, giá nhiên liệu, an toàn hàng hóa và khả năng thanh toán của khách hàng. Các chỉ tiêu kế hoạch được xây dựng trên cơ sở công suất kho hiện hữu, hợp đồng đã ký và năng lực tài chính thận trọng.",
+   "Báo cáo tài chính được kiểm toán bởi {auditor} theo hợp đồng dịch vụ đã được phê duyệt.",
+   "Ban Tổng Giám đốc chịu trách nhiệm lập và trình bày trung thực, hợp lý báo cáo tài chính theo chế độ kế toán doanh nghiệp Việt Nam và các quy định có liên quan. Chúng tôi đã duy trì sổ kế toán, hệ thống kiểm soát nội bộ, quy trình phê duyệt chi phí và biện pháp bảo quản tài sản phù hợp với quy mô hoạt động. Không có sự kiện trọng yếu nào phát sinh sau ngày kết thúc kỳ kế toán cần điều chỉnh hoặc thuyết minh bổ sung ngoài nội dung đã nêu trong báo cáo này."
+  ],
+  "auditor_paragraphs": [
+   "Ban Tổng Giám đốc chịu trách nhiệm về việc lập, trình bày báo cáo tài chính trung thực, hợp lý; lựa chọn chính sách kế toán thích hợp; thực hiện các ước tính hợp lý; duy trì kiểm soát nội bộ cần thiết để báo cáo không còn sai sót trọng yếu do gian lận hoặc nhầm lẫn; đồng thời đánh giá khả năng hoạt động liên tục của Công ty.",
+   "Trách nhiệm của chúng tôi là đưa ra ý kiến về báo cáo tài chính dựa trên cuộc kiểm toán. Chúng tôi đã thực hiện kiểm toán theo các chuẩn mực kiểm toán Việt Nam. Các chuẩn mực này yêu cầu kiểm toán viên tuân thủ yêu cầu đạo đức và lập kế hoạch, thực hiện thủ tục để đạt được sự đảm bảo hợp lý rằng báo cáo tài chính không còn sai sót trọng yếu.",
+   "Công việc kiểm toán bao gồm thực hiện thủ tục thu thập bằng chứng về số liệu và thuyết minh trên báo cáo tài chính. Các thủ tục được lựa chọn dựa trên xét đoán của kiểm toán viên, bao gồm đánh giá rủi ro sai sót trọng yếu do gian lận hoặc nhầm lẫn. Chúng tôi cũng đánh giá tính phù hợp của chính sách kế toán, tính hợp lý của ước tính và cách trình bày tổng thể.",
+   "Chúng tôi tin rằng các bằng chứng kiểm toán đã thu thập là đầy đủ và thích hợp làm cơ sở cho ý kiến kiểm toán chấp nhận toàn phần. Trong quá trình kiểm toán, chúng tôi đã trao đổi với Ban Tổng Giám đốc và Hội đồng quản trị về phạm vi, kế hoạch, các phát hiện quan trọng và những khiếm khuyết kiểm soát nội bộ đáng kể, nếu có.",
+   "Số liệu so sánh trong báo cáo này được trình bày phù hợp với chính sách kế toán áp dụng nhất quán và đã được đối chiếu với hồ sơ kế toán của Công ty.",
+   "Không có vấn đề nào phát sinh sau ngày kết thúc kỳ kế toán mà theo xét đoán của chúng tôi làm thay đổi ý kiến nêu trên. Báo cáo kiểm toán này được lập cho các cổ đông và Hội đồng quản trị của Công ty, không nhằm phục vụ mục đích của bên khác nếu chưa có sự chấp thuận bằng văn bản của {auditor}."
+  ],
+  "board_title": "BÁO CÁO CỦA BAN TỔNG GIÁM ĐỐC",
+  "auditor_title": "BÁO CÁO KIỂM TOÁN ĐỘC LẬP",
+  "auditor_addressee": "Kính gửi các cổ đông và Hội đồng quản trị {company}",
+  "notes": [
+   {
+    "title": "B09-DN 1. Đặc điểm hoạt động của doanh nghiệp",
+    "paragraphs": [
+     "Khách hàng được phân nhóm theo sản xuất công nghiệp, bán lẻ và thương mại điện tử. Hoạt động được thực hiện trong lãnh thổ Việt Nam; không có đơn vị phụ thuộc có tư cách pháp nhân độc lập."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN 2. Cơ sở lập báo cáo và chính sách kế toán",
+    "paragraphs": [
+     "Báo cáo tài chính được lập bằng đồng Việt Nam, theo nguyên tắc giá gốc, phù hợp với Chế độ kế toán doanh nghiệp Việt Nam và các Chuẩn mực kế toán Việt Nam do Bộ Tài chính ban hành. Các giao dịch bằng ngoại tệ được quy đổi theo tỷ giá giao dịch thực tế tại ngày phát sinh.",
+     "Doanh thu dịch vụ được ghi nhận khi dịch vụ vận tải hoặc lưu kho đã hoàn thành theo mức độ thực hiện và Công ty có quyền thu tiền. Chi phí được ghi nhận theo nguyên tắc phù hợp với doanh thu. Các khoản tiền gửi có kỳ hạn không quá ba tháng kể từ ngày gửi, có khả năng chuyển đổi dễ dàng và ít rủi ro được trình bày là tương đương tiền."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN 3. Tiền và các khoản tương đương tiền",
+    "paragraphs": [
+     "Tiền bao gồm tiền mặt tại quỹ và số dư trên các tài khoản thanh toán. Tương đương tiền là các khoản tiền gửi kỳ hạn ngắn được quản lý nhằm đáp ứng nhu cầu thanh toán thường xuyên. Công ty thực hiện đối chiếu ngân hàng hằng tháng và không có hạn chế đáng kể đối với số dư tiền tại ngày báo cáo.",
+     "Số dư cuối năm tăng do dòng tiền từ hoạt động kinh doanh đủ bù chi đầu tư phương tiện. Một phần tiền gửi được dùng làm tài sản bảo đảm cho hạn mức tín dụng ngắn hạn; phần bị hạn chế này được thuyết minh riêng trong hồ sơ vay."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN 4. Các khoản đầu tư tài chính",
+    "paragraphs": [
+     "Chứng khoán kinh doanh là các chứng chỉ tiền gửi và giấy tờ có giá được mua với mục đích quản lý thanh khoản ngắn hạn. Các khoản được phân loại nắm giữ đến ngày đáo hạn có kỳ hạn từ ba tháng đến hai năm và được ghi nhận theo giá gốc cộng lãi dự thu. Dự phòng giảm giá được lập khi giá trị có thể thu hồi thấp hơn giá trị ghi sổ.",
+     "Công ty sở hữu khoản đầu tư vào một đơn vị liên kết cung cấp dịch vụ bảo dưỡng phương tiện. Khoản đầu tư này được theo dõi theo giá gốc do ảnh hưởng của Công ty chưa đến mức chi phối."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN 5. Phải thu khách hàng và phải thu khác",
+    "paragraphs": [
+     "Phải thu khách hàng phát sinh từ dịch vụ vận tải, lưu kho và giao nhận đã hoàn thành. Công ty phân loại tuổi nợ theo từng hợp đồng, gửi biên bản đối chiếu định kỳ và lập dự phòng đối với số dư có dấu hiệu khó thu hồi. Không có khoản phải thu nào được dùng để cầm cố ngoài các khoản đã công bố trong hợp đồng tín dụng.",
+     "Phải thu dài hạn chủ yếu là khoản ký quỹ thực hiện hợp đồng thuê kho và khoản bảo đảm dịch vụ. Các khoản phải thu khác gồm tiền bồi hoàn chi phí vận chuyển, tạm ứng nhân viên và lãi tiền gửi dự thu. Ban Tổng Giám đốc tin rằng giá trị dự phòng đã phản ánh đầy đủ tổn thất tín dụng dự kiến."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN 6. Hàng tồn kho",
+    "paragraphs": [
+     "Hàng tồn kho gồm nhiên liệu, phụ tùng thay thế, vật tư đóng gói, pallet và chi phí dịch vụ dở dang. Giá gốc được xác định theo phương pháp bình quân gia quyền và bao gồm chi phí mua, chi phí vận chuyển đến kho cùng chi phí chế biến liên quan. Hàng chậm luân chuyển được rà soát theo tuổi tồn và kế hoạch sử dụng.",
+     "Trong năm, Công ty tăng dự trữ phụ tùng để bảo đảm độ sẵn sàng của đội xe và áp dụng mã vạch tại các kho chính. Không có hàng tồn kho dùng làm tài sản bảo đảm cho khoản vay. Dự phòng giảm giá được ghi nhận đối với vật tư hư hỏng và bao bì không còn phù hợp với quy cách khách hàng."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN 7. Tài sản cố định và bất động sản đầu tư",
+    "paragraphs": [
+     "Tài sản cố định hữu hình chủ yếu là phương tiện vận tải, nhà kho, thiết bị nâng hạ và thiết bị văn phòng. Nguyên giá được ghi nhận khi tài sản sẵn sàng đưa vào sử dụng; chi phí sửa chữa lớn được vốn hóa khi đáp ứng điều kiện.",
+     "Tài sản cố định vô hình gồm phần mềm điều phối, bản quyền hệ thống quản lý kho và quyền sử dụng chương trình quản trị đơn hàng. Trong năm, Công ty hoàn thành kho lạnh Bình Triều và thanh lý một số xe đã hết hiệu quả kinh tế."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN 8. Vay và nợ thuê tài chính",
+    "paragraphs": [
+     "Các khoản vay được ký với các tổ chức tín dụng trong nước, chủ yếu để đầu tư phương tiện, kho bãi và bổ sung vốn lưu động. Lãi suất vay thả nổi theo từng hợp đồng và được ghi nhận vào chi phí tài chính theo phương pháp lãi suất thực tế. Công ty tuân thủ các điều khoản về tài sản bảo đảm và hệ số thanh toán đã cam kết.",
+     "Nợ vay dài hạn giảm do Công ty trả nợ theo lịch, trong khi nợ ngắn hạn tăng do khoản vay bổ sung cho mùa cao điểm. Ban Tổng Giám đốc đã lập kế hoạch dòng tiền cho mười hai tháng sau ngày báo cáo và đánh giá Công ty có đủ khả năng thanh toán các nghĩa vụ đến hạn."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN 9. Vốn chủ sở hữu",
+    "paragraphs": [
+     "Các cổ đông có quyền biểu quyết ngang nhau trên mỗi cổ phần và được nhận cổ tức theo nghị quyết Đại hội đồng cổ đông. Thặng dư vốn cổ phần phát sinh từ các đợt phát hành trước đây sau khi trừ chi phí trực tiếp liên quan.",
+     "Lợi nhuận sau thuế chưa phân phối được sử dụng để trích quỹ, chi trả cổ tức và bổ sung vốn kinh doanh theo quyết định của cơ quan có thẩm quyền. phần còn lại được giữ lại phục vụ chương trình mở rộng kho."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN 10. Doanh thu, chi phí và thuế",
+    "paragraphs": [
+     "Doanh thu dịch vụ vận tải được ghi nhận theo khối lượng hoàn thành và biên bản giao nhận; doanh thu lưu kho được phân bổ theo thời gian cung cấp dịch vụ. Doanh thu chưa thực hiện là các khoản khách hàng trả trước cho kỳ phục vụ sau. Chi phí nhiên liệu, tiền lương lái xe, khấu hao và thuê ngoài được tập hợp theo tuyến, hợp đồng và trung tâm khai thác.",
+     "Chi phí thuế thu nhập doanh nghiệp hiện hành được tính trên thu nhập chịu thuế theo thuế suất áp dụng. Thuế hoãn lại phát sinh chủ yếu từ chênh lệch thời điểm khấu hao và dự phòng. Công ty đã kê khai và nộp các khoản thuế, phí theo thông báo của cơ quan quản lý; không có tranh chấp thuế trọng yếu chưa được phản ánh."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN 11. Công cụ tài chính và quản trị rủi ro",
+    "paragraphs": [
+     "Các công cụ tài chính của Công ty gồm tiền, đầu tư ngắn hạn, phải thu, phải trả và các khoản vay. Giá trị ghi sổ của các công cụ này không chênh lệch trọng yếu so với giá trị hợp lý do thời hạn ngắn hoặc lãi suất được điều chỉnh theo thị trường. Công ty quản lý rủi ro tín dụng bằng hạn mức khách hàng và quy trình phê duyệt hợp đồng.",
+     "Rủi ro thanh khoản được kiểm soát thông qua kế hoạch dòng tiền tuần, hạn mức tín dụng dự phòng và đối chiếu công nợ. Rủi ro tỷ giá phát sinh không đáng kể từ việc mua thiết bị nhập khẩu; Ban Tổng Giám đốc theo dõi các khoản ngoại tệ và có thể sử dụng thỏa thuận kỳ hạn khi quy mô giao dịch tăng."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN 12. Các bên liên quan và sự kiện sau ngày báo cáo",
+    "paragraphs": [
+     "Các bên liên quan gồm thành viên Hội đồng quản trị, Ban Tổng Giám đốc và doanh nghiệp do người quản lý có ảnh hưởng đáng kể. Các giao dịch với bên liên quan được thực hiện theo điều kiện thương mại thông thường, được phê duyệt theo quy chế nội bộ và trình bày khi có giá trị trọng yếu. Trong năm không có khoản vay hoặc bảo lãnh đặc biệt cho người quản lý.",
+     "Các cam kết này được thực hiện trong kế hoạch vốn đã được phê duyệt, chưa làm phát sinh nghĩa vụ điều chỉnh số liệu tại ngày báo cáo. Ban Tổng Giám đốc không nhận thấy sự kiện nào ảnh hưởng trọng yếu đến khả năng hoạt động liên tục."
+    ],
+    "table": true
+   }
+  ]
+ }
+}

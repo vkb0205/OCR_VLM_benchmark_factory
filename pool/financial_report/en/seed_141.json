@@ -1,0 +1,105 @@
+{
+  "variables": {
+    "industry": "điện tử gia dụng",
+    "company_size": "small",
+    "fiscal_year": 2025
+  },
+  "source": "seed_141.json",
+  "values": {
+    "board_paragraph": [
+      "The Company’s principal products comprise temperature-controlled cookers, air purifiers and small-scale home controllers. The Company operates a medium-sized factory, with an emphasis on electrical safety inspections and component traceability.",
+      "In {year}, the Company sold its products through consumer electronics dealers in coastal areas and through the Company-operated online commerce channel. Production operations remained stable, and the controller assembly line was improved in the third quarter.",
+      "Inventory is monitored by component and finished-goods category, and provisions for inventory write-downs are recognized based on the year-end assessment. The Company settled loans and amounts payable to suppliers according to the agreed schedules, with no material overdue debts.",
+      "The plan for {next} prioritizes working capital for air purifier products and upgrades to the inventory management software. These targets will be adjusted in line with actual purchasing demand and component costs.",
+      "The Board of Management is responsible for organizing the Company’s business and production activities, maintaining the internal control system, and presenting the financial statements fairly. The financial statements were audited by {auditor}.",
+      "After the end of the financial year, the Company signed an addendum to a component supply agreement with a domestic supplier and completed the scheduled maintenance of the assembly line. No events after the reporting date arose that require adjustment or additional disclosure beyond the matters presented in the financial statements. The Board of Management confirms that it reviewed these events before the report was signed."
+    ],
+    "auditor_paragraphs": [
+      "The Board of Management is responsible for preparing and presenting the financial statements in accordance with applicable regulations, and for the internal control that the Board of Management determines is necessary to ensure that the financial statements are free from material misstatement, whether due to fraud or error.",
+      "Our responsibility is to express an opinion on the financial statements based on the results of our audit. We conducted our work in accordance with Vietnamese Standards on Auditing. These standards require us to comply with ethical requirements and to plan and perform the audit to obtain reasonable assurance as to whether the financial statements are free from material misstatement.",
+      "An audit involves performing procedures to obtain audit evidence about the amounts and disclosures in the financial statements. The selection of procedures depends on the auditor’s judgment, including the assessment of the risks of material misstatement due to fraud or error. In making those risk assessments, the auditor considers relevant internal control.",
+      "We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our unmodified audit opinion. The accounting policies have been applied consistently, and material estimates have been considered based on the information available as of the date the financial statements were prepared.",
+      "In addition to the matters presented in the notes, we have not identified any matter that would cause us to believe that the financial statements have not been prepared, in all material respects, in accordance with the current Vietnamese accounting regulations."
+    ],
+    "board_title": "REPORT OF THE BOARD OF MANAGEMENT",
+    "auditor_title": "INDEPENDENT AUDITOR’S REPORT",
+    "auditor_addressee": "To: The Shareholders and Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "B09. Cash and cash equivalents",
+        "paragraphs": [
+          "Cash comprises cash on hand and demand deposits denominated in Vietnamese dong. Cash equivalents are deposits with an original maturity of no more than three months that are readily convertible into cash and subject to an insignificant risk of changes in value. The Company periodically reconciles its balances with the banks."
+        ],
+        "table": true
+      },
+      {
+        "title": "B10. Short-term financial investments",
+        "paragraphs": [
+          "Trading securities are recognized at cost, and a provision is made when their recoverable amount is lower than cost. Deposits held to maturity are classified according to their maturity and recoverability. The Board of Management has assessed that no investment requires treatment beyond the provision already recognized."
+        ],
+        "table": true
+      },
+      {
+        "title": "B11. Receivables",
+        "paragraphs": [
+          "Trade receivables arise from the sale of equipment and components under normal credit terms. The Company monitors the aging of balances by dealer, performs year-end reconciliations, and recognizes provisions for balances showing signs of impaired recoverability. There are no material receivables from related parties that have not been disclosed.",
+          "Advances to suppliers are primarily for ordering components for production orders in the first quarter of the following year."
+        ],
+        "table": true
+      },
+      {
+        "title": "B12. Inventories",
+        "paragraphs": [
+          "Inventories are recognized at the lower of cost and net realizable value. The cost of components and finished goods includes purchase costs, conversion costs and directly related costs. The Company conducts a physical count at the reporting date and provides for slow-moving products."
+        ],
+        "table": true
+      },
+      {
+        "title": "B13. Other current assets",
+        "paragraphs": [
+          "Short-term prepaid expenses comprise insurance premiums, tools and supplies, and booth expenses, allocated over the periods in which the benefits are received. Deductible value-added tax is tracked by valid invoice. Receivables from the State represent overpaid taxes awaiting offset."
+        ],
+        "table": true
+      },
+      {
+        "title": "B15. Property, plant and equipment",
+        "paragraphs": [
+          "The Company reviews useful lives and indicators of impairment at the end of each accounting period.",
+          "During the year, the Company placed several circuit-testing devices into use and disposed of a device that had reached the end of its useful life."
+        ],
+        "table": true
+      },
+      {
+        "title": "B20. Current liabilities",
+        "paragraphs": [
+          "Trade payables arise from purchases of components and packaging and from transportation services. The Company recognizes taxes, salaries and accrued expenses based on obligations incurred up to the reporting date. Short-term borrowings are secured by inventories and assets financed by the borrowings under agreements with credit institutions."
+        ],
+        "table": true
+      },
+      {
+        "title": "B22. Owners’ equity",
+        "paragraphs": [
+          "Share premium arose from the issuance of shares in prior years. Retained earnings are used in accordance with resolutions of the General Meeting of Shareholders and are not subject to any special restrictions beyond those prescribed by law.",
+          "In {year}, the Company issued no additional shares and distributed profits in accordance with the resolution adopted."
+        ],
+        "table": true
+      },
+      {
+        "title": "B23. Revenue",
+        "paragraphs": [
+          "Revenue from sales is recognized when the Company has transferred substantially all the risks and rewards of ownership of the products to the customer, retains neither continuing managerial involvement as an owner nor control over the products, and it is probable that the economic benefits will flow to the Company. Revenue is presented net of trade discounts, sales returns and sales allowances.",
+          "Revenue from warranty services is recognized according to the degree of completion of the service obligation."
+        ],
+        "table": true
+      },
+      {
+        "title": "B30. Corporate income tax",
+        "paragraphs": [
+          "Current corporate income tax expense is calculated on taxable income for the year at the applicable tax rate. Taxable income is determined from accounting profit before tax, adjusted for items that are not deductible under the regulations. The Company has filed tax returns and made provisional tax payments within the deadlines set by the tax authorities.",
+          "Deferred tax assets are recognized for temporary differences to the extent that they are likely to be recovered in the future."
+        ],
+        "table": true
+      }
+    ]
+  }
+}

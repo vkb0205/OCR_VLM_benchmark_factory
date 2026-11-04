@@ -1,0 +1,109 @@
+{
+ "variables": {
+  "industry": "vật liệu xây dựng",
+  "company_size": "medium",
+  "fiscal_year": 2025
+ },
+ "source": "seed_128.json",
+ "values": {
+  "board_paragraph": [
+   "Trong năm {year}, Công ty duy trì mạng lưới khách hàng là các nhà phân phối khu vực trung du, các đội thi công và doanh nghiệp xây dựng vừa và nhỏ.",
+   "Sản phẩm chủ lực gồm gạch porcelain kích thước lớn, gạch ceramic trang trí và phụ kiện len chân tường. Công ty không sử dụng nhãn hiệu của bên thứ ba và tiêu thụ sản phẩm qua hợp đồng trực tiếp với đại lý. Ban Tổng Giám đốc tập trung kiểm soát định mức men màu, giảm hao hụt nguyên liệu và điều chỉnh kế hoạch sản xuất theo nhu cầu thực tế.",
+   "Giá vốn vẫn chịu ảnh hưởng của nhiên liệu và đất sét, nhưng biên lợi nhuận gộp được cải thiện nhờ cơ cấu sản phẩm có tỷ trọng porcelain cao hơn.",
+   "Các khoản phải thu được rà soát theo từng đại lý, còn hàng tồn kho được kiểm kê và trích lập dự phòng theo quy định hiện hành.",
+   "Trong năm {next}, Công ty dự kiến hoàn thiện khu vực phối trộn men, mở rộng nhóm gạch khổ lớn và nâng tỷ trọng đơn hàng theo hợp đồng dự án. Ban Tổng Giám đốc sẽ tiếp tục theo dõi giá nhiên liệu, điều khoản tín dụng của khách hàng và tiến độ thu hồi công nợ. Mục tiêu là tăng trưởng có chọn lọc, bảo đảm chất lượng sản phẩm và duy trì dòng tiền hoạt động ổn định.",
+   "Báo cáo tài chính được kiểm toán bởi {auditor} theo hợp đồng đã ký với Công ty.",
+   "Ban Tổng Giám đốc chịu trách nhiệm lập và trình bày trung thực, hợp lý báo cáo tài chính theo chế độ kế toán doanh nghiệp Việt Nam và các quy định liên quan. Ban Tổng Giám đốc đã duy trì hệ thống kiểm soát nội bộ cần thiết để báo cáo không còn sai sót trọng yếu do gian lận hoặc nhầm lẫn.",
+   "Sau ngày kết thúc kỳ kế toán, Công ty ký thêm một số hợp đồng cung cấp gạch cho các dự án nhà ở tại Phú Thọ và Yên Bái."
+  ],
+  "auditor_paragraphs": [
+   "Ban Tổng Giám đốc chịu trách nhiệm về việc lựa chọn chính sách kế toán, ước tính kế toán và duy trì kiểm soát nội bộ cần thiết.",
+   "Trách nhiệm của chúng tôi là đưa ra ý kiến về báo cáo tài chính dựa trên kết quả cuộc kiểm toán. Chúng tôi đã thực hiện kiểm toán theo các chuẩn mực kiểm toán Việt Nam. Các chuẩn mực này yêu cầu kiểm toán viên tuân thủ yêu cầu đạo đức và lập kế hoạch, thực hiện thủ tục để đạt được sự đảm bảo hợp lý rằng báo cáo tài chính không còn sai sót trọng yếu.",
+   "Cuộc kiểm toán bao gồm việc thực hiện các thủ tục nhằm thu thập bằng chứng về số liệu và thuyết minh trên báo cáo tài chính. Các thủ tục được lựa chọn dựa trên xét đoán của kiểm toán viên, bao gồm đánh giá rủi ro sai sót trọng yếu do gian lận hoặc nhầm lẫn. Chúng tôi cũng đánh giá tính phù hợp của chính sách kế toán và tính hợp lý của các ước tính do Ban Tổng Giám đốc thực hiện.",
+   "Chúng tôi tin rằng các bằng chứng kiểm toán thu thập được là đầy đủ và thích hợp làm cơ sở cho ý kiến kiểm toán của chúng tôi. Trong quá trình kiểm toán, chúng tôi đã xem xét các tài liệu về hàng tồn kho, công nợ đại lý, tài sản cố định, vay ngân hàng và các khoản thuế phát sinh. Không có hạn chế phạm vi kiểm toán trọng yếu được ghi nhận.",
+   "Báo cáo kiểm toán này được lập cho mục đích cung cấp thông tin cho các cổ đông và Hội đồng quản trị của Công ty. Chúng tôi không chịu trách nhiệm đối với việc sử dụng báo cáo cho mục đích khác. Không có sự kiện phát sinh sau ngày lập báo cáo tài chính làm thay đổi ý kiến kiểm toán độc lập này."
+  ],
+  "board_title": "BÁO CÁO CỦA BAN TỔNG GIÁM ĐỐC",
+  "auditor_title": "BÁO CÁO KIỂM TOÁN ĐỘC LẬP",
+  "auditor_addressee": "Kính gửi: Các cổ đông và Hội đồng quản trị {company}",
+  "notes": [
+   {
+    "title": "B09-DN.1. Đặc điểm hoạt động",
+    "paragraphs": [
+     "Ngành nghề chính là sản xuất gạch ốp lát, gạch trang trí và phụ kiện hoàn thiện. Đơn vị tiền tệ sử dụng trong kế toán là đồng Việt Nam."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN.2. Chính sách kế toán chủ yếu",
+    "paragraphs": [
+     "Báo cáo tài chính được lập trên cơ sở dồn tích, phù hợp với chế độ kế toán doanh nghiệp Việt Nam. Hàng tồn kho được ghi nhận theo giá thấp hơn giữa giá gốc và giá trị thuần có thể thực hiện; giá xuất kho được tính theo phương pháp bình quân gia quyền."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN.3. Tiền và tương đương tiền",
+    "paragraphs": [
+     "Tiền bao gồm tiền mặt tại quỹ và tiền gửi ngân hàng không kỳ hạn. Các khoản tương đương tiền là tiền gửi có kỳ hạn gốc không quá ba tháng, có khả năng chuyển đổi dễ dàng thành tiền và ít chịu rủi ro về thay đổi giá trị. Công ty đối chiếu số dư ngân hàng định kỳ với sổ kế toán."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN.4. Các khoản phải thu",
+    "paragraphs": [
+     "Các khoản phải thu được ghi nhận theo giá trị ghi sổ sau khi trừ dự phòng phải thu khó đòi. Công ty đánh giá khả năng thu hồi theo tuổi nợ, lịch sử thanh toán và thông tin cập nhật từ từng khách hàng. Những khoản nợ quá hạn lâu ngày được xem xét riêng và trình cấp có thẩm quyền phê duyệt biện pháp xử lý."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN.5. Hàng tồn kho",
+    "paragraphs": [
+     "Hàng tồn kho gồm đất sét, men màu, nhiên liệu, sản phẩm dở dang, thành phẩm và hàng hóa. Giá gốc bao gồm chi phí mua, chi phí chế biến và chi phí liên quan trực tiếp khác. Công ty thực hiện kiểm kê cuối năm tại kho nguyên liệu và kho thành phẩm; dự phòng giảm giá được ghi nhận khi giá trị thuần có thể thực hiện thấp hơn giá gốc."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN.6. Tài sản cố định",
+    "paragraphs": [
+     "Tài sản cố định hữu hình chủ yếu là nhà xưởng, lò nung, dây chuyền ép gạch và phương tiện vận chuyển. Trong năm, Công ty hoàn thành một số hạng mục cải tạo dây chuyền phối liệu và đưa vào sử dụng sau khi nghiệm thu. Không có tài sản cố định đem cầm cố cho bên thứ ba ngoài các tài sản được trình bày tại thuyết minh vay."
+    ],
+    "table": false
+   },
+   {
+    "title": "B09-DN.7. Vay và nợ thuê tài chính",
+    "paragraphs": [
+     "Các khoản vay được ghi nhận theo số tiền thực nhận và phân loại ngắn hạn hoặc dài hạn theo thời hạn thanh toán. Chi phí lãi vay được ghi nhận vào kết quả kinh doanh, trừ phần đủ điều kiện vốn hóa theo quy định. Công ty thanh toán đúng hạn các khoản gốc và lãi theo hợp đồng tín dụng đã ký với các tổ chức cho vay."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN.8. Vốn chủ sở hữu",
+    "paragraphs": [
+     "Cổ tức được ghi nhận khi có nghị quyết của Đại hội đồng cổ đông. Lợi nhuận sau thuế chưa phân phối được sử dụng để bổ sung vốn lưu động, trích lập quỹ và chia cổ tức theo quyết định được phê duyệt."
+    ],
+    "table": false
+   },
+   {
+    "title": "B09-DN.9. Doanh thu và giá vốn",
+    "paragraphs": [
+     "Doanh thu bán hàng được ghi nhận khi phần lớn rủi ro và lợi ích gắn với quyền sở hữu sản phẩm đã chuyển giao cho khách hàng, Công ty không còn quyền quản lý như người sở hữu và khả năng thu được lợi ích kinh tế được xác định tương đối chắc chắn. Doanh thu được trình bày sau khi trừ các khoản chiết khấu và giảm trừ doanh thu."
+    ],
+    "table": false
+   },
+   {
+    "title": "B09-DN.10. Thuế thu nhập doanh nghiệp",
+    "paragraphs": [
+     "Chi phí thuế thu nhập doanh nghiệp hiện hành được tính trên thu nhập chịu thuế trong năm theo thuế suất áp dụng. Thuế thu nhập hoãn lại được xác định trên các chênh lệch tạm thời giữa giá trị ghi sổ của tài sản, nợ phải trả và cơ sở tính thuế. Công ty đã kê khai và nộp các khoản thuế theo thời hạn quy định."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN.11. Sự kiện sau ngày kết thúc kỳ kế toán",
+    "paragraphs": [
+     "Ban Tổng Giám đốc đã xem xét các giao dịch phát sinh đến ngày ký báo cáo và không nhận thấy dấu hiệu ảnh hưởng đáng kể đến khả năng hoạt động liên tục của Công ty."
+    ],
+    "table": false
+   }
+  ]
+ }
+}

@@ -1,0 +1,125 @@
+{
+  "variables": {
+    "industry": "nhựa kỹ thuật",
+    "company_size": "medium",
+    "fiscal_year": 2024
+  },
+  "source": "seed_133.json",
+  "values": {
+    "board_paragraph": [
+      "The Company serves domestic manufacturers of electrical equipment, pumps, motorcycle components and packaging lines, with a strategy to increase the proportion of high-precision products.",
+      "In {year}, the Company maintained three workshops: injection molding, compounding and surface finishing. The product portfolio includes heat-resistant washers, sensor protective covers, polymer gears and glass-fiber-reinforced PA resin pellets. Raw materials are purchased from suppliers assessed for batch consistency; products are inspected for dimensions, tensile strength and heat resistance before delivery. The Company does not trade in goods bearing third-party brands.",
+      "This result came from increased output of insulating assemblies, a lower defect rate and adjustments to selling prices in line with fluctuations in plastic pellets. Selling and administrative expenses were controlled within budget limits, while the Company maintained costs for new mold testing to meet customers' technical requirements.",
+      "The Company maintained its ability to settle due obligations, performed periodic debt reconciliations and separately monitored receivables with long collection periods.",
+      "The Board of Management expects {next} to focus on heat-resistant plastic products for electrical cabinets and pump components, while completing a traceability system by mold code and lot number. The Company will invest in additional tightness measuring equipment, improve injection molding machine utilization and expand its customer network in the Central region. These plans are balanced against capital capacity, operating cash flow and environmental safety control requirements at the factory.",
+      "The financial statements for {year} were audited by {auditor}. The Board of Management is responsible for organizing the internal control system and providing all documentation for the audit.",
+      "The Board of Management is responsible for preparing and presenting the financial statements fairly and reasonably in accordance with current Vietnamese accounting standards and accounting regime, selecting appropriate accounting policies, safeguarding assets and assessing the Company's ability to continue as a going concern. In the opinion of the Board of Management, no material events have occurred after the end of the accounting period that require adjustment or additional disclosure beyond those already presented in these financial statements."
+    ],
+    "auditor_paragraphs": [
+      "The Board of Management is responsible for the preparation and fair presentation of the financial statements in accordance with Vietnamese accounting standards and accounting regime. This responsibility includes designing, implementing and maintaining internal control relevant to the preparation of financial statements that are free from material misstatement, whether due to fraud or error, selecting appropriate accounting policies and making reasonable accounting estimates.",
+      "Our responsibility is to express an opinion on the financial statements based on the results of our audit. We conducted our audit in accordance with Vietnamese auditing standards. Those standards require that auditors comply with ethical requirements and plan and perform the audit to obtain reasonable assurance about whether the financial statements are free from material misstatement.",
+      "The audit work includes performing procedures to obtain audit evidence about the amounts and disclosures in the financial statements. The procedures selected depend on the auditor's judgment, including the assessment of the risks of material misstatement, whether due to fraud or error. In making those risk assessments, the auditor considers relevant internal control but does not express an opinion on the effectiveness of internal control.",
+      "We also evaluate the appropriateness of the accounting policies used, the reasonableness of accounting estimates and related disclosures made by the Board of Management. We consider the Board of Management's use of the going-concern basis of accounting and conclude that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our audit opinion, which is not a qualified opinion.",
+      "We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our audit opinion. In our opinion, the Company's financial statements have been prepared in accordance with current regulations, and the information presented in the financial statements is consistent with our understanding of the Company's operations, transactions and business conditions during {year}."
+    ],
+    "board_title": "REPORT OF THE BOARD OF MANAGEMENT",
+    "auditor_title": "INDEPENDENT AUDITOR'S REPORT",
+    "auditor_addressee": "To: The Shareholders and the Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "1. Operating characteristics and basis of preparation of the financial statements",
+        "paragraphs": [
+          "The Company operates in the field of manufacturing technical plastic products and compound pellets.",
+          "These financial statements have been prepared on the assumption that the Company will continue as a going concern. Foreign-currency transactions during the year were immaterial; therefore, the effects of foreign-currency translation are insignificant."
+        ],
+        "table": false
+      },
+      {
+        "title": "2. Significant accounting policies",
+        "paragraphs": [
+          "Revenue is recognized when substantially all risks and rewards incidental to ownership of the products have been transferred to the customer, the Company no longer retains management rights as owner and the amount of revenue is determined with reasonable certainty. Expenses are recognized in matching with revenue in the period.",
+          "Inventories are measured at weighted average cost and accounted for under the perpetual inventory method."
+        ],
+        "table": true
+      },
+      {
+        "title": "3. Cash and cash equivalents",
+        "paragraphs": [
+          "Cash of the Company comprises cash on hand and non-term bank deposits. Cash balances are reconciled with bank statements and year-end cash count minutes."
+        ],
+        "table": true
+      },
+      {
+        "title": "4. Trade receivables and other receivables",
+        "paragraphs": [
+          "The Board of Management assesses recoverability by customer and provides allowances for receivables showing indicators of impairment.",
+          "Other receivables include travel advances and mold cost reimbursements. These amounts are monitored in detail by counterparty and reconciled periodically."
+        ],
+        "table": true
+      },
+      {
+        "title": "5. Inventories",
+        "paragraphs": [
+          "Inventories comprise virgin plastic pellets, additives, molds under processing, work in progress and finished goods. The Company conducts inventory counts at year-end and assesses slow-moving inventory based on inventory age, consumption capacity and estimated selling price.",
+          "No inventories were pledged as security for loans as at the reporting date. Provision for inventory write-down is made for product codes whose net realizable value is lower than cost."
+        ],
+        "table": true
+      },
+      {
+        "title": "6. Fixed assets",
+        "paragraphs": [
+          "Tangible fixed assets mainly comprise injection molding machines, compounding machines, drying lines and factory buildings used for production. Routine repair costs are recognized in profit or loss.",
+          "Intangible fixed assets are production management software and mold design copyrights. These assets are amortized over their estimated useful lives."
+        ],
+        "table": true
+      },
+      {
+        "title": "7. Loans and payables",
+        "paragraphs": [
+          "Short-term loans are used to supplement working capital and have maturity dates within {next}. Long-term loans are used to invest in molding machines and factory renovation and are repaid according to a periodic schedule. The Company complies with covenants with credit institutions and no breaches had arisen as at the reporting date.",
+          "Trade payables mainly comprise amounts payable for plastic pellet purchases and mold processing services. Payables are classified according to expected payment terms."
+        ],
+        "table": true
+      },
+      {
+        "title": "8. Owners' equity",
+        "paragraphs": [
+          "The Company appropriates the development investment fund from after-tax profit in accordance with the resolution of the General Meeting of Shareholders.",
+          "This period's undistributed after-tax profit is presented separately from accumulated profit up to the end of the previous period. Profit distribution and dividend payment are carried out in accordance with the approved resolution."
+        ],
+        "table": true
+      },
+      {
+        "title": "9. Revenue and cost of sales",
+        "paragraphs": [
+          "The Company's revenue arises from the sale of technical plastic components, compound pellets and contract surface treatment services. Revenue is recognized after products are accepted or delivered in accordance with contract terms. Deductions mainly comprise trade discounts for orders that meet volume targets.",
+          "Cost of sales includes direct materials, direct labor, depreciation of machinery and manufacturing overhead allocated based on normal capacity."
+        ],
+        "table": true
+      },
+      {
+        "title": "10. Corporate income tax expense",
+        "paragraphs": [
+          "Current corporate income tax expense is calculated on the year's taxable income at the prevailing tax rate and in accordance with adjustments under tax law. Deferred corporate income tax arises from temporary differences between the carrying amounts and tax bases of certain items.",
+          "The Company has declared and paid taxes in accordance with notices from the tax authority. The Board of Management is not aware of any unresolved matters that could materially change the tax amounts recognized."
+        ],
+        "table": true
+      },
+      {
+        "title": "11. Related party transactions",
+        "paragraphs": [
+          "The Company's related parties include members of the Board of Directors, the Board of Management and entities controlled by or under significant influence of these individuals. During the year, the Company had no material purchase or sale transactions with related parties other than remuneration and salaries under approved policies.",
+          "Remuneration of the Board of Directors and salaries of the Board of Management are recorded in corporate administrative expenses in the period incurred."
+        ],
+        "table": true
+      },
+      {
+        "title": "12. Events after the end of the accounting period",
+        "paragraphs": [
+          "The Board of Management continues to monitor raw material prices, orders and customers' ability to pay in the following period."
+        ],
+        "table": false
+      }
+    ]
+  }
+}

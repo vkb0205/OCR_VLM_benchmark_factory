@@ -1,0 +1,114 @@
+{
+ "variables": {
+  "industry": "cơ khí chế tạo",
+  "company_size": "small",
+  "fiscal_year": 2025
+ },
+ "source": "seed_119.json",
+ "values": {
+  "board_paragraph": [
+   "Công ty phục vụ các nhà thầu thiết bị, cơ sở chế biến nông sản và khách hàng công nghiệp trong nước. Đây là doanh nghiệp cơ khí chế tạo quy mô nhỏ.",
+   "Trong năm {year}, doanh thu của Công ty tăng nhờ các hợp đồng chế tạo băng tải, khung máy và trục truyền động được nghiệm thu đúng tiến độ. Ban Tổng Giám đốc duy trì chính sách kiểm tra vật liệu đầu vào, chuẩn hóa lệnh sản xuất và kiểm soát tiêu hao điện năng.",
+   "Các khoản phải thu được theo dõi theo từng hợp đồng; không có khoản phải thu quá hạn đáng kể cần trích lập bổ sung. Công ty vẫn bảo đảm khả năng thanh toán các nghĩa vụ đến hạn.",
+   "Công ty tiếp tục đầu tư có chọn lọc vào máy tiện CNC và thiết bị đo kiểm, đồng thời mở rộng danh mục chi tiết thay thế cho dây chuyền đóng gói. Năm {next}, Ban Tổng Giám đốc dự kiến tăng tỷ lệ đơn hàng có hợp đồng bảo trì, nâng cao tỷ lệ sử dụng thiết bị và tìm kiếm khách hàng tại khu vực trung du phía Bắc. Các kế hoạch này sẽ được thực hiện phù hợp với nguồn vốn và năng lực sản xuất thực tế.",
+   "Hội đồng quản trị và Ban Tổng Giám đốc trong năm gồm các thành viên được trình bày tại bảng dưới đây. Công ty duy trì bộ phận kế toán độc lập do Kế toán trưởng phụ trách. Báo cáo tài chính năm {year} được kiểm toán bởi {auditor} theo hợp đồng đã ký với Công ty. Kế toán trưởng chịu trách nhiệm tổ chức lưu trữ chứng từ, đối chiếu công nợ và cung cấp hồ sơ cần thiết cho kiểm toán viên. Hội đồng quản trị giám sát quy trình lập báo cáo, xem xét các ước tính trọng yếu và phê duyệt báo cáo trước khi phát hành.",
+   "Ban Tổng Giám đốc chịu trách nhiệm lập và trình bày trung thực, hợp lý báo cáo tài chính theo chế độ kế toán doanh nghiệp Việt Nam và các quy định có liên quan. Sau ngày kết thúc kỳ kế toán, không phát sinh sự kiện trọng yếu nào ảnh hưởng đến các số liệu đã trình bày hoặc cần điều chỉnh trong báo cáo tài chính này."
+  ],
+  "auditor_paragraphs": [
+   "Báo cáo tài chính này do Công ty lập và chịu trách nhiệm.",
+   "Ban Tổng Giám đốc chịu trách nhiệm về việc lập báo cáo tài chính, lựa chọn và áp dụng chính sách kế toán phù hợp, duy trì kiểm soát nội bộ cần thiết để bảo đảm báo cáo không có sai sót trọng yếu do gian lận hoặc nhầm lẫn. Ban Tổng Giám đốc cũng chịu trách nhiệm đánh giá khả năng hoạt động liên tục của Công ty.",
+   "Trách nhiệm của chúng tôi là đưa ra ý kiến về báo cáo tài chính dựa trên kết quả kiểm toán. Chúng tôi đã thực hiện công việc theo các chuẩn mực kiểm toán Việt Nam. Các chuẩn mực này yêu cầu chúng tôi tuân thủ yêu cầu đạo đức và lập kế hoạch, thực hiện kiểm toán để đạt được sự đảm bảo hợp lý rằng báo cáo tài chính không còn sai sót trọng yếu.",
+   "Kiểm toán bao gồm thực hiện các thủ tục để thu thập bằng chứng về số liệu và thuyết minh trên báo cáo tài chính. Các thủ tục được lựa chọn dựa trên xét đoán của kiểm toán viên, bao gồm đánh giá rủi ro sai sót trọng yếu do gian lận hoặc nhầm lẫn. Chúng tôi cũng đánh giá tính phù hợp của chính sách kế toán và các ước tính kế toán.",
+   "Chúng tôi tin rằng các bằng chứng kiểm toán đã thu thập là đầy đủ và thích hợp làm cơ sở cho ý kiến kiểm toán chấp nhận toàn phần của chúng tôi. Ngoài các vấn đề được trình bày trong thuyết minh, chúng tôi không nhận thấy vấn đề nào cần nhấn mạnh hoặc điều chỉnh đối với báo cáo tài chính năm {year}."
+  ],
+  "board_title": "BÁO CÁO CỦA BAN TỔNG GIÁM ĐỐC",
+  "auditor_title": "BÁO CÁO KIỂM TOÁN ĐỘC LẬP",
+  "auditor_addressee": "Kính gửi: Các cổ đông và Hội đồng quản trị {company}",
+  "notes": [
+   {
+    "title": "1. Đặc điểm hoạt động",
+    "paragraphs": [
+     "Ngành nghề chính là gia công cơ khí, chế tạo kết cấu và sửa chữa thiết bị công nghiệp. Công ty có một nhà máy tại Cụm sản xuất Tân Lập, không có chi nhánh và không có giao dịch với đơn vị phụ thuộc trong năm {year}. Hoạt động sản xuất được tổ chức theo kế hoạch tháng và từng đơn hàng, với hồ sơ nghiệm thu được lưu cùng chứng từ giao nhận. Công ty thường xuyên đào tạo an toàn lao động và kiểm tra thiết bị nâng hạ tại nhà xưởng."
+    ],
+    "table": true
+   },
+   {
+    "title": "2. Cơ sở lập báo cáo và chính sách kế toán",
+    "paragraphs": [
+     "Báo cáo tài chính được lập bằng đồng Việt Nam, theo chế độ kế toán doanh nghiệp Việt Nam và giả định Công ty hoạt động liên tục. Tài sản và nợ phải trả được ghi nhận theo giá gốc, trừ các khoản được trình bày theo giá trị có thể thu hồi. Doanh thu được ghi nhận khi phần lớn rủi ro và lợi ích đã chuyển giao cho khách hàng, phù hợp với điều khoản nghiệm thu trong hợp đồng."
+    ],
+    "table": true
+   },
+   {
+    "title": "3. Tiền và tương đương tiền",
+    "paragraphs": [
+     "Tiền của Công ty bao gồm tiền mặt tại quỹ và tiền gửi ngân hàng bằng đồng Việt Nam. Số dư tiền được đối chiếu với sổ phụ ngân hàng và biên bản kiểm kê quỹ cuối năm."
+    ],
+    "table": true
+   },
+   {
+    "title": "4. Phải thu khách hàng",
+    "paragraphs": [
+     "Các khoản phải thu khách hàng phát sinh chủ yếu từ hợp đồng chế tạo theo tiến độ. Công ty theo dõi công nợ theo từng khách hàng và thời hạn thanh toán. Dự phòng được lập cho các khoản có dấu hiệu khó thu hồi trên cơ sở đánh giá riêng từng khoản, không sử dụng thông tin của khách hàng ngoài hệ thống sổ sách."
+    ],
+    "table": true
+   },
+   {
+    "title": "5. Hàng tồn kho",
+    "paragraphs": [
+     "Hàng tồn kho gồm thép tấm, thép hình, vật tư phụ, bán thành phẩm và thành phẩm chờ giao. Giá trị hàng tồn kho được xác định theo giá thấp hơn giữa giá gốc và giá trị thuần có thể thực hiện. Chi phí sản xuất được tập hợp theo lệnh sản xuất và phân bổ cho sản phẩm hoàn thành theo định mức phù hợp."
+    ],
+    "table": true
+   },
+   {
+    "title": "6. Tài sản cố định",
+    "paragraphs": [
+     "Trong năm, Công ty mua thêm thiết bị gia công và hệ thống đo kiểm phục vụ xưởng cơ khí. Không có tài sản cố định đem thế chấp ngoài các tài sản bảo đảm cho khoản vay dài hạn đã được thuyết minh."
+    ],
+    "table": true
+   },
+   {
+    "title": "7. Vay và nợ thuê tài chính",
+    "paragraphs": [
+     "Các khoản vay được sử dụng để bổ sung vốn lưu động và đầu tư thiết bị. Lãi suất được xác định theo hợp đồng tín dụng từng thời kỳ; chi phí lãi vay được ghi nhận vào kết quả kinh doanh khi phát sinh. Công ty không có khoản vay bằng ngoại tệ tại ngày kết thúc năm tài chính."
+    ],
+    "table": true
+   },
+   {
+    "title": "8. Vốn chủ sở hữu",
+    "paragraphs": [
+     "Lợi nhuận sau thuế chưa phân phối được sử dụng để bổ sung vốn lưu động và trích quỹ theo nghị quyết của Đại hội đồng cổ đông."
+    ],
+    "table": true
+   },
+   {
+    "title": "9. Doanh thu và giá vốn",
+    "paragraphs": [
+     "Doanh thu bán hàng và cung cấp dịch vụ năm {year} là doanh thu từ chế tạo kết cấu thép, cụm truyền động và dịch vụ sửa chữa. Doanh thu được ghi nhận khi hàng hóa được nghiệm thu và quyền kiểm soát được chuyển giao. Giá vốn bao gồm nguyên vật liệu trực tiếp, nhân công trực tiếp và chi phí sản xuất chung phân bổ."
+    ],
+    "table": true
+   },
+   {
+    "title": "10. Thuế và các khoản phải nộp Nhà nước",
+    "paragraphs": [
+     "Công ty thực hiện kê khai thuế giá trị gia tăng theo phương pháp khấu trừ và kê khai thuế thu nhập doanh nghiệp theo quy định hiện hành. Chi phí thuế thu nhập doanh nghiệp hiện hành được tính trên thu nhập chịu thuế của năm sau khi điều chỉnh các khoản không được khấu trừ. Công ty không ghi nhận tài sản thuế thu nhập hoãn lại trong năm."
+    ],
+    "table": true
+   },
+   {
+    "title": "11. Giao dịch và số dư với các bên liên quan",
+    "paragraphs": [
+     "Các thành viên quản lý chủ chốt nhận tiền lương và thù lao theo nghị quyết được phê duyệt. Công ty không có giao dịch mua bán hàng hóa trọng yếu với bên liên quan trong năm {year}. Các khoản phải trả người quản lý được thanh toán trong kỳ và không có số dư bất thường tại ngày kết thúc năm."
+    ],
+    "table": true
+   },
+   {
+    "title": "12. Sự kiện sau ngày kết thúc kỳ kế toán",
+    "paragraphs": [
+     "Ban Tổng Giám đốc đánh giá Công ty tiếp tục có đủ nguồn lực để duy trì hoạt động và thực hiện các hợp đồng đã ký trong năm tiếp theo. Công ty đã rà soát các hợp đồng, công nợ, hàng tồn kho và kế hoạch dòng tiền sau ngày khóa sổ. Kết quả rà soát không cho thấy nghĩa vụ tiềm tàng hoặc tổn thất mới cần ghi nhận. Báo cáo được Ban Tổng Giám đốc phê duyệt phát hành sau khi hoàn tất các thủ tục kiểm toán và đối chiếu số liệu nội bộ."
+    ],
+    "table": false
+   }
+  ]
+ }
+}

@@ -1,0 +1,57 @@
+# Versioned taxonomy for the labeling contract (core/contract/CONTRACT.md).
+# This file is the single source of truth for categories and attribute values.
+version: "0.1.0"
+
+categories:
+  # Block categories, from ViDocParse / OmniDocBench
+  text:
+    - text_block
+    - title
+    - section_header
+    - reference
+    - footnote
+    - header
+    - footer
+    - page_number
+    - caption_table
+    - caption_figure
+    - caption_chart
+    - caption_equation
+    - list_item
+    - code_block
+  non_text:
+    - table
+    - figure
+    - equation_isolated
+    - chart
+  # Factory extensions
+  extension:
+    - seal
+    - signature
+    - form_field
+    - checkbox
+    - handwriting
+    - qr_code
+    - barcode
+  # Inline span categories (only inside text-bearing blocks)
+  span:
+    - equation_inline
+    - footnote_mark
+
+page_attributes:
+  doc_type: [official_doc, newspaper, academic_paper, textbook, exam_paper, financial_report,
+             invoice, form, slides, magazine, handwritten, book, medical]
+  lang: [vi, en, en_vi_mixed]
+  layout: [single_column, multi_column, mixed]
+  orientation: [portrait, landscape]
+  page_kind: [single, spread]
+  watermark: [true, false]
+  colorful_background: [true, false]
+
+block_attributes:
+  lang: [vi, en, en_vi_mixed]
+  text_background: [white, single_color, multi_color, image]
+  text_rotate: ["0", "90", "180", "270", other]
+  frame_type: [full_line, less_line, fewer_line, wireless_line]   # tables only
+  style: [normal, callout, big_number, pull_quote]                # text-bearing blocks
+  handwritten: [true, false]

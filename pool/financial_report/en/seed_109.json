@@ -1,0 +1,112 @@
+{
+  "variables": {
+    "industry": "cơ khí chế tạo",
+    "company_size": "small",
+    "fiscal_year": 2024
+  },
+  "source": "seed_109.json",
+  "values": {
+    "board_paragraph": [
+      "The Company specializes in machining steel components, manufacturing jigs, and assembling machine subassemblies for domestic manufacturing workshops. The workshop's capabilities include CNC turning, milling, structural welding, and surface treatment to order. The Company's mechanical manufacturing operations serve production lines that require dimensional stability, concentricity, and rapid replaceability.",
+      "The Board of Management has maintained control over material costs, reviewed machining norms, and improved delivery schedules.",
+      "The Company has maintained its ability to meet payment obligations and has no overdue loans.",
+      "The plan for {next} focuses on high-tolerance components, expanding the customer base in the industrial equipment sector, and increasing CNC machine utilization. The Company plans to complete the metrology inspection area, train additional programming technicians, and strengthen assessments of steel suppliers to stabilize input quality.",
+      "The financial statements for {year} were audited by {auditor}, an independent audit firm selected by the Company.",
+      "The Board of Management is responsible for preparing and presenting the financial statements fairly and truthfully in accordance with Vietnamese Accounting Standards and the current enterprise accounting regime. In our assessment, no material events have arisen after the end of the accounting period that require adjustment or additional disclosure.",
+      "The Company has strengthened occupational safety control, carried out planned equipment maintenance, and sorted scrap to reduce material losses. Contracts during the year are monitored by job code, from drawing receipt to final inspection; acceptance records are stored together with delivery documents and invoices.",
+      "The Board of Management believes that the domestic mechanical manufacturing market will continue to demand spare parts and retrofit equipment. The Company will balance investments against cash flow, prioritize machinery that improves productivity, and maintain a prudent customer credit policy."
+    ],
+    "auditor_paragraphs": [
+      "The Board of Management is responsible for preparing and presenting the financial statements fairly and truthfully, selecting appropriate accounting policies, maintaining necessary internal control, and assessing the Company's ability to continue as a going concern. This responsibility includes preventing and detecting fraud or material error.",
+      "Our responsibility is to express an opinion on the financial statements based on the results of our audit. We conducted our audit in accordance with Vietnamese Standards on Auditing. Those standards require us to comply with ethical requirements and to plan and perform the audit to obtain reasonable assurance about whether the financial statements are free from material misstatement.",
+      "An audit involves performing procedures to obtain audit evidence about the amounts and disclosures in the financial statements. The procedures selected depend on the auditor's judgment, including the assessment of the risks of material misstatement of the financial statements due to fraud or error. We also evaluate the appropriateness of the accounting policies and accounting estimates of the Board of Management.",
+      "We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our audit opinion.",
+      "There are no other matters that need to be presented in this auditor's report. This report is issued to the shareholders and the Board of Directors of the Company for the purpose of reviewing the financial statements for {year}."
+    ],
+    "board_title": "REPORT OF THE BOARD OF MANAGEMENT",
+    "auditor_title": "INDEPENDENT AUDITOR'S REPORT",
+    "auditor_addressee": "To: The Shareholders and the Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "B09. Nature of Operations",
+        "paragraphs": [
+          "The Company operates in the field of precision mechanical machining and the manufacture of auxiliary equipment. The normal production cycle is from two to eight weeks depending on the type of component. Products are accepted in accordance with drawings, technical standards, and agreed delivery terms.",
+          "The Company maintains a multi-level approval process for material purchase orders, outsourced processing, and payments. The production, technical, warehouse, and accounting departments periodically reconcile data to limit discrepancies between operating records and accounting books."
+        ],
+        "table": true
+      },
+      {
+        "title": "B10. Significant Accounting Policies",
+        "paragraphs": [
+          "The financial statements are prepared in Vietnamese Dong on a historical cost basis and an accrual basis. Revenue is recognized when control of the products is transferred to the customer.",
+          "Prior-year comparative figures are presented in accordance with consistently applied accounting policies. When items requiring classification arise, the Company considers the nature of the transaction, the collection or payment period, and the ability to generate economic benefits before recognition."
+        ],
+        "table": false
+      },
+      {
+        "title": "B11. Cash and Cash Equivalents",
+        "paragraphs": [
+          "The Company's cash comprises cash on hand and balances in demand deposits at banks. Cash equivalents are deposits with an original maturity of no more than three months that are readily convertible into a known amount of cash and are subject to an insignificant risk of changes in value.",
+          "The Company had no unusual related-party transactions during the year. Purchases of steel, consumables, and maintenance services are carried out in accordance with quotations, commercial terms, and the approved supplier selection process."
+        ],
+        "table": true
+      },
+      {
+        "title": "B12. Trade Receivables",
+        "paragraphs": [
+          "Trade receivables arise from processing contracts and the supply of machine assemblies. The Company periodically reconciles receivables and makes provisions based on receivables aging and recoverability. No receivables were pledged as collateral at the reporting date.",
+          "After the end of the financial year, the Company continued to deliver goods under signed contracts and did not record any major losses due to natural disasters, fire, or unusual fluctuations. The Board of Management is not aware of any events that would significantly change the financial position presented."
+        ],
+        "table": false
+      },
+      {
+        "title": "B13. Inventories",
+        "paragraphs": [
+          "Inventories comprise steel raw materials, auxiliary supplies, work in progress, and finished goods. The value of inventories includes purchase costs, processing costs, and other directly related costs. The Company conducted a year-end physical count and recognized a provision for slow-moving supplies.",
+          "Labor costs are recognized based on time sheets, work assignment slips, and the issued wage rates. Insurance contributions and related obligations are declared for the period in which they arise and reconciled with the regulatory authority upon payment."
+        ],
+        "table": true
+      },
+      {
+        "title": "B14. Fixed Assets",
+        "paragraphs": [
+          "Tangible fixed assets mainly comprise CNC lathes, milling machines, welding equipment, and transportation vehicles. During the year, the Company purchased an additional lathe and completed the installation of a measurement system.",
+          "Credit risk mainly arises from trade receivables; liquidity risk arises from loan obligations, payables to suppliers, and operating expenses. The Company monitors receivables aging, prepares weekly cash flow forecasts, and maintains bank balances in line with the payment schedule."
+        ],
+        "table": false
+      },
+      {
+        "title": "B15. Borrowings and Finance Lease Liabilities",
+        "paragraphs": [
+          "Borrowings are used to supplement working capital and invest in machinery. Interest rates are determined under the credit agreement for each period. The Company complied with payment terms and had no breaches of loan obligations during the year.",
+          "Quality management is carried out at each production stage. The first sample of each batch is measured and inspected before mass production; the results are retained for traceability upon customer request. Nonconformities are analyzed for root causes and tracked for corrective actions."
+        ],
+        "table": true
+      },
+      {
+        "title": "B16. Owners' Equity",
+        "paragraphs": [
+          "After-tax profit is distributed in accordance with the resolution of the General Meeting of Shareholders, and the remaining portion is retained to supplement business capital.",
+          "Production overhead costs are allocated to products based on normal capacity and actual machine hours. Costs that do not generate products meeting standards are recognized as expenses in the period. Budgeting is updated based on material prices and contract progress."
+        ],
+        "table": false
+      },
+      {
+        "title": "B17. Revenue and Cost of Sales",
+        "paragraphs": [
+          "Revenue is classified by product group and processing services. Revenue for {year} increased due to contracts for manufacturing machine assemblies and spare parts. Cost of sales includes direct materials, direct labor, and production overhead allocated based on machine hours.",
+          "The Company reconciles input value-added tax with electronic invoices and purchase records. Deductible value-added tax is tracked for each declaration period; amounts not yet eligible for deduction are classified for handling in accordance with regulations.",
+          "Material items are disclosed in accordance with the requirements of the enterprise accounting regime. Figures in the report are rounded in the narrative sections but recorded in Vietnamese Dong in the schedules."
+        ],
+        "table": true
+      },
+      {
+        "title": "B18. Corporate Income Tax",
+        "paragraphs": [
+          "Current corporate income tax expense is calculated on taxable income at the tax rate applicable to the Company. The Company has filed provisional tax payments in accordance with regulations and reconciled its tax obligations with the regulatory authority. There are no material unrecognized tax amounts."
+        ],
+        "table": false
+      }
+    ]
+  }
+}

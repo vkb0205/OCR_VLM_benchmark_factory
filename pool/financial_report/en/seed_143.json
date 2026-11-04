@@ -1,0 +1,128 @@
+{
+  "variables": {
+    "industry": "dệt may",
+    "company_size": "small",
+    "fiscal_year": 2023
+  },
+  "source": "seed_143.json",
+  "values": {
+    "board_paragraph": [
+      "The Company specializes in greige fabric weaving, dyeing and finishing, and the manufacture of lightweight jackets, with a production scale suited to a small enterprise. Its products are supplied to domestic apparel distributors and export-processing workshops under long-term contracts.",
+      "In {year}, the Company operated three knitting lines, one dyeing line and two sewing teams. The Board of Management adjusted production schedules to match delivery batches, reduced slow-moving inventory and increased utilization of the dyeing machines.",
+      "The Company fulfilled its tax obligations on time and incurred no material penalties. Management continued to control customer credit limits, monitor yarn prices and negotiate time-of-use electricity rates to protect profit margins.",
+      "Current assets accounted for a large proportion of total assets, consisting mainly of cash, trade receivables and raw-material and accessory inventories.",
+      "In {next}, the Company plans to focus on knitted fabrics with traceable yarn, expand its customer base among apparel businesses in central Vietnam and complete its wastewater recycling system. The business plan is based on assumptions of stable market demand, no unusual fluctuations in raw-material prices and collection of receivables in accordance with contract terms. The Company will prioritize investment in water-saving equipment rather than a sharp expansion of production capacity.",
+      "The financial statements were audited by {auditor}. The Board of Management is responsible for preparing fairly presented financial statements, maintaining appropriate internal controls and safeguarding the accounting records in accordance with regulations.",
+      "After the end of the financial year, the Company signed a delivery addendum with an existing customer and replaced an air compressor at the dyeing workshop. These events did not result in any material adjustments to the figures presented. Apart from the matters described above, the Board of Management is not aware of any other events that require disclosure or could significantly affect the Company’s ability to continue as a going concern.",
+      "The Board of Management confirms that the principal accounting policies have been applied consistently between periods, that estimates are based on reasonable assumptions and that material transactions have been fully reflected. The Company is expected to continue operating normally for the foreseeable future; accordingly, the financial statements have been prepared on a going-concern basis. The Board of Management respectfully submits this report, together with the independent auditor’s report, to the shareholders and the Board of Directors."
+    ],
+    "auditor_paragraphs": [
+      "The Board of Management is responsible for preparing and fairly presenting the financial statements, selecting appropriate accounting policies, making reasonable estimates and maintaining the internal controls necessary to ensure that the financial statements are free from material misstatement, whether due to fraud or error.",
+      "The auditor’s responsibility is to express an opinion on the financial statements based on the audit. We conducted our audit in accordance with Vietnamese Standards on Auditing. These standards require compliance with ethical requirements and the planning and performance of procedures to obtain sufficient appropriate evidence.",
+      "An audit involves performing procedures to obtain evidence regarding the amounts and disclosures. The procedures selected depend on the auditor’s professional judgment, including the assessment of the risks of material misstatement. We also evaluate the appropriateness of the accounting policies, the estimates and the overall presentation of the financial statements.",
+      "We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our audit opinion. During the audit, we identified no material matters that would change our conclusion that the financial statements have been prepared on a going-concern basis and that the information presented is consistent.",
+      "Based on the results of our audit, we issue an unmodified opinion on the Company’s financial statements for {year}. This report is intended to be used only together with the financial statements and accompanying notes, and not for any other specific purpose unless the audit firm has given its written consent."
+    ],
+    "board_title": "REPORT OF THE BOARD OF MANAGEMENT",
+    "auditor_title": "INDEPENDENT AUDITOR’S REPORT",
+    "auditor_addressee": "To: The Shareholders and Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "1. Business operations",
+        "paragraphs": [
+          "{company} operates in the textile, dyeing and apparel industries. The normal production cycle ranges from two to six weeks.",
+          "The Company has no material subsidiaries or dependent units."
+        ],
+        "table": true
+      },
+      {
+        "title": "2. Principal accounting policies",
+        "paragraphs": [
+          "Foreign currency transactions are translated at the actual exchange rate on the transaction date; foreign-currency monetary assets and liabilities are retranslated at the end of the period.",
+          "Revenue is recognized when control of goods is transferred and the amount can be measured reliably. Expenses are recognized in accordance with the related revenue. Current corporate income tax is calculated on taxable income at the applicable tax rate."
+        ],
+        "table": true
+      },
+      {
+        "title": "3. Cash and cash equivalents",
+        "paragraphs": [
+          "The Company’s cash comprises cash on hand and demand deposits held with banks selected according to payment security criteria. The Company had no restricted cash at the reporting date.",
+          "The year-end balance increased due to improved cash collections from customers in the final quarter, although the Company had repaid part of its borrowings and purchased equipment for the dyeing workshop."
+        ],
+        "table": true
+      },
+      {
+        "title": "4. Trade receivables",
+        "paragraphs": [
+          "Trade receivables arise mainly from sales of fabric and jackets under contract. The Company assesses the recoverability of each balance and recognizes an allowance for balances showing signs of being overdue or impaired. There were no material receivables from related parties.",
+          "Management maintains credit limits and requires account reconciliations for each delivery batch. Collections received after the end of the period were considered in preparing the report."
+        ],
+        "table": true
+      },
+      {
+        "title": "5. Inventories",
+        "paragraphs": [
+          "Inventories comprise yarn, dyes, accessories, work in progress and finished goods. Cost is determined using the weighted average method and includes purchase costs, conversion costs and other costs incurred in bringing inventories to their present location and condition.",
+          "The Company conducted a year-end stocktake and recognized an allowance for certain rolls of fabric whose colors were no longer suitable for new orders. Inventories were not pledged as security for borrowings."
+        ],
+        "table": true
+      },
+      {
+        "title": "6. Property, plant and equipment",
+        "paragraphs": [
+          "Property, plant and equipment mainly comprise weaving machines, dyeing machines, sewing machines, factory buildings and auxiliary equipment.",
+          "During the year, the Company completed the installation of a fabric-drying machine and disposed of a small, fully depreciated item of equipment without proceeds. Depreciation expense is allocated to cost of sales, selling expenses and administrative expenses."
+        ],
+        "table": true
+      },
+      {
+        "title": "7. Borrowings and finance lease liabilities",
+        "paragraphs": [
+          "Short-term borrowings are used to supplement working capital for yarn purchases and production costs. Long-term borrowings are used to finance equipment for the dyeing workshop and bear floating interest rates in accordance with agreements with credit institutions. The Company complied with its payment terms and had no overdue borrowings at the reporting date.",
+          "Borrowing costs are recognized as finance costs in the period, except for amounts eligible for capitalization under applicable regulations; no borrowing costs were capitalized in {year}."
+        ],
+        "table": true
+      },
+      {
+        "title": "8. Equity",
+        "paragraphs": [
+          "The Company appropriates funds to the development investment fund from retained earnings in accordance with a resolution of the Board of Directors. Closing retained earnings comprise accumulated balances from prior years and profit for the current year.",
+          "As of the date the report was issued, the Company had not decided to declare a dividend for {year}. The distribution of profits will be considered after the financial statements have been approved."
+        ],
+        "table": true
+      },
+      {
+        "title": "9. Revenue and cost of sales",
+        "paragraphs": [
+          "Sales revenue is recognized for each delivery batch supported by acceptance records and quantity reconciliations. Revenue deductions comprise trade discounts and sales returns in accordance with the agreed terms. Cost of sales reflects materials, direct labor, production overhead and inventory write-down allowances.",
+          "Revenue in {year} increased due to the recycled-blend fabric product group."
+        ],
+        "table": true
+      },
+      {
+        "title": "10. Taxes and other amounts payable to the State",
+        "paragraphs": [
+          "The Company files value-added tax under the credit method and applies the corporate income tax rate prescribed by current regulations. Taxes payable are reconciled to tax returns and paid within the statutory deadlines.",
+          "Taxes and other amounts payable to the State at the reporting date were not subject to any material disputes. The Board of Management considers that all tax obligations have been fully reflected in the financial statements."
+        ],
+        "table": true
+      },
+      {
+        "title": "11. Related-party transactions and balances",
+        "paragraphs": [
+          "The Company’s related parties include members of the Board of Directors, the Board of Management and persons with significant control. During the year, the Company had no material purchases or sales with related parties other than salaries, remuneration and business travel expenses under internal policies.",
+          "Transactions with management personnel are approved by the appropriate authority and recorded in accordance with the policies applied to other employees performing similar functions."
+        ],
+        "table": true
+      },
+      {
+        "title": "12. Commitments and events after the reporting date",
+        "paragraphs": [
+          "The Company has contracts to purchase yarn and dyes for production in the ordinary course of business and had no material capital commitments undisclosed at the reporting date. Factory premises leases are paid in accordance with the agreed terms.",
+          "The Board of Management considers that these events do not require adjustments to the figures in the financial statements."
+        ],
+        "table": true
+      }
+    ]
+  }
+}

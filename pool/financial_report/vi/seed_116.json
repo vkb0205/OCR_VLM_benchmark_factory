@@ -1,0 +1,130 @@
+{
+ "variables": {
+  "industry": "nông sản xuất khẩu",
+  "company_size": "large",
+  "fiscal_year": 2025
+ },
+ "source": "seed_116.json",
+ "values": {
+  "board_paragraph": [
+   "{company} hoạt động trong lĩnh vực nông sản xuất khẩu, tập trung thu mua, sơ chế và đóng gói gạo thơm, hạt điều cùng trái cây sấy. Sản phẩm được giao theo hợp đồng cho các nhà phân phối thực phẩm tại châu Á, Trung Đông và một số thị trường châu Âu.",
+   "Trong năm {year}, Công ty mở rộng vùng liên kết với hộ canh tác, áp dụng nhật ký điện tử cho từng lô nguyên liệu và nâng công suất kho mát. Bộ phận kiểm soát chất lượng tăng tần suất lấy mẫu, trong khi bộ phận logistics phối hợp lịch tàu để giảm thời gian lưu container. Những biện pháp này giúp doanh nghiệp duy trì độ ổn định của hàng xuất khẩu trong bối cảnh chi phí vận chuyển và tỷ giá biến động.",
+   "Kết quả tăng trưởng đến từ sản lượng gạo đóng bao và trái cây sấy cao hơn, cơ cấu khách hàng cải thiện, đồng thời định mức hao hụt tại nhà máy được kiểm soát chặt hơn. Chi phí tài chính vẫn được theo dõi sát do nhu cầu vốn lưu động lớn.",
+   "Hàng tồn kho tăng theo kế hoạch dự trữ nguyên liệu đầu vụ, nhưng các khoản phải thu được phân loại theo tuổi nợ và giới hạn tín dụng. Ban điều hành thường xuyên rà soát lịch thu tiền và nghĩa vụ thanh toán với ngân hàng.",
+   "Trong năm {next}, Công ty dự kiến ưu tiên các sản phẩm có truy xuất nguồn gốc rõ ràng, nâng tỷ trọng đóng gói theo quy cách riêng của từng khách hàng và hoàn thiện dây chuyền sấy tiết kiệm năng lượng. Các khoản đầu tư mới sẽ được xem xét theo hiệu quả dòng tiền, năng lực cung ứng và yêu cầu kiểm dịch của từng thị trường. Công ty cũng chuẩn bị phương án mua bảo hiểm hàng hóa cho các tuyến vận chuyển dài.",
+   "Hội đồng quản trị và Ban Tổng Giám đốc thực hiện nhiệm vụ theo điều lệ, nghị quyết của Đại hội đồng cổ đông và quy chế quản trị nội bộ. Các cuộc họp trong năm tập trung vào nguồn nguyên liệu, chất lượng xuất khẩu, an toàn kho và quản trị rủi ro tín dụng. Danh sách nhân sự chủ chốt được trình bày tại bảng kèm theo báo cáo này; không có thay đổi làm gián đoạn hoạt động điều hành.",
+   "Ban Tổng Giám đốc chịu trách nhiệm lập và trình bày báo cáo tài chính trung thực, hợp lý, lựa chọn chính sách kế toán phù hợp và duy trì hệ thống kiểm soát nội bộ cần thiết. Công ty đã đối chiếu số liệu giữa sổ tổng hợp, kho hàng và công nợ khách hàng. Báo cáo được lập trên cơ sở hoạt động liên tục; các ước tính về dự phòng và thuế được xem xét theo thông tin hiện có.",
+   "{auditor} đã được mời kiểm toán báo cáo tài chính năm {year}. Theo đánh giá của Ban Tổng Giám đốc, từ ngày kết thúc kỳ kế toán đến ngày ký báo cáo không phát sinh sự kiện trọng yếu cần điều chỉnh số liệu. Một hợp đồng cung ứng dài hạn được gia hạn sau ngày khóa sổ, nhưng điều này phù hợp với kế hoạch kinh doanh và không làm thay đổi các khoản mục đã trình bày.",
+   "Ban Tổng Giám đốc ghi nhận sự phối hợp của người lao động, vùng liên kết, khách hàng và các đối tác vận chuyển trong năm qua. Công ty tiếp tục đặt mục tiêu tăng giá trị nông sản qua chế biến, giảm tổn thất sau thu hoạch và duy trì kỷ luật tài chính. Các chỉ tiêu về doanh thu, lợi nhuận, tài sản và vốn chủ sở hữu được trình bày thống nhất với báo cáo tài chính đã lập."
+  ],
+  "auditor_paragraphs": [
+   "Báo cáo được lập bằng đồng Việt Nam và trình bày các số liệu so sánh của năm trước.",
+   "Ban Tổng Giám đốc chịu trách nhiệm lập, trình bày trung thực báo cáo tài chính và thiết kế kiểm soát nội bộ cần thiết để bảo đảm báo cáo không có sai sót trọng yếu do gian lận hoặc nhầm lẫn. Trách nhiệm này bao gồm lựa chọn chính sách kế toán thích hợp, thực hiện ước tính hợp lý và đánh giá khả năng hoạt động liên tục của Công ty.",
+   "Trách nhiệm của chúng tôi là đưa ra ý kiến về báo cáo tài chính dựa trên kết quả kiểm toán. Chúng tôi đã thực hiện kiểm toán theo các chuẩn mực kiểm toán Việt Nam. Các chuẩn mực này yêu cầu chúng tôi tuân thủ yêu cầu đạo đức, lập kế hoạch và thực hiện thủ tục để đạt được sự đảm bảo hợp lý rằng báo cáo tài chính không còn sai sót trọng yếu.",
+   "Một cuộc kiểm toán bao gồm thực hiện thủ tục để thu thập bằng chứng về các số liệu và thuyết minh trên báo cáo tài chính. Thủ tục được lựa chọn dựa trên xét đoán của kiểm toán viên, bao gồm đánh giá rủi ro sai sót trọng yếu do gian lận hoặc nhầm lẫn. Khi đánh giá rủi ro, kiểm toán viên xem xét kiểm soát nội bộ liên quan nhưng không nhằm đưa ra ý kiến về hiệu quả của kiểm soát đó.",
+   "Chúng tôi tin rằng các bằng chứng kiểm toán đã thu thập là đầy đủ và thích hợp làm cơ sở cho ý kiến kiểm toán của chúng tôi. Trong quá trình kiểm toán, chúng tôi đã trao đổi với Hội đồng quản trị và Ban Tổng Giám đốc về phạm vi, lịch trình, các phát hiện quan trọng và những vấn đề cần lưu ý trong việc lập báo cáo tài chính.",
+   "Căn cứ các bằng chứng thu thập được, chúng tôi phát hành ý kiến chấp nhận toàn phần đối với báo cáo tài chính năm {year} của Công ty. Báo cáo này được lập cho mục đích cung cấp thông tin tài chính cho cổ đông và các bên liên quan; các thuyết minh là bộ phận không tách rời và cần được đọc đồng thời với các báo cáo chính."
+  ],
+  "board_title": "BÁO CÁO CỦA BAN TỔNG GIÁM ĐỐC",
+  "auditor_title": "BÁO CÁO KIỂM TOÁN ĐỘC LẬP",
+  "auditor_addressee": "Kính gửi: Các cổ đông và Hội đồng quản trị {company}",
+  "notes": [
+   {
+    "title": "01. Đặc điểm hoạt động",
+    "paragraphs": [
+     "Đơn vị tiền tệ sử dụng trong ghi chép và trình bày là đồng Việt Nam. Công ty tổ chức hoạt động theo các hợp đồng mùa vụ và hợp đồng giao hàng dài hạn.",
+     "Trong năm, Công ty duy trì mạng lưới liên kết với các hộ canh tác, cơ sở sơ chế và đơn vị vận chuyển. Không có chi nhánh phụ thuộc có quy mô trọng yếu ngoài địa điểm sản xuất chính. Ban Tổng Giám đốc đánh giá doanh nghiệp có đủ nguồn lực để tiếp tục hoạt động bình thường trong ít nhất mười hai tháng kể từ ngày lập báo cáo."
+    ],
+    "table": true
+   },
+   {
+    "title": "02. Chính sách kế toán chủ yếu",
+    "paragraphs": [
+     "Báo cáo tài chính được lập theo Chế độ kế toán doanh nghiệp Việt Nam và các quy định hiện hành về lập, trình bày báo cáo tài chính. Tài sản được ghi nhận theo giá gốc, trừ các khoản được yêu cầu đánh giá hoặc trích lập dự phòng theo quy định. Doanh thu xuất khẩu được ghi nhận khi Công ty đã chuyển giao phần lớn rủi ro và lợi ích, có khả năng thu được lợi ích kinh tế và xác định được giá trị đáng tin cậy.",
+     "Hàng tồn kho được tính theo giá thấp hơn giữa giá gốc và giá trị thuần có thể thực hiện. Giá xuất kho được xác định theo phương pháp bình quân gia quyền. Các khoản phải thu được xem xét dự phòng dựa trên tuổi nợ, lịch sử thanh toán và thông tin về khả năng trả nợ của khách hàng."
+    ],
+    "table": true
+   },
+   {
+    "title": "03. Tiền và các khoản tương đương tiền",
+    "paragraphs": [
+     "Tiền bao gồm tiền mặt tại quỹ và số dư tiền gửi ngân hàng không kỳ hạn. Các khoản tương đương tiền là những khoản đầu tư ngắn hạn có thời hạn thu hồi không quá ba tháng kể từ ngày mua, có khả năng chuyển đổi dễ dàng thành một lượng tiền xác định và ít rủi ro về thay đổi giá trị. Công ty thực hiện đối chiếu số dư ngân hàng hàng tháng và kiểm kê quỹ theo quy chế nội bộ.",
+     "Số dư tiền cuối năm tăng so với đầu năm do dòng tiền từ hoạt động kinh doanh được cải thiện, mặc dù Công ty đã giải ngân cho dây chuyền sấy và trả cổ tức. Một phần tiền gửi được giữ tại các ngân hàng phục vụ thanh toán xuất khẩu và không bị hạn chế quyền sử dụng."
+    ],
+    "table": true
+   },
+   {
+    "title": "04. Phải thu khách hàng và phải thu khác",
+    "paragraphs": [
+     "Các khoản phải thu khách hàng chủ yếu phát sinh từ giao hàng nông sản theo điều kiện thanh toán bằng chuyển khoản. Công ty theo dõi công nợ theo từng hợp đồng, đồng tiền thanh toán và thời hạn tín dụng. Trước khi ký hợp đồng mới, bộ phận kinh doanh đánh giá thông tin thương mại, lịch sử giao dịch và hạn mức được Ban Tổng Giám đốc phê duyệt.",
+     "Dự phòng phải thu khó đòi được lập cho những khoản có dấu hiệu suy giảm khả năng thu hồi. Trong năm, Công ty tăng cường xác nhận công nợ và thu hồi các khoản quá hạn. Ban Tổng Giám đốc không nhận thấy khoản phải thu nào khác có rủi ro trọng yếu ngoài số đã được phản ánh trong báo cáo tài chính."
+    ],
+    "table": true
+   },
+   {
+    "title": "05. Hàng tồn kho",
+    "paragraphs": [
+     "Hàng tồn kho gồm nguyên liệu lúa, hạt điều, trái cây tươi, thành phẩm đã đóng gói và vật tư phục vụ sản xuất. Nguyên liệu được kiểm tra độ ẩm, tạp chất và nguồn gốc trước khi nhập kho. Các kho được phân khu theo loại hàng, ngày nhập và trạng thái kiểm nghiệm. Chi phí mua hàng bao gồm giá mua, chi phí vận chuyển, bốc xếp và các chi phí trực tiếp liên quan.",
+     "Cuối năm, lượng nguyên liệu tăng do Công ty chủ động mua vào thời điểm thu hoạch để bảo đảm đơn hàng đầu năm sau. Giá trị thuần có thể thực hiện được xác định trên cơ sở giá bán dự kiến sau khi trừ chi phí hoàn thiện và chi phí bán hàng. Khoản dự phòng phản ánh các lô hàng chậm luân chuyển hoặc có giá bán dự kiến thấp hơn giá gốc."
+    ],
+    "table": true
+   },
+   {
+    "title": "06. Tài sản cố định và xây dựng cơ bản",
+    "paragraphs": [
+     "Tài sản cố định hữu hình của Công ty gồm nhà xưởng, máy làm sạch, dây chuyền sấy, thiết bị đóng gói, phương tiện vận chuyển và thiết bị quản lý. Nguyên giá được ghi nhận khi tài sản sẵn sàng đưa vào sử dụng. Chi phí sửa chữa thường xuyên được ghi nhận vào chi phí trong kỳ; các khoản nâng cấp làm tăng công suất hoặc kéo dài thời gian sử dụng được vốn hóa theo quy định.",
+     "Trong năm {year}, Công ty tiếp tục xây dựng kho mát và lắp đặt thiết bị sấy tự động. Tài sản dở dang được tập hợp theo từng dự án, chưa khấu hao cho đến khi hoàn thành và đưa vào sử dụng. Ban Tổng Giám đốc đã rà soát dấu hiệu giảm giá trị và không ghi nhận tổn thất bổ sung ngoài các khoản đã trình bày."
+    ],
+    "table": true
+   },
+   {
+    "title": "07. Nợ vay và nghĩa vụ tài chính",
+    "paragraphs": [
+     "Các khoản vay ngắn hạn được sử dụng bổ sung vốn lưu động cho mùa thu mua và thanh toán nguyên liệu. Khoản vay dài hạn chủ yếu tài trợ nhà xưởng, kho mát và dây chuyền chế biến. Lãi suất được xác định theo hợp đồng tín dụng và có thể điều chỉnh theo thời kỳ. Công ty theo dõi điều khoản hạn mức, tài sản bảo đảm và lịch trả nợ bằng bảng kế hoạch dòng tiền hàng tháng.",
+     "Một số khoản vay được bảo đảm bằng quyền sử dụng đất, nhà xưởng và máy móc. Chi phí lãi vay được ghi nhận vào kết quả kinh doanh, trừ phần đủ điều kiện vốn hóa trong giai đoạn đầu tư xây dựng."
+    ],
+    "table": true
+   },
+   {
+    "title": "08. Vốn chủ sở hữu và lợi nhuận chưa phân phối",
+    "paragraphs": [
+     "Thặng dư vốn cổ phần được hình thành từ các đợt phát hành trước đây. Quỹ đầu tư phát triển được trích lập theo nghị quyết của Đại hội đồng cổ đông để phục vụ mở rộng kho, nâng cấp thiết bị và phát triển vùng nguyên liệu.",
+     "Lợi nhuận sau thuế chưa phân phối cuối năm gồm số lũy kế đến đầu kỳ và lợi nhuận của năm {year} sau khi xem xét phân phối. Công ty đã chi cổ tức theo nghị quyết được thông qua, đồng thời giữ lại một phần lợi nhuận để bổ sung vốn cho kế hoạch đầu tư. Việc phân phối tiếp theo phụ thuộc kết quả kinh doanh và phê duyệt của cổ đông."
+    ],
+    "table": true
+   },
+   {
+    "title": "09. Doanh thu và giá vốn",
+    "paragraphs": [
+     "Doanh thu được phân loại theo nhóm sản phẩm và ghi nhận khi quyền kiểm soát hàng hóa đã chuyển giao theo điều khoản giao hàng. Doanh thu xuất khẩu được quy đổi theo tỷ giá giao dịch tại thời điểm ghi nhận. Các khoản giảm trừ doanh thu gồm chiết khấu thương mại, hàng bán bị trả lại và hỗ trợ theo chất lượng lô hàng, được xác định trên hồ sơ đối chiếu với khách hàng.",
+     "Giá vốn bao gồm giá nguyên liệu, nhân công trực tiếp, chi phí chế biến và phân bổ chi phí sản xuất chung. Công ty phân tích biên lợi nhuận theo từng nhóm sản phẩm để điều chỉnh kế hoạch thu mua và giá bán. Các hợp đồng có điều khoản giao hàng nhiều đợt được theo dõi riêng theo số lượng đã nghiệm thu."
+    ],
+    "table": true
+   },
+   {
+    "title": "10. Thuế thu nhập doanh nghiệp",
+    "paragraphs": [
+     "Chi phí thuế thu nhập doanh nghiệp hiện hành được tính trên thu nhập chịu thuế của năm theo thuế suất áp dụng và các điều chỉnh theo luật thuế. Công ty kê khai, tạm nộp và quyết toán thuế theo quy định. Các khoản chi phí không được trừ khi tính thuế được theo dõi riêng trong hồ sơ quyết toán và không làm thay đổi chi phí kế toán ngoài phần chênh lệch được ghi nhận.",
+     "Tài sản và thuế thu nhập hoãn lại được ghi nhận đối với các chênh lệch tạm thời được khấu trừ hoặc chịu thuế, trong phạm vi chắc chắn có lợi nhuận tính thuế để sử dụng. Ban Tổng Giám đốc đã rà soát các sắc thuế liên quan đến hoạt động xuất khẩu, thuế giá trị gia tăng và thuế nhà thầu nếu phát sinh."
+    ],
+    "table": true
+   },
+   {
+    "title": "11. Giao dịch với các bên liên quan",
+    "paragraphs": [
+     "Các bên liên quan của Công ty gồm thành viên Hội đồng quản trị, Ban Tổng Giám đốc và doanh nghiệp do những người này có quyền kiểm soát hoặc ảnh hưởng đáng kể. Các giao dịch với bên liên quan được thực hiện theo điều kiện thương mại được phê duyệt, có hợp đồng và chứng từ đầy đủ. Công ty không ghi nhận khoản vay ưu đãi hoặc bảo lãnh trọng yếu cho người quản lý.",
+     "Thù lao và lợi ích của người quản lý được xác định theo nghị quyết và quy chế tiền lương. Các khoản phải trả cuối năm được thanh toán theo lịch thông thường. Ban Tổng Giám đốc xác nhận không có giao dịch bất thường với bên liên quan chưa được thuyết minh trong báo cáo tài chính này."
+    ],
+    "table": true
+   },
+   {
+    "title": "12. Cam kết và sự kiện sau ngày khóa sổ",
+    "paragraphs": [
+     "Công ty có các cam kết mua nguyên liệu theo mùa vụ và cam kết thuê một số thiết bị kho lạnh. Các cam kết này được ký trong điều kiện kinh doanh thông thường, giá trị thanh toán phụ thuộc sản lượng giao nhận và tiến độ nghiệm thu. Công ty cũng có nghĩa vụ thanh toán thuê đất, bảo hiểm và dịch vụ logistics theo các hợp đồng đang còn hiệu lực.",
+     "Các sự kiện này không cung cấp bằng chứng về điều kiện đã tồn tại tại ngày lập bảng cân đối kế toán và không cần điều chỉnh số liệu. Không có vụ kiện hoặc sự kiện bất thường nào cần ghi nhận bổ sung."
+    ],
+    "table": true
+   }
+  ]
+ }
+}

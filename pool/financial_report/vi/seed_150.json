@@ -1,0 +1,106 @@
+{
+ "variables": {
+  "industry": "phân phối dược phẩm",
+  "company_size": "medium",
+  "fiscal_year": 2023
+ },
+ "source": "seed_150.json",
+ "values": {
+  "board_paragraph": [
+   "Mạng lưới khách hàng gồm nhà thuốc độc lập, phòng khám tư nhân và các cơ sở y tế khu vực đồng bằng. Ban Tổng giám đốc duy trì nguyên tắc giao hàng đúng hạn, truy xuất được lô hàng và kiểm soát chặt hạn dùng.",
+   "Công ty không phụ thuộc vào một khách hàng duy nhất; các hợp đồng đều được xem xét hạn mức tín dụng, điều kiện trả hàng và yêu cầu bảo quản trước khi phê duyệt.",
+   "Biên lợi nhuận gộp được bảo vệ nhờ thương lượng lại chiết khấu mua hàng và giảm hao hụt tại kho. Chi phí bán hàng tăng do mở thêm tuyến giao nhận, trong khi chi phí quản lý được kiểm soát theo ngân sách. Các khoản dự phòng phải thu và hàng tồn kho được rà soát theo tuổi nợ, hạn dùng, khả năng luân chuyển và thông tin thu hồi thực tế.",
+   "các khoản vay được sử dụng chủ yếu để tài trợ vốn lưu động theo mùa.",
+   "Hội đồng quản trị thường xuyên xem xét báo cáo công nợ, tồn kho theo lô, mức sử dụng hạn mức tín dụng và các chỉ tiêu an toàn kho. Công ty dự kiến năm {next} sẽ hoàn thiện phần mềm theo dõi nhiệt độ theo thời gian thực, đào tạo thêm nhân viên dược và mở rộng hợp tác với hệ thống nhà thuốc khu vực, trên cơ sở bảo đảm nguồn vốn và tuân thủ quy định chuyên ngành.",
+   "Báo cáo tài chính năm {year} được kiểm toán bởi {auditor}. Ban Tổng giám đốc chịu trách nhiệm lập báo cáo trung thực, lựa chọn chính sách kế toán phù hợp, duy trì kiểm soát nội bộ và bảo quản hồ sơ chứng từ. Sau ngày kết thúc kỳ kế toán, Công ty không phát sinh sự kiện trọng yếu cần điều chỉnh hoặc thuyết minh bổ sung. Ban Tổng giám đốc đã xem xét toàn bộ công nợ, hàng tồn kho và nghĩa vụ thuế trước khi phê duyệt báo cáo này.",
+   "Việc lập báo cáo được thực hiện trên cơ sở hoạt động liên tục vì Công ty có đủ nguồn vốn lưu động, các khoản phải thu được theo dõi thường xuyên và không có kế hoạch thanh lý hay thu hẹp đáng kể hoạt động. Các ước tính kế toán đã được rà soát theo thông tin sẵn có tại ngày ký.",
+   "Trong năm, Công ty đã xử lý các lô hàng chậm luân chuyển bằng chương trình điều phối nội bộ và trích lập dự phòng theo giá trị thuần có thể thực hiện được. Một số thiết bị kho mới được đưa vào sử dụng từ quý ba, góp phần giảm sai lệch khi kiểm đếm. Không có giao dịch bất thường với thành viên Ban Tổng giám đốc làm thay đổi bản chất kết quả kinh doanh. Công ty tiếp tục ưu tiên an toàn người bệnh, minh bạch nguồn gốc và kỷ luật tín dụng trong mọi quyết định thương mại."
+  ],
+  "auditor_paragraphs": [
+   "Các báo cáo này thể hiện các số liệu so sánh của năm trước đã được trình bày theo cùng chính sách kế toán.",
+   "Ban Tổng giám đốc chịu trách nhiệm về việc lập và trình bày trung thực, hợp lý báo cáo tài chính theo khuôn khổ được nêu trên, đồng thời chịu trách nhiệm về kiểm soát nội bộ mà Ban Tổng giám đốc xác định là cần thiết để bảo đảm việc lập báo cáo tài chính không có sai sót trọng yếu do gian lận hoặc nhầm lẫn. Trách nhiệm này bao gồm lựa chọn chính sách, thực hiện ước tính và duy trì sổ sách kế toán thích hợp.",
+   "Trách nhiệm của chúng tôi là đưa ra ý kiến về báo cáo tài chính dựa trên kết quả cuộc kiểm toán. Chúng tôi đã tiến hành kiểm toán theo các Chuẩn mực kiểm toán Việt Nam. Các chuẩn mực này yêu cầu chúng tôi tuân thủ yêu cầu đạo đức nghề nghiệp và lập kế hoạch, thực hiện kiểm toán để đạt được sự đảm bảo hợp lý về việc báo cáo tài chính có còn sai sót trọng yếu hay không. Cuộc kiểm toán bao gồm xem xét bằng chứng chọn mẫu và đánh giá các ước tính.",
+   "Chúng tôi đã thực hiện các thủ tục kiểm toán đối với doanh thu, giá vốn, hàng tồn kho, công nợ phải thu, công nợ phải trả, tiền và các khoản vay. Chúng tôi cũng đánh giá việc trình bày tổng thể, cấu trúc báo cáo và các thuyết minh, bao gồm việc báo cáo tài chính có phản ánh các giao dịch và sự kiện theo cách đạt được sự trình bày hợp lý hay không. Chúng tôi tin rằng bằng chứng kiểm toán thu thập được là đầy đủ và thích hợp để làm cơ sở cho ý kiến kiểm toán.",
+   "Trong quá trình kiểm toán, chúng tôi đã trao đổi với Ban Tổng giám đốc về phạm vi, lịch trình dự kiến và các phát hiện quan trọng, bao gồm những thiếu sót đáng lưu ý của kiểm soát nội bộ nếu có. Chúng tôi cũng xác nhận tính độc lập, tuân thủ các yêu cầu đạo đức áp dụng và thông báo các mối quan hệ có thể ảnh hưởng đến tính khách quan. Không có vấn đề nào được xác định làm thay đổi ý kiến chấp nhận toàn phần dưới đây.",
+   "Căn cứ vào các thủ tục đã thực hiện và bằng chứng đã thu thập, chúng tôi đưa ra ý kiến chấp nhận toàn phần. Các thuyết minh kèm theo là bộ phận không tách rời của báo cáo tài chính và cung cấp thông tin cần thiết để người sử dụng hiểu chính sách kế toán, các khoản mục trọng yếu và các cam kết của Công ty. Báo cáo này được phát hành cho mục đích sử dụng cùng với bộ báo cáo tài chính năm {year} của Công ty.",
+   "Chúng tôi không nhận thấy sự kiện nào phát sinh sau ngày kết thúc năm tài chính đến ngày ký báo cáo kiểm toán cần phải điều chỉnh hoặc trình bày bổ sung trong báo cáo tài chính. Việc đánh giá khả năng hoạt động liên tục thuộc trách nhiệm của Ban Tổng giám đốc; trách nhiệm của kiểm toán viên là xem xét tính phù hợp của việc sử dụng giả định này và kết luận liệu có tồn tại yếu tố không chắc chắn trọng yếu cần được thuyết minh hay không."
+  ],
+  "board_title": "BÁO CÁO CỦA BAN TỔNG GIÁM ĐỐC",
+  "auditor_title": "BÁO CÁO KIỂM TOÁN ĐỘC LẬP",
+  "auditor_addressee": "Kính gửi: Các cổ đông và Hội đồng quản trị {company}",
+  "notes": [
+   {
+    "title": "B09. Cơ sở lập báo cáo và chính sách kế toán chủ yếu",
+    "paragraphs": [
+     "Báo cáo sử dụng nguyên tắc giá gốc, ngoại trừ những khoản mục được yêu cầu đo lường theo giá trị hợp lý. Các giao dịch bằng ngoại tệ được quy đổi theo tỷ giá thực tế tại ngày giao dịch và đánh giá lại các khoản mục tiền tệ cuối kỳ theo quy định hiện hành.",
+     "Công ty ghi nhận doanh thu khi quyền kiểm soát hàng hóa được chuyển giao cho khách hàng và khả năng thu được lợi ích kinh tế được xác định hợp lý. Chi phí được ghi nhận phù hợp với doanh thu và trên cơ sở dồn tích. Các ước tính về dự phòng, thời gian khấu hao và khả năng thu hồi công nợ được rà soát tại ngày lập báo cáo."
+    ],
+    "table": true
+   },
+   {
+    "title": "B10. Tiền và các khoản tương đương tiền",
+    "paragraphs": [
+     "Tiền của Công ty bao gồm tiền mặt tại quỹ và tiền gửi không kỳ hạn tại các ngân hàng được lựa chọn theo tiêu chí an toàn thanh khoản. Các khoản tương đương tiền là tiền gửi có kỳ hạn ban đầu không quá ba tháng, có khả năng chuyển đổi dễ dàng thành tiền và ít chịu rủi ro về thay đổi giá trị. Ban Tổng giám đốc đối chiếu số dư ngân hàng hàng tháng và kiểm kê quỹ vào cuối mỗi kỳ báo cáo.",
+     "Chênh lệch giữa sổ kế toán và xác nhận ngân hàng, nếu có, được điều tra và điều chỉnh trước khi phát hành báo cáo."
+    ],
+    "table": true
+   },
+   {
+    "title": "B11. Phải thu khách hàng và dự phòng",
+    "paragraphs": [
+     "Phải thu khách hàng được trình bày theo giá trị ghi sổ sau khi trừ dự phòng phải thu khó đòi. Công ty phân loại công nợ theo từng khách hàng, địa bàn, thời hạn thanh toán và lịch sử giao dịch. Đối với nhà thuốc và phòng khám, hạn mức tín dụng được phê duyệt trước khi giao hàng; các khoản quá hạn được theo dõi riêng và có kế hoạch thu hồi. Dự phòng được lập cho phần tổn thất ước tính dựa trên tuổi nợ, tài sản bảo đảm và khả năng thanh toán.",
+     "Trong năm, Công ty tăng cường xác nhận công nợ bằng văn bản và đối chiếu qua cổng giao hàng. Một số khoản quá hạn ngắn ngày đã được thu hồi sau ngày khóa sổ. Không có khoản phải thu trọng yếu với bên liên quan chưa được thuyết minh."
+    ],
+    "table": true
+   },
+   {
+    "title": "B12. Hàng tồn kho",
+    "paragraphs": [
+     "Hàng tồn kho bao gồm thuốc thành phẩm, thực phẩm bảo vệ sức khỏe, vật tư y tế và bao bì luân chuyển. Hàng tồn kho được ghi nhận theo giá thấp hơn giữa giá gốc và giá trị thuần có thể thực hiện được. Giá gốc bao gồm giá mua, thuế không được khấu trừ, chi phí vận chuyển và chi phí liên quan trực tiếp. Công ty theo dõi theo mã hàng, số lô và hạn dùng, đồng thời thực hiện kiểm kê luân phiên tại kho trung tâm và kho tuyến.",
+     "Dự phòng giảm giá được trích lập đối với hàng chậm luân chuyển, hàng có hạn dùng còn ngắn hoặc có dấu hiệu giảm giá bán. Ban điều hành phê duyệt phương án điều chuyển, trả nhà cung cấp hoặc tiêu hủy theo từng lô; mọi phương án đều phải có hồ sơ truy xuất và xác nhận của bộ phận phụ trách chất lượng."
+    ],
+    "table": true
+   },
+   {
+    "title": "B13. Tài sản cố định và tài sản dài hạn",
+    "paragraphs": [
+     "Tài sản cố định hữu hình được ghi nhận theo nguyên giá trừ khấu hao lũy kế. Nguyên giá gồm giá mua và các chi phí trực tiếp để đưa tài sản vào trạng thái sẵn sàng sử dụng. Công ty đánh giá dấu hiệu suy giảm khi có thay đổi bất lợi về công suất, tình trạng kỹ thuật hoặc kế hoạch sử dụng tài sản.",
+     "Công ty chưa ghi nhận tài sản thuê tài chính. Các tài sản không còn sử dụng được thanh lý theo quy trình phê duyệt và chênh lệch được ghi nhận vào thu nhập hoặc chi phí khác."
+    ],
+    "table": true
+   },
+   {
+    "title": "B14. Nợ phải trả và các khoản vay",
+    "paragraphs": [
+     "Các khoản phải trả người bán được ghi nhận theo số phải trả trên hóa đơn và biên bản giao nhận. Công ty quản lý thời hạn thanh toán theo từng nhà cung cấp, ưu tiên duy trì nguồn thuốc ổn định và không phát sinh lãi phạt đáng kể. Vay ngắn hạn và dài hạn được phân loại theo thời hạn còn lại tại ngày báo cáo. Lãi vay được ghi nhận vào chi phí theo phương pháp dồn tích và phù hợp với hợp đồng tín dụng.",
+     "Tài sản thế chấp cho các khoản vay là quyền sử dụng kho, phương tiện vận tải và một số tài sản hình thành từ vốn vay theo thỏa thuận với ngân hàng. Công ty đã thanh toán đúng hạn tiền gốc và lãi đến ngày phát hành báo cáo, đồng thời không vi phạm điều khoản trọng yếu của các hợp đồng tín dụng."
+    ],
+    "table": true
+   },
+   {
+    "title": "B15. Vốn chủ sở hữu",
+    "paragraphs": [
+     "Công ty không phát hành cổ phiếu ưu đãi và không có cổ phiếu quỹ tại ngày báo cáo. Quỹ đầu tư phát triển được trích từ lợi nhuận sau thuế theo nghị quyết của Đại hội đồng cổ đông và được sử dụng cho các dự án nâng cấp kho, hệ thống công nghệ thông tin và đào tạo nhân sự.",
+     "Lợi nhuận sau thuế chưa phân phối bao gồm số dư lũy kế đến đầu kỳ và lợi nhuận của kỳ này sau khi xem xét phân phối. Hội đồng quản trị sẽ trình phương án phân phối lợi nhuận năm {year} cho Đại hội đồng cổ đông phê duyệt."
+    ],
+    "table": true
+   },
+   {
+    "title": "B16. Doanh thu và chi phí",
+    "paragraphs": [
+     "Doanh thu thuần năm {year} chủ yếu phát sinh từ bán thuốc thành phẩm và vật tư y tế cho khách hàng trong nước. Doanh thu được ghi nhận sau khi hàng được giao, khách hàng chấp nhận và Công ty xác định được quyền thu tiền. Các khoản chiết khấu thương mại, hàng bán bị trả lại và giảm giá được ghi giảm doanh thu. Chi phí bán hàng bao gồm giao nhận, kho tuyến, nhân viên kinh doanh và chương trình chăm sóc khách hàng.",
+     "Chi phí quản lý doanh nghiệp gồm chi phí nhân sự văn phòng, khấu hao, dịch vụ mua ngoài, bảo hiểm và chi phí tuân thủ. Chi phí tài chính chủ yếu là lãi vay. Thu nhập khác trong năm là khoản thu từ thanh lý một số kệ kho cũ; chi phí khác là chi phí xử lý hàng không còn phù hợp với yêu cầu lưu thông."
+    ],
+    "table": true
+   },
+   {
+    "title": "B17. Thuế và các cam kết",
+    "paragraphs": [
+     "Công ty thực hiện kê khai thuế giá trị gia tăng, thuế thu nhập doanh nghiệp, thuế thu nhập cá nhân và các khoản phải nộp khác theo quy định. Chi phí thuế thu nhập doanh nghiệp hiện hành được tính trên thu nhập chịu thuế và thuế suất áp dụng. Các khoản thuế phải nộp được đối chiếu với tờ khai định kỳ và thanh toán theo lịch. Công ty chưa ghi nhận tranh chấp thuế trọng yếu tại ngày lập báo cáo.",
+     "Công ty thuê một số kho tuyến theo hợp đồng ngắn hạn và thuê dịch vụ vận tải theo chuyến. Các cam kết mua hàng thường được xác lập theo đơn đặt hàng có thể điều chỉnh theo nhu cầu thực tế; do đó chưa phát sinh khoản cam kết vốn dài hạn đáng kể cần trình bày riêng."
+    ],
+    "table": true
+   }
+  ]
+ }
+}

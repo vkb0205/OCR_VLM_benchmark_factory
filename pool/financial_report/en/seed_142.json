@@ -1,0 +1,104 @@
+{
+  "variables": {
+    "industry": "nông sản xuất khẩu",
+    "company_size": "large",
+    "fiscal_year": 2025
+  },
+  "source": "seed_142.json",
+  "values": {
+    "board_paragraph": [
+      "The Company's key products include packaged fragrant rice, lightly roasted cashew kernels, and soft-dried bananas. Its customers are food distributors and processing enterprises abroad; the Company does not depend on any single customer. Quality control activities are carried out from the receipt of raw materials through container loading, with traceability records maintained for each shipment.",
+      "The Board of General Directors considers these results consistent with the plan approved by the Board of Directors.",
+      "The Company maintains short-term liquidity, closely manages export receivables, and performs periodic inventory reconciliations. Borrowings are used mainly to finance seasonal working capital and investment in processing equipment.",
+      "In the coming year, the Company plans to increase the proportion of products certified for growing areas, complete a cold storage facility at the processing area, and develop additional customers in North Africa. Management will continue to monitor exchange rate fluctuations, sea freight costs, and traceability requirements. New investment decisions will be considered based on cash flow and long-term effectiveness.",
+      "The Board of General Directors is responsible for day-to-day operations; the financial statements have been audited by {auditor}.",
+      "The Board of General Directors is responsible for preparing and presenting the financial statements fairly and truthfully in accordance with Vietnamese Accounting Standards and the current corporate accounting regime. The Board of General Directors has established the necessary controls to limit material misstatements. To the best of our knowledge, no material events have occurred after the end of the accounting period that require adjustment or additional disclosure beyond the matters presented.",
+      "The Board of General Directors acknowledges the support of employees, raw material regions, and logistics partners in {year}. The Company continues to prioritize occupational safety, water conservation, and reduction of plastic packaging in export shipments. These programs are implemented alongside the objectives of maintaining stable quality and enhancing the competitiveness of the Vạn Hải brand in the international market."
+    ],
+    "auditor_paragraphs": [
+      "The report is prepared in Vietnamese dong and includes the principal accounting policies.",
+      "In the opinion of the Board of General Directors, the Board is responsible for preparing and fairly presenting the financial statements in accordance with Vietnamese Accounting Standards, the current corporate accounting regime, and relevant legal regulations. The Board is also responsible for internal control that the Board determines is necessary to ensure that the financial statements are free from material misstatement, whether due to fraud or error.",
+      "Our responsibility is to express an opinion on the financial statements based on the results of our audit. We conducted our audit in accordance with Vietnamese Auditing Standards. Those standards require auditors to comply with professional ethics, plan and perform the audit to obtain reasonable assurance about whether the financial statements are free from material misstatement.",
+      "An audit involves performing procedures to obtain audit evidence about the amounts and disclosures in the financial statements. The procedures selected depend on the auditor's judgment, including the assessment of the risks of material misstatement, whether due to fraud or error. In assessing those risks, we consider internal control relevant to the preparation of the financial statements in order to design appropriate audit procedures, but not for the purpose of expressing an opinion on the effectiveness of internal control.",
+      "We also evaluate the appropriateness of the accounting policies used, the reasonableness of accounting estimates and related disclosures made by the Board of General Directors. We consider the Board's use of the going concern basis, conclude on the appropriateness of that basis, and evaluate the overall presentation of the financial statements. We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our audit opinion."
+    ],
+    "board_title": "REPORT OF THE BOARD OF GENERAL DIRECTORS",
+    "auditor_title": "INDEPENDENT AUDITOR'S REPORT",
+    "auditor_addressee": "To the Shareholders and the Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "B09-DN. Nature of operations",
+        "paragraphs": [
+          "The Company operates in the procurement, processing, and export of agricultural products. The currency used in its records is Vietnamese dong.",
+          "Products are sold to foreign distributors under agreed delivery terms."
+        ],
+        "table": false
+      },
+      {
+        "title": "B10-DN. Accounting policies",
+        "paragraphs": [
+          "The financial statements are prepared on the historical cost basis, in accordance with Vietnamese Accounting Standards and the current corporate accounting regime. Revenue is recognized when the majority of risks and rewards have been transferred to the customer.",
+          "Foreign currencies are translated at the actual transaction rate on the date incurred; monetary items denominated in foreign currencies at period-end are revalued at the appropriate exchange rate. Expenses are recognized on the matching principle with revenue."
+        ],
+        "table": false
+      },
+      {
+        "title": "B11-DN. Cash and cash equivalents",
+        "paragraphs": [
+          "The Company's cash includes cash on hand and bank deposits used for domestic and export payments. Cash equivalents are short-term deposits that are readily convertible into cash and are subject to insignificant risk of changes in value."
+        ],
+        "table": true
+      },
+      {
+        "title": "B12-DN. Trade receivables",
+        "paragraphs": [
+          "Trade receivables arise mainly from export contracts for rice, cashews, and dried fruit. The Company monitors each customer separately, assesses the aging of receivables, and makes provisions for amounts showing indications of non-recoverability."
+        ],
+        "table": true
+      },
+      {
+        "title": "B13-DN. Inventories",
+        "paragraphs": [
+          "Inventories comprise raw materials purchased during the season, work in progress, packaged finished goods, and packaging materials. Inventories are measured at the lower of cost and net realizable value. The Company conducts a physical count at year-end."
+        ],
+        "table": true
+      },
+      {
+        "title": "B14-DN. Fixed assets",
+        "paragraphs": [
+          "Cost includes the purchase price and direct costs to bring the asset to a condition ready for its intended use. Routine repair and maintenance costs are recognized in profit or loss."
+        ],
+        "table": true
+      },
+      {
+        "title": "B15-DN. Borrowings and finance lease liabilities",
+        "paragraphs": [
+          "Short-term borrowings are used for seasonal working capital, while long-term borrowings are used to invest in production lines and cold storage. Interest expense is recognized using the effective interest method. The Company complied with the key terms of the credit agreements as at the reporting date."
+        ],
+        "table": true
+      },
+      {
+        "title": "B16-DN. Owners' equity",
+        "paragraphs": [
+          "Owners' contributed capital comprises ordinary shares that have been registered and fully paid by shareholders. Profit after tax is distributed in accordance with the resolution of the General Meeting of Shareholders after appropriating funds as required and according to operating needs."
+        ],
+        "table": true
+      },
+      {
+        "title": "B17-DN. Revenue and expenses",
+        "paragraphs": [
+          "Cost of goods sold increased with volume, but the gross profit margin improved due to a higher proportion of more highly processed products. Selling expenses include freight, insurance, and export commissions."
+        ],
+        "table": true
+      },
+      {
+        "title": "B18-DN. Taxes and events after the end of the period",
+        "paragraphs": [
+          "Current corporate income tax expense is determined on taxable income in accordance with current regulations. The Company has declared and paid taxes due. Deferred tax assets and liabilities are recognized for temporary differences in accordance with regulations.",
+          "The Board of General Directors considers that these events do not give rise to material adjustments to the financial statements prepared."
+        ],
+        "table": false
+      }
+    ]
+  }
+}

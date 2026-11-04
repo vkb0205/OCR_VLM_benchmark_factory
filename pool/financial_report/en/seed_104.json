@@ -1,0 +1,126 @@
+{
+  "variables": {
+    "industry": "sản xuất bao bì giấy",
+    "company_size": "small",
+    "fiscal_year": 2025
+  },
+  "source": "seed_104.json",
+  "values": {
+    "board_paragraph": [
+      "The Company manufactures paper bags, flexo-printed carton boxes and molded paper trays for domestic agricultural processors, retailers and food businesses.",
+      "Production increased due to a stable delivery schedule and a higher proportion of recycled paper in certain product lines. The Company controls the consumption standards for glue and printing ink, as well as waste, using monitoring forms for each production order; defective products are sorted for material recovery.",
+      "Inventories increased in line with plans to stock rolls of paper and work in progress for orders scheduled for the beginning of the following quarter.",
+      "In {next}, the Company expects to focus on recyclable packaging, improve die-cutting accuracy and expand its medium-volume printing services. The Board of Management will continue to assess paper suppliers, strengthen controls over customer receivables and allocate a budget for preventive maintenance. The main risks are raw material prices, delivery times and customers’ environmental requirements; the Company has prepared a list of alternative suppliers to mitigate their impact.",
+      "The financial statements were audited by {auditor}, an independent audit firm selected by the Board of Directors. The Board of Management is responsible for preparing and fairly presenting the financial statements and maintaining the necessary internal controls.",
+      "After the end of the financial year, the Company had no material events requiring adjustment or additional disclosure in the financial statements. This transaction is in the ordinary course of business.",
+      "The Board of Management confirms that it provided the audit firm with all necessary accounting books, supporting documents and explanations. The accounting policies presented in the notes have been applied consistently across both years, except for changes required under current regulations."
+    ],
+    "auditor_paragraphs": [
+      "The Board of Management is responsible for preparing and fairly presenting the financial statements in accordance with the applicable framework, and for the internal control that it determines is necessary to ensure that the financial statements are free from material misstatement, whether due to fraud or error. This responsibility includes selecting appropriate accounting policies and making reasonable estimates.",
+      "Our responsibility is to express an opinion on the financial statements based on the results of our audit. We conducted our audit in accordance with Vietnamese Standards on Auditing. These standards require us to comply with ethical requirements and to plan and perform the audit to obtain reasonable assurance about whether the financial statements are free from material misstatement.",
+      "An audit involves performing procedures to obtain audit evidence about the amounts and disclosures in the financial statements. The procedures selected depend on the auditor’s judgment, including the assessment of the risks of material misstatement due to fraud or error. We also evaluate the appropriateness of the accounting policies, the estimates and the overall presentation.",
+      "We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our audit opinion. The audit was conducted independently of the Company in accordance with the ethical requirements applicable to audits of financial statements in Vietnam. We received the necessary cooperation and explanations from the Board of Management and relevant departments.",
+      "Basis for opinion: the opinion is unmodified. Having considered the material matters, we have not identified any events or conditions that indicate the existence of a material uncertainty that may cast significant doubt on the Company’s ability to continue as a going concern. Any other information in the annual report does not modify our opinion.",
+      "In our opinion, the financial statements of {company} have been prepared in accordance with current regulations. These financial statements are issued on the same date as the Board of Management’s report and are intended solely for shareholders, the Board of Directors and users of the report as prescribed by regulations."
+    ],
+    "board_title": "BOARD OF MANAGEMENT’S REPORT",
+    "auditor_title": "INDEPENDENT AUDITOR’S REPORT",
+    "auditor_addressee": "To: The Shareholders and Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "B09. Nature of operations and basis of preparation",
+        "paragraphs": [
+          "The products comprise paper bags, printed carton boxes and molded paper trays. The financial statements are prepared in Vietnamese dong, on the historical cost basis and on the assumption that the Company will continue as a going concern in the near future.",
+          "The prior-year figures are presented for comparison and have been classified consistently with the current year."
+        ],
+        "table": true
+      },
+      {
+        "title": "B10. Significant accounting policies",
+        "paragraphs": [
+          "Foreign currency transactions, if any, are translated at the actual exchange rate on the transaction date; foreign-currency monetary items at period-end are retranslated at the closing rate. Revenue is recognized when control of the products has transferred to the customer and the amount can be measured reliably.",
+          "Expenses are recognized in line with the related revenue. Inventories are measured using the weighted average cost method and are stated at the lower of cost and net realizable value."
+        ],
+        "table": true
+      },
+      {
+        "title": "B11. Cash and cash equivalents",
+        "paragraphs": [
+          "Cash comprises cash on hand and demand deposits with banks. Cash equivalents are short-term investments with a maturity of no more than three months from the date of acquisition, readily convertible into a known amount of cash and subject to an insignificant risk of changes in value.",
+          "At year-end, the Company maintained sufficient cash balances to purchase raw materials, pay salaries and settle loans falling due. No cash was restricted under credit agreements at the reporting date."
+        ],
+        "table": true
+      },
+      {
+        "title": "B12. Trade and other receivables",
+        "paragraphs": [
+          "Trade receivables mainly arise from the delivery of carton boxes and paper bags under contracts. The Company reconciles receivable balances monthly, classifies them by age and makes provisions for amounts showing signs of being difficult to recover. The Board of Management considers that there are no material receivables other than those disclosed.",
+          "Other receivables comprise deposits for equipment leases and transport cost reimbursements pending reconciliation. These amounts are recoverable under the terms of the contracts and are not secured by collateral."
+        ],
+        "table": true
+      },
+      {
+        "title": "B13. Inventories",
+        "paragraphs": [
+          "Inventories comprise rolls of paper, printing ink, adhesive, work in progress and packaged finished goods. The closing inventory balance reflects the delivery schedule for the first month of the following year.",
+          "A provision for decline in value is recognized for damp paper rolls, slow-moving supplies and finished goods with specifications that are no longer suitable. No inventory was pledged as security for borrowings at the reporting date."
+        ],
+        "table": true
+      },
+      {
+        "title": "B14. Property, plant and equipment and construction in progress",
+        "paragraphs": [
+          "During the year, the Company completed the installation of a semi-automatic die-cutting machine and upgraded the dust extraction system. Assets are recognized at cost, comprising the purchase price and direct costs of bringing them to the condition necessary for their intended use. Depreciation is charged from the month the assets are placed into operation.",
+          "The Company expects to complete this project in the second quarter of {next}. There are no material commitments for the acquisition of property, plant and equipment outside the approved plan that have not been recognized."
+        ],
+        "table": true
+      },
+      {
+        "title": "B15. Liabilities and borrowings",
+        "paragraphs": [
+          "Taxes and other amounts payable to the State are reconciled with periodic tax returns.",
+          "The long-term loan is secured by machinery and equipment and the right to use the factory premises under a credit agreement. Interest rates are agreed under individual loan agreements, and borrowing costs are recognized in the income statement in the period in which they are incurred."
+        ],
+        "table": true
+      },
+      {
+        "title": "B16. Equity",
+        "paragraphs": [
+          "The Company has not issued preference shares, convertible bonds or other equity instruments. Voting rights and dividend entitlements are attached to the capital contributed.",
+          "As of the date of issuance of the report, the Board of Directors had not proposed a dividend distribution for {year}; the distribution of profits will be considered in light of business results and working capital requirements."
+        ],
+        "table": true
+      },
+      {
+        "title": "B17. Revenue and cost of sales",
+        "paragraphs": [
+          "Revenue is classified by product group and recognized when customers take delivery in accordance with the agreed delivery terms. Revenue deductions for the year comprise trade discounts on large-volume orders and sales returns due to non-conforming specifications. Cost of sales includes direct materials, direct labor and allocated production overhead.",
+          "In {year}, carton box production increased while the waste rate declined. Some transportation costs are charged on a per-order basis and have been reflected in revenue or expenses as appropriate to the nature of the transaction."
+        ],
+        "table": true
+      },
+      {
+        "title": "B18. Expenses, taxes and other transactions",
+        "paragraphs": [
+          "Current corporate income tax is calculated on taxable income in accordance with current regulations, after taking into account deductible expenses. Deferred income tax arises from temporary differences between the carrying amounts and tax bases of certain assets; the balance is reassessed at the end of the accounting period."
+        ],
+        "table": true
+      },
+      {
+        "title": "B19. Financial instruments and risk management",
+        "paragraphs": [
+          "The Company’s financial instruments comprise cash, receivables, payables and borrowings. Credit risk is concentrated in a number of customers purchasing under credit limits; the Company mitigates this risk by approving credit limits, requiring deposits for new orders and reviewing receivable aging monthly. Liquidity risk is managed through weekly cash flow planning.",
+          "Raw material price risk is monitored using quotations from multiple suppliers. The Board of Management did not use derivative instruments during the year. The carrying amounts of financial items approximate their fair values because their maturities are short or their interest rates are adjusted to reflect market rates."
+        ],
+        "table": true
+      },
+      {
+        "title": "B20. Events after the end of the reporting period",
+        "paragraphs": [
+          "The Board of Directors is responsible for reviewing the report within its authority and has no plans to make significant changes to the operating structure after the date of issuance."
+        ],
+        "table": true
+      }
+    ]
+  }
+}

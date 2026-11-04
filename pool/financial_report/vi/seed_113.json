@@ -1,0 +1,123 @@
+{
+ "variables": {
+  "industry": "sản xuất bao bì giấy",
+  "company_size": "large",
+  "fiscal_year": 2025
+ },
+ "source": "seed_113.json",
+ "values": {
+  "board_paragraph": [
+   "Trong năm {year}, Công ty duy trì mạng lưới khách hàng là các doanh nghiệp thực phẩm, đồ uống, dược phẩm và hàng tiêu dùng tại miền Bắc và miền Trung.",
+   "Hoạt động chính của Công ty gồm sản xuất thùng carton sóng, bao giấy nhiều lớp, hộp in offset và giấy tổ ong dùng để chèn hàng. Công ty chủ động một phần giấy cuộn, keo và mực in thông qua các hợp đồng cung ứng dài hạn. Hệ thống máy tạo sóng, in flexo và bế tự động được vận hành theo kế hoạch bảo trì định kỳ nhằm bảo đảm chất lượng và thời hạn giao hàng.",
+   "Ban Tổng Giám đốc ghi nhận thị trường bao bì xuất khẩu gián tiếp qua khách hàng trong nước tăng ổn định trong nửa cuối năm.",
+   "Tài sản ngắn hạn tăng do sản lượng giao hàng quý cuối năm cao, trong khi tài sản cố định tăng sau khi dây chuyền bế và kho tự động được đưa vào sử dụng. Công ty vẫn duy trì khả năng thanh toán và tuân thủ các giới hạn vay theo hợp đồng tín dụng.",
+   "Năm {next}, Công ty dự kiến mở rộng công suất thùng carton chống ẩm, tăng tỷ trọng vật liệu tái chế và triển khai hệ thống quản trị đơn hàng tích hợp. Ban Tổng Giám đốc sẽ ưu tiên an toàn lao động, tiết kiệm nguyên liệu, kiểm soát công nợ và phát triển các giải pháp bao bì có thể tái chế để đáp ứng yêu cầu ngày càng cao của khách hàng.",
+   "Báo cáo tài chính năm {year} được kiểm toán bởi {auditor} theo hợp đồng đã ký với Công ty. Ban Tổng Giám đốc chịu trách nhiệm tổ chức hệ thống kiểm soát nội bộ, lựa chọn chính sách kế toán phù hợp và lập báo cáo tài chính trung thực, hợp lý theo Chuẩn mực kế toán Việt Nam và chế độ kế toán doanh nghiệp hiện hành.",
+   "Sau ngày kết thúc kỳ kế toán, Công ty đã ký một số đơn hàng cung cấp bao bì cho mùa cao điểm nhưng chưa phát sinh sự kiện trọng yếu cần điều chỉnh số liệu. Ban Tổng Giám đốc xác nhận không có thay đổi đáng kể về quyền sở hữu, tranh chấp hoặc cam kết bảo lãnh ngoài các nội dung đã trình bày trong thuyết minh và tin tưởng Công ty tiếp tục hoạt động bình thường."
+  ],
+  "auditor_paragraphs": [
+   "Cơ sở của ý kiến kiểm toán là cuộc kiểm toán được thực hiện theo các Chuẩn mực kiểm toán Việt Nam. Các chuẩn mực này yêu cầu kiểm toán viên tuân thủ yêu cầu đạo đức nghề nghiệp, lập kế hoạch và thực hiện kiểm toán để đạt được sự đảm bảo hợp lý về việc báo cáo tài chính có còn sai sót trọng yếu hay không.",
+   "Ban Tổng Giám đốc chịu trách nhiệm lập và trình bày trung thực, hợp lý báo cáo tài chính, lựa chọn chính sách kế toán thích hợp, thực hiện các ước tính hợp lý và duy trì kiểm soát nội bộ cần thiết để bảo đảm báo cáo không có sai sót trọng yếu do gian lận hoặc nhầm lẫn.",
+   "Trách nhiệm của kiểm toán viên là đưa ra ý kiến về báo cáo tài chính dựa trên bằng chứng kiểm toán thu thập được. Chúng tôi đánh giá rủi ro, thiết kế thủ tục phù hợp, xem xét kiểm soát liên quan, đánh giá chính sách và ước tính kế toán, đồng thời xem xét tính thích hợp của giả định hoạt động liên tục.",
+   "Chúng tôi tin tưởng rằng các bằng chứng kiểm toán đã thu thập là đầy đủ và thích hợp làm cơ sở cho ý kiến kiểm toán chấp nhận toàn phần. Các thủ tục cũng bao gồm đối chiếu số dư trọng yếu, kiểm tra chọn mẫu giao dịch và xem xét việc trình bày, cấu trúc tổng thể của báo cáo tài chính.",
+   "Ngoài các vấn đề đã trình bày trong thuyết minh, chúng tôi không nhận thấy sự kiện nào cần nêu riêng trong báo cáo kiểm toán. Báo cáo này được phát hành cho các cổ đông và Hội đồng quản trị của Công ty theo phạm vi công việc đã thỏa thuận và không nhằm phục vụ một mục đích khác."
+  ],
+  "board_title": "BÁO CÁO CỦA BAN TỔNG GIÁM ĐỐC",
+  "auditor_title": "BÁO CÁO KIỂM TOÁN ĐỘC LẬP",
+  "auditor_addressee": "Kính gửi các cổ đông và Hội đồng quản trị {company}",
+  "notes": [
+   {
+    "title": "B09-DN. Đặc điểm hoạt động",
+    "paragraphs": [
+     "Ngành nghề chính là sản xuất thùng carton, bao giấy, hộp giấy in và vật liệu chèn bằng giấy. đơn vị tiền tệ sử dụng là đồng Việt Nam.",
+     "Công ty có một nhà máy và hai trung tâm phân phối tại khu vực Bắc Trung Bộ. Sản phẩm được bán trực tiếp cho khách hàng công nghiệp theo hợp đồng và giao hàng theo kế hoạch sản xuất."
+    ],
+    "table": false
+   },
+   {
+    "title": "B09-DN. Chính sách kế toán chủ yếu",
+    "paragraphs": [
+     "Tài sản được ghi nhận theo giá gốc, ngoại trừ các khoản được yêu cầu đánh giá theo quy định hiện hành. Doanh thu được ghi nhận khi quyền kiểm soát hàng hóa đã chuyển giao và Công ty có quyền thu tiền."
+    ],
+    "table": false
+   },
+   {
+    "title": "B09-DN. Tiền và các khoản tương đương tiền",
+    "paragraphs": [
+     "Tiền bao gồm tiền mặt và tiền gửi ngân hàng không kỳ hạn. Các khoản tương đương tiền là tiền gửi có kỳ hạn ban đầu không quá ba tháng, có khả năng chuyển đổi dễ dàng thành tiền và ít chịu rủi ro thay đổi giá trị."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN. Phải thu khách hàng",
+    "paragraphs": [
+     "Các khoản phải thu được trình bày theo giá trị ghi sổ sau khi trừ dự phòng phải thu khó đòi. Công ty phân tích tuổi nợ theo từng khách hàng, theo dõi hạn mức tín dụng và trích lập dự phòng đối với các khoản có dấu hiệu suy giảm khả năng thu hồi."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN. Hàng tồn kho",
+    "paragraphs": [
+     "Hàng tồn kho được tính theo giá thấp hơn giữa giá gốc và giá trị thuần có thể thực hiện được. Giá gốc nguyên vật liệu được xác định theo phương pháp bình quân gia quyền, sản phẩm dở dang và thành phẩm bao gồm chi phí nguyên vật liệu trực tiếp, nhân công và chi phí sản xuất chung phân bổ."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN. Tài sản cố định",
+    "paragraphs": [
+     "Chi phí sửa chữa lớn được ghi nhận phù hợp với bản chất và thời gian hưởng lợi."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN. Vay và nợ thuê tài chính",
+    "paragraphs": [
+     "Các khoản vay được ghi nhận theo số tiền thực nhận và trình bày theo giá trị còn phải trả. Chi phí đi vay liên quan trực tiếp đến công trình đủ điều kiện được vốn hóa trong thời gian xây dựng; các chi phí khác được ghi nhận vào kết quả kinh doanh trong kỳ. Công ty tuân thủ các điều khoản tài chính trọng yếu."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN. Vốn chủ sở hữu",
+    "paragraphs": [
+     "Lợi nhuận sau thuế được phân phối theo quyết định của Đại hội đồng cổ đông sau khi hoàn thành nghĩa vụ thuế và bù đắp các khoản lỗ lũy kế, nếu có."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN. Doanh thu và giá vốn",
+    "paragraphs": [
+     "Doanh thu năm {year} chủ yếu đến từ thùng carton sóng và bao giấy nhiều lớp. Doanh thu được ghi nhận theo giá trị hợp lý của khoản đối ứng, không bao gồm thuế giá trị gia tăng và các khoản giảm trừ. Giá vốn được xác định trên cơ sở chi phí thực tế của sản phẩm đã bán."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN. Thuế thu nhập doanh nghiệp",
+    "paragraphs": [
+     "Chi phí thuế thu nhập doanh nghiệp hiện hành được xác định trên thu nhập chịu thuế của năm theo thuế suất áp dụng. Tài sản và nợ thuế thu nhập hoãn lại được ghi nhận cho các chênh lệch tạm thời, ngoại trừ các trường hợp không được ghi nhận theo quy định. Công ty đã kê khai và nộp các khoản thuế đến hạn."
+    ],
+    "table": false
+   },
+   {
+    "title": "B09-DN. Sự kiện sau ngày kết thúc kỳ kế toán",
+    "paragraphs": [
+     "Ban Tổng Giám đốc tiếp tục đánh giá các đơn hàng mới và năng lực cung ứng trong năm {next}."
+    ],
+    "table": false
+   },
+   {
+    "title": "B09-DN. Cam kết và nghĩa vụ tiềm tàng",
+    "paragraphs": [
+     "Tại ngày lập báo cáo, Công ty không có các cam kết vốn hoặc nghĩa vụ tiềm tàng trọng yếu ngoài các hợp đồng mua nguyên vật liệu, thuê tài sản và bảo lãnh thương mại phát sinh trong hoạt động bình thường. Các cam kết được theo dõi trong hệ thống kế toán và được xem xét định kỳ bởi Ban Tổng Giám đốc."
+    ],
+    "table": true
+   },
+   {
+    "title": "B09-DN. Cam kết và nghĩa vụ tiềm tàng",
+    "paragraphs": [
+     "Tại ngày lập báo cáo, Công ty không có các cam kết vốn hoặc nghĩa vụ tiềm tàng trọng yếu ngoài các hợp đồng mua nguyên vật liệu, thuê tài sản và bảo lãnh thương mại phát sinh trong hoạt động bình thường. Các cam kết được theo dõi trong hệ thống kế toán và được xem xét định kỳ bởi Ban Tổng Giám đốc."
+    ],
+    "table": true
+   }
+  ]
+ }
+}

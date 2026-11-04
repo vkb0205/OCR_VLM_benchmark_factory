@@ -1,0 +1,137 @@
+<!doctype html><html><head><meta charset="utf-8"><style>/* Base design. The pipeline adds @font-face, @page and the body size per page. */
+* { box-sizing: border-box; }
+html { margin: 0; padding: 0; background: #ececec; }
+body { margin: 0; padding: 0; position: relative; overflow: hidden; background: white; color: #171717;
+  font-family: 'Factory Serif', serif; font-size: 10pt; line-height: 1.4; }
+header { position: absolute; top: 12mm; left: 18mm; right: 18mm; height: 18mm;
+  border-bottom: 1px solid #555; font-size: 8pt; }
+footer { position: absolute; bottom: 14mm; left: 18mm; right: 18mm; font-size: 7.6pt;
+  border-top: 1px solid #777; padding-top: 2mm; }
+.page-number { position: absolute; bottom: 7mm; left: 0; right: 0; text-align: center; font-size: 8pt; }
+main { position: absolute; top: 36mm; left: 18mm; right: 18mm; bottom: 26mm; }
+h1 { font-size: 13pt; line-height: 1.4; margin: 0 0 3mm; text-align: center; }
+h2 { font-size: 11.5pt; margin: 0 0 3mm; }
+p { margin: 0 0 2mm; text-align: justify; }
+
+.form-line { text-align: center; font-size: 8.5pt; margin: 0 0 1mm; }
+.unit { text-align: right; font-size: 8.5pt; margin: 2mm 0; }
+table { border-collapse: collapse; width: 100%; }
+th, td { padding: 2.5px 4px; vertical-align: middle; overflow-wrap: break-word; }
+th { font-size: 8pt; text-align: center; border-top: 1px solid #222; border-bottom: 1px solid #222; }
+
+table.statement { table-layout: fixed; font-size: 8.4pt; line-height: 1.3; }
+table.statement col.label { width: 46%; } table.statement col.code { width: 6%; }
+table.statement col.note { width: 8%; } table.statement col.amount { width: 20%; }
+table.statement td:nth-child(2), table.statement td:nth-child(3) { text-align: center; }
+table.statement td:nth-child(4), table.statement td:nth-child(5) { text-align: right; white-space: nowrap;
+  font-variant-numeric: tabular-nums; }
+tr.level-1 td:first-child { padding-left: 8px; } tr.level-2 td:first-child { padding-left: 15px; }
+tr.level-3 td:first-child { padding-left: 22px; }
+tr.total { font-weight: bold; } tr.total td { border-top: 1px solid #aaa; }
+
+/* Frame types; the label data-gt-attr-frame-type must match what is drawn. */
+table.frame-full_line th, table.frame-full_line td { border: 1px solid #777; }
+table.frame-less_line td { border-bottom: 1px solid #ddd; }
+table.frame-wireless_line th, table.frame-wireless_line td, table.frame-wireless_line tr.total td { border: none; }
+table.grid { font-size: 9pt; margin: 2mm 0 4mm; }
+
+.cover-frame { height: 100%; border: 1px solid #777; padding: 20mm 10mm; text-align: center; }
+.cover .logo { display: block; width: 26mm; height: 26mm; margin: 0 auto 14mm; }
+.cover h1 { font-size: 15pt; margin-bottom: 18mm; }
+.cover h1.big { font-size: 26pt; margin-bottom: 8mm; }
+.cover p { text-align: center; margin: 0 0 5mm; }
+.cover-meta { margin-top: 30mm; }
+.cover .notice { margin-top: 18mm; font-size: 8pt; letter-spacing: .4px; }
+
+figure { margin: 3mm 0 1mm; }
+figure svg { display: block; width: 100%; height: 100%; }
+.caption, [data-gt-cat^="caption"] { font-size: 8.5pt; font-style: italic; text-align: center; }
+
+.signature-page { padding-top: 10mm; }
+.signature-page .date { text-align: right; margin-top: 8mm; }
+.signers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; margin-top: 14mm; }
+.signer { position: relative; text-align: center; }
+.signer p { font-weight: bold; font-size: 9.5pt; text-align: center; }
+[data-gt-cat="signature"] { height: 30mm; margin: 4mm 0; }
+[data-gt-cat="signature"] svg, [data-gt-cat="seal"] svg { display: block; width: 100%; height: 100%; }
+[data-gt-cat="seal"] { position: absolute; top: 8mm; left: 12mm; width: 32mm; height: 32mm;
+  transform: rotate(-12deg); opacity: .85; }
+
+section.page {position:relative;width:100%;height:100%;} img[data-gt-cat="signature"] {display:block;width:100%;object-fit:contain;} svg {display:block;}
+</style></head><body><section class="page" data-page-role="cover" data-size="a4" data-layout="single_column">
+<main class="cover">
+  <div class="cover-frame">
+    <p data-slot="cover_logo" class="logo"></p>
+    <h1 data-slot="cover_company"></h1>
+    <h1 data-label="title" class="big">BÁO CÁO TÀI CHÍNH</h1>
+    <p data-slot="cover_period"></p>
+    <p data-label="text_block">Theo Thông tư 200/2014/TT-BTC</p>
+    <div class="cover-meta">
+      <p data-slot="cover_address"></p>
+      <p data-slot="cover_tax"></p>
+    </div>
+  </div>
+</main>
+</section>
+
+<section class="page" data-page-role="board_report" data-size="a4" data-layout="single_column">
+<header data-slot="running_header" data-continued></header>
+<main>
+  <h2 data-slot="board_title"></h2>
+  <div data-slot="board_paragraph"></div>
+  <p data-slot="directors_caption"></p>
+  <table data-slot="directors_table" class="grid" data-frame="fewer_line" data-split="auto"></table>
+  <figure data-slot="revenue_chart" style="height:55mm"></figure>
+  <p data-slot="revenue_chart_caption"></p>
+</main>
+<footer data-slot="running_footer" data-continued></footer>
+<div class="page-number" data-label="page_number" data-continued>{n} / {total}</div>
+</section>
+
+<section class="page" data-page-role="B01" data-size="a4" data-layout="single_column">
+<header data-label="header" data-continued>BÁO CÁO TÀI CHÍNH</header>
+<main class="statement-page">
+  <h1 data-label="title">BẢNG CÂN ĐỐI KẾ TOÁN</h1>
+  <p data-label="text_block" class="form-line">Mẫu số B01-DN — Ban hành theo Thông tư 200/2014/TT-BTC</p>
+  <p data-slot="B01_date" class="form-line"></p>
+  <p data-label="text_block" class="unit">Đơn vị tính: VND</p>
+  <table data-slot="B01_table" data-frame="fewer_line" data-split="auto"></table>
+</main>
+<footer data-label="footer" data-continued>Các thuyết minh đính kèm là bộ phận hợp thành của báo cáo tài chính</footer>
+<div class="page-number" data-label="page_number" data-continued>{n} / {total}</div>
+</section>
+
+
+
+<section class="page" data-page-role="B02" data-size="a4" data-layout="single_column">
+<header data-label="header" data-continued>BÁO CÁO TÀI CHÍNH</header>
+<main class="statement-page">
+  <h1 data-label="title">BÁO CÁO KẾT QUẢ HOẠT ĐỘNG KINH DOANH</h1>
+  <p data-label="text_block" class="form-line">Mẫu số B02-DN — Ban hành theo Thông tư 200/2014/TT-BTC</p>
+  <p data-slot="B02_date" class="form-line"></p>
+  <p data-label="text_block" class="unit">Đơn vị tính: VND</p>
+  <table data-slot="B02_table" data-frame="fewer_line" data-split="auto"></table>
+</main>
+<footer data-label="footer" data-continued>Các thuyết minh đính kèm là bộ phận hợp thành của báo cáo tài chính</footer>
+<div class="page-number" data-label="page_number" data-continued>{n} / {total}</div>
+</section>
+
+<section class="page" data-page-role="signature" data-size="a4" data-layout="single_column">
+<header data-label="header" data-continued>BÁO CÁO TÀI CHÍNH</header>
+<main class="signature-page">
+  <h1 data-label="title">XÁC NHẬN BÁO CÁO TÀI CHÍNH</h1>
+  <p data-slot="signature_date" class="date"></p>
+  <div class="signers">
+    <div class="signer"><p data-label="text_block">Người lập biểu</p><div data-slot="signature_1"></div><p data-slot="signer_1_name"></p></div>
+    <div class="signer"><p data-label="text_block">Kế toán trưởng</p><div data-slot="signature_2"></div><p data-slot="signer_2_name"></p></div>
+    <div class="signer"><p data-label="text_block">Tổng Giám đốc</p><div class="stamp"><div data-slot="signature_3"></div><div data-slot="company_seal"></div></div><p data-slot="signer_3_name"></p></div>
+  </div>
+</main>
+<footer data-label="footer" data-continued>Các thuyết minh đính kèm là bộ phận hợp thành của báo cáo tài chính</footer>
+<div class="page-number" data-label="page_number" data-continued>{n} / {total}</div>
+</section>
+<section class="page" data-page-role="auditor_report" data-size="a4"><main><h1 data-slot="auditor_title"></h1><p data-slot="auditor_addressee"></p><div data-slot="auditor_paragraphs" data-split="auto"></div></main><header data-label="header" data-continued>BÁO CÁO TÀI CHÍNH</header><footer data-label="page_number" data-continued>{n} / {total}</footer></section>
+<section class="page" data-page-role="auditor_signature" data-size="a4"><main><h2 data-slot="auditor_firm"></h2><p data-slot="auditor_date"></p><div class="signer" style="width:60mm"><div class="stamp"><div data-slot="auditor_signature"></div><div data-slot="auditor_seal"></div></div></div></main><header data-label="header" data-continued>BÁO CÁO TÀI CHÍNH</header><footer data-label="page_number" data-continued>{n} / {total}</footer></section>
+<section class="page" data-page-role="key_figures" data-size="a4"><main><h1 data-label="title">CHỈ TIÊU TÀI CHÍNH NỔI BẬT</h1><div data-slot="kpis" data-split="auto"></div></main><header data-label="header" data-continued>BÁO CÁO TÀI CHÍNH</header><footer data-label="page_number" data-continued>{n} / {total}</footer></section>
+<section class="page" data-page-role="B03" data-size="a4"><main><h1 data-label="title">BÁO CÁO LƯU CHUYỂN TIỀN TỆ</h1><p data-label="text_block">Mẫu số B03-DN — Phương pháp gián tiếp</p><p data-slot="B03_date"></p><table data-slot="B03_table" data-frame="fewer_line" data-split="auto"></table></main><header data-label="header" data-continued>BÁO CÁO TÀI CHÍNH</header><footer data-label="page_number" data-continued>{n} / {total}</footer></section>
+<section class="page" data-page-role="notes" data-size="a4"><main><h1 data-label="title">THUYẾT MINH BÁO CÁO TÀI CHÍNH</h1><div data-slot="notes" data-split="auto" data-frame="fewer_line"></div></main><header data-label="header" data-continued>BÁO CÁO TÀI CHÍNH</header><footer data-label="page_number" data-continued>{n} / {total}</footer></section></body></html>

@@ -1,0 +1,104 @@
+{
+  "variables": {
+    "industry": "nhựa kỹ thuật",
+    "company_size": "large",
+    "fiscal_year": 2025
+  },
+  "source": "seed_112.json",
+  "values": {
+    "board_paragraph": [
+      "The Company maintains an in-house materials testing laboratory, manages quality under a unified process, and supplies products to domestic assemblers.",
+      "In {year}, the Company manufactured heat-resistant compound pellets, equipment housings, engineered gears, conduits, and insulated component assemblies. Its customers were mainly manufacturers of electrical cabinets, pumps, lighting equipment, and industrial spare parts in the three regions. The technical department collaborated with customers to adjust molds, reduce scrap, and develop several product codes with controlled recycled content.",
+      "Results improved due to higher output of heat-resistant components, more stable input resin pellet prices, and a norm review program that reduced losses. Finance costs remained significant because the Company maintained working capital facilities for seasonal orders.",
+      "Operating cash flow was positive, inventory was counted by material group, and receivables were classified by aging and approved credit limits.",
+      "In {next}, the Board of General Directors will focus on increasing capacity for chemical-resistant polymer products, automating the feeding stage, and expanding sales to manufacturers of industrial medical equipment. The Company plans to invest in additional coordinate measuring machines, improve the heat recovery system, and increase the proportion of raw materials with origin certification. These plans will be implemented within the capital limits approved by the Board of Directors and are linked to occupational safety objectives.",
+      "The financial statements were audited by {auditor}. The Board of General Directors is responsible for organizing the control system, retaining documents, and presenting the information in the report fairly.",
+      "After the end of the accounting period, the Company signed a memorandum of principles on the supply of equipment housings to a new industrial customer; there were no other unusual events requiring adjustment of the reported figures. The Board of General Directors reviewed solvency and cash flow plans and considered that the Company will continue to operate normally in the near future.",
+      "The Board of General Directors sincerely thanks employees, customers, suppliers, and credit institutions for accompanying the Company during the year. We are committed to continuing to improve product quality, using materials efficiently, complying with environmental regulations, and disclosing financial information on time. This report was prepared on the basis of consistently applied accounting policies and was reviewed by the Board of Directors before issuance."
+    ],
+    "auditor_paragraphs": [
+      "The report is prepared in Vietnamese dong in accordance with the Vietnamese corporate accounting regime.",
+      "The Board of General Directors is responsible for preparing and presenting the financial statements fairly and reasonably; selecting appropriate accounting policies; and maintaining the internal control necessary for the statements to be free from material misstatement, whether due to fraud or error. The Board of General Directors is also responsible for assessing the Company's ability to continue as a going concern and disclosing related matters.",
+      "Our responsibility is to express an opinion on the financial statements based on our audit. We conducted our audit in accordance with Vietnamese Standards on Auditing. Those standards require auditors to comply with ethical requirements, plan and perform procedures to obtain reasonable assurance that the financial statements are free from material misstatement.",
+      "The audit includes performing procedures to obtain evidence about the amounts and disclosures. The procedures selected depend on professional judgment, including the assessment of risks of material misstatement due to fraud or error. In assessing those risks, we consider internal control relevant to the preparation of the report in order to design appropriate procedures, not for the purpose of expressing an opinion on the effectiveness of internal control.",
+      "We also evaluate the appropriateness of accounting policies, the reasonableness of accounting estimates and the disclosures made by the Board of General Directors. We consider the Board of General Directors' use of the going concern basis of accounting and conclude, based on the evidence obtained, that there are no material matters that have not been adequately disclosed.",
+      "We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our unqualified audit opinion. The financial statements issued with this report and the notes are an integral part of the financial statements for the year {year}.",
+      "No other matters were identified during the audit that, in our professional judgment, require separate presentation in this report. Our opinion has not been modified by events occurring after the balance sheet date that were considered and appropriately disclosed by the Board of General Directors."
+    ],
+    "board_title": "REPORT OF THE BOARD OF GENERAL DIRECTORS",
+    "auditor_title": "INDEPENDENT AUDITOR'S REPORT",
+    "auditor_addressee": "To the Shareholders and the Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "B09-DN. Nature of operations",
+        "paragraphs": [
+          "The principal business activities are the manufacture of products from engineering plastics, injection molding of precision parts, and compounding of polymer pellets. The normal production cycle is under twelve months; certain specialized molds are recognized in fixed assets and allocated over their useful lives."
+        ],
+        "table": true
+      },
+      {
+        "title": "B10-DN. Basis of preparation",
+        "paragraphs": [
+          "The financial statements are prepared in Vietnamese dong, on the historical cost basis and under the going concern assumption. Accounting policies are applied consistently with the prior year, except for changes required by current regulations. Prior-year figures have been reclassified in certain items to conform to the current year's presentation, without changing reported profit or owners' equity."
+        ],
+        "table": true
+      },
+      {
+        "title": "B11-DN. Cash and cash equivalents",
+        "paragraphs": [
+          "Cash comprises cash on hand and demand deposits. Cash equivalents are deposits with original maturities of no more than three months that are readily convertible into a known amount of cash and are subject to an insignificant risk of changes in value. The Board of General Directors performs monthly bank reconciliations; restricted balances, if any, are presented separately in the appropriate note."
+        ],
+        "table": true
+      },
+      {
+        "title": "B12-DN. Receivables",
+        "paragraphs": [
+          "Trade receivables are recognized at their recoverable value. The Company assesses aging, each customer's financial condition, and collateral to determine provisions. Advances to suppliers mainly relate to resin pellets, additives, and molds ordered for production. There were no material receivables from key management personnel at the end of the accounting period."
+        ],
+        "table": true
+      },
+      {
+        "title": "B13-DN. Inventories",
+        "paragraphs": [
+          "Inventories are recognized at the lower of cost and net realizable value. Cost of raw materials comprises purchase price and costs of bringing the goods to their current location and condition; finished goods and work in progress comprise raw materials, direct labor, and allocated manufacturing overhead. The Company performs year-end physical counts, disposes of slow-moving materials, and makes provisions by inventory group."
+        ],
+        "table": true
+      },
+      {
+        "title": "B14-DN. Fixed assets",
+        "paragraphs": [
+          "Tangible fixed assets are presented at cost less accumulated depreciation. Cost comprises purchase price, installation and trial-run costs, and other direct costs of bringing the asset to a condition ready for use. Injection molding machines are depreciated over eight to twelve years; factory buildings are depreciated over twenty years."
+        ],
+        "table": true
+      },
+      {
+        "title": "B15-DN. Borrowings and finance lease liabilities",
+        "paragraphs": [
+          "Borrowings are initially recognized at the amount received and subsequently at amortized cost. Borrowing costs are recognized in profit or loss, except for the portion eligible for capitalization as part of qualifying assets. Collateral mainly comprises machinery and rights to use factory premises."
+        ],
+        "table": true
+      },
+      {
+        "title": "B16-DN. Owners' equity",
+        "paragraphs": [
+          "All shares have been registered and fully paid. The development investment fund is appropriated from after-tax profit in accordance with the resolution of the General Meeting of Shareholders. Undistributed profit is used to supplement working capital, make investments, and distribute dividends when legal conditions are met."
+        ],
+        "table": true
+      },
+      {
+        "title": "B17-DN. Revenue and taxes",
+        "paragraphs": [
+          "Revenue is recognized when the Company transfers control of the products to the customer, generally at the time of delivery under the contractual terms. Revenue is presented net of approved deductions. Current corporate income tax is calculated on taxable income at the applicable tax rate; deferred tax assets and liabilities are recognized for temporary differences that are probable to be recovered or settled."
+        ],
+        "table": true
+      },
+      {
+        "title": "B18-DN. Other transactions and events",
+        "paragraphs": [
+          "Transactions with related parties are carried out on normal commercial terms and approved in accordance with authority. During the year, the Company did not enter into any material guarantee commitments other than the disclosed raw material purchase and equipment investment contracts. After the end of the accounting period, the memorandum of principles with the new customer did not create a present obligation; the Board of General Directors did not identify any events requiring adjustment of the financial statements."
+        ],
+        "table": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,104 @@
+{
+ "variables": {
+  "industry": "nông sản xuất khẩu",
+  "company_size": "large",
+  "fiscal_year": 2025
+ },
+ "source": "seed_142.json",
+ "values": {
+  "board_paragraph": [
+   "Sản phẩm chủ lực của Công ty gồm gạo thơm đóng bao, nhân điều rang nhạt và chuối sấy dẻo. Khách hàng là các nhà phân phối thực phẩm và doanh nghiệp chế biến ở nước ngoài; Công ty không phụ thuộc vào một khách hàng duy nhất. Hoạt động kiểm soát chất lượng được thực hiện từ khâu tiếp nhận nguyên liệu đến khi đóng container, với hồ sơ truy xuất theo từng lô hàng.",
+   "Ban Tổng Giám đốc đánh giá kết quả này phù hợp với kế hoạch đã được Hội đồng quản trị phê duyệt.",
+   "Công ty duy trì khả năng thanh toán ngắn hạn, quản lý chặt công nợ xuất khẩu và thực hiện đối chiếu tồn kho định kỳ. Các khoản vay được sử dụng chủ yếu để tài trợ vốn lưu động mùa vụ và đầu tư thiết bị chế biến.",
+   "Trong năm tới, Công ty dự kiến tăng tỷ trọng sản phẩm đạt chứng nhận vùng trồng, hoàn thiện kho mát tại khu chế biến và phát triển thêm khách hàng tại Bắc Phi. Ban lãnh đạo sẽ tiếp tục theo dõi biến động tỷ giá, chi phí vận tải biển và yêu cầu truy xuất nguồn gốc. Các quyết định đầu tư mới sẽ được cân nhắc trên cơ sở dòng tiền và hiệu quả dài hạn.",
+   "Ban Tổng Giám đốc chịu trách nhiệm điều hành hoạt động hằng ngày; Báo cáo tài chính được kiểm toán bởi {auditor}.",
+   "Ban Tổng Giám đốc chịu trách nhiệm lập và trình bày trung thực, hợp lý báo cáo tài chính theo Chuẩn mực kế toán Việt Nam và chế độ kế toán doanh nghiệp hiện hành. Ban Tổng Giám đốc đã thiết lập các kiểm soát cần thiết để hạn chế sai sót trọng yếu. Theo hiểu biết của chúng tôi, không có sự kiện trọng yếu nào phát sinh sau ngày kết thúc kỳ kế toán cần điều chỉnh hoặc thuyết minh thêm ngoài các nội dung đã nêu.",
+   "Ban Tổng Giám đốc ghi nhận sự hỗ trợ của người lao động, các vùng nguyên liệu và đối tác logistics trong năm {year}. Công ty tiếp tục ưu tiên an toàn lao động, sử dụng tiết kiệm nước và giảm bao bì nhựa trong các lô hàng xuất khẩu. Những chương trình này được triển khai đồng thời với mục tiêu duy trì chất lượng ổn định và nâng cao năng lực cạnh tranh của thương hiệu Vạn Hải trên thị trường quốc tế."
+  ],
+  "auditor_paragraphs": [
+   "Báo cáo được lập bằng đồng Việt Nam và bao gồm các chính sách kế toán chủ yếu.",
+   "Theo ý kiến của Ban Tổng Giám đốc, trách nhiệm của Ban là lập, trình bày trung thực và hợp lý báo cáo tài chính theo Chuẩn mực kế toán Việt Nam, chế độ kế toán doanh nghiệp hiện hành và các quy định pháp lý có liên quan. Ban cũng chịu trách nhiệm về kiểm soát nội bộ mà Ban xác định là cần thiết để bảo đảm báo cáo không có sai sót trọng yếu do gian lận hoặc nhầm lẫn.",
+   "Trách nhiệm của chúng tôi là đưa ra ý kiến về báo cáo tài chính dựa trên kết quả cuộc kiểm toán. Chúng tôi đã thực hiện kiểm toán theo các Chuẩn mực kiểm toán Việt Nam. Các chuẩn mực này yêu cầu kiểm toán viên tuân thủ đạo đức nghề nghiệp, lập kế hoạch và thực hiện kiểm toán để đạt được sự đảm bảo hợp lý về việc báo cáo tài chính có còn sai sót trọng yếu hay không.",
+   "Công việc kiểm toán bao gồm thực hiện các thủ tục nhằm thu thập bằng chứng kiểm toán về các số liệu và thuyết minh trên báo cáo. Các thủ tục được lựa chọn dựa trên xét đoán của kiểm toán viên, bao gồm đánh giá rủi ro sai sót trọng yếu do gian lận hoặc nhầm lẫn. Khi đánh giá rủi ro, chúng tôi xem xét kiểm soát nội bộ liên quan đến việc lập báo cáo để thiết kế thủ tục phù hợp, không nhằm đưa ra ý kiến về hiệu quả của kiểm soát nội bộ.",
+   "Chúng tôi cũng đánh giá tính thích hợp của các chính sách kế toán được sử dụng, tính hợp lý của các ước tính kế toán và các thuyết minh liên quan do Ban Tổng Giám đốc thực hiện. Chúng tôi xem xét việc Ban sử dụng cơ sở hoạt động liên tục, kết luận về tính phù hợp của cơ sở đó và đánh giá cách trình bày tổng thể của báo cáo tài chính. Chúng tôi tin rằng bằng chứng thu thập được là đầy đủ và thích hợp làm cơ sở cho ý kiến kiểm toán."
+  ],
+  "board_title": "BÁO CÁO CỦA BAN TỔNG GIÁM ĐỐC",
+  "auditor_title": "BÁO CÁO KIỂM TOÁN ĐỘC LẬP",
+  "auditor_addressee": "Kính gửi các cổ đông và Hội đồng quản trị {company}",
+  "notes": [
+   {
+    "title": "B09-DN. Đặc điểm hoạt động",
+    "paragraphs": [
+     "Công ty hoạt động trong lĩnh vực thu mua, chế biến và xuất khẩu nông sản. Đơn vị tiền tệ sử dụng trong ghi chép là đồng Việt Nam.",
+     "Sản phẩm được bán cho các nhà phân phối nước ngoài theo điều kiện giao hàng đã thỏa thuận."
+    ],
+    "table": false
+   },
+   {
+    "title": "B10-DN. Chính sách kế toán",
+    "paragraphs": [
+     "Báo cáo tài chính được lập theo cơ sở giá gốc, phù hợp với Chuẩn mực kế toán Việt Nam và chế độ kế toán doanh nghiệp hiện hành. Doanh thu được ghi nhận khi phần lớn rủi ro và lợi ích đã chuyển giao cho khách hàng.",
+     "Ngoại tệ được quy đổi theo tỷ giá giao dịch thực tế tại ngày phát sinh; các khoản mục tiền tệ có gốc ngoại tệ cuối kỳ được đánh giá lại theo tỷ giá phù hợp. Chi phí được ghi nhận theo nguyên tắc phù hợp với doanh thu."
+    ],
+    "table": false
+   },
+   {
+    "title": "B11-DN. Tiền và tương đương tiền",
+    "paragraphs": [
+     "Tiền của Công ty bao gồm tiền mặt tại quỹ và tiền gửi ngân hàng phục vụ thanh toán trong nước, xuất khẩu. Các khoản tương đương tiền là tiền gửi có kỳ hạn ngắn, có khả năng chuyển đổi dễ dàng thành tiền và ít rủi ro thay đổi giá trị."
+    ],
+    "table": true
+   },
+   {
+    "title": "B12-DN. Phải thu khách hàng",
+    "paragraphs": [
+     "Phải thu khách hàng chủ yếu phát sinh từ các hợp đồng xuất khẩu gạo, điều và trái cây sấy. Công ty theo dõi riêng từng khách hàng, đánh giá tuổi nợ và trích lập dự phòng đối với khoản có dấu hiệu không thu hồi được."
+    ],
+    "table": true
+   },
+   {
+    "title": "B13-DN. Hàng tồn kho",
+    "paragraphs": [
+     "Hàng tồn kho gồm nguyên liệu mua trong mùa vụ, sản phẩm đang chế biến, thành phẩm đóng gói và vật tư bao bì. Hàng tồn kho được ghi nhận theo giá thấp hơn giữa giá gốc và giá trị thuần có thể thực hiện được. Công ty kiểm kê tại ngày kết thúc năm."
+    ],
+    "table": true
+   },
+   {
+    "title": "B14-DN. Tài sản cố định",
+    "paragraphs": [
+     "Nguyên giá bao gồm giá mua và các chi phí trực tiếp để đưa tài sản vào trạng thái sẵn sàng sử dụng. Chi phí sửa chữa thường xuyên được ghi nhận vào kết quả kinh doanh."
+    ],
+    "table": true
+   },
+   {
+    "title": "B15-DN. Vay và nợ thuê tài chính",
+    "paragraphs": [
+     "Các khoản vay ngắn hạn được sử dụng cho vốn lưu động mùa vụ, còn khoản vay dài hạn dùng để đầu tư dây chuyền và kho mát. Lãi vay được ghi nhận theo phương pháp lãi suất thực tế. Công ty tuân thủ các điều khoản chính của hợp đồng tín dụng tại ngày báo cáo."
+    ],
+    "table": true
+   },
+   {
+    "title": "B16-DN. Vốn chủ sở hữu",
+    "paragraphs": [
+     "Vốn góp của chủ sở hữu gồm cổ phần phổ thông đã được các cổ đông đăng ký và thanh toán đầy đủ. Lợi nhuận sau thuế được phân phối theo nghị quyết của Đại hội đồng cổ đông sau khi trích lập các quỹ theo quy định và nhu cầu hoạt động."
+    ],
+    "table": true
+   },
+   {
+    "title": "B17-DN. Doanh thu và chi phí",
+    "paragraphs": [
+     "Giá vốn hàng bán tăng cùng sản lượng nhưng tỷ lệ lợi nhuận gộp được cải thiện do nâng tỷ trọng sản phẩm sơ chế sâu. Chi phí bán hàng bao gồm vận chuyển, bảo hiểm và hoa hồng xuất khẩu."
+    ],
+    "table": true
+   },
+   {
+    "title": "B18-DN. Thuế và sự kiện sau ngày kết thúc kỳ",
+    "paragraphs": [
+     "Chi phí thuế thu nhập doanh nghiệp hiện hành được xác định trên thu nhập chịu thuế theo quy định hiện hành. Công ty đã kê khai và nộp các khoản thuế đến hạn. Tài sản và công nợ thuế hoãn lại được ghi nhận đối với các chênh lệch tạm thời theo quy định.",
+     "Ban Tổng Giám đốc đánh giá các sự kiện này không làm phát sinh điều chỉnh trọng yếu đối với báo cáo tài chính đã lập."
+    ],
+    "table": false
+   }
+  ]
+ }
+}

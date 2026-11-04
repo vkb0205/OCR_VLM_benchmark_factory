@@ -1,0 +1,86 @@
+{
+  "variables": {
+    "industry": "nông sản xuất khẩu",
+    "company_size": "medium",
+    "fiscal_year": 2025
+  },
+  "source": "seed_136.json",
+  "values": {
+    "board_paragraph": [
+      "Products are sold to food distributors in East Asia and the Middle East under seasonal contracts.",
+      "The Board of Management maintained appropriate credit limits, monitored the aging of customer balances, and recognized allowances for receivables showing signs of impairment.",
+      "During the reporting year, the Company continued to invest in a heat-recirculating drying system and cold storage facilities in Vinh Nham. The new equipment helps reduce post-harvest losses, improve consistency across batches, and support traceability.",
+      "In the coming year, the Company plans to expand its range of unsalted roasted cashew products and implement software to track batches from collection points to the port of delivery. The Board of Management considers demand for traceable food products to remain favorable, although agricultural commodity prices and exchange rates may fluctuate. The Company will prioritize contracts with price adjustment clauses and transport insurance.",
+      "The financial statements for {year} were audited by {auditor}. The Board of Management is responsible for preparing fairly presented financial statements and has reviewed events occurring after the reporting date.",
+      "No other events requiring adjustment or further disclosure in this report occurred after the end of the financial year."
+    ],
+    "auditor_paragraphs": [
+      "These financial statements are presented in Vietnamese dong and reflect the Company's material transactions.",
+      "The Board of Management is responsible for establishing the necessary internal controls, selecting appropriate accounting policies, and assessing the Company's ability to continue as a going concern.",
+      "Our responsibility is to express an opinion on the financial statements based on the results of our audit. We conducted our audit in accordance with Vietnamese Standards on Auditing. These standards require auditors to comply with ethical requirements, plan and perform procedures to obtain reasonable assurance that the financial statements are free from material misstatement.",
+      "An audit involves performing procedures to obtain evidence about the amounts and disclosures in the financial statements. The procedures selected depend on the auditor's judgment, including the assessment of risks of material misstatement due to fraud or error. We also evaluate the appropriateness of the accounting policies and the accounting estimates made by the Board of Management.",
+      "We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our audit opinion. During the audit, we communicated with the Board of Directors regarding the scope and timing of the audit, significant findings, and any significant internal control deficiencies identified."
+    ],
+    "board_title": "REPORT OF THE BOARD OF MANAGEMENT",
+    "auditor_title": "INDEPENDENT AUDITOR'S REPORT",
+    "auditor_addressee": "To the Shareholders and Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "1. Business activities",
+        "paragraphs": [
+          "The Company purchases, processes, and exports agricultural products. The financial statements are prepared in Vietnamese dong and reflect the operations of a single entity."
+        ],
+        "table": true
+      },
+      {
+        "title": "2. Accounting policies",
+        "paragraphs": [
+          "Revenue is recognized when control of goods is transferred and the amount can be measured reliably. Expenses are recognized in accordance with revenue, while foreign currencies are translated at the actual transaction exchange rate."
+        ],
+        "table": false
+      },
+      {
+        "title": "3. Cash and cash equivalents",
+        "paragraphs": [
+          "Cash comprises cash on hand and bank deposits used for routine payments. Cash equivalents are short-term investments with maturities of no more than three months that are readily convertible into cash and subject to an insignificant risk of changes in value. The Company has no significant restrictions on its cash balances at the reporting date."
+        ],
+        "table": true
+      },
+      {
+        "title": "4. Trade receivables",
+        "paragraphs": [
+          "Receivables are recognized at their carrying amounts, net of allowances for losses. The Board of Management considers the aging of balances, payment history, and customers' financial information. Foreign currency receivables are translated at the actual transaction exchange rate at the reporting date; the Company has no material related-party receivables."
+        ],
+        "table": true
+      },
+      {
+        "title": "5. Inventories",
+        "paragraphs": [
+          "Inventories comprise raw agricultural products, work in progress, and packaged finished goods. Cost is determined using the weighted-average method. An allowance is recognized when net realizable value is below cost, based on estimated selling prices and the costs of completion and transportation. Inventories are not pledged as collateral for loans."
+        ],
+        "table": true
+      },
+      {
+        "title": "6. Fixed assets",
+        "paragraphs": [
+          "Tangible fixed assets are stated at cost less accumulated depreciation. Intangible assets consist mainly of traceability software, which is amortized over four years. Routine repair costs are expensed as incurred."
+        ],
+        "table": false
+      },
+      {
+        "title": "7. Borrowings and equity",
+        "paragraphs": [
+          "Borrowings are recognized at the proceeds received, with transaction costs allocated over the loan term. Interest expense is recognized in the period incurred, except for amounts eligible for capitalization. Contributed capital is recognized at the amount actually contributed; retained earnings reflect after-tax results and distributions approved. The Company complies with its loan covenants."
+        ],
+        "table": true
+      },
+      {
+        "title": "8. Revenue and taxes",
+        "paragraphs": [
+          "Export revenue is recognized when the goods have completed the delivery procedures specified in the contract terms. Output value-added tax and corporate income tax are determined in accordance with current regulations. The Company files tax returns periodically and has recognized no unusual tax liabilities at the reporting date. Current tax for the year is calculated on taxable profit after allowable adjustments."
+        ],
+        "table": true
+      }
+    ]
+  }
+}

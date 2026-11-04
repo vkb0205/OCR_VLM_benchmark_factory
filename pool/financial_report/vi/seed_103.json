@@ -1,0 +1,108 @@
+{
+ "variables": {
+  "industry": "nhựa kỹ thuật",
+  "company_size": "large",
+  "fiscal_year": 2025
+ },
+ "source": "seed_103.json",
+ "values": {
+  "board_paragraph": [
+   "{company} sản xuất hạt nhựa kỹ thuật, chi tiết ép phun chính xác và cụm linh kiện polymer cho thiết bị điện, cơ khí và phương tiện vận tải. Công ty vận hành hai phân xưởng tại vùng công nghiệp Bến Ngọc, phục vụ khách hàng công nghiệp theo hợp đồng dài hạn và ghi sổ bằng đồng Việt Nam.",
+   "Trong năm {year}, Công ty hoàn thiện dây chuyền ép phun tự động, tăng tỷ lệ sử dụng vật liệu tái chế đạt chuẩn và củng cố phòng thử nghiệm. Hoạt động mua nguyên liệu được phân kỳ theo đơn hàng, còn việc kiểm soát khuôn và độ ổn định kích thước được thực hiện trước mỗi lần giao hàng.",
+   "Mức tăng đến từ sản lượng linh kiện chính xác, cơ cấu sản phẩm cải thiện và tiết kiệm điện tại các máy ép.",
+   "Công ty duy trì hạn mức tín dụng phù hợp, theo dõi tuổi nợ khách hàng và bố trí vốn cho chương trình mở rộng nhà xưởng.",
+   "Năm {next}, Ban Tổng Giám đốc dự kiến phát triển thêm vật liệu chịu nhiệt và các cụm nhựa có yêu cầu truy xuất cao. Các khoản đầu tư mới sẽ được thẩm định theo công suất, khả năng thu hồi vốn và an toàn môi trường. Công ty cũng tiếp tục đào tạo kỹ thuật viên và đa dạng hóa nguồn cung hạt nhựa.",
+   "Hội đồng quản trị và Ban Tổng Giám đốc làm việc theo quy chế quản trị đã ban hành, họp định kỳ để xem xét đơn hàng, chất lượng, dòng tiền và rủi ro vận hành. Công ty đã chỉ định {auditor} thực hiện kiểm toán báo cáo tài chính năm {year}.",
+   "Ban Tổng Giám đốc chịu trách nhiệm lập báo cáo tài chính trung thực, hợp lý, lựa chọn chính sách kế toán phù hợp và duy trì hệ thống kiểm soát nội bộ cần thiết. Các ước tính về dự phòng, khấu hao, thuế và nghĩa vụ bảo hành được xem xét trên thông tin đáng tin cậy tại ngày lập báo cáo.",
+   "Sau ngày kết thúc năm tài chính, Công ty ký thêm một số đơn hàng cung ứng linh kiện nhưng không phát sinh sự kiện cần điều chỉnh số liệu. Báo cáo được lập trên giả định hoạt động liên tục; Ban Tổng Giám đốc đã đánh giá dòng tiền, nghĩa vụ vay và kế hoạch sản xuất trong mười hai tháng tiếp theo.",
+   "Ban Tổng Giám đốc ghi nhận sự phối hợp của người lao động, nhà cung cấp và khách hàng trong việc duy trì tiêu chuẩn kỹ thuật. Công ty tiếp tục ưu tiên an toàn lao động, sử dụng năng lượng hiệu quả và minh bạch thông tin tài chính trong mọi quyết định đầu tư."
+  ],
+  "auditor_paragraphs": [
+   "Ban Tổng Giám đốc chịu trách nhiệm về việc lập báo cáo trung thực, hợp lý và kiểm soát nội bộ cần thiết.",
+   "Trách nhiệm của chúng tôi là đưa ra ý kiến về báo cáo tài chính dựa trên cuộc kiểm toán. Chúng tôi đã thực hiện kiểm toán theo các chuẩn mực kiểm toán Việt Nam. Các chuẩn mực này yêu cầu chúng tôi tuân thủ yêu cầu đạo đức, lập kế hoạch và thực hiện thủ tục để đạt được sự đảm bảo hợp lý về việc báo cáo không còn sai sót trọng yếu.",
+   "Cuộc kiểm toán bao gồm thực hiện các thủ tục nhằm thu thập bằng chứng về số liệu và thuyết minh. Thủ tục được lựa chọn phụ thuộc vào xét đoán của kiểm toán viên, bao gồm đánh giá rủi ro sai sót trọng yếu do gian lận hoặc nhầm lẫn. Chúng tôi cũng đánh giá chính sách kế toán, ước tính kế toán và cách trình bày tổng thể.",
+   "Chúng tôi tin tưởng rằng các bằng chứng kiểm toán đã thu thập là đầy đủ và thích hợp làm cơ sở cho ý kiến kiểm toán. Trong quá trình kiểm toán, chúng tôi đã trao đổi với Ban Tổng Giám đốc về phạm vi công việc, thời gian dự kiến và các phát hiện quan trọng, bao gồm những thiếu sót kiểm soát nội bộ đáng lưu ý nếu có.",
+   "Báo cáo kiểm toán này được lập cho mục đích thông tin của các cổ đông và Hội đồng quản trị. Công ty tiếp tục chịu trách nhiệm về tài sản, dữ liệu sản xuất và những nghĩa vụ phát sinh từ hợp đồng với khách hàng. Ý kiến của chúng tôi không thay đổi do các sự kiện phát sinh sau ngày khóa sổ không cần điều chỉnh."
+  ],
+  "board_title": "BÁO CÁO CỦA BAN TỔNG GIÁM ĐỐC",
+  "auditor_title": "BÁO CÁO KIỂM TOÁN ĐỘC LẬP",
+  "auditor_addressee": "Kính gửi: Các cổ đông và Hội đồng quản trị {company}",
+  "notes": [
+   {
+    "title": "1. Đặc điểm hoạt động",
+    "paragraphs": [
+     "Ngành nghề chính là sản xuất sản phẩm từ plastic kỹ thuật, ép phun linh kiện và gia công khuôn phục vụ khách hàng công nghiệp.",
+     "Đơn vị tiền tệ sử dụng trong kế toán là đồng Việt Nam. Công ty có trụ sở và hai phân xưởng tại khu sản xuất Tân Lưu.",
+     "Các giao dịch với bên liên quan, nếu phát sinh, được xem xét theo bản chất và điều kiện giao dịch. Ban lãnh đạo duy trì phân quyền phê duyệt, đối chiếu số liệu và lưu trữ chứng từ để hỗ trợ công tác kiểm toán độc lập."
+    ],
+    "table": false
+   },
+   {
+    "title": "2. Chính sách kế toán chủ yếu",
+    "paragraphs": [
+     "Tài sản được ghi nhận theo giá gốc, ngoại trừ các khoản được trình bày theo quy định riêng. Doanh thu được ghi nhận khi quyền kiểm soát sản phẩm chuyển giao và giá trị có thể xác định đáng tin cậy.",
+     "Các khoản tiền tệ có gốc ngoại tệ được quy đổi theo tỷ giá giao dịch thực tế. Hàng tồn kho được tính theo phương pháp bình quân gia quyền và hạch toán theo phương pháp kê khai thường xuyên."
+    ],
+    "table": false
+   },
+   {
+    "title": "3. Tiền và tương đương tiền",
+    "paragraphs": [
+     "Tiền gửi của Công ty được duy trì tại các tổ chức tín dụng theo hợp đồng không kỳ hạn. Các khoản tương đương tiền là tiền gửi có kỳ hạn gốc không quá ba tháng, có khả năng chuyển đổi dễ dàng thành tiền và ít rủi ro về thay đổi giá trị."
+    ],
+    "table": true
+   },
+   {
+    "title": "4. Phải thu khách hàng",
+    "paragraphs": [
+     "Phải thu khách hàng phát sinh chủ yếu từ bán linh kiện và hạt nhựa theo hợp đồng. Công ty đánh giá khả năng thu hồi theo tuổi nợ, lịch sử thanh toán và thông tin tài chính của từng khách hàng. Dự phòng được ghi nhận cho các khoản có dấu hiệu suy giảm khả năng thu hồi."
+    ],
+    "table": true
+   },
+   {
+    "title": "5. Hàng tồn kho",
+    "paragraphs": [
+     "Hàng tồn kho gồm hạt nhựa, phụ gia, khuôn đang dùng, sản phẩm dở dang và thành phẩm. Giá trị hàng tồn kho được xác định theo giá thấp hơn giữa giá gốc và giá trị thuần có thể thực hiện. Công ty thực hiện kiểm kê cuối năm và trích lập dự phòng cho vật tư chậm luân chuyển."
+    ],
+    "table": true
+   },
+   {
+    "title": "6. Tài sản cố định",
+    "paragraphs": [
+     "Tài sản cố định hữu hình chủ yếu là máy ép phun, dây chuyền phối trộn, nhà xưởng và thiết bị thử nghiệm. Chi phí sửa chữa lớn được phân bổ trong thời gian hưởng lợi. Tài sản vô hình gồm phần mềm điều khiển sản xuất và quyền sử dụng hệ thống thiết kế khuôn.",
+     "Trong năm, Công ty đưa vào sử dụng một dây chuyền ép phun tự động và tiếp tục xây dựng khu kiểm định. Tài sản được bảo dưỡng theo lịch kỹ thuật và kiểm tra suy giảm khi có dấu hiệu bất thường."
+    ],
+    "table": true
+   },
+   {
+    "title": "7. Vay và nợ thuê tài chính",
+    "paragraphs": [
+     "Các khoản vay được sử dụng cho vốn lưu động và đầu tư máy móc. Lãi vay được tính theo lãi suất thỏa thuận, dao động theo từng hợp đồng. Công ty tuân thủ các điều khoản tài chính và phân loại phần nợ đến hạn trong vòng mười hai tháng vào nợ ngắn hạn."
+    ],
+    "table": true
+   },
+   {
+    "title": "8. Vốn chủ sở hữu",
+    "paragraphs": [
+     "Vốn góp của chủ sở hữu được chia thành cổ phần phổ thông có quyền biểu quyết ngang nhau. Lợi nhuận sau thuế được phân phối theo nghị quyết của Đại hội đồng cổ đông sau khi trích lập các quỹ và hoàn thành nghĩa vụ với Nhà nước. Công ty không có cổ phần ưu đãi."
+    ],
+    "table": true
+   },
+   {
+    "title": "9. Doanh thu và thuế",
+    "paragraphs": [
+     "Doanh thu được tạo ra từ bán hạt nhựa kỹ thuật, linh kiện ép phun và dịch vụ gia công khuôn. Hợp đồng thường quy định giao hàng theo đợt, nghiệm thu theo tiêu chuẩn kích thước và thanh toán trong thời hạn từ ba mươi đến chín mươi ngày.",
+     "Thuế thu nhập doanh nghiệp hiện hành được tính trên thu nhập chịu thuế theo thuế suất áp dụng. Công ty thực hiện kê khai thuế giá trị gia tăng, thuế thu nhập cá nhân và các khoản phải nộp khác theo quy định."
+    ],
+    "table": true
+   },
+   {
+    "title": "10. Sự kiện sau ngày kết thúc kỳ kế toán",
+    "paragraphs": [
+     "Ban Tổng Giám đốc tiếp tục theo dõi đơn hàng mới, giá nguyên liệu và các nghĩa vụ vay trong kế hoạch hoạt động năm {next}."
+    ],
+    "table": false
+   }
+  ]
+ }
+}

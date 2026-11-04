@@ -1,0 +1,111 @@
+{
+  "variables": {
+    "industry": "dệt may",
+    "company_size": "large",
+    "fiscal_year": 2025
+  },
+  "source": "seed_102.json",
+  "values": {
+    "board_paragraph": [
+      "The closed-loop production chain enables the Company to proactively control quality, delivery schedules, and raw material traceability.",
+      "The Company maintains long-term contracts with foreign customers while expanding domestic sales channels for corporate uniforms. The Board of Management prioritizes high value-added products and strictly controls energy costs.",
+      "Gross profit margin improved due to a higher automation rate, electricity savings, and reduced yarn loss. Selling expenses increased in line with export volume, while finance costs were controlled through the restructuring of loan maturities. Actual performance indicators were in line with the plan approved by the General Meeting of Shareholders.",
+      "The Company met its payment commitments, maintained an appropriate solvency ratio, and had no overdue loans.",
+      "In {next}, the Company plans to increase weaving and finishing capacity, invest in a circulating water treatment system, and develop a line of fabrics blended with bio-based fibers. The Board of Management believes that demand may fluctuate with export markets and will therefore continue to diversify customers, fix raw material prices quarterly, and maintain liquidity reserves.",
+      "The Board of Directors and the Board of Management comprise the members set out in the table below. The financial statements were audited by {auditor}. The Board of Management is responsible for preparing the financial statements fairly, selecting appropriate accounting policies, and maintaining the necessary internal controls. After the closing date, no material events occurred other than the announced investment plans."
+    ],
+    "auditor_paragraphs": [
+      "The financial statements are prepared in Vietnamese dong in accordance with the Vietnamese Enterprise Accounting System.",
+      "The Board of Management is responsible for the preparation and fair presentation of the financial statements, for selecting and applying appropriate accounting policies, for making reasonable estimates, and for maintaining the necessary internal control system to ensure that the financial statements are free from material misstatement, whether due to fraud or error.",
+      "Our responsibility is to express an opinion on the financial statements based on the results of the audit. We conducted our work in accordance with Vietnamese Auditing Standards. Those standards require auditors to comply with ethical requirements and to plan and perform procedures to obtain reasonable assurance that the financial statements are free from material misstatement.",
+      "The audit includes performing procedures to obtain evidence about the amounts and disclosures in the financial statements. The procedures selected depend on the auditor's judgment, including assessing the risks of material misstatement, considering related controls, and evaluating the appropriateness of accounting policies, estimates, and overall presentation.",
+      "We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our unqualified audit opinion. No matters were identified that would change our conclusion. The financial statements were approved for issue by the Board of Management on the date this report is signed."
+    ],
+    "board_title": "REPORT OF THE BOARD OF MANAGEMENT",
+    "auditor_title": "INDEPENDENT AUDIT REPORT",
+    "auditor_addressee": "To: The Shareholders and the Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "1. Nature of Operations",
+        "paragraphs": [
+          "The Company produces yarn, weaves and finishes fabric, manufactures garments for export, and provides contract processing services.",
+          "Management monitors operating, quality, and cash flow indicators monthly; significant fluctuations are analyzed, approved, and documented together with the related supporting documents."
+        ],
+        "table": false
+      },
+      {
+        "title": "2. Basis of Preparation and Accounting Policies",
+        "paragraphs": [
+          "The financial statements are prepared in Vietnamese dong on the historical cost basis and in accordance with the Vietnamese Enterprise Accounting System. Transactions in foreign currencies are translated at the actual transaction exchange rate; monetary assets and liabilities denominated in foreign currencies at the end of the period are revalued at the telegraphic transfer selling rate of the bank servicing the Company.",
+          "Revenue is recognized when the significant risks and rewards associated with the products have been transferred, the customer has accepted the goods, and the Company is able to collect the economic benefits. Expenses are recognized in matching with revenue and on an accrual basis.",
+          "Management monitors operating, quality, and cash flow indicators monthly; significant fluctuations are analyzed, approved, and documented together with the related supporting documents."
+        ],
+        "table": false
+      },
+      {
+        "title": "3. Cash and Cash Equivalents",
+        "paragraphs": [
+          "Cash comprises cash on hand and bank deposits. Cash equivalents are short-term investments with maturities of no more than three months, readily convertible into cash, and subject to an insignificant risk of changes in value.",
+          "Management monitors operating, quality, and cash flow indicators monthly; significant fluctuations are analyzed, approved, and documented together with the related supporting documents."
+        ],
+        "table": true
+      },
+      {
+        "title": "4. Trade Receivables and Other Receivables",
+        "paragraphs": [
+          "Receivables are presented at carrying amount after providing for amounts that show indications of being difficult to collect. The Company regularly reconciles balances with major customers and monitors the aging of receivables by export contract. No receivables are used as collateral for loans.",
+          "Management monitors operating, quality, and cash flow indicators monthly; significant fluctuations are analyzed, approved, and documented together with the related supporting documents."
+        ],
+        "table": true
+      },
+      {
+        "title": "5. Inventories",
+        "paragraphs": [
+          "Inventories are recognized at the lower of cost and net realizable value. The cost of raw materials is determined using the weighted average method; work in progress and finished goods include raw material costs, direct labor costs, and allocated manufacturing overhead costs.",
+          "Management monitors operating, quality, and cash flow indicators monthly; significant fluctuations are analyzed, approved, and documented together with the related supporting documents."
+        ],
+        "table": true
+      },
+      {
+        "title": "6. Fixed Assets",
+        "paragraphs": [
+          "Tangible fixed assets are recognized at cost less accumulated depreciation. Routine repair costs are recognized in profit or loss, while improvements that increase capacity or useful life are capitalized.",
+          "Management monitors operating, quality, and cash flow indicators monthly; significant fluctuations are analyzed, approved, and documented together with the related supporting documents."
+        ],
+        "table": true
+      },
+      {
+        "title": "7. Borrowings and Payables",
+        "paragraphs": [
+          "Borrowings are recognized at the amount actually received and classified as short-term or long-term according to their repayment terms. Borrowing costs are recognized as expenses in the period, except for the portion directly attributable to qualifying assets for capitalization. The Company complies with the financial covenants in its credit agreements.",
+          "Management monitors operating, quality, and cash flow indicators monthly; significant fluctuations are analyzed, approved, and documented together with the related supporting documents."
+        ],
+        "table": true
+      },
+      {
+        "title": "8. Owners' Equity",
+        "paragraphs": [
+          "Share capital comprises ordinary shares with voting rights. The development investment fund is appropriated from after-tax profit in accordance with resolutions of the General Meeting of Shareholders. Undistributed after-tax profit is used to pay dividends or supplement capital resources under valid decisions.",
+          "Management monitors operating, quality, and cash flow indicators monthly; significant fluctuations are analyzed, approved, and documented together with the related supporting documents."
+        ],
+        "table": true
+      },
+      {
+        "title": "9. Revenue and Taxes",
+        "paragraphs": [
+          "Revenue mainly comes from the sale of fabrics, yarn, and ready-made garments. Export revenue is recognized in accordance with the delivery terms in the contract when control passes to the customer. The Company declares value-added tax under the deduction method and corporate income tax at the prevailing tax rate.",
+          "Management monitors operating, quality, and cash flow indicators monthly; significant fluctuations are analyzed, approved, and documented together with the related supporting documents."
+        ],
+        "table": true
+      },
+      {
+        "title": "10. Events After the End of the Accounting Period",
+        "paragraphs": [
+          "The Board of Directors approved the investment plan for a circulating water treatment line and assigned the Board of Management to implement it within the approved budget.",
+          "Management monitors operating, quality, and cash flow indicators monthly; significant fluctuations are analyzed, approved, and documented together with the related supporting documents."
+        ],
+        "table": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "variables": {
+    "industry": "nhựa kỹ thuật",
+    "company_size": "small",
+    "fiscal_year": 2024
+  },
+  "source": "seed_144.json",
+  "values": {
+    "board_paragraph": [
+      "The company's products are supplied to domestic assemblers of electrical equipment, pumps and mechanical parts.",
+      "In {year}, the company maintained stable production, focusing on glass-fiber-reinforced polyamide components and technical trays used in control cabinets. The Board of Management prioritized controlling the defect rate, renegotiating the delivery schedule for plastic pellets and adjusting selling prices in line with raw material fluctuations.",
+      "The outlook for {next} is based on framework contracts already signed with customers manufacturing electrical equipment and with industrial household-appliance customers. The company expects to complete molds for two new component lines, increase the reuse rate of flash in line with technical standards and expand thermal endurance testing. The main risks remain the price of imported plastic pellets, mold delivery times and price competition pressure; these risks are monitored in the purchasing and quotation plans.",
+      "The Board of Directors oversees business direction, investment budget and the internal control system. There were no material changes in the governance structure after the end of the accounting period that require adjustment to the figures presented.",
+      "The financial statements for {year} were audited by {auditor}, under a service contract approved by the Board of Directors. The Board of Management is responsible for preparing the statements in accordance with the Vietnamese enterprise accounting regime, selecting appropriate accounting policies, maintaining internal control and ensuring that assets are managed for their intended purposes. In the assessment of the Board of Management, the company is able to continue its normal operations in the foreseeable future.",
+      "The Board of Management confirms that it has considered events arising from the end of the accounting period to the date of signing the report. The company did not incur any lawsuits, purchase commitments or asset losses that materially affect the financial statements. This transaction is an ordinary investment activity and does not change the figures for {year}.",
+      "The Board of Management presents this report together with the accompanying financial statements and notes for shareholders' consideration. The objectives for the next period are to maintain shipment quality, improve machine utilization efficiency, develop materials with appropriate recycled content and maintain a profit margin sufficient to repay investment debt. Financial indicators are monitored monthly, together with on-time delivery indicators and the first-pass yield rate."
+    ],
+    "auditor_paragraphs": [
+      "The report is prepared in Vietnamese dong and the Board of Management is responsible for its issuance.",
+      "The Board of Management is responsible for the preparation and fair presentation of the financial statements; selecting and applying appropriate accounting policies; making reasonable accounting estimates; and designing, implementing and maintaining internal control as necessary so that the statements are free from material misstatement, whether due to fraud or error. This responsibility also includes assessing the company's ability to continue as a going concern.",
+      "Our responsibility is to express an opinion on the financial statements based on the results of our audit. We conducted our audit in accordance with Vietnamese Standards on Auditing. Those standards require that we comply with ethical requirements and plan and perform audit procedures to obtain reasonable assurance about whether the financial statements are free from material misstatement.",
+      "An audit involves performing procedures to obtain evidence about the amounts and disclosures in the financial statements. The selection of procedures depends on the auditor's judgment, including an assessment of the risks of material misstatement due to fraud or error. In assessing those risks, the auditor considers relevant internal control, but not for the purpose of expressing an opinion on the effectiveness of internal control.",
+      "We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our audit opinion. During the audit, we communicated with the Board of Management and those charged with governance regarding the scope and timing of the audit, significant findings and noteworthy internal control deficiencies. We maintained our independence from the company.",
+      "In addition to the matters stated in the report, we have not identified any event or condition that indicates a material doubt about the company's ability to continue as a going concern at the date of this report. Our audit opinion is an unqualified opinion. This report is prepared for the purpose of providing information to the shareholders and the Board of Directors and is not intended to serve any other specific user."
+    ],
+    "board_title": "REPORT OF THE BOARD OF MANAGEMENT",
+    "auditor_title": "INDEPENDENT AUDITOR'S REPORT",
+    "auditor_addressee": "To the shareholders and the Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "NOTES TO THE FINANCIAL STATEMENTS",
+        "paragraphs": [
+          "Figures are rounded for presentation, while amounts in the tables are in whole dong.",
+          "The Board of Management assesses that the company has sufficient resources to continue operating for twelve months from the date of preparing the report. Accounting policies are applied consistently with the prior year, except for changes required under current regulations."
+        ],
+        "table": true
+      },
+      {
+        "title": "2. Cash and cash equivalents",
+        "paragraphs": [
+          "Bank deposits are recorded at the confirmed balance at period end. The company has no restricted cash. Cash equivalents are determined based on their short original maturities and are readily convertible into cash.",
+          "Operating cash flow increased due to the collection of receivables, although the company increased its raw material inventory for orders in the early part of the year."
+        ],
+        "table": true
+      },
+      {
+        "title": "3. Trade receivables",
+        "paragraphs": [
+          "Receivables are monitored by customer and recorded at their recoverable amount. The sales department reconciles receivables monthly and makes provisions when there is evidence of payment risk.",
+          "Most of the period-end balance comprises receivables from customers manufacturing electrical equipment, with payment scheduled in the first quarter of {next}."
+        ],
+        "table": true
+      },
+      {
+        "title": "4. Inventories",
+        "paragraphs": [
+          "Inventories comprise plastic pellets, additives, molds in use and finished goods awaiting delivery. Inventories are recorded at the lower of cost and net realizable value.",
+          "The period-end provision reflects certain slow-moving colored pellet codes and semi-finished goods, which are reviewed against the production plan."
+        ],
+        "table": true
+      },
+      {
+        "title": "5. Fixed assets",
+        "paragraphs": [
+          "Injection molding machines, dryers and testing equipment are tracked separately at historical cost and accumulated depreciation.",
+          "During the year, the company put into use a temperature controller and upgraded the material feeding system; no fixed assets were pledged other than assets securing the long-term loan."
+        ],
+        "table": true
+      },
+      {
+        "title": "6. Borrowings and finance lease liabilities",
+        "paragraphs": [
+          "Borrowings are recorded at the amount actually received and classified as short-term or long-term according to their repayment terms. Borrowing interest costs are recognized in finance expenses in the period, except for the portion eligible for capitalization.",
+          "The long-term loan is used to invest in injection molding machines and renovate the factory, and is repaid on a quarterly schedule. The company complies with the financial covenants committed with the credit institution."
+        ],
+        "table": true
+      },
+      {
+        "title": "7. Owners' equity",
+        "paragraphs": [
+          "Profit after tax is distributed in accordance with the resolution of the General Meeting of Shareholders after fulfilling tax obligations and making fund appropriations.",
+          "The development investment fund increased due to appropriation from prior-year profit. The company has not issued additional shares and did not repurchase shares during the period."
+        ],
+        "table": true
+      },
+      {
+        "title": "8. Revenue and taxes",
+        "paragraphs": [
+          "Revenue is recognized when the products have been delivered and control has transferred to the customer under the contract terms. Net revenue excludes discounts and returned goods.",
+          "Current corporate income tax is calculated on taxable income at the applicable tax rate. The company declares value added tax using the deduction method and has no material overdue tax obligations."
+        ],
+        "table": true
+      }
+    ]
+  }
+}

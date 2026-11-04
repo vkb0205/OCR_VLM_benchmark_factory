@@ -1,0 +1,1508 @@
+lang:
+  vi:
+    fields:
+    - cat: header
+      guide: company name + report period, may be 2 lines
+      id: running_header
+      kind: text
+    - cat: footer
+      guide: statement that the notes are an integral part of the report
+      id: running_footer
+      kind: text
+    - cat: figure
+      guide: fictional logo
+      id: cover_logo
+      kind: figure
+      section: cover
+    - cat: title
+      guide: full fictional company name in upper case, e.g. CÔNG TY CỔ PHẦN ...
+      id: cover_company
+      kind: text
+      section: cover
+    - cat: text_block
+      guide: Cho năm tài chính kết thúc ngày 31/12/<year>
+      id: cover_period
+      kind: text
+      section: cover
+    - cat: text_block
+      guide: fictional address, no real street numbers
+      id: cover_address
+      kind: text
+      section: cover
+    - cat: text_block
+      guide: 'Mã số thuế: 10 digits starting 0000'
+      id: cover_tax
+      kind: text
+      section: cover
+    - cat: section_header
+      guide: BÁO CÁO CỦA BAN TỔNG GIÁM ĐỐC
+      id: board_title
+      kind: text
+      section: board_report
+    - cat: text_block
+      guide: '60-120 words each: company overview, activities, results of the year, financial position,
+        outlook, board members, auditor, board responsibility and events after the period'
+      id: board_paragraph
+      kind: text
+      many:
+      - 6
+      - 10
+      section: board_report
+    - cat: caption_table
+      guide: caption for the board member table
+      id: directors_caption
+      kind: text
+      parent: directors_table
+      section: board_report
+    - cat: table
+      guide: header [Họ và tên, Chức vụ, Ngày bổ nhiệm]; 4-7 fictional members
+      id: directors_table
+      kind: table
+      section: board_report
+    - cat: chart
+      guide: revenue and profit after tax (optionally total assets as a third series) for 4-5 years, in
+        tỷ đồng; last year = statement figures
+      id: revenue_chart
+      kind: chart
+      section: board_report
+    - cat: caption_chart
+      guide: Biểu đồ 1. ...
+      id: revenue_chart_caption
+      kind: text
+      parent: revenue_chart
+      section: board_report
+    - cat: text_block
+      guide: Tại ngày 31 tháng 12 năm <year>
+      id: B01_date
+      kind: text
+      section: B01
+    - cat: table
+      columns:
+      - Chỉ tiêu
+      - Mã số
+      - Thuyết minh
+      - Số cuối năm
+      - Số đầu năm
+      guide: choose 35-55 leaf lines plausible for the industry; integer VND, scaled to company size
+      id: B01_table
+      kind: statement
+      lines: B01
+      section: B01
+    - cat: text_block
+      guide: Cho năm tài chính kết thúc ngày 31/12/<year>
+      id: B02_date
+      kind: text
+      section: B02
+    - cat: table
+      columns:
+      - Chỉ tiêu
+      - Mã số
+      - Thuyết minh
+      - Năm nay
+      - Năm trước
+      guide: every line; expenses positive; EPS (70) in VND per share
+      id: B02_table
+      kind: statement
+      lines: B02
+      section: B02
+    - cat: text_block
+      guide: <city>, ngày dd tháng 03 năm <year+1>
+      id: signature_date
+      kind: text
+      section: signature
+    - cat: signature
+      id: signature_1
+      kind: signature
+      section: signature
+    - cat: text_block
+      guide: fictional Vietnamese full name
+      id: signer_1_name
+      kind: text
+      section: signature
+    - cat: signature
+      id: signature_2
+      kind: signature
+      section: signature
+    - cat: text_block
+      guide: fictional Vietnamese full name
+      id: signer_2_name
+      kind: text
+      section: signature
+    - cat: signature
+      id: signature_3
+      kind: signature
+      section: signature
+    - cat: seal
+      guide: 'seal ring text: short company name in upper case, max 34 characters'
+      id: company_seal
+      kind: seal
+      section: signature
+    - cat: text_block
+      guide: fictional Vietnamese full name
+      id: signer_3_name
+      kind: text
+      section: signature
+    - cat: title
+      guide: BÁO CÁO KIỂM TOÁN ĐỘC LẬP
+      id: auditor_title
+      kind: text
+      section: auditor_report
+    - cat: text_block
+      guide: Kính gửi cổ đông và Hội đồng quản trị
+      id: auditor_addressee
+      kind: text
+      section: auditor_report
+    - cat: text_block
+      guide: '5–9 paragraphs, 65–100 Vietnamese words each: scope, management responsibility, auditor
+        responsibility, audit basis, unmodified opinion. Fictional audit only.'
+      id: auditor_paragraphs
+      kind: text
+      many:
+      - 5
+      - 9
+      section: auditor_report
+    - cat: section_header
+      guide: Fictional auditing firm name
+      id: auditor_firm
+      kind: text
+      section: auditor_report
+    - cat: signature
+      id: auditor_signature
+      kind: signature
+      section: auditor_report
+    - cat: seal
+      id: auditor_seal
+      kind: seal
+      section: auditor_report
+    - cat: text_block
+      guide: Fictional place and audit date
+      id: auditor_date
+      kind: text
+      section: auditor_report
+    - cat: text_block
+      guide: For fiscal year ended 31 December
+      id: B03_date
+      kind: text
+      section: B03
+    - cat: table
+      columns:
+      - CHỈ TIÊU
+      - Mã số
+      - Thuyết minh
+      - Năm nay
+      - Năm trước
+      guide: Opening cash (code 60) current must equal B01 code 110 prior; closing cash (code 70) must
+        equal B01 code 110 in each period. Preserve earlier opening cash for the prior year. Use realistic
+        receipts (line 16 nonnegative) and payments (line 17 nonpositive), so code-owned cash ties require
+        only small adjustments.
+      id: B03_table
+      kind: statement
+      lines: B03
+      section: B03
+    - cat: text_block
+      guide: 8–14 numbered B09-DN note sections; each title and 1–3 paragraphs of 60–90 words. The report
+        is table-heavy - almost every section has a table (4–8 rows, 3–5 columns, different shapes), and
+        4–6 sections also have a chart (mix bar, line and donut; 3–6 labels, 1–3 series, caption "Biểu
+        đồ N. ..."). Include policies, cash, receivables, inventory, fixed assets, debt, equity, revenue,
+        tax.
+      id: notes
+      kind: notes
+      section: notes
+    - cat: text_block
+      guide: '4–6 metrics: label, value (integer VND), unit, source (B02.10 revenue, B02.60 profit after
+        tax, B01.270 assets, B01.400 equity). Values recomputed by code.'
+      id: kpis
+      kind: kpis
+      section: board_report
+    statements:
+      B01:
+        balances:
+        - equal:
+          - '270'
+          - '440'
+          plug: 421a
+        formulas:
+        - 110 = 111 + 112
+        - 120 = 121 + 122 + 123
+        - 130 = 131 + 132 + 136 + 137
+        - 140 = 141 + 149
+        - 150 = 151 + 152 + 153 + 155
+        - 100 = 110 + 120 + 130 + 140 + 150
+        - 210 = 211 + 216 + 219
+        - 221 = 222 + 223
+        - 227 = 228 + 229
+        - 220 = 221 + 227
+        - 230 = 231 + 232
+        - 240 = 241 + 242
+        - 250 = 252 + 253 + 254
+        - 260 = 261 + 262 + 263 + 268
+        - 200 = 210 + 220 + 230 + 240 + 250 + 260
+        - 270 = 100 + 200
+        - 310 = 311 + 312 + 313 + 314 + 315 + 319 + 320
+        - 330 = 331 + 337 + 338 + 341
+        - 300 = 310 + 330
+        - 421 = 421a + 421b
+        - 410 = 411 + 412 + 418 + 421
+        - 400 = 410
+        - 440 = 300 + 400
+        lines:
+        - - '100'
+          - 0
+          - A. TÀI SẢN NGẮN HẠN
+        - - '110'
+          - 1
+          - I. Tiền và các khoản tương đương tiền
+        - - '111'
+          - 2
+          - 1. Tiền
+        - - '112'
+          - 2
+          - 2. Các khoản tương đương tiền
+        - - '120'
+          - 1
+          - II. Đầu tư tài chính ngắn hạn
+        - - '121'
+          - 2
+          - 1. Chứng khoán kinh doanh
+        - - '122'
+          - 2
+          - 2. Dự phòng giảm giá chứng khoán kinh doanh (*)
+        - - '123'
+          - 2
+          - 3. Đầu tư nắm giữ đến ngày đáo hạn
+        - - '130'
+          - 1
+          - III. Các khoản phải thu ngắn hạn
+        - - '131'
+          - 2
+          - 1. Phải thu ngắn hạn của khách hàng
+        - - '132'
+          - 2
+          - 2. Trả trước cho người bán ngắn hạn
+        - - '136'
+          - 2
+          - 6. Phải thu ngắn hạn khác
+        - - '137'
+          - 2
+          - 7. Dự phòng phải thu ngắn hạn khó đòi (*)
+        - - '140'
+          - 1
+          - IV. Hàng tồn kho
+        - - '141'
+          - 2
+          - 1. Hàng tồn kho
+        - - '149'
+          - 2
+          - 2. Dự phòng giảm giá hàng tồn kho (*)
+        - - '150'
+          - 1
+          - V. Tài sản ngắn hạn khác
+        - - '151'
+          - 2
+          - 1. Chi phí trả trước ngắn hạn
+        - - '152'
+          - 2
+          - 2. Thuế GTGT được khấu trừ
+        - - '153'
+          - 2
+          - 3. Thuế và các khoản khác phải thu Nhà nước
+        - - '155'
+          - 2
+          - 5. Tài sản ngắn hạn khác
+        - - '200'
+          - 0
+          - B. TÀI SẢN DÀI HẠN
+        - - '210'
+          - 1
+          - I. Các khoản phải thu dài hạn
+        - - '211'
+          - 2
+          - 1. Phải thu dài hạn của khách hàng
+        - - '216'
+          - 2
+          - 6. Phải thu dài hạn khác
+        - - '219'
+          - 2
+          - 7. Dự phòng phải thu dài hạn khó đòi (*)
+        - - '220'
+          - 1
+          - II. Tài sản cố định
+        - - '221'
+          - 2
+          - 1. Tài sản cố định hữu hình
+        - - '222'
+          - 3
+          - '- Nguyên giá'
+        - - '223'
+          - 3
+          - '- Giá trị hao mòn lũy kế (*)'
+        - - '227'
+          - 2
+          - 3. Tài sản cố định vô hình
+        - - '228'
+          - 3
+          - '- Nguyên giá'
+        - - '229'
+          - 3
+          - '- Giá trị hao mòn lũy kế (*)'
+        - - '230'
+          - 1
+          - III. Bất động sản đầu tư
+        - - '231'
+          - 2
+          - '- Nguyên giá'
+        - - '232'
+          - 2
+          - '- Giá trị hao mòn lũy kế (*)'
+        - - '240'
+          - 1
+          - IV. Tài sản dở dang dài hạn
+        - - '241'
+          - 2
+          - 1. Chi phí sản xuất, kinh doanh dở dang dài hạn
+        - - '242'
+          - 2
+          - 2. Chi phí xây dựng cơ bản dở dang
+        - - '250'
+          - 1
+          - V. Đầu tư tài chính dài hạn
+        - - '252'
+          - 2
+          - 2. Đầu tư vào công ty liên doanh, liên kết
+        - - '253'
+          - 2
+          - 3. Đầu tư góp vốn vào đơn vị khác
+        - - '254'
+          - 2
+          - 4. Dự phòng đầu tư tài chính dài hạn (*)
+        - - '260'
+          - 1
+          - VI. Tài sản dài hạn khác
+        - - '261'
+          - 2
+          - 1. Chi phí trả trước dài hạn
+        - - '262'
+          - 2
+          - 2. Tài sản thuế thu nhập hoãn lại
+        - - '263'
+          - 2
+          - 3. Thiết bị, vật tư, phụ tùng thay thế dài hạn
+        - - '268'
+          - 2
+          - 4. Tài sản dài hạn khác
+        - - '270'
+          - 0
+          - TỔNG CỘNG TÀI SẢN
+        - - '300'
+          - 0
+          - C. NỢ PHẢI TRẢ
+        - - '310'
+          - 1
+          - I. Nợ ngắn hạn
+        - - '311'
+          - 2
+          - 1. Phải trả người bán ngắn hạn
+        - - '312'
+          - 2
+          - 2. Người mua trả tiền trước ngắn hạn
+        - - '313'
+          - 2
+          - 3. Thuế và các khoản phải nộp Nhà nước
+        - - '314'
+          - 2
+          - 4. Phải trả người lao động
+        - - '315'
+          - 2
+          - 5. Chi phí phải trả ngắn hạn
+        - - '319'
+          - 2
+          - 9. Phải trả ngắn hạn khác
+        - - '320'
+          - 2
+          - 10. Vay và nợ thuê tài chính ngắn hạn
+        - - '330'
+          - 1
+          - II. Nợ dài hạn
+        - - '331'
+          - 2
+          - 1. Phải trả người bán dài hạn
+        - - '337'
+          - 2
+          - 7. Phải trả dài hạn khác
+        - - '338'
+          - 2
+          - 8. Vay và nợ thuê tài chính dài hạn
+        - - '341'
+          - 2
+          - 11. Thuế thu nhập hoãn lại phải trả
+        - - '400'
+          - 0
+          - D. VỐN CHỦ SỞ HỮU
+        - - '410'
+          - 1
+          - I. Vốn chủ sở hữu
+        - - '411'
+          - 2
+          - 1. Vốn góp của chủ sở hữu
+        - - '412'
+          - 2
+          - 2. Thặng dư vốn cổ phần
+        - - '418'
+          - 2
+          - 8. Quỹ đầu tư phát triển
+        - - '421'
+          - 2
+          - 11. Lợi nhuận sau thuế chưa phân phối
+        - - 421a
+          - 3
+          - '- LNST chưa phân phối lũy kế đến cuối kỳ trước'
+        - - 421b
+          - 3
+          - '- LNST chưa phân phối kỳ này'
+        - - '440'
+          - 0
+          - TỔNG CỘNG NGUỒN VỐN
+      B02:
+        formulas:
+        - 10 = 01 - 02
+        - 20 = 10 - 11
+        - 30 = 20 + 21 - 22 - 25 - 26
+        - 40 = 31 - 32
+        - 50 = 30 + 40
+        - 60 = 50 - 51 - 52
+        lines:
+        - - '01'
+          - 1
+          - 1. Doanh thu bán hàng và cung cấp dịch vụ
+        - - '02'
+          - 1
+          - 2. Các khoản giảm trừ doanh thu
+        - - '10'
+          - 0
+          - 3. Doanh thu thuần về bán hàng và cung cấp dịch vụ
+        - - '11'
+          - 1
+          - 4. Giá vốn hàng bán
+        - - '20'
+          - 0
+          - 5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ
+        - - '21'
+          - 1
+          - 6. Doanh thu hoạt động tài chính
+        - - '22'
+          - 1
+          - 7. Chi phí tài chính
+        - - '23'
+          - 1
+          - '- Trong đó: Chi phí lãi vay'
+        - - '25'
+          - 1
+          - 8. Chi phí bán hàng
+        - - '26'
+          - 1
+          - 9. Chi phí quản lý doanh nghiệp
+        - - '30'
+          - 0
+          - 10. Lợi nhuận thuần từ hoạt động kinh doanh
+        - - '31'
+          - 1
+          - 11. Thu nhập khác
+        - - '32'
+          - 1
+          - 12. Chi phí khác
+        - - '40'
+          - 0
+          - 13. Lợi nhuận khác
+        - - '50'
+          - 0
+          - 14. Tổng lợi nhuận kế toán trước thuế
+        - - '51'
+          - 1
+          - 15. Chi phí thuế TNDN hiện hành
+        - - '52'
+          - 1
+          - 16. Chi phí thuế TNDN hoãn lại
+        - - '60'
+          - 0
+          - 17. Lợi nhuận sau thuế thu nhập doanh nghiệp
+        - - '70'
+          - 1
+          - 18. Lãi cơ bản trên cổ phiếu
+      B03:
+        formulas:
+        - 08 = 01 + 02 + 03 + 04 + 05 + 06 + 07
+        - 20 = 08 + 09 + 10 + 11 + 12 + 13 + 14 + 15 + 16 + 17
+        - 30 = 21 + 22 + 23 + 24 + 25 + 26 + 27
+        - 40 = 31 + 32 + 33 + 34 + 35 + 36
+        - 50 = 20 + 30 + 40
+        - 70 = 50 + 60 + 61
+        lines:
+        - - '01'
+          - 0
+          - Lợi nhuận trước thuế
+        - - '02'
+          - 1
+          - Khấu hao TSCĐ và BĐSĐT
+        - - '03'
+          - 1
+          - Các khoản dự phòng
+        - - '04'
+          - 1
+          - Lãi, lỗ chênh lệch tỷ giá do đánh giá lại các khoản mục tiền tệ
+        - - '05'
+          - 1
+          - Lãi, lỗ từ hoạt động đầu tư
+        - - '06'
+          - 1
+          - Chi phí lãi vay
+        - - '07'
+          - 1
+          - Các khoản điều chỉnh khác
+        - - 08
+          - 0
+          - Lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động
+        - - 09
+          - 1
+          - Tăng, giảm các khoản phải thu
+        - - '10'
+          - 1
+          - Tăng, giảm hàng tồn kho
+        - - '11'
+          - 1
+          - Tăng, giảm các khoản phải trả
+        - - '12'
+          - 1
+          - Tăng, giảm chi phí trả trước
+        - - '13'
+          - 1
+          - Tăng, giảm chứng khoán kinh doanh
+        - - '14'
+          - 1
+          - Tiền lãi vay đã trả
+        - - '15'
+          - 1
+          - Thuế thu nhập doanh nghiệp đã nộp
+        - - '16'
+          - 1
+          - Tiền thu khác từ hoạt động kinh doanh
+        - - '17'
+          - 1
+          - Tiền chi khác cho hoạt động kinh doanh
+        - - '20'
+          - 0
+          - Lưu chuyển tiền thuần từ hoạt động kinh doanh
+        - - '21'
+          - 1
+          - Tiền chi để mua sắm, xây dựng TSCĐ và tài sản dài hạn khác
+        - - '22'
+          - 1
+          - Tiền thu từ thanh lý, nhượng bán TSCĐ và tài sản dài hạn khác
+        - - '23'
+          - 1
+          - Tiền chi cho vay, mua các công cụ nợ của đơn vị khác
+        - - '24'
+          - 1
+          - Tiền thu hồi cho vay, bán lại các công cụ nợ của đơn vị khác
+        - - '25'
+          - 1
+          - Tiền chi đầu tư góp vốn vào đơn vị khác
+        - - '26'
+          - 1
+          - Tiền thu hồi đầu tư góp vốn vào đơn vị khác
+        - - '27'
+          - 1
+          - Tiền thu lãi cho vay, cổ tức và lợi nhuận được chia
+        - - '30'
+          - 0
+          - Lưu chuyển tiền thuần từ hoạt động đầu tư
+        - - '31'
+          - 1
+          - Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu
+        - - '32'
+          - 1
+          - Tiền trả lại vốn góp cho các chủ sở hữu, mua lại cổ phiếu
+        - - '33'
+          - 1
+          - Tiền thu từ đi vay
+        - - '34'
+          - 1
+          - Tiền trả nợ gốc vay
+        - - '35'
+          - 1
+          - Tiền trả nợ gốc thuê tài chính
+        - - '36'
+          - 1
+          - Cổ tức, lợi nhuận đã trả cho chủ sở hữu
+        - - '40'
+          - 0
+          - Lưu chuyển tiền thuần từ hoạt động tài chính
+        - - '50'
+          - 0
+          - Lưu chuyển tiền thuần trong kỳ
+        - - '60'
+          - 0
+          - Tiền và tương đương tiền đầu kỳ
+        - - '61'
+          - 1
+          - Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ
+        - - '70'
+          - 0
+          - Tiền và tương đương tiền cuối kỳ
+  en:
+    variables:
+      industry:
+      - paper packaging manufacturing
+      - food processing
+      - textiles and garments
+      - building materials
+      - mechanical engineering and fabrication
+      - pharmaceutical distribution
+      - logistics
+      - engineering plastics
+      - household electronics
+      - agricultural exports
+    fields:
+    - cat: header
+      guide: company name + reporting period, may be 2 lines
+      id: running_header
+      kind: text
+    - cat: footer
+      guide: statement that the notes are an integral part of the report
+      id: running_footer
+      kind: text
+    - cat: figure
+      guide: fictional logo
+      id: cover_logo
+      kind: figure
+      section: cover
+    - cat: title
+      guide: full fictional company name in upper case, e.g. JOINT STOCK COMPANY ...
+      id: cover_company
+      kind: text
+      section: cover
+    - cat: text_block
+      guide: For the financial year ended 31/12/<year>
+      id: cover_period
+      kind: text
+      section: cover
+    - cat: text_block
+      guide: fictional address, no real street numbers
+      id: cover_address
+      kind: text
+      section: cover
+    - cat: text_block
+      guide: 'Tax identification number: 10 digits starting 0000'
+      id: cover_tax
+      kind: text
+      section: cover
+    - cat: section_header
+      guide: REPORT OF THE BOARD OF GENERAL DIRECTORS
+      id: board_title
+      kind: text
+      section: board_report
+    - cat: text_block
+      guide: '60–120 words each: company overview, activities, results of the year, financial position,
+        outlook, board members, auditor, board responsibility and events after the period'
+      id: board_paragraph
+      kind: text
+      many:
+      - 6
+      - 10
+      section: board_report
+    - cat: caption_table
+      guide: caption for the board member table
+      id: directors_caption
+      kind: text
+      parent: directors_table
+      section: board_report
+    - cat: table
+      guide: header [Full name, Position, Appointment date]; 4–7 fictional members
+      id: directors_table
+      kind: table
+      section: board_report
+    - cat: chart
+      guide: revenue and profit after tax (optionally total assets as a third series) for 4–5 years, in
+        VND billions; last year = statement figures
+      id: revenue_chart
+      kind: chart
+      section: board_report
+    - cat: caption_chart
+      guide: Chart 1. ...
+      id: revenue_chart_caption
+      kind: text
+      parent: revenue_chart
+      section: board_report
+    - cat: text_block
+      guide: As at 31 December <year>
+      id: B01_date
+      kind: text
+      section: B01
+    - cat: table
+      columns:
+      - Item
+      - Code
+      - Notes
+      - Year-end balance
+      - Beginning-of-year balance
+      guide: choose 35–55 leaf lines plausible for the industry; integer VND, scaled to company size
+      id: B01_table
+      kind: statement
+      lines: B01
+      section: B01
+    - cat: text_block
+      guide: For the financial year ended 31/12/<year>
+      id: B02_date
+      kind: text
+      section: B02
+    - cat: table
+      columns:
+      - Item
+      - Code
+      - Notes
+      - Current year
+      - Prior year
+      guide: every line; expenses positive; EPS (70) in VND per share
+      id: B02_table
+      kind: statement
+      lines: B02
+      section: B02
+    - cat: text_block
+      guide: <city>, dd March <year+1>
+      id: signature_date
+      kind: text
+      section: signature
+    - cat: signature
+      id: signature_1
+      kind: signature
+      section: signature
+    - cat: text_block
+      guide: fictional Vietnamese full name
+      id: signer_1_name
+      kind: text
+      section: signature
+    - cat: signature
+      id: signature_2
+      kind: signature
+      section: signature
+    - cat: text_block
+      guide: fictional Vietnamese full name
+      id: signer_2_name
+      kind: text
+      section: signature
+    - cat: signature
+      id: signature_3
+      kind: signature
+      section: signature
+    - cat: seal
+      guide: 'seal ring text: short company name in upper case, max 34 characters'
+      id: company_seal
+      kind: seal
+      section: signature
+    - cat: text_block
+      guide: fictional Vietnamese full name
+      id: signer_3_name
+      kind: text
+      section: signature
+    - cat: title
+      guide: INDEPENDENT AUDITOR’S REPORT
+      id: auditor_title
+      kind: text
+      section: auditor_report
+    - cat: text_block
+      guide: To the shareholders and the Board of Directors
+      id: auditor_addressee
+      kind: text
+      section: auditor_report
+    - cat: text_block
+      guide: '5–9 paragraphs, 65–100 English words each: scope, management responsibility, auditor responsibility,
+        audit basis, unmodified opinion. Fictional audit only.'
+      id: auditor_paragraphs
+      kind: text
+      many:
+      - 5
+      - 9
+      section: auditor_report
+    - cat: section_header
+      guide: Fictional auditing firm name
+      id: auditor_firm
+      kind: text
+      section: auditor_report
+    - cat: signature
+      id: auditor_signature
+      kind: signature
+      section: auditor_report
+    - cat: seal
+      id: auditor_seal
+      kind: seal
+      section: auditor_report
+    - cat: text_block
+      guide: Fictional place and audit date
+      id: auditor_date
+      kind: text
+      section: auditor_report
+    - cat: text_block
+      guide: For the financial year ended 31 December
+      id: B03_date
+      kind: text
+      section: B03
+    - cat: table
+      columns:
+      - ITEM
+      - Code
+      - Notes
+      - Current year
+      - Prior year
+      guide: Opening cash (code 60) current must equal B01 code 110 prior; closing cash (code 70) must
+        equal B01 code 110 in each period. Preserve earlier opening cash for the prior year. Use realistic
+        receipts (line 16 nonnegative) and payments (line 17 nonpositive), so code-owned cash ties require
+        only small adjustments.
+      id: B03_table
+      kind: statement
+      lines: B03
+      section: B03
+    - cat: text_block
+      guide: 8–14 numbered B09-DN note sections; each title and 1–3 paragraphs of 60–90 words. The report
+        is table-heavy - almost every section has a table (4–8 rows, 3–5 columns, different shapes), and
+        4–6 sections also have a chart (mix bar, line and donut; 3–6 labels, 1–3 series, caption "Chart
+        N. ..."). Include policies, cash, receivables, inventory, fixed assets, debt, equity, revenue,
+        tax.
+      id: notes
+      kind: notes
+      section: notes
+    - cat: text_block
+      guide: '4–6 metrics: label, value (integer VND), unit, source (B02.10 revenue, B02.60 profit after
+        tax, B01.270 assets, B01.400 equity). Values recomputed by code.'
+      id: kpis
+      kind: kpis
+      section: board_report
+    statements:
+      B01:
+        balances:
+        - equal:
+          - '270'
+          - '440'
+          plug: 421a
+        formulas:
+        - 110 = 111 + 112
+        - 120 = 121 + 122 + 123
+        - 130 = 131 + 132 + 136 + 137
+        - 140 = 141 + 149
+        - 150 = 151 + 152 + 153 + 155
+        - 100 = 110 + 120 + 130 + 140 + 150
+        - 210 = 211 + 216 + 219
+        - 221 = 222 + 223
+        - 227 = 228 + 229
+        - 220 = 221 + 227
+        - 230 = 231 + 232
+        - 240 = 241 + 242
+        - 250 = 252 + 253 + 254
+        - 260 = 261 + 262 + 263 + 268
+        - 200 = 210 + 220 + 230 + 240 + 250 + 260
+        - 270 = 100 + 200
+        - 310 = 311 + 312 + 313 + 314 + 315 + 319 + 320
+        - 330 = 331 + 337 + 338 + 341
+        - 300 = 310 + 330
+        - 421 = 421a + 421b
+        - 410 = 411 + 412 + 418 + 421
+        - 400 = 410
+        - 440 = 300 + 400
+        lines:
+        - - '100'
+          - 0
+          - A. CURRENT ASSETS
+        - - '110'
+          - 1
+          - I. Cash and cash equivalents
+        - - '111'
+          - 2
+          - 1. Cash
+        - - '112'
+          - 2
+          - 2. Cash equivalents
+        - - '120'
+          - 1
+          - II. Short-term financial investments
+        - - '121'
+          - 2
+          - 1. Trading securities
+        - - '122'
+          - 2
+          - 2. Provision for decline in value of trading securities (*)
+        - - '123'
+          - 2
+          - 3. Held-to-maturity investments
+        - - '130'
+          - 1
+          - III. Short-term receivables
+        - - '131'
+          - 2
+          - 1. Short-term trade receivables
+        - - '132'
+          - 2
+          - 2. Short-term advances to suppliers
+        - - '136'
+          - 2
+          - 6. Other short-term receivables
+        - - '137'
+          - 2
+          - 7. Provision for doubtful short-term receivables (*)
+        - - '140'
+          - 1
+          - IV. Inventories
+        - - '141'
+          - 2
+          - 1. Inventories
+        - - '149'
+          - 2
+          - 2. Provision for inventory write-down (*)
+        - - '150'
+          - 1
+          - V. Other current assets
+        - - '151'
+          - 2
+          - 1. Short-term prepaid expenses
+        - - '152'
+          - 2
+          - 2. Deductible VAT
+        - - '153'
+          - 2
+          - 3. Taxes and other receivables from the State
+        - - '155'
+          - 2
+          - 5. Other current assets
+        - - '200'
+          - 0
+          - B. NON-CURRENT ASSETS
+        - - '210'
+          - 1
+          - I. Long-term receivables
+        - - '211'
+          - 2
+          - 1. Long-term trade receivables
+        - - '216'
+          - 2
+          - 6. Other long-term receivables
+        - - '219'
+          - 2
+          - 7. Provision for doubtful long-term receivables (*)
+        - - '220'
+          - 1
+          - II. Property, plant and equipment
+        - - '221'
+          - 2
+          - 1. Tangible fixed assets
+        - - '222'
+          - 3
+          - '- Cost'
+        - - '223'
+          - 3
+          - '- Accumulated depreciation (*)'
+        - - '227'
+          - 2
+          - 3. Intangible fixed assets
+        - - '228'
+          - 3
+          - '- Cost'
+        - - '229'
+          - 3
+          - '- Accumulated amortisation (*)'
+        - - '230'
+          - 1
+          - III. Investment properties
+        - - '231'
+          - 2
+          - '- Cost'
+        - - '232'
+          - 2
+          - '- Accumulated depreciation (*)'
+        - - '240'
+          - 1
+          - IV. Long-term work in progress
+        - - '241'
+          - 2
+          - 1. Long-term work-in-progress costs
+        - - '242'
+          - 2
+          - 2. Construction in progress
+        - - '250'
+          - 1
+          - V. Long-term financial investments
+        - - '252'
+          - 2
+          - 2. Investments in joint ventures and associates
+        - - '253'
+          - 2
+          - 3. Investments in other entities
+        - - '254'
+          - 2
+          - 4. Provision for impairment of long-term financial investments (*)
+        - - '260'
+          - 1
+          - VI. Other non-current assets
+        - - '261'
+          - 2
+          - 1. Long-term prepaid expenses
+        - - '262'
+          - 2
+          - 2. Deferred tax assets
+        - - '263'
+          - 2
+          - 3. Long-term spare parts, supplies and replacement equipment
+        - - '268'
+          - 2
+          - 4. Other non-current assets
+        - - '270'
+          - 0
+          - TOTAL ASSETS
+        - - '300'
+          - 0
+          - C. LIABILITIES
+        - - '310'
+          - 1
+          - I. Current liabilities
+        - - '311'
+          - 2
+          - 1. Short-term trade payables
+        - - '312'
+          - 2
+          - 2. Short-term advances from customers
+        - - '313'
+          - 2
+          - 3. Taxes and other payables to the State
+        - - '314'
+          - 2
+          - 4. Payables to employees
+        - - '315'
+          - 2
+          - 5. Short-term accrued expenses
+        - - '319'
+          - 2
+          - 9. Other short-term payables
+        - - '320'
+          - 2
+          - 10. Short-term borrowings and finance lease liabilities
+        - - '330'
+          - 1
+          - II. Non-current liabilities
+        - - '331'
+          - 2
+          - 1. Long-term trade payables
+        - - '337'
+          - 2
+          - 7. Other long-term payables
+        - - '338'
+          - 2
+          - 8. Long-term borrowings and finance lease liabilities
+        - - '341'
+          - 2
+          - 11. Deferred tax liabilities
+        - - '400'
+          - 0
+          - D. OWNERS’ EQUITY
+        - - '410'
+          - 1
+          - I. Owners’ equity
+        - - '411'
+          - 2
+          - 1. Contributed capital
+        - - '412'
+          - 2
+          - 2. Share premium
+        - - '418'
+          - 2
+          - 8. Development investment fund
+        - - '421'
+          - 2
+          - 11. Undistributed post-tax profits
+        - - 421a
+          - 3
+          - '- Undistributed post-tax profits accumulated up to the end of the prior period'
+        - - 421b
+          - 3
+          - '- Undistributed post-tax profits for the current period'
+        - - '440'
+          - 0
+          - TOTAL LIABILITIES AND OWNERS’ EQUITY
+      B02:
+        formulas:
+        - 10 = 01 - 02
+        - 20 = 10 - 11
+        - 30 = 20 + 21 - 22 - 25 - 26
+        - 40 = 31 - 32
+        - 50 = 30 + 40
+        - 60 = 50 - 51 - 52
+        lines:
+        - - '01'
+          - 1
+          - 1. Revenue from sales of goods and rendering of services
+        - - '02'
+          - 1
+          - 2. Revenue deductions
+        - - '10'
+          - 0
+          - 3. Net revenue from sales of goods and rendering of services
+        - - '11'
+          - 1
+          - 4. Cost of sales
+        - - '20'
+          - 0
+          - 5. Gross profit from sales of goods and rendering of services
+        - - '21'
+          - 1
+          - 6. Revenue from financial activities
+        - - '22'
+          - 1
+          - 7. Financial expenses
+        - - '23'
+          - 1
+          - '- Including: Interest expense'
+        - - '25'
+          - 1
+          - 8. Selling expenses
+        - - '26'
+          - 1
+          - 9. General and administrative expenses
+        - - '30'
+          - 0
+          - 10. Net profit from operating activities
+        - - '31'
+          - 1
+          - 11. Other income
+        - - '32'
+          - 1
+          - 12. Other expenses
+        - - '40'
+          - 0
+          - 13. Other profit
+        - - '50'
+          - 0
+          - 14. Total accounting profit before tax
+        - - '51'
+          - 1
+          - 15. Current corporate income tax expense
+        - - '52'
+          - 1
+          - 16. Deferred corporate income tax expense
+        - - '60'
+          - 0
+          - 17. Profit after corporate income tax
+        - - '70'
+          - 1
+          - 18. Basic earnings per share
+      B03:
+        formulas:
+        - 08 = 01 + 02 + 03 + 04 + 05 + 06 + 07
+        - 20 = 08 + 09 + 10 + 11 + 12 + 13 + 14 + 15 + 16 + 17
+        - 30 = 21 + 22 + 23 + 24 + 25 + 26 + 27
+        - 40 = 31 + 32 + 33 + 34 + 35 + 36
+        - 50 = 20 + 30 + 40
+        - 70 = 50 + 60 + 61
+        lines:
+        - - '01'
+          - 0
+          - Profit before tax
+        - - '02'
+          - 1
+          - Depreciation and amortisation of fixed assets and investment properties
+        - - '03'
+          - 1
+          - Provisions
+        - - '04'
+          - 1
+          - Foreign exchange gains and losses from revaluation of monetary items
+        - - '05'
+          - 1
+          - Gains and losses from investing activities
+        - - '06'
+          - 1
+          - Interest expense
+        - - '07'
+          - 1
+          - Other adjustments
+        - - 08
+          - 0
+          - Profit from operating activities before changes in working capital
+        - - 09
+          - 1
+          - Increase or decrease in receivables
+        - - '10'
+          - 1
+          - Increase or decrease in inventories
+        - - '11'
+          - 1
+          - Increase or decrease in payables
+        - - '12'
+          - 1
+          - Increase or decrease in prepaid expenses
+        - - '13'
+          - 1
+          - Increase or decrease in trading securities
+        - - '14'
+          - 1
+          - Interest paid
+        - - '15'
+          - 1
+          - Corporate income tax paid
+        - - '16'
+          - 1
+          - Other cash receipts from operating activities
+        - - '17'
+          - 1
+          - Other cash payments for operating activities
+        - - '20'
+          - 0
+          - Net cash flows from operating activities
+        - - '21'
+          - 1
+          - Payments for acquisition or construction of fixed assets and other non-current assets
+        - - '22'
+          - 1
+          - Proceeds from disposal or sale of fixed assets and other non-current assets
+        - - '23'
+          - 1
+          - Loans granted and purchases of debt instruments of other entities
+        - - '24'
+          - 1
+          - Collections of loans granted and proceeds from resale of debt instruments of other entities
+        - - '25'
+          - 1
+          - Payments for investments in other entities
+        - - '26'
+          - 1
+          - Collections from disposals of investments in other entities
+        - - '27'
+          - 1
+          - Interest received, dividends and profits distributed
+        - - '30'
+          - 0
+          - Net cash flows from investing activities
+        - - '31'
+          - 1
+          - Proceeds from issuance of shares and capital contributions by owners
+        - - '32'
+          - 1
+          - Repayment of capital contributions to owners and repurchase of shares
+        - - '33'
+          - 1
+          - Proceeds from borrowings
+        - - '34'
+          - 1
+          - Repayments of borrowings
+        - - '35'
+          - 1
+          - Payments of finance lease principal
+        - - '36'
+          - 1
+          - Dividends and profits paid to owners
+        - - '40'
+          - 0
+          - Net cash flows from financing activities
+        - - '50'
+          - 0
+          - Net cash flows for the period
+        - - '60'
+          - 0
+          - Cash and cash equivalents at beginning of period
+        - - '61'
+          - 1
+          - Effect of foreign exchange rate changes on translation of foreign currencies
+        - - '70'
+          - 0
+          - Cash and cash equivalents at end of period
+prompt: 'Audited Vietnamese financial statements (TT200) for a {{ company_size }} company in
+  {{ industry }}, fiscal year {{ fiscal_year }} (prior year {{ fiscal_year - 1 }}).
+
+  Total assets (line 270) MUST be {% if company_size == "small" %}20-150{% elif company_size == "medium" %}150-1,500{% else %}1,500-30,000{% endif %}
+  billion VND, and lines should not be round numbers (e.g. 47,318,265,400 rather than 47,000,000,000).
+
+  The note of a statement row is the number of its note (e.g. "5" or "5.2") or empty.
+
+  Write only leaf statement lines; totals are recomputed. Contra lines (*) are negative. Keep chart revenue
+  and profit consistent with the statements, rounded to tỷ đồng.
+
+  The company, people and places are invented, but write as a real company would: never use words such as
+  fictional, illustrative, sample, synthetic or placeholder in any text.
+
+  '
+variables:
+  company_size:
+  - small
+  - medium
+  - large
+  fiscal_year:
+  - 2023
+  - 2024
+  - 2025
+  industry:
+  - sản xuất bao bì giấy
+  - chế biến thực phẩm
+  - dệt may
+  - vật liệu xây dựng
+  - cơ khí chế tạo
+  - phân phối dược phẩm
+  - logistics
+  - nhựa kỹ thuật
+  - điện tử gia dụng
+  - nông sản xuất khẩu
+  lang:
+  - vi
+  - en
+pool:
+  dir: pool/financial_report
+  text:
+  - board_paragraph
+  - auditor_paragraphs
+  - board_title
+  - auditor_title
+  - auditor_addressee
+  notes: notes
+  placeholders:
+    company: cover_company
+    auditor: auditor_firm
+    year: fiscal_year
+elements:
+- name: company
+  fields:
+  - running_header
+  - running_footer
+  - cover_logo
+  - cover_company
+  - cover_period
+  - cover_address
+  - cover_tax
+  - directors_table
+  - directors_caption
+  - signature_date
+  - signer_1_name
+  - signer_2_name
+  - signer_3_name
+  - company_seal
+  - auditor_firm
+  - auditor_seal
+  - auditor_date
+- name: statements
+  fields:
+  - B01_date
+  - B01_table
+  - B02_date
+  - B02_table
+  - B03_date
+  - B03_table
+- name: charts
+  fields:
+  - revenue_chart
+  - revenue_chart_caption
+  - kpis
+  - note_charts
+  after:
+  - company
+  - statements
+- name: note_tables
+  fields:
+  - note_tables
+  after:
+  - company
+  - statements
+design:
+  fixed_labels:
+    vi:
+      cover:
+      - BÁO CÁO TÀI CHÍNH
+      - Theo Thông tư 200/2014/TT-BTC
+      board_report:
+      - '{n} / {total}'
+      B01:
+      - BÁO CÁO TÀI CHÍNH
+      - BẢNG CÂN ĐỐI KẾ TOÁN
+      - Mẫu số B01-DN — Ban hành theo Thông tư 200/2014/TT-BTC
+      - 'Đơn vị tính: VND'
+      - Các thuyết minh đính kèm là bộ phận hợp thành của báo cáo tài chính
+      - '{n} / {total}'
+      B02:
+      - BÁO CÁO TÀI CHÍNH
+      - BÁO CÁO KẾT QUẢ HOẠT ĐỘNG KINH DOANH
+      - Mẫu số B02-DN — Ban hành theo Thông tư 200/2014/TT-BTC
+      - 'Đơn vị tính: VND'
+      - Các thuyết minh đính kèm là bộ phận hợp thành của báo cáo tài chính
+      - '{n} / {total}'
+      signature:
+      - BÁO CÁO TÀI CHÍNH
+      - XÁC NHẬN BÁO CÁO TÀI CHÍNH
+      - Người lập biểu
+      - Kế toán trưởng
+      - Tổng Giám đốc
+      - Các thuyết minh đính kèm là bộ phận hợp thành của báo cáo tài chính
+      - '{n} / {total}'
+      auditor_report:
+      - BÁO CÁO TÀI CHÍNH
+      - '{n} / {total}'
+      auditor_signature:
+      - BÁO CÁO TÀI CHÍNH
+      - '{n} / {total}'
+      key_figures:
+      - CHỈ TIÊU TÀI CHÍNH NỔI BẬT
+      - BÁO CÁO TÀI CHÍNH
+      - '{n} / {total}'
+      B03:
+      - BÁO CÁO LƯU CHUYỂN TIỀN TỆ
+      - Mẫu số B03-DN — Phương pháp gián tiếp
+      - BÁO CÁO TÀI CHÍNH
+      - '{n} / {total}'
+      notes:
+      - THUYẾT MINH BÁO CÁO TÀI CHÍNH
+      - BÁO CÁO TÀI CHÍNH
+      - '{n} / {total}'
+    en:
+      cover:
+      - FINANCIAL STATEMENTS
+      - In accordance with Circular No. 200/2014/TT-BTC
+      board_report:
+      - '{n} / {total}'
+      B01:
+      - FINANCIAL STATEMENTS
+      - BALANCE SHEET
+      - Form No. B01-DN — Issued under Circular No. 200/2014/TT-BTC
+      - 'Currency: VND'
+      - The accompanying notes form an integral part of these financial statements
+      - '{n} / {total}'
+      B02:
+      - FINANCIAL STATEMENTS
+      - INCOME STATEMENT
+      - Form No. B02-DN — Issued under Circular No. 200/2014/TT-BTC
+      - 'Currency: VND'
+      - The accompanying notes form an integral part of these financial statements
+      - '{n} / {total}'
+      signature:
+      - FINANCIAL STATEMENTS
+      - CERTIFICATION OF THE FINANCIAL STATEMENTS
+      - Preparer
+      - Chief Accountant
+      - General Director
+      - The accompanying notes form an integral part of these financial statements
+      - '{n} / {total}'
+      auditor_report:
+      - FINANCIAL STATEMENTS
+      - '{n} / {total}'
+      auditor_signature:
+      - FINANCIAL STATEMENTS
+      - '{n} / {total}'
+      key_figures:
+      - KEY FINANCIAL HIGHLIGHTS
+      - FINANCIAL STATEMENTS
+      - '{n} / {total}'
+      B03:
+      - CASH FLOW STATEMENT
+      - Form No. B03-DN — Indirect method
+      - FINANCIAL STATEMENTS
+      - '{n} / {total}'
+      notes:
+      - NOTES TO THE FINANCIAL STATEMENTS
+      - FINANCIAL STATEMENTS
+      - '{n} / {total}'
+  forbidden_words:
+  - giả lập
+  - mô phỏng
+  - hư cấu
+  - placeholder
+  - lorem
+language_variable: lang

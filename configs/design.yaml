@@ -1,0 +1,42 @@
+schema_version: 4
+system_prompt: >-
+  Design printable fictional benchmark documents. Code supplies the page structure and the text; you return
+  the stylesheet and per-page choices (sheet size, block order, table frame) that make each document look
+  distinct. Return only the requested JSON.
+criteria:
+  layout: Choose a distinct grid, columns, whitespace, and placement by page role.
+  style: Choose readable colors, a two-family heading/body pairing, type scale, and table treatment.
+  reading_order: Choose a DOM-order rule using slot order and region chains.
+  orientation: Choose a sheet size by page role and map every page_NNN to its data-size.
+randomness:
+  - Give each criterion at least 10 distinct options.
+  - Set index=floor(first rounded draw*option_count); do not reroll. Record a skipped reason only if needed.
+  - Keep text/background contrast at least 4.5:1. Derive accent hue from the style draw.
+distinctness:
+  - Differ in layout, style, reading-order rule, and orientation from the last four ledger entries.
+  - Use a new heading/body font pairing and accent hue at least 25 degrees from each recent entry.
+design_spec:
+  keys:
+    seed: code supplied
+    draws: six rounded draws per criterion, code supplied
+    layout: {options: [10+ distinct strings], index: integer, chosen: matching option, details: object}
+    style: {options: [10+ distinct strings], index: integer, chosen: matching option, palette: hex colors, fonts: [heading, body], details: object}
+    reading_order: {options: [10+ distinct strings], index: integer, chosen: matching option, details: rule, reordered_block_ids: []}
+    orientation: {options: [10+ distinct strings], index: integer, chosen: matching option, details: rule, pages: {page_001: a4}}
+    skipped: [{criterion: name, index: integer, reason: text}]
+slot_format: |
+  Code builds every page from the listed structure; you design how it looks, within the required parameters.
+  css: one stylesheet for all pages, built on var(--accent), var(--paper), var(--font-head), var(--font-body),
+  var(--base-size), var(--margin). Target pages with .role-<role> or pages.<role>.class, blocks with
+  [data-slot=id], [data-label=category], your .group classes and .decor classes. Do not use data-k in CSS.
+  Code places the page frame: header at the top margin, footer and page number at the bottom margin, <main>
+  between them (set the margin with var(--margin)). Style them freely (font, color, rules, alignment, bands),
+  but do not position or size header, footer, .page-number or <main>. Never fix the height of text or tables;
+  charts and figures 40-70 mm. Tables, statements, notes and KPIs continue on new pages by themselves.
+  pages.<role>.order: that page's data-k blocks in your reading order.
+  pages.<role>.groups: wrap blocks into containers (columns, sidebars, boxes, panels) and lay them out with
+  CSS grid/flex; vary the arrangement page to page. Each data-k in at most one group.
+  pages.<role>.decor (or pages.all.decor): class names of empty decoration elements (bands, stripes, blocks,
+  rules, arcs) that you place with CSS position:absolute in the margins; they must not overlap any text.
+  No @import, no other files, no text in CSS content:. Keep text at least 8 pt with contrast 4.5:1, and
+  avoid clipping or overlap.

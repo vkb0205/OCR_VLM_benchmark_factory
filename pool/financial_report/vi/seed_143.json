@@ -1,0 +1,128 @@
+{
+ "variables": {
+  "industry": "dệt may",
+  "company_size": "small",
+  "fiscal_year": 2023
+ },
+ "source": "seed_143.json",
+ "values": {
+  "board_paragraph": [
+   "Công ty chuyên dệt vải mộc, nhuộm hoàn tất và may áo khoác nhẹ, với quy mô sản xuất phù hợp doanh nghiệp nhỏ. Các sản phẩm được cung cấp cho những nhà phân phối may mặc trong nước và các xưởng gia công xuất khẩu theo hợp đồng dài hạn.",
+   "Trong năm {year}, Công ty duy trì ba chuyền dệt kim, một dây chuyền nhuộm và hai tổ may. Ban Tổng Giám đốc đã điều chỉnh lịch sản xuất theo từng đợt giao hàng, giảm tồn kho chậm luân chuyển và tăng tỷ lệ sử dụng máy nhuộm.",
+   "Công ty hoàn thành nghĩa vụ thuế đúng hạn, không phát sinh khoản phạt trọng yếu. Ban điều hành tiếp tục kiểm soát hạn mức tín dụng khách hàng, theo dõi giá sợi và đàm phán mua điện theo khung giờ để bảo vệ biên lợi nhuận.",
+   "Tài sản ngắn hạn chiếm tỷ trọng lớn, chủ yếu gồm tiền, phải thu khách hàng và hàng tồn kho nguyên phụ liệu.",
+   "Năm {next}, Công ty dự kiến tập trung vào vải dệt kim có truy xuất nguồn gốc sợi, mở rộng nhóm khách hàng may mặc miền Trung và hoàn thiện hệ thống xử lý nước tuần hoàn. Kế hoạch kinh doanh được xây dựng trên giả định thị trường tiêu thụ ổn định, giá nguyên liệu không biến động bất thường và các khoản phải thu được thu hồi theo hợp đồng. Công ty sẽ ưu tiên đầu tư thiết bị tiết kiệm nước thay vì mở rộng công suất đột biến.",
+   "Báo cáo tài chính được kiểm toán bởi {auditor}. Ban Tổng Giám đốc chịu trách nhiệm lập báo cáo trung thực, duy trì kiểm soát nội bộ thích hợp và bảo quản sổ sách kế toán theo quy định.",
+   "Sau ngày kết thúc năm tài chính, Công ty ký phụ lục giao hàng cho một khách hàng hiện hữu và thay thế một máy nén khí tại xưởng nhuộm. Các sự kiện này không làm phát sinh điều chỉnh trọng yếu đối với số liệu đã trình bày. Ngoài nội dung nêu trên, Ban Tổng Giám đốc không nhận thấy sự kiện nào khác cần công bố hoặc có thể ảnh hưởng đáng kể đến hoạt động liên tục của Công ty.",
+   "Ban Tổng Giám đốc xác nhận các chính sách kế toán chủ yếu được áp dụng nhất quán giữa các kỳ, các ước tính có cơ sở hợp lý và các giao dịch trọng yếu đã được phản ánh đầy đủ. Công ty tiếp tục hoạt động bình thường trong tương lai có thể dự kiến; vì vậy báo cáo tài chính được lập trên cơ sở hoạt động liên tục. Ban Tổng Giám đốc kính trình báo cáo này cùng báo cáo kiểm toán độc lập đến các cổ đông và Hội đồng quản trị."
+  ],
+  "auditor_paragraphs": [
+   "Ban Tổng Giám đốc chịu trách nhiệm lập và trình bày trung thực báo cáo tài chính, lựa chọn chính sách kế toán thích hợp, thực hiện các ước tính hợp lý và duy trì kiểm soát nội bộ cần thiết để bảo đảm báo cáo không có sai sót trọng yếu do gian lận hoặc nhầm lẫn.",
+   "Trách nhiệm của kiểm toán viên là đưa ra ý kiến về báo cáo tài chính dựa trên kết quả kiểm toán. Chúng tôi đã thực hiện kiểm toán theo các chuẩn mực kiểm toán Việt Nam. Các chuẩn mực này yêu cầu tuân thủ đạo đức nghề nghiệp và lập kế hoạch, thực hiện thủ tục để thu thập bằng chứng thích hợp và đầy đủ.",
+   "Công việc kiểm toán bao gồm thực hiện thủ tục nhằm thu thập bằng chứng về các số liệu và thuyết minh. Việc lựa chọn thủ tục dựa trên xét đoán chuyên môn, bao gồm đánh giá rủi ro sai sót trọng yếu. Chúng tôi cũng đánh giá tính thích hợp của chính sách kế toán, các ước tính và cách trình bày tổng thể của báo cáo.",
+   "Chúng tôi tin rằng các bằng chứng kiểm toán đã thu thập là đầy đủ và thích hợp làm cơ sở cho ý kiến kiểm toán. Trong quá trình kiểm toán, chúng tôi không xác định được vấn đề trọng yếu nào làm thay đổi kết luận rằng báo cáo tài chính được lập trên cơ sở hoạt động liên tục và các thông tin trình bày là nhất quán.",
+   "Căn cứ trên kết quả kiểm toán, chúng tôi phát hành ý kiến chấp nhận toàn phần đối với báo cáo tài chính năm {year} của Công ty. Báo cáo này chỉ được sử dụng cùng với báo cáo tài chính và các thuyết minh kèm theo, không nhằm phục vụ một mục đích riêng biệt khác nếu không có sự chấp thuận bằng văn bản của đơn vị kiểm toán."
+  ],
+  "board_title": "BÁO CÁO CỦA BAN TỔNG GIÁM ĐỐC",
+  "auditor_title": "BÁO CÁO KIỂM TOÁN ĐỘC LẬP",
+  "auditor_addressee": "Kính gửi: Các cổ đông và Hội đồng quản trị {company}",
+  "notes": [
+   {
+    "title": "1. Đặc điểm hoạt động",
+    "paragraphs": [
+     "{company} là doanh nghiệp hoạt động trong lĩnh vực dệt, nhuộm và may mặc. Chu kỳ sản xuất thông thường từ hai đến sáu tuần.",
+     "Công ty không có công ty con hoặc đơn vị phụ thuộc trọng yếu."
+    ],
+    "table": true
+   },
+   {
+    "title": "2. Chính sách kế toán chủ yếu",
+    "paragraphs": [
+     "Các giao dịch bằng ngoại tệ được quy đổi theo tỷ giá thực tế tại ngày phát sinh; tài sản và nợ phải trả tiền tệ có gốc ngoại tệ được đánh giá lại cuối kỳ.",
+     "Doanh thu được ghi nhận khi quyền kiểm soát hàng hóa chuyển giao và số tiền có thể xác định đáng tin cậy. Chi phí được ghi nhận phù hợp với doanh thu. Thuế thu nhập doanh nghiệp hiện hành được tính trên thu nhập chịu thuế theo thuế suất áp dụng."
+    ],
+    "table": true
+   },
+   {
+    "title": "3. Tiền và tương đương tiền",
+    "paragraphs": [
+     "Tiền của Công ty gồm tiền mặt tại quỹ và tiền gửi không kỳ hạn tại các ngân hàng được lựa chọn theo tiêu chí an toàn thanh toán. Công ty không có khoản tiền bị hạn chế sử dụng tại ngày lập báo cáo.",
+     "Số dư cuối năm tăng do dòng tiền thu từ khách hàng cải thiện trong quý cuối năm, dù Công ty đã thanh toán một phần khoản vay và mua thiết bị phục vụ xưởng nhuộm."
+    ],
+    "table": true
+   },
+   {
+    "title": "4. Phải thu khách hàng",
+    "paragraphs": [
+     "Các khoản phải thu khách hàng phát sinh chủ yếu từ hoạt động bán vải và áo khoác theo hợp đồng. Công ty đánh giá khả năng thu hồi từng khoản, trích lập dự phòng đối với số dư có dấu hiệu quá hạn hoặc suy giảm khả năng thanh toán. Không có khoản phải thu trọng yếu từ bên liên quan.",
+     "Ban điều hành duy trì hạn mức tín dụng và yêu cầu đối soát công nợ theo từng đợt giao hàng. Các khoản thu sau ngày kết thúc kỳ đã được xem xét khi lập báo cáo."
+    ],
+    "table": true
+   },
+   {
+    "title": "5. Hàng tồn kho",
+    "paragraphs": [
+     "Hàng tồn kho gồm sợi, thuốc nhuộm, phụ liệu, sản phẩm dở dang và thành phẩm. Giá gốc được xác định theo phương pháp bình quân gia quyền và bao gồm chi phí mua, chi phí chế biến cùng các chi phí khác để đưa hàng tồn kho đến địa điểm và trạng thái hiện tại.",
+     "Công ty đã kiểm kê cuối năm và ghi nhận dự phòng cho một số cuộn vải có màu sắc không còn phù hợp với đơn hàng mới. Hàng tồn kho không được dùng để thế chấp khoản vay."
+    ],
+    "table": true
+   },
+   {
+    "title": "6. Tài sản cố định",
+    "paragraphs": [
+     "Tài sản cố định hữu hình chủ yếu là máy dệt, máy nhuộm, máy may, nhà xưởng và thiết bị phụ trợ.",
+     "Trong năm, Công ty hoàn thành lắp đặt một máy sấy vải và thanh lý không thu hồi một thiết bị nhỏ đã hết thời gian sử dụng. Chi phí khấu hao được phân bổ vào giá vốn, chi phí bán hàng và chi phí quản lý."
+    ],
+    "table": true
+   },
+   {
+    "title": "7. Vay và nợ thuê tài chính",
+    "paragraphs": [
+     "Các khoản vay ngắn hạn được sử dụng để bổ sung vốn lưu động mua sợi và thanh toán chi phí sản xuất. Khoản vay dài hạn dùng cho thiết bị xưởng nhuộm, lãi suất thả nổi theo thỏa thuận với tổ chức tín dụng. Công ty tuân thủ các điều khoản thanh toán và không có khoản vay quá hạn tại ngày báo cáo.",
+     "Chi phí lãi vay được ghi nhận vào chi phí tài chính trong kỳ, ngoại trừ phần đủ điều kiện vốn hóa theo quy định; năm {year} không có khoản lãi vay được vốn hóa."
+    ],
+    "table": true
+   },
+   {
+    "title": "8. Vốn chủ sở hữu",
+    "paragraphs": [
+     "Công ty trích quỹ đầu tư phát triển từ lợi nhuận sau thuế theo nghị quyết của Hội đồng quản trị. Lợi nhuận chưa phân phối cuối kỳ bao gồm số dư lũy kế các năm trước và lợi nhuận của năm nay.",
+     "Công ty chưa quyết định chia cổ tức cho năm {year} tại ngày phát hành báo cáo. Việc phân phối lợi nhuận sẽ được xem xét sau khi báo cáo tài chính được thông qua."
+    ],
+    "table": true
+   },
+   {
+    "title": "9. Doanh thu và giá vốn",
+    "paragraphs": [
+     "Doanh thu bán hàng được ghi nhận theo từng đợt giao hàng có biên bản nghiệm thu và đối chiếu số lượng. Các khoản giảm trừ doanh thu gồm chiết khấu thương mại và hàng bán bị trả lại theo thỏa thuận. Giá vốn phản ánh nguyên liệu, nhân công trực tiếp, chi phí sản xuất chung và dự phòng giảm giá hàng tồn kho.",
+     "Doanh thu năm {year} tăng nhờ nhóm vải pha sợi tái chế."
+    ],
+    "table": true
+   },
+   {
+    "title": "10. Thuế và các khoản phải nộp Nhà nước",
+    "paragraphs": [
+     "Công ty kê khai thuế giá trị gia tăng theo phương pháp khấu trừ và áp dụng thuế suất thuế thu nhập doanh nghiệp theo quy định hiện hành. Thuế phải nộp được đối chiếu với hồ sơ kê khai và thanh toán theo thời hạn pháp luật quy định.",
+     "Các sắc thuế và khoản phải nộp Nhà nước tại ngày báo cáo không có tranh chấp trọng yếu. Ban Tổng Giám đốc đánh giá các nghĩa vụ thuế đã được phản ánh đầy đủ trên báo cáo tài chính."
+    ],
+    "table": true
+   },
+   {
+    "title": "11. Giao dịch và số dư với các bên liên quan",
+    "paragraphs": [
+     "Các bên liên quan của Công ty gồm thành viên Hội đồng quản trị, Ban Tổng Giám đốc và những người có quyền kiểm soát đáng kể. Trong năm, Công ty không phát sinh giao dịch mua bán trọng yếu với các bên liên quan ngoài tiền lương, thù lao và các khoản công tác theo quy chế nội bộ.",
+     "Các giao dịch với nhân sự quản lý được phê duyệt theo thẩm quyền và được ghi nhận theo chính sách áp dụng cho người lao động khác có cùng chức năng."
+    ],
+    "table": true
+   },
+   {
+    "title": "12. Cam kết và sự kiện sau ngày kết thúc kỳ",
+    "paragraphs": [
+     "Công ty có các hợp đồng mua sợi và thuốc nhuộm phục vụ sản xuất theo nhu cầu bình thường, không có cam kết vốn lớn chưa được trình bày tại ngày báo cáo. Các hợp đồng thuê mặt bằng sản xuất được thanh toán theo kỳ hạn thỏa thuận.",
+     "Ban Tổng Giám đốc đánh giá các sự kiện này không cần điều chỉnh số liệu báo cáo tài chính."
+    ],
+    "table": true
+   }
+  ]
+ }
+}

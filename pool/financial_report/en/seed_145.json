@@ -1,0 +1,101 @@
+{
+  "variables": {
+    "industry": "logistics",
+    "company_size": "large",
+    "fiscal_year": 2023
+  },
+  "source": "seed_145.json",
+  "values": {
+    "board_paragraph": [
+      "The Company serves consumer goods manufacturers, engineering enterprises, and regional distribution networks in Central Vietnam. During {year}, the enterprise maintained its fleet, expanded cold storage facilities, and completed its shipment tracking system.",
+      "The profit margin improved as dispatch scheduling was optimized, the empty-truck rate declined, and new cold storage contracts commenced operations from the second quarter.",
+      "Liabilities were controlled within the approved credit limits; equity increased due to retained earnings. The Company maintained its solvency and had no material overdue debts.",
+      "The Board of Directors supervised the implementation of the plan, while the Board of Management was responsible for organizing operations, controlling fuel risks, and ensuring cargo safety. Accounting policies were applied consistently with the previous year.",
+      "The outlook for {next} focuses on increasing cold storage capacity, developing scheduled delivery services, and saving fuel. Existing contracts indicate stable demand for services, although fuel costs may continue to fluctuate.",
+      "The financial statements for {year} were audited by {auditor}. The Board of Management is responsible for preparing financial statements that present a true and fair view, maintaining an appropriate internal control system, and providing complete documentation for the audit. After the end of the accounting period, no material events requiring adjustment or additional disclosure in this report occurred."
+    ],
+    "auditor_paragraphs": [
+      "The Board of Management is responsible for preparing and presenting financial statements that give a true and fair view; selecting appropriate accounting policies; making reasonable estimates; and maintaining necessary internal controls to ensure that the financial statements are free from material misstatement, whether due to fraud or error.",
+      "The auditor’s responsibility is to express an opinion on the financial statements based on the audit results. We conducted our work in accordance with Vietnamese Standards on Auditing. Those standards require us to comply with ethical requirements and plan and perform the audit to obtain reasonable assurance that the financial statements are free from material misstatement.",
+      "An audit includes performing procedures to obtain audit evidence about the amounts and disclosures. The procedures selected depend on the auditor’s judgment, including the assessment of the risks of material misstatement, whether due to fraud or error. We also assess the appropriateness of the accounting policies and estimates, as well as the overall presentation of the financial statements.",
+      "We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our unqualified audit opinion. In our opinion, the financial statements present fairly, in all material respects, the financial position, business results, and cash flows of the Company for the year {year}.",
+      "There are no other matters that need to be presented as a key matter in this report. The audit report is issued based on the records provided by the Company and is not intended to confirm future business performance. Users of the report should read the notes concurrently to fully understand the policies and significant transactions."
+    ],
+    "board_title": "REPORT OF THE BOARD OF MANAGEMENT",
+    "auditor_title": "INDEPENDENT AUDITOR’S REPORT",
+    "auditor_addressee": "To: The Shareholders and Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "B09. Operating characteristics and accounting policies",
+        "paragraphs": [
+          "The Company operates in freight transportation, warehouse operation, and freight forwarding services. The currency used in recording transactions is Vietnamese dong; the financial statements are prepared on the accrual basis and under the going concern assumption.",
+          "Revenue is recognized when the services have been completed in accordance with the contractual terms and the customer has the ability to pay. Expenses are recognized in association with revenue. Foreign currency transactions are translated at the actual exchange rate on the transaction date and retranslated at period-end in accordance with regulations."
+        ],
+        "table": true
+      },
+      {
+        "title": "B10. Cash and cash equivalents",
+        "paragraphs": [
+          "The Company’s cash comprises cash on hand, demand bank deposits, and cash equivalents with an original maturity of no more than three months from the date of acquisition. The Company authorizes payment approvals according to limits and reconciles bank balances monthly.",
+          "At the reporting date, no material cash balances were restricted from use. Term deposits with maturities of more than three months are presented as short-term financial investments."
+        ],
+        "table": true
+      },
+      {
+        "title": "B11. Trade receivables and provision",
+        "paragraphs": [
+          "Trade receivables arise mainly from transportation and warehousing services that have been accepted. The Company monitors receivables by customer, assesses aging, and recognizes provisions for amounts showing signs of being difficult to recover. The Board of Management does not identify any receivable, other than amounts already provided for, requiring further adjustment as at the date of preparation of the financial statements."
+        ],
+        "table": true
+      },
+      {
+        "title": "B12. Inventories",
+        "paragraphs": [
+          "Inventories comprise fuel, spare parts, packaging materials, and goods being processed at transit warehouses. Inventories are recorded at the lower of cost and net realizable value. The cost of materials is determined using the weighted average method.",
+          "During the year, the Company increased its spare parts reserves to ensure the repair capability of its fleet. Provision for declines in value was recognized for slow-moving and damaged materials."
+        ],
+        "table": true
+      },
+      {
+        "title": "B13. Property, plant and equipment and capital construction in progress",
+        "paragraphs": [
+          "Property, plant and equipment mainly comprise tractor units, specialized trucks, warehouse equipment, and warehouses. Assets are recognized at cost less accumulated depreciation.",
+          "Capital construction in progress during the year related to a new sorting center. The Company capitalizes assets only when the construction is completed and the assets are ready for use."
+        ],
+        "table": true
+      },
+      {
+        "title": "B14. Borrowings and finance lease liabilities",
+        "paragraphs": [
+          "Borrowings are used to invest in vehicles and warehouses and to supplement working capital. Short-term borrowings bear floating interest rates as agreed with banks; long-term borrowings are secured by assets formed from borrowed funds and certain property rights. The Company complied with its financial covenants at the reporting date.",
+          "Borrowing costs are recognized in profit or loss for the period, except for the portion eligible for capitalization in accordance with regulations."
+        ],
+        "table": true
+      },
+      {
+        "title": "B15. Equity",
+        "paragraphs": [
+          "The shareholders have equal rights to approved dividends and the remaining assets after the Company has fulfilled its obligations.",
+          "Undistributed after-tax profits are used in accordance with resolutions of the General Meeting of Shareholders, with priority given to increasing capital for warehouse operations and maintaining liquidity."
+        ],
+        "table": true
+      },
+      {
+        "title": "B16. Revenue and cost of sales",
+        "paragraphs": [
+          "Revenue from the sale of goods and provision of services comprises freight charges, warehousing, loading and unloading, and order management. Revenue is classified by contract and recognized when the performance obligation has been satisfied. Cost of sales includes fuel, drivers’ salaries, outsourced service costs, depreciation of vehicles, and warehouse operating expenses.",
+          "During the year, revenue increased mainly due to an increase in the number of transportation trips and the warehouse area in operation."
+        ],
+        "table": true
+      },
+      {
+        "title": "B17. Taxes and events after the reporting period",
+        "paragraphs": [
+          "The Company declares value-added tax using the credit method and corporate income tax at the prevailing tax rate. Tax expenses are determined based on taxable profit and adjustments in accordance with applicable laws. The Board of Management has reviewed tax obligations up to the date of issuance of the report.",
+          "These events do not change the amounts recognized in the financial statements."
+        ],
+        "table": true
+      }
+    ]
+  }
+}

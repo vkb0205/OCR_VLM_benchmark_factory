@@ -1,0 +1,127 @@
+{
+ "variables": {
+  "industry": "vật liệu xây dựng",
+  "company_size": "small",
+  "fiscal_year": 2023
+ },
+ "source": "seed_117.json",
+ "values": {
+  "board_paragraph": [
+   "Công ty sản xuất gạch ốp lát ceramic, gạch lát nền và phụ kiện hoàn thiện cho các công trình dân dụng. Nhà máy có dây chuyền ép và nung liên tục, sử dụng nguyên liệu đất sét, cao lanh và men màu mua từ các nhà cung cấp trong nước.",
+   "Trong năm {year}, hoạt động chính của Công ty là sản xuất, phân phối gạch ốp lát thông qua đại lý tại duyên hải miền Trung và một số nhà thầu xây dựng. Sản lượng tiêu thụ tăng nhờ các công trình nhà ở hoàn thiện sau mùa mưa. Công ty duy trì chính sách kiểm tra màu men theo từng lô, giao hàng theo đơn đặt hàng và chăm sóc công nợ đại lý thận trọng.",
+   "Biên lợi nhuận chịu ảnh hưởng bởi chi phí khí đốt và vận chuyển tăng, nhưng việc cải tiến phối liệu, giảm tỷ lệ hàng lỗi và điều chỉnh cơ cấu sản phẩm đã hỗ trợ kết quả chung. Ban Tổng Giám đốc xem đây là kết quả phù hợp với kế hoạch đã được Hội đồng quản trị thông qua.",
+   "các khoản vay được sử dụng chủ yếu để bổ sung vốn lưu động và tài trợ thiết bị. Công ty theo dõi tuổi nợ, mức tồn kho và hạn mức tín dụng đại lý hàng tháng để kiểm soát rủi ro thanh khoản.",
+   "Ban Tổng Giám đốc sẽ ưu tiên an toàn lao động, tiết kiệm năng lượng, kiểm soát chất lượng và thu hồi công nợ. Kế hoạch được xây dựng trên cơ sở nhu cầu thị trường hiện hữu và nguồn lực tài chính hiện có.",
+   "Báo cáo tài chính cho năm {year} được kiểm toán bởi {auditor} theo hợp đồng được ký trong năm.",
+   "Ban Tổng Giám đốc chịu trách nhiệm lập và trình bày trung thực, hợp lý báo cáo tài chính theo các chuẩn mực và chế độ kế toán Việt Nam hiện hành. Ban Tổng Giám đốc đã duy trì hệ thống kiểm soát nội bộ cần thiết, lưu giữ chứng từ đầy đủ và đánh giá khả năng hoạt động liên tục. Không có sự kiện trọng yếu nào phát sinh sau ngày kết thúc kỳ kế toán cần điều chỉnh hoặc thuyết minh bổ sung ngoài các nội dung đã nêu."
+  ],
+  "auditor_paragraphs": [
+   "Ban Tổng Giám đốc chịu trách nhiệm về việc lập và trình bày trung thực, hợp lý báo cáo tài chính theo các chuẩn mực và chế độ kế toán Việt Nam. Trách nhiệm này bao gồm thiết kế, thực hiện và duy trì kiểm soát nội bộ liên quan đến việc lập báo cáo tài chính không có sai sót trọng yếu do gian lận hoặc nhầm lẫn.",
+   "Trong quá trình lập báo cáo tài chính, Ban Tổng Giám đốc chịu trách nhiệm đánh giá khả năng hoạt động liên tục của Công ty, thuyết minh các vấn đề liên quan khi cần thiết và sử dụng cơ sở kế toán hoạt động liên tục, trừ khi có ý định giải thể, ngừng hoạt động hoặc không còn lựa chọn phù hợp khác.",
+   "Trách nhiệm của chúng tôi là đưa ra ý kiến về báo cáo tài chính dựa trên kết quả cuộc kiểm toán. Chúng tôi đã thực hiện kiểm toán theo các chuẩn mực kiểm toán Việt Nam. Các chuẩn mực này yêu cầu chúng tôi tuân thủ chuẩn mực đạo đức nghề nghiệp, lập kế hoạch và thực hiện kiểm toán để đạt được sự đảm bảo hợp lý về việc báo cáo tài chính có còn sai sót trọng yếu hay không.",
+   "Công việc kiểm toán bao gồm thực hiện các thủ tục để thu thập bằng chứng kiểm toán về các số liệu và thuyết minh trên báo cáo tài chính. Các thủ tục được lựa chọn dựa trên xét đoán của kiểm toán viên, bao gồm đánh giá rủi ro có sai sót trọng yếu do gian lận hoặc nhầm lẫn. Khi đánh giá rủi ro, kiểm toán viên xem xét kiểm soát nội bộ liên quan.",
+   "Chúng tôi tin tưởng rằng các bằng chứng kiểm toán đã thu thập được là đầy đủ và thích hợp làm cơ sở cho ý kiến kiểm toán chấp nhận toàn phần của chúng tôi. Cuộc kiểm toán cũng bao gồm đánh giá tính thích hợp của các chính sách kế toán được sử dụng và tính hợp lý của các ước tính kế toán, cũng như đánh giá cách trình bày tổng thể của báo cáo tài chính.",
+   "Căn cứ trên các bằng chứng thu thập được, chúng tôi không nhận thấy vấn đề nào khiến chúng tôi cho rằng báo cáo tài chính không phản ánh trung thực và hợp lý tình hình tài chính, kết quả kinh doanh và lưu chuyển tiền tệ của Công ty. Báo cáo kiểm toán này được phát hành cho mục đích báo cáo tài chính năm {year} của Công ty."
+  ],
+  "board_title": "BÁO CÁO CỦA BAN TỔNG GIÁM ĐỐC",
+  "auditor_title": "BÁO CÁO KIỂM TOÁN ĐỘC LẬP",
+  "auditor_addressee": "Kính gửi: Các cổ đông và Hội đồng quản trị {company}",
+  "notes": [
+   {
+    "title": "1. Đặc điểm hoạt động",
+    "paragraphs": [
+     "Ngành nghề chính là sản xuất gạch ceramic, gạch lát nền và kinh doanh vật liệu hoàn thiện. Công ty có một nhà máy tại Cụm sản xuất vật liệu xây dựng Tân Lập và mạng lưới đại lý tại khu vực miền Trung.",
+     "Đơn vị tiền tệ sử dụng trong ghi chép kế toán và trình bày báo cáo là đồng Việt Nam."
+    ],
+    "table": false
+   },
+   {
+    "title": "2. Cơ sở lập báo cáo và chính sách kế toán chủ yếu",
+    "paragraphs": [
+     "Báo cáo được lập trên cơ sở dồn tích, nguyên tắc giá gốc và giả định Công ty hoạt động liên tục. Các giao dịch bằng ngoại tệ không trọng yếu được quy đổi theo tỷ giá giao dịch thực tế.",
+     "Doanh thu được ghi nhận khi phần lớn rủi ro và lợi ích gắn liền với quyền sở hữu hàng hóa đã chuyển giao cho khách hàng, Công ty không còn quyền quản lý hàng hóa như người sở hữu và khả năng thu được lợi ích kinh tế được xác định tương đối chắc chắn. Chi phí được ghi nhận phù hợp với doanh thu và theo bản chất nghiệp vụ."
+    ],
+    "table": false
+   },
+   {
+    "title": "3. Tiền và các khoản tương đương tiền",
+    "paragraphs": [
+     "Tiền bao gồm tiền mặt tại quỹ và tiền gửi ngân hàng không kỳ hạn. Công ty thực hiện đối chiếu quỹ hàng tuần và đối chiếu số dư ngân hàng hàng tháng. Các khoản tiền gửi có kỳ hạn ban đầu không quá ba tháng và có khả năng chuyển đổi dễ dàng thành lượng tiền xác định được trình bày là tương đương tiền."
+    ],
+    "table": true
+   },
+   {
+    "title": "4. Phải thu khách hàng và phải thu khác",
+    "paragraphs": [
+     "Các khoản phải thu được trình bày theo giá trị ghi sổ sau khi trừ dự phòng phải thu khó đòi. Ban Tổng Giám đốc đánh giá khả năng thu hồi dựa trên lịch sử thanh toán, xác nhận công nợ và thông tin về tình hình hoạt động của từng khách hàng. Khoản nợ quá hạn được theo dõi riêng và có kế hoạch thu hồi cụ thể.",
+     "Trong năm, Công ty không có khoản phải thu nào dùng làm tài sản bảo đảm cho khoản vay. Không có khoản phải thu trọng yếu từ các bên liên quan ngoài các giao dịch được thuyết minh theo quy định."
+    ],
+    "table": true
+   },
+   {
+    "title": "5. Hàng tồn kho",
+    "paragraphs": [
+     "Hàng tồn kho được xác định theo giá thấp hơn giữa giá gốc và giá trị thuần có thể thực hiện được. Giá gốc nguyên vật liệu được tính theo phương pháp bình quân gia quyền; giá thành thành phẩm bao gồm chi phí nguyên vật liệu trực tiếp, nhân công trực tiếp và chi phí sản xuất chung phân bổ theo công suất bình thường.",
+     "Công ty kiểm kê định kỳ cuối tháng và lập dự phòng cho hàng chậm luân chuyển, lỗi màu hoặc không còn phù hợp với mẫu mã thị trường. Trong năm {year}, dự phòng tăng do một số lô gạch kích thước cũ được đánh giá lại."
+    ],
+    "table": true
+   },
+   {
+    "title": "6. Tài sản cố định",
+    "paragraphs": [
+     "Tài sản cố định hữu hình được ghi nhận theo nguyên giá trừ giá trị hao mòn lũy kế. Nguyên giá bao gồm giá mua và các chi phí trực tiếp liên quan đến việc đưa tài sản vào trạng thái sẵn sàng sử dụng.",
+     "Chi phí khấu hao trong năm được phân bổ vào giá vốn, chi phí bán hàng và chi phí quản lý doanh nghiệp theo mục đích sử dụng."
+    ],
+    "table": true
+   },
+   {
+    "title": "7. Các khoản vay và chi phí phải trả",
+    "paragraphs": [
+     "Các khoản vay được ghi nhận theo số tiền thực nhận và phân loại ngắn hạn hoặc dài hạn theo thời hạn thanh toán còn lại tại ngày kết thúc kỳ kế toán. Chi phí lãi vay được ghi nhận vào chi phí tài chính trong kỳ, ngoại trừ phần đủ điều kiện vốn hóa cho tài sản dở dang. Công ty tuân thủ các điều khoản cơ bản của hợp đồng tín dụng.",
+     "Khoản vay ngắn hạn chủ yếu phục vụ mua nguyên liệu và thanh toán chi phí vận chuyển. Khoản vay dài hạn dùng để đầu tư thiết bị lò nung và được bảo đảm bằng một phần máy móc của nhà máy."
+    ],
+    "table": true
+   },
+   {
+    "title": "8. Vốn chủ sở hữu",
+    "paragraphs": [
+     "Các cổ đông có quyền biểu quyết và hưởng cổ tức theo nghị quyết của Đại hội đồng cổ đông. Công ty không phát hành cổ phiếu ưu đãi và không nắm giữ cổ phiếu quỹ.",
+     "Lợi nhuận sau thuế chưa phân phối được sử dụng để bổ sung vốn kinh doanh, trích lập quỹ và chia cổ tức theo nghị quyết hợp lệ."
+    ],
+    "table": true
+   },
+   {
+    "title": "9. Doanh thu và giá vốn",
+    "paragraphs": [
+     "Doanh thu bán gạch được ghi nhận theo hóa đơn và biên bản giao nhận đã được khách hàng chấp nhận. Các khoản chiết khấu thương mại, hàng bán bị trả lại và giảm giá hàng bán được ghi nhận giảm doanh thu. Doanh thu của Công ty không tập trung vào một khách hàng duy nhất đến mức tạo ra rủi ro phụ thuộc trọng yếu.",
+     "Giá vốn phản ánh nguyên vật liệu, nhân công, khấu hao và chi phí sản xuất chung phân bổ cho sản phẩm đã bán. Ban Tổng Giám đốc rà soát định mức phối liệu và tỷ lệ hao hụt sau mỗi quý để nâng cao hiệu quả sử dụng tài nguyên."
+    ],
+    "table": true
+   },
+   {
+    "title": "10. Thuế thu nhập doanh nghiệp",
+    "paragraphs": [
+     "Chi phí thuế thu nhập doanh nghiệp hiện hành được tính trên thu nhập chịu thuế trong năm theo thuế suất hiện hành. Công ty thực hiện kê khai tạm nộp theo quý và quyết toán sau khi kết thúc năm. Các khoản thuế phải nộp được đối chiếu với cơ quan thuế theo quy định.",
+     "Tài sản thuế thu nhập hoãn lại chỉ được ghi nhận khi có khả năng chắc chắn thu được lợi ích kinh tế trong tương lai."
+    ],
+    "table": true
+   },
+   {
+    "title": "11. Giao dịch và số dư với các bên liên quan",
+    "paragraphs": [
+     "Các bên liên quan của Công ty gồm thành viên Hội đồng quản trị, Ban Tổng Giám đốc và các cá nhân có quyền kiểm soát hoặc ảnh hưởng đáng kể. Giao dịch với các bên liên quan được thực hiện theo điều kiện thương mại thông thường và được phê duyệt theo thẩm quyền.",
+     "Trong năm {year} không phát sinh khoản vay, bảo lãnh hoặc giao dịch mua bán hàng hóa trọng yếu với các bên liên quan. Thù lao và tiền lương của thành viên quản lý được hạch toán vào chi phí quản lý doanh nghiệp theo chính sách của Công ty."
+    ],
+    "table": true
+   },
+   {
+    "title": "12. Cam kết và sự kiện sau ngày kết thúc kỳ kế toán",
+    "paragraphs": [
+     "Công ty có cam kết thanh toán tiền thuê đất và dịch vụ hạ tầng theo hợp đồng dài hạn của khu sản xuất. Các khoản thanh toán được phân bổ vào chi phí theo thời gian hưởng lợi. Công ty không có cam kết đầu tư vốn lớn chưa được phản ánh ngoài khoản xây dựng cơ bản dở dang đã thuyết minh.",
+     "Từ ngày kết thúc kỳ kế toán đến ngày phát hành báo cáo, không có sự kiện nào phát sinh làm thay đổi đáng kể các số liệu đã trình bày hoặc ảnh hưởng trọng yếu đến khả năng hoạt động liên tục của Công ty. Ban Tổng Giám đốc tiếp tục theo dõi giá nhiên liệu và thị trường xây dựng trong quá trình thực hiện kế hoạch năm {next}."
+    ],
+    "table": true
+   }
+  ]
+ }
+}

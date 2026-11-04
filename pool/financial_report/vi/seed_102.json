@@ -1,0 +1,111 @@
+{
+ "variables": {
+  "industry": "dệt may",
+  "company_size": "large",
+  "fiscal_year": 2025
+ },
+ "source": "seed_102.json",
+ "values": {
+  "board_paragraph": [
+   "Chuỗi sản xuất khép kín giúp doanh nghiệp chủ động chất lượng, tiến độ giao hàng và truy xuất nguồn gốc nguyên liệu.",
+   "Công ty duy trì các hợp đồng dài hạn với khách hàng nước ngoài, đồng thời mở rộng kênh bán hàng nội địa cho đồng phục doanh nghiệp. Ban Tổng giám đốc ưu tiên sản phẩm có giá trị gia tăng cao và kiểm soát chặt chi phí năng lượng.",
+   "Biên lợi nhuận gộp được cải thiện nhờ tỷ lệ tự động hóa cao hơn, tiết kiệm điện và giảm hao hụt sợi. Chi phí bán hàng tăng theo sản lượng xuất khẩu, trong khi chi phí tài chính được kiểm soát nhờ cơ cấu lại kỳ hạn vay. Các chỉ tiêu thực hiện phù hợp với kế hoạch đã được Đại hội đồng cổ đông thông qua.",
+   "Công ty đáp ứng các cam kết thanh toán, duy trì hệ số thanh toán phù hợp và không có khoản vay nào quá hạn.",
+   "Năm {next}, Công ty dự kiến nâng công suất dệt hoàn tất, đầu tư hệ thống xử lý nước tuần hoàn và phát triển dòng vải pha sợi sinh học. Ban Tổng giám đốc nhận định nhu cầu có thể biến động theo thị trường xuất khẩu, vì vậy sẽ tiếp tục đa dạng hóa khách hàng, chốt giá nguyên liệu theo từng quý và duy trì dự phòng thanh khoản.",
+   "Hội đồng quản trị và Ban Tổng giám đốc gồm các thành viên nêu tại bảng dưới đây. Báo cáo tài chính được kiểm toán bởi {auditor}. Ban Tổng giám đốc chịu trách nhiệm lập báo cáo trung thực, lựa chọn chính sách kế toán thích hợp và duy trì kiểm soát nội bộ cần thiết. Sau ngày khóa sổ, không phát sinh sự kiện trọng yếu ngoài các kế hoạch đầu tư đã công bố."
+  ],
+  "auditor_paragraphs": [
+   "Báo cáo được lập bằng đồng Việt Nam theo chế độ kế toán doanh nghiệp Việt Nam.",
+   "Ban Tổng giám đốc chịu trách nhiệm về việc lập và trình bày trung thực báo cáo tài chính, lựa chọn và áp dụng chính sách kế toán thích hợp, thực hiện các ước tính hợp lý, đồng thời duy trì hệ thống kiểm soát nội bộ cần thiết để bảo đảm báo cáo không có sai sót trọng yếu do gian lận hoặc nhầm lẫn.",
+   "Trách nhiệm của chúng tôi là đưa ra ý kiến về báo cáo tài chính dựa trên kết quả cuộc kiểm toán. Chúng tôi đã thực hiện công việc theo các chuẩn mực kiểm toán Việt Nam. Các chuẩn mực này yêu cầu kiểm toán viên tuân thủ yêu cầu đạo đức và lập kế hoạch, thực hiện thủ tục nhằm đạt được sự đảm bảo hợp lý rằng báo cáo tài chính không còn sai sót trọng yếu.",
+   "Cuộc kiểm toán bao gồm thực hiện các thủ tục thu thập bằng chứng về số liệu và thuyết minh trên báo cáo tài chính. Các thủ tục được lựa chọn dựa trên xét đoán của kiểm toán viên, bao gồm đánh giá rủi ro sai sót trọng yếu, xem xét kiểm soát liên quan và đánh giá tính thích hợp của chính sách kế toán, các ước tính và cách trình bày tổng thể.",
+   "Chúng tôi tin rằng bằng chứng kiểm toán đã thu thập là đầy đủ và thích hợp làm cơ sở cho ý kiến kiểm toán chấp nhận toàn phần. Không có vấn đề nào được phát hiện làm thay đổi kết luận của chúng tôi. Báo cáo tài chính đã được Ban Tổng giám đốc phê duyệt phát hành vào ngày ký báo cáo này."
+  ],
+  "board_title": "BÁO CÁO CỦA BAN TỔNG GIÁM ĐỐC",
+  "auditor_title": "BÁO CÁO KIỂM TOÁN ĐỘC LẬP",
+  "auditor_addressee": "Kính gửi: Các cổ đông và Hội đồng quản trị {company}",
+  "notes": [
+   {
+    "title": "1. Đặc điểm hoạt động",
+    "paragraphs": [
+     "Công ty sản xuất sợi, dệt và hoàn tất vải, may trang phục xuất khẩu và cung cấp dịch vụ gia công theo hợp đồng.",
+     "Ban lãnh đạo theo dõi các chỉ tiêu vận hành, chất lượng và dòng tiền theo tháng; những biến động đáng kể được phân tích, phê duyệt và lưu hồ sơ cùng chứng từ liên quan."
+    ],
+    "table": false
+   },
+   {
+    "title": "2. Cơ sở lập báo cáo và chính sách kế toán",
+    "paragraphs": [
+     "Báo cáo tài chính được lập bằng đồng Việt Nam, theo nguyên tắc giá gốc và phù hợp chế độ kế toán doanh nghiệp Việt Nam. Các giao dịch bằng ngoại tệ được quy đổi theo tỷ giá giao dịch thực tế; tài sản và công nợ tiền tệ có gốc ngoại tệ cuối kỳ được đánh giá lại theo tỷ giá bán chuyển khoản của ngân hàng phục vụ Công ty.",
+     "Doanh thu được ghi nhận khi phần lớn rủi ro và lợi ích gắn với sản phẩm đã chuyển giao, khách hàng chấp nhận hàng và Công ty có khả năng thu được lợi ích kinh tế. Chi phí được ghi nhận phù hợp với doanh thu và theo cơ sở dồn tích.",
+     "Ban lãnh đạo theo dõi các chỉ tiêu vận hành, chất lượng và dòng tiền theo tháng; những biến động đáng kể được phân tích, phê duyệt và lưu hồ sơ cùng chứng từ liên quan."
+    ],
+    "table": false
+   },
+   {
+    "title": "3. Tiền và tương đương tiền",
+    "paragraphs": [
+     "Tiền gồm tiền mặt tại quỹ và tiền gửi ngân hàng. Tương đương tiền là các khoản đầu tư ngắn hạn có thời hạn thu hồi không quá ba tháng, dễ chuyển đổi thành tiền và ít rủi ro thay đổi giá trị.",
+     "Ban lãnh đạo theo dõi các chỉ tiêu vận hành, chất lượng và dòng tiền theo tháng; những biến động đáng kể được phân tích, phê duyệt và lưu hồ sơ cùng chứng từ liên quan."
+    ],
+    "table": true
+   },
+   {
+    "title": "4. Phải thu khách hàng và phải thu khác",
+    "paragraphs": [
+     "Các khoản phải thu được trình bày theo giá trị ghi sổ sau khi trích lập dự phòng cho phần có dấu hiệu khó thu hồi. Công ty thường xuyên đối chiếu công nợ với khách hàng lớn và theo dõi tuổi nợ theo từng hợp đồng xuất khẩu. Không có khoản phải thu nào dùng làm tài sản bảo đảm cho khoản vay.",
+     "Ban lãnh đạo theo dõi các chỉ tiêu vận hành, chất lượng và dòng tiền theo tháng; những biến động đáng kể được phân tích, phê duyệt và lưu hồ sơ cùng chứng từ liên quan."
+    ],
+    "table": true
+   },
+   {
+    "title": "5. Hàng tồn kho",
+    "paragraphs": [
+     "Hàng tồn kho được ghi nhận theo giá thấp hơn giữa giá gốc và giá trị thuần có thể thực hiện. Giá gốc nguyên vật liệu được xác định theo phương pháp bình quân gia quyền; sản phẩm dở dang và thành phẩm bao gồm chi phí nguyên liệu, nhân công trực tiếp và chi phí sản xuất chung phân bổ.",
+     "Ban lãnh đạo theo dõi các chỉ tiêu vận hành, chất lượng và dòng tiền theo tháng; những biến động đáng kể được phân tích, phê duyệt và lưu hồ sơ cùng chứng từ liên quan."
+    ],
+    "table": true
+   },
+   {
+    "title": "6. Tài sản cố định",
+    "paragraphs": [
+     "Tài sản cố định hữu hình được ghi nhận theo nguyên giá trừ hao mòn lũy kế. Chi phí sửa chữa thường xuyên được ghi nhận vào kết quả kinh doanh, còn cải tạo làm tăng năng lực hoặc thời gian sử dụng được vốn hóa.",
+     "Ban lãnh đạo theo dõi các chỉ tiêu vận hành, chất lượng và dòng tiền theo tháng; những biến động đáng kể được phân tích, phê duyệt và lưu hồ sơ cùng chứng từ liên quan."
+    ],
+    "table": true
+   },
+   {
+    "title": "7. Các khoản vay và nợ phải trả",
+    "paragraphs": [
+     "Các khoản vay được ghi nhận theo số tiền thực nhận và phân loại ngắn hạn hoặc dài hạn theo thời hạn thanh toán. Chi phí lãi vay được ghi nhận vào chi phí trong kỳ, trừ phần liên quan trực tiếp đến tài sản đủ điều kiện vốn hóa. Công ty tuân thủ các điều khoản tài chính trong hợp đồng tín dụng.",
+     "Ban lãnh đạo theo dõi các chỉ tiêu vận hành, chất lượng và dòng tiền theo tháng; những biến động đáng kể được phân tích, phê duyệt và lưu hồ sơ cùng chứng từ liên quan."
+    ],
+    "table": true
+   },
+   {
+    "title": "8. Vốn chủ sở hữu",
+    "paragraphs": [
+     "Vốn cổ phần gồm cổ phần phổ thông có quyền biểu quyết. Quỹ đầu tư phát triển được trích lập từ lợi nhuận sau thuế theo nghị quyết của Đại hội đồng cổ đông. Lợi nhuận sau thuế chưa phân phối được sử dụng để chia cổ tức hoặc bổ sung nguồn vốn theo quyết định hợp lệ.",
+     "Ban lãnh đạo theo dõi các chỉ tiêu vận hành, chất lượng và dòng tiền theo tháng; những biến động đáng kể được phân tích, phê duyệt và lưu hồ sơ cùng chứng từ liên quan."
+    ],
+    "table": true
+   },
+   {
+    "title": "9. Doanh thu và thuế",
+    "paragraphs": [
+     "Doanh thu chủ yếu đến từ bán vải, sợi và trang phục may sẵn. Doanh thu xuất khẩu được ghi nhận theo điều kiện giao hàng trong hợp đồng khi quyền kiểm soát chuyển cho khách hàng. Công ty kê khai thuế giá trị gia tăng theo phương pháp khấu trừ và thuế thu nhập doanh nghiệp theo mức thuế suất hiện hành.",
+     "Ban lãnh đạo theo dõi các chỉ tiêu vận hành, chất lượng và dòng tiền theo tháng; những biến động đáng kể được phân tích, phê duyệt và lưu hồ sơ cùng chứng từ liên quan."
+    ],
+    "table": true
+   },
+   {
+    "title": "10. Sự kiện sau ngày kết thúc kỳ kế toán",
+    "paragraphs": [
+     "Hội đồng quản trị đã phê duyệt kế hoạch đầu tư dây chuyền xử lý nước tuần hoàn và giao Ban Tổng giám đốc tổ chức thực hiện trong phạm vi ngân sách đã được thông qua.",
+     "Ban lãnh đạo theo dõi các chỉ tiêu vận hành, chất lượng và dòng tiền theo tháng; những biến động đáng kể được phân tích, phê duyệt và lưu hồ sơ cùng chứng từ liên quan."
+    ],
+    "table": false
+   }
+  ]
+ }
+}

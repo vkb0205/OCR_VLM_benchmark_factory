@@ -1,0 +1,94 @@
+{
+  "variables": {
+    "industry": "cơ khí chế tạo",
+    "company_size": "small",
+    "fiscal_year": 2023
+  },
+  "source": "seed_115.json",
+  "values": {
+    "board_paragraph": [
+      "The Company maintains a dimensional inspection system at each stage of production.",
+      "In {year}, the Company's principal activities were the contract manufacture of steel components, the manufacture of conveyors, and the repair of industrial equipment. Its customers were primarily cement manufacturers, non-fired brick producers, and supporting mechanical engineering enterprises in the northern region. Orders were signed in batches, with delivery terms ranging from three to ten weeks, and were paid mainly by bank transfer after acceptance.",
+      "The profit margin improved as a result of adjustments to material consumption norms, reduced scrap, and an increased proportion of frame and base products with higher added value. The Company did not experience any unusual events that materially affected its business results.",
+      "The Company maintained its short-term solvency and had no overdue borrowings.",
+      "In the coming year, the Board of General Directors plans to expand its customer base in the environmental equipment sector, invest in an additional medium-power laser cutting machine, and standardize material consumption data. The Company will closely control the collection period for receivables, prioritize contracts containing advance payment terms, and continue training welders and lathe operators in accordance with the technical requirements of each product.",
+      "The Board of Directors and the Board of General Directors comprise the members listed in the table below. The financial statements for {year} were audited by {auditor}. The Board of General Directors is responsible for preparing and fairly presenting the financial statements in accordance with Vietnamese Accounting Standards and the prevailing accounting regime for enterprises; and confirms that, after the end of the accounting period, there were no events requiring adjustment or additional disclosure beyond the matters presented.",
+      "Mechanical manufacturing is the Company's core business, requiring close coordination among design, blank preparation, machining, and on-site acceptance. During the year, production team leaders updated progress daily, cross-checked drawings against process sheets, and recorded the causes of every repair. This organization enabled the Company to maintain stable quality while meeting orders with short delivery times.",
+      "The Board of General Directors also focuses on occupational safety and economical use of materials. Employees are instructed to inspect machinery before each shift, sort steel chips, and store measuring instruments in specialized cabinets. Maintenance costs are planned based on operating hours, while equipment showing signs of reduced accuracy is removed from the production schedule for calibration before being put back into use.",
+      "New contracts are assessed from three perspectives: technical capability, profit margin, and payment terms. The Company is not dependent on any single customer; revenue is allocated among multiple seasonal orders. Management will continue to improve material traceability records, increase the on-time delivery rate, and maintain regular communication with customers after acceptance.",
+      "Cash flow management is carried out weekly and for each production order. Receipts from contract manufacturing agreements are reconciled with acceptance minutes, while steel purchases and labor costs are classified by production stage. Management reviews purchasing limits, inventory days, and the aging of receivables at each management meeting to maintain an appropriate level of working capital."
+    ],
+    "auditor_paragraphs": [
+      "The Board of General Directors is responsible for preparing and fairly presenting the financial statements, selecting appropriate accounting policies, maintaining necessary internal controls, and assessing the Company's ability to continue as a going concern. This responsibility includes preventing and detecting errors and fraud within reasonable limits.",
+      "Our responsibility is to express an opinion on the financial statements based on the results of our audit. We conducted the audit in accordance with Vietnamese Standards on Auditing. These standards require auditors to comply with ethical requirements and to plan and perform the audit to obtain reasonable assurance that the financial statements are free from material misstatement.",
+      "An audit involves performing procedures to obtain audit evidence about the amounts and disclosures in the financial statements. The procedures selected depend on the auditor's judgment, including the assessment of the risks of material misstatement due to fraud or error. We also evaluate the appropriateness of the accounting policies and the accounting estimates made by the Board of General Directors.",
+      "We believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our audit opinion.",
+      "No matters were identified during the audit that we considered necessary to present as a separate key audit matter. This report is issued to the Company's shareholders and Board of Directors solely for the purpose of reporting the results of the audit of the aforementioned financial statements."
+    ],
+    "board_title": "REPORT OF THE BOARD OF GENERAL DIRECTORS",
+    "auditor_title": "INDEPENDENT AUDITOR'S REPORT",
+    "auditor_addressee": "To: the shareholders and Board of Directors of {company}",
+    "notes": [
+      {
+        "title": "Accounting policies and operating characteristics",
+        "paragraphs": [
+          "The financial statements are prepared in Vietnamese dong in accordance with the accounting regime for enterprises and Vietnamese Accounting Standards applicable to the Company's operations.",
+          "The Board of General Directors is responsible for maintaining appropriate accounting books, supporting documents, and approval procedures. The policies are applied consistently between periods, except where new legal or accounting standard requirements apply."
+        ],
+        "table": true
+      },
+      {
+        "title": "Cash and cash equivalents",
+        "paragraphs": [
+          "Cash includes cash on hand and demand deposits at banks. The Company had no restricted cash at the end of the accounting period. Cash equivalents are deposits with terms of no more than three months that are readily convertible into a known amount of cash."
+        ],
+        "table": true
+      },
+      {
+        "title": "Trade receivables",
+        "paragraphs": [
+          "Trade receivables are presented at their carrying amount after deducting provisions for amounts showing signs of being difficult to recover. The Board of General Directors assesses the aging of receivables, payment history, and financial information of each customer to determine the provision level.",
+          "The Company maintains a process for confirming receivable balances with each customer at the end of the month. Overdue amounts are reported separately to the Board of General Directors, together with a collection schedule and the person responsible. Foreign currency balances, if any, are revalued at the appropriate exchange rate; during the year, the Company did not incur any significant foreign exchange differences. Delivery records, quality inspection sheets, and acceptance minutes are retained with the sales documentation for reconciliation purposes."
+        ],
+        "table": false
+      },
+      {
+        "title": "Inventories",
+        "paragraphs": [
+          "Inventories comprise steel plates, welding materials, work in progress, and finished products awaiting delivery. Inventories are stated at the lower of cost and net realizable value; the cost of inventory issued is calculated using the weighted average method."
+        ],
+        "table": true
+      },
+      {
+        "title": "Fixed assets",
+        "paragraphs": [
+          "Cutting machines, lathes, and welding equipment are inspected periodically for operating condition. Routine repair costs are recognized in production costs.",
+          "Management assesses the profitability of each group of equipment and prepares maintenance plans based on usage history. Assets that no longer meet technical requirements are considered for disposal following appropriate approval. The Company stores machinery in covered areas, carries out inspections of lifting equipment, and provides employees with personal protective equipment in accordance with internal regulations."
+        ],
+        "table": false
+      },
+      {
+        "title": "Borrowings and tax obligations",
+        "paragraphs": [
+          "Borrowings are recognized at the amount actually received and classified as current or non-current according to their repayment terms. Interest expense is recognized as incurred. Value-added tax and corporate income tax are declared and paid in accordance with prevailing regulations."
+        ],
+        "table": true
+      },
+      {
+        "title": "Equity",
+        "paragraphs": [
+          "Owners' contributed capital is recognized at the amount actually contributed; undistributed after-tax profits are tracked separately for the accumulated balance of prior years and the results of the current year. Profit distribution is carried out in accordance with resolutions of the General Meeting of Shareholders and the Company's solvency."
+        ],
+        "table": true
+      },
+      {
+        "title": "Revenue and expenses",
+        "paragraphs": [
+          "Manufacturing revenue is recognized at the contract value after deducting deductions from revenue when the products have been accepted and control has transferred to the customer. Expenses are recognized in accordance with the revenue for the period.",
+          "Deductions from revenue are verified based on adjustment invoices and minutes of agreement with customers. Cost of sales includes direct materials, direct labor, and manufacturing overhead allocated to completed products. Selling and administrative expenses are monitored by department, enabling the Board of General Directors to assess the effectiveness of each service channel. Accounting estimates are reviewed when new information becomes available and adjusted prospectively where necessary."
+        ],
+        "table": true
+      }
+    ]
+  }
+}

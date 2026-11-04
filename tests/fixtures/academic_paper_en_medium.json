@@ -1,0 +1,269 @@
+{
+  "variables": {
+    "lang": "en",
+    "field": "information retrieval",
+    "paper_length": "medium",
+    "citation_style": "author_year"
+  },
+  "values": {
+    "title": "Queue-Stability Estimates for a Computational Dispatch Network",
+    "authors": [
+      {
+        "name": "R. Aurora-Arc",
+        "affiliations": [
+          1
+        ],
+        "corresponding": false
+      },
+      {
+        "name": "C. Example-Wren",
+        "affiliations": [
+          1,
+          2
+        ],
+        "email": "cw@auroraresearch.org",
+        "corresponding": true
+      }
+    ],
+    "affiliations": [
+      "Computational Network Unit, Example North-4",
+      "Procedural Systems Cell, Observation Arc Lab"
+    ],
+    "abstract": "This study compares three dispatch policies in a procedural queue network. Paired traces hold arrivals and service requirements constant across policies, while calibration and evaluation traces are separated by seed. The load-aware policy reduces median delay at intermediate load, whereas a reserved service slot improves recovery after bursts. Tail delay and recovery provide information that throughput alone misses. All results come from an explicitly generated system and do not describe a real institution or service.",
+    "abstract_alt": "Nghiên cứu giả lập này so sánh ba quy tắc điều phối trong mạng hàng đợi được tạo theo thủ tục. Các vết ghép cặp giữ nguyên yêu cầu đến và thời gian phục vụ giữa các quy tắc, còn tập hiệu chỉnh được tách theo hạt giống. Quy tắc nhận biết tải giảm thời gian chờ trung vị ở tải vừa; một suất phục vụ dự phòng giúp hàng đợi phục hồi sau đợt tăng đột biến. Mọi kết quả đều được tạo từ mô hình tổng hợp, không mô tả tổ chức hay dịch vụ thật.",
+    "keywords": "computational queues; paired traces; dispatch policies; tail delay; recovery",
+    "keywords_alt": "hàng đợi giả lập; vết ghép cặp; điều phối; độ trễ đuôi; phục hồi",
+    "body": [
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "1. Introduction"
+      },
+      {
+        "type": "paragraph",
+        "text": "Procedural courier studies make it possible to test queue policies while keeping every route, arrival, and service time under control. This paper studies a computational campus-like network with no connection to a real institution. We compare a fixed dispatch rule, a load-aware rule, and a conservative rule that reserves capacity for delayed tasks. The same arrival traces are replayed for each policy, and the split between calibration and evaluation traces is frozen before any threshold is selected. The central quantity is the wait residual $r_i = wait_i - target_i$. We report its median together with a high quantile, because an acceptable average can coexist with a small set of severe delays. The full trace generator is specified so that the experiment can be reconstructed without outside data."
+      },
+      {
+        "type": "paragraph",
+        "text": "The first question concerns stability under a gradual increase in requests. If a dispatch rule only performs well at one load, its apparent advantage may be an artifact of a chosen scenario. We therefore vary the arrival rate across a prespecified grid and keep the service-time distribution fixed within each comparison. Prior computational queue exercises have often summarized throughput alone, which hides who waits longest and whether the queue drains after a burst \\cite{1,2}. Our evaluation records both completed tasks and the longest sustained backlog. A normalized load $rho = arrivals / capacity$ provides a common axis for the experiments. The interpretation remains conditional on this generator: no measurement from a real building or service team is used."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "2. Computational queue model"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "2.1. Event generation and split"
+      },
+      {
+        "type": "paragraph",
+        "text": "Each trace contains a warm-up interval followed by a scoring interval. Warm-up observations initialize the queue state but are excluded from reported errors, so the first empty-queue period does not make the policy look artificially fast. We use paired traces: every policy sees the same arrival sequence and the same service requirements. This reduces irrelevant variation between runs and makes a policy difference easier to interpret. The simulator records an event whenever a task joins, begins service, or leaves the queue. A queue state $q_t$ is updated after each event, rather than at fixed time steps, to avoid discretization artifacts. The event list is sorted by a stable tie-breaking rule that is included in the fixture description."
+      },
+      {
+        "type": "paragraph",
+        "text": "The calibration split is grouped by trace seed. No two windows cut from the same generated trace appear on opposite sides of the split, because nearby windows share the same burst structure. Dispatch thresholds are selected on calibration traces only and then held constant for all evaluation runs. We also repeat the comparison with a second set of seeds to estimate variability from trace generation. Let $m_g$ be the median wait for group $g$; we compare groups rather than treating each event as independent evidence. These safeguards make the reported uncertainty broader than a naive event-level interval and prevent the same burst from being counted twice. The split rule is simple enough to reproduce from the seed list alone."
+      },
+      {
+        "type": "paragraph",
+        "text": "Three dispatch policies share the same task priority and differ only in how they allocate the next available courier. The fixed rule selects the oldest eligible task. The load-aware rule chooses a task from the most congested zone, while the conservative rule holds one service slot when recent delays exceed a fixed calibration threshold. We do not change the threshold during evaluation. A score $S_j = wait_j + penalty_j$ ranks eligible tasks, and the penalty is zero for the fixed rule. The other policies use bounded penalties so that a task cannot be postponed indefinitely solely because its zone is busy. This bound is stated in the configuration and is identical across all seeds."
+      },
+      {
+        "type": "equation",
+        "id": "eq:wait",
+        "latex": "W_i = T_i - A_i",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "The wait decomposition is checked against the event log after each replay. A task cannot begin before it arrives, and the recorded service interval cannot overlap another task on the same resource. We use $W_i = B_i - A_i$ for the observed wait, with arrival time $A_i$ and service start $B_i$. The queue length after event k is $Q_k = Q_{k-1} + arrivals_k - starts_k$. These identities detect bookkeeping errors before the policy metrics are calculated. Each check is applied to every trace, including traces with no burst, so that the most difficult scenarios do not receive special handling."
+      },
+      {
+        "type": "equation",
+        "id": "eq:aligned",
+        "latex": "\\begin{aligned}\\bar W &= \\frac{1}{n}\\sum_i W_i \\\\ Q_k &= Q_{k-1}+a_k-s_k\\end{aligned}",
+        "numbered": true
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "3. Evaluation measures"
+      },
+      {
+        "type": "paragraph",
+        "text": "The outcome table summarizes median wait, the upper-tail wait, and the proportion of traces that return to an empty queue after a burst. These measures answer different questions: median wait describes a typical task, the upper tail describes difficult cases, and recovery indicates whether congestion persists. The largest load level is retained even when all policies degrade there, since removing it would conceal the operating boundary. We show each policy separately rather than ranking them with a composite score. The table is referenced as \\ref{tab:queue}, and its values should be read with the load curve in \\ref{fig:load}. The units are simulation ticks, not clock minutes, and the scale has no real-world calibration."
+      },
+      {
+        "type": "table",
+        "id": "tab:queue",
+        "caption": "Wait and recovery summaries across computational load settings",
+        "header": [
+          [
+            "Policy",
+            "Median wait",
+            "Upper tail",
+            "Recovery"
+          ]
+        ],
+        "rows": [
+          [
+            "Fixed",
+            "8.4",
+            "21.0",
+            "0.71"
+          ],
+          [
+            "Load-aware",
+            "7.2",
+            "23.8",
+            "0.74"
+          ],
+          [
+            "Conservative",
+            "9.1",
+            "18.6",
+            "0.86"
+          ]
+        ],
+        "table_style": "shaded_header"
+      },
+      {
+        "type": "chart",
+        "id": "fig:load",
+        "caption": "Wait summaries by normalized request load",
+        "chart_type": "line",
+        "labels": [
+          "low",
+          "moderate",
+          "high",
+          "peak"
+        ],
+        "series": [
+          {
+            "name": "median",
+            "values": [
+              4.0,
+              7.2,
+              12.8,
+              21.1
+            ],
+            "errors": [
+              0.8,
+              1.0,
+              1.8,
+              2.9
+            ]
+          },
+          {
+            "name": "upper tail",
+            "values": [
+              11.2,
+              18.4,
+              32.0,
+              49.5
+            ]
+          }
+        ],
+        "x_label": "normalized load",
+        "y_label": "simulation ticks"
+      },
+      {
+        "type": "paragraph",
+        "text": "In the middle of the tested load range, the load-aware policy reduces the median wait while preserving a similar recovery rate. At the highest level its upper-tail wait grows faster, suggesting that routing by congestion can concentrate work in one zone. The conservative policy has a slightly higher median in quiet scenarios but limits the longest backlog after burst arrivals. This trade-off is visible in the computational line chart, where the median and tail curves separate as load rises. The chart uses the same fixed seeds as the table; error bars represent the central spread across trace batches. The expression $delta = wait_policy - wait_fixed$ is computed within each paired trace before the aggregate summary is formed."
+      },
+      {
+        "type": "figure",
+        "id": "fig:queue",
+        "figure_type": "architecture",
+        "caption": "Computational queue and dispatch sequence",
+        "description": "A procedural diagram shows arrival events passing through a shared queue, a policy selector, and a service pool.",
+        "labels": [
+          "Arrival stream",
+          "Shared queue",
+          "Policy rule",
+          "Service pool"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "The diagram at \\ref{fig:queue} separates the queue state from the dispatch rule so that a policy change does not alter event generation. A task enters the shared queue with its arrival timestamp and fixed service requirement. The selector chooses among eligible tasks, then the service pool updates its state when a task completes. This separation is important for paired replay: the same arrival trace can be evaluated under several dispatch policies without regenerating the workload. The figure is a schematic of code structure, not a map of a real site. Its labels identify only the components needed to understand the simulation."
+      },
+      {
+        "type": "equation",
+        "id": "eq:recovery",
+        "latex": "R = empty_traces / all_traces",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "The result does not identify a universal best policy. A deployment with strict tail constraints might prefer the conservative rule, whereas a system judged primarily by typical delay could prefer load-aware dispatch at moderate load. Such a choice would require real service objectives and measurements, neither of which is included here. We instead state the conditional finding: under the computational arrival process, load-aware dispatch improves typical delay at intermediate load, while the conservative reserve recovers more reliably after bursts. The queue model assumes that every task is served once and that service requirements are known to the simulator. It excludes cancellations, human decisions, and correlated equipment failure, all of which could change the ranking \\cite{3,4}."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "4. Sensitivity and limitations"
+      },
+      {
+        "type": "paragraph",
+        "text": "A further sensitivity check changes the duration of the warm-up interval and the size of the calibration group. Short warm-up periods leave more initial-state influence in the score; longer periods make the estimate less sensitive but reduce the fraction of each trace available for evaluation. Increasing calibration size stabilizes the threshold for the conservative rule, although the benefit becomes small after the principal burst patterns have appeared. We report the tested settings rather than extrapolating beyond them. The confidence width $w = q95 - q05$ is included as a descriptive spread and is not presented as a guarantee for unobserved traces. These comparisons help separate simulation noise from a policy effect without claiming that the generator represents a particular service network."
+      },
+      {
+        "type": "paragraph",
+        "text": "The study has several limits. The computational network has a small number of zones, fixed travel costs, and no route conflicts. Service times are drawn independently of task type, so the experiment cannot assess specialist workload or priority rules that depend on task content. The arrival generator includes bursts but not long-term seasonality. We also compare only three policies and do not tune them against a common operational objective. The effect size may therefore change under a different graph or cost model. Our purpose is to show a transparent comparison pattern: paired traces, group-based splitting, separate typical and tail metrics, and explicit reporting of recovery. Any follow-up should first define its target setting and validate the simulator against data collected for that purpose."
+      },
+      {
+        "type": "paragraph",
+        "text": "The procedure is deliberately compact. It creates a trace, locks its split, calibrates thresholds, replays each dispatch rule, and records wait and recovery outcomes. The pseudocode lists the sequence without hiding a second optimization step inside the evaluation loop. The event trace and parameter record are retained for every computational run, allowing a reviewer to inspect why a task waited or why a queue remained nonempty. We cite the auxiliary design notes for the event ordering and uncertainty summaries \\cite{5,6,7,8}. The result is a small benchmark example rather than a recommendation about courier staffing. Its main contribution is that every reported value can be traced back to an explicit generated scenario."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "5. Conclusion"
+      },
+      {
+        "type": "paragraph",
+        "text": "This comparison shows how paired computational traces can distinguish typical delay from tail delay and recovery after a burst. The load-aware rule performs well at intermediate load, while a reserved service slot reduces persistent backlog in the tested scenarios. The choice depends on which outcome a future system values and on whether a validated simulator reproduces its operating conditions. We provide a reproducible event sequence, fixed calibration rule, and separate outcome measures so the example can be audited. No estimate in this paper describes a real institution, route, or service team."
+      },
+      {
+        "type": "paragraph",
+        "text": "One footnote records the time convention used throughout the experiment\\fn{A simulation tick is a unit defined by the fixture and is not converted to minutes.}."
+      }
+    ],
+    "references": [
+      {
+        "text": "Arc, R. S. (2021). Event traces for procedural queues. Queue Notes, 1(1), 1–7.",
+        "cite": "Arc, 2021"
+      },
+      {
+        "text": "Wren, C. E. (2022). Tail summaries in generated service systems. Observation Systems Review, 2(2), 8–15.",
+        "cite": "Wren, 2022"
+      },
+      {
+        "text": "Vale, M. (2020). Paired comparisons under fixed arrivals. Computational Methods Record, 3(1), 16–23.",
+        "cite": "Vale, 2020"
+      },
+      {
+        "text": "North, T. (2023). Recovery measures for finite queues. Imaginary Operations Journal, 1(3), 24–31.",
+        "cite": "North, 2023"
+      },
+      {
+        "text": "Example, C. and Arc, R. (2021). Grouped calibration traces. Data Proceedings, 4(1), 32–39.",
+        "cite": "Example and Arc, 2021"
+      },
+      {
+        "text": "Morrow, S. (2024). Event ordering in computational simulations. Example Research Ledger, 2(4), 40–47.",
+        "cite": "Morrow, 2024"
+      },
+      {
+        "text": "Kite, A. (2022). Describing uncertainty across generated batches. Observation Statistics Pages, 5(2), 48–55.",
+        "cite": "Kite, 2022"
+      },
+      {
+        "text": "Field, P. (2023). Reproducibility records for procedural benchmarks. Systems Archive, 6(1), 56–63.",
+        "cite": "Field, 2023"
+      }
+    ],
+    "journal": "Journal of Procedural Queues, volume 3, issue 2, pages 14–36; submitted 08 January 2026, accepted 22 March 2026"
+  }
+}
