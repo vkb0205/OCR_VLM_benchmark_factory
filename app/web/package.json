@@ -1,0 +1,26 @@
+{
+  "name": "gt-review",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite --host 127.0.0.1",
+    "generate": "openapi-typescript ../openapi.json -o src/schema.d.ts",
+    "typecheck": "tsc --noEmit --jsx react-jsx --esModuleInterop --moduleResolution bundler --module esnext --target es2022 --lib es2022,dom src/main.tsx"
+  },
+  "dependencies": {
+    "react": "*",
+    "react-dom": "*",
+    "openapi-fetch": "*",
+    "@fontsource/inter": "*",
+    "@fontsource/jetbrains-mono": "*"
+  },
+  "devDependencies": {
+    "vite": "*",
+    "typescript": "*",
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "openapi-typescript": "*"
+  }
+}

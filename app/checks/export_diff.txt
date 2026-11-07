@@ -1,0 +1,1 @@
+PASS: 4 bundles, 32 pages, 100 files compared, 0 differing bytes. PDF bytes replayed to hold Chromium creation timestamps constant; screenshots and geometry measured independently. Direct process() bypasses the agent-only entrypoint filter. Problems: []

@@ -1,0 +1,2081 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "GT Review",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/api/runs": {
+      "get": {
+        "summary": "Runs",
+        "operationId": "runs_api_runs_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array",
+                  "title": "Response Runs Api Runs Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/docs": {
+      "get": {
+        "summary": "Docs",
+        "operationId": "docs_api_docs_get",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "",
+              "title": "Type"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "",
+              "title": "Status"
+            }
+          },
+          {
+            "name": "lang",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "",
+              "title": "Lang"
+            }
+          },
+          {
+            "name": "layout",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "",
+              "title": "Layout"
+            }
+          },
+          {
+            "name": "lint",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "",
+              "title": "Lint"
+            }
+          },
+          {
+            "name": "reviewer",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "",
+              "title": "Reviewer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "lint",
+              "title": "Sort"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Document"
+                  },
+                  "title": "Response Docs Api Docs Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/docs/{subset}/{doc_id}": {
+      "get": {
+        "summary": "Get Doc",
+        "operationId": "get_doc_api_docs__subset___doc_id__get",
+        "parameters": [
+          {
+            "name": "subset",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Subset"
+            }
+          },
+          {
+            "name": "doc_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Doc Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Document"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/docs/{subset}/{doc_id}/pages/{n}": {
+      "get": {
+        "summary": "Get Page",
+        "operationId": "get_page_api_docs__subset___doc_id__pages__n__get",
+        "parameters": [
+          {
+            "name": "subset",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Subset"
+            }
+          },
+          {
+            "name": "doc_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Doc Id"
+            }
+          },
+          {
+            "name": "n",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "N"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Page"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/docs/{subset}/{doc_id}/pages/{n}/image": {
+      "get": {
+        "summary": "Image",
+        "operationId": "image_api_docs__subset___doc_id__pages__n__image_get",
+        "parameters": [
+          {
+            "name": "subset",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Subset"
+            }
+          },
+          {
+            "name": "doc_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Doc Id"
+            }
+          },
+          {
+            "name": "n",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "N"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/docs/{subset}/{doc_id}/pages/{n}/html": {
+      "get": {
+        "summary": "Html",
+        "operationId": "html_api_docs__subset___doc_id__pages__n__html_get",
+        "parameters": [
+          {
+            "name": "subset",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Subset"
+            }
+          },
+          {
+            "name": "doc_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Doc Id"
+            }
+          },
+          {
+            "name": "n",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "N"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/docs/{subset}/{doc_id}/pages/{n}/blocks/{block_id}": {
+      "put": {
+        "summary": "Verdict",
+        "operationId": "verdict_api_docs__subset___doc_id__pages__n__blocks__block_id__put",
+        "parameters": [
+          {
+            "name": "subset",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Subset"
+            }
+          },
+          {
+            "name": "doc_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Doc Id"
+            }
+          },
+          {
+            "name": "n",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "N"
+            }
+          },
+          {
+            "name": "block_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Block Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VerdictWrite"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Review"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/docs/{subset}/{doc_id}/pages/{n}/decision": {
+      "put": {
+        "summary": "Decision",
+        "operationId": "decision_api_docs__subset___doc_id__pages__n__decision_put",
+        "parameters": [
+          {
+            "name": "subset",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Subset"
+            }
+          },
+          {
+            "name": "doc_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Doc Id"
+            }
+          },
+          {
+            "name": "n",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "N"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DecisionWrite"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Review"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/docs/{subset}/{doc_id}/pages/{n}/order": {
+      "put": {
+        "summary": "Order Write",
+        "operationId": "order_write_api_docs__subset___doc_id__pages__n__order_put",
+        "parameters": [
+          {
+            "name": "subset",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Subset"
+            }
+          },
+          {
+            "name": "doc_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Doc Id"
+            }
+          },
+          {
+            "name": "n",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "N"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderWrite"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Review"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/taxonomy": {
+      "get": {
+        "summary": "Taxonomy",
+        "operationId": "taxonomy_api_taxonomy_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Taxonomy Api Taxonomy Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/export": {
+      "get": {
+        "summary": "Export Summary",
+        "operationId": "export_summary_api_export_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExportSummary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Export Manifest",
+        "operationId": "export_manifest_api_export_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExportSummary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/stats": {
+      "get": {
+        "summary": "Stats",
+        "operationId": "stats_api_stats_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "integer"
+                  },
+                  "type": "object",
+                  "title": "Response Stats Api Stats Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Block": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "cat": {
+            "type": "string",
+            "title": "Cat"
+          },
+          "content": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/TextContent"
+              },
+              {
+                "$ref": "#/components/schemas/TableContent"
+              },
+              {
+                "$ref": "#/components/schemas/EquationContent"
+              },
+              {
+                "$ref": "#/components/schemas/FigureContent"
+              },
+              {
+                "$ref": "#/components/schemas/ChartContent"
+              },
+              {
+                "$ref": "#/components/schemas/MarkContent"
+              }
+            ],
+            "title": "Content",
+            "discriminator": {
+              "propertyName": "kind",
+              "mapping": {
+                "chart": "#/components/schemas/ChartContent",
+                "equation": "#/components/schemas/EquationContent",
+                "figure": "#/components/schemas/FigureContent",
+                "mark": "#/components/schemas/MarkContent",
+                "table": "#/components/schemas/TableContent",
+                "text": "#/components/schemas/TextContent"
+              }
+            }
+          },
+          "lang": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "vi",
+                  "en",
+                  "en_vi_mixed"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Lang"
+          },
+          "attrs": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Attrs",
+            "default": {}
+          },
+          "parent": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Parent"
+          },
+          "section": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Section"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "cat",
+          "content"
+        ],
+        "title": "Block"
+      },
+      "BlockBox": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "cat": {
+            "type": "string",
+            "title": "Cat"
+          },
+          "ro": {
+            "type": "integer",
+            "title": "Ro"
+          },
+          "part": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Part"
+          },
+          "poly": {
+            "prefixItems": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "type": "array",
+            "maxItems": 8,
+            "minItems": 8,
+            "title": "Poly"
+          },
+          "lang": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Lang"
+          },
+          "parent": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Parent"
+          },
+          "attrs": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Attrs"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "cat",
+          "ro",
+          "poly",
+          "text"
+        ],
+        "title": "BlockBox"
+      },
+      "BlockRef": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "part": {
+            "type": "integer",
+            "title": "Part",
+            "default": 1
+          },
+          "parts": {
+            "type": "integer",
+            "title": "Parts",
+            "default": 1
+          },
+          "row_range": {
+            "anyOf": [
+              {
+                "prefixItems": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "integer"
+                  }
+                ],
+                "type": "array",
+                "maxItems": 2,
+                "minItems": 2
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Row Range"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "title": "BlockRef",
+        "description": "A block, or one piece of a block split across pages."
+      },
+      "BlockReview": {
+        "properties": {
+          "fix": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Correction"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "verdict": {
+            "type": "string",
+            "enum": [
+              "correct",
+              "box_off",
+              "text_wrong",
+              "wrong_category",
+              "wrong_order",
+              "should_ignore"
+            ],
+            "title": "Verdict"
+          },
+          "note": {
+            "type": "string",
+            "title": "Note",
+            "default": ""
+          },
+          "by": {
+            "type": "string",
+            "title": "By"
+          },
+          "at": {
+            "type": "string",
+            "title": "At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "verdict",
+          "by",
+          "at"
+        ],
+        "title": "BlockReview"
+      },
+      "Boxes": {
+        "properties": {
+          "contract_version": {
+            "type": "string",
+            "title": "Contract Version",
+            "default": "0.3.0"
+          },
+          "doc_id": {
+            "type": "string",
+            "title": "Doc Id"
+          },
+          "image_dpi": {
+            "type": "integer",
+            "title": "Image Dpi"
+          },
+          "pages": {
+            "items": {
+              "$ref": "#/components/schemas/PageBoxes"
+            },
+            "type": "array",
+            "title": "Pages"
+          }
+        },
+        "type": "object",
+        "required": [
+          "doc_id",
+          "image_dpi",
+          "pages"
+        ],
+        "title": "Boxes"
+      },
+      "ChartContent": {
+        "properties": {
+          "kind": {
+            "type": "string",
+            "const": "chart",
+            "title": "Kind",
+            "default": "chart"
+          },
+          "chart_type": {
+            "type": "string",
+            "title": "Chart Type"
+          },
+          "data": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Data"
+          }
+        },
+        "type": "object",
+        "required": [
+          "chart_type",
+          "data"
+        ],
+        "title": "ChartContent"
+      },
+      "Correction": {
+        "properties": {
+          "poly": {
+            "anyOf": [
+              {
+                "prefixItems": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "number"
+                  }
+                ],
+                "type": "array",
+                "maxItems": 8,
+                "minItems": 8
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Poly"
+          },
+          "cat": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cat"
+          },
+          "attrs": {
+            "anyOf": [
+              {
+                "additionalProperties": {
+                  "type": "string"
+                },
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Attrs"
+          }
+        },
+        "type": "object",
+        "title": "Correction"
+      },
+      "DecisionWrite": {
+        "properties": {
+          "version": {
+            "type": "integer",
+            "title": "Version"
+          },
+          "reviewer": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Reviewer"
+          },
+          "decision": {
+            "type": "string",
+            "enum": [
+              "approved",
+              "flagged",
+              "rejected"
+            ],
+            "title": "Decision"
+          },
+          "note": {
+            "type": "string",
+            "title": "Note",
+            "default": ""
+          }
+        },
+        "type": "object",
+        "required": [
+          "version",
+          "reviewer",
+          "decision"
+        ],
+        "title": "DecisionWrite"
+      },
+      "DocIR": {
+        "properties": {
+          "doc_id": {
+            "type": "string",
+            "title": "Doc Id"
+          },
+          "doc_type": {
+            "type": "string",
+            "title": "Doc Type"
+          },
+          "lang": {
+            "type": "string",
+            "enum": [
+              "vi",
+              "en",
+              "en_vi_mixed"
+            ],
+            "title": "Lang"
+          },
+          "blocks": {
+            "items": {
+              "$ref": "#/components/schemas/Block"
+            },
+            "type": "array",
+            "title": "Blocks"
+          }
+        },
+        "type": "object",
+        "required": [
+          "doc_id",
+          "doc_type",
+          "lang",
+          "blocks"
+        ],
+        "title": "DocIR",
+        "description": "Blocks in document reading order. Page placement lives in Pagination."
+      },
+      "Document": {
+        "properties": {
+          "subset": {
+            "type": "string",
+            "title": "Subset"
+          },
+          "manifest": {
+            "$ref": "#/components/schemas/DocumentManifest"
+          },
+          "content": {
+            "$ref": "#/components/schemas/DocIR"
+          },
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          },
+          "boxes": {
+            "$ref": "#/components/schemas/Boxes"
+          },
+          "lint": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/LintReport"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "review": {
+            "$ref": "#/components/schemas/Review"
+          },
+          "stale": {
+            "type": "boolean",
+            "title": "Stale"
+          },
+          "spec": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Spec"
+          },
+          "trace": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Trace"
+          }
+        },
+        "type": "object",
+        "required": [
+          "subset",
+          "manifest",
+          "content",
+          "pagination",
+          "boxes",
+          "lint",
+          "review",
+          "stale",
+          "spec",
+          "trace"
+        ],
+        "title": "Document"
+      },
+      "DocumentManifest": {
+        "properties": {
+          "dataset_version": {
+            "type": "string",
+            "title": "Dataset Version",
+            "default": "0.1.0"
+          },
+          "contract_version": {
+            "type": "string",
+            "title": "Contract Version"
+          },
+          "taxonomy_version": {
+            "type": "string",
+            "title": "Taxonomy Version"
+          },
+          "doc_id": {
+            "type": "string",
+            "title": "Doc Id"
+          },
+          "doc_type": {
+            "type": "string",
+            "title": "Doc Type"
+          },
+          "flow": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Flow"
+          },
+          "page_count": {
+            "type": "integer",
+            "title": "Page Count"
+          },
+          "pages": {
+            "items": {
+              "$ref": "#/components/schemas/PageEntry"
+            },
+            "type": "array",
+            "title": "Pages"
+          },
+          "attributes": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Attributes",
+            "default": {}
+          },
+          "composition": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Composition",
+            "default": {}
+          },
+          "image_dpi": {
+            "type": "integer",
+            "title": "Image Dpi",
+            "default": 200
+          },
+          "provenance": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Provenance",
+            "default": {}
+          },
+          "ro_level": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "L0",
+                  "L1",
+                  "L2",
+                  "L3",
+                  "L4"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ro Level"
+          },
+          "ro_cases": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Ro Cases"
+          }
+        },
+        "type": "object",
+        "required": [
+          "contract_version",
+          "taxonomy_version",
+          "doc_id",
+          "doc_type",
+          "page_count",
+          "pages"
+        ],
+        "title": "DocumentManifest",
+        "description": "document.json"
+      },
+      "EquationContent": {
+        "properties": {
+          "kind": {
+            "type": "string",
+            "const": "equation",
+            "title": "Kind",
+            "default": "equation"
+          },
+          "latex": {
+            "type": "string",
+            "title": "Latex"
+          }
+        },
+        "type": "object",
+        "required": [
+          "latex"
+        ],
+        "title": "EquationContent"
+      },
+      "EquationInlineSpan": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "equation_inline",
+            "title": "Type",
+            "default": "equation_inline"
+          },
+          "latex": {
+            "type": "string",
+            "title": "Latex"
+          }
+        },
+        "type": "object",
+        "required": [
+          "latex"
+        ],
+        "title": "EquationInlineSpan"
+      },
+      "ExportSummary": {
+        "properties": {
+          "reviews": {
+            "items": {
+              "$ref": "#/components/schemas/Review"
+            },
+            "type": "array",
+            "title": "Reviews"
+          },
+          "approved": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Approved"
+          }
+        },
+        "type": "object",
+        "required": [
+          "reviews",
+          "approved"
+        ],
+        "title": "ExportSummary"
+      },
+      "FigureContent": {
+        "properties": {
+          "kind": {
+            "type": "string",
+            "const": "figure",
+            "title": "Kind",
+            "default": "figure"
+          },
+          "asset": {
+            "type": "string",
+            "title": "Asset"
+          },
+          "description": {
+            "type": "string",
+            "title": "Description",
+            "default": ""
+          }
+        },
+        "type": "object",
+        "required": [
+          "asset"
+        ],
+        "title": "FigureContent"
+      },
+      "FootnoteMarkSpan": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "footnote_mark",
+            "title": "Type",
+            "default": "footnote_mark"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "target": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Target"
+          }
+        },
+        "type": "object",
+        "required": [
+          "text"
+        ],
+        "title": "FootnoteMarkSpan"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "IgnoredRegion": {
+        "properties": {
+          "poly": {
+            "prefixItems": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "type": "array",
+            "maxItems": 8,
+            "minItems": 8,
+            "title": "Poly"
+          }
+        },
+        "type": "object",
+        "required": [
+          "poly"
+        ],
+        "title": "IgnoredRegion"
+      },
+      "LintFinding": {
+        "properties": {
+          "rule_id": {
+            "type": "string",
+            "title": "Rule Id"
+          },
+          "level": {
+            "type": "string",
+            "enum": [
+              "E",
+              "W"
+            ],
+            "title": "Level"
+          },
+          "page": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Page"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          },
+          "block_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Block Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "rule_id",
+          "level",
+          "message"
+        ],
+        "title": "LintFinding"
+      },
+      "LintReport": {
+        "properties": {
+          "contract_version": {
+            "type": "string",
+            "title": "Contract Version",
+            "default": "0.3.0"
+          },
+          "doc_id": {
+            "type": "string",
+            "title": "Doc Id"
+          },
+          "findings": {
+            "items": {
+              "$ref": "#/components/schemas/LintFinding"
+            },
+            "type": "array",
+            "title": "Findings"
+          }
+        },
+        "type": "object",
+        "required": [
+          "doc_id",
+          "findings"
+        ],
+        "title": "LintReport"
+      },
+      "MarkContent": {
+        "properties": {
+          "kind": {
+            "type": "string",
+            "const": "mark",
+            "title": "Kind",
+            "default": "mark"
+          },
+          "asset": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Asset"
+          },
+          "value": {
+            "type": "string",
+            "title": "Value",
+            "default": ""
+          }
+        },
+        "type": "object",
+        "title": "MarkContent",
+        "description": "Seals, signatures, QR codes, barcodes, checkboxes, form fields."
+      },
+      "OrderWrite": {
+        "properties": {
+          "version": {
+            "type": "integer",
+            "title": "Version"
+          },
+          "reviewer": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Reviewer"
+          },
+          "order": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Order"
+          }
+        },
+        "type": "object",
+        "required": [
+          "version",
+          "reviewer",
+          "order"
+        ],
+        "title": "OrderWrite"
+      },
+      "Page": {
+        "properties": {
+          "document": {
+            "$ref": "#/components/schemas/Document"
+          },
+          "index": {
+            "type": "integer",
+            "title": "Index"
+          },
+          "image_width": {
+            "type": "integer",
+            "title": "Image Width"
+          },
+          "image_height": {
+            "type": "integer",
+            "title": "Image Height"
+          },
+          "size_matches": {
+            "type": "boolean",
+            "title": "Size Matches"
+          },
+          "attributes": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Attributes"
+          }
+        },
+        "type": "object",
+        "required": [
+          "document",
+          "index",
+          "image_width",
+          "image_height",
+          "size_matches",
+          "attributes"
+        ],
+        "title": "Page"
+      },
+      "PageBoxes": {
+        "properties": {
+          "index": {
+            "type": "integer",
+            "title": "Index"
+          },
+          "page_id": {
+            "type": "string",
+            "title": "Page Id"
+          },
+          "image_width": {
+            "type": "integer",
+            "title": "Image Width"
+          },
+          "image_height": {
+            "type": "integer",
+            "title": "Image Height"
+          },
+          "blocks": {
+            "items": {
+              "$ref": "#/components/schemas/BlockBox"
+            },
+            "type": "array",
+            "title": "Blocks"
+          },
+          "ignored": {
+            "items": {
+              "$ref": "#/components/schemas/IgnoredRegion"
+            },
+            "type": "array",
+            "title": "Ignored"
+          }
+        },
+        "type": "object",
+        "required": [
+          "index",
+          "page_id",
+          "image_width",
+          "image_height",
+          "blocks"
+        ],
+        "title": "PageBoxes"
+      },
+      "PageEntry": {
+        "properties": {
+          "page_id": {
+            "type": "string",
+            "title": "Page Id"
+          },
+          "index": {
+            "type": "integer",
+            "title": "Index"
+          },
+          "file": {
+            "type": "string",
+            "title": "File"
+          },
+          "role": {
+            "type": "string",
+            "title": "Role"
+          },
+          "kind": {
+            "type": "string",
+            "title": "Kind",
+            "default": "single"
+          },
+          "width_mm": {
+            "type": "number",
+            "title": "Width Mm"
+          },
+          "height_mm": {
+            "type": "number",
+            "title": "Height Mm"
+          },
+          "ro_level": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "L0",
+                  "L1",
+                  "L2",
+                  "L3",
+                  "L4"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ro Level"
+          },
+          "ro_cases": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Ro Cases"
+          }
+        },
+        "type": "object",
+        "required": [
+          "page_id",
+          "index",
+          "file",
+          "role",
+          "width_mm",
+          "height_mm"
+        ],
+        "title": "PageEntry"
+      },
+      "PagePlan": {
+        "properties": {
+          "index": {
+            "type": "integer",
+            "title": "Index"
+          },
+          "role": {
+            "type": "string",
+            "title": "Role"
+          },
+          "blocks": {
+            "items": {
+              "$ref": "#/components/schemas/BlockRef"
+            },
+            "type": "array",
+            "title": "Blocks"
+          }
+        },
+        "type": "object",
+        "required": [
+          "index",
+          "role",
+          "blocks"
+        ],
+        "title": "PagePlan"
+      },
+      "PageReview": {
+        "properties": {
+          "order": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Order"
+          },
+          "version": {
+            "type": "integer",
+            "title": "Version",
+            "default": 0
+          },
+          "decision": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "approved",
+                  "flagged",
+                  "rejected"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Decision"
+          },
+          "note": {
+            "type": "string",
+            "title": "Note",
+            "default": ""
+          },
+          "by": {
+            "type": "string",
+            "title": "By",
+            "default": ""
+          },
+          "at": {
+            "type": "string",
+            "title": "At",
+            "default": ""
+          },
+          "blocks": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/BlockReview"
+            },
+            "type": "object",
+            "title": "Blocks"
+          }
+        },
+        "type": "object",
+        "title": "PageReview"
+      },
+      "Pagination": {
+        "properties": {
+          "doc_id": {
+            "type": "string",
+            "title": "Doc Id"
+          },
+          "pages": {
+            "items": {
+              "$ref": "#/components/schemas/PagePlan"
+            },
+            "type": "array",
+            "title": "Pages"
+          }
+        },
+        "type": "object",
+        "required": [
+          "doc_id",
+          "pages"
+        ],
+        "title": "Pagination"
+      },
+      "Review": {
+        "properties": {
+          "review_version": {
+            "type": "string",
+            "title": "Review Version",
+            "default": "0.1.0"
+          },
+          "subset": {
+            "type": "string",
+            "title": "Subset"
+          },
+          "doc_id": {
+            "type": "string",
+            "title": "Doc Id"
+          },
+          "bundle_hash": {
+            "type": "string",
+            "title": "Bundle Hash"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status",
+            "default": "todo"
+          },
+          "pages": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/PageReview"
+            },
+            "type": "object",
+            "title": "Pages"
+          },
+          "history": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "History"
+          }
+        },
+        "type": "object",
+        "required": [
+          "subset",
+          "doc_id",
+          "bundle_hash"
+        ],
+        "title": "Review"
+      },
+      "TableContent": {
+        "properties": {
+          "kind": {
+            "type": "string",
+            "const": "table",
+            "title": "Kind",
+            "default": "table"
+          },
+          "html": {
+            "type": "string",
+            "title": "Html"
+          },
+          "header_rows": {
+            "type": "integer",
+            "title": "Header Rows",
+            "default": 0
+          }
+        },
+        "type": "object",
+        "required": [
+          "html"
+        ],
+        "title": "TableContent"
+      },
+      "TextContent": {
+        "properties": {
+          "kind": {
+            "type": "string",
+            "const": "text",
+            "title": "Kind",
+            "default": "text"
+          },
+          "spans": {
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/TextSpan"
+                },
+                {
+                  "$ref": "#/components/schemas/EquationInlineSpan"
+                },
+                {
+                  "$ref": "#/components/schemas/FootnoteMarkSpan"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "type",
+                "mapping": {
+                  "equation_inline": "#/components/schemas/EquationInlineSpan",
+                  "footnote_mark": "#/components/schemas/FootnoteMarkSpan",
+                  "text": "#/components/schemas/TextSpan"
+                }
+              }
+            },
+            "type": "array",
+            "title": "Spans"
+          }
+        },
+        "type": "object",
+        "required": [
+          "spans"
+        ],
+        "title": "TextContent"
+      },
+      "TextSpan": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "text",
+            "title": "Type",
+            "default": "text"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text"
+          }
+        },
+        "type": "object",
+        "required": [
+          "text"
+        ],
+        "title": "TextSpan"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "VerdictWrite": {
+        "properties": {
+          "fix": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Correction"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "version": {
+            "type": "integer",
+            "title": "Version"
+          },
+          "reviewer": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Reviewer"
+          },
+          "verdict": {
+            "type": "string",
+            "enum": [
+              "correct",
+              "box_off",
+              "text_wrong",
+              "wrong_category",
+              "wrong_order",
+              "should_ignore"
+            ],
+            "title": "Verdict"
+          },
+          "note": {
+            "type": "string",
+            "title": "Note",
+            "default": ""
+          }
+        },
+        "type": "object",
+        "required": [
+          "version",
+          "reviewer",
+          "verdict"
+        ],
+        "title": "VerdictWrite"
+      }
+    }
+  }
+}
