@@ -94,11 +94,11 @@ class PromptConfig(BaseModel):
 @lru_cache
 def load_config(path=None) -> PromptConfig:
     if path is not None:
-        return PromptConfig.model_validate(yaml.safe_load(Path(path).read_text()))
-    raw=yaml.safe_load((ROOT/'configs/content.yaml').read_text())
+        return PromptConfig.model_validate(yaml.safe_load(Path(path).read_text(encoding="utf-8")))
+    raw=yaml.safe_load((ROOT/'configs/content.yaml').read_text(encoding="utf-8"))
     documents = {}
     for path in sorted((ROOT/'configs/doc_types').glob('*.yaml')):
-        document = yaml.safe_load(path.read_text())
+        document = yaml.safe_load(path.read_text(encoding="utf-8"))
         languages = document.get('lang')
         if isinstance(languages, dict):
             document['language_configs'] = languages

@@ -105,7 +105,8 @@ def validate_template(source, config, taxonomy):
         if count != 1: problems.append(f'{sid}: field must be placed exactly once (found {count})')
     for section in sections:
         if not section.attrs.get('data-page-role'): problems.append('section.page requires data-page-role')
-        if section.attrs.get('data-size','a4') not in SIZES: problems.append('data-size must be a4 or a4_landscape')
+        if section.attrs.get('data-size','a4') not in SIZES:
+            problems.append('data-size must be one of ' + ', '.join(SIZES))
         if not taxonomy.valid_attribute('page','layout',section.attrs.get('data-layout','single_column')): problems.append('Invalid data-layout')
         level = section.attrs.get('data-ro-level')
         if level is not None and level not in {'L0', 'L1', 'L2', 'L3', 'L4'}:
@@ -145,7 +146,7 @@ async def fill(template_path, content, spec, taxonomy, browser):
         template_path=ROOT/'designs'/spec.doc_type/'agent.html'
     else:
         template_path = Path(template_path)
-        source = template_path.read_text()
+        source = template_path.read_text(encoding="utf-8")
     root, sections = validate_template(source,content.config,taxonomy)
     academic = spec.doc_type == 'academic_paper'
     if academic and any(not any(n.attrs.get('data-region') == 'body' for n in section.walk()) for section in sections):
@@ -290,7 +291,7 @@ async def fill(template_path, content, spec, taxonomy, browser):
         for section in sections:
             for node in list(section.walk()):
                 sid=node.attrs.get('data-slot')
-                if sid not in repeated_fields or node.parent is None:
+                if sid not in repeated_fields or node.parent is None or 'data-keep-slot-group' in node.attrs:
                     continue
                 parent=node.parent; position=parent.children.index(node)
                 children=[child for child in node.children if isinstance(child,Element)]
@@ -380,10 +381,29 @@ async def fill(template_path, content, spec, taxonomy, browser):
                 elif 'factory-footnote-mark' in classes:
                     child.attrs.update({'data-gt-cat':'footnote_mark','data-gt-target':child.attrs.get('data-target-id','')})
             for k,v in block.attrs.items(): n.attrs['data-gt-attr-'+k.replace('_','-')]=v
+            wide_plan = None
+            if (academic and section.attrs.get('data-page-role') == 'body'
+                    and section.attrs.get('data-wide-table-plan')
+                    and 'data-wide-table-active' not in section.attrs):
+                try:
+                    wide_plan = json.loads(section.attrs['data-wide-table-plan'])
+                except (TypeError, ValueError):
+                    raise TemplateError(['Invalid code-owned wide table page plan'])
+            if wide_plan:
+                table_id = bid if block.cat == 'table' else block.parent
+                table_node = next((candidate for candidate in section.walk()
+                                   if candidate.tag == 'table' and candidate.attrs.get('data-block') == table_id), None)
+                if table_node is not None:
+                    first_row = next((candidate for candidate in table_node.walk() if candidate.tag == 'tr'), None)
+                    column_count = sum(isinstance(child, Element) and child.tag in {'th', 'td'}
+                                       for child in first_row.children) if first_row else 0
+                    if column_count >= int(wide_plan.get('min_columns', 7)):
+                        n.attrs['data-wide-table-float'] = table_id
+                        n.attrs['data-float-policy'] = 'next_page'
             if academic and block.cat in {'table', 'figure', 'chart'}:
                 body_region=next((x for x in section.walk() if x.attrs.get('data-region')=='body'), None)
                 if body_region:
-                    n.attrs['data-float-policy']=body_region.attrs.get('data-float-policy','here')
+                    n.attrs.setdefault('data-float-policy',body_region.attrs.get('data-float-policy','here'))
                     n.attrs['data-float-span']=body_region.attrs.get('data-float-span','1')
                     if n.attrs['data-float-policy']=='top_column':
                         n.attrs['class']=(n.attrs.get('class','')+' top-column-float').strip()
@@ -406,10 +426,34 @@ async def fill(template_path, content, spec, taxonomy, browser):
             return
         katex_script = await page.add_script_tag(path=str(katex_js))
         await page.evaluate("""() => {
+          const wrapAligned = (formula,limit) => {
+            const slash=String.fromCharCode(92), rowBreak=slash+slash;
+            const begin=slash+'begin{aligned}', end=slash+'end{aligned}';
+            const start=formula.indexOf(begin), finish=formula.lastIndexOf(end);
+            if(start<0||finish<start) return formula;
+            const bodyStart=start+begin.length, body=formula.slice(bodyStart,finish).split(slash+'left').join('').split(slash+'right').join(''), wrapped=[];
+            for(const row of body.split(rowBreak)){
+              let current='', depth=0;
+              for(let i=0;i<row.length;i++){
+                const ch=row[i], escaped=i>0&&row[i-1]===slash;
+                if(ch==='{'&&!escaped) depth++;
+                if(ch==='}'&&!escaped) depth=Math.max(0,depth-1);
+                if((ch==='+'||ch==='-')&&depth===0&&!escaped&&current.length>=limit){
+                  wrapped.push(current); current='&'+ch; continue;
+                }
+                current+=ch;
+              }
+              wrapped.push(current);
+            }
+            return formula.slice(0,bodyStart)+wrapped.join(rowBreak+'\\n')+formula.slice(finish);
+          };
           for (const node of document.querySelectorAll('.factory-math, .factory-display-math')) {
             const latex=node.dataset.formula;
             if (!latex) continue;
-            node.innerHTML=window.katex.renderToString(latex,{output:'html',throwOnError:true,strict:'error'});
+            const container=node.closest('.display-equation')||node.parentElement;
+            const limit=Math.max(18,Math.floor(container.clientWidth/(10.666*.62)));
+            const visualLatex=node.classList.contains('factory-display-math')?wrapAligned(latex,limit):latex;
+            node.innerHTML=window.katex.renderToString(visualLatex,{output:'html',throwOnError:true,strict:'error'});
             if(!PRESERVE) node.removeAttribute('data-formula');
           }
         }""".replace('PRESERVE', 'true' if preserve_formulas else 'false'))
@@ -479,9 +523,12 @@ async def fill(template_path, content, spec, taxonomy, browser):
       const items=[...t.children];
       const bounds=t.getBoundingClientRect();
       if(t.tagName==='MAIN') bottom=Math.min(bottom,bounds.bottom);
-      let cut=items.findIndex(e=>{const r=e.getBoundingClientRect();return r.bottom>bottom+.5 || r.right>bounds.right+.5;});
-      const queued=items.findIndex((e,i)=>i>0 && ['top_page','next_page'].includes(e.dataset.floatPolicy));
-      if(queued>=0 && (cut<0 || queued<cut)) cut=queued;
+      let cut=items.findIndex(e=>{const r=e.getBoundingClientRect(),s=getComputedStyle(e);return r.bottom+Math.max(0,parseFloat(s.marginBottom)||0)>bottom+.5 || r.right>bounds.right+.5;});
+      const queued=items.findIndex((e,i)=>i>0 && ['top_page','next_page'].includes(e.dataset.floatPolicy) &&
+        items.slice(0,i).some(n=>n.dataset.gtCat!=='section_header' &&
+          !(n.dataset.gtParent===e.dataset.block && (n.dataset.gtCat||'').startsWith('caption_'))));
+      const queueMove=queued>=0 && (cut<0 || queued<=cut);
+      if(queueMove) cut=queued;
       if(cut<0) return null;
       // Balance a prose continuation by moving whole paragraphs back, rather
       // than creating a one-paragraph or KPI-only final page.
@@ -491,6 +538,9 @@ async def fill(template_path, content, spec, taxonomy, browser):
       while(cut>1 && remaining<minimum) remaining+=height(items[--cut]);
       // Keep a section heading with its first paragraph.
       if(cut>0 && items[cut-1].dataset.gtCat==='section_header') cut--;
+      // Captions are part of the float and must travel with its drawing/table.
+      if(cut>0 && items[cut-1].dataset.gtParent===items[cut].dataset.block &&
+          (items[cut-1].dataset.gtCat||'').startsWith('caption_')) cut--;
       let reserved=0;
       if(cut>0 && items[cut].hasAttribute('data-flow-tail-signature') && items[cut-1].tagName==='TABLE') {
         reserved=-1; cut--;
@@ -501,7 +551,10 @@ async def fill(template_path, content, spec, taxonomy, browser):
       const region=e.closest('[data-region]')||t;
       const page=e.closest('[data-page-role]');
       const fontSize=parseFloat(getComputedStyle(e).fontSize)*.75;
-      return {flow:t.dataset.flow, cut, table:e.tagName==='TABLE'?e.dataset.block:null,
+      return {flow:t.dataset.flow, cut, queueMove, queuedId:queueMove?items[queued].dataset.block:null, table:e.tagName==='TABLE'?e.dataset.block:null,
+        flowGroup:t.dataset.flowGroup||'', flowChain:parseInt(t.dataset.flowChain||'1',10),
+        wideTable:e.dataset.wideTableFloat||null,
+        activeWide:!!t.closest('section')?.hasAttribute('data-wide-table-active'),
         list:['UL','OL'].includes(e.tagName)?e.tagName:null, listFit,
         fit:balance(rows,reserved===-1?Math.max(0,rows.length-1):Math.max(0,Math.min(rows.length-1,rows.filter(r=>{const b=r.getBoundingClientRect();return b.bottom<=bottom-reserved-2 && b.right<=bounds.right+.5;}).length))),
         item:e.dataset.block||e.dataset.gtId||e.id||t.dataset.flow,
@@ -515,15 +568,43 @@ async def fill(template_path, content, spec, taxonomy, browser):
     }).filter(Boolean); }""".replace("BALANCE", balance_rows)
 
     def prune_to(section, attr, value):
+        flow_groups = {node.attrs.get('data-flow-group') for node in section.walk()
+                       if node.attrs.get(attr) == value and node.attrs.get('data-flow-group')}
+
+        def prune(node):
+            kept = []
+            for child in node.children:
+                if not isinstance(child, Element):
+                    continue
+                if child.attrs.get('data-flow-group') in flow_groups and 'data-flow-chain' in child.attrs:
+                    if child.attrs.get(attr) == value:
+                        prune(child)
+                    else:
+                        child.children = []
+                    kept.append(child)
+                elif child.attrs.get(attr) == value or 'data-continued' in child.attrs or child.attrs.get('data-region') == 'footnotes':
+                    kept.append(child)
+                elif any(x.attrs.get(attr) == value or 'data-continued' in x.attrs or
+                         x.attrs.get('data-region') == 'footnotes' for x in child.walk()):
+                    prune(child)
+                    kept.append(child)
+            node.children = kept
+            for child in kept:
+                child.parent = node
+
         kept=[]
         for child in section.children:
-            if not isinstance(child, Element): continue
-            if child.attrs.get(attr)==value or 'data-continued' in child.attrs or child.attrs.get('data-region')=='footnotes':
+            if not isinstance(child, Element):
+                continue
+            if child.attrs.get(attr) == value or 'data-continued' in child.attrs or child.attrs.get('data-region') == 'footnotes':
                 kept.append(child)
-            elif any(x.attrs.get(attr)==value or 'data-continued' in x.attrs or x.attrs.get('data-region')=='footnotes' for x in child.walk()):
-                prune_to(child,attr,value); kept.append(child)
-        section.children=kept
-        for child in kept: child.parent=section
+            elif any(x.attrs.get(attr) == value or 'data-continued' in x.attrs or
+                     x.attrs.get('data-region') == 'footnotes' for x in child.walk()):
+                prune(child)
+                kept.append(child)
+        section.children = kept
+        for child in kept:
+            child.parent = section
 
     def clone_repeated(section, except_ids):
         for n in section.walk():
@@ -560,7 +641,7 @@ async def fill(template_path, content, spec, taxonomy, browser):
                 from factory.render.flow import prepare_footnotes
                 prepare_footnotes(section, built)
             html,*_=page_html(section,index+1,len(sections))
-            path=folder/'pages/page.html'; path.write_text(html)
+            path=folder/'pages/page.html'; path.write_text(html, encoding="utf-8")
             async with browser.page(path) as (page,blocked,failed):
                 if blocked or failed: raise TemplateError([f'Missing/external assets: {blocked+failed}'])
                 await render_math(page, preserve_formulas=academic)
@@ -605,6 +686,53 @@ async def fill(template_path, content, spec, taxonomy, browser):
                 items=[n for n in container.children if isinstance(n, Element)]
                 cut=flow['cut']; rest=deepcopy(items[cut:])
                 key=(fid, flow['item'])
+                if flow.get('activeWide'):
+                    raise TemplateError([f"{flow['item']}: landscape table float does not fit without splitting"])
+                if flow.get('wideTable'):
+                    table_id = flow['wideTable']
+                    related = [position for position, item in enumerate(items)
+                               if item.attrs.get('data-block') == table_id
+                               or (built.blocks.get(item.attrs.get('data-block')) is not None
+                                   and built.blocks[item.attrs.get('data-block')].parent == table_id)]
+                    if not related:
+                        raise TemplateError([f"{table_id}: wide table caption or table is missing from its body flow"])
+                    first, last = min(related), max(related) + 1
+                    bundle = deepcopy(items[first:last])
+                    following = deepcopy(items[last:])
+                    container.children = items[:first]
+                    from factory.design.backbone import apply_wide_table_page
+                    wide = deepcopy(section)
+                    wide_region = apply_wide_table_page(wide)
+                    if wide_region is None:
+                        raise TemplateError([f"{table_id}: wide table routing has no declared landscape page"])
+                    wide.attrs['data-wide-table-active'] = ''
+                    for region in (node for node in wide.walk()
+                                   if node.attrs.get('data-flow-group') == 'body' and 'data-flow-chain' in node.attrs):
+                        region.children = []
+                    wide_region.children = bundle
+                    for node in bundle:
+                        node.parent = wide_region
+                        node.attrs.pop('data-wide-table-float', None)
+                        if node.tag == 'table' or node.attrs.get('data-block'):
+                            node.attrs['data-float-policy'] = 'here'
+                    continued = None
+                    if following:
+                        continued = deepcopy(section)
+                        body_regions = [node for node in continued.walk()
+                                        if node.attrs.get('data-flow-group') == 'body' and 'data-flow-chain' in node.attrs]
+                        for region in body_regions:
+                            region.children = []
+                        target = min(body_regions, key=lambda node: int(node.attrs['data-flow-chain']))
+                        target.children = following
+                        for node in following:
+                            node.parent = target
+                    has_prefix = any(node.attrs.get('data-block') for node in section.walk())
+                    if has_prefix:
+                        sections[index + 1:index + 1] = [wide] + ([continued] if continued is not None else [])
+                    else:
+                        sections.pop(index)
+                        sections[index:index] = [wide] + ([continued] if continued is not None else [])
+                    continue
                 if (cut==0 and not (flow['table'] and flow['fit']) and key not in moved_whole
                         and flow.get('startsAt', 0) > 0.5 and flow['itemHeight'] <= flow['regionHeight']):
                     # Content above fills this page: the whole flow starts on a continuation page.
@@ -638,7 +766,12 @@ async def fill(template_path, content, spec, taxonomy, browser):
                         f"region `{flow['region']}` (role {flow['role']}, {flow['regionHeight']:.1f} mm, "
                         f"font {flow['fontSize']:.1f} pt): {reason}"
                     ])
-                if flow['table'] and flow['fit']:
+                if flow.get('queueMove') and rest:
+                    # Placement requests move a whole float once; they never split it.
+                    for moved in rest:
+                        if moved.attrs.get('data-block') == flow.get('queuedId'):
+                            moved.attrs['data-float-policy'] = 'here'
+                if not flow.get('queueMove') and flow['table'] and flow['fit']:
                     table=items[cut]; start,end=int(table.attrs['data-start']),int(table.attrs['data-end'])
                     row_cut=start+flow['fit']; sid=flow['table']
                     for t,a,b in ((table,start,row_cut),(rest[0],row_cut,end)):
@@ -656,9 +789,25 @@ async def fill(template_path, content, spec, taxonomy, browser):
                     for child in list_rest.children: child.parent=list_rest
                     cut+=1
                 container.children=items[:cut]
+                if rest and flow.get('flowGroup') and not flow.get('queueMove'):
+                    next_regions = [node for node in section.walk()
+                                    if node.attrs.get('data-flow-group') == flow['flowGroup']
+                                    and int(node.attrs.get('data-flow-chain', '0')) > int(flow.get('flowChain', 1))]
+                    if next_regions:
+                        target = min(next_regions, key=lambda node: int(node.attrs['data-flow-chain']))
+                        target.children.extend(rest)
+                        for node in rest:
+                            node.parent = target
+                        continue
                 continued=deepcopy(section)
                 prune_to(continued,'data-flow',fid)
-                target=next(n for n in continued.walk() if n.attrs.get('data-flow')==fid)
+                if flow.get('flowGroup'):
+                    group_regions = [node for node in continued.walk()
+                                     if node.attrs.get('data-flow-group') == flow['flowGroup']
+                                     and 'data-flow-chain' in node.attrs]
+                    target = min(group_regions, key=lambda node: int(node.attrs['data-flow-chain']))
+                else:
+                    target=next(n for n in continued.walk() if n.attrs.get('data-flow')==fid)
                 repeated=[deepcopy(n) for n in items[:cut] if 'data-continued' in n.attrs]
                 target.children=repeated+rest
                 for n in target.children: n.parent=target
@@ -714,6 +863,43 @@ async def fill(template_path, content, spec, taxonomy, browser):
                 sections.insert(index+1,continued)
                 continue
             index+=1
+        if academic:
+            from factory.design.backbone import derive_ro_level, geometry_signature
+            measured = []
+            geometry_probe = """() => {
+              const main=document.querySelector('section.page>main');
+              if(!main) return null;
+              const m=main.getBoundingClientRect();
+              const regions=[...main.querySelectorAll('[data-region]')].map(n=>{
+                const r=n.getBoundingClientRect();
+                return {chain:parseInt(n.dataset.chain||'0',10),span:parseInt(n.dataset.floatSpan||'1',10),
+                  box:[(r.left-m.left)/m.width,(r.top-m.top)/m.height,r.width/m.width,r.height/m.height]};
+              }).sort((a,b)=>a.chain-b.chain);
+              return regions;
+            }"""
+            for page_index, section in enumerate(sections, 1):
+                html, *_ = page_html(section, page_index, len(sections))
+                path = folder / 'pages' / 'page.html'
+                path.write_text(html, encoding='utf-8')
+                async with browser.page(path) as (page, blocked, failed):
+                    if blocked or failed:
+                        raise TemplateError([f"page {page_index}: resources blocked while measuring regions: {blocked + failed}"])
+                    regions = await page.evaluate(geometry_probe)
+                if not regions:
+                    raise TemplateError([f"page {page_index}: no measurable backbone regions"])
+                boxes = [tuple(region['box']) for region in regions]
+                measured.append((section, regions, boxes, geometry_signature(boxes)))
+            varied = len({row[3] for row in measured}) > 1
+            for section, regions, boxes, _signature in measured:
+                spans = [region['span'] for region in regions]
+                level = 'L4' if varied else derive_ro_level(boxes, spans)
+                section.attrs['data-ro-level'] = level
+                if len(boxes) == 1:
+                    section.attrs['data-layout'] = 'single_column'
+                elif level in {'L1', 'L2', 'L3'}:
+                    section.attrs['data-layout'] = 'multi_column'
+                else:
+                    section.attrs['data-layout'] = 'mixed'
         pieces={}
         for i,section in enumerate(sections,1):
             nodes=[n for n in section.walk() if 'data-block' in n.attrs or 'data-label' in n.attrs]
@@ -731,7 +917,7 @@ async def fill(template_path, content, spec, taxonomy, browser):
         probe_problems,failing_pages=[],{}
         for i,section in enumerate(sections,1):
             html,*_=page_html(section,i,len(sections),parts=parts)
-            path=folder/'pages/page.html'; path.write_text(html)
+            path=folder/'pages/page.html'; path.write_text(html, encoding="utf-8")
             async with browser.page(path) as (page,blocked,failed):
                 await render_math(page)
                 found=await page.evaluate(probe)
@@ -749,7 +935,7 @@ async def fill(template_path, content, spec, taxonomy, browser):
                 section.attrs['data-final-flow']=''
             html,plan,local,(w,h)=page_html(section,i,len(sections),backgrounds,parts)
             if academic:
-                path=folder/'pages/page.html'; path.write_text(html)
+                path=folder/'pages/page.html'; path.write_text(html, encoding="utf-8")
                 async with browser.page(path) as (page,blocked,failed):
                     if blocked or failed: raise TemplateError([f'Missing/external assets: {blocked+failed}'])
                     await render_math(page)

@@ -1,0 +1,1077 @@
+{
+  "front": {
+    "title": "Hydrologic pulsing and sedge diversity shape carbon retention in restored fen margins",
+    "authors": [
+      {
+        "name": "Maren Vossel",
+        "affiliations": [
+          1
+        ],
+        "corresponding": false
+      },
+      {
+        "name": "Ilyan Corbett",
+        "affiliations": [
+          1,
+          2
+        ],
+        "corresponding": true,
+        "email": "i.corbett@mirehaven-ecology.org"
+      },
+      {
+        "name": "Tessa Nairn",
+        "affiliations": [
+          2
+        ],
+        "corresponding": false
+      }
+    ],
+    "affiliations": [
+      "Mirehaven Institute for Wetland Dynamics, Larkfen, Norwyn",
+      "Department of Landscape Ecology, Brackenmere Field College, Ordel"
+    ],
+    "abstract": "Restoration of drained peatlands often raises water levels, but the resulting effects on plant communities and carbon retention can vary across wetland margins. We tested how seasonal hydrologic pulsing and sedge establishment jointly influence vegetation, soil respiration, and carbon accumulation in a factorial field experiment. Across 48 plots in four restored fen margins, we manipulated water-table variability and planted native sedges, then monitored conditions over three growing seasons. Pulsed plots experienced alternating shallow inundation and drawdown, whereas stable-water plots maintained a consistently high water table. Sedge establishment increased live cover and reduced bare peat in both hydrologic treatments. Under pulsed conditions, planted plots developed greater sedge cover and lower mean growing-season soil respiration than unplanted plots; this contrast was weak under stable water levels. By the third season, carbon accumulation in the upper peat layer was higher in pulsed, planted plots than in the other treatment combinations. Plant richness also increased where sedges were established, although responses depended on initial margin composition. These results indicate that moderate seasonal water-table variation can complement vegetation establishment during fen-margin recovery, rather than uniformly impeding it. The combination of hydrologic variability and sedge planting was associated with the clearest gains in cover and short-term carbon retention, while persistent high water levels alone did not produce equivalent vegetation responses. Restoration planning should therefore account for both water-level dynamics and the capacity of target plants to establish. Longer monitoring is needed to determine whether the observed carbon gains persist as plant communities mature and peat decomposition responds to changing conditions.",
+    "abstract_alt": null,
+    "keywords": "fen restoration; hydrologic variability; sedge establishment; peat carbon; soil respiration; plant richness",
+    "keywords_alt": null,
+    "journal": "Journal of Fen Ecology and Restoration",
+    "acknowledgement": "We thank the field teams at the four fen margins for careful vegetation surveys and water-level monitoring. The Brackenmere Field College wetland methods group provided useful guidance on peat-core processing, and local land stewards coordinated access and seasonal work schedules. Funding was provided by the Norwyn Wetland Recovery Fund."
+  },
+  "formulas": [
+    {
+      "after": 6,
+      "element": {
+        "type": "equation",
+        "id": "eq:respiration-model",
+        "latex": "R_{ijkt} = beta_0 + beta_1 P_i + beta_2 S_i + beta_3(P_i cdot S_i) + beta_4 t + u_j + v_k + epsilon_{ijkt}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 13,
+      "element": {
+        "type": "equation",
+        "id": "eq:carbon-accumulation",
+        "latex": "A_i = (C_{i,t_2} - C_{i,t_1}) / (t_2 - t_1)",
+        "numbered": true
+      }
+    }
+  ],
+  "tables": [
+    {
+      "after": 8,
+      "element": {
+        "type": "table",
+        "id": "tab:treatment-outcomes",
+        "caption": "Treatment means for vegetation and carbon responses in the third growing season. Values are means +/- SE; n=12 plots per treatment combination.",
+        "header": [
+          [
+            {
+              "text": "Treatment combination",
+              "rowspan": 2
+            },
+            {
+              "text": "Vegetation",
+              "colspan": 2
+            },
+            {
+              "text": "Soil process",
+              "colspan": 2
+            },
+            {
+              "text": "Carbon retention",
+              "colspan": 1
+            }
+          ],
+          [
+            {
+              "text": "Sedge cover (%)"
+            },
+            {
+              "text": "Plant richness (taxa per plot)"
+            },
+            {
+              "text": "Soil respiration (g CO2 m-2 d-1)"
+            },
+            {
+              "text": "Bare peat (%)"
+            },
+            {
+              "text": "Carbon accumulation (g C m-2 yr-1)"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "Pulsed, planted",
+            {
+              "text": "68.4 +/- 4.1",
+              "bold": true
+            },
+            {
+              "text": "7.2 +/- 0.5",
+              "bold": true
+            },
+            {
+              "text": "2.18 +/- 0.14",
+              "bold": true
+            },
+            {
+              "text": "11.6 +/- 2.8",
+              "bold": true
+            },
+            {
+              "text": "0.42 +/- 0.05",
+              "bold": true
+            }
+          ],
+          [
+            "Pulsed, unplanted",
+            "39.7 +/- 3.8",
+            "5.6 +/- 0.4",
+            "2.71 +/- 0.16",
+            "28.9 +/- 3.4",
+            "0.21 +/- 0.04"
+          ],
+          [
+            "Stable, planted",
+            "52.1 +/- 4.3",
+            "6.4 +/- 0.5",
+            "2.63 +/- 0.15",
+            "19.4 +/- 3.0",
+            "0.25 +/- 0.04"
+          ],
+          [
+            "Stable, unplanted",
+            "36.8 +/- 3.6",
+            "5.1 +/- 0.4",
+            "2.78 +/- 0.17",
+            "31.2 +/- 3.7",
+            "0.14 +/- 0.03"
+          ]
+        ],
+        "note": "Bold values indicate the most favorable observed value for each response: greater cover, richness, and carbon accumulation, and lower respiration and bare peat. Respiration is averaged across growing-season measurements; carbon accumulation is for the upper peat layer."
+      }
+    },
+    {
+      "after": 14,
+      "element": {
+        "type": "table",
+        "id": "tab:hydrologic-manipulation",
+        "caption": "Water-table conditions by hydrologic treatment averaged across the three growing seasons.",
+        "header": [
+          [
+            "Hydrologic treatment",
+            "Mean water-table depth (cm)",
+            "Within-season depth range (cm)",
+            "Days with surface inundation per season",
+            "Plots"
+          ]
+        ],
+        "rows": [
+          [
+            "Pulsed",
+            "-1.6 +/- 0.5",
+            "18.4 +/- 1.2",
+            "31 +/- 4",
+            "24"
+          ],
+          [
+            "Stable high water table",
+            "-3.1 +/- 0.3",
+            "4.2 +/- 0.6",
+            "46 +/- 3",
+            "24"
+          ]
+        ],
+        "note": "Depth is measured relative to the peat surface; negative values indicate a water table below the surface. Values are means +/- SE across plots."
+      }
+    }
+  ],
+  "charts_figures": [
+    {
+      "after": 3,
+      "element": {
+        "type": "chart",
+        "id": "fig:ground-cover-composition",
+        "chart_type": "stacked_bar",
+        "title": "Third-season ground-cover composition by treatment",
+        "caption": "Third-season cover composition shows greater sedge cover and less bare peat in planted plots, with the strongest contrast under pulsed water levels; these linked responses are summarized in the proposed pathways in \\ref{fig:carbon-retention-pathways}.",
+        "labels": [
+          "Pulsed, planted",
+          "Pulsed, unplanted",
+          "Stable, planted",
+          "Stable, unplanted"
+        ],
+        "series": [
+          {
+            "name": "Sedge cover (%)",
+            "values": [
+              68.4,
+              39.7,
+              52.1,
+              36.8
+            ]
+          },
+          {
+            "name": "Other live cover (%)",
+            "values": [
+              20.0,
+              31.4,
+              28.5,
+              32.0
+            ]
+          },
+          {
+            "name": "Bare peat (%)",
+            "values": [
+              11.6,
+              28.9,
+              19.4,
+              31.2
+            ]
+          }
+        ],
+        "x_label": "Treatment combination",
+        "y_label": "Cover (%)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 5,
+      "element": {
+        "type": "chart",
+        "id": "fig:respiration-scatter",
+        "chart_type": "scatter",
+        "title": "Water-table variability and growing-season soil respiration",
+        "caption": "Plot-level respiration generally declined as within-season water-table depth range increased, with the lowest values among pulsed, planted plots; seasonal treatment trajectories are shown in \\ref{fig:seasonal-respiration}.",
+        "labels": [
+          "Pulsed, planted",
+          "Pulsed, unplanted",
+          "Stable, planted",
+          "Stable, unplanted"
+        ],
+        "series": [
+          {
+            "name": "Pulsed, planted",
+            "points": [
+              [
+                15.2,
+                1.73
+              ],
+              [
+                16.1,
+                1.86
+              ],
+              [
+                16.8,
+                1.93
+              ],
+              [
+                17.5,
+                2.0
+              ],
+              [
+                18.1,
+                2.06
+              ],
+              [
+                18.7,
+                2.13
+              ],
+              [
+                19.2,
+                2.21
+              ],
+              [
+                19.7,
+                2.26
+              ],
+              [
+                20.1,
+                2.33
+              ],
+              [
+                20.5,
+                2.41
+              ],
+              [
+                21.0,
+                2.53
+              ],
+              [
+                21.5,
+                2.71
+              ]
+            ]
+          },
+          {
+            "name": "Pulsed, unplanted",
+            "points": [
+              [
+                15.2,
+                2.21
+              ],
+              [
+                16.1,
+                2.33
+              ],
+              [
+                16.8,
+                2.41
+              ],
+              [
+                17.5,
+                2.51
+              ],
+              [
+                18.1,
+                2.59
+              ],
+              [
+                18.7,
+                2.67
+              ],
+              [
+                19.2,
+                2.76
+              ],
+              [
+                19.7,
+                2.81
+              ],
+              [
+                20.1,
+                2.89
+              ],
+              [
+                20.5,
+                2.97
+              ],
+              [
+                21.0,
+                3.11
+              ],
+              [
+                21.5,
+                3.25
+              ]
+            ]
+          },
+          {
+            "name": "Stable, planted",
+            "points": [
+              [
+                2.8,
+                2.19
+              ],
+              [
+                3.1,
+                2.31
+              ],
+              [
+                3.4,
+                2.38
+              ],
+              [
+                3.7,
+                2.46
+              ],
+              [
+                4.0,
+                2.54
+              ],
+              [
+                4.2,
+                2.6
+              ],
+              [
+                4.4,
+                2.66
+              ],
+              [
+                4.6,
+                2.7
+              ],
+              [
+                4.8,
+                2.77
+              ],
+              [
+                5.0,
+                2.84
+              ],
+              [
+                5.3,
+                2.94
+              ],
+              [
+                5.6,
+                3.17
+              ]
+            ]
+          },
+          {
+            "name": "Stable, unplanted",
+            "points": [
+              [
+                2.8,
+                2.34
+              ],
+              [
+                3.1,
+                2.46
+              ],
+              [
+                3.4,
+                2.54
+              ],
+              [
+                3.7,
+                2.62
+              ],
+              [
+                4.0,
+                2.7
+              ],
+              [
+                4.2,
+                2.75
+              ],
+              [
+                4.4,
+                2.81
+              ],
+              [
+                4.6,
+                2.85
+              ],
+              [
+                4.8,
+                2.93
+              ],
+              [
+                5.0,
+                3.0
+              ],
+              [
+                5.3,
+                3.1
+              ],
+              [
+                5.6,
+                3.26
+              ]
+            ]
+          }
+        ],
+        "x_label": "Within-season water-table depth range (cm)",
+        "y_label": "Soil respiration (g CO2 m-2 d-1)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 7,
+      "element": {
+        "type": "chart",
+        "id": "fig:seasonal-respiration",
+        "chart_type": "line",
+        "title": "Seasonal soil respiration across treatment combinations",
+        "caption": "Mean growing-season soil respiration declined across the three seasons in all treatment combinations, with the lowest third-season value under pulsed water levels with planting; plot-level relationships with water-table variability appear in \\ref{fig:respiration-scatter}.",
+        "labels": [
+          "Growing season 1",
+          "Growing season 2",
+          "Growing season 3"
+        ],
+        "series": [
+          {
+            "name": "Pulsed, planted",
+            "values": [
+              2.42,
+              2.3,
+              2.18
+            ],
+            "errors": [
+              0.16,
+              0.15,
+              0.14
+            ]
+          },
+          {
+            "name": "Pulsed, unplanted",
+            "values": [
+              2.89,
+              2.8,
+              2.71
+            ],
+            "errors": [
+              0.18,
+              0.17,
+              0.16
+            ]
+          },
+          {
+            "name": "Stable, planted",
+            "values": [
+              2.77,
+              2.7,
+              2.63
+            ],
+            "errors": [
+              0.17,
+              0.16,
+              0.15
+            ]
+          },
+          {
+            "name": "Stable, unplanted",
+            "values": [
+              2.91,
+              2.84,
+              2.78
+            ],
+            "errors": [
+              0.19,
+              0.18,
+              0.17
+            ]
+          }
+        ],
+        "x_label": "Growing season",
+        "y_label": "Soil respiration (g CO2 m-2 d-1; mean +/- SE)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 9,
+      "element": {
+        "type": "chart",
+        "id": "fig:carbon-accumulation",
+        "chart_type": "box",
+        "title": "Plot-level carbon accumulation in the upper peat layer",
+        "caption": "Carbon accumulation was greatest in pulsed, planted plots, although plot-level distributions show variation within every treatment combination; the broader distribution is displayed in \\ref{fig:carbon-distribution}.",
+        "labels": [
+          "Pulsed, planted",
+          "Pulsed, unplanted",
+          "Stable, planted",
+          "Stable, unplanted"
+        ],
+        "series": [
+          {
+            "name": "Carbon accumulation (g C m-2 yr-1)",
+            "stats": [
+              [
+                0.16,
+                0.32,
+                0.42,
+                0.51,
+                0.68
+              ],
+              [
+                0.04,
+                0.13,
+                0.2,
+                0.29,
+                0.43
+              ],
+              [
+                0.07,
+                0.17,
+                0.24,
+                0.32,
+                0.47
+              ],
+              [
+                0.01,
+                0.08,
+                0.13,
+                0.19,
+                0.31
+              ]
+            ]
+          }
+        ],
+        "x_label": "Treatment combination",
+        "y_label": "Carbon accumulation (g C m-2 yr-1)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 11,
+      "element": {
+        "type": "chart",
+        "id": "fig:carbon-distribution",
+        "chart_type": "histogram",
+        "title": "Distribution of plot-level carbon accumulation",
+        "caption": "Plot-level carbon accumulation spans seven intervals, with most observations between 0.10 and 0.40 g C m-2 yr-1; treatment-specific summaries are compared in \\ref{fig:carbon-accumulation}.",
+        "labels": [
+          "0.00-0.10",
+          "0.10-0.20",
+          "0.20-0.30",
+          "0.30-0.40",
+          "0.40-0.50",
+          "0.50-0.60",
+          "0.60-0.70"
+        ],
+        "series": [
+          {
+            "name": "Plots",
+            "values": [
+              5,
+              10,
+              12,
+              9,
+              6,
+              4,
+              2
+            ]
+          }
+        ],
+        "x_label": "Carbon accumulation (g C m-2 yr-1)",
+        "y_label": "Number of plots",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 12,
+      "element": {
+        "type": "figure",
+        "id": "fig:field-experiment-sequence",
+        "figure_type": "flowchart",
+        "title": "Field experiment and monitoring sequence",
+        "caption": "Sequence of plot allocation, treatment application, seasonal monitoring, and response assessment across the restored fen margins; the achieved seasonal water-table pattern is shown in \\ref{fig:seasonal-water-table}.",
+        "description": "Forty-eight plots across four restored fen margins were assigned to a hydrologic treatment and a sedge planting treatment, then monitored during three growing seasons before vegetation and upper-peat carbon responses were assessed.",
+        "labels": [
+          "Four fen margins",
+          "48 plots",
+          "Hydrologic treatment",
+          "Sedge planting",
+          "Seasonal monitoring",
+          "Response assessment"
+        ]
+      }
+    },
+    {
+      "after": 14,
+      "element": {
+        "type": "chart",
+        "id": "fig:seasonal-water-table",
+        "chart_type": "area",
+        "title": "Seasonal water-table depth by hydrologic treatment",
+        "caption": "Pulsed plots shifted between below-surface and shallowly inundated conditions, whereas stable plots remained near a consistently high water table; the experimental sequence is outlined in \\ref{fig:field-experiment-sequence}.",
+        "labels": [
+          "Early growing season",
+          "Early summer",
+          "Midsummer",
+          "Late summer",
+          "Autumn"
+        ],
+        "series": [
+          {
+            "name": "Pulsed",
+            "values": [
+              -5.8,
+              1.2,
+              -4.6,
+              0.8,
+              0.4
+            ],
+            "errors": [
+              1.0,
+              0.8,
+              1.1,
+              0.7,
+              0.8
+            ]
+          },
+          {
+            "name": "Stable high water table",
+            "values": [
+              -3.5,
+              -3.0,
+              -2.8,
+              -3.2,
+              -3.0
+            ],
+            "errors": [
+              0.4,
+              0.3,
+              0.3,
+              0.4,
+              0.3
+            ]
+          }
+        ],
+        "x_label": "Seasonal monitoring period",
+        "y_label": "Water-table depth relative to peat surface (cm; mean +/- SE)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 15,
+      "element": {
+        "type": "figure",
+        "id": "fig:carbon-retention-pathways",
+        "figure_type": "block_diagram",
+        "title": "Proposed links between hydrologic pulsing, sedge establishment, and carbon retention",
+        "caption": "Conceptual links connect hydrologic pulsing and sedge establishment with vegetation cover, bare peat, soil respiration, and upper-peat carbon accumulation.",
+        "description": "The treatment combination was associated with changes in plant cover and bare peat, alongside differences in soil respiration and measured carbon accumulation in the upper peat layer.",
+        "labels": [
+          "Hydrologic pulsing",
+          "Sedge establishment",
+          "Sedge cover",
+          "Bare peat",
+          "Soil respiration",
+          "Carbon accumulation"
+        ]
+      }
+    }
+  ],
+  "code": [],
+  "references": [
+    {
+      "text": "[1] Veylan, R. T., and Ossel, M. 2011. Seasonal water-table variation and peat-forming vegetation at restored wetland margins. Wetland Process Studies 18: 203–216.",
+      "cite": "Veylan & Ossel, 2011"
+    },
+    {
+      "text": "[2] Brindleth, A. M., Corven, J. P., and Lethwick, S. 2013. Sedge establishment following hydrologic repair in nutrient-poor fens. Fenland Ecology 9: 41–55.",
+      "cite": "Brindleth et al., 2013"
+    },
+    {
+      "text": "[3] Norell, E. V., and Dasker, P. 2014. Water-level variability as a driver of plant assembly in peatland restoration. Journal of Mire Dynamics 6: 117–130.",
+      "cite": "Norell & Dasker, 2014"
+    },
+    {
+      "text": "[4] Thalwick, S. R., Yarrowen, D. M., and Pellin, O. 2016. Re-establishment of clonal sedges across contrasting fen hydroperiods. Peatland Recovery Research 12: 88–102.",
+      "cite": "Thalwick et al., 2016"
+    },
+    {
+      "text": "[5] Edrin, C. L., and Vaskel, T. 2012. Water-table depth and aerobic carbon loss in temperate fen peat. Mire Soil Ecology 14: 271–284.",
+      "cite": "Edrin & Vaskel, 2012"
+    },
+    {
+      "text": "[6] Relloran, P. A., Fenwicke, J. S., and Odrin, H. 2017. Short-term soil respiration responses to alternating inundation and drawdown. Wetland Carbon Studies 21: 155–169.",
+      "cite": "Relloran et al., 2017"
+    },
+    {
+      "text": "[7] Keldran, M. E., and Voswick, I. 2015. Plant functional composition predicts belowground carbon flux in recovering peatlands. Journal of Mire Dynamics 7: 33–47.",
+      "cite": "Keldran & Voswick, 2015"
+    },
+    {
+      "text": "[8] Ovelin, T. J., Marrowen, L. F., and Seddrel, A. 2018. Field evaluation of water-table controls for fen-margin rehabilitation. Restoration Ecology Reports 11: 302–316.",
+      "cite": "Ovelin et al., 2018"
+    },
+    {
+      "text": "[9] Darnellor, H. P., and Quenby, R. 2019. Vegetation cover and peat surface stability during wetland recovery. Fenland Ecology 15: 190–204.",
+      "cite": "Darnellor & Quenby, 2019"
+    },
+    {
+      "text": "[10] Pelloran, E. M., Veylan, R. T., and Brasken, N. 2020. Plant richness trajectories after sedge introduction to drained fen margins. Peatland Recovery Research 16: 61–75.",
+      "cite": "Pelloran et al., 2020"
+    },
+    {
+      "text": "[11] Osselwick, J. A., and Tirren, M. 2014. Carbon accumulation estimates from repeated peat inventories in restored wetlands. Wetland Carbon Studies 8: 225–239.",
+      "cite": "Osselwick & Tirren, 2014"
+    },
+    {
+      "text": "[12] Harlowe, D. P., Norell, E. V., and Vaskel, T. 2021. Interpreting short-term carbon balance measurements in recovering peat soils. Mire Soil Ecology 19: 98–112.",
+      "cite": "Harlowe et al., 2021"
+    },
+    {
+      "text": "[13] Brackenor, L. S., and Yelwick, F. 2016. Hydrologic heterogeneity and plant recruitment along fen ecotones. Wetland Process Studies 23: 11–25.",
+      "cite": "Brackenor & Yelwick, 2016"
+    },
+    {
+      "text": "[14] Vosswick, M. J., Pellin, O., and Edrin, C. L. 2018. Effects of shallow flooding frequency on sedge growth and peat oxidation. Journal of Mire Dynamics 10: 144–158.",
+      "cite": "Vosswick et al., 2018"
+    },
+    {
+      "text": "[15] Sarnell, P. R., and Odrin, H. 2022. Linking water-table amplitude to carbon dioxide release across restored fen plots. Wetland Carbon Studies 24: 77–91.",
+      "cite": "Sarnell & Odrin, 2022"
+    },
+    {
+      "text": "[16] Quenwick, T. A., Marrowen, L. F., and Dasker, P. 2013. Repeated vegetation surveys for evaluating peatland restoration outcomes. Restoration Ecology Reports 5: 181–195.",
+      "cite": "Quenwick et al., 2013"
+    },
+    {
+      "text": "[17] Lethwick, S. M., and Relloran, P. A. 2019. Accounting for block structure in multi-site wetland field experiments. Methods in Fen Ecology 4: 39–52.",
+      "cite": "Lethwick & Relloran, 2019"
+    },
+    {
+      "text": "[18] Odravel, N. C., Keldran, M. E., and Tirren, M. 2020. Mixed-effects analysis of repeated soil gas measurements in wetland studies. Ecological Field Methods 13: 260–274.",
+      "cite": "Odravel et al., 2020"
+    },
+    {
+      "text": "[19] Fenlorn, J. B., and Brindleth, A. M. 2017. Detecting treatment interactions in restoration experiments with uneven initial vegetation. Fenland Ecology 13: 121–135.",
+      "cite": "Fenlorn & Brindleth, 2017"
+    },
+    {
+      "text": "[20] Vasken, R. D., and Seddrel, A. 2021. Seasonal controls on peat respiration under fluctuating saturation. Mire Soil Ecology 22: 204–218.",
+      "cite": "Vasken & Seddrel, 2021"
+    },
+    {
+      "text": "[21] Corven, J. P., and Harlowe, D. P. 2015. Establishment constraints for native sedges on exposed peat surfaces. Peatland Recovery Research 9: 9–23.",
+      "cite": "Corven & Harlowe, 2015"
+    },
+    {
+      "text": "[22] Yarrowen, D. M., Ovelin, T. J., and Norell, E. V. 2023. Monitoring duration and inference about carbon retention in restored fens. Wetland Process Studies 29: 317–331.",
+      "cite": "Yarrowen et al., 2023"
+    },
+    {
+      "text": "[23] Tirren, M. A., and Pelloran, E. M. 2022. Integrating vegetation and hydrologic indicators in fen-margin recovery assessments. Restoration Ecology Reports 18: 52–66.",
+      "cite": "Tirren & Pelloran, 2022"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Introduction"
+    },
+    {
+      "type": "paragraph",
+      "text": "Restoration of drained peatland margins is often framed as a hydrologic repair problem: raise the water table, reduce oxygen exposure, and allow peat-forming vegetation to return. Yet ecological outcomes are not determined by mean water-table depth alone. Margins may experience sustained saturation, periodic inundation, or a sequence of shallow flooding and drawdown, exposing plants and soil organisms to different conditions. Seasonal variation can create establishment opportunities by limiting persistent submergence, while also increasing intervals during which peat is aerated. The treatment responses discussed here can be compared with the ground-cover composition in \\ref{fig:ground-cover-composition}, carbon accumulation in \\ref{fig:carbon-accumulation}, and the outcome summaries in \\ref{tab:treatment-outcomes} and \\ref{tab:hydrologic-manipulation}. Studies of restored margins have associated water-level variation with peat-forming vegetation, while documenting differences among sites and plant communities \\cite{1}. The challenge is to identify conditions that favor vegetation recovery without assuming one regime produces the same response everywhere."
+    },
+    {
+      "type": "paragraph",
+      "text": "Sedges are important in many fen communities because they occupy open peat, spread vegetatively, and contribute plant material to the soil. Bare or disturbed peat may not be recolonized rapidly, particularly where propagules are scarce or conditions vary through the growing season. Planting target sedges can address this recruitment bottleneck, but establishment may itself depend on water regime. Research on sedge introduction has emphasized hydrologic repair, hydroperiod, and clonal growth as influences on vegetation recovery \\cite{2}\\cite{4}. Water-level variability may also affect which species recruit naturally, changing community assembly beyond the planted taxa \\cite{3}. Hydrologic management and vegetation intervention are therefore linked restoration decisions. A factorial test can clarify whether planting benefits plants under stable and variable water conditions, and whether the size of that benefit changes when the water table fluctuates."
+    },
+    {
+      "type": "paragraph",
+      "text": "The carbon implications are similarly conditional. A high water table can restrict aerobic decomposition, but carbon balance also reflects plant production, organic inputs, and short-lived changes in gas exchange. Alternating inundation and drawdown may alter oxygen availability and respiration in ways that a single average water level cannot capture. Field work has associated water-table depth with aerobic carbon loss and documented short-term respiration responses to alternating saturation conditions \\cite{5}\\cite{6}. Plant functional composition also matters because vegetation affects organic inputs and belowground fluxes \\cite{7}. A treatment that reduces respiration at one point in the season does not necessarily produce sustained net carbon storage. Vegetation cover, soil respiration, and repeated carbon inventories should therefore be considered together, while recognizing that each describes a different part of the system."
+    },
+    {
+      "type": "paragraph",
+      "text": "We evaluated how hydrologic pulsing and sedge establishment jointly affect vegetation, soil respiration, and carbon accumulation in restored fen margins. We conducted a factorial field experiment across four margins, assigning 48 plots to pulsed or stable high-water conditions and to sedge planting or no planting. Monitoring covered three growing seasons. We expected planting to increase sedge cover and reduce bare peat, with the strongest response where pulsing allowed plants to experience both shallow inundation and drawdown. We also expected the combined treatment to be associated with lower mean respiration and greater upper-peat carbon accumulation by the third season. These predictions concern treatment contrasts, not a claim that all pulsed regimes are beneficial: inundation frequency, duration, and timing may determine whether a margin responds favorably."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Related Work"
+    },
+    {
+      "type": "paragraph",
+      "text": "Field evaluations of fen rehabilitation show that water-table controls must be assessed in the context of local terrain and ecological condition. Hydrologic interventions can produce spatially heterogeneous water levels, and vegetation recovery may track that heterogeneity rather than a single site-wide mean \\cite{8}. Developing cover can reduce exposed substrate and improve peat surface stability, potentially influencing recruitment and erosion risk \\cite{9}. Repeated vegetation surveys are consequently central to evaluating restoration trajectories, particularly when initial conditions differ among plots \\cite{16}. These findings caution against interpreting early plant cover as a complete measure of recovery. Cover, richness, peat stability, and hydrologic conditions may change on different schedules, and comparisons across margins need to account for starting states as well as subsequent trajectories."
+    },
+    {
+      "type": "paragraph",
+      "text": "Evidence on plant introduction indicates that establishment and richness need not respond identically. Introducing sedges can improve abundance of target growth forms, while total richness depends on resident communities, competition, and recruitment from nearby vegetation. Longitudinal work on sedge introduction describes changing richness trajectories rather than a uniform immediate response \\cite{10}. Establishment constraints on exposed peat include limited propagule supply and unfavorable moisture conditions, which can impede planted and naturally arriving plants \\cite{21}. Hydrologic heterogeneity along fen ecotones may support recruitment by different taxa at small spatial scales \\cite{13}. These studies suggest that planting should be assessed both as a means of establishing target cover and as an intervention that may influence community assembly. An increase in planted sedge cover is not equivalent to a broader increase in the number of taxa."
+    },
+    {
+      "type": "paragraph",
+      "text": "Hydrology and carbon exchange present related interpretive challenges. Shallow flooding can suppress peat oxidation during inundated intervals, whereas drawdown can expose peat to oxygen and increase decomposition potential. The balance depends on the sequence and duration of conditions, not only their average. Work on flooding frequency has linked shallow inundation to sedge growth and peat oxidation, while comparisons across restored plots have related water-table amplitude to carbon dioxide release \\cite{14}\\cite{15}. Seasonal controls on respiration under fluctuating saturation further indicate that measurements should be interpreted against the timing of hydrologic conditions \\cite{20}. Even where vegetation changes appear favorable, short-term carbon measurements are difficult to translate into long-term storage. Research on short-term carbon balance emphasizes separating measured accumulation from a complete accounting of ecosystem carbon fluxes \\cite{12}. We use respiration and upper-peat carbon accumulation as complementary, not interchangeable, responses."
+    },
+    {
+      "type": "paragraph",
+      "text": "This experiment tests water regime and sedge planting together within a replicated, multi-margin design. It responds to calls for integrated hydrologic and vegetation indicators in recovery assessment \\cite{23}, while retaining plot-level replication within each margin. A factorial approach permits the planting contrast to be considered under each hydrologic treatment and allows their interaction to be estimated directly. It does not remove the need to account for differences in initial vegetation or spatial blocks. Field studies stress the value of block structure in multi-site experiments \\cite{17}, and uneven initial vegetation can make treatment interactions difficult to detect \\cite{19}. We interpret effects as average responses across the four studied margins, not universal predictions for all fens."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Materials and Methods"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Study design and plot allocation"
+    },
+    {
+      "type": "paragraph",
+      "text": "The experiment was established in four restored fen margins where drainage impacts had been addressed before the study. At each margin, 12 plots were assigned across the four combinations of hydrologic treatment and planting treatment, yielding 48 plots and 12 plots per combination. Plots occupied comparable sections of each margin while retaining local terrain variation. Allocation was organized in blocks within each margin so treatment comparisons were not based solely on differences between wetter and drier areas. Hydrologic conditions were pulsed water levels and stable high water levels. Within each condition, plots were either planted with native sedges or left unplanted. Unplanted plots represented natural recovery under the assigned regime; they did not indicate an absence of management beyond the experiment."
+    },
+    {
+      "type": "paragraph",
+      "text": "Planting material consisted of native sedges selected for fen-margin conditions. Individuals were placed at consistent spacing within designated plots, with care taken to avoid disturbing the soil surface beyond planting points. Unplanted plots received equivalent access and monitoring but no introduced sedges. This contrast tested whether deliberate establishment altered vegetation and soil responses, not whether planting densities or species mixtures differed. Initial vegetation composition was recorded so later responses could be interpreted in relation to starting conditions. Margin communities differed in resident plant abundance and exposed peat. Because sedge establishment can depend on local conditions, planting effects may vary with existing vegetation. The design supports an average planting-effect estimate while allowing initial composition to be considered as a source of variation."
+    },
+    {
+      "type": "paragraph",
+      "text": "The hydrologic contrast was maintained through water-control measures intended to produce distinct seasonal dynamics. Pulsed plots experienced alternating shallow inundation and drawdown, whereas stable plots maintained a consistently high water table. Water level was monitored repeatedly throughout each growing season. Treatment separation was assessed using mean depth, within-season depth range, and days with surface inundation. Depth was measured relative to the peat surface, with negative values indicating a water table below it. The pulsed regime was defined by its larger within-season range, rather than a persistently lower or higher mean. The seasonal range can be written as $Delta z = z_{max} - z_{min}$, where $z_{max}$ and $z_{min}$ are the greatest and least measured depths. Ecological exposure depends on the duration of wet and aerated intervals as well as mean water-table position."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Vegetation and soil measurements"
+    },
+    {
+      "type": "paragraph",
+      "text": "Vegetation was assessed during each of the three growing seasons using repeated plot surveys. Observers estimated percentage cover of planted sedges, other live vegetation, and bare peat, and recorded taxa present in each plot. Plot boundaries and survey conventions were retained across visits to support comparisons through time. Plant richness was calculated as the number of recorded taxa per plot. Cover estimates represent visible vegetation and surface condition, not direct measurements of biomass or belowground production. Survey timing was kept within comparable seasonal windows across margins, while field notes recorded conditions that could affect visibility, including recent inundation. Repeated surveys help reveal changing recruitment and cover trajectories that a single visit may miss \\cite{16}, and distinguish early establishment from changes sustained through the third growing season."
+    },
+    {
+      "type": "paragraph",
+      "text": "Soil respiration was measured repeatedly during the growing season using a consistent chamber procedure at fixed positions within each plot. Measurements were scheduled across seasonal monitoring periods so treatment comparisons included observations under differing water conditions. Flux values were expressed as carbon dioxide mass per unit area per day and summarized by plot and growing season. Repeated soil gas measurements from the same plot are not independent, so the analysis retained plot identity and time structure rather than treating each observation as a separate replicate. This approach follows recommendations for mixed-effects analysis of repeated measurements in wetland studies \\cite{18}. We interpret respiration as an indicator of soil carbon release during measurement periods, not a complete measure of net ecosystem exchange. Plant respiration and microbial decomposition both contribute to soil flux, and their relative contributions can change as vegetation and saturation conditions develop."
+    },
+    {
+      "type": "paragraph",
+      "text": "Upper-peat carbon accumulation was estimated from repeated peat inventories at two assessment times spanning the monitoring interval. Peat material was collected from designated locations using consistent depth and processing procedures, and carbon content was determined from processed material. Plot-level change was expressed as an annualized rate, accounting for the interval between inventories. The calculation is $A_i = (C_{i,t_2} - C_{i,t_1})/(t_2 - t_1)$, where $C$ denotes estimated upper-peat carbon stock at each assessment time. Repeated inventories provide a measure of change in the measured peat layer, but short intervals remain sensitive to spatial variation and measurement uncertainty. They do not encompass all ecosystem pools or flux pathways. Carbon accumulation is reported as a short-term response of the upper peat layer, not as a definitive estimate of long-term sequestration."
+    },
+    {
+      "type": "paragraph",
+      "text": "For respiration, the treatment structure was represented as $R_{ijkt} = beta_0 + beta_1 P_i + beta_2 S_i + beta_3(P_i cdot S_i) + beta_4 t + u_j + v_k + epsilon_{ijkt}$. Here, $P_i$ indicates hydrologic pulsing, $S_i$ indicates planting, and $t$ represents growing-season time; random terms account for margin and block structure, with residual variation at the observation level. The key inferential quantity was the interaction coefficient, which tests whether the planting contrast differed between hydrologic regimes. This formulation guides analysis rather than asserting that all biological responses are linear. Model diagnostics and response-specific distributions informed estimation. The design recognizes that repeated flux readings are nested within plots and plots within margins, a structure that can otherwise inflate apparent precision. The treatment interaction is represented by $beta_3$, while the fitted mean for a treatment combination includes main effects and their product term."
+    },
+    {
+      "type": "paragraph",
+      "text": "Treatment effects on cover, richness, and carbon accumulation were evaluated using plot-level summaries and models that retained factorial terms and nested field structure. Repeated respiration measurements were analyzed with time and treatment terms, including their interaction where supported by the monitoring design. We examined the direction and uncertainty of estimated contrasts alongside observed means. Where initial vegetation differed, recorded composition was considered during interpretation because starting conditions can affect establishment and apparent treatment responses. We did not treat a nonsignificant contrast as evidence of exact equivalence, particularly given modest replication across four margins. The emphasis is on consistency and ecological magnitude, with estimates interpreted in relation to variation among plots and sites. In interpreting a contrast, we distinguish its estimated magnitude from its uncertainty; conceptually, $SE_{contrast}$ describes precision of an estimated difference, not the spread of every individual plot."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Experimental Setup"
+    },
+    {
+      "type": "paragraph",
+      "text": "Before treatment implementation, field teams mapped plot boundaries, documented the local peat surface, and recorded vegetation composition. The four margins provided replicated restoration settings within comparable fen-margin environments. Plot allocation ensured that each margin contained all four factorial combinations. This arrangement separated treatment contrasts from broad differences among margins and enabled comparisons within local blocks. The design had 24 plots assigned to each hydrologic condition and 24 assigned to each planting condition. Each specific combination contained 12 plots. Both planted and unplanted plots occurred under each hydrologic regime, allowing responses to be compared without confounding planting with location. Field teams used consistent procedures for plot access, water-level observations, vegetation surveys, soil flux measurements, and peat inventory work throughout monitoring."
+    },
+    {
+      "type": "paragraph",
+      "text": "Hydrologic monitoring confirmed that the pulsed treatment experienced greater within-season variation than the stable treatment. Across the three growing seasons, pulsed plots had a mean water-table depth of -1.6 cm and a within-season range of 18.4 cm, while stable high-water plots had a mean depth of -3.1 cm and a range of 4.2 cm. The corresponding averages for days with surface inundation were 31 and 46 per season. These values indicate that the stable treatment spent more days inundated despite its smaller depth range; a narrow range around a high water table can maintain surface wetness longer than a regime alternating between inundation and drawdown. The manipulation contrasted temporal dynamics, not simply wet versus dry conditions. Achieved-condition summaries are reported in \\ref{tab:hydrologic-manipulation}."
+    },
+    {
+      "type": "paragraph",
+      "text": "The seasonal pattern showed that the pulsed treatment shifted between below-surface and shallowly inundated conditions, whereas the stable treatment remained close to a consistently high water table. Such variation matters because the same seasonal mean can conceal different sequences of saturation and aeration. Plant roots and microbial communities respond to those sequences, and consequences may accumulate over repeated growing seasons. We did not assume that every drawdown event produced identical oxygen exposure, since soil structure and microtopography can modify the duration of aeration. Instead, measured depth range and inundation days verified distinct hydrologic profiles and helped interpret biological responses. Depth changes can be summarized separately from inundation frequency: $D_{range}$ describes the span of water-table conditions, whereas $I_{days}$ records the number of days the surface was flooded."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Results"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Vegetation response"
+    },
+    {
+      "type": "paragraph",
+      "text": "The treatment contrast in vegetation cover is presented in \\ref{fig:ground-cover-composition}, and third-season treatment means are summarized in \\ref{tab:treatment-outcomes}. By the third growing season, sedge planting was associated with higher sedge cover under both hydrologic conditions, although the difference between planted and unplanted plots was greatest under pulsing. Pulsed, planted plots had mean sedge cover of 68.4%, compared with 39.7% in pulsed, unplanted plots. Under stable high water, planted plots reached 52.1%, compared with 36.8% in unplanted plots. The pattern supports a planting benefit in both regimes, alongside a stronger response when planting coincided with seasonal variation. Bare peat was lowest in pulsed, planted plots at 11.6%, and highest in stable, unplanted plots at 31.2%. High sedge cover and reduced bare peat indicate a change in surface vegetation structure as well as abundance of the target growth form."
+    },
+    {
+      "type": "paragraph",
+      "text": "Plant richness showed a related but less pronounced pattern. Pulsed, planted plots averaged 7.2 taxa per plot, compared with 5.6 in pulsed, unplanted plots. Stable, planted plots averaged 6.4 taxa, and stable, unplanted plots averaged 5.1. These contrasts indicate that planting did not merely increase cover of the introduced growth form; plots with planting also supported more recorded taxa by the third season. Richness responses were not identical among margins, consistent with the role of initial vegetation and local recruitment conditions. The combination of hydrologic and planting treatments produced the most favorable observed values for sedge cover, richness, and bare peat, but the field patterns should not be read as evidence that all constituent processes were mediated by sedges alone."
+    },
+    {
+      "type": "paragraph",
+      "text": "The vegetation response is consistent with the idea that planting can overcome a recruitment limitation on restored peat while hydrologic variability may provide suitable establishment conditions. The cover contrast between planted and unplanted plots was 28.7 percentage points under pulsing and 15.3 points under stable water. The difference between these planting contrasts is $Delta_{cover} = (68.4 - 39.7) - (52.1 - 36.8) = 13.4$ percentage points. This is a descriptive indication of an interaction, not a standalone test of statistical certainty. Planting under stable conditions still produced substantial sedge cover, showing that pulsing was not a prerequisite for establishment. Conversely, unplanted plots remained lower in sedge cover under both regimes, indicating that hydrologic manipulation alone did not reproduce the cover attained when target plants were introduced. The treatment pattern supports combining interventions where active establishment is a restoration objective."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Respiration and carbon accumulation"
+    },
+    {
+      "type": "paragraph",
+      "text": "Mean growing-season soil respiration was lowest in pulsed, planted plots at 2.18 g CO2 m-2 d-1. Pulsed, unplanted plots averaged 2.71, stable, planted plots 2.63, and stable, unplanted plots 2.78. The planting-associated reduction was larger under pulsing than under stable water in the observed means. Across the three seasons, respiration declined in all four treatment combinations. Pulsed, planted plots decreased from 2.42 in the first season to 2.18 in the third, while corresponding values for pulsed, unplanted plots were 2.89 and 2.71. The stable planted treatment declined from 2.77 to 2.63, and stable unplanted plots from 2.91 to 2.78. The common downward trajectory suggests that treatment effects occurred against broader temporal change, rather than replacing it. The seasonal trend is a change in measured flux, not by itself a measure of carbon stock change."
+    },
+    {
+      "type": "paragraph",
+      "text": "The respiration contrast is compatible with reduced soil carbon release where planting and pulsing jointly altered surface cover and soil conditions. It does not establish that lower flux arose from a single mechanism. Greater cover can shade peat, alter surface moisture, and change root and microbial activity; fluctuations in saturation can also affect oxygen availability. The observed difference between pulsed and stable regimes cannot be interpreted as a simple monotonic effect of water-table range because mean depth and inundation duration also differed. Soil respiration was lower in pulsed, planted plots than in stable, planted plots, but separation was smaller between the unplanted treatments. This pattern is consistent with a treatment interaction in descriptive data, while the number of margins and plots limits precision for resolving more complex site-specific pathways."
+    },
+    {
+      "type": "paragraph",
+      "text": "Plot-level carbon accumulation is compared in \\ref{fig:carbon-accumulation}. Upper-peat carbon accumulation was highest in pulsed, planted plots, with a mean of 0.42 g C m-2 yr-1. The pulsed, unplanted mean was 0.21, the stable, planted mean was 0.25, and the stable, unplanted mean was 0.14. The largest treatment contrast was between pulsed, planted plots and stable, unplanted plots. Plot-level values varied, and distributions overlapped, so treatment means do not imply that every pulsed, planted plot accumulated more carbon than every other plot. Nevertheless, the direction of the mean differences is consistent with the combined treatment having the clearest short-term carbon retention response. Carbon accumulation should be interpreted with respiration rather than inferred from respiration alone, since plant inputs and changes in peat stocks can alter the balance between measured flux and net storage."
+    },
+    {
+      "type": "paragraph",
+      "text": "The planting contrast in mean carbon accumulation was 0.21 g C m-2 yr-1 under pulsing and 0.11 g C m-2 yr-1 under stable water. The difference of differences is $Delta A = (0.42 - 0.21) - (0.25 - 0.14) = 0.10$ g C m-2 yr-1. This estimate summarizes observed means and should not be mistaken for a complete carbon budget or a guarantee of a persistent annual rate. The measured upper peat layer may respond to changes in plant inputs over a short period, while deeper peat and lateral transfers are outside the response metric. The joint response is nevertheless informative for restoration practice because it links an achievable vegetation intervention with a hydrologic regime and a measured change in peat carbon."
+    },
+    {
+      "type": "paragraph",
+      "text": "The distribution of plot-level carbon accumulation showed appreciable spread around treatment averages. In pulsed, planted plots, the median was 0.42 g C m-2 yr-1, while the stable, unplanted median was 0.13. Intermediate medians characterized pulsed, unplanted and stable, planted plots. This spread reinforces the value of reporting plot-level variation rather than relying only on treatment averages. Differences in initial vegetation, small-scale surface elevation, and local water movement may all contribute to within-treatment variation. The observed distributions are consistent with the mean pattern, but they also show that treatment effects operate within a heterogeneous landscape. A restoration decision for a margin should consider the expected range of plot responses, not only the average across sites."
+    },
+    {
+      "type": "paragraph",
+      "text": "Across measured outcomes, the pulsed, planted combination ranked favorably for sedge cover, plant richness, respiration, bare peat, and carbon accumulation. The favorable directions were higher cover, higher richness, lower respiration, lower bare peat, and higher carbon accumulation. These results do not imply that a single summary index would capture restoration success: each response has a different ecological meaning and timescale. Greater plant richness may indicate a broader recovering community, while carbon accumulation reflects change in the measured peat layer over the assessment interval. The alignment of these outcomes in the combined treatment strengthens the case for evaluating hydrology and vegetation together. It also makes clear why hydrologic variability alone should not be assumed to produce the same outcome as variability paired with active sedge establishment."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Discussion"
+    },
+    {
+      "type": "paragraph",
+      "text": "The experiment indicates that seasonal hydrologic pulsing can complement sedge establishment during fen-margin recovery. The strongest observed vegetation response occurred in plots that received both treatments, and these plots also had the lowest average respiration and highest upper-peat carbon accumulation. Stable high water tables did not produce equivalent vegetation outcomes in unplanted plots, despite their greater number of inundation days. This distinction suggests that duration of surface wetness and seasonal variability are not interchangeable descriptors of hydrologic conditions. The results align with previous work showing that hydrologic variation can shape plant assembly and that vegetation responses depend on hydroperiod \\cite{1}\\cite{3}\\cite{4}. They add a direct test of the interaction between hydrologic treatment and deliberate establishment across multiple restored margins."
+    },
+    {
+      "type": "paragraph",
+      "text": "One interpretation is that pulsing provided a range of conditions in which sedges could establish and expand, while planting ensured that suitable propagules were available. Under stable high water, established plants still attained substantial cover, but mean cover was lower than in the pulsed, planted treatment. The contrast between planted and unplanted plots under pulsing indicates that natural recovery did not fully match active establishment within three seasons. Prior assessments of hydrologic repair and sedge establishment emphasize that water conditions and plant recruitment can constrain one another \\cite{2}\\cite{21}. The results support that coupled perspective. They do not identify a single optimal fluctuation amplitude for all sites, but show that moderate seasonal variation, in the form achieved here, need not prevent plant recovery."
+    },
+    {
+      "type": "paragraph",
+      "text": "Lower mean respiration in pulsed, planted plots is consistent with developing vegetation cover and changed soil conditions, but measurements cannot distinguish contributions of plant and microbial respiration. Differences in substrate supply, root activity, and oxygen exposure could all contribute. Research on peat oxidation and alternating saturation describes the potential for opposing processes across wet and aerated intervals \\cite{5}\\cite{6}. In this study, respiration declined through time in each treatment, suggesting that changes were not unique to the combined treatment. The comparatively low third-season mean in pulsed, planted plots indicates additional separation among treatments, but causal attribution to a particular pathway requires more direct process measurements. The result is best interpreted as evidence that the treatment combination was associated with lower measured soil flux during the growing season."
+    },
+    {
+      "type": "paragraph",
+      "text": "The relationship between vegetation and soil flux may depend on functional composition. Sedge cover can influence aboveground shading, litter inputs, and belowground activity, each of which may affect carbon exchange differently. Work relating plant functional composition to belowground carbon flux provides a basis for expecting vegetation change to affect more than the visible surface \\cite{7}. Increased richness alongside sedge cover suggests that planted plots may have provided conditions for a broader set of taxa, although pathways were not tested directly. A richer community could influence seasonal productivity and the timing of organic inputs, but these effects may emerge over longer periods than the monitoring window. Future evaluation should pair repeated vegetation surveys with measurements of biomass, root production, and decomposition to determine which components account for the observed carbon response."
+    },
+    {
+      "type": "paragraph",
+      "text": "The carbon accumulation result warrants particular care. The highest mean occurred in pulsed, planted plots, and treatment ordering was consistent with a beneficial combined effect in the upper peat layer. Yet annualized change over a short inventory interval does not establish a durable sequestration rate. Repeated peat inventories can be sensitive to spatial variation and changes in bulk density, and cover only the measured layer \\cite{11}. Interpretation of short-term carbon balance also requires attention to unmeasured exchanges and the distinction between stock change and gross flux \\cite{12}. Our finding supports the conclusion that the combined treatment was associated with greater short-term upper-peat carbon accumulation, not that it guarantees long-term net carbon storage. Longer monitoring can establish whether the measured gain persists as vegetation and peat structure develop."
+    },
+    {
+      "type": "paragraph",
+      "text": "The observed patterns matter for restoration planning because they argue against treating a persistently high water table as a sufficient indicator of recovery. Stable water levels may protect peat from prolonged aeration, but they did not by themselves produce the strongest sedge cover or lowest bare-peat values in this experiment. Field evaluations likewise stress that water-table controls need to be considered alongside margin conditions and vegetation response \\cite{8}\\cite{9}. The practical implication is not to favor variability indiscriminately. Managers can assess whether a controlled seasonal range is compatible with local plant establishment goals and whether planting is needed where natural recruitment is limited. Monitoring should include realized depth range and inundation duration, because a nominal treatment label alone does not describe ecological exposure."
+    },
+    {
+      "type": "paragraph",
+      "text": "Community context helps explain why treatment effects may not be uniform. Initial margin composition differed, and planted plots showed variable richness responses among sites. Recruitment along fen ecotones can be influenced by hydrologic heterogeneity, while richness after introduction may follow a trajectory rather than an immediate step change \\cite{10}\\cite{13}. The three-season result captures an early stage of that trajectory. Some taxa recorded in planted plots may have benefited indirectly from changes in cover or surface moisture, while others may have responded to local propagule availability. Because the experiment was not designed to isolate every recruitment mechanism, these interpretations remain hypotheses. Nonetheless, the observed richness increase indicates that the planting response was not limited to target sedges in the measured plots."
+    },
+    {
+      "type": "paragraph",
+      "text": "The interaction between planting and hydrologic regime should also be understood in relation to design scale. Replication across four margins provides more support for general inference than a single-site trial, and blocking helps reduce confounding by local conditions \\cite{17}. However, the number of independent margins remains limited, and variation among sites cannot be fully characterized. Initial vegetation differences can make interactions difficult to estimate, especially when treatment effects vary with community composition \\cite{19}. Our results are most applicable to restored fen margins with broadly comparable conditions and management objectives. Testing across a wider range of peat chemistry, nutrient status, and landscape setting would determine whether the same combination of pulsing and planting yields similar responses elsewhere."
+    },
+    {
+      "type": "paragraph",
+      "text": "A conceptual interpretation is that hydrologic pulsing and sedge establishment influenced several connected plot features: vegetation cover increased, bare peat decreased, respiration was lower, and upper-peat carbon accumulation was higher in the combination with the strongest overall response. These variables may be linked, but the experiment does not establish a complete causal mediation pathway. Lower respiration could accompany increased cover without directly causing greater carbon accumulation. Higher accumulation could arise from increased plant inputs even if decomposition continued. The treatment associations are consistent with a coupled vegetation-soil response and provide a basis for subsequent process studies. It would be premature to infer that each pathway contributed equally or that the response will persist as the community matures."
+    },
+    {
+      "type": "paragraph",
+      "text": "Seasonal variability presents both opportunity and risk. Drawdown can expose peat to oxygen and increase decomposition potential, while shallow inundation can inhibit some aerobic processes and influence plant performance. Work on inundation frequency and water-table amplitude emphasizes that responses depend on event timing and seasonal controls \\cite{14}\\cite{15}\\cite{20}. In our experiment, the pulsed treatment had fewer days with surface inundation than the stable treatment, yet a greater depth range. Lower respiration in pulsed, planted plots therefore cannot be explained by inundation duration alone. This reinforces the need to track multiple hydrologic descriptors. Restoration targets based only on mean depth may fail to represent transition frequency, dry-interval length, or the degree of surface flooding experienced by plants."
+    },
+    {
+      "type": "paragraph",
+      "text": "The combined results support an integrated assessment of fen-margin recovery. Repeated vegetation observations reveal whether planted sedges establish and whether richness changes; hydrologic monitoring verifies the conditions plants and soil experience; respiration and peat inventories describe distinct carbon-related responses. Integrating these indicators is consistent with approaches that combine hydrologic and vegetation measures in restoration assessment \\cite{23}. Vegetation cover and peat surface stability can also inform evaluation of the transition from exposed substrate to a more continuous plant community \\cite{9}. No single indicator should stand in for all others. A plot could show substantial sedge cover without a measurable short-term carbon gain, or a carbon-stock change before a clear richness response. A suite of measures gives managers a more balanced understanding of progress."
+    },
+    {
+      "type": "box",
+      "kind": "remark",
+      "title": "Interpretation of carbon responses",
+      "text": "Soil respiration is a growing-season flux measure, whereas upper-peat carbon accumulation is a stock-change estimate over the inventory interval. Their treatment patterns are complementary evidence, not interchangeable estimates of a complete ecosystem carbon balance."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Limitations"
+    },
+    {
+      "type": "paragraph",
+      "text": "The study followed responses for three growing seasons, sufficient to detect early establishment patterns but not to establish long-term community persistence. Sedge cover can increase rapidly after planting, while effects on peat formation and carbon storage may take longer to stabilize. Monitoring duration is particularly important when inferring carbon retention from short-term measurements \\cite{22}. The upper-peat inventory interval cannot represent the full range of seasonal and interannual variability, and measured respiration covered growing-season observations rather than every period of the year. Winter fluxes, lateral carbon transfers, and deeper peat changes were not quantified. The results should be treated as evidence of short-term treatment-associated differences, with longer records needed to assess durability and annual carbon balance."
+    },
+    {
+      "type": "paragraph",
+      "text": "A second limitation is that factorial treatments represent specific management conditions rather than a broad gradient of fluctuation amplitude, planting density, or species composition. The pulsed regime produced a clear range of water-table depths, but other pulse schedules might lead to different plant and soil responses. The stable treatment maintained a consistently high water table, and its inundation duration differed from that of the pulsed treatment. Thus, the contrast combines distinctions in amplitude, timing, and exposure duration. A dose-response experiment with multiple hydrologic regimes would be required to identify thresholds or an optimum. Similarly, the planting treatment tested establishment as implemented at these margins, not alternative planting configurations or all potential native sedge assemblages."
+    },
+    {
+      "type": "paragraph",
+      "text": "The number of margins and plots also constrains inference about spatial variation. Although the design included 48 plots and balanced treatment combinations, plots within a margin share environmental context and are not equivalent to independent sites. The analysis accounted for block and margin structure, but four margins offer limited resolution for explaining why a particular site responded more strongly. Initial vegetation was recorded, yet fine-scale nutrient availability, peat properties, and microtopography may also have contributed to variation. Field studies of restoration outcomes emphasize repeated assessment and explicit attention to heterogeneity \\cite{16}\\cite{17}. Further work should extend the design across more margins and include measurements that can test how site properties modify the hydrology-by-planting interaction."
+    },
+    {
+      "type": "paragraph",
+      "text": "Finally, the carbon measures do not provide a complete ecosystem carbon budget. Soil respiration is an integrated flux containing both autotrophic and heterotrophic components, while upper-peat accumulation is a stock-change estimate for a restricted soil layer. Neither measure alone resolves the balance among photosynthesis, plant respiration, decomposition, dissolved carbon export, and methane exchange. The observed correspondence between lower respiration and higher accumulation in pulsed, planted plots is suggestive but insufficient to establish a single mechanism. Future assessments could combine gas-flux partitioning, plant production, peat bulk density, and longer-term stock measurements. These additions would help determine whether the early advantage persists and whether it represents net ecosystem retention."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Conclusion"
+    },
+    {
+      "type": "paragraph",
+      "text": "Across four restored fen margins and three growing seasons, sedge planting increased sedge cover under both hydrologic regimes, and the largest observed cover and richness values occurred where planting was paired with seasonal pulsing. That treatment combination also had the lowest mean growing-season soil respiration, the least bare peat, and the greatest measured upper-peat carbon accumulation. Stable high water levels alone did not produce equivalent vegetation responses in unplanted plots. These findings support restoration approaches that consider hydrologic dynamics and plant establishment together rather than relying on mean water-table position as the sole indicator of success."
+    },
+    {
+      "type": "paragraph",
+      "text": "The carbon findings are promising but preliminary in duration and scope. Lower respiration and greater upper-peat accumulation in pulsed, planted plots indicate a favorable short-term pattern, not a confirmed long-term sequestration outcome. Managers should track water-table depth range, inundation duration, vegetation development, and carbon responses across multiple years, adjusting interventions to local conditions. Moderate seasonal variation can complement sedge establishment in fen-margin recovery, but its value depends on the plant community and the hydrologic conditions actually achieved. Continued monitoring will determine whether the observed gains persist as vegetation matures and peat processes respond over longer periods.\\fn{The annualized accumulation estimate describes change in the measured upper peat layer over the inventory interval; it does not represent a complete annual ecosystem carbon budget.}"
+    },
+    {
+      "type": "paragraph",
+      "text": "The study offers a field-based rationale for combining hydrologic management with active establishment where recruitment is constrained. Its central implication is not that pulsing should be applied everywhere, but that planned seasonal variation can be compatible with, and potentially supportive of, vegetation recovery when target sedges are able to establish. By evaluating plants, respiration, and peat carbon together, restoration teams can detect benefits and trade-offs of management choices. Future experiments should extend monitoring, broaden site representation, and directly test mechanisms linking cover, soil flux, and carbon accumulation."
+    }
+  ]
+}

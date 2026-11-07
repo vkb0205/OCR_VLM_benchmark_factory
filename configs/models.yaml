@@ -44,12 +44,22 @@ endpoints:
     api_key_env: LOCAL_LLM_API_KEY
     base_url: http://localhost:8000/v1
 
+  luna:
+    api: openai
+    model: gpt-6-luna
+    api_key_env: OPENAI_API_KEY
+    base_url_env: OPENAI_BASE_URL
+    max_tokens: 64000
+    json_mode: true
+    params:
+      reasoning_effort: medium
+
 # USD per million tokens [input, output], by model name. Used for trace cost_usd and wins over an
 # endpoint's price_in / price_out (model_env can swap the model behind an endpoint).
 # Cached replies cost 0. A model missing here logs a warning once per run.
 prices:
   claude-opus-5-5: [4.0, 20.0]
-  gpt-6-luna: [0.10, 0.50]   # third-party listings, 2026-11-02; confirm on OpenAI's pricing page
+  gpt-6-luna: [0.10, 0.50, 0.01]   # input, output, cached input; https://developers.openai.com/api/docs/pricing verified 2026-11-05
 
-agents: {}
+agents: {academic_paper: luna}
   # financial_report: claude

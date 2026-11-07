@@ -192,7 +192,8 @@ def _decorate(section: Element, names) -> None:
 
 
 def build_design(doc_type: str, lang: str, fixed_labels: dict, css: str, pages: dict,
-                 params: dict | None = None) -> str:
+                 params: dict | None = None, *, layout_plan: dict | None = None,
+                 content_config=None) -> str:
     """Full design HTML from the fixed structure plus the agent's CSS and per-page choices.
 
     pages: {role|"all": {"order": [data-k], "groups": [{"class", "items": [data-k]}],
@@ -200,6 +201,12 @@ def build_design(doc_type: str, lang: str, fixed_labels: dict, css: str, pages: 
     With params (design/params.py) code sets sheet sizes, table frames and chart style itself.
     Unknown keys are ignored; children not listed keep their default order after the listed ones.
     """
+    if layout_plan is not None:
+        if doc_type != "academic_paper" or content_config is None:
+            raise ValueError("layout_plan is supported only for academic_paper with its content config")
+        from factory.design.backbone import build
+        return build(layout_plan, lang, fixed_labels, content_config, css=css)
+
     from factory.design.params import css_variables, frame_css, page_size
 
     built = []

@@ -1,6 +1,6 @@
 # Labeling Contract
 
-Version: **0.2.0** (`core.contract.models.CONTRACT_VERSION`). Taxonomy: [`configs/taxonomy.yaml`](../../configs/taxonomy.yaml).
+Version: **0.3.0** (`factory.contract.models.CONTRACT_VERSION`). Taxonomy: [`configs/taxonomy.yaml`](../../configs/taxonomy.yaml).
 
 ## 1. Purpose
 
@@ -11,7 +11,7 @@ The contract defines what the factory emits and what every downstream stage (bou
 - the `data-*` attributes on each page's HTML,
 - the rules the linter enforces.
 
-The key words MUST, MUST NOT, and SHOULD are normative. Pydantic models in [`core/contract/models/`](models/) are the machine-readable form of sections 4–6; this document and those models must change together, with a version bump.
+The key words MUST, MUST NOT, and SHOULD are normative. Pydantic models in [`factory/contract/models/`](models/) are the machine-readable form of sections 4â€“6; this document and those models must change together, with a version bump.
 
 ## 2. Document folder
 
@@ -56,7 +56,7 @@ out/documents/{doc_type}/{doc_id}/
 | `data-doc-id` | yes | Document ID |
 | `data-page-id` | yes | Page ID |
 | `data-page-index` | yes | 1-based index |
-| `data-page-role` | yes | Pipeline-defined role (`cover`, `B01`, `kpi`, …) |
+| `data-page-role` | yes | Pipeline-defined role (`cover`, `B01`, `kpi`, â€¦) |
 | `data-page-kind` | yes | `single` or `spread` |
 | `data-page-doc-type` | yes | Taxonomy `page_attributes.doc_type` |
 | `data-page-lang` | yes | Document/page language from `DocIR.lang` (`vi`, `en`, `en_vi_mixed`) |
@@ -72,10 +72,10 @@ A **block** is an element with `data-gt-cat` whose value is a block category (ta
 | `data-gt-id` | yes | DocIR block ID |
 | `data-gt-cat` | yes | Block category |
 | `data-gt-ro` | yes | Reading order within the page, integers `1..n` |
-| `data-gt-part` | if split | `k/n` — this element is piece `k` of `n` of the block |
+| `data-gt-part` | if split | `k/n` â€” this element is piece `k` of `n` of the block |
 | `data-gt-lang` | text blocks | This block's language; it may differ from the document language |
 | `data-gt-latex` | `equation_isolated` | LaTeX ground truth |
-| `data-gt-parent` | optional | Block ID this block belongs to (caption → table/figure/chart) |
+| `data-gt-parent` | optional | Block ID this block belongs to (caption â†’ table/figure/chart) |
 | `data-gt-attr-{key}` | optional | Any key in `block_attributes`, with `_` written as `-` (e.g. `data-gt-attr-frame-type`) |
 
 ### 3.4 Span attributes
@@ -129,7 +129,7 @@ Reading order is visual and follows the document's declared regions:
 4. Captions follow the float they describe, in the printed order. A margin
    caption follows its float. Boxes and sidebars are read at their anchor.
 
-`ro_level` (`L0`–`L4`) and `ro_cases` are recorded in `spec.json`,
+`ro_level` (`L0`â€“`L4`) and `ro_cases` are recorded in `spec.json`,
 `document.json`, and each page entry. These fields describe layout and are not
 taxonomy attributes.
 
@@ -141,25 +141,25 @@ taxonomy attributes.
       data-page-doc-type="newspaper" data-page-lang="vi" data-page-layout="multi_column">
   <div class="ornament" data-gt-ignore></div>
 
-  <h1 data-gt-id="b3" data-gt-cat="title" data-gt-ro="1" data-gt-lang="vi">Hà Nội khởi công tuyến metro số 5</h1>
+  <h1 data-gt-id="b3" data-gt-cat="title" data-gt-ro="1" data-gt-lang="vi">HÃ  Ná»™i khá»Ÿi cÃ´ng tuyáº¿n metro sá»‘ 5</h1>
 
   <p data-gt-id="b7" data-gt-cat="text_block" data-gt-ro="2" data-gt-lang="vi">
-    Chi phí dự kiến là
-    <span data-gt-cat="equation_inline" data-gt-latex="1{,}2 \times 10^{4}"><!-- KaTeX --></span> tỷ đồng
+    Chi phÃ­ dá»± kiáº¿n lÃ 
+    <span data-gt-cat="equation_inline" data-gt-latex="1{,}2 \times 10^{4}"><!-- KaTeX --></span> tá»· Ä‘á»“ng
     <sup data-gt-cat="footnote_mark" data-gt-target="b20">1</sup>.
   </p>
 
   <table data-gt-id="b9" data-gt-cat="table" data-gt-ro="3" data-gt-part="1/2"
-         data-gt-attr-frame-type="fewer_line">…</table>
-  <p data-gt-id="b10" data-gt-cat="caption_table" data-gt-ro="4" data-gt-parent="b9">Bảng 1. …</p>
+         data-gt-attr-frame-type="fewer_line">â€¦</table>
+  <p data-gt-id="b10" data-gt-cat="caption_table" data-gt-ro="4" data-gt-parent="b9">Báº£ng 1. â€¦</p>
 </body>
 ```
 
-Extracted text of `b7`: `Chi phí dự kiến là $1{,}2 \times 10^{4}$ tỷ đồng 1.`
+Extracted text of `b7`: `Chi phÃ­ dá»± kiáº¿n lÃ  $1{,}2 \times 10^{4}$ tá»· Ä‘á»“ng 1.`
 
 ## 4. DocIR (`content.json`)
 
-Model: `core.contract.models.DocIR`. DocIR is the semantic source of the document.
+Model: `factory.contract.models.DocIR`. DocIR is the semantic source of the document.
 
 - `blocks` are in **document reading order**.
 - Each block has `id`, `cat`, `content`, and optional `lang`, `attrs`, `parent`, `section`.
@@ -178,13 +178,13 @@ Model: `core.contract.models.DocIR`. DocIR is the semantic source of the documen
 
 ## 5. Pagination and `document.json`
 
-- `pagination.json` (`core.contract.models.Pagination`): for each page, its role and the ordered list of block references. A `BlockRef` names a block and, if split, its `part`/`parts` and for tables the body `row_range`.
-- `document.json` (`core.contract.models.DocumentManifest`): dataset, contract and taxonomy versions, provenance hashes, image DPI, doc ID and type, flow, page count, per-page `page_id`, `file`, `role`, `kind`, size in mm, and document attributes.
+- `pagination.json` (`factory.contract.models.Pagination`): for each page, its role and the ordered list of block references. A `BlockRef` names a block and, if split, its `part`/`parts` and for tables the body `row_range`.
+- `document.json` (`factory.contract.models.DocumentManifest`): dataset, contract and taxonomy versions, provenance hashes, image DPI, doc ID and type, flow, page count, per-page `page_id`, `file`, `role`, `kind`, size in mm, and document attributes.
 
 ## 6. Spec and trace
 
-- `spec.json`: the pipeline's spec, a subclass of `core.contract.models.BaseSpec` (doc ID, doc type, seed, flow, page-count range, language, requested attributes, brief). If the type config names a `language_variable`, the seeded value is recorded here as the document language.
-- `trace.json` (`core.contract.models.Trace`): factory version, timing, status, and events (stage start/end, LLM and tool calls with provider, model, prompt ID, tokens, cost; checks; retries; errors).
+- `spec.json`: the pipeline's spec, a subclass of `factory.contract.models.BaseSpec` (doc ID, doc type, seed, flow, page-count range, language, requested attributes, brief). If the type config names a `language_variable`, the seeded value is recorded here as the document language.
+- `trace.json` (`factory.contract.models.Trace`): factory version, timing, status, and events (stage start/end, LLM and tool calls with provider, model, prompt ID, tokens, cost; checks; retries; errors).
 
 ## 7. Linter rules
 
@@ -210,6 +210,29 @@ Rules have stable IDs so reports and the review UI can reference them. `E` = err
 | C016 | W | A labeled block is fully covered by another element |
 | C017 | W | `data-gt-parent` / `data-gt-target` points to a block on no page |
 
+### 7.1 Optional review sidecars (added in 0.3.0)
+
+`extra/boxes.json` (`Boxes`) records `contract_version`, `doc_id`, `image_dpi`
+and `pages`. Each page records `index`, `page_id`, `image_width`, `image_height`
+(measured body size at that DPI), `blocks`, and `ignored` regions. Each block
+records `id`, `cat`, `ro`, nullable `part`, `poly` (eight clockwise image-pixel
+coordinates starting at top left), nullable `lang` and `parent`, `attrs`, and
+`text` extracted by section 3.7 (canonical HTML for a table, LaTeX for an isolated
+equation). Ignored regions contain `poly`. Geometry uses the shared export
+capture implementation. Consumers MUST compare measured dimensions with the
+PNG and refuse overlays when they differ.
+
+`extra/lint.json` (`LintReport`) records `contract_version`, `doc_id`, and
+`findings`: `rule_id`, `level` (`E`/`W`), nullable `page`, `message`, and nullable
+`block_id` when the rule identifies a block. Findings involving multiple known
+blocks are recorded once per block. An empty list means lint ran successfully
+with no findings; a missing file does not mean lint passed.
+
+Generation writes both sidecars. `factory boxes <bundle-or-run>` backfills boxes;
+`factory lint <bundle-or-run>` persists lint. These commands only write these
+sidecars. Existing 0.2.0 bundles remain readable without modifying their manifests;
+the sidecars declare their own 0.3.0 schema version. Export behavior is unchanged.
+
 ## 8. Versioning
 
 - Contract and taxonomy versions use semantic versioning and are recorded in every `document.json`. The dataset release version is in `out/VERSION` and is copied into each manifest.
@@ -229,3 +252,18 @@ Until contract v0.2, the first runnable slice uses these conventions:
   each repeated header is identical), followed by all body rows in order.
   `BlockRef.row_range` indexes body rows, excluding repeated header rows.
 - A document may contain an `extra/` directory for pipeline-owned sidecar files.
+
+## 10. External reviews
+
+Review schema version 0.1.0 is defined in `factory/contract/models/review.py`.
+A review is keyed by subset plus document ID and stored outside the bundle at
+`<subset>/reviews/<doc_id>.json`. Decisions and corrections never mutate bundle
+files. Page versions provide optimistic concurrency; changes append history.
+`bundle_hash` hashes manifest, content and pagination bytes; stale reviews are
+excluded. A text-wrong verdict flags the document. A document is approved only
+when all pages are approved and no rejection or flag takes precedence.
+
+Reviewed export includes approved documents, applies polygon/category/attribute
+and reading-order corrections, and namespaces image filenames by subset.
+`--include-unreviewed` preserves the prior agent-only export path and does not
+apply review corrections. Factory lint remains an independent export gate.

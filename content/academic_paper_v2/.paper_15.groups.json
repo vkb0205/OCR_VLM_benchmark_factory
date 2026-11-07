@@ -1,0 +1,606 @@
+{
+  "front": {
+    "title": "Tích hợp dữ liệu đa tầng trong sinh học tính toán: phương pháp, thách thức và hướng phát triển",
+    "authors": [
+      {
+        "name": "Tạ Uyên Nhiên",
+        "affiliations": [
+          1
+        ],
+        "corresponding": false
+      },
+      {
+        "name": "Vũ Trác Lâm",
+        "affiliations": [
+          1,
+          2
+        ],
+        "corresponding": true,
+        "email": "trac.lam@lamnguyet-bio.org"
+      },
+      {
+        "name": "Bùi Kha Miên",
+        "affiliations": [
+          2
+        ],
+        "corresponding": false
+      }
+    ],
+    "affiliations": [
+      "Bộ môn Sinh học Tính toán, Viện Nghiên cứu Hệ sinh học Lam Nguyệt",
+      "Trung tâm Mô hình hóa Dữ liệu Sinh học, Viện Nghiên cứu Hệ sinh học Lam Nguyệt"
+    ],
+    "abstract": "Sự phát triển của các kỹ thuật đo lường phân tử đã làm tăng nhanh cả quy mô lẫn độ đa dạng của dữ liệu sinh học, từ trình tự hệ gen và mức biểu hiện RNA đến protein, chuyển hóa, hình ảnh mô học và thông tin lâm sàng. Bài tổng quan này hệ thống hóa các phương pháp tính toán dùng để kết hợp những nguồn dữ liệu ấy, tập trung vào câu hỏi làm thế nào để giữ lại tín hiệu sinh học có ý nghĩa khi các phép đo khác nhau về độ phân giải, cấu trúc, quy mô và mức độ thiếu hụt. Chúng tôi phân loại phương pháp theo thời điểm tích hợp: kết hợp đặc trưng trước khi học mô hình, hợp nhất dự đoán sau khi phân tích từng nguồn, và học biểu diễn chung hoặc tương tác giữa các tầng. Với từng nhóm, bài viết xem xét các kỹ thuật tuyến tính, mô hình đồ thị, phân rã ma trận, học sâu đa phương thức, mô hình xác suất và phương pháp có sử dụng tri thức nền. Các ứng dụng được khảo sát gồm phân nhóm kiểu hình, suy luận mạng điều hòa, dự đoán đáp ứng điều trị, phát hiện trạng thái tế bào và ưu tiên các liên kết giữa biến thể với bệnh. Chúng tôi đồng thời phân tích những nguyên nhân khiến hiệu năng dự báo không chuyển thành bằng chứng sinh học đáng tin cậy: sai lệch theo lô, thiếu dữ liệu không ngẫu nhiên, mất cân bằng lớp, rò rỉ thông tin giữa tập huấn luyện và đánh giá, cũng như khác biệt quần thể. Những khuyến nghị thực hành nhấn mạnh thiết kế đánh giá độc lập, kiểm định độ ổn định, định lượng bất định, khả năng truy nguyên nguồn dữ liệu và đối chiếu với bằng chứng thực nghiệm. Cuối cùng, chúng tôi thảo luận các hướng nghiên cứu về học biểu diễn có điều kiện theo mô, mô hình hóa thời gian, chia sẻ tham số giữa nghiên cứu và bảo vệ quyền riêng tư. Tầm nhìn xuyên suốt là xem tích hợp dữ liệu như một quy trình suy luận có thể kiểm tra, thay vì chỉ là thao tác ghép các bảng đo, để kết quả vừa có năng lực dự báo vừa hỗ trợ diễn giải cơ chế.",
+    "abstract_alt": null,
+    "keywords": "sinh học tính toán; tích hợp dữ liệu đa tầng; học đa phương thức; mạng sinh học; mô hình đồ thị; khả năng tái lập",
+    "keywords_alt": null,
+    "journal": "Tạp chí Sinh học Tính toán và Hệ đa tầng",
+    "acknowledgement": "Nhóm tác giả cảm ơn Quỹ Nghiên cứu Mạng Sinh học Lam Nguyệt đã hỗ trợ thời gian trao đổi học thuật và hạ tầng phân tích. Chúng tôi cũng ghi nhận những góp ý chuyên môn của các thành viên tham gia buổi thảo luận về kiểm định mô hình và quản trị dữ liệu."
+  },
+  "formulas": [],
+  "tables": [
+    {
+      "after": 6,
+      "element": {
+        "type": "table",
+        "id": "tab:phan-loai-tich-hop",
+        "caption": "Các chiến lược tích hợp dữ liệu đa tầng và những điểm cần kiểm soát",
+        "header": [
+          [
+            "Chiến lược",
+            "Thời điểm kết hợp",
+            "Biểu diễn thường dùng",
+            "Ưu thế",
+            "Rủi ro chính",
+            "Kiểm soát ưu tiên"
+          ]
+        ],
+        "rows": [
+          [
+            "Kết hợp sớm",
+            "Trước khi huấn luyện mô hình",
+            "Ma trận đặc trưng nối cột hoặc chuẩn hóa chung",
+            "Giữ được tương quan giữa các tầng",
+            "Tầng có nhiều đặc trưng dễ chi phối; thiếu dữ liệu lan rộng",
+            "Chuẩn hóa theo tầng, xử lý thiếu có kiểm tra và đánh giá ngoài mẫu"
+          ],
+          [
+            "Kết hợp muộn",
+            "Sau khi phân tích từng nguồn",
+            "Tập hợp điểm dự đoán hoặc thứ hạng",
+            "Dễ thay thế hay bổ sung nguồn đo",
+            "Bỏ qua tương tác giữa các tầng; dự đoán thành phần có thể lệch chuẩn",
+            "Hiệu chỉnh từng mô hình và kiểm tra độ nhạy theo nguồn"
+          ],
+          [
+            "Biểu diễn chung",
+            "Trong quá trình học mô hình",
+            "Không gian tiềm ẩn chung, phân rã ma trận hoặc mô hình xác suất",
+            "Nắm bắt cấu trúc đồng biến giữa các phép đo",
+            "Không gian tiềm ẩn khó diễn giải và có thể phụ thuộc khởi tạo",
+            "Đánh giá độ ổn định, định lượng bất định và đối chiếu với tri thức nền"
+          ],
+          [
+            "Tương tác có cấu trúc",
+            "Trong quá trình học, với ràng buộc giữa các tầng",
+            "Đồ thị dị thể, mạng điều hòa hoặc bộ mã hóa đa phương thức",
+            "Biểu diễn được quan hệ có hướng và giả thuyết cơ chế",
+            "Kết quả nhạy với cấu trúc đồ thị và độ đầy đủ của tri thức nền",
+            "Kiểm tra từng cạnh, so sánh với đồ thị đối chứng và xác nhận độc lập"
+          ]
+        ],
+        "note": "Phân loại dựa trên vị trí của bước kết hợp trong quy trình suy luận; một quy trình có thể phối hợp nhiều chiến lược."
+      }
+    },
+    {
+      "after": 14,
+      "element": {
+        "type": "table",
+        "id": "tab:so-sanh-hieu-nang",
+        "caption": "So sánh định lượng các họ phương pháp trên tập nhiệm vụ phân loại đa tầng đã chuẩn hóa",
+        "header": [
+          [
+            {
+              "text": "Họ phương pháp",
+              "rowspan": 2
+            },
+            {
+              "text": "Hiệu năng dự báo",
+              "colspan": 3
+            },
+            {
+              "text": "Độ bền",
+              "colspan": 2
+            }
+          ],
+          [
+            "AUROC",
+            "AUPRC",
+            "Macro-F1",
+            "Giảm AUROC sau hiệu chỉnh lô",
+            "SD giữa các lần lặp"
+          ]
+        ],
+        "rows": [
+          [
+            "Kết hợp sớm",
+            {
+              "text": "0,78"
+            },
+            {
+              "text": "0,62"
+            },
+            {
+              "text": "0,69"
+            },
+            {
+              "text": "0,09"
+            },
+            {
+              "text": "0,045"
+            }
+          ],
+          [
+            "Kết hợp muộn",
+            {
+              "text": "0,75"
+            },
+            {
+              "text": "0,59"
+            },
+            {
+              "text": "0,66"
+            },
+            {
+              "text": "0,06"
+            },
+            {
+              "text": "0,038"
+            }
+          ],
+          [
+            "Biểu diễn chung",
+            {
+              "text": "0,83"
+            },
+            {
+              "text": "0,70"
+            },
+            {
+              "text": "0,75"
+            },
+            {
+              "text": "0,05"
+            },
+            {
+              "text": "0,031"
+            }
+          ],
+          [
+            "Tương tác có cấu trúc",
+            {
+              "text": "0,81"
+            },
+            {
+              "text": "0,68"
+            },
+            {
+              "text": "0,73"
+            },
+            {
+              "text": "0,04"
+            },
+            {
+              "text": "0,028"
+            }
+          ],
+          [
+            "Tổ hợp biểu diễn và đồ thị",
+            {
+              "text": "0,85",
+              "bold": true
+            },
+            {
+              "text": "0,74",
+              "bold": true
+            },
+            {
+              "text": "0,79",
+              "bold": true
+            },
+            {
+              "text": "0,03",
+              "bold": true
+            },
+            {
+              "text": "0,022",
+              "bold": true
+            }
+          ]
+        ],
+        "note": "Trung vị trên 12 nhiệm vụ phân loại được chuẩn hóa theo quy trình đánh giá độc lập. AUROC, AUPRC và Macro-F1 càng cao càng tốt; mức giảm AUROC và SD càng thấp càng tốt. Chữ đậm biểu thị giá trị tốt nhất trong từng cột."
+      }
+    }
+  ],
+  "charts_figures": [
+    {
+      "after": 3,
+      "element": {
+        "type": "figure",
+        "figure_type": "architecture",
+        "id": "fig:khung-tich-hop-da-tang",
+        "caption": "Kiến trúc khái quát của quy trình tích hợp dữ liệu đa tầng và kiểm định suy luận.",
+        "description": "Sơ đồ thể hiện các tầng đo lường được tiền xử lý riêng, đưa vào biểu diễn chung hoặc đồ thị có cấu trúc, rồi chuyển thành dự đoán và giả thuyết sinh học có thể kiểm tra.",
+        "labels": [
+          "Trình tự DNA",
+          "RNA",
+          "Protein",
+          "Chuyển hóa",
+          "Tiền xử lý",
+          "Biểu diễn chung",
+          "Dự đoán",
+          "Kiểm định"
+        ]
+      }
+    },
+    {
+      "after": 8,
+      "element": {
+        "type": "chart",
+        "chart_type": "area",
+        "id": "fig:auroc-theo-do-phu-du-lieu",
+        "caption": "AUROC theo tỷ lệ dữ liệu huấn luyện khả dụng trên 12 nhiệm vụ phân loại đa tầng; các dải sai số biểu thị độ lệch chuẩn giữa các lần lặp.",
+        "labels": [
+          "20",
+          "40",
+          "60",
+          "80",
+          "100"
+        ],
+        "series": [
+          {
+            "name": "Kết hợp sớm",
+            "values": [
+              0.61,
+              0.66,
+              0.7,
+              0.75,
+              0.78
+            ],
+            "errors": [
+              0.045,
+              0.043,
+              0.041,
+              0.039,
+              0.037
+            ]
+          },
+          {
+            "name": "Biểu diễn chung",
+            "values": [
+              0.65,
+              0.71,
+              0.76,
+              0.8,
+              0.83
+            ],
+            "errors": [
+              0.039,
+              0.036,
+              0.033,
+              0.031,
+              0.029
+            ]
+          },
+          {
+            "name": "Tổ hợp biểu diễn và đồ thị",
+            "values": [
+              0.68,
+              0.74,
+              0.79,
+              0.83,
+              0.85
+            ],
+            "errors": [
+              0.035,
+              0.032,
+              0.029,
+              0.026,
+              0.022
+            ]
+          }
+        ],
+        "x_label": "Dữ liệu huấn luyện khả dụng (%)",
+        "y_label": "AUROC",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 11,
+      "element": {
+        "type": "figure",
+        "figure_type": "multi_panel",
+        "id": "fig:doi-chieu-phuong-phap-tich-hop",
+        "caption": "Đối chiếu các lựa chọn thiết kế mô hình, tiêu chí đánh giá và kiểm tra độ tin cậy.",
+        "description": "Bốn ô minh họa lần lượt cách biểu diễn các phép đo, xử lý dữ liệu khuyết, phân tách đánh giá độc lập và xem xét độ ổn định của kết quả.",
+        "labels": [
+          "A. Tầng đo",
+          "B. Dữ liệu khuyết",
+          "C. Đánh giá độc lập",
+          "D. Độ ổn định"
+        ],
+        "panels": [
+          {
+            "label": "A",
+            "figure_type": "architecture",
+            "description": "Các tầng phân tử được mã hóa riêng trước khi nối đặc trưng hoặc học biểu diễn chung."
+          },
+          {
+            "label": "B",
+            "figure_type": "architecture",
+            "description": "Mặt nạ hiện diện phân biệt giá trị chưa đo với giá trị sinh học thấp."
+          },
+          {
+            "label": "C",
+            "figure_type": "flowchart",
+            "description": "Phân chia theo nghiên cứu hoặc lô nhằm hạn chế rò rỉ thông tin."
+          },
+          {
+            "label": "D",
+            "figure_type": "architecture",
+            "description": "So sánh thứ hạng đặc trưng qua lần lặp, khởi tạo và tập dữ liệu."
+          }
+        ]
+      }
+    },
+    {
+      "after": 13,
+      "element": {
+        "type": "figure",
+        "figure_type": "flowchart",
+        "id": "fig:quy-trinh-kiem-dinh",
+        "caption": "Quy trình đề xuất để xây dựng, đánh giá và diễn giải mô hình tích hợp.",
+        "description": "Luồng công việc bắt đầu từ xác định câu hỏi và kiểm kê nguồn dữ liệu, tiếp tục qua kiểm soát chất lượng, lựa chọn chiến lược tích hợp và đánh giá độc lập, rồi kết thúc bằng kiểm tra độ ổn định và đối chiếu sinh học.",
+        "labels": [
+          "Câu hỏi nghiên cứu",
+          "Kiểm kê dữ liệu",
+          "Kiểm soát chất lượng",
+          "Tích hợp",
+          "Đánh giá độc lập",
+          "Độ ổn định",
+          "Đối chiếu sinh học"
+        ]
+      }
+    },
+    {
+      "after": 16,
+      "element": {
+        "type": "chart",
+        "chart_type": "stacked_bar",
+        "id": "fig:so-luong-dac-trung-sau-kiem-soat",
+        "caption": "Số đặc trưng được giữ lại và loại bỏ sau chuẩn hóa, tổng hợp trên 12 nhiệm vụ; sai số biểu thị độ lệch chuẩn giữa các nhiệm vụ.",
+        "labels": [
+          "Biến thể DNA",
+          "RNA",
+          "Protein",
+          "Chuyển hóa",
+          "Ảnh mô học"
+        ],
+        "series": [
+          {
+            "name": "Giữ lại",
+            "values": [
+              1260,
+              8400,
+              920,
+              410,
+              560
+            ],
+            "errors": [
+              110,
+              620,
+              95,
+              48,
+              72
+            ]
+          },
+          {
+            "name": "Loại bỏ",
+            "values": [
+              340,
+              1600,
+              280,
+              190,
+              440
+            ],
+            "errors": [
+              55,
+              210,
+              42,
+              35,
+              68
+            ]
+          }
+        ],
+        "x_label": "Tầng đo lường",
+        "y_label": "Số đặc trưng",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 19,
+      "element": {
+        "type": "figure",
+        "figure_type": "architecture",
+        "id": "fig:truy-nguyen-va-quan-tri-du-lieu",
+        "caption": "Kiến trúc truy nguyên nguồn gốc dữ liệu và quản trị các bước phân tích.",
+        "description": "Sơ đồ nối nguồn đo với các phiên bản tiền xử lý, cấu hình mô hình, kết quả đánh giá và bằng chứng dùng để diễn giải; mỗi thành phần được gắn thông tin nguồn và lịch sử biến đổi.",
+        "labels": [
+          "Nguồn dữ liệu",
+          "Phiên bản tiền xử lý",
+          "Cấu hình mô hình",
+          "Kết quả đánh giá",
+          "Bằng chứng sinh học",
+          "Lịch sử biến đổi"
+        ]
+      }
+    }
+  ],
+  "code": [],
+  "references": [
+    {
+      "text": "Phạm Mộc Tự, Dương Khải Tần và Lê Vân Chi (2012). Khung khái niệm cho tích hợp dữ liệu phân tử ở nhiều tầng. Tạp chí Sinh học Hệ thống Định lượng, 4(1), 11–29.",
+      "cite": "Phạm và cộng sự, 2012"
+    },
+    {
+      "text": "Trần Diệp Lam và Bùi Ngọc Huyên (2013). Chuẩn hóa theo tầng cho phân tích biểu hiện và biến thể kết hợp. Tạp chí Phương pháp Sinh học Tính toán, 5(2), 77–93.",
+      "cite": "Trần và Bùi, 2013"
+    },
+    {
+      "text": "Đỗ Minh Thư, Vũ Khải Nguyên và Phan Tường Vi (2014). So sánh chiến lược ghép đặc trưng trong phân nhóm kiểu hình. Tạp chí Phân tích Đa tầng, 3(3), 145–162.",
+      "cite": "Đỗ và cộng sự, 2014"
+    },
+    {
+      "text": "Nguyễn Hải Túc và Hoàng Mộc Chi (2015). Hợp nhất dự đoán từ các phép đo phân tử không đồng nhất. Tạp chí Mô hình hóa Mạng Sinh học, 6(1), 24–41.",
+      "cite": "Nguyễn và Hoàng, 2015"
+    },
+    {
+      "text": "Lê Khánh Miên, Tạ Duy Trạch và Đặng Bảo Nghi (2015). Phân rã ma trận có ràng buộc cho dữ liệu hệ gen và phiên mã. Tạp chí Toán học Sinh học Ứng dụng, 7(2), 88–106.",
+      "cite": "Lê và cộng sự, 2015"
+    },
+    {
+      "text": "Bùi Mẫn Khuê và Đào Quang Tĩnh (2016). Mô hình xác suất cho các tầng đo lường có độ phân giải khác nhau. Tạp chí Suy luận Sinh học, 2(4), 201–219.",
+      "cite": "Bùi và Đào, 2016"
+    },
+    {
+      "text": "Hoàng Thái Nhu và Phạm Quế Lâm (2016). Tích hợp mạng điều hòa với dữ liệu biểu hiện trong phân tích trạng thái tế bào. Tạp chí Hệ gen và Mạng lưới, 8(1), 33–52.",
+      "cite": "Hoàng và Phạm, 2016"
+    },
+    {
+      "text": "Đặng Trí Mậu, Võ Ngân Hạ và Tôn Bích Diệp (2017). Biểu diễn tiềm ẩn chung cho các phép đo phân tử khuyết thiếu. Tạp chí Tin sinh học Định lượng, 9(2), 114–133.",
+      "cite": "Đặng và cộng sự, 2017"
+    },
+    {
+      "text": "Vũ Tường Kha và Lâm Ngọc Kỳ (2017). Hiệu chỉnh sai lệch lô trong phân tích đa tầng: đánh giá các lựa chọn mô hình. Tạp chí Thống kê Sinh học, 5(3), 172–190.",
+      "cite": "Vũ và Lâm, 2017"
+    },
+    {
+      "text": "Phan Bảo Yên, Trịnh Mộc Phương và Lưu Khánh Dư (2018). Học đồ thị dị thể cho liên kết giữa biến thể, gen và kiểu hình. Tạp chí Đồ thị Sinh học, 3(1), 1–20.",
+      "cite": "Phan và cộng sự, 2018"
+    },
+    {
+      "text": "Tạ Huyền Sương và Dương Tấn Lộc (2018). Hợp nhất thứ hạng để ưu tiên dấu ấn sinh học qua nhiều phép đo. Tạp chí Khám phá Dữ liệu Phân tử, 4(2), 59–76.",
+      "cite": "Tạ và Dương, 2018"
+    },
+    {
+      "text": "Lâm Gia Nghi, Đỗ Vĩnh Trầm và Nguyễn Mộc Uyên (2019). Mã hóa đa phương thức cho dữ liệu RNA, protein và chuyển hóa. Tạp chí Học máy Sinh học, 10(1), 42–63.",
+      "cite": "Lâm và cộng sự, 2019"
+    },
+    {
+      "text": "Trần Bích Tâm và Phạm Tường An (2019). Dữ liệu khuyết không ngẫu nhiên trong nghiên cứu phân tử đa tầng. Tạp chí Thiết kế Nghiên cứu Sinh học, 6(4), 230–249.",
+      "cite": "Trần và Phạm, 2019"
+    },
+    {
+      "text": "Đào Minh Khánh, Lê Trúc Mi và Hoàng Duy Tân (2020). Đánh giá mô hình đa tầng bằng phân tách theo nghiên cứu và lô. Tạp chí Kiểm định Tính toán Sinh học, 2(1), 15–34.",
+      "cite": "Đào và cộng sự, 2020"
+    },
+    {
+      "text": "Ngô Thục Nghi và Bùi Thanh Viễn (2020). Đo lường độ ổn định của đặc trưng trong mô hình tích hợp. Tạp chí Diễn giải Mạng Sinh học, 5(2), 91–109.",
+      "cite": "Ngô và Bùi, 2020"
+    },
+    {
+      "text": "Võ Mộc Lan, Phan Duy Hạnh và Tạ Trọng Kỳ (2020). Kết hợp ảnh mô học với dấu ấn phân tử trong phân tầng bệnh. Tạp chí Hình ảnh và Sinh học Tính toán, 7(3), 155–174.",
+      "cite": "Võ và cộng sự, 2020"
+    },
+    {
+      "text": "Dương Ngọc Tường và Lê Hạ Nghi (2021). Hiệu chỉnh xác suất cho dự đoán đáp ứng điều trị từ nhiều tầng dữ liệu. Tạp chí Y học Định lượng và Sinh học, 4(1), 27–46.",
+      "cite": "Dương và Lê, 2021"
+    },
+    {
+      "text": "Phạm Khải Nhu, Trần Mộc Hân và Đỗ Tấn Vi (2021). Học biểu diễn có điều kiện theo mô trong dữ liệu phân tử đa phương thức. Tạp chí Mô hình Sinh học Đa tầng, 8(2), 101–122.",
+      "cite": "Phạm và cộng sự, 2021"
+    },
+    {
+      "text": "Lưu Tường Minh và Nguyễn Bảo Khuê (2021). Định lượng bất định trong phân tích tích hợp có kích thước lớn. Tạp chí Suy luận và Độ tin cậy Sinh học, 3(3), 137–156.",
+      "cite": "Lưu và Nguyễn, 2021"
+    },
+    {
+      "text": "Tôn Mộc Diệp, Hoàng Khải Trân và Võ Huyền Dung (2022). Học sâu đa phương thức cho suy luận mạng điều hòa. Tạp chí Mạng Điều hòa Tính toán, 6(1), 5–26.",
+      "cite": "Tôn và cộng sự, 2022"
+    },
+    {
+      "text": "Bùi Tường Vi và Đặng Nguyên Kha (2022). Kiểm soát rò rỉ thông tin trong đánh giá mô hình sinh học đa tầng. Tạp chí Tái lập Phân tích Sinh học, 5(1), 63–81.",
+      "cite": "Bùi và Đặng, 2022"
+    },
+    {
+      "text": "Lê Duy Mẫn, Phan Ngọc Hạ và Trần Vân Túc (2022). Phân nhóm trạng thái tế bào bằng phân rã đồng thời các tầng dữ liệu. Tạp chí Sinh học Tế bào Định lượng, 9(4), 211–230.",
+      "cite": "Lê và cộng sự, 2022"
+    },
+    {
+      "text": "Nguyễn Tường Nghi và Đào Khải Mộc (2022). Đồ thị tri thức sinh học như ràng buộc cho tích hợp đa tầng. Tạp chí Tri thức và Mô hình Sinh học, 2(2), 48–67.",
+      "cite": "Nguyễn và Đào, 2022"
+    },
+    {
+      "text": "Hoàng Mộc Trà, Tạ Quang Túc và Phạm Duy Nhi (2023). Khác biệt quần thể và chuyển giao mô hình tích hợp giữa nghiên cứu. Tạp chí Di truyền học Tính toán, 7(1), 19–39.",
+      "cite": "Hoàng và cộng sự, 2023"
+    },
+    {
+      "text": "Vũ Bảo Tâm và Lâm Khánh Huyền (2023). Mô hình hóa thời gian cho dữ liệu phiên mã và protein theo dõi dọc. Tạp chí Động học Hệ sinh học, 4(3), 122–141.",
+      "cite": "Vũ và Lâm, 2023"
+    },
+    {
+      "text": "Đỗ Ngân Túc, Lưu Minh Kỳ và Bùi Quế Anh (2023). Phương pháp học bán giám sát cho kiểu hình có nhãn thưa. Tạp chí Học dữ liệu Sinh học, 11(2), 74–94.",
+      "cite": "Đỗ và cộng sự, 2023"
+    },
+    {
+      "text": "Trịnh Bảo Miên và Phan Huy Lâm (2023). Kiểm tra độ nhạy của mô hình đồ thị trước cấu trúc tri thức chưa đầy đủ. Tạp chí Phân tích Mạng Sinh học, 6(2), 98–117.",
+      "cite": "Trịnh và Phan, 2023"
+    },
+    {
+      "text": "Tạ Khánh Tâm, Ngô Duy Vân và Lê Mộc Nghi (2023). Tích hợp đa tầng có bảo toàn riêng tư cho dữ liệu phân tán. Tạp chí Quản trị Dữ liệu Sinh học, 3(4), 183–203.",
+      "cite": "Tạ và cộng sự, 2023"
+    },
+    {
+      "text": "Đặng Huyền Chi và Trần Tấn Mộc (2024). Hiệu chuẩn và phân tầng ngưỡng trong dự đoán đáp ứng điều trị. Tạp chí Mô hình Lâm sàng Tính toán, 5(1), 31–50.",
+      "cite": "Đặng và Trần, 2024"
+    },
+    {
+      "text": "Phạm Ngọc Diên, Dương Bảo Trúc và Võ Tường Kha (2024). Đối chiếu bằng chứng thực nghiệm cho giả thuyết liên kết đa tầng. Tạp chí Xác nhận Sinh học Tính toán, 2(3), 109–128.",
+      "cite": "Phạm và cộng sự, 2024"
+    },
+    {
+      "text": "Lâm Tấn Nghi và Nguyễn Khải Vi (2024). Học liên kết giữa biến thể và bệnh với biểu diễn đa nguồn. Tạp chí Di truyền và Bệnh học Định lượng, 8(2), 66–86.",
+      "cite": "Lâm và Nguyễn, 2024"
+    },
+    {
+      "text": "Bùi Duy Trầm, Hoàng Ngọc Túc và Đào Mộc Kha (2024). Chuẩn đối chứng và quy trình đánh giá độc lập cho mô hình đa tầng. Tạp chí Thực hành Tin sinh học, 7(2), 140–160.",
+      "cite": "Bùi và cộng sự, 2024"
+    },
+    {
+      "text": "Võ Quế Nghi và Tôn Khánh Miên (2024). Truy nguyên dữ liệu và cấu hình trong quy trình phân tích sinh học có thể kiểm tra. Tạp chí Nguồn gốc Dữ liệu Sinh học, 1(2), 25–44.",
+      "cite": "Võ và Tôn, 2024"
+    },
+    {
+      "text": "Nguyễn Mộc Tân, Lê Bảo Hân và Trần Khải Nhu (2025). Học thích nghi miền cho tích hợp dữ liệu giữa mô và điều kiện sinh lý. Tạp chí Phương pháp Đa tầng Mới, 3(1), 7–28.",
+      "cite": "Nguyễn và cộng sự, 2025"
+    },
+    {
+      "text": "Phan Trúc Vi và Đỗ Ngọc Mẫn (2025). Tổng quan hệ thống về chiến lược tích hợp dữ liệu phân tử và tiêu chí đánh giá. Tạp chí Tổng hợp Sinh học Tính toán, 6(1), 1–24.",
+      "cite": "Phan và Đỗ, 2025"
+    },
+    {
+      "text": "Dương Mộc Huyên, Tạ Bảo Trầm và Lưu Tường Kha (2025). Kết hợp biểu diễn tiềm ẩn với đồ thị có cấu trúc trong suy luận cơ chế. Tạp chí Mô hình Cơ chế Sinh học, 4(2), 83–104.",
+      "cite": "Dương và cộng sự, 2025"
+    },
+    {
+      "text": "Trần Khải Diên và Hoàng Quế Nhu (2025). Hướng dẫn thực hành cho tích hợp dữ liệu đa tầng có khả năng tái lập. Tạp chí Quy trình Sinh học Tính toán, 2(4), 191–212.",
+      "cite": "Trần và Hoàng, 2025"
+    }
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Một hướng mở rộng quan trọng là mô hình hóa riêng tín hiệu chung và tín hiệu đặc thù của từng tầng. Có thể viết biểu diễn của tầng $k$ dưới dạng $z^{(k)}=z^{(c)}+z^{(k)}_{\\mathrm{rieng}}$, trong đó thành phần chung phục vụ suy luận liên tầng còn thành phần riêng giữ lại những biến thiên chỉ xuất hiện ở một phép đo. Cách tách này giúp giảm nguy cơ buộc mọi nguồn phải đồng thuận, đặc biệt khi protein và RNA có độ trễ sinh học khác nhau. Tuy nhiên, việc gán một biến thiên vào thành phần chung hay riêng thường phụ thuộc vào điều chuẩn và khởi tạo. Các mô hình học theo mô cho thấy điều kiện sinh lý cần được đưa vào biểu diễn thay vì xử lý như nhiễu ngẫu nhiên \\cite{18}."
+    }
+  ]
+}

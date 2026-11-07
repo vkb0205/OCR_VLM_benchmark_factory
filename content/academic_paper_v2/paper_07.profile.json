@@ -1,0 +1,112 @@
+{
+  "content_id": "paper_07",
+  "language": "vi",
+  "citation_style": "author_year",
+  "length_class": "short",
+  "total_characters": 20250,
+  "section_tree": [
+    {
+      "level": 1,
+      "characters": 12
+    },
+    {
+      "level": 1,
+      "characters": 10
+    },
+    {
+      "level": 1,
+      "characters": 17
+    },
+    {
+      "level": 1,
+      "characters": 12
+    },
+    {
+      "level": 2,
+      "characters": 29
+    },
+    {
+      "level": 1,
+      "characters": 7
+    },
+    {
+      "level": 1,
+      "characters": 10
+    },
+    {
+      "level": 1,
+      "characters": 11
+    },
+    {
+      "level": 1,
+      "characters": 10
+    }
+  ],
+  "section_counts": {
+    "1": 8,
+    "2": 1
+  },
+  "tables": [
+    {
+      "rows": 7,
+      "columns": 6
+    }
+  ],
+  "table_count": 1,
+  "widest_column_count": 6,
+  "figures_charts": {
+    "architecture": 3,
+    "flowchart": 1,
+    "area": 1,
+    "scatter": 1,
+    "line": 1,
+    "histogram": 1
+  },
+  "chart_count": 4,
+  "figure_count": 4,
+  "box_count": 1,
+  "display_equations": 0,
+  "inline_equations": 31,
+  "element_plan": {
+    "archetype": "field_study",
+    "counts": {
+      "chart": 4,
+      "figure": 4,
+      "table": 1,
+      "equation": 0,
+      "code": 0,
+      "references": 21
+    },
+    "chart_types": [
+      "line",
+      "histogram",
+      "area",
+      "scatter"
+    ],
+    "figure_types": [
+      "architecture",
+      "flowchart",
+      "architecture",
+      "architecture"
+    ],
+    "sections": [
+      "Introduction",
+      "Study Area",
+      "Sampling Protocol",
+      "Measurements",
+      "Results",
+      "Discussion",
+      "Limitations",
+      "Conclusion"
+    ]
+  },
+  "code_listing_count": 0,
+  "code_listing": false,
+  "footnote_count": 1,
+  "reference_count": 21,
+  "author_count": 2,
+  "affiliation_count": 2,
+  "title_characters": 65,
+  "longest_author_line": 45,
+  "longest_affiliation": 81
+}

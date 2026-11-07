@@ -1,0 +1,121 @@
+{
+  "content_id": "paper_04",
+  "language": "en",
+  "citation_style": "author_year",
+  "length_class": "short",
+  "total_characters": 26355,
+  "section_tree": [
+    {
+      "level": 1,
+      "characters": 12
+    },
+    {
+      "level": 1,
+      "characters": 10
+    },
+    {
+      "level": 2,
+      "characters": 13
+    },
+    {
+      "level": 1,
+      "characters": 17
+    },
+    {
+      "level": 1,
+      "characters": 12
+    },
+    {
+      "level": 1,
+      "characters": 7
+    },
+    {
+      "level": 1,
+      "characters": 10
+    },
+    {
+      "level": 1,
+      "characters": 11
+    },
+    {
+      "level": 1,
+      "characters": 10
+    }
+  ],
+  "section_counts": {
+    "1": 8,
+    "2": 1
+  },
+  "tables": [
+    {
+      "rows": 3,
+      "columns": 5
+    },
+    {
+      "rows": 6,
+      "columns": 5
+    },
+    {
+      "rows": 4,
+      "columns": 5
+    },
+    {
+      "rows": 3,
+      "columns": 6
+    }
+  ],
+  "table_count": 4,
+  "widest_column_count": 6,
+  "figures_charts": {
+    "bar": 2,
+    "area": 1,
+    "scatter": 1,
+    "grouped_bar": 1,
+    "pipeline": 1
+  },
+  "chart_count": 5,
+  "figure_count": 1,
+  "box_count": 0,
+  "display_equations": 3,
+  "inline_equations": 23,
+  "element_plan": {
+    "archetype": "field_study",
+    "counts": {
+      "chart": 5,
+      "figure": 1,
+      "table": 4,
+      "equation": 3,
+      "code": 0,
+      "references": 40
+    },
+    "chart_types": [
+      "bar",
+      "area",
+      "scatter",
+      "grouped_bar",
+      "box"
+    ],
+    "figure_types": [
+      "pipeline"
+    ],
+    "sections": [
+      "Introduction",
+      "Study Area",
+      "Sampling Protocol",
+      "Measurements",
+      "Results",
+      "Discussion",
+      "Limitations",
+      "Conclusion"
+    ]
+  },
+  "code_listing_count": 0,
+  "code_listing": false,
+  "footnote_count": 1,
+  "reference_count": 40,
+  "author_count": 3,
+  "affiliation_count": 2,
+  "title_characters": 65,
+  "longest_author_line": 42,
+  "longest_affiliation": 48
+}

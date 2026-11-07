@@ -17,4 +17,7 @@ from .pipeline import (
     SourceContent,
 )
 
-CONTRACT_VERSION = "0.2.0"
+CONTRACT_VERSION = "0.3.0"
+SUPPORTED_CONTRACT_VERSIONS = {"0.2.0", CONTRACT_VERSION}
+
+from .sidecars import BlockBox, Boxes, IgnoredRegion, LintFinding, LintReport, PageBoxes

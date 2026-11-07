@@ -225,6 +225,8 @@ def _academic_chart_svg(data, colors):
     else:
         y_min = min(0, min(all_y, default=0))
     y_max = max(all_y, default=1)
+    if kind in {'line','bar','grouped_bar'}:
+        y_max = max([y_max] + [v+e for item in series for v,e in zip(item.get('values',[]),item.get('errors',[]))])
     if kind == 'stacked_bar':
         y_max = max((sum(item['values'][i] for item in series) for i in range(len(labels))), default=1)
     if y_max <= y_min:
@@ -270,7 +272,7 @@ def _academic_chart_svg(data, colors):
                     current += value
         else:
             nseries = len(series) if kind == 'grouped_bar' else 1
-            bar_w = group_w * .68 / nseries
+            bar_w = group_w if kind == "histogram" else group_w * .68 / nseries
             for series_index, item in enumerate(series):
                 for index, value in enumerate(item['values']):
                     offset = (series_index - (nseries - 1) / 2) * bar_w
@@ -363,7 +365,7 @@ def chart_svg(data, colors=("#1f4e79", "#c9a227", "#7a7a7a")):
     if kind=='donut' and (len(data['series'])!=1 or any(v<0 for v in data['series'][0]['values'])):
         raise ValueError('Donut requires one non-negative series')
     if kind=='grouped_column':return _legacy_chart_svg({**data,'chart_type':'bar'},colors)
-    if not data.get('academic') or kind not in {'hbar','dot','lollipop','area','stacked_bar'}:
+    if not data.get('academic') or kind not in {'hbar','dot','lollipop'}:
         return _original_chart_svg(data,colors)
     labels=data['labels'];series=data['series'];n=max(1,len(labels));peak=max(1,max(sum(max(0,s['values'][i]) for s in series) if kind=='stacked_bar' else max(abs(s['values'][i]) for s in series) for i in range(n)))
     out=['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 320" font-family="Factory Serif,serif" font-size="11">']

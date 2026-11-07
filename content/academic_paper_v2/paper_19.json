@@ -1,0 +1,844 @@
+{
+  "content_id": "paper_19",
+  "variables": {
+    "lang": "vi",
+    "field": "optical metrology",
+    "paper_length": "short",
+    "citation_style": "author_year",
+    "element_plan": {
+      "archetype": "theoretical",
+      "counts": {
+        "chart": 2,
+        "figure": 1,
+        "table": 3,
+        "equation": 11,
+        "code": 1,
+        "references": 24
+      },
+      "chart_types": [
+        "line",
+        "histogram"
+      ],
+      "figure_types": [
+        "image_panel"
+      ],
+      "sections": [
+        "Introduction",
+        "Related Work",
+        "Definitions",
+        "Main Results",
+        "Proofs",
+        "Numerical Illustration",
+        "Limitations",
+        "Conclusion"
+      ]
+    }
+  },
+  "lang": "vi",
+  "values": {
+    "title": "Giới hạn suy luận trong đo lường quang học giao thoa dưới nhiễu tương quan",
+    "authors": [
+      {
+        "name": "Nguyễn Minh Kha",
+        "affiliations": [
+          1
+        ],
+        "corresponding": true,
+        "email": "minhkha@quangpho-lab.vn"
+      },
+      {
+        "name": "Trần Bảo Nghi",
+        "affiliations": [
+          1,
+          2
+        ],
+        "corresponding": false
+      }
+    ],
+    "affiliations": [
+      "Phòng Nghiên cứu Quang phổ và Đo lường, Viện Khoa học Ánh Khuê",
+      "Khoa Vật lý Ứng dụng, Trung tâm Kỹ thuật Lam Sơn"
+    ],
+    "abstract": "Bài viết xây dựng một khung lý thuyết để đánh giá độ chính xác của phép đo pha giao thoa khi tín hiệu chịu nhiễu tương quan theo không gian và thời gian. Dựa trên mô hình xác suất của trường quang học, chúng tôi phân tích độ lệch và phương sai của ước lượng pha, đồng thời xác định vai trò của độ tương phản, bề rộng phổ và mức tương quan nhiễu. Kết quả cho thấy việc giả định nhiễu độc lập có thể dẫn đến đánh giá quá lạc quan về độ phân giải, trong khi một mô hình tương quan phù hợp cho phép dự báo ổn định hơn giới hạn đo. Khung phân tích này cung cấp cơ sở cho việc thiết kế thuật toán suy luận và lựa chọn tham số trong các hệ đo giao thoa chính xác cao.",
+    "abstract_alt": null,
+    "keywords": "đo lường quang học; giao thoa kế; ước lượng pha; nhiễu tương quan; độ phân giải; suy luận thống kê",
+    "keywords_alt": null,
+    "journal": "Tạp chí Đo lường Quang học Ánh Khuê",
+    "acknowledgement": "Nhóm tác giả trân trọng cảm ơn Phòng Nghiên cứu Quang phổ và Đo lường cùng Trung tâm Kỹ thuật Lam Sơn đã hỗ trợ thảo luận chuyên môn và góp ý cho bản thảo.",
+    "references": [
+      {
+        "text": "Ahn Kha, T. và Bùi Lam, Q. (2014). Mô hình xác suất cho đo pha giao thoa dưới nhiễu không dừng. Tạp chí Quang trắc Lam Nguyên, 8(2), 41–53.",
+        "cite": "Ahn Kha và Bùi Lam, 2014"
+      },
+      {
+        "text": "Võ Tịnh, M. (2015). Giới hạn suy luận trong các hệ đo quang học có tương quan không gian. Kỷ yếu Đo lường Tia Việt, 3(1), 15–29.",
+        "cite": "Võ Tịnh, 2015"
+      },
+      {
+        "text": "Trần Ngọc Sương và Phạm Kha Duy (2015). Phân tích độ lệch của ước lượng pha từ cường độ giao thoa. Tạp chí Kỹ thuật Quang phổ Bách Lưu, 6(4), 77–89.",
+        "cite": "Trần Ngọc Sương và Phạm Kha Duy, 2015"
+      },
+      {
+        "text": "Đinh Lam Phúc (2016). Hiệp phương sai mũ trong đo lường quang học chính xác. Tạp chí Đo quang Vân Hà, 9(3), 102–116.",
+        "cite": "Đinh Lam Phúc, 2016"
+      },
+      {
+        "text": "Hoàng Túc Nghi và Lưu Minh Thạch (2016). Thông tin Fisher cho bài toán suy luận pha đa điểm. Kỷ yếu Quang học Ứng dụng Cửu Nguyên, 5(2), 33–47.",
+        "cite": "Hoàng Túc Nghi và Lưu Minh Thạch, 2016"
+      },
+      {
+        "text": "Phan Duy Cảnh (2017). Ảnh hưởng của độ tương phản đến độ phân giải pha giao thoa. Tạp chí Đo lường Tân Quang, 11(1), 24–38.",
+        "cite": "Phan Duy Cảnh, 2017"
+      },
+      {
+        "text": "Ngô Bách Khoa và Đặng Yên Lam (2017). Suy luận hợp lý với ma trận nhiễu có cấu trúc. Tạp chí Toán Quang Học Lạc Việt, 4(3), 58–72.",
+        "cite": "Ngô Bách Khoa và Đặng Yên Lam, 2017"
+      },
+      {
+        "text": "Lâm Thụy An (2018). Phổ tương quan thời gian của nhiễu trong giao thoa kế. Tạp chí Quang điện Huyền Sơn, 12(2), 9–22.",
+        "cite": "Lâm Thụy An, 2018"
+      },
+      {
+        "text": "Bùi Quang Nghi và Tạ Minh Kha (2018). Cận dưới phương sai cho ước lượng pha có phụ thuộc quan sát. Kỷ yếu Suy luận Đo lường Nam Vân, 7(4), 81–96.",
+        "cite": "Bùi Quang Nghi và Tạ Minh Kha, 2018"
+      },
+      {
+        "text": "Vũ Lam Chi (2019). Hiệu chỉnh độ lệch trong phép đo pha phi tuyến. Tạp chí Phân tích Quang học Tĩnh Nam, 10(1), 36–49.",
+        "cite": "Vũ Lam Chi, 2019"
+      },
+      {
+        "text": "Đỗ Tường Vi và Nguyễn Kỳ Sơn (2019). Mối liên hệ giữa bề rộng phổ và độ bất định đo quang. Tạp chí Khoa học Ánh tuyến, 13(3), 119–134.",
+        "cite": "Đỗ Tường Vi và Nguyễn Kỳ Sơn, 2019"
+      },
+      {
+        "text": "Tô Mặc Duyên (2020). Nguyên lý cực đại hợp lý trong trường giao thoa chịu nhiễu tương quan. Tạp chí Suy luận Quang lượng, 8(2), 52–67.",
+        "cite": "Tô Mặc Duyên, 2020"
+      },
+      {
+        "text": "Hà Vân Kết và Phùng Lam Nguyên (2020). Đánh giá độ ổn định của bộ ước lượng pha theo cấu trúc hiệp phương sai. Kỷ yếu Đo chính xác Thiên Lam, 9(1), 27–42.",
+        "cite": "Hà Vân Kết và Phùng Lam Nguyên, 2020"
+      },
+      {
+        "text": "Mai Tịnh Quang (2021). Ngưỡng phân giải trong đo chiều dài bằng giao thoa quang. Tạp chí Quang trắc Ngân Hà, 14(4), 88–103.",
+        "cite": "Mai Tịnh Quang, 2021"
+      },
+      {
+        "text": "Cao Bảo Thư và Lê Huyền Túc (2021). Lan truyền bất định từ nhiễu cường độ sang pha suy luận. Tạp chí Đo lường Ánh tuyến Bắc Vân, 5(2), 61–75.",
+        "cite": "Cao Bảo Thư và Lê Huyền Túc, 2021"
+      },
+      {
+        "text": "Nghiêm Kha Vũ (2022). Mô hình trường ngẫu nhiên cho giao thoa kế có phụ thuộc không gian–thời gian. Tạp chí Lý thuyết Quang học Vạn Tường, 16(1), 14–31.",
+        "cite": "Nghiêm Kha Vũ, 2022"
+      },
+      {
+        "text": "Phạm Nguyệt Tân và Đào Lam Uyên (2022). Tác động của nhiễu tương quan đến cận thông tin pha. Kỷ yếu Đo lường Tia Nguyên, 10(3), 44–59.",
+        "cite": "Phạm Nguyệt Tân và Đào Lam Uyên, 2022"
+      },
+      {
+        "text": "Trịnh Bách Nguyên (2022). Phân rã thông tin trong hệ đo giao thoa đa kênh. Tạp chí Quang học Suy luận Vân Sơn, 7(4), 97–112.",
+        "cite": "Trịnh Bách Nguyên, 2022"
+      },
+      {
+        "text": "Đặng Minh Từ và Vũ Kỳ Lam (2023). So sánh hàm hợp lý đầy đủ và dạng đường chéo trong ước lượng pha. Tạp chí Kỹ thuật Quang lượng Tân Hà, 18(2), 73–90.",
+        "cite": "Đặng Minh Từ và Vũ Kỳ Lam, 2023"
+      },
+      {
+        "text": "Lý Bảo Kha (2023). Tính nhận dạng của tham số tương quan trong đo quang học. Tạp chí Toán học Đo lường Lam Khê, 6(1), 20–35.",
+        "cite": "Lý Bảo Kha, 2023"
+      },
+      {
+        "text": "Nguyễn Túc Nghi và Hồ Vân Sâm (2023). Phân tích tiệm cận của ước lượng pha dưới nhiễu Gauss có nhớ. Kỷ yếu Quang học Chính xác Lưu Nguyên, 11(2), 55–70.",
+        "cite": "Nguyễn Túc Nghi và Hồ Vân Sâm, 2023"
+      },
+      {
+        "text": "Quách Lam Duy (2024). Vai trò của tương quan thời gian trong giới hạn đo chiều dài giao thoa. Tạp chí Đo quang Huyền Vân, 15(3), 101–118.",
+        "cite": "Quách Lam Duy, 2024"
+      },
+      {
+        "text": "Tạ Bích Nguyên và Bạch Minh Túc (2024). Suy luận Bayes cho pha giao thoa với nhiễu có cấu trúc. Tạp chí Phương pháp Quang học An Tịnh, 9(2), 39–56.",
+        "cite": "Tạ Bích Nguyên và Bạch Minh Túc, 2024"
+      },
+      {
+        "text": "Phùng Kỳ Lam (2025). Giới hạn thông tin và độ phân giải trong đo lường quang học tương quan. Tạp chí Lý thuyết Đo quang Nguyên Phổ, 17(1), 12–28.",
+        "cite": "Phùng Kỳ Lam, 2025"
+      },
+      {
+        "text": "Đỗ Vân Tịnh và Trần Kha Nguyên (2025). Khung suy luận thống nhất cho tín hiệu giao thoa chịu nhiễu không độc lập. Kỷ yếu Quang trắc Bách Vân, 12(4), 84–99.",
+        "cite": "Đỗ Vân Tịnh và Trần Kha Nguyên, 2025"
+      }
+    ],
+    "body": [
+      {
+        "type": "code",
+        "id": "alg:correlated-phase-inference",
+        "language": "pseudocode",
+        "caption": "Suy luận pha với mô hình nhiễu tương quan",
+        "lines": [
+          "Đầu vào: cường độ đo I, độ tương phản V, cường độ nền I0, bước sóng Lambda",
+          "Ước lượng các bề rộng tương quan không gian lambda_x và thời gian lambda_t",
+          "Xây dựng ma trận hiệp phương sai Sigma từ các bề rộng tương quan",
+          "Tính nghịch đảo ổn định của Sigma bằng phép phân rã trị riêng có ngưỡng",
+          "Khởi tạo pha phi tại giá trị cực đại của hàm hợp lý",
+          "Lặp cho đến khi độ thay đổi pha nhỏ hơn ngưỡng hội tụ",
+          "Tính cường độ dự báo theo pha hiện thời và đạo hàm theo phi",
+          "Cập nhật phi bằng bước Newton có điều chỉnh theo Sigma",
+          "Đánh giá thông tin Fisher từ đạo hàm cường độ và Sigma",
+          "Tính độ lệch, phương sai cận dưới và giới hạn phân giải",
+          "Trả về pha ước lượng, độ bất định và cảnh báo về mức tương quan"
+        ]
+      },
+      {
+        "type": "chart",
+        "chart_type": "line",
+        "id": "fig:resolution-correlation",
+        "caption": "Giới hạn phân giải theo bề rộng tương quan thời gian trong các điều kiện nhiễu; phân bố sai số pha tương ứng được trình bày tại \\ref{fig:phase-error-distribution}.",
+        "labels": [
+          "0,00",
+          "0,20",
+          "0,50",
+          "1,00",
+          "1,50"
+        ],
+        "series": [
+          {
+            "name": "Tương quan không gian ngắn",
+            "values": [
+              10,
+              8.9,
+              9.8,
+              10.6,
+              11.2
+            ],
+            "errors": [
+              0.3,
+              0.3,
+              0.4,
+              0.4,
+              0.5
+            ]
+          },
+          {
+            "name": "Tương quan không gian trung bình",
+            "values": [
+              10.9,
+              11.4,
+              12.4,
+              14.1,
+              16.1
+            ],
+            "errors": [
+              0.4,
+              0.4,
+              0.5,
+              0.6,
+              0.7
+            ]
+          },
+          {
+            "name": "Tương quan không gian dài",
+            "values": [
+              12.1,
+              13.2,
+              14.8,
+              17.2,
+              19.6
+            ],
+            "errors": [
+              0.5,
+              0.5,
+              0.6,
+              0.7,
+              0.9
+            ]
+          }
+        ],
+        "x_label": "Bề rộng tương quan thời gian λ_t (ms)",
+        "y_label": "Giới hạn δL_min (nm)",
+        "legend_position": "outside"
+      },
+      {
+        "type": "table",
+        "id": "tab:correlation-sensitivity",
+        "caption": "Độ nhạy của giới hạn phân giải theo tương quan nhiễu",
+        "header": [
+          [
+            {
+              "text": "Điều kiện đo",
+              "rowspan": 2
+            },
+            {
+              "text": "Mô hình nhiễu",
+              "colspan": 2
+            },
+            {
+              "text": "Kết quả suy luận",
+              "colspan": 3
+            }
+          ],
+          [
+            {
+              "text": "Bề rộng tương quan không gian \\(\\lambda_x\\) (mm)"
+            },
+            {
+              "text": "Bề rộng tương quan thời gian \\(\\lambda_t\\) (ms)"
+            },
+            {
+              "text": "Độ lệch pha (rad)"
+            },
+            {
+              "text": "Phương sai pha (rad\\(^2\\))"
+            },
+            {
+              "text": "Giới hạn \\(\\delta L_{\\min}\\) (nm)"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "Cơ sở",
+            "0,20",
+            "0,50",
+            "0,0041",
+            "0,0186",
+            "12,4"
+          ],
+          [
+            "Tương quan ngắn",
+            "0,08",
+            "0,20",
+            "0,0037",
+            "0,0152",
+            {
+              "text": "11,2",
+              "bold": true
+            }
+          ],
+          [
+            "Tương quan trung bình",
+            "0,20",
+            "0,50",
+            "0,0041",
+            "0,0186",
+            "12,4"
+          ],
+          [
+            "Tương quan dài",
+            "0,60",
+            "1,50",
+            "0,0068",
+            "0,0315",
+            "16,1"
+          ],
+          [
+            "Độc lập theo thời gian",
+            "0,20",
+            "0,00",
+            "0,0029",
+            {
+              "text": "0,0118",
+              "bold": true
+            },
+            "10,7"
+          ],
+          [
+            "Độc lập hoàn toàn",
+            "0,00",
+            "0,00",
+            {
+              "text": "0,0024",
+              "bold": true
+            },
+            "0,0126",
+            "10,9"
+          ]
+        ],
+        "note": "Các giá trị được chuẩn hóa theo cùng độ tương phản \\(V=0,82\\), cường độ nền \\(I_0=1,00\\) và số quan sát \\(N=240\\)."
+      },
+      {
+        "type": "equation",
+        "id": "eq:interference-intensity",
+        "latex": "I(x,t)=I_0\\left[1+V\\mathrm{cos}(p(x,t))\\right]+e(x,t)",
+        "numbered": true
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Introduction"
+      },
+      {
+        "type": "chart",
+        "chart_type": "histogram",
+        "id": "fig:phase-error-distribution",
+        "caption": "Phân bố sai số pha của các bộ ước lượng dưới mô hình hiệp phương sai đầy đủ.",
+        "labels": [
+          "-0,06 đến -0,04",
+          "-0,04 đến -0,02",
+          "-0,02 đến 0,00",
+          "0,00 đến 0,02",
+          "0,02 đến 0,04",
+          "0,04 đến 0,06"
+        ],
+        "series": [
+          {
+            "name": "Tần số sai số pha",
+            "values": [
+              5,
+              18,
+              47,
+              63,
+              35,
+              12
+            ],
+            "errors": [
+              1,
+              2,
+              4,
+              5,
+              3,
+              2
+            ]
+          }
+        ],
+        "x_label": "Sai số pha (rad)",
+        "y_label": "Số lần quan sát",
+        "legend_position": "outside"
+      },
+      {
+        "type": "table",
+        "id": "tab:estimator-comparison",
+        "caption": "So sánh các bộ ước lượng pha dưới những giả định tương quan khác nhau",
+        "header": [
+          [
+            {
+              "text": "Bộ ước lượng",
+              "rowspan": 2
+            },
+            {
+              "text": "Giả định hiệp phương sai",
+              "colspan": 2
+            },
+            {
+              "text": "Chỉ tiêu đánh giá",
+              "colspan": 3
+            }
+          ],
+          [
+            {
+              "text": "\\(\\lambda_x\\) (mm)"
+            },
+            {
+              "text": "\\(\\lambda_t\\) (ms)"
+            },
+            {
+              "text": "Độ lệch tuyệt đối (rad)"
+            },
+            {
+              "text": "RMSE (rad)"
+            },
+            {
+              "text": "Độ phủ 95% (%)"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "Hợp lý đầy đủ",
+            "0,20",
+            "0,50",
+            "0,0041",
+            {
+              "text": "0,0214",
+              "bold": true
+            },
+            "94,8"
+          ],
+          [
+            "Hợp lý đường chéo",
+            "0,00",
+            "0,00",
+            "0,0096",
+            "0,0387",
+            "88,1"
+          ],
+          [
+            "Trọng số phổ",
+            "0,20",
+            "0,50",
+            {
+              "text": "0,0038",
+              "bold": true
+            },
+            "0,0226",
+            "94,2"
+          ],
+          [
+            "Bình phương tối thiểu",
+            "0,00",
+            "0,00",
+            "0,0113",
+            "0,0449",
+            "84,7"
+          ],
+          [
+            "Trung vị cửa sổ",
+            "0,20",
+            "0,50",
+            "0,0067",
+            "0,0298",
+            "91,5"
+          ],
+          [
+            "Hiệu chỉnh hậu nghiệm",
+            "0,20",
+            "0,50",
+            "0,0045",
+            "0,0231",
+            {
+              "text": "95,1",
+              "bold": true
+            }
+          ]
+        ],
+        "note": "RMSE được tính trên 180 cấu hình pha; độ phủ là tỷ lệ khoảng tin cậy chứa giá trị pha đặt trước."
+      },
+      {
+        "type": "equation",
+        "id": "eq:noise-covariance",
+        "latex": "\\left\\langle e(x,t)e(x',t')\\right\\rangle=s^2\\exp\\left(-\\frac{|x-x'|}{lx}-\\frac{|t-t'|}{lt}\\right)",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Đo pha giao thoa là một bài toán trung tâm của đo lường quang học chính xác, trong đó một biến đổi rất nhỏ của chiều dài quang học được suy ra từ sự thay đổi của cường độ trên cảm biến. Khó khăn không chỉ nằm ở độ yếu của tín hiệu, mà còn ở việc nhiễu thường có cấu trúc phụ thuộc theo không gian và thời gian. Các nghiên cứu về trường ngẫu nhiên, nhiễu không dừng và lan truyền bất định đã chỉ ra rằng giả định độc lập giữa các quan sát có thể làm giảm giả tạo độ bất định suy luận \\cite{1}, \\cite{2}, \\cite{3}, \\cite{16}. Trong bài viết này, chúng tôi xây dựng một khung lý thuyết ngắn gọn cho việc đánh giá độ lệch, phương sai và giới hạn phân giải của ước lượng pha khi hiệp phương sai của nhiễu được mô tả tường minh.\\fn{Các ký hiệu pha và chiều dài trong bài được hiểu trên một nhánh liên tục đã chọn, trừ khi có nêu khác.}"
+      },
+      {
+        "type": "figure",
+        "figure_type": "image_panel",
+        "id": "fig:interferometric-inference-scheme",
+        "caption": "Sơ đồ hình ảnh của chuỗi đo giao thoa và các đại lượng suy luận pha.",
+        "description": "Ảnh ghép mô tả đường truyền quang qua bộ giao thoa, bản đồ cường độ trên cảm biến và kết quả suy luận pha khi nhiễu có tương quan không gian-thời gian.",
+        "labels": [
+          "Nguồn sáng",
+          "Bộ giao thoa",
+          "Cảm biến",
+          "Bản đồ cường độ",
+          "Bản đồ pha",
+          "Phổ nhiễu"
+        ],
+        "panels": [
+          {
+            "label": "A",
+            "description": "Đường truyền quang và vùng giao thoa trước mặt phẳng cảm biến."
+          },
+          {
+            "label": "B",
+            "description": "Bản đồ cường độ thu được với các vân giao thoa có độ tương phản 0,82."
+          },
+          {
+            "label": "C",
+            "description": "Bản đồ pha ước lượng cùng vùng bất định do tương quan nhiễu."
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "id": "tab:information-budget",
+        "caption": "Phân rã thông tin Fisher theo độ tương phản và mức nhiễu",
+        "header": [
+          [
+            {
+              "text": "Mức nhiễu chuẩn hóa",
+              "rowspan": 2
+            },
+            {
+              "text": "Độ tương phản \\(V\\)",
+              "colspan": 2
+            },
+            {
+              "text": "Thông tin Fisher",
+              "colspan": 2
+            },
+            {
+              "text": "Giới hạn đo",
+              "rowspan": 2
+            },
+            {
+              "text": "Ghi chú",
+              "rowspan": 2
+            }
+          ],
+          [
+            {
+              "text": "Giá trị"
+            },
+            {
+              "text": "Suy giảm (%)"
+            },
+            {
+              "text": "\\(\\mathcal{I}(\\phi)\\)"
+            },
+            {
+              "text": "So với cơ sở (%)"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "Thấp",
+            "0,90",
+            "0",
+            "184,6",
+            "100",
+            "8,3",
+            "Ổn định"
+          ],
+          [
+            "Thấp",
+            "0,70",
+            "22,2",
+            "111,7",
+            "60,5",
+            "10,7",
+            "Suy giảm nhẹ"
+          ],
+          [
+            "Trung bình",
+            "0,70",
+            "22,2",
+            "76,4",
+            "41,4",
+            "12,9",
+            "Cần hiệu chỉnh tương quan"
+          ],
+          [
+            "Trung bình",
+            "0,50",
+            "44,4",
+            "39,1",
+            "21,2",
+            "18,1",
+            "Nhạy với nhiễu"
+          ],
+          [
+            "Cao",
+            "0,50",
+            "44,4",
+            "18,7",
+            "10,1",
+            "26,2",
+            "Giới hạn rõ rệt"
+          ],
+          [
+            "Cao",
+            "0,90",
+            "0",
+            {
+              "text": "42,8",
+              "bold": true
+            },
+            "23,2",
+            {
+              "text": "17,4",
+              "bold": true
+            },
+            "Tương quan chi phối"
+          ]
+        ],
+        "note": "Thông tin Fisher được quy đổi tại pha \\(\\phi=\\pi/2\\); giá trị lớn hơn biểu thị khả năng suy luận pha tốt hơn."
+      },
+      {
+        "type": "equation",
+        "id": "eq:phase-gradient",
+        "latex": "\\partial_x p=\\frac{2\\mathrm{pi}}{Lw}\\partial_x L",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Mục tiêu chính là phân biệt ba nguồn suy giảm thông tin: độ tương phản hữu hạn, phổ nhiễu có nhớ và sự phi tuyến của ánh xạ từ pha sang cường độ. Với một trường giao thoa, cường độ quan sát có thể được xem như tổng của nền tuần hoàn và một trường nhiễu ngẫu nhiên. Ký hiệu $V$ cho độ tương phản, $I_0$ cho cường độ nền và $N$ cho số quan sát, thông tin pha thường tăng theo $N V^2$ nhưng không nhất thiết tăng tuyến tính khi các quan sát tương quan. Hệ quả này liên quan trực tiếp đến ngưỡng phân giải chiều dài được thảo luận trong các công trình về thông tin và đo chiều dài giao thoa \\cite{14}, \\cite{17}, \\cite{24}."
+      },
+      {
+        "type": "equation",
+        "id": "eq:likelihood",
+        "latex": "q(I|p)\\propto\\exp\\left[-\\frac{1}{2}\\left(I-Ihat(p)\\right)^T C^{-1}\\left(I-Ihat(p)\\right)\\right]",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Các đối tượng trực quan của khung phân tích được mô tả sớm qua \\ref{fig:interferometric-inference-scheme}, còn xu hướng của giới hạn phân giải theo bề rộng tương quan được nêu trong \\ref{fig:resolution-correlation}. Những kết quả định lượng về độ nhạy, bộ ước lượng và ngân sách thông tin lần lượt được đối chiếu với \\ref{tab:correlation-sensitivity}, \\ref{tab:estimator-comparison} và \\ref{tab:information-budget}. Quy trình suy luận tương ứng được quy chiếu tại \\ref{alg:correlated-phase-inference}; các tham chiếu này chỉ đóng vai trò định hướng cho lập luận, còn phần dưới đây tập trung vào tính chất lý thuyết thay vì trình bày dữ liệu trực quan."
+      },
+      {
+        "type": "equation",
+        "id": "eq:fisher-information",
+        "latex": "F(p)=\\left(\\partial_p Ihat\\right)^T C^{-1}\\left(\\partial_p Ihat\\right)",
+        "numbered": true
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Related Work"
+      },
+      {
+        "type": "equation",
+        "id": "eq:correlation-spectrum",
+        "latex": "S_e(f)=\\frac{2s^2lt}{1+4\\mathrm{pi}^2lt^2f^2}",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Các mô hình xác suất đầu tiên cho đo pha dưới nhiễu không dừng nhấn mạnh vai trò của hàm tương quan trong việc xác định độ tin cậy của ước lượng \\cite{1}. Đối với phụ thuộc không gian, độ rộng tương quan làm thay đổi số bậc tự do hiệu dụng của trường đo, từ đó ảnh hưởng đến giới hạn suy luận \\cite{2}. Phân tích độ lệch của các bộ ước lượng dựa trên cường độ cho thấy phi tuyến có thể tạo ra sai lệch ngay cả khi nhiễu có trung bình bằng không \\cite{3}. Một lựa chọn phổ biến là hiệp phương sai mũ, vì nó vừa bảo toàn tính xác định dương vừa cho phép diễn giải trực tiếp qua các độ dài nhớ \\cite{4}."
+      },
+      {
+        "type": "equation",
+        "id": "eq:phase-bias",
+        "latex": "b_p=E[Ihat]-p\\approx\\frac{\\partial_p^2 Ihat}{2F(p)}",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Trong hướng tiếp cận thông tin, thông tin Fisher cho bài toán đa điểm được hình thành từ đạo hàm của cường độ dự báo và nghịch đảo hiệp phương sai \\cite{5}. Độ tương phản suy giảm làm giảm độ dốc của tín hiệu giao thoa, nên giới hạn pha tăng nhanh khi $V$ tiến về không \\cite{6}. Các phương pháp hợp lý với ma trận nhiễu có cấu trúc thường đạt độ ổn định tốt hơn dạng đường chéo, đặc biệt khi tương quan kéo dài qua nhiều điểm đo \\cite{7}, \\cite{19}. Ở miền tần số, phổ của nhiễu có nhớ cung cấp một cách diễn giải tương đương cho sự phân bổ thông tin theo thời gian \\cite{8}."
+      },
+      {
+        "type": "equation",
+        "id": "eq:phase-variance",
+        "latex": "\\mathrm{var}(Ihat)\\frac{}{ }\\neq 0",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Những cận dưới phương sai cho quan sát phụ thuộc làm rõ rằng việc tăng số điểm không đồng nghĩa với việc tăng cùng tỷ lệ số lượng thông tin \\cite{9}. Các hiệu chỉnh bậc thấp đối với độ lệch có thể hữu ích khi pha nằm gần vùng cực trị của hàm cường độ \\cite{10}. Mối liên hệ giữa bề rộng phổ và độ bất định đo cũng cho thấy việc lấy mẫu quá nhanh không luôn tạo ra thông tin mới nếu nhiễu có thời gian nhớ dài \\cite{11}. Các kết quả gần đây về hàm hợp lý, ổn định hiệp phương sai và suy luận Bayes mở rộng cùng một nguyên tắc: cấu trúc nhiễu phải được đưa vào mô hình thay vì bị loại bỏ trong bước tiền xử lý \\cite{12}, \\cite{13}, \\cite{23}."
+      },
+      {
+        "type": "equation",
+        "id": "eq:contrast-information",
+        "latex": "F(p)\\approx\\frac{N V^2 I_0^2}{s^2}\\mathrm{sin}^2(p)",
+        "numbered": true
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Definitions"
+      },
+      {
+        "type": "equation",
+        "id": "eq:resolution-limit",
+        "latex": "dLmin=\\frac{Lw}{2\\mathrm{pi}}\\sqrt{\\mathrm{var}(Ihat)}",
+        "numbered": true
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Mô hình quan sát và tham số tương quan"
+      },
+      {
+        "type": "equation",
+        "id": "eq:correlation-penalty",
+        "latex": "r_eff=\\frac{\\mathrm{tr}(C)}{\\left(\\mathrm{tr}(C^{-1})\\right)^{-1}}",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Gọi $I_j$ là cường độ tại điểm không gian-thời gian thứ $j$, còn $phi$ là pha cần suy luận. Hàm trung bình của quan sát được ký hiệu là $widehat{I}(phi)$, với độ tương phản $V$ và nền $I_0$. Nhiễu được mô tả bởi ma trận hiệp phương sai $Sigma$, trong đó các phần tử ngoài đường chéo thể hiện mức phụ thuộc giữa các quan sát. Hai tham số $lambda_x$ và $lambda_t$ lần lượt biểu thị bề rộng tương quan không gian và thời gian. Khi cả hai tham số nhỏ hơn khoảng lấy mẫu, mô hình gần với nhiễu độc lập; khi chúng lớn, số quan sát hiệu dụng giảm đáng kể."
+      },
+      {
+        "type": "paragraph",
+        "text": "Với một cấu trúc hiệp phương sai dương xác định, hàm hợp lý Gaussian có thể được biểu diễn bằng khoảng cách Mahalanobis giữa dữ liệu và cường độ dự báo. Đạo hàm theo pha của hàm trung bình là vector nhạy cảm, ký hiệu $partial_phi widehat{I}$. Thông tin Fisher được định nghĩa bởi $mathcal{I}(phi)=(partial_phi widehat{I})^T Sigma^{-1}(partial_phi widehat{I})$, trong đó nghịch đảo hiệp phương sai gán trọng số thấp hơn cho những hướng dữ liệu đã bị nhiễu mạnh. Cách định nghĩa này phù hợp với các phân tích về cận thông tin trong trường có phụ thuộc không gian-thời gian \\cite{16}, \\cite{17}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Độ lệch pha được hiểu là kỳ vọng của ước lượng trừ đi pha thật, còn phương sai là trung bình bình phương của sai số sau khi loại bỏ độ lệch. Giới hạn chiều dài được suy ra từ pha thông qua bước sóng $Lambda$, theo quan hệ $delta L_min=(Lambda/(2 pi))sqrt{Var(hat{phi})}$. Vì hàm cường độ tuần hoàn, tính nhận dạng cần được xét trên một miền pha đủ hẹp hoặc đi kèm điều kiện khởi tạo thích hợp. Vấn đề này đã được nghiên cứu trong bối cảnh nhận dạng tham số tương quan và phân tích tiệm cận của nhiễu Gaussian có nhớ \\cite{20}, \\cite{21}."
+      },
+      {
+        "type": "box",
+        "kind": "remark",
+        "title": "Quy ước suy luận",
+        "text": "Trong toàn bộ khung này, hiệp phương sai được xem là đã được chuẩn hóa theo đơn vị cường độ và được giả định dương xác định trên miền quan sát. Khi các tham số tương quan chưa biết, chúng phải được ước lượng cùng với pha hoặc được truyền vào phân tích bất định. Không nên diễn giải cận Fisher như một bảo đảm tuyệt đối cho mọi bộ ước lượng hữu hạn mẫu."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Main Results"
+      },
+      {
+        "type": "paragraph",
+        "text": "Kết quả thứ nhất là thông tin pha không chỉ phụ thuộc vào biên độ nhiễu mà còn phụ thuộc vào hình học của các hướng nhiễu. Nếu $Sigma$ có các phần tử ngoài đường chéo đáng kể, phép nghịch đảo của nó có thể làm thay đổi mạnh trọng số giữa các điểm quan sát. Trong trường hợp tương quan dương đồng đều, nhiều quan sát gần nhau đóng góp ít thông tin mới hơn so với số lượng đếm trực tiếp. Do đó, một phân tích giả định độc lập thường cho cận phương sai quá thấp và giới hạn phân giải quá tốt."
+      },
+      {
+        "type": "paragraph",
+        "text": "Kết quả thứ hai liên quan đến độ tương phản. Ở vùng pha mà độ dốc cường độ lớn, xấp xỉ bậc nhất cho thấy $mathcal{I}(phi) approx N V^2 I_0^2 sigma^{-2} sin^2(phi)$. Công thức này cho thấy suy giảm $V$ có tác động bình phương, trong khi việc tăng $N$ chỉ hữu ích nếu các quan sát bổ sung không lặp lại cùng một nhiễu nền. Khi pha nằm gần điểm mà $sin(phi)$ nhỏ, thông tin cục bộ giảm và xấp xỉ tuyến tính trở nên kém tin cậy. Vì vậy, thiết kế phép đo cần phân bố các điểm quan sát quanh vùng có độ dốc cao thay vì chỉ tăng tốc độ thu nhận."
+      },
+      {
+        "type": "paragraph",
+        "text": "Kết quả thứ ba là độ lệch có thể xuất hiện do độ cong của hàm cường độ, ngay cả khi mô hình nhiễu không lệch. Một khai triển bậc hai cho thấy độ lệch tỷ lệ với đạo hàm bậc hai của cường độ dự báo và nghịch đảo của thông tin Fisher. Khi tương quan làm giảm thông tin, cùng một độ cong sẽ tạo ra độ lệch lớn hơn. Hiệu ứng này giải thích tại sao các bộ ước lượng hợp lý đầy đủ thường có RMSE tốt hơn dạng đường chéo, đồng thời duy trì độ phủ khoảng bất định gần mức danh định như được phản ánh trong \\ref{tab:estimator-comparison}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Kết quả thứ tư là phổ tương quan thời gian có thể được dùng để nhận diện vùng lấy mẫu dư thừa. Với một hàm tương quan giảm mũ, phổ tập trung quanh tần số thấp khi $lambda_t$ lớn. Khi đó, việc tăng số lần đo trong cùng khoảng thời gian không làm thông tin tăng tương ứng. Phân tích này phù hợp với các kết quả về vai trò của tương quan thời gian trong giới hạn đo chiều dài \\cite{22}. Phân rã ngân sách thông tin theo độ tương phản và mức nhiễu, như được tổng hợp tại \\ref{tab:information-budget}, cho phép tách riêng suy giảm do quang học khỏi suy giảm do thống kê."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Proofs"
+      },
+      {
+        "type": "paragraph",
+        "text": "Ta bắt đầu từ hàm hợp lý Gaussian với ma trận $Sigma$ không phụ thuộc vào pha. Lấy đạo hàm log-hợp lý theo $phi$, số hạng tuyến tính theo phần dư có kỳ vọng bằng không. Lấy bình phương và kỳ vọng, ta thu được tích vô hướng của hai vector đạo hàm qua metric $Sigma^{-1}$. Vì $Sigma$ dương xác định, tích vô hướng này không âm và bằng không chỉ khi tín hiệu không nhạy với pha. Đây là cơ sở của biểu thức thông tin Fisher nêu ở phần định nghĩa."
+      },
+      {
+        "type": "paragraph",
+        "text": "Để chứng minh ảnh hưởng của tương quan, xét phân rã riêng $Sigma=Q D Q^T$, trong đó $D$ chứa các trị riêng dương và $Q$ trực giao. Khi chuyển sang cơ sở riêng, mỗi thành phần đạo hàm được chia cho trị riêng tương ứng. Các hướng có phương sai lớn bị giảm trọng số, còn các hướng có phương sai nhỏ được tăng trọng số. Tuy nhiên, tổng thông tin không thể được suy ra chỉ từ phương sai biên; cần biết hướng của vector nhạy cảm so với các vector riêng. Đây là lý do hai phép đo có cùng mức nhiễu trung bình vẫn có thể đạt giới hạn khác nhau."
+      },
+      {
+        "type": "paragraph",
+        "text": "Cận phương sai được suy ra bằng cách áp dụng bất đẳng thức Cramer-Rao cho một tham số vô hướng. Với bộ ước lượng không lệch và các điều kiện khả vi thông thường, $Var(hat{phi}) geq 1/mathcal{I}(phi)$. Nếu có độ lệch, cận này phải được điều chỉnh bởi đạo hàm của kỳ vọng ước lượng; vì vậy việc dùng cận không lệch cho một bộ ước lượng lệch có thể gây diễn giải sai. Khi $N$ tăng trong khi cấu trúc tương quan giữ nguyên theo miền đo, cận thường giảm, nhưng tốc độ giảm phụ thuộc vào độ tăng của miền quan sát chứ không chỉ vào số điểm."
+      },
+      {
+        "type": "paragraph",
+        "text": "Đối với ánh xạ từ pha sang chiều dài, vi phân của pha theo chiều dài tỷ lệ với $2 pi/Lambda$. Lan truyền sai số bậc nhất cho ta giới hạn $delta L_min$ nêu trên. Nếu phân bố pha không tập trung hoặc có nhiều nhánh tuần hoàn, công thức này chỉ mô tả độ phân giải cục bộ. Một chứng minh chặt hơn cần bổ sung điều kiện chọn nhánh và kiểm soát xác suất nhảy chu kỳ. Những điều kiện này cũng là nguyên nhân khiến các cận tiệm cận cần được kiểm tra bằng phân tích hữu hạn mẫu \\cite{9}, \\cite{15}, \\cite{18}."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Numerical Illustration"
+      },
+      {
+        "type": "paragraph",
+        "text": "Để minh họa định tính, xét một cấu hình có độ tương phản cao vừa phải, nền đã chuẩn hóa và số quan sát cố định. Khi $lambda_t$ tăng từ gần không đến một giá trị lớn hơn khoảng lấy mẫu, nhiễu giữa các thời điểm trở nên giống nhau hơn, khiến số bậc tự do hiệu dụng giảm. Xu hướng này được thể hiện trong \\ref{fig:resolution-correlation}; đường giới hạn tăng rõ hơn khi tương quan không gian cũng kéo dài. Các giá trị trong \\ref{tab:correlation-sensitivity} cho thấy mô hình độc lập có thể báo cáo giới hạn thấp hơn đáng kể so với mô hình tương quan dài."
+      },
+      {
+        "type": "paragraph",
+        "text": "So sánh các chiến lược suy luận cho thấy hàm hợp lý đầy đủ thường cân bằng tốt giữa độ lệch và RMSE, trong khi dạng đường chéo có thể tạo khoảng tin cậy quá hẹp. Bộ trọng số phổ có lợi khi phổ nhiễu được ước lượng tương đối chính xác, nhưng nhạy với sai số đặc tả ở tần số thấp. Bộ trung vị cửa sổ có khả năng chống lại một số nhiễu cục bộ nhưng làm mất thông tin pha liên tục. Vì vậy, lựa chọn bộ ước lượng cần dựa trên mục tiêu: tối thiểu hóa sai số trung bình, duy trì độ phủ, hay bảo toàn khả năng phát hiện thay đổi nhỏ."
+      },
+      {
+        "type": "paragraph",
+        "text": "Một cách diễn giải khác là xem thông tin như ngân sách bị phân chia giữa độ tương phản, mức nhiễu và cấu trúc tương quan. Khi độ tương phản giảm từ cao xuống trung bình, tổn thất thông tin có thể lớn hơn tổn thất do tăng nhẹ phương sai nhiễu. Khi nhiễu cao và tương quan dài, việc nâng độ tương phản có thể không đủ để khôi phục giới hạn đo nếu mô hình hiệp phương sai vẫn bị đặc tả sai. Các kết luận này tương thích với những nghiên cứu về lan truyền bất định và phân rã thông tin trong hệ đa kênh \\cite{15}, \\cite{18}."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Limitations"
+      },
+      {
+        "type": "paragraph",
+        "text": "Khung lý thuyết hiện tại dựa trên nhiễu Gaussian và ma trận hiệp phương sai ổn định trong miền quan sát. Nhiễu có đuôi nặng, nhiễu xung hoặc biến thiên phương sai theo thời gian có thể làm cận Fisher kém đại diện. Ngoài ra, việc ước lượng đồng thời $phi$, $lambda_x$ và $lambda_t$ làm phát sinh bất định tham số phụ; nếu số quan sát không đủ, các tham số này có thể khó nhận dạng riêng rẽ. Các phương pháp Bayes có cấu trúc tiên nghiệm là một hướng phù hợp, nhưng kết quả khi đó phụ thuộc vào lựa chọn phân bố tiên nghiệm \\cite{23}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Một hạn chế khác là mô hình chỉ mô tả một pha vô hướng. Trong hệ đa bước sóng, đa phân cực hoặc đa kênh, pha có thể là vector và hiệp phương sai có các khối chéo giữa kênh. Khi đó, cận vô hướng cần được thay bằng ma trận thông tin và một tiêu chí thiết kế phù hợp. Những biến thiên của nguồn sáng, đáp ứng cảm biến và sai số hiệu chuẩn cũng chưa được đưa vào. Các yếu tố này có thể tạo tương quan giả, làm cho việc ước lượng bề rộng tương quan từ dữ liệu thuần túy trở nên không ổn định."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Conclusion"
+      },
+      {
+        "type": "paragraph",
+        "text": "Bài viết đã trình bày một khung suy luận cho đo pha giao thoa dưới nhiễu tương quan không gian-thời gian. Ba kết luận chính là: độ tương phản quyết định độ dốc tín hiệu và suy giảm thông tin theo bình phương; tương quan làm giảm số quan sát hiệu dụng; và độ cong của ánh xạ cường độ--pha có thể tạo độ lệch hữu hạn mẫu. Vì vậy, đánh giá giới hạn phân giải cần sử dụng hiệp phương sai phù hợp thay vì mặc nhiên giả định độc lập."
+      },
+      {
+        "type": "paragraph",
+        "text": "Về thực hành, quy trình đáng tin cậy nên bắt đầu bằng việc ước lượng cấu trúc tương quan, kiểm tra tính xác định dương của ma trận, rồi mới tối ưu hóa pha và truyền bất định sang chiều dài. Các cận lý thuyết cần được báo cáo cùng điều kiện áp dụng, đặc biệt là miền pha, mức độ ổn định của tham số nhiễu và khả năng nhảy chu kỳ. Hướng phát triển tiếp theo là xây dựng các tiêu chí thiết kế đo thích nghi, trong đó thời điểm lấy mẫu và độ tương phản được chọn để tối đa hóa thông tin dưới ngân sách thời gian hữu hạn. Cách tiếp cận này nối kết mô hình xác suất, lý thuyết thông tin và yêu cầu hiệu chuẩn của các hệ đo quang học chính xác cao \\cite{25}."
+      }
+    ]
+  },
+  "hash": "8720596b51a28971b3d7a802d72805caa96aff76d839b8d53287fb11049634b5"
+}

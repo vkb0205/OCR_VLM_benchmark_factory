@@ -1,0 +1,934 @@
+{
+  "front": {
+    "title": "A Modal Description of Weakly Damped Acoustic Resonators",
+    "authors": [
+      {
+        "name": "Elian Veyra",
+        "affiliations": [
+          1
+        ],
+        "corresponding": true,
+        "email": "elian.veyra@resonant-lattice.org"
+      },
+      {
+        "name": "Mara Quen",
+        "affiliations": [
+          1,
+          2
+        ],
+        "corresponding": false
+      }
+    ],
+    "affiliations": [
+      "Institute for Resonant Systems, 18 Orin Vale, Nemeris 40217",
+      "Department of Applied Wave Theory, Veloran Technical Academy, 7 Ceryn Square, Nemeris 40217"
+    ],
+    "abstract": "A compact theoretical description is developed for weakly damped acoustic resonators coupled through narrow apertures. The analysis separates local modal loss from inter-resonator exchange and identifies a dimensionless coupling measure governing the transition between isolated and collective response. Perturbation results show that dissipation shifts both the resonance location and the phase of the coupled field, while preserving a simple modal structure to first order. The formulation provides a direct basis for estimating bandwidth and mode splitting in lightly loaded cavities.",
+    "abstract_alt": null,
+    "keywords": "acoustic resonators; modal coupling; weak damping; cavity response; perturbation theory",
+    "keywords_alt": null,
+    "journal": "Journal of Resonant Wave Studies",
+    "acknowledgement": "The authors thank the Wave Dynamics Group at Veloran Technical Academy for discussions concerning modal perturbation methods."
+  },
+  "formulas": [
+    {
+      "after": 0,
+      "element": {
+        "type": "equation",
+        "id": "eq:modal_operator",
+        "latex": "L q_n = -l_n q_n",
+        "numbered": true
+      }
+    },
+    {
+      "after": 0,
+      "element": {
+        "type": "equation",
+        "id": "eq:loss_shift",
+        "latex": "l_n = l_{n,0} - i a_n",
+        "numbered": true
+      }
+    },
+    {
+      "after": 0,
+      "element": {
+        "type": "equation",
+        "id": "eq:coupling_operator",
+        "latex": "H_{mn} = l_m d_{mn} + e c_{mn}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 0,
+      "element": {
+        "type": "equation",
+        "id": "eq:coupling_measure",
+        "latex": "x_{mn} = \\frac{e\\left|c_{mn}\\right|}{\\left|l_m-l_n\\right|+a_m+a_n}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 0,
+      "element": {
+        "type": "equation",
+        "id": "eq:coupled_first",
+        "latex": "(l-l_1)q_1-e c_{12}q_2=0",
+        "numbered": true
+      }
+    },
+    {
+      "after": 0,
+      "element": {
+        "type": "equation",
+        "id": "eq:coupled_second",
+        "latex": "(l-l_2)q_2-e c_{21}q_1=0",
+        "numbered": true
+      }
+    },
+    {
+      "after": 0,
+      "element": {
+        "type": "equation",
+        "id": "eq:secular_condition",
+        "latex": "(l-l_1)(l-l_2)-e^2c_{12}c_{21}=0",
+        "numbered": true
+      }
+    },
+    {
+      "after": 0,
+      "element": {
+        "type": "equation",
+        "id": "eq:mode_splitting",
+        "latex": "d_l = 2e(c_{12}c_{21})^{1/2}",
+        "numbered": true
+      }
+    }
+  ],
+  "tables": [
+    {
+      "after": 1,
+      "element": {
+        "type": "table",
+        "id": "tab:modal_parameters",
+        "caption": "Modal parameters for two weakly damped resonators",
+        "header": [
+          [
+            {
+              "text": "Mode",
+              "rowspan": 2
+            },
+            {
+              "text": "Resonance",
+              "colspan": 2
+            },
+            {
+              "text": "Loss descriptors",
+              "colspan": 2
+            }
+          ],
+          [
+            {
+              "text": "Frequency (kHz)"
+            },
+            {
+              "text": "Detuning (kHz)"
+            },
+            {
+              "text": "Damping rate"
+            },
+            {
+              "text": "Quality factor"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            {
+              "text": "A"
+            },
+            {
+              "text": "4.820"
+            },
+            {
+              "text": "0.000"
+            },
+            {
+              "text": "0.018"
+            },
+            {
+              "text": "133.9"
+            }
+          ],
+          [
+            {
+              "text": "B"
+            },
+            {
+              "text": "4.907"
+            },
+            {
+              "text": "0.087"
+            },
+            {
+              "text": "0.024"
+            },
+            {
+              "text": "102.2"
+            }
+          ],
+          [
+            {
+              "text": "C"
+            },
+            {
+              "text": "5.031"
+            },
+            {
+              "text": "0.211"
+            },
+            {
+              "text": "0.031"
+            },
+            {
+              "text": "81.1"
+            }
+          ]
+        ],
+        "note": "Rates are normalized by the reference angular frequency; lower damping indicates weaker modal loss."
+      }
+    },
+    {
+      "after": 2,
+      "element": {
+        "type": "table",
+        "id": "tab:coupling_regimes",
+        "caption": "Response regimes classified by the dimensionless coupling measure",
+        "header": [
+          [
+            {
+              "text": "Regime",
+              "colspan": 2
+            },
+            {
+              "text": "Coupling measure",
+              "colspan": 2
+            },
+            {
+              "text": "Observed response",
+              "colspan": 2
+            }
+          ],
+          [
+            {
+              "text": "Label"
+            },
+            {
+              "text": "Range"
+            },
+            {
+              "text": "Peak separation"
+            },
+            {
+              "text": "Phase contrast"
+            },
+            {
+              "text": "Modal character"
+            },
+            {
+              "text": "Bandwidth trend"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            {
+              "text": "I"
+            },
+            {
+              "text": "chi < 0.20"
+            },
+            {
+              "text": "0.041"
+            },
+            {
+              "text": "8.6 deg"
+            },
+            {
+              "text": "Isolated"
+            },
+            {
+              "text": "Narrow"
+            }
+          ],
+          [
+            {
+              "text": "II"
+            },
+            {
+              "text": "0.20 <= chi < 0.50"
+            },
+            {
+              "text": "0.073"
+            },
+            {
+              "text": "22.4 deg"
+            },
+            {
+              "text": "Hybridizing"
+            },
+            {
+              "text": "Moderate"
+            }
+          ],
+          [
+            {
+              "text": "III"
+            },
+            {
+              "text": "chi >= 0.50"
+            },
+            {
+              "text": "{text:\"0.118\",bold:true}"
+            },
+            {
+              "text": "{text:\"41.8 deg\",bold:true}"
+            },
+            {
+              "text": "Collective"
+            },
+            {
+              "text": "Broad"
+            }
+          ]
+        ],
+        "note": "Peak separation and phase contrast increase as exchange becomes comparable with local modal loss."
+      }
+    },
+    {
+      "after": 3,
+      "element": {
+        "type": "table",
+        "id": "tab:perturbation_results",
+        "caption": "First-order perturbation results under increasing dissipation",
+        "header": [
+          [
+            {
+              "text": "Damping case",
+              "rowspan": 2
+            },
+            {
+              "text": "Normalized loss",
+              "colspan": 2
+            },
+            {
+              "text": "Resonance shift",
+              "colspan": 2
+            },
+            {
+              "text": "Field response",
+              "rowspan": 2
+            }
+          ],
+          [
+            {
+              "text": "Mode A"
+            },
+            {
+              "text": "Mode B"
+            },
+            {
+              "text": "Frequency"
+            },
+            {
+              "text": "Phase"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            {
+              "text": "Low"
+            },
+            {
+              "text": "0.010"
+            },
+            {
+              "text": "0.014"
+            },
+            {
+              "text": "0.006"
+            },
+            {
+              "text": "3.1 deg"
+            },
+            {
+              "text": "Weakly altered"
+            }
+          ],
+          [
+            {
+              "text": "Moderate"
+            },
+            {
+              "text": "0.024"
+            },
+            {
+              "text": "0.031"
+            },
+            {
+              "text": "0.015"
+            },
+            {
+              "text": "8.7 deg"
+            },
+            {
+              "text": "Phase-sensitive"
+            }
+          ],
+          [
+            {
+              "text": "High"
+            },
+            {
+              "text": "0.041"
+            },
+            {
+              "text": "0.049"
+            },
+            {
+              "text": "{text:\"0.027\",bold:true}"
+            },
+            {
+              "text": "{text:\"15.6 deg\",bold:true}"
+            },
+            {
+              "text": "Strongly altered"
+            }
+          ]
+        ],
+        "note": "Shifts are reported relative to the undamped modal locations; bold entries mark the largest computed response changes."
+      }
+    }
+  ],
+  "charts_figures": [
+    {
+      "after": 0,
+      "element": {
+        "type": "chart",
+        "chart_type": "stacked_bar",
+        "id": "fig:modal_loss_stack",
+        "caption": "Modal damping contributions across the three resonant modes",
+        "labels": [
+          "A",
+          "B",
+          "C"
+        ],
+        "series": [
+          {
+            "name": "Boundary loss",
+            "values": [
+              0.01,
+              0.014,
+              0.018
+            ],
+            "errors": [
+              0.001,
+              0.001,
+              0.002
+            ]
+          },
+          {
+            "name": "Aperture loss",
+            "values": [
+              0.008,
+              0.01,
+              0.013
+            ],
+            "errors": [
+              0.001,
+              0.001,
+              0.001
+            ]
+          }
+        ],
+        "x_label": "Mode",
+        "y_label": "Normalized damping rate",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 1,
+      "element": {
+        "type": "chart",
+        "chart_type": "scatter",
+        "id": "fig:coupling_separation",
+        "caption": "Peak separation increases with the dimensionless coupling measure",
+        "labels": [
+          "I",
+          "II",
+          "III"
+        ],
+        "series": [
+          {
+            "name": "Peak separation",
+            "points": [
+              [
+                0.12,
+                0.041
+              ],
+              [
+                0.18,
+                0.052
+              ],
+              [
+                0.24,
+                0.061
+              ],
+              [
+                0.34,
+                0.073
+              ],
+              [
+                0.46,
+                0.089
+              ],
+              [
+                0.68,
+                0.118
+              ]
+            ],
+            "errors": [
+              0.003,
+              0.003,
+              0.004,
+              0.004,
+              0.005,
+              0.006
+            ]
+          }
+        ],
+        "x_label": "Coupling measure chi",
+        "y_label": "Peak separation (kHz)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 2,
+      "element": {
+        "type": "chart",
+        "chart_type": "grouped_bar",
+        "id": "fig:perturbation_response",
+        "caption": "Resonance shift and phase contrast under increasing dissipation",
+        "labels": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "series": [
+          {
+            "name": "Resonance shift",
+            "values": [
+              0.006,
+              0.015,
+              0.027
+            ],
+            "errors": [
+              0.001,
+              0.002,
+              0.003
+            ]
+          },
+          {
+            "name": "Phase contrast",
+            "values": [
+              3.1,
+              8.7,
+              15.6
+            ],
+            "errors": [
+              0.4,
+              0.7,
+              1.1
+            ]
+          }
+        ],
+        "x_label": "Damping case",
+        "y_label": "Response magnitude (kHz; degrees for phase)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 3,
+      "element": {
+        "type": "figure",
+        "figure_type": "block_diagram",
+        "id": "fig:resonator_exchange",
+        "caption": "Block representation of modal exchange between two weakly damped cavities",
+        "description": "Two resonant cavities are connected by a narrow aperture. Each cavity contributes a local modal loss term, while the aperture provides reciprocal exchange and a shared acoustic response.",
+        "labels": [
+          "Cavity A",
+          "Cavity B",
+          "Narrow aperture",
+          "Local loss",
+          "Modal exchange",
+          "Acoustic response"
+        ]
+      }
+    },
+    {
+      "after": 4,
+      "element": {
+        "type": "figure",
+        "figure_type": "multi_panel",
+        "id": "fig:loss_phase_panels",
+        "caption": "Computed effects of dissipation on resonance location and coupled-field phase",
+        "description": "Three aligned panels compare low, moderate, and high dissipation. Resonance displacement grows with normalized loss, and the coupled-field phase becomes progressively more sensitive near the modal interaction region.",
+        "labels": [
+          "Low loss",
+          "Moderate loss",
+          "High loss",
+          "Resonance shift",
+          "Phase contrast",
+          "Coupled field"
+        ],
+        "panels": [
+          {
+            "label": "(a)",
+            "figure_type": "block_diagram",
+            "description": "Low dissipation produces a 0.006 kHz resonance shift and 3.1 degree phase contrast."
+          },
+          {
+            "label": "(b)",
+            "figure_type": "block_diagram",
+            "description": "Moderate dissipation produces a 0.015 kHz resonance shift and 8.7 degree phase contrast."
+          },
+          {
+            "label": "(c)",
+            "figure_type": "block_diagram",
+            "description": "High dissipation produces a 0.027 kHz resonance shift and 15.6 degree phase contrast."
+          }
+        ]
+      }
+    }
+  ],
+  "code": [],
+  "references": [
+    {
+      "text": "[1] Veyra, E. and Quen, M. (2019). Modal operators for weakly damped acoustic cavities. Journal of Resonant Wave Studies, 12, 41–56.",
+      "cite": "Veyra-2019"
+    },
+    {
+      "text": "[2] Orlan, T. and Seryn, V. (2018). Perturbative eigenvalue shifts in lightly loaded resonators. Acoustic Field Theory Letters, 7, 113–126.",
+      "cite": "Orlan-2018"
+    },
+    {
+      "text": "[3] Darem, I. (2020). Dissipative mode coupling in narrow-aperture cavities. Resonator Dynamics Review, 15, 201–219.",
+      "cite": "Darem-2020"
+    },
+    {
+      "text": "[4] Quen, M. and Halvek, R. (2021). Phase structure of coupled acoustic modes. Wave Mechanics Quarterly, 9, 77–93.",
+      "cite": "Quen-2021"
+    },
+    {
+      "text": "[5] Veyra, E. (2017). A spectral treatment of cavity loss and modal exchange. Journal of Applied Resonance, 11, 15–31.",
+      "cite": "Veyra-2017"
+    },
+    {
+      "text": "[6] Neral, S. and Ovrin, P. (2022). Weak coupling limits for two-resonator systems. Acoustic Systems Journal, 18, 264–279.",
+      "cite": "Neral-2022"
+    },
+    {
+      "text": "[7] Ceryn, L. (2016). Complex frequencies in dissipative acoustic structures. Annals of Resonant Analysis, 5, 88–104.",
+      "cite": "Ceryn-2016"
+    },
+    {
+      "text": "[8] Malven, J. and Tovar, E. (2020). First-order loss corrections for confined sound fields. Journal of Modal Acoustics, 14, 132–148.",
+      "cite": "Malven-2020"
+    },
+    {
+      "text": "[9] Sorel, A. (2018). Exchange-induced splitting in nearly degenerate cavities. Resonance and Wave Processes, 6, 39–54.",
+      "cite": "Sorel-2018"
+    },
+    {
+      "text": "[10] Quen, M. and Darel, N. (2023). Dimensionless measures of acoustic modal interaction. Theoretical Acoustics Reports, 21, 101–117.",
+      "cite": "Quen-2023"
+    },
+    {
+      "text": "[11] Varyn, K. (2015). Boundary dissipation and resonance displacement. Cavity Wave Studies, 4, 57–72.",
+      "cite": "Varyn-2015"
+    },
+    {
+      "text": "[12] Elor, P. and Meren, S. (2019). Reciprocal exchange operators for coupled resonators. Journal of Resonant Structures, 10, 183–198.",
+      "cite": "Elor-2019"
+    },
+    {
+      "text": "[13] Harel, D. (2021). Modal bandwidth under distributed acoustic loss. Wave Response Journal, 13, 221–237.",
+      "cite": "Harel-2021"
+    },
+    {
+      "text": "[14] Oryn, F. and Salvek, J. (2017). Near-degenerate perturbation theory for acoustic modes. Resonator Mathematics, 8, 66–82.",
+      "cite": "Oryn-2017"
+    },
+    {
+      "text": "[15] Meral, T. (2022). Coupled-field phase sensitivity near modal interaction. Journal of Acoustic Modelling, 17, 145–162.",
+      "cite": "Meral-2022"
+    },
+    {
+      "text": "[16] Saven, R. and Ilyr, C. (2016). Aperture-mediated exchange in compact cavities. Applied Wave Dynamics, 9, 28–43.",
+      "cite": "Saven-2016"
+    },
+    {
+      "text": "[17] Doren, P. (2020). Loss-normalized descriptions of resonant response. Acoustic Theory and Computation, 12, 94–110.",
+      "cite": "Doren-2020"
+    },
+    {
+      "text": "[18] Valen, N. and Oris, G. (2018). Secular conditions for two-mode acoustic systems. Journal of Cavity Mechanics, 7, 171–186.",
+      "cite": "Valen-2018"
+    },
+    {
+      "text": "[19] Ruvan, E. (2021). Modal localization and hybridization in weakly coupled chambers. Resonant Systems Letters, 16, 52–68.",
+      "cite": "Ruvan-2021"
+    },
+    {
+      "text": "[20] Kelar, M. and Veyra, E. (2023). Complex modal amplitudes under small dissipation. Journal of Wave Perturbation, 19, 309–325.",
+      "cite": "Kelar-2023"
+    },
+    {
+      "text": "[21] Aven, J. (2015). Acoustic eigenstructure with nonzero boundary loss. Resonance Theory Journal, 3, 119–135.",
+      "cite": "Aven-2015"
+    },
+    {
+      "text": "[22] Quelar, P. and Neris, H. (2019). Coupling thresholds in lightly damped resonators. Acoustic Interaction Review, 11, 73–89.",
+      "cite": "Quelar-2019"
+    },
+    {
+      "text": "[23] Toren, B. (2020). Modal detuning and exchange efficiency in cavity pairs. Journal of Resonant Wave Studies, 13, 246–261.",
+      "cite": "Toren-2020"
+    },
+    {
+      "text": "[24] Yarel, S. and Duvan, P. (2017). Perturbation bounds for dissipative wave operators. Wave Operator Analysis, 6, 91–108.",
+      "cite": "Yarel-2017"
+    },
+    {
+      "text": "[25] Mavel, R. (2022). Resonance splitting produced by reciprocal aperture coupling. Acoustic Resonance Communications, 20, 184–200.",
+      "cite": "Mavel-2022"
+    },
+    {
+      "text": "[26] Serin, L. and Ovan, T. (2018). Quality factors and complex modal detuning. Journal of Confined Wave Physics, 8, 37–53.",
+      "cite": "Serin-2018"
+    },
+    {
+      "text": "[27] Varel, C. (2021). Local and collective response in coupled acoustic cavities. Resonator Dynamics Review, 16, 118–134.",
+      "cite": "Varel-2021"
+    },
+    {
+      "text": "[28] Deyra, M. and Koren, I. (2016). A modal account of aperture-induced acoustic exchange. Journal of Applied Resonance, 10, 203–218.",
+      "cite": "Deyra-2016"
+    },
+    {
+      "text": "[29] Orven, G. (2023). Loss-dependent phase rotation in resonant fields. Acoustic Field Theory Letters, 12, 61–78.",
+      "cite": "Orven-2023"
+    },
+    {
+      "text": "[30] Navel, A. and Teryn, O. (2019). Asymptotic response of weakly interacting cavities. Theoretical Acoustics Reports, 14, 152–168.",
+      "cite": "Navel-2019"
+    },
+    {
+      "text": "[31] Hoven, P. (2017). Eigenvalue continuation for damped acoustic resonators. Resonator Mathematics, 9, 11–27.",
+      "cite": "Hoven-2017"
+    },
+    {
+      "text": "[32] Leris, E. and Movan, D. (2020). Modal exchange and bandwidth broadening. Journal of Acoustic Modelling, 15, 274–290.",
+      "cite": "Leris-2020"
+    },
+    {
+      "text": "[33] Soran, J. (2022). Weak-loss asymptotics for coupled cavity fields. Wave Mechanics Quarterly, 11, 203–219.",
+      "cite": "Soran-2022"
+    },
+    {
+      "text": "[34] Velar, F. and Quorin, A. (2018). Normalized damping measures in acoustic networks. Acoustic Systems Journal, 10, 98–114.",
+      "cite": "Velar-2018"
+    },
+    {
+      "text": "[35] Taven, R. (2015). Modal interaction near a double resonance. Annals of Resonant Analysis, 4, 42–58.",
+      "cite": "Taven-2015"
+    },
+    {
+      "text": "[36] Elven, S. and Darel, P. (2021). Boundary and aperture contributions to modal loss. Cavity Wave Studies, 9, 167–183.",
+      "cite": "Elven-2021"
+    },
+    {
+      "text": "[37] Meryn, O. (2019). Coupled acoustic response in the weak-damping regime. Journal of Resonant Structures, 12, 225–241.",
+      "cite": "Meryn-2019"
+    },
+    {
+      "text": "[38] Ovel, H. and Saren, K. (2020). Resonance displacement from first-order dissipation. Applied Wave Dynamics, 13, 84–100.",
+      "cite": "Ovel-2020"
+    },
+    {
+      "text": "[39] Varon, D. (2022). Operator formulations for reciprocal resonator coupling. Journal of Cavity Mechanics, 18, 33–49.",
+      "cite": "Varon-2022"
+    },
+    {
+      "text": "[40] Quen, M. and Veyra, E. (2024). Collective acoustic modes under finite modal loss. Journal of Resonant Wave Studies, 22, 1–17.",
+      "cite": "Quen-2024"
+    },
+    {
+      "text": "[41] Ravel, I. (2016). Analytical bandwidth estimates for coupled resonant chambers. Resonance and Wave Processes, 5, 140–156.",
+      "cite": "Ravel-2016"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Introduction"
+    },
+    {
+      "type": "paragraph",
+      "text": "Weakly damped acoustic resonators occupy a useful middle ground between ideal conservative cavities and strongly loaded enclosures. Their responses retain recognizable modal peaks, yet small boundary losses and aperture exchanges can alter resonance location, bandwidth, and phase in ways that are important for interpretation. This work develops a compact description for two cavities linked through a narrow aperture. The central separation is between local modal loss, which acts within each cavity, and reciprocal exchange, which transfers acoustic energy between cavities. Earlier operator treatments establish the relevance of complex modal quantities for this setting \\cite{1}, \\cite{5}, while perturbative studies show that small dissipation can displace a resonance before it visibly broadens \\cite{2}, \\cite{8}. The present formulation combines these observations into a loss-normalized account of modal interaction."
+    },
+    {
+      "type": "paragraph",
+      "text": "The analysis is organized around a dimensionless coupling measure. Let the local mode in cavity $n$ have complex parameter $\\lambda_n$, with a small positive loss contribution $\\alpha_n$. The isolated modal operator is represented by $\\mathcal{L}\\hat{q}_n=-\\lambda_n\\hat{q}_n$, and the dissipative continuation is described by $\\lambda_n=\\lambda_{n,0}-\\mathrm{i}\\alpha_n$. This notation makes the distinction between detuning and loss explicit without requiring a fully resolved field calculation. The resulting two-mode model predicts when the cavities respond independently, when their modal identities hybridize, and when a collective response dominates. These transitions are relevant to aperture-coupled systems because exchange can remain weak in absolute terms while becoming significant relative to modal separation."
+    },
+    {
+      "type": "paragraph",
+      "text": "The contribution is theoretical and deliberately short in scope. It establishes a first-order modal structure, derives a criterion for exchange relative to detuning and damping, and interprets the resulting resonance splitting. The discussion also connects the analytic quantities to normalized response values: the three modes have increasing loss, while the response regimes exhibit increasing peak separation and phase contrast. The early loss decomposition associated with \\ref{fig:modal_loss_stack} motivates treating boundary and aperture contributions separately, and the parameter summary in \\ref{tab:modal_parameters} provides the scale against which later statements should be read. No claim is made that the reduced model replaces spatially resolved acoustics in strongly nonuniform cavities."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Related Work"
+    },
+    {
+      "type": "paragraph",
+      "text": "Complex frequencies for dissipative acoustic structures have been studied through spectral continuation, boundary perturbation, and modal bandwidth estimates \\cite{7}, \\cite{11}, \\cite{13}, \\cite{21}. These approaches agree that a small loss term generally has two consequences: it changes the imaginary component of a modal quantity and, through perturbation of the eigenstructure, may also shift the real resonance location. For coupled cavities, reciprocal exchange operators provide a natural representation of aperture-mediated transfer \\cite{12}, \\cite{16}, \\cite{28}. Near degeneracy, however, ordinary isolated-mode reasoning becomes inadequate because the exchange scale and detuning scale compete. The resulting hybridization has been examined for cavity pairs and nearly coincident modes \\cite{6}, \\cite{9}, \\cite{14}, \\cite{35}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Recent treatments emphasize that amplitude alone is insufficient for classifying coupled acoustic response. Phase rotation can become pronounced near an interaction region even when the frequency displacement remains modest \\cite{4}, \\cite{15}, \\cite{29}. Related work on loss-normalized measures seeks a dimensionless quantity that compares exchange with both spectral separation and local damping \\cite{10}, \\cite{17}, \\cite{22}, \\cite{34}. The present study follows that direction while retaining a two-mode description that is transparent enough for first-order reasoning. The trend shown by \\ref{fig:coupling_separation} is therefore interpreted as a structural consequence of increasing exchange, rather than as a universal calibration for every geometry."
+    },
+    {
+      "type": "paragraph",
+      "text": "The perturbative viewpoint also has a substantial precedent. Asymptotic descriptions of weakly interacting cavities identify leading corrections to modal amplitudes and resonance locations \\cite{24}, \\cite{30}, \\cite{33}, while continuation methods track how those corrections evolve as loss increases \\cite{31}, \\cite{38}. Studies of bandwidth broadening and collective response further indicate that local dissipation can either obscure or reveal exchange, depending on the relative scales \\cite{19}, \\cite{27}, \\cite{32}. These results support a cautious interpretation of the reduced model: the first-order terms are most informative when damping and aperture exchange remain small compared with the underlying modal frequencies."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Definitions"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Modal quantities and scaling"
+    },
+    {
+      "type": "paragraph",
+      "text": "Consider two isolated modes indexed by $m$ and $n$. Their undamped parameters are denoted by $\\lambda_{m,0}$ and $\\lambda_{n,0}$, while $\\alpha_m$ and $\\alpha_n$ denote normalized local loss rates. The normalization is chosen with respect to a reference angular frequency, so the loss parameters are dimensionless. A small aperture introduces a bookkeeping parameter $\\epsilon$ and exchange coefficients $c_{mn}$. In matrix form, the coupled operator has entries $\\mathcal{H}_{mn}=\\lambda_m\\delta_{mn}+\\epsilon c_{mn}$. The diagonal terms retain local modal behavior; the off-diagonal terms transfer modal content. Reciprocal exchange is represented when the paired coefficients satisfy the appropriate symmetry, although the discussion does not require identical cavities."
+    },
+    {
+      "type": "paragraph",
+      "text": "The principal diagnostic is $x_{mn}=\\dfrac{\\epsilon|c_{mn}|}{|\\lambda_m-\\lambda_n|+\\alpha_m+\\alpha_n}$. A small value means that exchange is subordinate to detuning and loss, whereas a larger value indicates that modal transfer competes directly with those effects. The denominator is intentionally additive: it treats spectral separation and dissipative masking as distinct but jointly relevant barriers to visible hybridization. This construction is consistent with normalized damping descriptions \\cite{10}, \\cite{17}, and with threshold analyses for lightly loaded resonators \\cite{22}. It also permits comparison across cavities whose absolute frequencies differ, provided the reference scaling is used consistently."
+    },
+    {
+      "type": "paragraph",
+      "text": "For the two-mode reduction, the unknown amplitudes are $q_1$ and $q_2$, and the response parameter is $\\lambda$. The coupled conditions are $ (\\lambda-\\lambda_1)q_1-\\epsilon c_{12}q_2=0$ and $ (\\lambda-\\lambda_2)q_2-\\epsilon c_{21}q_1=0$. Nontrivial amplitudes require the secular condition $ (\\lambda-\\lambda_1)(\\lambda-\\lambda_2)-\\epsilon^2c_{12}c_{21}=0$. These relations express exchange without imposing a spatial shape on either cavity. They also show why a nominally small aperture can produce a visible effect near modal coincidence: the product of two small off-diagonal terms competes with the product of two small modal separations."
+    },
+    {
+      "type": "box",
+      "kind": "remark",
+      "title": "Interpretive convention",
+      "text": "Loss rates are treated as positive quantities that broaden the response and reduce the visibility of isolated modal identities. A complex sign convention may reverse the sign attached to the imaginary part, but the coupling measure and the qualitative ordering of regimes are unchanged."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Main Results"
+    },
+    {
+      "type": "paragraph",
+      "text": "The first result is a separation principle. To first order, local damping modifies each modal parameter before exchange is applied, while the aperture contributes a pair of reciprocal transfer terms. This ordering is useful because it prevents local loss from being mistaken for coupling. It also clarifies why the two modes need not show equal resonance displacement: distinct boundary conditions, aperture participation, and modal energy distributions can produce different values of $\\alpha_1$ and $\\alpha_2$. The normalized parameters associated with \\ref{tab:modal_parameters} show this progression directly, with damping increasing from the first listed mode to the third and quality decreasing accordingly."
+    },
+    {
+      "type": "paragraph",
+      "text": "The second result concerns splitting. Solving the secular condition near a close modal pair gives the leading separation $\\Delta\\lambda\\approx2\\epsilon\\sqrt{c_{12}c_{21}}$ when detuning is sufficiently small and the reciprocal product is taken on a consistent branch. Thus exchange creates a pair of nearby collective modes rather than merely shifting one isolated peak. If detuning is large, the same term is better interpreted as a perturbative correction to each mode. The transition is not determined by aperture size alone; it depends on the ratio encoded by $x_{mn}$. This explains the increasing separation trend described in \\ref{fig:coupling_separation} and the regime ordering in \\ref{tab:coupling_regimes}."
+    },
+    {
+      "type": "paragraph",
+      "text": "The third result is phase sensitivity. A dissipative correction changes the relative phase between the two modal amplitudes because the complex denominator of each response differs near resonance. In a compact notation, the phase perturbation is proportional to $\\alpha_n/|\\lambda-\\lambda_n|$ away from exact coincidence, while near coincidence the exchange terms must be retained together. Consequently, a moderate loss increase may cause a larger phase change than frequency change. This behavior is consistent with the panel progression in \\ref{fig:loss_phase_panels}, where resonance displacement and coupled-field phase sensitivity increase together but need not have the same rate."
+    },
+    {
+      "type": "paragraph",
+      "text": "The regime interpretation is therefore threefold. For $x_{mn}<0.20$, the response is predominantly isolated and peak separation remains narrow. For $0.20\\leq x_{mn}<0.50$, modal identities begin to hybridize and phase contrast becomes readily observable. For $x_{mn}\\geq0.50$, exchange is comparable with the combined detuning and loss scales, producing a collective response and broader effective bandwidth. These boundaries are practical classifications rather than singular mathematical thresholds. Their value lies in organizing observations and indicating when a single-cavity fit is likely to conceal reciprocal modal transfer."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Proofs"
+    },
+    {
+      "type": "paragraph",
+      "text": "The first-order construction follows by substituting the complex isolated parameters into the two-mode operator and retaining terms through the leading nonvanishing order in $\\epsilon$. The diagonal contribution gives the isolated resonance and its local loss. The off-diagonal contribution enters amplitude balance linearly, but its effect on the characteristic parameter enters through the product $\\epsilon^2c_{12}c_{21}$. This distinction explains why amplitude mixing can be visible before the eigenvalue separation becomes large. Perturbation bounds for dissipative operators justify neglecting higher-order terms when the aperture and loss scales remain below the modal spacing \\cite{24}, \\cite{33}."
+    },
+    {
+      "type": "paragraph",
+      "text": "To examine the splitting, set the detuning $\\lambda_1-\\lambda_2$ near zero in the secular condition and retain the exchange product. The two roots then differ by a quantity proportional to $2\\epsilon\\sqrt{c_{12}c_{21}}$. If the coefficients are real and reciprocal, the leading separation is real; if dissipation or nonreciprocity introduces a complex product, the root difference contains both displacement and differential attenuation. This result agrees with analyses of reciprocal aperture coupling and exchange-induced splitting \\cite{9}, \\cite{18}, \\cite{25}."
+    },
+    {
+      "type": "paragraph",
+      "text": "For the phase statement, write each amplitude as a magnitude multiplied by a unit complex factor. The argument of that factor changes when the loss term changes the balance between the real detuning and the imaginary damping contribution. Near a coupled resonance, the second amplitude contributes an additional complex term, so the derivative of phase with respect to loss is enhanced by modal proximity. The result is a direct analytical reason for the phase contrasts reported in the perturbation progression. First-order loss corrections and complex amplitude studies provide related conclusions \\cite{20}, \\cite{26}, \\cite{36}, \\cite{40}."
+    },
+    {
+      "type": "paragraph",
+      "text": "A final consistency check concerns limits. If $\\epsilon$ tends to zero, the secular condition factors into two isolated modal conditions, and the cavities lose their exchange-induced hybridization. If both loss rates tend to zero while detuning remains finite, the coupling measure reduces to an exchange-to-separation ratio. If detuning also tends to zero, the two-mode reduction must be retained as a degenerate perturbation problem rather than expanded independently. These limits recover the established distinctions between localization, weak exchange, and collective mode formation \\cite{3}, \\cite{23}, \\cite{37}, \\cite{39}. A concise footnote is useful here: \\fn{The reference angular frequency fixes normalization only; it does not impose a physical resonance on either cavity.}"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Numerical Illustration"
+    },
+    {
+      "type": "paragraph",
+      "text": "The normalized values used for illustration place the lowest-loss mode at a resonance near 4.820 kHz and the highest-loss mode near 5.031 kHz. The intermediate mode lies between them and has a moderate damping rate. These values are not used to infer a universal material law; they simply demonstrate how modest differences in local loss can alter quality and interaction visibility. The ordering in \\ref{tab:modal_parameters} supports the analytical separation between frequency detuning and damping. It also shows why a cavity pair with similar nominal frequency can nevertheless have unequal response widths."
+    },
+    {
+      "type": "paragraph",
+      "text": "Increasing the coupling measure from the isolated regime through the hybridizing regime to the collective regime produces progressively larger peak separation. The associated phase contrast rises at the same time, but its interpretation remains sensitive to the relative damping of the modes. The trend in \\ref{fig:coupling_separation} is therefore more informative than any single peak value: it displays a monotone response to exchange strength under fixed normalization. The classification in \\ref{tab:coupling_regimes} summarizes this progression with narrow, moderate, and broad bandwidth tendencies."
+    },
+    {
+      "type": "paragraph",
+      "text": "The dissipation progression gives a complementary view. Under low loss, the resonance displacement is small and the phase is only weakly altered. At moderate loss, the phase response becomes more sensitive near the interaction region. At high loss, the displacement and phase contrast are both pronounced, although the peaks may become less sharply identifiable. The quantities referenced by \\ref{fig:perturbation_response} and \\ref{tab:perturbation_results} should therefore be read jointly: a larger shift does not necessarily imply stronger exchange, because local damping alone can generate part of the observed displacement."
+    },
+    {
+      "type": "paragraph",
+      "text": "The block representation in \\ref{fig:resonator_exchange} provides a physical reading of the reduced operator. Each cavity supplies a local loss channel, while the aperture supplies reciprocal transfer and creates a shared response. This interpretation is compatible with bandwidth estimates for coupled chambers \\cite{41} and with analyses of boundary and aperture contributions \\cite{36}. It also indicates how the model could be extended: additional cavities would add modal coordinates and exchange links, but the same comparison between transfer, detuning, and loss would remain central."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Limitations"
+    },
+    {
+      "type": "paragraph",
+      "text": "The reduction has several limitations. It assumes that two modes dominate the frequency interval of interest and that the aperture can be represented by a small exchange coefficient. Strong geometric asymmetry, broadband radiation, nonlinear wall response, or multiple nearby modes can violate this assumption. The use of normalized loss also suppresses details of how damping varies spatially. A mode with the same integrated loss rate may have a different phase response if its dissipation is concentrated near the aperture rather than distributed over the boundary. These effects require a richer operator or a direct field computation."
+    },
+    {
+      "type": "paragraph",
+      "text": "The regime boundaries should likewise not be treated as universal constants. They depend on the chosen definition of modal loss, the frequency normalization, and the criterion used to identify a resolved peak. Measurement uncertainty can be especially influential when damping and detuning are of comparable magnitude. The present formulas are best used for interpretation, initial parameter estimation, and controlled comparison among related cavity configurations. They are not a substitute for validation when the coupling is strong, the loss is not weak, or the modal basis changes substantially with frequency."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Conclusion"
+    },
+    {
+      "type": "paragraph",
+      "text": "A compact modal description has been developed for weakly damped acoustic resonators coupled through a narrow aperture. The formulation separates local complex modal loss from reciprocal exchange, introduces a dimensionless measure comparing exchange with detuning and damping, and derives the leading splitting of a close modal pair. The analysis explains why resonance displacement and phase contrast need not track one another, and why increasing dissipation can make coupled-field phase more sensitive even as individual peaks broaden. The resulting framework offers a concise route from isolated modal parameters to classifications of isolated, hybridizing, and collective response."
+    },
+    {
+      "type": "paragraph",
+      "text": "The main practical message is that aperture strength should always be interpreted relative to modal separation and local loss. A small exchange coefficient can be consequential near degeneracy, while a larger coefficient may remain visually hidden when damping is high or detuning is wide. Future extensions should include more than two modes, frequency-dependent radiation loss, and spatially resolved aperture dynamics. Within its stated range, the present structure supplies a transparent theoretical basis for estimating bandwidth, interpreting mode splitting, and diagnosing phase-sensitive behavior in lightly loaded acoustic cavities \\cite{1}, \\cite{3}, \\cite{4}, \\cite{40}.ატ"
+    }
+  ]
+}

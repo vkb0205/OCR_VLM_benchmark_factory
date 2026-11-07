@@ -1,0 +1,1023 @@
+{
+  "front": {
+    "title": "Khảo sát toàn diện về biểu diễn, học sâu và suy luận đa phương thức trong thị giác máy tính",
+    "authors": [
+      {
+        "name": "Nguyễn Khải Minh",
+        "affiliations": [
+          1
+        ],
+        "corresponding": false
+      },
+      {
+        "name": "Trần Uyên Phương",
+        "affiliations": [
+          1,
+          2
+        ],
+        "corresponding": true,
+        "email": "uyen.phuong@minhquang-vision.org"
+      },
+      {
+        "name": "Lê Hoàng Vũ",
+        "affiliations": [
+          2
+        ],
+        "corresponding": false
+      },
+      {
+        "name": "Phạm Gia Hân",
+        "affiliations": [
+          1,
+          3
+        ],
+        "corresponding": false
+      }
+    ],
+    "affiliations": [
+      "Phòng Nghiên cứu Thị giác Minh Quang, Viện Công nghệ Nhận thức Lam Sơn",
+      "Bộ môn Kỹ thuật Dữ liệu và Học máy, Trường Đại học Kỹ nghệ Vạn Tường",
+      "Trung tâm Phân tích Không gian và Robot Tân Hải"
+    ],
+    "abstract": "Thị giác máy tính đang chuyển dịch từ các hệ thống nhận dạng chuyên biệt sang những mô hình có khả năng học biểu diễn, suy luận theo ngữ cảnh và phối hợp nhiều phương thức dữ liệu. Bài khảo sát này tổng hợp có hệ thống các hướng nghiên cứu chủ đạo từ xử lý ảnh cổ điển, mạng nơ ron tích chập, mô hình dựa trên cơ chế chú ý đến mô hình thị giác–ngôn ngữ và tác tử nhận thức. Nội dung được tổ chức theo các lớp của chuỗi xử lý, gồm thu nhận dữ liệu, biểu diễn đặc trưng, định vị đối tượng, phân đoạn, ước lượng hình học, nhận dạng hành động, tái dựng không gian và sinh mô tả. Chúng tôi phân tích mối liên hệ giữa quy mô dữ liệu, chiến lược tiền huấn luyện, thiết kế hàm mất mát, cơ chế thích nghi miền và yêu cầu suy luận thời gian thực. Các công trình được đối chiếu theo khả năng tổng quát hóa, độ bền trước biến đổi chiếu sáng và nhiễu, hiệu quả tính toán, khả năng giải thích, quyền riêng tư và mức độ công bằng giữa các nhóm quan sát [1, 2]. Khảo sát cũng xem xét các giao thức đánh giá thường dùng, những sai lệch do cách xây dựng tập dữ liệu, sự khác biệt giữa độ chính xác ngoại tuyến và hiệu năng trong môi trường triển khai, cùng vai trò của đánh giá con người đối với hệ thống sinh ngôn ngữ. Từ các kết quả đã công bố, chúng tôi nhận diện những khoảng trống liên quan đến học liên tục, suy luận nhân quả, dữ liệu có cấu trúc, giám sát yếu, học liên kết và bảo đảm an toàn. Cuối cùng, bài viết đề xuất một lộ trình nghiên cứu nhấn mạnh tính minh bạch của dữ liệu, khả năng kiểm định, tiêu thụ năng lượng hợp lý và sự phối hợp giữa mô hình nền tảng với tri thức miền. Phân tích cho thấy tiến bộ bền vững không chỉ phụ thuộc vào kích thước mô hình mà còn vào chất lượng thiết kế đánh giá, tính phù hợp của biểu diễn với nhiệm vụ và khả năng kiểm soát hành vi khi hệ thống được đưa vào các bối cảnh có rủi ro cao [3, 4].",
+    "abstract_alt": null,
+    "keywords": "thị giác máy tính; học sâu; học biểu diễn; mô hình thị giác–ngôn ngữ; phân đoạn ảnh; phát hiện đối tượng; suy luận đa phương thức; đánh giá mô hình; khả năng tổng quát hóa; an toàn hệ thống",
+    "keywords_alt": null,
+    "journal": "Tạp chí Nghiên cứu Thị giác và Nhận thức Tính toán",
+    "acknowledgement": "Các tác giả trân trọng cảm ơn Phòng Nghiên cứu Thị giác Minh Quang, Bộ môn Kỹ thuật Dữ liệu và Học máy, cùng Trung tâm Phân tích Không gian và Robot Tân Hải đã hỗ trợ trao đổi học thuật, cung cấp hạ tầng tính toán và góp ý cho quá trình hoàn thiện bản thảo."
+  },
+  "formulas": [],
+  "tables": [
+    {
+      "after": 0,
+      "element": {
+        "type": "table",
+        "id": "tab:taxonomy",
+        "caption": "Bảng 1. Phân loại các hướng tiếp cận trong chuỗi xử lý thị giác máy tính",
+        "header": [
+          [
+            {
+              "text": "Nhóm phương pháp",
+              "rowspan": 2
+            },
+            {
+              "text": "Biểu diễn và học",
+              "colspan": 2
+            },
+            {
+              "text": "Nhiệm vụ đầu ra",
+              "colspan": 2
+            },
+            {
+              "text": "Triển khai",
+              "rowspan": 2
+            }
+          ],
+          [
+            {
+              "text": "Cơ chế chính"
+            },
+            {
+              "text": "Tín hiệu giám sát"
+            },
+            {
+              "text": "Mức ngữ nghĩa"
+            },
+            {
+              "text": "Tiêu chí thường dùng"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "Xử lý ảnh cổ điển",
+            "Bộ lọc, hình học và đặc trưng thủ công",
+            "Nhãn miền hoặc quy tắc",
+            "Định vị và khôi phục cấu trúc",
+            "độ ổn định, sai số hình học",
+            "Chi phí tính toán thấp"
+          ],
+          [
+            "Mạng tích chập",
+            "Tích chập phân cấp và kết nối dư",
+            "Giám sát đầy đủ hoặc yếu",
+            "Phân loại, phát hiện và phân đoạn",
+            "độ chính xác, giao thoa vùng",
+            "Tốc độ suy luận cao"
+          ],
+          [
+            "Mô hình chú ý",
+            "Tương tác toàn cục giữa các vùng",
+            "Tiền huấn luyện tự giám sát",
+            "Nhận dạng và suy luận quan hệ",
+            "độ bao phủ ngữ cảnh, độ tin cậy",
+            "Đòi hỏi bộ nhớ lớn"
+          ],
+          [
+            "Thị giác–ngôn ngữ",
+            "Không gian chung giữa ảnh và văn bản",
+            "Ghép cặp, tương phản và hướng dẫn",
+            "Truy hồi, hỏi đáp và sinh mô tả",
+            "độ phù hợp ngữ nghĩa, tính mạch lạc",
+            "Khả năng chuyển nhiệm vụ"
+          ],
+          [
+            "Tác tử đa phương thức",
+            "Lập kế hoạch, công cụ và bộ nhớ",
+            "Phản hồi người dùng và tín hiệu môi trường",
+            "Suy luận tuần tự và điều khiển",
+            "tỷ lệ hoàn thành, mức an toàn",
+            "Độ trễ phụ thuộc chuỗi hành động"
+          ]
+        ],
+        "note": "Phân loại tổng hợp theo vai trò của biểu diễn, tín hiệu học và yêu cầu triển khai; các nhóm có thể kết hợp trong cùng một hệ thống [1, 3]."
+      }
+    },
+    {
+      "after": 3,
+      "element": {
+        "type": "table",
+        "id": "tab:performance",
+        "caption": "Bảng 2. Đối chiếu kết quả định lượng của các chiến lược biểu diễn trên năm nhiệm vụ",
+        "header": [
+          [
+            {
+              "text": "Chiến lược"
+            },
+            {
+              "text": "Phát hiện<br>AP (%)"
+            },
+            {
+              "text": "Phân đoạn<br>mIoU (%)"
+            },
+            {
+              "text": "Truy hồi ảnh–văn bản<br>R@10 (%)"
+            },
+            {
+              "text": "Hỏi đáp<br>Acc. (%)"
+            },
+            {
+              "text": "Độ trễ<br>(ms)"
+            }
+          ],
+          [
+            {
+              "text": "Điều kiện đánh giá",
+              "colspan": 1
+            },
+            {
+              "text": "Bộ dữ liệu nội miền",
+              "colspan": 2
+            },
+            {
+              "text": "Bộ dữ liệu liên miền",
+              "colspan": 2
+            },
+            {
+              "text": "Thiết bị biên",
+              "colspan": 1
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "Đặc trưng thủ công",
+            "61.8",
+            "54.2",
+            "48.7",
+            "42.5",
+            "18"
+          ],
+          [
+            "Mạng tích chập có tiền huấn luyện",
+            "74.6",
+            "68.9",
+            "63.4",
+            "58.1",
+            "24"
+          ],
+          [
+            "Mô hình chú ý phân cấp",
+            "81.3",
+            "76.5",
+            "72.8",
+            "69.4",
+            "37"
+          ],
+          [
+            "Mô hình thị giác–ngôn ngữ",
+            "86.7",
+            "79.8",
+            "88.6",
+            "77.2",
+            "45"
+          ],
+          [
+            "Kết hợp chú ý và thích nghi miền",
+            {
+              "text": "88.1",
+              "bold": true
+            },
+            {
+              "text": "82.4",
+              "bold": true
+            },
+            {
+              "text": "91.3",
+              "bold": true
+            },
+            {
+              "text": "81.6",
+              "bold": true
+            },
+            {
+              "text": "41",
+              "bold": true
+            }
+          ]
+        ],
+        "note": "AP là độ chính xác trung bình, mIoU là giao thoa trên hợp trung bình, R@10 là tỷ lệ truy hồi trong mười kết quả đầu và Acc. là độ chính xác. Giá trị cao hơn tốt hơn, ngoại trừ độ trễ; các số liệu được quy đổi về cùng thang đo để thuận tiện đối chiếu."
+      }
+    },
+    {
+      "after": 6,
+      "element": {
+        "type": "table",
+        "id": "tab:risks",
+        "caption": "Bảng 3. Ma trận rủi ro và biện pháp kiểm định đối với hệ thống thị giác đa phương thức",
+        "header": [
+          [
+            {
+              "text": "Khía cạnh",
+              "colspan": 2
+            },
+            {
+              "text": "Tín hiệu quan sát",
+              "rowspan": 2
+            },
+            {
+              "text": "Mức tác động",
+              "rowspan": 2
+            },
+            {
+              "text": "Biện pháp giảm thiểu",
+              "colspan": 2
+            }
+          ],
+          [
+            {
+              "text": "Nguồn rủi ro"
+            },
+            {
+              "text": "Điểm kiểm tra"
+            },
+            {
+              "text": "Kiểm định trước triển khai"
+            },
+            {
+              "text": "Theo dõi khi vận hành"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "Lệch phân bố",
+            "Đánh giá lát cắt chiếu sáng và góc nhìn",
+            "Điều kiện chiếu sáng và góc nhìn thay đổi",
+            "Tỷ lệ bỏ sót tăng 14.6%",
+            "Đánh giá theo lát cắt miền",
+            "Cảnh báo khi độ tin cậy giảm"
+          ],
+          [
+            "Mất cân bằng nhóm",
+            "Đối chiếu sai số theo nhóm quan sát",
+            "Chênh lệch sai số giữa các nhóm quan sát",
+            "Khoảng cách sai số 9.8 điểm",
+            "Báo cáo chỉ số theo nhóm",
+            "Kiểm tra định kỳ ngưỡng quyết định"
+          ],
+          [
+            "Rò rỉ riêng tư",
+            "Rà soát đặc điểm nhận dạng trong đầu ra",
+            "Chi tiết nhận dạng xuất hiện trong đầu ra",
+            "Mức phơi lộ cao",
+            "Ẩn danh hóa và kiểm tra truy vết",
+            "Ghi nhật ký truy cập tối thiểu"
+          ],
+          [
+            "Sinh mô tả không phù hợp",
+            "Đối chiếu mệnh đề với bằng chứng ảnh",
+            "Nội dung văn bản không khớp bằng chứng ảnh",
+            "Tỷ lệ phát biểu không căn cứ 7.2%",
+            "Đối chiếu với chú thích chuẩn",
+            "Chuyển sang người đánh giá khi bất định"
+          ],
+          [
+            "Suy luận ngoài miền",
+            "Kiểm tra khoảng cách với dữ liệu huấn luyện",
+            "Đầu vào khác xa dữ liệu huấn luyện",
+            "Tỷ lệ từ chối đúng chỉ đạt 71.4%",
+            "Hiệu chuẩn độ bất định",
+            "Giới hạn hành động và yêu cầu xác nhận"
+          ],
+          [
+            "Tiêu thụ tài nguyên",
+            "Đo bộ nhớ và thời gian theo độ dài ngữ cảnh",
+            "Bộ nhớ và thời gian xử lý tăng theo độ dài ngữ cảnh",
+            "Độ trễ tăng 2.7 lần",
+            "Định lượng ngân sách tính toán",
+            "Điều chỉnh kích thước lô theo tải"
+          ]
+        ],
+        "note": "Mức tác động được xếp theo ảnh hưởng đến độ tin cậy, quyền riêng tư và an toàn vận hành. Việc kiểm định nên kết hợp chỉ số tự động với đánh giá của con người [2, 4]."
+      }
+    }
+  ],
+  "charts_figures": [
+    {
+      "after": 1,
+      "element": {
+        "type": "chart",
+        "chart_type": "line",
+        "id": "fig:training_convergence",
+        "caption": "Hình 1. Diễn biến hội tụ của các chiến lược biểu diễn qua số vòng huấn luyện [1].",
+        "labels": [
+          "10",
+          "20",
+          "30",
+          "40",
+          "50",
+          "60"
+        ],
+        "series": [
+          {
+            "name": "Mạng tích chập",
+            "values": [
+              58.4,
+              65.7,
+              69.8,
+              72.1,
+              73.8,
+              74.6
+            ],
+            "errors": [
+              1.8,
+              1.5,
+              1.2,
+              1,
+              0.8,
+              0.7
+            ]
+          },
+          {
+            "name": "Mô hình chú ý phân cấp",
+            "values": [
+              61.2,
+              70.4,
+              75.1,
+              78.3,
+              80.2,
+              81.3
+            ],
+            "errors": [
+              1.6,
+              1.3,
+              1.1,
+              0.9,
+              0.8,
+              0.7
+            ]
+          },
+          {
+            "name": "Kết hợp chú ý và thích nghi miền",
+            "values": [
+              64.5,
+              74.2,
+              79.8,
+              83.4,
+              86.1,
+              88.1
+            ],
+            "errors": [
+              1.5,
+              1.2,
+              1,
+              0.9,
+              0.7,
+              0.6
+            ]
+          }
+        ],
+        "x_label": "Vòng huấn luyện",
+        "y_label": "AP (%)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 3,
+      "element": {
+        "type": "chart",
+        "chart_type": "histogram",
+        "id": "fig:latency_distribution",
+        "caption": "Hình 2. Phân bố độ trễ suy luận trên thiết bị biên theo các khoảng thời gian xử lý.",
+        "labels": [
+          "16–20 ms",
+          "21–25 ms",
+          "26–30 ms",
+          "31–35 ms",
+          "36–40 ms",
+          "41–45 ms",
+          "46–50 ms"
+        ],
+        "series": [
+          {
+            "name": "Số lượt đo",
+            "values": [
+              8,
+              19,
+              31,
+              28,
+              24,
+              16,
+              7
+            ],
+            "errors": [
+              1,
+              2,
+              3,
+              3,
+              2,
+              2,
+              1
+            ]
+          }
+        ],
+        "x_label": "Khoảng độ trễ (ms)",
+        "y_label": "Số lượt đo",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 5,
+      "element": {
+        "type": "chart",
+        "chart_type": "grouped_bar",
+        "id": "fig:cross_domain_metrics",
+        "caption": "Hình 3. So sánh hiệu năng giữa điều kiện nội miền và liên miền trên ba chỉ số đầu ra.",
+        "labels": [
+          "Phát hiện AP",
+          "Phân đoạn mIoU",
+          "Truy hồi R@10",
+          "Hỏi đáp Acc."
+        ],
+        "series": [
+          {
+            "name": "Nội miền",
+            "values": [
+              88.1,
+              82.4,
+              91.3,
+              81.6
+            ],
+            "errors": [
+              0.8,
+              0.9,
+              0.7,
+              1
+            ]
+          },
+          {
+            "name": "Liên miền",
+            "values": [
+              79.6,
+              73.8,
+              84.7,
+              72.9
+            ],
+            "errors": [
+              1.1,
+              1.3,
+              1,
+              1.4
+            ]
+          },
+          {
+            "name": "Nội miền có nhiễu",
+            "values": [
+              84.3,
+              77.5,
+              87.2,
+              76.8
+            ],
+            "errors": [
+              1,
+              1.2,
+              0.9,
+              1.2
+            ]
+          }
+        ],
+        "x_label": "Chỉ số đánh giá",
+        "y_label": "Giá trị (%)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 7,
+      "element": {
+        "type": "chart",
+        "chart_type": "donut",
+        "id": "fig:error_composition",
+        "caption": "Hình 4. Tỷ trọng các nhóm lỗi quan sát trong đánh giá hệ thống đa phương thức.",
+        "labels": [
+          "Lệch phân bố",
+          "Mất cân bằng nhóm",
+          "Rò rỉ riêng tư",
+          "Mô tả không phù hợp",
+          "Ngoài miền",
+          "Tài nguyên"
+        ],
+        "series": [
+          {
+            "name": "Tỷ trọng lỗi",
+            "values": [
+              24,
+              18,
+              12,
+              21,
+              15,
+              10
+            ],
+            "errors": [
+              1.2,
+              1,
+              0.8,
+              1.1,
+              0.9,
+              0.7
+            ]
+          }
+        ],
+        "x_label": "Nhóm lỗi",
+        "y_label": "Tỷ trọng (%)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 9,
+      "element": {
+        "type": "figure",
+        "id": "fig:multimodal_pipeline",
+        "figure_type": "pipeline",
+        "caption": "Hình 5. Chuỗi xử lý từ thu nhận dữ liệu đến suy luận và kiểm định đầu ra trong hệ thống thị giác đa phương thức.",
+        "description": "Sơ đồ chuỗi xử lý từ thu nhận dữ liệu đến suy luận và kiểm định đầu ra trong hệ thống thị giác đa phương thức.",
+        "labels": [
+          "Thu nhận",
+          "Tiền xử lý",
+          "Biểu diễn",
+          "Suy luận",
+          "Kiểm định",
+          "Phản hồi"
+        ],
+        "panels": [
+          {
+            "title": "Luồng dữ liệu",
+            "figure_type": "pipeline",
+            "steps": [
+              "Thu nhận ảnh và văn bản",
+              "Chuẩn hóa tín hiệu",
+              "Mã hóa đặc trưng",
+              "Suy luận quan hệ",
+              "Kiểm tra độ tin cậy",
+              "Xuất kết quả có kiểm soát"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "after": 11,
+      "element": {
+        "type": "figure",
+        "id": "fig:representation_panels",
+        "figure_type": "multi_panel",
+        "caption": "Hình 6. Đối chiếu các tầng biểu diễn và ảnh hưởng của chúng đến định vị, phân đoạn và truy hồi đa phương thức.",
+        "description": "Đối chiếu trực quan các tầng biểu diễn và ảnh hưởng của chúng đến định vị, phân đoạn và truy hồi đa phương thức.",
+        "labels": [
+          "Ảnh đầu vào",
+          "Đặc trưng cục bộ",
+          "Bản đồ chú ý",
+          "Mặt nạ vùng",
+          "Không gian chung"
+        ],
+        "panels": [
+          {
+            "title": "A. Tín hiệu đầu vào",
+            "figure_type": "pipeline",
+            "labels": [
+              "Ảnh",
+              "Văn bản",
+              "Nhiễu"
+            ]
+          },
+          {
+            "title": "B. Biểu diễn trung gian",
+            "figure_type": "pipeline",
+            "labels": [
+              "Cục bộ",
+              "Toàn cục",
+              "Ngữ nghĩa"
+            ]
+          },
+          {
+            "title": "C. Đầu ra nhiệm vụ",
+            "figure_type": "pipeline",
+            "labels": [
+              "Định vị",
+              "Phân đoạn",
+              "Truy hồi"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "after": 13,
+      "element": {
+        "type": "figure",
+        "id": "fig:robustness_panels",
+        "figure_type": "multi_panel",
+        "caption": "Hình 7. Tổng hợp các lát cắt đánh giá độ bền trước thay đổi chiếu sáng, dịch chuyển miền và bất định trong suy luận.",
+        "description": "Tổng hợp các lát cắt đánh giá độ bền trước thay đổi chiếu sáng, dịch chuyển miền và bất định trong suy luận, gồm các biến đổi quan sát, đáp ứng mô hình và cơ chế kiểm soát triển khai.",
+        "labels": [
+          "Chiếu sáng",
+          "Góc nhìn",
+          "Nhiễu cảm biến",
+          "Dịch chuyển miền",
+          "Bất định"
+        ],
+        "panels": [
+          {
+            "title": "A. Biến đổi quan sát",
+            "figure_type": "pipeline",
+            "labels": [
+              "Sáng",
+              "Tối",
+              "Xiên"
+            ]
+          },
+          {
+            "title": "B. Đáp ứng mô hình",
+            "figure_type": "pipeline",
+            "labels": [
+              "Ổn định",
+              "Suy giảm",
+              "Từ chối"
+            ]
+          },
+          {
+            "title": "C. Kiểm soát triển khai",
+            "figure_type": "pipeline",
+            "labels": [
+              "Hiệu chuẩn",
+              "Giám sát",
+              "Xác nhận"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "code": [],
+  "references": [
+    {
+      "text": "[1] Nguyễn Khải Minh, Trần Uyên Phương, Lê Hoàng Vũ và Phạm Gia Hân. “Khảo sát toàn diện về biểu diễn, học sâu và suy luận đa phương thức trong thị giác máy tính.” Tạp chí Nghiên cứu Thị giác và Nhận thức Tính toán, 2024.",
+      "cite": "Nguyễn Khải Minh và cộng sự-2024"
+    },
+    {
+      "text": "[2] Vũ Thanh Lam và Đặng Bảo Châu. “Đánh giá độ bền của biểu diễn thị giác dưới biến đổi chiếu sáng.” Kỷ yếu Hội thảo Thị giác Tính toán Phương Nam, 2021.",
+      "cite": "Vũ và Đặng-2021"
+    },
+    {
+      "text": "[3] Phạm Minh Triết, Hồ Ngọc An và Trịnh Hà Vy. “Học biểu diễn phân cấp cho nhận dạng đối tượng trong cảnh phức tạp.” Tạp chí Kỹ thuật Dữ liệu Vạn Tường, 2022.",
+      "cite": "Phạm và cộng sự-2022"
+    },
+    {
+      "text": "[4] Lê Quang Huy và Nguyễn Diệu Linh. “Kiểm định an toàn cho hệ thống thị giác–ngôn ngữ có khả năng sinh mô tả.” Tạp chí Trí tuệ Tính toán Tân Hải, 2023.",
+      "cite": "Lê và Nguyễn-2023"
+    },
+    {
+      "text": "[5] Trần Gia Bảo và Bùi Khánh Ngân. “Đặc trưng cục bộ và bất biến hình học trong phân tích ảnh.” Tạp chí Phân tích Không gian Lam Sơn, 2018.",
+      "cite": "Trần và Bùi-2018"
+    },
+    {
+      "text": "[6] Đỗ Hoài Nam, Phan Yến Nhi và Võ Nhật Minh. “Từ bộ lọc thủ công đến mạng nơ ron sâu: một khảo cứu phương pháp.” Kỷ yếu Công nghệ Nhận thức Việt Hải, 2019.",
+      "cite": "Đỗ và cộng sự-2019"
+    },
+    {
+      "text": "[7] Nguyễn Thảo Nguyên và Cao Đức Thành. “Mạng tích chập dư cho phân loại ảnh đa miền.” Tạp chí Học máy Ứng dụng Minh Hải, 2020.",
+      "cite": "Nguyễn và Cao-2020"
+    },
+    {
+      "text": "[8] Hồ Thanh Tùng, Lý Mai Anh và Phạm Quốc Vinh. “Phân đoạn ngữ nghĩa với cơ chế kết hợp đặc trưng đa tỷ lệ.” Tạp chí Thị giác và Robot Hoàng Sa, 2021.",
+      "cite": "Hồ và cộng sự-2021"
+    },
+    {
+      "text": "[9] Võ Ngọc Hà và Trương Minh Khoa. “Định vị đối tượng theo vùng và thích nghi với miền quan sát.” Kỷ yếu Hội nghị Nhận dạng Tân Phúc, 2022.",
+      "cite": "Võ và Trương-2022"
+    },
+    {
+      "text": "[10] Đặng Khánh Toàn, Nguyễn Hạ Vy và Lê Anh Quân. “Cơ chế chú ý phân cấp trong suy luận quan hệ giữa các vùng ảnh.” Tạp chí Mô hình Tính toán Đông Hải, 2020.",
+      "cite": "Đặng và cộng sự-2020"
+    },
+    {
+      "text": "[11] Phạm Uyên Chi và Trần Đức Phong. “Mã hóa không gian toàn cục cho nhận dạng hành động trong video.” Tạp chí Tín hiệu và Hệ thống Vạn Phúc, 2022.",
+      "cite": "Phạm và Trần-2022"
+    },
+    {
+      "text": "[12] Nguyễn Hoàng Yến, Bùi Minh Quân và Đỗ Ngân Hà. “Tiền huấn luyện tự giám sát cho biểu diễn thị giác có khả năng chuyển nhiệm vụ.” Tạp chí Học sâu Lam Hải, 2023.",
+      "cite": "Nguyễn và cộng sự-2023"
+    },
+    {
+      "text": "[13] Lê Tuấn Kiệt và Hà Phương Thảo. “Học tương phản giữa ảnh và văn bản trong truy hồi đa phương thức.” Kỷ yếu Thị giác–Ngôn ngữ Bắc Vân, 2021.",
+      "cite": "Lê và Hà-2021"
+    },
+    {
+      "text": "[14] Trịnh Minh Châu, Võ Hoàng Long và Nguyễn Bích Ngọc. “Không gian chung cho liên kết ngữ nghĩa giữa hình ảnh và câu mô tả.” Tạp chí Ngôn ngữ Tính toán Hải Vân, 2022.",
+      "cite": "Trịnh và cộng sự-2022"
+    },
+    {
+      "text": "[15] Cao Anh Dũng và Phạm Ngọc Mai. “Suy luận quan hệ và hỏi đáp trực quan trong cảnh nhiều đối tượng.” Tạp chí Nhận thức Máy Nam Phong, 2023.",
+      "cite": "Cao và Phạm-2023"
+    },
+    {
+      "text": "[16] Bùi Thanh Vân, Lê Minh Đức và Hồ Quỳnh Trang. “Sinh mô tả có kiểm soát bằng căn cứ thị giác.” Tạp chí Giao tiếp Đa phương thức Vạn Ninh, 2024.",
+      "cite": "Bùi và cộng sự-2024"
+    },
+    {
+      "text": "[17] Trần Khải Hoàng và Nguyễn Tường Vi. “Mô hình nền tảng thị giác với dữ liệu ghép cặp quy mô lớn.” Tạp chí Hệ thống Thông minh Tân Lam, 2023.",
+      "cite": "Trần và Nguyễn-2023"
+    },
+    {
+      "text": "[18] Phan Minh Hằng, Đỗ Quốc Khánh và Lý Thanh Sơn. “Thích nghi miền không giám sát cho phát hiện đối tượng ngoài điều kiện huấn luyện.” Kỷ yếu Học máy Biên Hải, 2020.",
+      "cite": "Phan và cộng sự-2020"
+    },
+    {
+      "text": "[19] Nguyễn Kim Oanh và Vũ Đức Thịnh. “Hiệu chuẩn độ bất định trong nhận dạng thị giác có rủi ro.” Tạp chí An toàn Trí tuệ Tính toán, 2024.",
+      "cite": "Nguyễn và Vũ-2024"
+    },
+    {
+      "text": "[20] Hồ Bảo Trân, Trần Nhật Quang và Phạm Thùy Dương. “Đo lường sai lệch giữa các nhóm quan sát trong hệ thống nhận dạng.” Tạp chí Công bằng Dữ liệu Phương Nam, 2022.",
+      "cite": "Hồ và cộng sự-2022"
+    },
+    {
+      "text": "[21] Lê Ngọc Bình và Đặng Minh Khang. “Bảo vệ riêng tư trong phân tích ảnh và văn bản liên kết.” Tạp chí Quyền riêng tư Số Lam Sơn, 2021.",
+      "cite": "Lê và Đặng-2021"
+    },
+    {
+      "text": "[22] Võ Thanh Tâm, Nguyễn Hải Yến và Cao Minh Đức. “Phát hiện phát biểu không căn cứ trong mô hình sinh đa phương thức.” Tạp chí Kiểm định Ngôn ngữ Tân Hải, 2024.",
+      "cite": "Võ và cộng sự-2024"
+    },
+    {
+      "text": "[23] Trương Hà Linh và Lê Quốc Thái. “Học liên tục cho nhận dạng thị giác trong dòng dữ liệu thay đổi.” Kỷ yếu Hệ thống Thích nghi Vạn Tường, 2023.",
+      "cite": "Trương và Lê-2023"
+    },
+    {
+      "text": "[24] Phạm Thanh Hà, Bùi Quốc Duy và Nguyễn Minh Thư. “Suy luận nhân quả từ tín hiệu thị giác có cấu trúc.” Tạp chí Khoa học Dữ liệu Đông Lam, 2022.",
+      "cite": "Phạm và cộng sự-2022"
+    },
+    {
+      "text": "[25] Đỗ Minh Khôi và Trần Ngọc Diệp. “Giám sát yếu cho phân đoạn vùng trong ảnh chưa gán nhãn đầy đủ.” Tạp chí Phân tích Ảnh Tân Phúc, 2020.",
+      "cite": "Đỗ và Trần-2020"
+    },
+    {
+      "text": "[26] Nguyễn Phương Uyên, Hồ Đức Anh và Lê Thanh Huyền. “Học liên kết cho nhận dạng phân tán với bảo vệ dữ liệu.” Tạp chí Điện toán Phối hợp Nam Hải, 2023.",
+      "cite": "Nguyễn và cộng sự-2023"
+    },
+    {
+      "text": "[27] Cao Ngọc Minh và Phan Thế Vinh. “Tối ưu suy luận thời gian thực trên thiết bị biên.” Tạp chí Điện toán Biên Minh Quang, 2021.",
+      "cite": "Cao và Phan-2021"
+    },
+    {
+      "text": "[28] Bùi Hồng Phúc, Võ Gia Linh và Đặng Trí Dũng. “Giảm chi phí tính toán trong mô hình chú ý đa tầng.” Tạp chí Kiến trúc Tính toán Vạn Hải, 2022.",
+      "cite": "Bùi và cộng sự-2022"
+    },
+    {
+      "text": "[29] Trần Hoài An và Nguyễn Quang Lộc. “Đánh giá con người đối với đầu ra ngôn ngữ của hệ thống thị giác.” Kỷ yếu Ngôn ngữ và Nhận thức Tân Vân, 2024.",
+      "cite": "Trần và Nguyễn-2024"
+    },
+    {
+      "text": "[30] Lê Minh Châu, Phạm Hoàng Anh và Hồ Tường Lâm. “Thiết kế giao thức đánh giá liên miền cho tác vụ thị giác đa phương thức.” Tạp chí Đo lường Mô hình Phương Nam, 2023.",
+      "cite": "Lê và cộng sự-2023"
+    },
+    {
+      "text": "[31] Vũ Ngân Hà và Đỗ Thanh Bình. “Giám sát hành vi và giới hạn hành động của tác tử nhận thức.” Tạp chí Robot và Suy luận Lam Hải, 2024.",
+      "cite": "Vũ và Đỗ-2024"
+    },
+    {
+      "text": "[32] Nguyễn Đức Hòa, Trịnh Bảo Ngọc và Cao Thùy Linh. “Lộ trình minh bạch dữ liệu và kiểm định mô hình thị giác trong môi trường rủi ro.” Tạp chí Quản trị Trí tuệ Tính toán Vạn Tường, 2025.",
+      "cite": "Nguyễn và cộng sự-2025"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Introduction"
+    },
+    {
+      "type": "paragraph",
+      "text": "Thị giác máy tính đang chuyển từ những bộ phân loại chuyên biệt sang các hệ thống có khả năng hình thành biểu diễn, liên kết tín hiệu dị thể và suy luận theo ngữ cảnh. Sự chuyển dịch này không chỉ phản ánh tiến bộ về kiến trúc mạng, mà còn cho thấy sự thay đổi trong cách xác định một nhiệm vụ thị giác. Một hệ thống hiện đại có thể đồng thời tiếp nhận ảnh, văn bản, tín hiệu thời gian và phản hồi của người sử dụng, sau đó tạo ra nhận định, hành động hoặc lời giải thích. Vì vậy, chất lượng không còn được đo bằng một chỉ số đơn lẻ. Cần xem xét khả năng tổng quát hóa, độ bền, hiệu quả tính toán, quyền riêng tư, công bằng và mức độ kiểm soát đầu ra [1, 2]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Khảo sát này tổ chức lĩnh vực theo chuỗi từ thu nhận dữ liệu đến biểu diễn, định vị, phân đoạn, ước lượng hình học, nhận dạng hành động, truy hồi và sinh mô tả. Cách tổ chức đó giúp nối các phương pháp tưởng như tách biệt thành một hệ thống liên tục. Đặc trưng thủ công vẫn hữu ích khi dữ liệu ít hoặc yêu cầu hình học rõ ràng; mạng tích chập cung cấp tính phân cấp và hiệu năng tốt; cơ chế chú ý mở rộng phạm vi tương tác; còn mô hình thị giác–ngôn ngữ đưa ngữ nghĩa vào quá trình suy luận [3, 5, 6]. Tuy nhiên, mỗi lớp đều tạo ra những nguồn sai lệch riêng, từ nhiễu cảm biến và thiếu nhãn đến suy luận không căn cứ và hành động vượt quá thẩm quyền."
+    },
+    {
+      "type": "paragraph",
+      "text": "Một cách nhìn định lượng cơ bản là coi đầu ra của mô hình như hàm $f_{\theta}(x)$, trong đó $x$ là tín hiệu quan sát và $\theta$ là tham số học được. Khi miền huấn luyện và miền triển khai khác nhau, phân phối $p_{train}(x)$ không còn gần với $p_{deploy}(x)$, khiến độ chính xác ngoại tuyến có thể đánh giá quá cao năng lực thực tế. Độ lệch này đặc biệt rõ trong điều kiện chiếu sáng, góc nhìn, độ phân giải và ngôn ngữ mô tả thay đổi. Do đó, thiết kế đánh giá phải bao gồm các lát cắt miền, mức bất định và quy trình chuyển sang người kiểm tra khi bằng chứng không đủ [2, 18, 19]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Các kết quả tổng hợp trong tài liệu cho thấy quy mô mô hình thường có quan hệ thuận với khả năng biểu diễn, nhưng quan hệ này không đơn điệu đối với chi phí và an toàn. Khi số lớp, số tham số hoặc độ dài ngữ cảnh tăng, năng lực mô hình có thể tăng trong một miền, song độ trễ và yêu cầu bộ nhớ cũng tăng. Nếu hàm mất mát kết hợp nhiều mục tiêu, chẳng hạn $L = L_{task} + \\lambda L_{align} + \\beta L_{uncertainty}$, việc chọn trọng số trở thành một quyết định về ưu tiên vận hành chứ không chỉ là chi tiết tối ưu hóa. Các công trình về biểu diễn phân cấp và tiền huấn luyện nhấn mạnh rằng chất lượng dữ liệu thường quan trọng không kém kích thước mô hình [3, 12, 17]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Trong phần còn lại, chúng tôi lần lượt trình bày phạm vi tìm kiếm, phân loại phương pháp, bằng chứng so sánh, câu hỏi mở và kết luận. Các tài liệu được trích dẫn theo thứ tự số; các đối chiếu về dữ liệu, độ trễ và rủi ro được diễn giải bằng prose để tránh đánh đồng một phép đo với năng lực tổng thể. Bài viết cũng giữ khoảng cách giữa kết quả trong điều kiện kiểm soát và hành vi trong môi trường vận hành, bởi hai bối cảnh này thường khác nhau về tải, nhiễu, mục tiêu người dùng và hậu quả của sai sót [29, 30]."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Scope and Search"
+    },
+    {
+      "type": "paragraph",
+      "text": "Phạm vi khảo sát bao gồm các phương pháp xử lý ảnh cổ điển, mạng tích chập, mô hình chú ý, học tự giám sát, mô hình thị giác–ngôn ngữ và tác tử đa phương thức. Chúng tôi xem một hệ thống là đa phương thức khi nó có thể kết hợp ít nhất hai dạng tín hiệu hoặc dùng một dạng tín hiệu để ràng buộc cách diễn giải dạng khác. Phân loại này bao trùm truy hồi ảnh–văn bản, hỏi đáp trực quan, sinh mô tả có căn cứ, suy luận quan hệ và điều khiển tuần tự. Những phương pháp chỉ tối ưu một bộ phân loại tĩnh vẫn được đưa vào khi chúng cung cấp nền tảng biểu diễn hoặc tiêu chuẩn so sánh cho các hệ thống rộng hơn [6, 7, 10]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Quy trình tìm kiếm được mô tả theo bốn lớp. Lớp thứ nhất tập trung vào đặc trưng cục bộ, bất biến hình học và các phép biến đổi ảnh [5]. Lớp thứ hai bao gồm phát hiện, phân đoạn, định vị và nhận dạng hành động [8, 9, 11]. Lớp thứ ba xem xét liên kết ảnh với văn bản, tiền huấn luyện tương phản và không gian ngữ nghĩa chung [12, 13, 14]. Lớp cuối cùng tập trung vào thích nghi miền, hiệu chuẩn, quyền riêng tư, công bằng, đánh giá con người và kiểm soát tác tử [18, 19, 20, 21, 29, 31]. Cách chia này tránh việc xem mô hình nền tảng như một giải pháp thay thế hoàn toàn cho các mô-đun chuyên dụng."
+    },
+    {
+      "type": "paragraph",
+      "text": "Đơn vị phân tích không chỉ là bài báo mà còn là giả định đo lường đứng sau mỗi kết quả. Với phát hiện, cần hỏi vùng dự đoán có khớp với vùng chuẩn hay không; với phân đoạn, cần xem ranh giới nhỏ có bị bỏ qua không; với truy hồi, cần phân biệt tương đồng từ vựng với phù hợp ngữ nghĩa; còn với sinh mô tả, cần đánh giá sự trung thành với bằng chứng quan sát. Nếu gọi tập dự đoán và tập chuẩn là $A$ và $B$, giao thoa trên hợp có dạng $IoU = \\frac{|A \\cap B|}{|A \\cup B|}$. Chỉ số này hữu ích nhưng không thể tự phản ánh mức nguy hiểm của một lỗi bỏ sót [8, 16]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Những tiêu chí lựa chọn tài liệu gồm mức liên quan đến biểu diễn thị giác, khả năng chuyển nhiệm vụ, mô tả rõ giao thức đánh giá, và thảo luận về giới hạn triển khai. Tài liệu về hiệu năng được đặt cạnh tài liệu về an toàn để tránh thiên lệch về các con số cao. Các nghiên cứu về sai lệch nhóm cho thấy cùng một độ chính xác trung bình có thể che giấu khoảng cách lớn giữa các nhóm quan sát [20]. Tương tự, một hệ thống sinh văn bản có thể đạt điểm mạch lạc cao nhưng vẫn đưa ra phát biểu không có căn cứ, do đó cần kiểm tra từng mệnh đề đối với vùng ảnh hoặc bằng chứng truy hồi [22]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Trong diễn giải các kết quả, chúng tôi phân biệt ba mức bằng chứng. Mức thứ nhất là bằng chứng nội miền, nơi dữ liệu kiểm tra gần với dữ liệu học. Mức thứ hai là bằng chứng liên miền, nơi điều kiện thu nhận hoặc ngữ cảnh thay đổi. Mức thứ ba là bằng chứng vận hành, bao gồm độ trễ, giới hạn bộ nhớ, hành vi khi tải tăng và khả năng từ chối. Độ tin cậy tổng thể có thể hình dung qua $R = \\min(r_{data}, r_{model}, r_{interface}, r_{operation})$, bởi một mắt xích yếu có thể làm mất giá trị của các mắt xích còn lại. Đây là lý do các giao thức đánh giá liên miền cần được thiết kế ngay từ đầu [30, 32]."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Taxonomy"
+    },
+    {
+      "type": "paragraph",
+      "text": "Phân loại trung tâm của khảo sát đặt các phương pháp trên một trục từ tín hiệu thủ công đến biểu diễn học được và từ đầu ra đơn nhiệm vụ đến suy luận tuần tự. Xử lý ảnh cổ điển dựa vào bộ lọc, hình học và đặc trưng được thiết kế trước. Mạng tích chập học các mẫu cục bộ theo tầng, thường phù hợp với phân loại, phát hiện và phân đoạn. Mô hình chú ý mở rộng tương tác giữa vùng xa nhau, trong khi mô hình thị giác–ngôn ngữ ánh xạ ảnh và văn bản vào không gian có thể so sánh. Tác tử đa phương thức bổ sung lập kế hoạch, công cụ, bộ nhớ và cơ chế phản hồi. Cấu trúc này tương ứng với các nhóm trong \ref{tab:taxonomy}, dù mỗi hệ thống thực tế có thể kết hợp nhiều nhóm [1, 3]."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Từ đặc trưng thủ công đến biểu diễn phân cấp"
+    },
+    {
+      "type": "paragraph",
+      "text": "Các phương pháp cổ điển thường giả định rằng những thuộc tính quan trọng có thể được mô tả bằng biên, hướng, kết cấu hoặc quan hệ hình học. Ưu điểm của chúng là chi phí thấp, khả năng kiểm tra trực tiếp và đôi khi có tính bất biến tốt trước phép biến đổi đã biết [5]. Nhược điểm là độ bao phủ hạn chế khi cảnh có vật thể chồng lấn, ánh sáng phức tạp hoặc ngữ cảnh chưa từng thấy. Mạng tích chập khắc phục một phần giới hạn này bằng cách học bộ lọc từ dữ liệu. Kết nối dư giúp tối ưu mạng sâu, còn đặc trưng đa tỷ lệ hỗ trợ các vật thể có kích thước khác nhau [7, 8]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Trong phát hiện, mô hình cần đồng thời ước lượng lớp và vị trí. Một hàm mục tiêu thường gồm thành phần phân loại và thành phần định vị, có thể viết $L = L_{cls} + \\lambda L_{box}$. Nếu trọng số định vị quá nhỏ, mô hình nhận ra vật thể nhưng đặt vùng không chính xác; nếu quá lớn, nó có thể ưu tiên hình học mà bỏ qua ngữ nghĩa. Các phương pháp thích nghi miền bổ sung tín hiệu làm giảm khác biệt giữa biểu diễn nguồn và biểu diễn đích. Tuy vậy, việc ép hai miền quá gần nhau có thể xóa mất thông tin phân biệt cần thiết, đặc biệt khi các miền có cấu trúc vật thể khác nhau [9, 18]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Mô hình chú ý thay đổi cách phân bổ năng lực tính toán. Thay vì chỉ truyền thông tin qua lân cận không gian, cơ chế này cho phép một vùng truy cập vùng khác dựa trên độ tương thích. Với các biểu diễn truy vấn, khóa và giá trị, trọng số tương tác có thể được diễn đạt khái quát bằng $a_{ij} \\propto \\exp(\\operatorname{sim}(q_i,k_j))$. Khả năng nắm bắt quan hệ xa hỗ trợ nhận dạng cảnh, hành động và tương tác giữa nhiều đối tượng [10, 11]. Tuy nhiên, chi phí bộ nhớ thường tăng theo số phần tử không gian, khiến các thiết kế phân cấp và cửa sổ cục bộ trở nên quan trọng đối với thiết bị hạn chế."
+    },
+    {
+      "type": "paragraph",
+      "text": "Tiền huấn luyện tự giám sát tạo ra tín hiệu học từ chính dữ liệu, chẳng hạn dự đoán phần bị che, so sánh hai phép biến đổi hoặc khớp ảnh với văn bản. Trong học tương phản, mục tiêu thường kéo cặp phù hợp lại gần và đẩy cặp không phù hợp ra xa. Với hai biểu diễn chuẩn hóa $u$ và $v$, độ tương đồng có thể dùng $s(u,v) = \\frac{u^{T}v}{\\|u\\|\\|v\\|}$, dù hiệu quả thực tế còn phụ thuộc vào nhiệt độ, cách chọn cặp và chất lượng chú thích [12, 13]. Lợi ích chính là biểu diễn có thể chuyển sang nhiều nhiệm vụ; rủi ro là mô hình học các dấu hiệu phụ của nguồn dữ liệu thay vì cấu trúc thị giác cần thiết."
+    },
+    {
+      "type": "paragraph",
+      "text": "Mô hình thị giác–ngôn ngữ tạo ra một lớp trừu tượng mới, trong đó truy hồi và sinh văn bản có thể được điều kiện hóa bởi cùng một không gian ngữ nghĩa. Sự liên kết này hữu ích cho hỏi đáp, tìm kiếm và mô tả cảnh, nhưng cũng tạo ra ảo giác khi mô hình dùng mẫu ngôn ngữ quen thuộc để lấp khoảng trống bằng chứng [14, 15, 16]. Một hệ thống đáng tin cậy cần tách ba việc: nhận biết nội dung nhìn thấy, suy luận quan hệ hợp lệ và diễn đạt kết quả. Nếu gộp cả ba thành một đầu ra duy nhất, khó xác định lỗi phát sinh ở biểu diễn, bộ giải mã hay giao diện người dùng."
+    },
+    {
+      "type": "paragraph",
+      "text": "Tác tử đa phương thức mở rộng mô hình từ trả lời sang hành động. Chuỗi xử lý thường gồm quan sát, lập kế hoạch, gọi công cụ, kiểm tra kết quả và cập nhật bộ nhớ. Mỗi bước có thể làm tăng sai lệch, vì một nhận định chưa chắc chắn ở đầu chuỗi sẽ ảnh hưởng đến các hành động sau. Nếu xác suất hoàn thành một chuỗi gồm $n$ bước là tích của các xác suất điều kiện, ta có $P_{chain} = \\prod_{i=1}^{n} p_i$, và giá trị này giảm nhanh khi số bước tăng. Vì vậy, tác tử cần giới hạn quyền, kiểm tra trước hành động có hậu quả và cơ chế xác nhận của người sử dụng [31]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Không gian biểu diễn cũng có thể được xem như một giao diện giữa các mô-đun. Biểu diễn cục bộ giữ biên và chi tiết, biểu diễn toàn cục giữ ngữ cảnh, còn biểu diễn ngữ nghĩa hỗ trợ liên kết với văn bản. Nếu nén quá sớm, mô hình mất thông tin nhỏ; nếu giữ toàn bộ tín hiệu, chi phí tăng và nhiễu cũng được truyền đi. Các tầng này được minh họa về mặt khái niệm qua \ref{fig:representation_panels}. Việc chọn tầng nào cho nhiệm vụ nào cần dựa vào loại lỗi, chứ không chỉ dựa vào điểm trung bình. Đây là nguyên tắc quan trọng khi thiết kế hệ thống lai giữa bộ mã hóa tổng quát và đầu dự đoán chuyên dụng."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Comparative Evidence"
+    },
+    {
+      "type": "paragraph",
+      "text": "Đối chiếu định lượng cần đặt trong bối cảnh của giao thức. Các chiến lược biểu diễn có thể đạt kết quả khác nhau vì cách chia dữ liệu, mức nhiễu, độ phân giải, ngân sách huấn luyện và tiêu chuẩn dừng không giống nhau. So sánh được trình bày trong \ref{tab:performance}, còn diễn biến hội tụ được quy chiếu bằng \ref{fig:training_convergence}; cả hai nên được đọc như bằng chứng về xu hướng chứ không phải thứ hạng bất biến. Mô hình thị giác–ngôn ngữ thường mạnh ở truy hồi và hỏi đáp, trong khi mô hình chuyên dụng có thể có lợi thế về độ trễ hoặc kiểm soát hình học. Sự kết hợp chú ý với thích nghi miền thường tạo cân bằng tốt hơn giữa độ chính xác và khả năng chuyển miền [17, 18]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Một chỉ số quan trọng là độ ổn định khi điều kiện quan sát thay đổi. Với nhiều phép biến đổi $T_k$, mức suy giảm trung bình có thể viết $D = \\frac{1}{K}\\sum_{k=1}^{K}(m_{clean}-m_{T_k})$. Chỉ số này không cho biết biến đổi nào nguy hiểm nhất, nhưng giúp tránh việc báo cáo duy nhất kết quả trên dữ liệu sạch. Ánh sáng yếu, phản xạ, che khuất và thay đổi góc nhìn có thể làm các đặc trưng bề mặt mất giá trị. Vì thế, kiểm tra theo lát cắt cần bao gồm cả biến đổi tự nhiên và biến đổi do cảm biến, đồng thời ghi nhận mức bất định của từng dự đoán [2, 19]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Độ trễ là một chiều cạnh khác thường bị bỏ qua. Tốc độ trung bình không phản ánh đuôi phân phối, trong khi một số lượt xử lý chậm có thể làm gián đoạn hệ thống thời gian thực. Độ trễ cần được đo cùng kích thước đầu vào, tải bộ nhớ, số luồng và trạng thái nhiệt của thiết bị. Phân bố được nhắc đến tại \ref{fig:latency_distribution} cho thấy nên báo cáo cả trung vị, phân vị cao và tỷ lệ vượt ngân sách. Lượng tử hóa, cắt tỉa và chưng cất có thể giảm chi phí, nhưng nếu làm giảm khả năng nhận dạng các chi tiết nhỏ thì lợi ích vận hành sẽ không còn rõ ràng [27, 28]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Hiệu năng liên miền thường giảm vì mô hình dựa vào dấu hiệu đặc thù của miền học. Chẳng hạn, nền, kiểu chú thích, góc máy hoặc quy luật chiếu sáng có thể trở thành tín hiệu thay thế cho đặc điểm của vật thể. So sánh nội miền và liên miền trong \ref{fig:cross_domain_metrics} cần được diễn giải cùng kiểm tra độ tin cậy và tỷ lệ từ chối. Một mô hình có điểm trung bình thấp hơn nhưng biết nhận ra khi không chắc chắn có thể an toàn hơn mô hình đạt điểm cao nhưng luôn đưa ra câu trả lời. Các phương pháp hiệu chuẩn nên được đánh giá bằng sai số xác suất, độ bao phủ và chất lượng của quyết định chuyển giao cho người [19, 30]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Công bằng không thể được suy ra từ một giá trị trung bình. Nếu $e_g$ là sai số của nhóm $g$, khoảng cách nhóm có thể được theo dõi bằng $F = \\max_g e_g - \\min_g e_g$. Chỉ số này cần đi kèm kích thước nhóm, độ khó quan sát và loại lỗi. Một nhóm có tỷ lệ bỏ sót cao có thể chịu hậu quả lớn hơn dù đóng góp ít vào tổng số lượt đo. Hơn nữa, nhóm quan sát không nhất thiết chỉ được xác định bởi thuộc tính cá nhân; điều kiện ánh sáng, thiết bị và bối cảnh cũng có thể tạo ra chênh lệch. Vì vậy, báo cáo cần minh bạch về cách hình thành lát cắt và giới hạn suy diễn [20]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Quyền riêng tư là vấn đề xuyên suốt từ dữ liệu đến đầu ra. Ảnh có thể chứa đặc điểm nhận dạng, vị trí, tài liệu và mối quan hệ xã hội mà người thu nhận không dự định chia sẻ. Việc ẩn danh hóa làm giảm một số rủi ro nhưng không bảo đảm rằng thông tin không thể được suy ra từ phần còn lại. Các hệ thống liên kết ảnh–văn bản còn có nguy cơ đưa chi tiết nhạy cảm vào mô tả hoặc nhật ký. Biện pháp phù hợp gồm tối thiểu hóa dữ liệu, phân quyền truy cập, kiểm tra truy vết, mã hóa khi truyền và quy định rõ thời hạn lưu giữ [21]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Sinh mô tả cần một tiêu chuẩn đánh giá nhiều lớp. Lớp thứ nhất là tính mạch lạc ngôn ngữ; lớp thứ hai là mức bao phủ nội dung; lớp thứ ba là tính trung thành với bằng chứng ảnh. Một câu ngắn, tự nhiên nhưng bổ sung vật thể không tồn tại vẫn là lỗi nghiêm trọng. Đánh giá con người nên yêu cầu người chấm chỉ ra vùng hoặc dấu hiệu hỗ trợ nhận định, thay vì chỉ chọn mức dễ đọc. Các phương pháp phát hiện phát biểu không căn cứ có thể dùng bộ kiểm tra riêng, nhưng không nên thay thế hoàn toàn đánh giá người, nhất là trong cảnh mơ hồ [16, 22, 29]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ma trận rủi ro tại \ref{tab:risks} và thành phần lỗi tại \ref{fig:error_composition} cho thấy các vấn đề dữ liệu, nhóm, riêng tư, mô tả, ngoài miền và tài nguyên có quan hệ với nhau. Lệch phân bố làm giảm độ tin cậy; độ tin cậy thấp thúc đẩy mô hình sinh văn bản thiếu căn cứ; đầu ra thiếu căn cứ lại làm tăng rủi ro khi người sử dụng tin vào hệ thống. Do đó, biện pháp giảm thiểu không nên đặt ở cuối chuỗi. Cần kiểm tra nguồn dữ liệu, theo dõi phân phối đầu vào, hiệu chuẩn bất định, giới hạn hành động và lưu lại lý do chuyển giao. Các bước này tạo thành vòng phản hồi thay vì một lần kiểm định trước triển khai [4, 19, 32]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Một hệ thống triển khai thực tế nên được xem như chuỗi có cổng kiểm soát. Sơ đồ khái niệm tại \ref{fig:multimodal_pipeline} đặt thu nhận, tiền xử lý, mã hóa, suy luận, kiểm định và phản hồi trong cùng một luồng. Ở mỗi cổng, cần có điều kiện để dừng hoặc chuyển sang phương án an toàn. Chẳng hạn, ảnh có độ phân giải quá thấp có thể bị từ chối trước khi suy luận; kết quả có bất định cao có thể yêu cầu xác nhận; hành động có tác động lớn có thể cần hai bước phê duyệt. Thiết kế này làm tăng một phần độ trễ, nhưng đổi lại giảm nguy cơ sai sót không thể đảo ngược."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Open Questions"
+    },
+    {
+      "type": "paragraph",
+      "text": "Học liên tục là câu hỏi nổi bật khi dữ liệu vận hành thay đổi theo thời gian. Mô hình phải tiếp nhận thông tin mới mà không quên năng lực cũ, đồng thời không học các tín hiệu nhiễu hoặc dữ liệu độc hại. Các chiến lược bộ nhớ, điều chỉnh tham số nhỏ và phát hiện thay đổi phân phối đang được nghiên cứu, nhưng còn thiếu giao thức thống nhất để đánh giá mức quên, tốc độ thích nghi và chi phí kiểm tra [23]. Một thách thức khác là xác định khi nào sự thay đổi là hữu ích và khi nào nó phản ánh lỗi cảm biến. Hệ thống an toàn cần ghi nhận phiên bản dữ liệu, phiên bản tham số và lý do cập nhật."
+    },
+    {
+      "type": "paragraph",
+      "text": "Suy luận nhân quả đòi hỏi vượt qua tương quan bề mặt. Một mô hình có thể nhận ra rằng hai vật thể thường xuất hiện cùng nhau mà không hiểu quan hệ nào tạo ra kết quả. Biểu diễn có cấu trúc, đồ thị cảnh và can thiệp giả định có thể giúp tách nguyên nhân khỏi dấu hiệu đi kèm [24]. Tuy nhiên, ảnh chỉ cung cấp một lát cắt quan sát, nên nhiều quan hệ không thể xác định nếu thiếu thời gian, hành động hoặc tri thức miền. Câu hỏi thực tế là làm thế nào để hệ thống biểu đạt giới hạn của kết luận, thay vì trình bày một suy đoán như sự thật. Đây cũng là vấn đề giao tiếp giữa mô hình và người dùng."
+    },
+    {
+      "type": "paragraph",
+      "text": "Giám sát yếu có thể giảm chi phí gán nhãn nhưng tạo ra nhiễu trong tín hiệu học. Nhãn từ câu mô tả, vùng thô, truy vấn hoặc quy tắc có thể đủ cho một số tác vụ, song không luôn chỉ rõ ranh giới và quan hệ. Khi huấn luyện trên nhãn yếu, cần mô hình hóa độ tin cậy của từng nguồn và phân biệt bất đồng thật với lỗi gán nhãn [25]. Học bán giám sát, nhất quán giữa các phép biến đổi và lựa chọn dữ liệu chủ động là những hướng triển vọng. Dẫu vậy, việc tối ưu điểm kiểm tra trên nhãn yếu có thể làm tăng khoảng cách giữa chỉ số và khả năng sử dụng."
+    },
+    {
+      "type": "paragraph",
+      "text": "Học liên kết đặt ra một cân bằng khó giữa riêng tư, hiệu quả và khả năng đồng nhất mô hình. Dữ liệu có thể được giữ tại nơi phát sinh, trong khi tham số hoặc cập nhật được trao đổi theo chu kỳ. Nhưng cập nhật vẫn có thể làm lộ thông tin, và các nút có phân phối dữ liệu khác nhau có thể kéo mô hình theo những hướng xung đột [26]. Cần nghiên cứu cơ chế bảo vệ cập nhật, phát hiện nút bất thường, đo ảnh hưởng của từng nguồn và đánh giá công bằng giữa các nơi tham gia. Một giao thức tốt phải báo cáo cả lợi ích độ chính xác lẫn chi phí truyền thông, năng lượng và quản trị."
+    },
+    {
+      "type": "paragraph",
+      "text": "Bất định hiện vẫn được sử dụng chưa nhất quán. Một điểm tin cậy cao không nhất thiết đồng nghĩa với xác suất đúng, nhất là khi đầu vào ngoài miền. Các phương pháp hiệu chuẩn có thể điều chỉnh điểm số, nhưng hiệu quả phụ thuộc vào dữ liệu hiệu chuẩn và mục tiêu quyết định [19]. Cần phân biệt bất định do thiếu thông tin với bất định do nhiễu không thể loại bỏ. Hệ thống nên biết từ chối khi không có bằng chứng, nhưng tỷ lệ từ chối quá cao cũng làm mất giá trị vận hành. Vì vậy, đánh giá cần xem xét đường cong giữa độ bao phủ và độ chính xác, cùng chi phí của mỗi lần chuyển giao."
+    },
+    {
+      "type": "paragraph",
+      "text": "Mô hình nền tảng đặt ra câu hỏi về khả năng giải thích. Bản đồ chú ý có thể cho biết vùng được sử dụng, nhưng không chắc là nguyên nhân thực sự của quyết định. Lời giải thích bằng văn bản có thể dễ đọc nhưng được tạo sau quyết định và không phản ánh quá trình nội bộ. Các phương pháp kiểm tra phản thực, che vùng, thay đổi câu hỏi và truy nguyên kích hoạt có thể cung cấp bằng chứng bổ sung. Tuy nhiên, không nên dùng một kỹ thuật duy nhất để kết luận mô hình đã giải thích được. Cần đánh giá giải thích theo tính trung thành, ổn định, hữu ích cho người dùng và khả năng phát hiện lỗi [4, 29]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Tác tử nhận thức làm nổi bật vấn đề kiểm soát hành động. Khi hệ thống có thể gọi công cụ hoặc thay đổi trạng thái bên ngoài, lỗi nhận dạng không còn chỉ là câu trả lời sai. Cần phân cấp quyền theo mức tác động, đặt ngân sách hành động, ghi nhật ký tối thiểu nhưng đủ truy vết, và yêu cầu xác nhận khi hành động vượt ngưỡng. Các bộ kiểm tra nên bao gồm mục tiêu xung đột, lệnh mơ hồ, công cụ không sẵn sàng và phản hồi sai. Nghiên cứu tương lai cần kết hợp tỷ lệ hoàn thành với tỷ lệ hành động nguy hiểm, thay vì tối ưu thành công nhiệm vụ một cách đơn độc [31]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Năng lượng và chi phí tính toán cũng là câu hỏi mở. Mô hình lớn có thể giảm công sức thiết kế đặc trưng, nhưng chi phí huấn luyện và suy luận tích lũy theo số người dùng, số lượt gọi và độ dài ngữ cảnh. Một tiêu chuẩn bền vững nên ghi nhận năng lượng trên lượt dự đoán, độ trễ, bộ nhớ và mức giảm chất lượng sau nén. Tối ưu phần cứng, bộ nhớ thưa, xử lý thích ứng và chọn mô hình theo độ khó có thể giúp giảm chi phí [27, 28]. Cần tránh đánh đổi mù quáng, vì một mô hình nhỏ hơn nhưng thường xuyên gọi lại hoặc sinh nhiều bước có thể không tiết kiệm hơn."
+    },
+    {
+      "type": "paragraph",
+      "text": "Đánh giá liên miền cần trở thành chuẩn thường xuyên thay vì phép thử bổ sung. Một giao thức tốt nên tách miền theo nguồn thu nhận, địa điểm, thời gian, thiết bị và kiểu chú thích; đồng thời công bố các điều kiện mà mô hình được phép từ chối. Kết quả cần bao gồm điểm trung bình, độ phân tán, nhóm lỗi, độ tin cậy và chi phí. Các bộ dữ liệu mới cũng nên được kiểm tra về trùng lặp, rò rỉ, lệch nhóm và thay đổi nhãn. Nếu không, mô hình có thể đạt kết quả cao nhờ ghi nhớ tín hiệu quen thuộc mà không học được năng lực chuyển giao [30, 32]."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Conclusion"
+    },
+    {
+      "type": "paragraph",
+      "text": "Khảo sát này cho thấy tiến bộ trong thị giác máy tính là kết quả của sự phối hợp giữa biểu diễn, dữ liệu, mục tiêu học và giao thức kiểm định. Đặc trưng thủ công cung cấp nền tảng hình học và chi phí thấp; mạng tích chập cung cấp tính phân cấp; chú ý mở rộng quan hệ; mô hình thị giác–ngôn ngữ nối tín hiệu ảnh với ngôn ngữ; còn tác tử đa phương thức đưa suy luận vào chuỗi hành động. Không có lớp nào tự giải quyết toàn bộ vấn đề. Năng lực tốt trong điều kiện nội miền có thể suy giảm khi chiếu sáng, góc nhìn, nhóm quan sát, ngôn ngữ hoặc tải tính toán thay đổi [1, 2, 3]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Một lộ trình phù hợp cần bắt đầu từ dữ liệu có nguồn gốc rõ, lát cắt đánh giá minh bạch và quy tắc bảo vệ riêng tư. Tiếp đó, mô hình nên được huấn luyện với mục tiêu phản ánh nhiệm vụ thật, được hiệu chuẩn trên miền liên quan và được kiểm tra bằng cả chỉ số tự động lẫn đánh giá con người. Đầu ra sinh ngôn ngữ phải được đối chiếu với bằng chứng ảnh; dự đoán bất định phải có cơ chế từ chối; hành động phải có giới hạn và xác nhận. Những nguyên tắc này nối kết các nghiên cứu về căn cứ thị giác, công bằng, riêng tư và an toàn [4, 20, 21, 22]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Về phương pháp, không nên xem kích thước mô hình là đại diện duy nhất cho chất lượng. Một hệ thống nhỏ hơn nhưng có biểu diễn phù hợp, giao thức liên miền chặt chẽ và khả năng phát hiện ngoài miền có thể hữu ích hơn trong thực tế. Các chỉ số như $m$, độ trễ $t$, mức bất định $u$ và chi phí $c$ cần được xem đồng thời trong một mục tiêu đa tiêu chí, chẳng hạn $J = m - \\lambda t - \\beta u - \\gamma c$. Trọng số của mục tiêu phải được xác định theo hậu quả của sai sót, không chỉ theo thuận tiện đo lường."
+    },
+    {
+      "type": "paragraph",
+      "text": "Các hướng tiếp theo gồm học liên tục có kiểm soát, suy luận nhân quả từ biểu diễn cấu trúc, giám sát yếu có ước lượng chất lượng nhãn, học liên kết bảo vệ dữ liệu và tối ưu suy luận tiết kiệm năng lượng [23, 24, 25, 26, 27]. Đồng thời, cần nghiên cứu sâu hơn cách con người hiểu và sử dụng lời giải thích, cách tổ chức quy trình chuyển giao, và cách giám sát tác tử sau khi triển khai. Một hệ thống đáng tin không phải là hệ thống không bao giờ sai, mà là hệ thống biết giới hạn của mình, phát hiện tình huống bất thường và hạn chế hậu quả khi sai."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cuối cùng, thị giác máy tính nên được phát triển như một lĩnh vực kỹ thuật có trách nhiệm, trong đó độ chính xác, khả năng mở rộng và an toàn được thiết kế cùng nhau. Các bằng chứng từ biểu diễn phân cấp, mô hình nền tảng, thích nghi miền và đánh giá liên miền cho thấy chất lượng bền vững phụ thuộc vào sự phù hợp giữa dữ liệu, nhiệm vụ và môi trường [17, 18, 30]. Khi các hệ thống ngày càng có khả năng mô tả, suy luận và hành động, trách nhiệm của người thiết kế cũng mở rộng từ tối ưu mô hình sang quản trị toàn bộ vòng đời. Đó là nền tảng để biến tiến bộ thuật toán thành năng lực sử dụng được, kiểm định được và có thể tin cậy [32]."
+    }
+  ]
+}

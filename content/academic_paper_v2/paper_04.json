@@ -1,0 +1,911 @@
+{
+  "content_id": "paper_04",
+  "variables": {
+    "lang": "en",
+    "field": "hydrology",
+    "paper_length": "short",
+    "citation_style": "author_year",
+    "element_plan": {
+      "archetype": "field_study",
+      "counts": {
+        "chart": 5,
+        "figure": 1,
+        "table": 4,
+        "equation": 3,
+        "code": 0,
+        "references": 40
+      },
+      "chart_types": [
+        "bar",
+        "area",
+        "scatter",
+        "grouped_bar",
+        "box"
+      ],
+      "figure_types": [
+        "pipeline"
+      ],
+      "sections": [
+        "Introduction",
+        "Study Area",
+        "Sampling Protocol",
+        "Measurements",
+        "Results",
+        "Discussion",
+        "Limitations",
+        "Conclusion"
+      ]
+    }
+  },
+  "lang": "en",
+  "values": {
+    "title": "Riparian exchange and stormflow recession in the Veyra headwaters",
+    "authors": [
+      {
+        "name": "Neris Valt",
+        "affiliations": [
+          1
+        ],
+        "corresponding": true,
+        "email": "neris.valt@veyrahydro.org"
+      },
+      {
+        "name": "Oren Seld",
+        "affiliations": [
+          1,
+          2
+        ],
+        "corresponding": false
+      },
+      {
+        "name": "Mira Tovan",
+        "affiliations": [
+          2
+        ],
+        "corresponding": false
+      }
+    ],
+    "affiliations": [
+      "Veyra Catchment Research Unit, Lethen",
+      "Institute for Water and Landscape Studies, Ordan"
+    ],
+    "abstract": "We measured stream stage, discharge, and near-bank groundwater levels along three headwater reaches in the Veyra uplands during six storm events. Water-level responses showed that the two forested reaches received a brief lateral groundwater contribution during early recession, whereas the open reach returned rapidly to baseflow. Median recession duration was 31 h in forested reaches and 19 h in the open reach. The contrast was strongest after events preceded by at least four dry days. These field observations indicate that riparian exchange can prolong stormflow recession at small catchment scale, consistent with process interpretations reported by Orven and Talis (2019) and Kelm et al. (2022).",
+    "abstract_alt": null,
+    "keywords": "stormflow recession; riparian groundwater; headwater stream; discharge monitoring; Veyra uplands",
+    "keywords_alt": null,
+    "journal": "Journal of Veyra Catchment Hydrology",
+    "acknowledgement": "The authors thank the Lethen field team for maintaining the stage loggers during autumn storms and local land stewards for access to the monitored reaches.",
+    "references": [
+      {
+        "text": "Orven, P. and Talis, R. (2019). Lateral groundwater pulses during headwater storm recession. Journal of Veyra Catchment Hydrology, 8(2), 41-53.",
+        "cite": "Orven & Talis, 2019"
+      },
+      {
+        "text": "Kelm, S., Varo, I. and Deren, M. (2022). Riparian storage and streamflow persistence in small upland basins. Veyra Hydrologic Studies, 14(1), 17-31.",
+        "cite": "Kelm et al., 2022"
+      },
+      {
+        "text": "Valt, N., Seld, O. and Tovan, M. (2021). Near-bank water-level response across forested and open headwater reaches. Journal of Veyra Catchment Hydrology, 10(3), 112-126.",
+        "cite": "Valt et al., 2021"
+      },
+      {
+        "text": "Seld, O. and Merin, A. (2020). Stage-discharge rating stability in steep small streams. Upland Water Processes, 6(2), 59-72.",
+        "cite": "Seld & Merin, 2020"
+      },
+      {
+        "text": "Tovan, M., Ardel, V. and Rovin, E. (2023). Storm-event controls on groundwater rise beside headwater channels. Journal of Riparian Hydrology, 12(1), 3-18.",
+        "cite": "Tovan et al., 2023"
+      },
+      {
+        "text": "Deren, M. and Kelm, S. (2018). Recession curves as indicators of hillslope-stream connection. Catchment Dynamics Quarterly, 5(4), 201-215.",
+        "cite": "Deren & Kelm, 2018"
+      },
+      {
+        "text": "Rovin, E., Pell, N. and Varo, I. (2024). Field measurements of bank storage during autumn rainfall events. Veyra Hydrologic Studies, 16(2), 88-103.",
+        "cite": "Rovin et al., 2024"
+      },
+      {
+        "text": "Merin, A. and Sova, T. (2017). Continuous stage records in forested upland channels: instrument placement and drift correction. Upland Water Processes, 3(1), 24-38.",
+        "cite": "Merin & Sova, 2017"
+      },
+      {
+        "text": "Ardel, V., Neris, J. and Talis, R. (2020). Antecedent drying and delayed stream response in a small mountain basin. Journal of Veyra Catchment Hydrology, 9(2), 67-80.",
+        "cite": "Ardel et al., 2020"
+      },
+      {
+        "text": "Pell, N. and Oren, D. (2016). Comparing recession duration among contrasting headwater settings. Catchment Dynamics Quarterly, 2(3), 133-145.",
+        "cite": "Pell & Oren, 2016"
+      },
+      {
+        "text": "Varo, I., Seld, O. and Halen, P. (2021). Near-stream well arrays for event-scale groundwater monitoring. Journal of Riparian Hydrology, 10(4), 221-236.",
+        "cite": "Varo et al., 2021"
+      },
+      {
+        "text": "Sova, T. and Deren, M. (2019). Baseflow thresholds and storm recession endpoints in small catchments. Upland Water Processes, 5(2), 74-87.",
+        "cite": "Sova & Deren, 2019"
+      },
+      {
+        "text": "Halen, P., Tovan, M. and Pell, N. (2022). Short-lag groundwater responses along low-order channels. Journal of Veyra Catchment Hydrology, 11(3), 149-163.",
+        "cite": "Halen et al., 2022"
+      },
+      {
+        "text": "Neris, J. and Rovin, E. (2018). Forest cover and event-water persistence in headwater streams. Catchment Dynamics Quarterly, 4(1), 9-22.",
+        "cite": "Neris & Rovin, 2018"
+      },
+      {
+        "text": "Meral, O., Kelm, S. and Ardel, V. (2023). Discharge rating uncertainty under rapidly changing stage. Veyra Hydrologic Studies, 15(3), 177-191.",
+        "cite": "Meral et al., 2023"
+      },
+      {
+        "text": "Talis, R. and Valt, N. (2017). Channel-adjacent groundwater fluctuations during storm passage. Journal of Riparian Hydrology, 6(1), 33-47.",
+        "cite": "Talis & Valt, 2017"
+      },
+      {
+        "text": "Oren, D., Merin, A. and Seld, O. (2024). Logger interval selection for event hydrology in small streams. Upland Water Processes, 10(2), 95-109.",
+        "cite": "Oren et al., 2024"
+      },
+      {
+        "text": "Pelor, S. and Halen, P. (2015). Recession behavior after dry-period rainfall in upland basins. Catchment Dynamics Quarterly, 1(2), 48-61.",
+        "cite": "Pelor & Halen, 2015"
+      },
+      {
+        "text": "Veylan, M., Sova, T. and Neris, J. (2021). Contrasting groundwater rise in shaded and exposed stream corridors. Journal of Veyra Catchment Hydrology, 10(1), 1-15.",
+        "cite": "Veylan et al., 2021"
+      },
+      {
+        "text": "Ralen, E. and Pell, N. (2020). Field estimation of event-specific baseflow levels. Veyra Hydrologic Studies, 12(4), 249-262.",
+        "cite": "Ralen & Pell, 2020"
+      },
+      {
+        "text": "Dovet, A., Tovan, M. and Kelm, S. (2019). Storm sequencing and recovery of headwater discharge. Journal of Riparian Hydrology, 8(3), 128-142.",
+        "cite": "Dovet et al., 2019"
+      },
+      {
+        "text": "Seld, O. and Valt, N. (2023). Interpreting paired stage and well records during stream recession. Journal of Veyra Catchment Hydrology, 12(2), 73-87.",
+        "cite": "Seld & Valt, 2023"
+      },
+      {
+        "text": "Teren, L., Varo, I. and Meral, O. (2016). Bank-side hydraulic response in small forested watersheds. Upland Water Processes, 2(4), 181-194.",
+        "cite": "Teren et al., 2016"
+      },
+      {
+        "text": "Avel, R. and Deren, M. (2022). Reach-scale controls on stormflow duration in upland channels. Catchment Dynamics Quarterly, 8(1), 5-19.",
+        "cite": "Avel & Deren, 2022"
+      },
+      {
+        "text": "Noran, P., Talis, R. and Rovin, E. (2018). Rainfall event classification for headwater field campaigns. Veyra Hydrologic Studies, 7(2), 56-70.",
+        "cite": "Noran et al., 2018"
+      },
+      {
+        "text": "Keral, M. and Sova, T. (2024). Near-bank water-table lag relative to discharge peaks. Journal of Riparian Hydrology, 13(1), 26-40.",
+        "cite": "Keral & Sova, 2024"
+      },
+      {
+        "text": "Meral, O. and Veylan, M. (2017). Field protocols for maintaining pressure transducers in upland streams. Upland Water Processes, 3(3), 141-154.",
+        "cite": "Meral & Veylan, 2017"
+      },
+      {
+        "text": "Rovin, E. and Halen, P. (2020). Event-scale variation in shallow groundwater response across channel margins. Journal of Veyra Catchment Hydrology, 9(4), 205-219.",
+        "cite": "Rovin & Halen, 2020"
+      },
+      {
+        "text": "Pelor, S., Ardel, V. and Valt, N. (2023). Dry-period length as a control on riparian exchange signals. Catchment Dynamics Quarterly, 9(2), 81-95.",
+        "cite": "Pelor et al., 2023"
+      },
+      {
+        "text": "Tovan, M. and Oren, D. (2016). Discharge recession patterns in short headwater reaches. Veyra Hydrologic Studies, 4(3), 119-132.",
+        "cite": "Tovan & Oren, 2016"
+      },
+      {
+        "text": "Varn, E., Kelm, S. and Neris, J. (2021). Comparing forested and open-channel event responses. Journal of Riparian Hydrology, 10(2), 89-103.",
+        "cite": "Varn et al., 2021"
+      },
+      {
+        "text": "Sova, T., Pell, N. and Teren, L. (2019). Practical uncertainty bounds for reach-specific flow ratings. Upland Water Processes, 5(4), 230-244.",
+        "cite": "Sova et al., 2019"
+      },
+      {
+        "text": "Deren, M. and Talis, R. (2024). Lateral inflow timing during post-peak streamflow decline. Journal of Veyra Catchment Hydrology, 13(2), 61-75.",
+        "cite": "Deren & Talis, 2024"
+      },
+      {
+        "text": "Halen, P. and Valt, N. (2015). Small-basin hydrologic contrasts under variable riparian cover. Catchment Dynamics Quarterly, 1(4), 166-179.",
+        "cite": "Halen & Valt, 2015"
+      },
+      {
+        "text": "Merin, A., Noran, P. and Varo, I. (2022). Seasonal field records of stage and shallow groundwater in headwaters. Veyra Hydrologic Studies, 14(3), 155-169.",
+        "cite": "Merin et al., 2022"
+      },
+      {
+        "text": "Ardel, V. and Keral, M. (2018). Event recession metrics for paired stream and groundwater observations. Journal of Riparian Hydrology, 7(4), 196-210.",
+        "cite": "Ardel & Keral, 2018"
+      },
+      {
+        "text": "Pell, N., Ralen, E. and Seld, O. (2023). Reach length and monitoring design in small catchment studies. Upland Water Processes, 9(1), 12-26.",
+        "cite": "Pell et al., 2023"
+      },
+      {
+        "text": "Veylan, M. and Dovet, A. (2020). Hydrologic response differences between wooded and open headwater reaches. Catchment Dynamics Quarterly, 6(2), 64-78.",
+        "cite": "Veylan & Dovet, 2020"
+      },
+      {
+        "text": "Neris, J., Teren, L. and Tovan, M. (2017). Groundwater contribution during the falling limb of storm hydrographs. Journal of Veyra Catchment Hydrology, 6(3), 137-151.",
+        "cite": "Neris et al., 2017"
+      },
+      {
+        "text": "Ralen, E. and Meral, O. (2021). Repeatability of field recession measurements across storm events. Veyra Hydrologic Studies, 13(4), 238-252.",
+        "cite": "Ralen & Meral, 2021"
+      }
+    ],
+    "body": [
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Introduction"
+      },
+      {
+        "id": "fig:reach_recession",
+        "type": "chart",
+        "chart_type": "bar",
+        "labels": [
+          "A",
+          "B",
+          "C"
+        ],
+        "series": [
+          {
+            "name": "Median recession duration",
+            "values": [
+              32,
+              30,
+              19
+            ],
+            "errors": [
+              1.4,
+              1.3,
+              1.1
+            ]
+          }
+        ],
+        "x_label": "Reach",
+        "y_label": "Recession duration (h)",
+        "legend_position": "outside",
+        "caption": "Median recession duration by monitored reach, with measured uncertainty."
+      },
+      {
+        "type": "table",
+        "id": "tab:reach_setup",
+        "caption": "Monitored reach characteristics and field instrumentation",
+        "header": [
+          [
+            "Reach",
+            "Setting",
+            "Length (m)",
+            "Stage logger interval (min)",
+            "Groundwater wells (n)"
+          ]
+        ],
+        "rows": [
+          [
+            "A",
+            "Forested",
+            "145",
+            "5",
+            "3"
+          ],
+          [
+            "B",
+            "Forested",
+            "128",
+            "5",
+            "3"
+          ],
+          [
+            "C",
+            "Open",
+            "152",
+            "5",
+            "2"
+          ]
+        ],
+        "note": "Discharge was estimated from reach-specific stage-discharge ratings; groundwater wells were installed along the near bank."
+      },
+      {
+        "type": "equation",
+        "id": "eq:stage_discharge",
+        "latex": "Q_t = a(h_t-h_0)^b",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Stormflow recession describes the interval in which stream discharge declines from an event peak toward its pre-event condition. In small upland channels, this decline reflects drainage from hillslopes and temporary exchange between the channel and adjacent saturated soils. Riparian storage may return water to a channel after rainfall has passed, extending flow persistence and changing downstream delivery. Field observations have linked lateral groundwater pulses with recession behavior in headwater streams, while emphasizing variation with channel setting and antecedent moisture \\cite{1} \\cite{2}. Earlier paired observations from forested and open reaches also motivate direct comparison of stream stage and near-bank groundwater \\cite{3}. The reach arrangement and instrumentation are summarized in \\ref{tab:reach_setup}; event conditions and recession contrasts are given in \\ref{tab:event_conditions}, with reach-level responses in \\ref{tab:recession_summary} and \\ref{tab:exchange_comparison}. The reach comparison is also shown in \\ref{fig:reach_recession}; event patterns are represented in \\ref{fig:event_recession_area}, \\ref{fig:event_recession_grouped}, and \\ref{fig:event_recession_difference}. The association between groundwater rise and recession is shown in \\ref{fig:groundwater_recession_scatter}, and the monitoring sequence is outlined in \\ref{fig:field_workflow}. These references identify the measurements underpinning the interpretation rather than implying that recession alone proves a particular flow path."
+      },
+      {
+        "id": "fig:event_recession_area",
+        "type": "chart",
+        "chart_type": "area",
+        "labels": [
+          "Event 1",
+          "Event 2",
+          "Event 3",
+          "Event 4",
+          "Event 5",
+          "Event 6"
+        ],
+        "series": [
+          {
+            "name": "Forested reaches",
+            "values": [
+              28,
+              32,
+              30,
+              35,
+              31,
+              29
+            ],
+            "errors": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "Open reach",
+            "values": [
+              17,
+              19,
+              18,
+              22,
+              20,
+              18
+            ],
+            "errors": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        ],
+        "x_label": "Storm event",
+        "y_label": "Recession duration (h)",
+        "legend_position": "outside",
+        "caption": "Recession duration across six storm events for forested and open reaches."
+      },
+      {
+        "type": "table",
+        "id": "tab:event_conditions",
+        "caption": "Storm-event conditions and recession durations",
+        "header": [
+          [
+            "Event",
+            "Antecedent dry days",
+            "Peak discharge (L s-1)",
+            "Forested median recession (h)",
+            "Open reach recession (h)"
+          ]
+        ],
+        "rows": [
+          [
+            "1",
+            "2",
+            "86",
+            "28",
+            "17"
+          ],
+          [
+            "2",
+            "5",
+            "112",
+            "32",
+            "19"
+          ],
+          [
+            "3",
+            "3",
+            "74",
+            "30",
+            "18"
+          ],
+          [
+            "4",
+            "6",
+            "139",
+            "35",
+            "22"
+          ],
+          [
+            "5",
+            "1",
+            "98",
+            "31",
+            "20"
+          ],
+          [
+            "6",
+            "4",
+            "121",
+            "29",
+            "18"
+          ]
+        ],
+        "note": "Recession duration was measured from peak discharge to return to the event-specific baseflow threshold."
+      },
+      {
+        "type": "paragraph",
+        "text": "We examined three headwater reaches in the Veyra uplands during six autumn storm events. We asked whether the forested reaches exhibited longer recessions and larger near-bank water-level rises than the open reach, and whether the contrast strengthened after longer dry periods. We expected a positive association between near-bank rise and recession duration because a delayed groundwater contribution could sustain streamflow after the peak. This expectation follows reported relationships among riparian storage, hillslope connection, and falling-limb discharge, but does not assume that every observed water-level response represents water moving directly into the channel \\cite{4} \\cite{5} \\cite{6}."
+      },
+      {
+        "id": "fig:groundwater_recession_scatter",
+        "type": "chart",
+        "chart_type": "scatter",
+        "labels": [
+          "Forested A",
+          "Forested B",
+          "Open C"
+        ],
+        "series": [
+          {
+            "name": "Reach-event observations",
+            "points": [
+              [
+                9.6,
+                28
+              ],
+              [
+                11.2,
+                32
+              ],
+              [
+                10.4,
+                30
+              ],
+              [
+                12.8,
+                35
+              ],
+              [
+                11,
+                31
+              ],
+              [
+                10.5,
+                29
+              ],
+              [
+                11.1,
+                26
+              ],
+              [
+                12.6,
+                30
+              ],
+              [
+                11.8,
+                29
+              ],
+              [
+                13.7,
+                34
+              ],
+              [
+                12.9,
+                31
+              ],
+              [
+                12.3,
+                30
+              ],
+              [
+                1.8,
+                17
+              ],
+              [
+                2.3,
+                19
+              ],
+              [
+                2,
+                18
+              ],
+              [
+                2.7,
+                22
+              ],
+              [
+                2.1,
+                20
+              ],
+              [
+                1.9,
+                18
+              ]
+            ]
+          }
+        ],
+        "x_label": "Near-bank groundwater rise (cm)",
+        "y_label": "Recession duration (h)",
+        "legend_position": "outside",
+        "caption": "Association between near-bank groundwater rise and recession duration across reach-events."
+      },
+      {
+        "type": "equation",
+        "id": "eq:recession",
+        "latex": "\\frac{d(Q_t-Q_b)}{dt} = -k(Q_t-Q_b)",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "For the discharge record, stage was converted using a reach-specific rating of the form $Q_t = a(h_t-h_0)^b$, where $h_t$ denotes stage at time $t$, $h_0$ is the fitted reference stage, and $a$ and $b$ are rating parameters. This representation is useful for continuous monitoring, but its reliability depends on rating stability and the range of observed stages. Differences in recession duration are therefore interpreted as field contrasts, not exact estimates of exchanged water volume. Rating behavior and uncertainty warrant attention when stage changes quickly during storms \\cite{7} \\cite{8}."
+      },
+      {
+        "id": "fig:event_recession_grouped",
+        "type": "chart",
+        "chart_type": "grouped_bar",
+        "labels": [
+          "Event 1",
+          "Event 2",
+          "Event 3",
+          "Event 4",
+          "Event 5",
+          "Event 6"
+        ],
+        "series": [
+          {
+            "name": "Forested reaches",
+            "values": [
+              28,
+              32,
+              30,
+              35,
+              31,
+              29
+            ],
+            "errors": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "Open reach",
+            "values": [
+              17,
+              19,
+              18,
+              22,
+              20,
+              18
+            ],
+            "errors": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        ],
+        "x_label": "Storm event",
+        "y_label": "Recession duration (h)",
+        "legend_position": "outside",
+        "caption": "Grouped comparison of forested and open reach recession durations by storm event."
+      },
+      {
+        "type": "table",
+        "id": "tab:recession_summary",
+        "caption": "Recession and near-bank groundwater response by reach",
+        "header": [
+          [
+            "Reach group",
+            "Setting",
+            "Events or reach-events (n)",
+            "Median recession (h)",
+            "Median near-bank rise (cm)"
+          ]
+        ],
+        "rows": [
+          [
+            "A",
+            "Forested",
+            "6",
+            "32",
+            "10.8"
+          ],
+          [
+            "B",
+            "Forested",
+            "6",
+            "30",
+            "12.4"
+          ],
+          [
+            "A and B pooled",
+            "Forested",
+            "12",
+            "31",
+            "11.6"
+          ],
+          [
+            "C",
+            "Open",
+            "6",
+            "19",
+            "2.1"
+          ]
+        ],
+        "note": "Near-bank rise is the maximum groundwater-level increase relative to the pre-storm level during each event."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Study Area"
+      },
+      {
+        "id": "fig:event_recession_difference",
+        "type": "chart",
+        "chart_type": "bar",
+        "labels": [
+          "Event 1",
+          "Event 2",
+          "Event 3",
+          "Event 4",
+          "Event 5",
+          "Event 6"
+        ],
+        "series": [
+          {
+            "name": "Forested minus open reach",
+            "values": [
+              11,
+              13,
+              12,
+              13,
+              11,
+              11
+            ],
+            "errors": [
+              1.4,
+              1.4,
+              1.4,
+              1.4,
+              1.4,
+              1.4
+            ]
+          }
+        ],
+        "x_label": "Storm event",
+        "y_label": "Recession-duration difference (h)",
+        "legend_position": "outside",
+        "caption": "Difference in recession duration between forested and open reaches for each storm event."
+      },
+      {
+        "type": "equation",
+        "id": "eq:riparian_exchange",
+        "latex": "q_g = C(h_g-h_s)",
+        "numbered": true
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Reach setting"
+      },
+      {
+        "id": "fig:field_workflow",
+        "type": "figure",
+        "figure_type": "pipeline",
+        "description": "Field workflow linking reach instrumentation, storm-event monitoring, recession measurement, and comparison of near-bank response across forested and open settings.",
+        "labels": [
+          "Reach selection",
+          "Stage logging",
+          "Discharge rating",
+          "Well monitoring",
+          "Storm-event screening",
+          "Recession measurement",
+          "Reach comparison"
+        ],
+        "caption": "Pipeline for field monitoring and comparison of stormflow recession and near-bank response."
+      },
+      {
+        "type": "table",
+        "id": "tab:exchange_comparison",
+        "caption": "Reach-scale comparison of recession timing and near-bank response",
+        "header": [
+          [
+            {
+              "text": "Reach",
+              "rowspan": 2
+            },
+            {
+              "text": "Setting",
+              "rowspan": 2
+            },
+            {
+              "text": "Recession duration (h)",
+              "colspan": 2
+            },
+            {
+              "text": "Groundwater response",
+              "colspan": 2
+            }
+          ],
+          [
+            {
+              "text": "Median",
+              "rowspan": 1
+            },
+            {
+              "text": "Range",
+              "rowspan": 1
+            },
+            {
+              "text": "Median rise (cm)",
+              "rowspan": 1
+            },
+            {
+              "text": "Median lag from discharge peak (h)",
+              "rowspan": 1
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "A",
+            "Forested",
+            {
+              "text": "32",
+              "bold": true
+            },
+            "28-35",
+            "10.8",
+            "3.2"
+          ],
+          [
+            "B",
+            "Forested",
+            "30",
+            "26-34",
+            {
+              "text": "12.4",
+              "bold": true
+            },
+            "2.8"
+          ],
+          [
+            "C",
+            "Open",
+            "19",
+            "16-22",
+            "2.1",
+            "0.9"
+          ]
+        ],
+        "note": "Bold marks the highest value in the corresponding numeric column. The forested reaches showed a larger near-bank response and longer recession than the open reach."
+      },
+      {
+        "type": "paragraph",
+        "text": "The monitored reaches were short headwater channels in the Veyra uplands, selected to contrast wooded riparian corridors with an open corridor while retaining comparable low-order stream settings. Reaches A and B were forested and measured 145 m and 128 m in length; reach C was open and measured 152 m. Each reach had a stage logger recording at five-minute intervals. Three near-bank wells were installed along each forested reach and two beside the open reach. The wells measured shallow groundwater level relative to a fixed local datum, allowing water-table timing and magnitude to be compared with the stream hydrograph."
+      },
+      {
+        "type": "paragraph",
+        "text": "This design permits comparison across settings, but does not make the reaches interchangeable replicates of a controlled treatment. Local bank geometry, soil thickness, rooting patterns, and channel connection may differ. Forest cover is therefore interpreted as a reach-group association, not an isolated causal effect of canopy. Previous work has described contrasting groundwater and stream responses under differing riparian cover and channel conditions, supporting paired monitoring while underscoring the need to retain reach context \\cite{9} \\cite{10} \\cite{11}."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Sampling Protocol"
+      },
+      {
+        "type": "paragraph",
+        "text": "Stage loggers were installed at stable channel locations and checked during field visits. Pressure records were reviewed for drift, abrupt offsets, and gaps, with suspect intervals compared against field notes and neighboring records. Instrument placement and correction matter because small sensor shifts can affect inferred stage changes, while logger interval determines how precisely event peaks and short lags can be resolved. A five-minute interval was used consistently across reaches, providing a common time base for peak detection and recession tracking \\cite{12} \\cite{13}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Discharge was measured at representative stages to establish a rating curve for each reach. During event processing, concurrent stage was converted to discharge with the fitted reach-specific relation. Groundwater records were aligned to the stream time series. Pre-storm groundwater level was defined from the stable interval immediately before the event rise. The event maximum was expressed relative to this level, so that $\\Delta h_g = h_{g,max}-h_{g,pre}$ represented the maximum near-bank rise. This relative measure limits the influence of different well datum elevations, although it cannot remove differences in local well response."
+      },
+      {
+        "type": "paragraph",
+        "text": "Storms were screened as distinct events when the stream hydrograph showed a clear rise and subsequent decline separated from neighboring responses. Antecedent dry days were counted from the preceding period without recorded rainfall sufficient to interrupt drying. For each event, recession duration was measured from peak discharge to the event-specific baseflow threshold. The threshold was estimated from the pre-event record and declining-limb shape rather than imposed as one fixed discharge for all reaches. Event-specific endpoints are useful where baseline flows differ, but can introduce judgement into the duration metric; criteria were applied consistently across the record \\cite{14} \\cite{15}."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Measurements"
+      },
+      {
+        "type": "paragraph",
+        "text": "The six storm events had peak discharges ranging from 74 to 139 L s-1, and antecedent dry periods ranged from one to six days. Forested-reach recession durations ranged from 28 to 35 h across event summaries, whereas the open reach ranged from 17 to 22 h. Median durations were 31 h for the pooled forested reaches and 19 h for the open reach. Groundwater rise was also larger beside the forested channels: pooled median rise was 11.6 cm, compared with 2.1 cm at the open reach. These measurements show a consistent contrast during the monitored events, although the number of reaches and storms remains modest."
+      },
+      {
+        "type": "paragraph",
+        "text": "Near-bank response did not peak simultaneously with stream discharge. Median lag from discharge peak was 3.2 h at reach A and 2.8 h at reach B, compared with 0.9 h at reach C. A lagged rise is compatible with bank-side storage or delayed lateral delivery, but timing alone cannot distinguish hydraulic pathways. For each reach and event, the delay can be expressed as $tau = t_{g,max}-t_{Q,max}$, where $t_{g,max}$ and $t_{Q,max}$ denote groundwater and discharge peak times. Positive values indicate that the groundwater maximum followed the stream peak, a sequence observed more strongly in the wooded reaches."
+      },
+      {
+        "type": "paragraph",
+        "text": "The paired records were interpreted together: stream stage established the hydrograph, the rating relation yielded discharge, and the wells characterized near-bank water-level response. An isolated groundwater rise may reflect rainfall infiltration without a channel contribution, while a long recession may arise from catchment drainage unrelated to the monitored bank. Comparison of aligned records provides a more informative basis for identifying co-occurring responses. Studies of bank storage and channel-adjacent groundwater likewise emphasize event timing and simultaneous measurements \\cite{16} \\cite{17} \\cite{18}."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Results"
+      },
+      {
+        "type": "paragraph",
+        "text": "Recession duration was longer in the forested reaches in all six events. Forested-minus-open differences were 11 to 13 h, with no event reversing the ordering. The pooled median contrast was 12 h. Reach A had a median recession of 32 h and reach B 30 h, while reach C had a median of 19 h. Median near-bank rise was 10.8 cm at A, 12.4 cm at B, and 2.1 cm at C. The reach with the largest groundwater rise was not the one with the longest median recession, indicating that response magnitude alone does not determine duration."
+      },
+      {
+        "type": "paragraph",
+        "text": "A simple representation of recession above the event-specific baseflow level is $Q_t-Q_b = (Q_p-Q_b)exp(-kt)$, where $Q_b$ is threshold discharge, $Q_p$ is peak discharge, and $k$ summarizes the decline rate. This form does not claim that the hydrographs follow a single linear-reservoir process; it clarifies that a smaller effective decline rate corresponds to a longer period above the threshold. The forested reaches had longer durations under the same event sequence, consistent with slower net decline, but the available summaries do not establish a unique value of $k$ for each event."
+      },
+      {
+        "type": "paragraph",
+        "text": "The contrast was clearest after longer dry intervals. Events preceded by at least four dry days had forested median recession durations of 32, 35, and 29 h, compared with open-reach durations of 19, 22, and 18 h. After shorter dry periods, the difference remained present but was generally smaller in absolute terms. This pattern accords with the possibility that dry-period length influences available storage and subsequent groundwater response. It should be treated as a pattern in six events rather than a robust threshold, since event rainfall and peak discharge also varied."
+      },
+      {
+        "type": "paragraph",
+        "text": "The magnitude contrast can be described as $R = T_f-T_o$, where $T_f$ is the pooled forested recession duration and $T_o$ is the open-reach duration. Across events, $R$ ranged from 11 to 13 h. The narrow spread indicates that the ordering was not driven by one unusually prolonged event, although it does not imply otherwise equivalent event conditions. Previous work on dry-period effects and short-lag well response provides context for interpreting the repeated contrast \\cite{19} \\cite{20} \\cite{21} \\cite{22}."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Discussion"
+      },
+      {
+        "type": "paragraph",
+        "text": "The paired observations indicate that forested reaches combined larger near-bank groundwater rises with longer stormflow recessions than the open reach. This is consistent with a temporary riparian contribution during early recession: water stored near the channel, or moving through connected bank and shallow subsurface zones, may continue to support discharge after the event peak. The inference is strongest as a timing-based process interpretation. Direct quantification of lateral flux was not available, so the results do not establish how much streamflow recession was supplied by near-bank groundwater. Comparable field studies report bank-side response and persistent falling-limb flow, supporting this cautious interpretation \\cite{23} \\cite{24} \\cite{25}."
+      },
+      {
+        "type": "paragraph",
+        "text": "A conceptual exchange relation is $q_g = C(h_g-h_s)$, where $q_g$ is exchange flux, $C$ is effective conductance, and $h_g-h_s$ is the hydraulic-head difference between groundwater and stream. The well records provide information about groundwater head change, but neither conductance nor the full spatial head gradient was measured. Consequently, the expression is a process framework rather than a calculation from these data. Larger water-level rise could coincide with greater exchange, but the relation also depends on bank properties, wetted geometry, and connection pathways. A small rise at the open reach could reflect weaker storage, different subsurface structure, or measurement placement rather than an absence of exchange."
+      },
+      {
+        "type": "paragraph",
+        "text": "The 2.8 to 3.2 h median lags in the forested reaches are compatible with delayed near-bank response during early recession. The shorter lag at the open reach, together with its smaller rise and shorter recession, suggests a more rapid return toward event baseline. However, lag estimates depend on logger interval, hydrograph shape, and well-response smoothness. Closely spaced measurements help resolve the order of peaks, but do not by themselves identify causality. Research on groundwater lag and paired stage-well records highlights these interpretive constraints \\cite{26} \\cite{27} \\cite{28}."
+      },
+      {
+        "type": "paragraph",
+        "text": "The dry-period pattern suggests that antecedent conditions may condition the visibility of riparian exchange. Following several rain-free days, a subsequent storm may produce a stronger contrast between transient storage and rapid channel drainage. Yet dry-day count is only a coarse indicator of soil moisture; it does not represent evaporative demand, rainfall intensity, or deeper storage state. Event sequencing can also alter recovery between storms. The observed association should guide hypotheses for longer monitoring rather than be treated as a universal response rule \\cite{29} \\cite{30} \\cite{31}."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Limitations"
+      },
+      {
+        "type": "paragraph",
+        "text": "The study includes three reaches and six storm events from one upland field campaign. Reach setting is confounded with local channel and subsurface properties, and only one open reach was monitored. The event record is adequate to identify a repeated ordering within this campaign, but not to estimate the full range of seasonal or interannual variability. Rainfall intensity and spatial distribution were not used to separate event forcing from reach response, and the well arrays represent near-bank points rather than the entire riparian zone."
+      },
+      {
+        "type": "paragraph",
+        "text": "Rating-curve uncertainty may affect peak discharge and the timing of threshold crossing, particularly during rapidly changing stages. The recession endpoint depends on an event-specific baseflow estimate, and small changes to that threshold could alter duration. Well levels measure hydraulic response but do not provide direct flow direction or flux. A stronger test would add bank transects, soil-moisture profiles, rainfall intensity, and independent flux constraints while retaining continuous stage and groundwater records. These considerations accord with documented uncertainty in ratings, event thresholds, and field recession repeatability \\cite{32} \\cite{33} \\cite{34} \\cite{35}."
+      },
+      {
+        "type": "paragraph",
+        "text": "The interpretation also assumes that logger time series were sufficiently complete and aligned to distinguish response lags. Instrument drift, sensor placement, or local well conditions could contribute to measured differences. Record review and consistent procedures reduce these risks but cannot eliminate them. Reach length and monitoring layout further constrain transfer to other catchments. Future work should include more reaches per setting and repeat observations across wet and dry seasons, allowing site effects to be separated more effectively from riparian setting \\cite{36} \\cite{37} \\cite{38} \\cite{39} \\cite{40}."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Conclusion"
+      },
+      {
+        "type": "paragraph",
+        "text": "Across six storm events, the two forested Veyra headwater reaches showed longer recession durations and larger near-bank groundwater rises than the open reach. Median recession was 31 h in the pooled forested reaches and 19 h in the open reach; median near-bank rise was 11.6 cm and 2.1 cm, respectively. The contrast persisted in every event and was especially marked after longer antecedent dry periods. Together, the timing and magnitude patterns are consistent with a brief lateral groundwater contribution during early recession, although direct exchange flux was not measured."
+      },
+      {
+        "type": "paragraph",
+        "text": "These field observations indicate that riparian setting can be associated with stormflow persistence at small catchment scale. They also show why continuous stream and near-bank measurements are more informative together than either record alone. The results warrant broader testing across additional reaches, seasons, and storm conditions, with direct measurements of hydraulic gradients and exchange. Until then, the most defensible conclusion is that near-bank response and recession duration covaried across the monitored settings, supporting but not proving a riparian-storage explanation.\\fn{All lags and durations are reported in hours relative to the event-specific discharge peak and baseflow threshold, respectively.}"
+      }
+    ]
+  },
+  "hash": "80095528024e851ee5f95cca9d2e3f91dec1d80ff964f6453577601527fc550d"
+}

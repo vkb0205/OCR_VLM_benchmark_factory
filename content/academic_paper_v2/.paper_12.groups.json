@@ -1,0 +1,1219 @@
+{
+  "front": {
+    "title": "Robust Hierarchical Routing for Adaptive Multi-Layer Network Optimization",
+    "authors": [
+      {
+        "name": "Elian Veyra",
+        "affiliations": [
+          1,
+          2
+        ],
+        "corresponding": true,
+        "email": "elian.veyra@quoravale-research.org"
+      },
+      {
+        "name": "Maris Oltan",
+        "affiliations": [
+          1
+        ],
+        "corresponding": false
+      },
+      {
+        "name": "Tavian Rusk",
+        "affiliations": [
+          2,
+          3
+        ],
+        "corresponding": false
+      },
+      {
+        "name": "Nerina Solvek",
+        "affiliations": [
+          3
+        ],
+        "corresponding": false
+      }
+    ],
+    "affiliations": [
+      "Department of Computational Systems, Quoravale Institute for Applied Networks",
+      "Center for Distributed Decision Architecture, Belmora Technical University",
+      "Laboratory for Resilient Infrastructure Analytics, Veylan Research Forum"
+    ],
+    "abstract": "This study develops a robust optimization framework for routing and resource allocation in adaptive multi-layer networks subject to uncertain demand, delayed information, and intermittent link availability. The method combines a hierarchical decomposition with a proximal coordination rule that separates global capacity decisions from local flow adjustments while preserving coupling constraints across layers. A confidence-weighted uncertainty set is updated from recent observations, and a stability term limits abrupt changes in routing policies when the observed network state varies. The coordination procedure uses alternating primal updates and a projected dual correction, allowing heterogeneous network operators to exchange aggregate congestion signals without revealing local demand profiles. We establish conditions under which the resulting iterates remain feasible and converge to a bounded neighborhood of the robust optimum when measurements are noisy. The analysis also identifies how uncertainty radius, communication delay, and penalty strength affect solution quality and computational effort. Evaluation on generated transport, communication, and service-allocation instances indicates that the proposed method reduces congestion concentration, improves recovery after link disruption, and maintains competitive objective values against centralized robust optimization and decentralized greedy baselines. Additional ablation results show that adaptive uncertainty calibration is most beneficial when demand regimes change gradually, whereas the proximal term is especially valuable under abrupt topology variation. The findings support a practical design principle: robust routing should coordinate decisions at the level of shared capacity while retaining local autonomy for rapid flow adaptation.",
+    "abstract_alt": null,
+    "keywords": "network optimization; robust routing; distributed optimization; multi-layer networks; adaptive uncertainty; congestion control; proximal coordination; resilient infrastructure",
+    "keywords_alt": null,
+    "journal": "Journal of Network Optimization Methods",
+    "acknowledgement": "The authors thank the Network Decision Laboratory at Quoravale Institute for Applied Networks and the Distributed Systems Workshop at Belmora Technical University for their technical discussions and computational assistance."
+  },
+  "formulas": [
+    {
+      "after": 1,
+      "element": {
+        "type": "equation",
+        "id": "eq:robust_objective",
+        "latex": "\\min_{x,y}\\;\\max_{u\\in\\mathcal U(\\rho)}\\;\\sum_{l=1}^{L}\\sum_{e=1}^{E_l}c_{le}(u)x_{le}+\\lambda\\sum_{l=1}^{L}\\sum_{e=1}^{E_l}(x_{le}-y_{le})^2",
+        "numbered": true
+      }
+    },
+    {
+      "after": 3,
+      "element": {
+        "type": "equation",
+        "id": "eq:uncertainty_set",
+        "latex": "\\mathcal U(\\rho)=\\left\\{u:\\sum_{k=1}^{K}\\left(\\frac{u_k-\\hat u_k}{\\sigma_k+\\epsilon}\\right)^2\\leq\\rho^2,\\;\\left|u_k-\\hat u_k\\right|\\leq\\rho(\\sigma_k+\\epsilon)\\right\\}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 5,
+      "element": {
+        "type": "equation",
+        "id": "eq:proximal_primal_update",
+        "latex": "x^{t+1}=\\operatorname*{arg\\,min}_{x\\in\\mathcal X}\\left\\{f(x;\\hat u^t)+\\langle\\lambda^t,Ax-b\\rangle+\\frac{\\eta}{2}\\left\\|x-x^t\\right\\|^2\\right\\}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 7,
+      "element": {
+        "type": "equation",
+        "id": "eq:dual_correction",
+        "latex": "\\lambda^{t+1}=\\max\\left\\{0,\\lambda^t+\\gamma(Ax^{t+1}-b)\\right\\}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 9,
+      "element": {
+        "type": "equation",
+        "id": "eq:feasibility_bound",
+        "latex": "\\left\\|Ax^t-b\\right\\|\\leq\\frac{\\rho\\sigma+\\eta\\left\\|x^0-x^\\star\\right\\|}{\\sqrt{t+1}}+\\gamma\\delta",
+        "numbered": true
+      }
+    },
+    {
+      "after": 11,
+      "element": {
+        "type": "equation",
+        "id": "eq:adaptive_radius",
+        "latex": "\\rho_{t+1}=\\min\\left\\{\\rho_{\\max},\\max\\left\\{\\rho_{\\min},\\rho_t\\exp\\left(\\alpha\\frac{\\operatorname{median}(r_t)-\\operatorname{median}(r_{t-1})}{\\operatorname{median}(r_{t-1})+\\epsilon}\\right)\\right\\}\\right\\}",
+        "numbered": true
+      }
+    }
+  ],
+  "tables": [
+    {
+      "after": 2,
+      "element": {
+        "type": "table",
+        "id": "tab:robust_routing_results",
+        "caption": "Performance comparison across adaptive multi-layer routing scenarios.",
+        "header": [
+          [
+            {
+              "text": "Scenario",
+              "rowspan": 2
+            },
+            {
+              "text": "Method",
+              "rowspan": 2
+            },
+            {
+              "text": "Objective value",
+              "colspan": 2
+            },
+            {
+              "text": "Robustness response",
+              "colspan": 2
+            }
+          ],
+          [
+            {
+              "text": "Cost"
+            },
+            {
+              "text": "Congestion index"
+            },
+            {
+              "text": "Recovery time"
+            },
+            {
+              "text": "Feasibility rate"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "Transit mesh",
+            "Centralized robust",
+            "184.6",
+            "0.31",
+            "16.8",
+            "94.2%"
+          ],
+          [
+            "Transit mesh",
+            "Decentralized greedy",
+            "213.9",
+            "0.47",
+            "29.4",
+            "81.6%"
+          ],
+          [
+            "Transit mesh",
+            "Hierarchical proximal",
+            {
+              "text": "179.8",
+              "bold": true
+            },
+            {
+              "text": "0.24",
+              "bold": true
+            },
+            {
+              "text": "12.1",
+              "bold": true
+            },
+            {
+              "text": "97.8%",
+              "bold": true
+            }
+          ],
+          [
+            "Relay lattice",
+            "Centralized robust",
+            "226.3",
+            "0.38",
+            "21.7",
+            "92.5%"
+          ],
+          [
+            "Relay lattice",
+            "Decentralized greedy",
+            "249.1",
+            "0.56",
+            "35.9",
+            "78.4%"
+          ],
+          [
+            "Relay lattice",
+            "Hierarchical proximal",
+            {
+              "text": "219.7",
+              "bold": true
+            },
+            {
+              "text": "0.29",
+              "bold": true
+            },
+            {
+              "text": "15.6",
+              "bold": true
+            },
+            {
+              "text": "96.1%",
+              "bold": true
+            }
+          ]
+        ],
+        "note": "Lower cost, congestion index, and recovery time are preferred; feasibility rate is computed over disrupted operating intervals."
+      }
+    },
+    {
+      "after": 6,
+      "element": {
+        "type": "table",
+        "id": "tab:parameter_sensitivity",
+        "caption": "Sensitivity of coordination quality to uncertainty radius and communication delay.",
+        "header": [
+          [
+            {
+              "text": "Setting",
+              "rowspan": 2
+            },
+            {
+              "text": "Uncertainty radius",
+              "rowspan": 2
+            },
+            {
+              "text": "Delay",
+              "colspan": 1
+            },
+            {
+              "text": "Coordination outcome",
+              "colspan": 3
+            }
+          ],
+          [
+            {
+              "text": "Intervals"
+            },
+            {
+              "text": "Iterations"
+            },
+            {
+              "text": "Objective gap"
+            },
+            {
+              "text": "Constraint residual"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "Calibrated",
+            "0.18",
+            "1",
+            {
+              "text": "34",
+              "bold": true
+            },
+            {
+              "text": "2.7%",
+              "bold": true
+            },
+            {
+              "text": "0.014",
+              "bold": true
+            }
+          ],
+          [
+            "Calibrated",
+            "0.18",
+            "4",
+            "51",
+            "4.1%",
+            "0.026"
+          ],
+          [
+            "Expanded",
+            "0.31",
+            "1",
+            "47",
+            "3.5%",
+            "0.021"
+          ],
+          [
+            "Expanded",
+            "0.31",
+            "4",
+            "69",
+            "6.8%",
+            "0.039"
+          ],
+          [
+            "Restricted",
+            "0.09",
+            "1",
+            "43",
+            "3.2%",
+            "0.019"
+          ],
+          [
+            "Restricted",
+            "0.09",
+            "4",
+            "58",
+            "5.4%",
+            "0.031"
+          ]
+        ],
+        "note": "Iterations count coordination rounds to the stopping threshold; objective gap is measured relative to the centralized robust solution."
+      }
+    },
+    {
+      "after": 10,
+      "element": {
+        "type": "table",
+        "id": "tab:ablation_components",
+        "caption": "Ablation of adaptive uncertainty calibration and proximal stabilization.",
+        "header": [
+          [
+            {
+              "text": "Variant",
+              "rowspan": 2
+            },
+            {
+              "text": "Calibration",
+              "rowspan": 2
+            },
+            {
+              "text": "Proximal term",
+              "rowspan": 2
+            },
+            {
+              "text": "Observed behavior",
+              "colspan": 4
+            }
+          ],
+          [
+            {
+              "text": "Policy change"
+            },
+            {
+              "text": "Objective"
+            },
+            {
+              "text": "Peak congestion"
+            },
+            {
+              "text": "Post-disruption gap"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "Full method",
+            "Adaptive",
+            "Enabled",
+            {
+              "text": "0.08",
+              "bold": true
+            },
+            {
+              "text": "181.4",
+              "bold": true
+            },
+            {
+              "text": "0.26",
+              "bold": true
+            },
+            {
+              "text": "3.1%",
+              "bold": true
+            }
+          ],
+          [
+            "No calibration",
+            "Fixed",
+            "Enabled",
+            "0.14",
+            "188.9",
+            "0.33",
+            "4.8%"
+          ],
+          [
+            "No proximal term",
+            "Adaptive",
+            "Disabled",
+            "0.21",
+            "184.7",
+            "0.31",
+            "6.2%"
+          ],
+          [
+            "Neither component",
+            "Fixed",
+            "Disabled",
+            "0.29",
+            "197.6",
+            "0.42",
+            "8.7%"
+          ],
+          [
+            "Delayed calibration",
+            "Lagged",
+            "Enabled",
+            "0.12",
+            "186.2",
+            "0.30",
+            "4.1%"
+          ]
+        ],
+        "note": "Policy change is the median normalized shift between consecutive routing decisions; lower values indicate greater temporal stability."
+      }
+    }
+  ],
+  "charts_figures": [
+    {
+      "after": 1,
+      "element": {
+        "type": "chart",
+        "chart_type": "area",
+        "id": "fig:area_congestion_trajectory",
+        "caption": "Congestion index trajectories during recovery from sequential link disruptions.",
+        "labels": [
+          "0",
+          "10",
+          "20",
+          "30",
+          "40",
+          "50"
+        ],
+        "series": [
+          {
+            "name": "Hierarchical proximal",
+            "values": [
+              0.24,
+              0.35,
+              0.29,
+              0.26,
+              0.24,
+              0.23
+            ],
+            "errors": [
+              0.02,
+              0.03,
+              0.02,
+              0.02,
+              0.01,
+              0.01
+            ]
+          },
+          {
+            "name": "Centralized robust",
+            "values": [
+              0.31,
+              0.42,
+              0.36,
+              0.33,
+              0.31,
+              0.3
+            ],
+            "errors": [
+              0.02,
+              0.03,
+              0.02,
+              0.02,
+              0.02,
+              0.02
+            ]
+          },
+          {
+            "name": "Decentralized greedy",
+            "values": [
+              0.47,
+              0.61,
+              0.55,
+              0.5,
+              0.48,
+              0.47
+            ],
+            "errors": [
+              0.03,
+              0.04,
+              0.03,
+              0.03,
+              0.02,
+              0.02
+            ]
+          }
+        ],
+        "x_label": "Recovery interval (min)",
+        "y_label": "Congestion index",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 3,
+      "element": {
+        "type": "chart",
+        "chart_type": "box",
+        "id": "fig:box_policy_stability",
+        "caption": "Distribution of normalized routing-policy changes across operating conditions.",
+        "labels": [
+          "Full method",
+          "No calibration",
+          "No proximal term",
+          "Neither component"
+        ],
+        "series": [
+          {
+            "name": "Policy change",
+            "stats": [
+              {
+                "min": 0.04,
+                "q1": 0.06,
+                "median": 0.08,
+                "q3": 0.1,
+                "max": 0.14
+              },
+              {
+                "min": 0.07,
+                "q1": 0.11,
+                "median": 0.14,
+                "q3": 0.17,
+                "max": 0.23
+              },
+              {
+                "min": 0.1,
+                "q1": 0.17,
+                "median": 0.21,
+                "q3": 0.25,
+                "max": 0.34
+              },
+              {
+                "min": 0.15,
+                "q1": 0.24,
+                "median": 0.29,
+                "q3": 0.35,
+                "max": 0.43
+              }
+            ]
+          }
+        ],
+        "x_label": "Method variant",
+        "y_label": "Normalized policy change",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 5,
+      "element": {
+        "type": "chart",
+        "chart_type": "grouped_bar",
+        "id": "fig:grouped_bar_scenario_comparison",
+        "caption": "Objective cost across two adaptive multi-layer routing scenarios.",
+        "labels": [
+          "Transit mesh",
+          "Relay lattice"
+        ],
+        "series": [
+          {
+            "name": "Hierarchical proximal",
+            "values": [
+              179.8,
+              219.7
+            ],
+            "errors": [
+              3.1,
+              4.2
+            ]
+          },
+          {
+            "name": "Centralized robust",
+            "values": [
+              184.6,
+              226.3
+            ],
+            "errors": [
+              3.4,
+              4.5
+            ]
+          },
+          {
+            "name": "Decentralized greedy",
+            "values": [
+              213.9,
+              249.1
+            ],
+            "errors": [
+              4.7,
+              5.6
+            ]
+          }
+        ],
+        "x_label": "Routing scenario",
+        "y_label": "Objective cost (cost units)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 7,
+      "element": {
+        "type": "chart",
+        "chart_type": "scatter",
+        "id": "fig:scatter_delay_gap",
+        "caption": "Relationship between communication delay and objective gap under uncertainty-radius settings.",
+        "labels": [
+          "0.09",
+          "0.18",
+          "0.31"
+        ],
+        "series": [
+          {
+            "name": "One interval",
+            "points": [
+              [
+                1,
+                3.0
+              ],
+              [
+                1,
+                3.4
+              ],
+              [
+                1,
+                2.5
+              ],
+              [
+                1,
+                2.9
+              ],
+              [
+                1,
+                3.3
+              ],
+              [
+                1,
+                3.7
+              ]
+            ]
+          },
+          {
+            "name": "Four intervals",
+            "points": [
+              [
+                4,
+                5.1
+              ],
+              [
+                4,
+                5.7
+              ],
+              [
+                4,
+                3.8
+              ],
+              [
+                4,
+                4.4
+              ],
+              [
+                4,
+                6.5
+              ],
+              [
+                4,
+                7.1
+              ]
+            ]
+          }
+        ],
+        "x_label": "Communication delay (intervals)",
+        "y_label": "Objective gap (%)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 9,
+      "element": {
+        "type": "figure",
+        "figure_type": "multi_panel",
+        "id": "fig:multi_panel_coordination_dynamics",
+        "caption": "Coordination dynamics showing convergence, residual control, and adaptive-radius response.",
+        "description": "Three coordinated views track objective improvement, feasibility residual, and uncertainty-radius adjustment over successive rounds.",
+        "labels": [
+          "Objective",
+          "Residual",
+          "Radius"
+        ],
+        "panels": [
+          {
+            "label": "A",
+            "title": "Objective improvement",
+            "description": "Objective gap declines from 12.4% to 2.7% over 34 coordination rounds.",
+            "figure_type": "image_panel"
+          },
+          {
+            "label": "B",
+            "title": "Constraint residual",
+            "description": "Residual decreases while delayed communication produces a wider late-round band.",
+            "figure_type": "image_panel"
+          },
+          {
+            "label": "C",
+            "title": "Radius adjustment",
+            "description": "The adaptive radius expands during demand shifts and contracts after stable observations.",
+            "figure_type": "image_panel"
+          }
+        ]
+      }
+    },
+    {
+      "after": 11,
+      "element": {
+        "type": "figure",
+        "figure_type": "multi_panel",
+        "id": "fig:multi_panel_layer_routing",
+        "caption": "Layer-wise routing structure and aggregate coordination signals.",
+        "description": "The panel sequence depicts shared-capacity decisions, local flow adaptation, and dual-signal exchange across network layers.",
+        "labels": [
+          "Capacity",
+          "Flow",
+          "Signal"
+        ],
+        "panels": [
+          {
+            "label": "A",
+            "title": "Shared capacity layer",
+            "description": "Global capacity variables connect relay, transit, and service layers through coupling links.",
+            "figure_type": "image_panel"
+          },
+          {
+            "label": "B",
+            "title": "Local flow layer",
+            "description": "Local operators revise path allocations in response to changing demand and link availability.",
+            "figure_type": "image_panel"
+          },
+          {
+            "label": "C",
+            "title": "Aggregate signal layer",
+            "description": "Operators exchange congestion summaries while retaining local demand information.",
+            "figure_type": "image_panel"
+          }
+        ]
+      }
+    },
+    {
+      "after": 13,
+      "element": {
+        "type": "figure",
+        "figure_type": "image_panel",
+        "id": "fig:image_panel_disruption_recovery",
+        "caption": "Topology disruption and recovery sequence for a resilient multi-layer routing instance.",
+        "description": "A six-stage network rendering follows link loss, congestion redistribution, proximal stabilization, and restored feasible routing.",
+        "labels": [
+          "Baseline",
+          "Link loss",
+          "Redistribution",
+          "Stabilization",
+          "Recovery",
+          "Feasible state"
+        ]
+      }
+    }
+  ],
+  "code": [
+    {
+      "after": 2,
+      "element": {
+        "type": "code",
+        "id": "alg:adaptive_uncertainty_update",
+        "language": "pseudocode",
+        "caption": "Adaptive uncertainty-radius calibration from recent routing residuals",
+        "lines": [
+          "Input: residual history R, current radius rho, bounds rho_min and rho_max",
+          "Compute the recent median residual m_now from the latest window",
+          "Compute the prior median residual m_prev from the preceding window",
+          "If m_prev is zero, set relative_change to zero",
+          "Otherwise set relative_change to (m_now - m_prev) / (m_prev + epsilon)",
+          "Set trial_radius to rho * exp(alpha * relative_change)",
+          "Set rho_next to min(rho_max, max(rho_min, trial_radius))",
+          "Return rho_next"
+        ]
+      }
+    },
+    {
+      "after": 5,
+      "element": {
+        "type": "code",
+        "id": "alg:hierarchical_proximal_routing",
+        "language": "pseudocode",
+        "caption": "Hierarchical proximal routing with aggregate congestion coordination",
+        "lines": [
+          "Input: layer capacities, local demands, link states, radius rho, penalty eta",
+          "Initialize primal routing x and dual signal lambda",
+          "Construct the confidence-weighted uncertainty set from recent observations",
+          "Repeat until the stopping tolerance is reached",
+          "  Broadcast aggregate capacity residuals to the local operators",
+          "  For each network layer",
+          "    Form the local cost using current demand and link availability",
+          "    Solve the proximal flow adjustment subject to local constraints",
+          "    Return local flow summaries without exposing demand profiles",
+          "  End for",
+          "  Assemble the shared capacity decision from local summaries",
+          "  Apply the proximal primal correction toward the prior routing state",
+          "  Update the projected dual signal using the aggregate residual",
+          "  Remove unavailable links and redistribute affected flow",
+          "  Recalibrate the uncertainty radius from the residual history",
+          "  Test feasibility and objective change against their tolerances",
+          "End repeat",
+          "Return routing policy, capacity allocation, and dual signal"
+        ]
+      }
+    }
+  ],
+  "references": [
+    {
+      "text": "Averin, S. (2018). Robust capacity allocation in layered communication networks. Journal of Network Optimization Methods, 7(2), 41–58.",
+      "cite": "Averin 2018"
+    },
+    {
+      "text": "Beltran, M., and Oskel, R. (2019). Decomposition strategies for uncertain multicommodity routing. Distributed Systems Optimization Review, 11(1), 15–33.",
+      "cite": "Beltran and Oskel 2019"
+    },
+    {
+      "text": "Cevran, L. (2020). Proximal coordination for coupled flow systems. Computational Infrastructure Quarterly, 9(4), 201–219.",
+      "cite": "Cevran 2020"
+    },
+    {
+      "text": "Darsen, P., and Velkor, N. (2017). Adaptive routing under intermittent link availability. Resilient Network Analytics, 5(3), 88–107.",
+      "cite": "Darsen and Velkor 2017"
+    },
+    {
+      "text": "Elnovar, T. (2021). Hierarchical control of multi-layer transport networks. Journal of Distributed Network Science, 13(2), 66–84.",
+      "cite": "Elnovar 2021"
+    },
+    {
+      "text": "Farel, J., Murek, D., and Solven, A. (2018). Confidence-weighted uncertainty sets for network planning. Optimization Methods and Applications, 12(1), 29–47.",
+      "cite": "Farel et al. 2018"
+    },
+    {
+      "text": "Gavrin, K. (2022). Delayed information in distributed congestion management. Network Decision Systems, 16(3), 144–163.",
+      "cite": "Gavrin 2022"
+    },
+    {
+      "text": "Hovek, R., and Tarsin, E. (2019). Stability penalties for rapidly changing routing policies. Journal of Adaptive Infrastructure, 8(2), 73–91.",
+      "cite": "Hovek and Tarsin 2019"
+    },
+    {
+      "text": "Iverna, P. (2020). Robust flow adjustment with local demand privacy. Distributed Optimization Letters, 6(4), 233–249.",
+      "cite": "Iverna 2020"
+    },
+    {
+      "text": "Jorvek, S., and Lumer, F. (2016). Dual correction schemes for capacity-coupled networks. Systems Optimization Archives, 4(1), 9–27.",
+      "cite": "Jorvek and Lumer 2016"
+    },
+    {
+      "text": "Kalen, D. (2021). Feasibility neighborhoods in noisy primal-dual iterations. Journal of Computational Routing, 10(2), 101–119.",
+      "cite": "Kalen 2021"
+    },
+    {
+      "text": "Lorven, A., and Merak, T. (2018). Uncertainty calibration from sequential residual observations. Robust Decision Engineering, 7(3), 175–194.",
+      "cite": "Lorven and Merak 2018"
+    },
+    {
+      "text": "Mavik, N. (2023). Radius adaptation for nonstationary network demand. Adaptive Optimization Studies, 15(1), 1–20.",
+      "cite": "Mavik 2023"
+    },
+    {
+      "text": "Nerel, V., and Ordan, P. (2019). Aggregate congestion signaling across autonomous operators. Journal of Network Coordination, 9(3), 118–136.",
+      "cite": "Nerel and Ordan 2019"
+    },
+    {
+      "text": "Oltrek, C. (2017). Local flow reallocation after topology disruption. Resilient Systems Journal, 6(2), 52–70.",
+      "cite": "Oltrek 2017"
+    },
+    {
+      "text": "Pavren, H., Sorel, M., and Tavin, J. (2020). Multi-layer routing with shared capacity constraints. Network Architecture Methods, 14(4), 287–309.",
+      "cite": "Pavren et al. 2020"
+    },
+    {
+      "text": "Querin, B. (2018). Distributed robust optimization with heterogeneous operators. Journal of Decentralized Analytics, 5(1), 34–53.",
+      "cite": "Querin 2018"
+    },
+    {
+      "text": "Ravik, E., and Solnar, G. (2021). Communication delay and convergence quality in network coordination. Computational Network Control, 11(2), 92–111.",
+      "cite": "Ravik and Solnar 2021"
+    },
+    {
+      "text": "Servek, L. (2019). Congestion concentration metrics for adaptive routing. Infrastructure Performance Review, 8(4), 214–232.",
+      "cite": "Servek 2019"
+    },
+    {
+      "text": "Tervan, M., and Ulvek, R. (2016). Greedy and centralized baselines for resilient flow allocation. Optimization Benchmarking Journal, 3(3), 127–145.",
+      "cite": "Tervan and Ulvek 2016"
+    },
+    {
+      "text": "Uldren, P. (2022). Proximal regularization in changing network topologies. Journal of Applied Coordination, 17(2), 58–77.",
+      "cite": "Uldren 2022"
+    },
+    {
+      "text": "Varnel, C., and Worek, S. (2020). Recovery-oriented routing for disrupted service networks. Service Network Optimization, 9(1), 24–43.",
+      "cite": "Varnel and Worek 2020"
+    },
+    {
+      "text": "Welkar, J. (2018). Confidence regions for uncertain link costs. Methods in Robust Infrastructure, 6(4), 199–217.",
+      "cite": "Welkar 2018"
+    },
+    {
+      "text": "Xeran, M., and Yovel, D. (2021). Alternating primal updates for hierarchical network models. Distributed Systems Methods, 12(3), 156–174.",
+      "cite": "Xeran and Yovel 2021"
+    },
+    {
+      "text": "Zavren, F. (2017). Capacity coupling across transport and service layers. Journal of Layered Network Design, 4(2), 61–79.",
+      "cite": "Zavren 2017"
+    },
+    {
+      "text": "Arven, N., and Brelok, K. (2019). Robust objective control with adaptive demand envelopes. Network Optimization Research, 10(1), 38–57.",
+      "cite": "Arven and Brelok 2019"
+    },
+    {
+      "text": "Cordan, E. (2022). Privacy-preserving coordination through aggregate residual exchange. Journal of Distributed Infrastructure, 18(4), 301–320.",
+      "cite": "Cordan 2022"
+    },
+    {
+      "text": "Drevan, S., and Elkor, P. (2020). Stability and recovery in multilayer routing policies. Resilience Analytics Review, 9(2), 83–102.",
+      "cite": "Drevan and Elkor 2020"
+    },
+    {
+      "text": "Fenvor, R. (2018). Penalty selection for constrained network adaptation. Optimization Practice and Theory, 7(1), 12–31.",
+      "cite": "Fenvor 2018"
+    },
+    {
+      "text": "Grelan, T., and Haver, J. (2021). Residual-based adjustment of robust planning parameters. Adaptive Systems Optimization, 13(4), 221–240.",
+      "cite": "Grelan and Haver 2021"
+    },
+    {
+      "text": "Istren, V. (2019). Feasible routing under uncertain and delayed observations. Journal of Network Resilience, 8(1), 47–65.",
+      "cite": "Istren 2019"
+    },
+    {
+      "text": "Javel, P., and Korven, S. (2023). Hierarchical resource allocation for heterogeneous network layers. Computational Infrastructure Methods, 19(2), 97–116.",
+      "cite": "Javel and Korven 2023"
+    },
+    {
+      "text": "Lurek, A. (2017). Local autonomy and global capacity coordination. Distributed Network Engineering, 5(4), 181–199.",
+      "cite": "Lurek 2017"
+    },
+    {
+      "text": "Meren, D., and Norvak, E. (2020). Measuring post-disruption gaps in adaptive routing. Journal of Resilient Optimization, 11(3), 134–153.",
+      "cite": "Meren and Norvak 2020"
+    },
+    {
+      "text": "Orenvik, S. (2022). Bounded convergence for noisy distributed routing procedures. Network Algorithms and Control, 16(1), 5–24.",
+      "cite": "Orenvik 2022"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Introduction"
+    },
+    {
+      "type": "paragraph",
+      "text": "Adaptive networks must route flows while the conditions that determine a good route continue to change. Demand can shift between operating periods, links can become unavailable without warning, and information about congestion may arrive only after a decision has been made. These effects interact more strongly in multi-layer systems, where transit, relay, and service capacities are coupled even though their operators may have different local objectives and reporting practices. A routing policy that reacts too sharply can destabilize the network; one that reacts too slowly can preserve an allocation that no longer reflects current conditions. Robust network optimization therefore needs to address uncertainty, coordination, and temporal stability together rather than treating each as an isolated design concern."
+    },
+    {
+      "type": "paragraph",
+      "text": "We develop a hierarchical procedure for this setting. Global capacity decisions account for coupling across layers, while local operators retain responsibility for reallocating flows within their own networks. Operators exchange aggregate congestion information rather than detailed demand profiles. A confidence-weighted uncertainty set represents variability in recent observations, and a proximal term discourages large policy shifts between rounds. A projected dual correction then updates shared capacity signals in response to aggregate constraint residuals. This division of work is intended to preserve local autonomy without sacrificing the network-wide feasibility that shared resources require."
+    },
+    {
+      "type": "paragraph",
+      "text": "The empirical sections examine both operating outcomes and the behavior of the coordination process. The recovery trajectory is discussed with reference to \\ref{fig:area_congestion_trajectory}; the initial comparison of routing methods is organized around \\ref{tab:robust_routing_results}; and the calibration procedure is summarized in \\ref{alg:adaptive_uncertainty_update}. The wider evidence later considers \\ref{fig:box_policy_stability}, \\ref{fig:grouped_bar_scenario_comparison}, \\ref{fig:scatter_delay_gap}, \\ref{fig:multi_panel_coordination_dynamics}, \\ref{fig:multi_panel_layer_routing}, and \\ref{fig:image_panel_disruption_recovery}, alongside \\ref{tab:parameter_sensitivity} and \\ref{tab:ablation_components}. The routing procedure itself is described in \\ref{alg:hierarchical_proximal_routing}. These pointers identify the evidence discussed below; the present account is continuous prose and does not reproduce those separate materials."
+    },
+    {
+      "type": "paragraph",
+      "text": "The objective balances uncertain operating cost against excessive deviation from a reference allocation. In compact notation, the first term can be read as the worst-case cost over the current uncertainty region, while the second penalizes disagreement between coordinated and local allocations: $J(x,y)=\\max_{u in U(\\rho)} C(x,u)+\\lambda ||x-y||^2$. This form captures a practical tension. A very narrow uncertainty region can underestimate risk, but an overly broad region can force conservative use of capacity. Likewise, a weak stability penalty permits volatile routes, whereas an excessively strong penalty can make adaptation sluggish. The contribution of the method is to coordinate these choices through an iterative process rather than requiring a single fixed operating point."
+    },
+    {
+      "type": "paragraph",
+      "text": "Our analysis focuses on conditions under which the primal iterates satisfy coupling constraints approximately and approach a bounded neighborhood of the robust solution despite noisy measurements. The neighborhood is not claimed to vanish under arbitrary delay or observation error. Instead, its size depends on the uncertainty radius, the magnitude of the measurement disturbance, the proximal strength, and the dual step. This qualification matters for operational use: convergence language is meaningful only when its assumptions correspond to reporting cadence and link-state quality. The experiments complement the analysis by comparing cost, congestion concentration, recovery, and feasibility across two network configurations."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Related Work"
+    },
+    {
+      "type": "paragraph",
+      "text": "Robust capacity allocation and uncertain multicommodity routing have long relied on decompositions that separate global constraints from local flow decisions. Layered capacity models make this separation especially important because a flow decision in one layer can consume a resource that another layer also needs. Prior formulations of robust allocation and decomposition motivate our choice to preserve an explicit shared-capacity coordination step rather than letting local operators optimize in isolation \\cite{1} \\cite{2}. Proximal coordination offers a complementary way to stabilize updates in coupled flow systems, while work on intermittent link availability highlights the need to treat routing as a changing rather than static decision problem \\cite{3} \\cite{4}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Hierarchical control has also been studied in transport networks and other multi-layer settings. These approaches establish the value of separating decisions by scale, but they do not by themselves determine how an upper-level capacity signal should respond to uncertain demand or delayed observations. Confidence-weighted regions provide one route to representing uncertainty using recent evidence, and stability penalties provide a mechanism for limiting rapid policy changes \\cite{5} \\cite{6} \\cite{8}. These ideas inform the components used here, but their interaction is consequential: the uncertainty region affects the local objective, while the proximal penalty affects how much that objective can move the selected route in any one round."
+    },
+    {
+      "type": "paragraph",
+      "text": "Distributed congestion management becomes more difficult when local operators receive information at different times. Delayed information can weaken coordination, and preserving local demand privacy places limits on what can be shared. Dual correction schemes offer a way to signal capacity pressure using aggregate residuals, while feasibility-neighborhood analyses clarify how noisy primal-dual procedures should be interpreted \\cite{7} \\cite{9} \\cite{10} \\cite{11}. Our procedure uses this line of reasoning to exchange shared-capacity residuals instead of disclosing local demand vectors. The guarantee is correspondingly about bounded residuals and a neighborhood of an optimum, not exact recovery of a centralized trajectory under all communication conditions."
+    },
+    {
+      "type": "paragraph",
+      "text": "Adaptation of the uncertainty region is related to sequential residual calibration and methods for nonstationary demand. Residual evidence can indicate whether the current region is too restrictive or too permissive, but calibration can itself become unstable if each noisy observation triggers a large change. Existing approaches to residual-based calibration and adaptive radii motivate using medians from recent windows and bounding the radius between prescribed limits \\cite{12} \\cite{13}. Aggregate signaling across autonomous operators, local flow redistribution after disruption, and multi-layer models with shared resources further motivate our design choices \\cite{14} \\cite{15} \\cite{16}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Other relevant strands address heterogeneous operators, delay, congestion measurement, and comparisons between centralized and greedy decisions. Distributed robust optimization supplies a setting in which local models can differ; analyses of communication delay explain why an otherwise effective coordination rule may require more rounds or tolerate a wider residual band. Congestion concentration measures and centralized or greedy baselines provide operational criteria against which to judge a hierarchical method \\cite{17} \\cite{18} \\cite{19} \\cite{20}. Work on proximal regularization, recovery-oriented routing, and confidence regions for uncertain link costs further informs our treatment of changing topology and post-disruption behavior \\cite{21} \\cite{22} \\cite{23}."
+    },
+    {
+      "type": "paragraph",
+      "text": "The method also draws on results concerning alternating primal updates, cross-layer capacity coupling, and adaptive demand envelopes. Privacy-preserving aggregate coordination, stability analysis, penalty selection, and residual-based parameter adjustment help connect the algorithmic components to their operating constraints \\cite{24} \\cite{25} \\cite{26} \\cite{27} \\cite{28} \\cite{29} \\cite{30}. Finally, feasible routing under delayed observations, hierarchical resource allocation, local autonomy, post-disruption gap measurement, and bounded convergence under noise address complementary aspects of the problem considered here \\cite{31} \\cite{32} \\cite{33} \\cite{34} \\cite{35}. Taken together, this literature supports combining robustness, hierarchy, privacy-aware signaling, and update stabilization, while leaving open how to calibrate these elements jointly in a changing multi-layer system."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Method"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Hierarchical model and uncertainty representation"
+    },
+    {
+      "type": "paragraph",
+      "text": "Let each layer have local flow variables and costs, with a shared vector of capacity constraints linking the layers. The local feasible region encodes flow conservation, link availability, and any operator-specific operating limits. The aggregate matrix A maps local decisions into shared resource use, and b records the capacity available to the coordinated system. The robust objective minimizes the worst-case operating cost over a confidence-weighted uncertainty region while penalizing disagreement between the shared decision and its local representation. In notation, the relevant tradeoff is $\\min_{x,y} \\max_{u in U(\\rho)} C(x,u)+\\lambda \\sum_l \\sum_e (x_{le}-y_{le})^2$. The notation is compact; in implementation, each operator solves only its local portion of the flow problem and returns the summaries needed to assemble the shared decision."
+    },
+    {
+      "type": "paragraph",
+      "text": "The uncertainty set is centered on recent estimates and scales each coordinate by its observed variability with a small positive floor. A bounded ellipsoidal region limits the combined normalized deviation, while coordinate-wise bounds prevent one dimension from taking an implausibly large excursion simply because other dimensions happen to be quiet. The radius $\\rho$ controls the overall conservatism, and the scale $\\sigma_k+\\epsilon$ prevents unstable normalization when observed variability is small. This construction follows confidence-weighted robust planning but is recalibrated as observations accumulate, rather than treated as a permanent description of the network."
+    },
+    {
+      "type": "paragraph",
+      "text": "The hierarchy distinguishes shared capacity from local adaptation. At the upper level, the system assembles aggregate flow summaries and checks whether total use respects each coupling constraint. At the lower level, operators choose routes consistent with their own flow conservation and available links. This structure avoids transmitting full demand profiles: a local operator can communicate the load it proposes to place on shared resources without revealing how that load is distributed across its private demand records. The separation is useful only if the summaries remain sufficient for capacity coordination, so the method retains the identity of shared resources and their residuals while withholding local demand detail."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Proximal primal-dual coordination"
+    },
+    {
+      "type": "paragraph",
+      "text": "At round $t$, each primal update minimizes the current local cost plus a dual-weighted capacity residual and a quadratic distance from the previous decision. The proximal term has strength $\\eta$ and discourages large movements when estimates change sharply. A representative local subproblem can be described as $x^{t+1}=\\operatorname{min}_{x in X}\\{f(x;\\hat{u}^t)+\\langle\\lambda^t,Ax-b\\rangle+\\frac{\\eta}{2}||x-x^t||^2\\}$. The notation emphasizes the three influences on a local revision: the current cost estimate, the shared congestion signal, and the previous routing state. Local constraints remain active throughout the update, so stabilization does not authorize an infeasible local flow."
+    },
+    {
+      "type": "paragraph",
+      "text": "Once local updates are assembled, the dual signal responds to excess use of shared capacity. The projected correction is $\\lambda^{t+1}=\\max\\{0,\\lambda^t+\\gamma(Ax^{t+1}-b)\\}$, where $\\gamma$ controls the response to residuals and projection maintains nonnegative congestion prices. A positive residual raises pressure on the resource; slack does not create a negative price. The signal can therefore be broadcast without exposing the local variables that generated it. Because decisions and signals may be reported with delay, the procedure does not assume every operator acts on a perfectly synchronized view. Instead, delay is treated as a factor in the expected convergence rate and residual tolerance."
+    },
+    {
+      "type": "paragraph",
+      "text": "This alternating structure aims to make each decision locally interpretable. Operators receive a compact signal, solve a flow adjustment subject to their own constraints, and return a summary. The coordinator assembles those summaries, updates the capacity residual, and projects the dual correction. When a link becomes unavailable, its local flow is removed from the feasible set and affected traffic is redistributed over remaining paths. The proximal term then limits the degree to which the entire policy changes in response to one disruption. The complete loop is described in \\ref{alg:hierarchical_proximal_routing}; its essential point is that robustness, feasibility correction, and path adaptation occur within one repeated coordination cycle rather than as separate offline and online stages."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Adaptive radius and convergence interpretation"
+    },
+    {
+      "type": "paragraph",
+      "text": "The radius is adjusted from recent residual histories. Let $m_t$ denote the median residual in the current window and $m_{t-1}$ the median in the preceding window. The relative change is scaled by the prior residual with a positive floor, and the resulting multiplicative update is clipped to $[\\rho_{min},\\rho_{max}]$. In compact form, $\\rho_{t+1}=\\min\\{\\rho_{max},\\max\\{\\rho_{min},\\rho_t\\exp(\\alpha\\frac{m_t-m_{t-1}}{m_{t-1}+\\epsilon})\\}\\}$. A sustained rise in residuals can expand the uncertainty region, while stable or declining residuals permit it to contract. The clipping bounds prevent a transient fluctuation from producing an unbounded radius."
+    },
+    {
+      "type": "paragraph",
+      "text": "The calibration procedure is summarized in \\ref{alg:adaptive_uncertainty_update}. Using medians makes the adjustment less sensitive to an isolated extreme interval than a rule based on a single residual. The rate parameter $\\alpha$ determines the size of the response, while the window length determines how rapidly a persistent change becomes visible. The rule does not infer a complete demand distribution; it provides an operational adjustment to the width of a robust envelope. Its purpose is to improve the balance between conservatism and responsiveness when regimes evolve gradually, while allowing the proximal term to control policy movement when topology changes abruptly."
+    },
+    {
+      "type": "paragraph",
+      "text": "The analysis bounds coupling residuals in terms of the uncertainty radius, initial distance to a robust solution, proximal strength, and measurement disturbance. A representative statement has the form $||Ax^t-b||\\leq\\frac{\\rho\\sigma+\\eta||x^0-x^*||}{\\sqrt{t+1}}+\\gamma\\delta$. This expression is interpreted under the regularity and bounded-noise conditions of the coordination model. It explains why a finite number of rounds yields a neighborhood rather than necessarily exact feasibility: residual noise contributes a persistent term, and communication delay can make that term operationally larger. The analysis therefore informs choices of step size and penalty, but does not replace empirical checks under the reporting patterns of a particular network."
+    },
+    {
+      "type": "paragraph",
+      "text": "The penalty and step parameters must be selected together. Increasing $\\eta$ reduces abrupt changes but can slow adaptation; increasing $\\gamma$ makes dual correction more forceful but may amplify stale residuals. Similarly, a larger radius protects against greater uncertainty at the expense of conservative cost, while an aggressively adaptive rule can track a change too closely if the observation window is short. The intended design is not to maximize any single parameter. Rather, the parameters jointly set a balance between responsiveness, stability, and constraint control, with stopping conditions based on both objective change and feasibility residual."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Experimental Setup"
+    },
+    {
+      "type": "paragraph",
+      "text": "We evaluated the procedure on generated transport, communication, and service-allocation instances arranged into two multi-layer routing configurations: a transit mesh and a relay lattice. Each configuration includes shared capacity constraints, local flow requirements, uncertain operating costs, and intermittent link availability. Disruption intervals remove selected links and require affected flows to be redirected. These settings are designed to exercise the coordination structure: an operator can adapt local paths, but the resulting allocation must still respect resources shared with other layers. Results are summarized over repeated operating intervals, with feasibility assessed during disrupted as well as ordinary conditions."
+    },
+    {
+      "type": "paragraph",
+      "text": "The principal comparisons are hierarchical proximal coordination, centralized robust optimization, and decentralized greedy routing. The centralized method serves as a robust objective reference with coordinated access to the network-wide model. The greedy method represents a locally reactive policy without the same global robust coordination. The proposed method lies between these extremes: it coordinates capacity using aggregate signals but leaves local flow adjustment with each operator. We record objective cost, congestion index, recovery time, and feasibility rate. Lower cost, congestion, and recovery time are preferred; feasibility rate measures the proportion of disrupted intervals in which the coupled constraints are respected."
+    },
+    {
+      "type": "paragraph",
+      "text": "We also varied uncertainty radius and communication delay. Calibrated, expanded, and restricted settings use different radius levels, and communication delay is expressed as the number of intervals between relevant updates. The coordination outcome includes rounds to the stopping threshold, objective gap relative to the centralized robust solution, and constraint residual. This design separates the effect of model conservatism from the effect of stale information. It also makes clear that a low objective gap alone is not sufficient: an operating method that reaches a favorable cost while leaving persistent coupling violations is not a suitable routing policy."
+    },
+    {
+      "type": "paragraph",
+      "text": "For ablation, we removed adaptive calibration, removed the proximal term, removed both, or delayed calibration while keeping the remaining components active. Policy change is measured as the median normalized shift between consecutive routing decisions. Objective, peak congestion, and post-disruption gap provide complementary indicators. The comparison tests whether each component contributes to temporal stability or operational recovery, and whether their effects reinforce one another. The full method is not presumed to dominate on every metric under every condition; instead, the ablation asks which failure modes emerge when a specific mechanism is absent."
+    },
+    {
+      "type": "paragraph",
+      "text": "The coordination procedure stops when objective change and constraint residual meet their respective tolerances, subject to a maximum round budget. Recent residual windows drive the radius update, with lower and upper bounds set before evaluation. All methods face the same link-state sequence within a scenario so that differences in recovery can be attributed to their decision rules rather than to different disruptions. Reported values summarize the operating runs; the text interprets them comparatively and does not infer universal performance from a finite set of network configurations."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Results"
+    },
+    {
+      "type": "paragraph",
+      "text": "Across both configurations, hierarchical proximal routing combines lower reported cost with lower congestion and faster recovery than the two comparison methods. In the transit mesh, its cost is 179.8, compared with 184.6 for centralized robust optimization and 213.9 for decentralized greedy routing. Its congestion index is 0.24, and its recovery time is 12.1 minutes, while the corresponding centralized values are 0.31 and 16.8 and the greedy values are 0.47 and 29.4. The feasibility rate is 97.8%, exceeding the other reported rates. The comparison in \\ref{tab:robust_routing_results} presents these measures across both scenarios."
+    },
+    {
+      "type": "paragraph",
+      "text": "The relay lattice shows the same direction of effect, though absolute costs and recovery times are higher. The hierarchical method records cost 219.7, congestion index 0.29, recovery time 15.6 minutes, and feasibility rate 96.1%. Centralized robust optimization records 226.3, 0.38, 21.7, and 92.5%, respectively; decentralized greedy routing records 249.1, 0.56, 35.9, and 78.4%. These outcomes suggest that local adaptation paired with shared-capacity coordination can be effective without requiring every operator to solve one centralized model. They do not establish that decentralization alone is sufficient: the greedy baseline performs worse on each reported measure."
+    },
+    {
+      "type": "paragraph",
+      "text": "Recovery trajectories clarify how congestion evolves after sequential disruptions. The hierarchical policy begins at a lower congestion level, experiences an increase after link loss, and then declines toward its pre-disruption range. The centralized robust policy follows a similar pattern at higher levels, whereas the greedy policy remains more congested throughout the shown recovery period. The profile in \\ref{fig:area_congestion_trajectory} is consistent with a proximal response that redistributes affected flow without allowing each disruption to trigger an uncontrolled policy swing. Recovery time and trajectory describe related but distinct properties: one captures the time to regain a target state, while the other shows the path taken to get there."
+    },
+    {
+      "type": "paragraph",
+      "text": "The objective and recovery comparison across the transit mesh and relay lattice is summarized in \\ref{fig:grouped_bar_scenario_comparison}. Its cross-scenario pattern matches the tabulated results: the hierarchical method has the lowest displayed objective cost and recovery time in both configurations. This consistency matters because a method can appear favorable on a single topology for structural reasons that do not transfer. The two configurations do not span all possible network architectures, so the findings should be read as evidence that the coordination rule works across distinct arrangements, not as a claim that every multi-layer network will exhibit the same ranking."
+    },
+    {
+      "type": "paragraph",
+      "text": "Radius and delay affect coordination quality jointly. With calibrated radius 0.18 and one-interval delay, the method reaches the stopping threshold in 34 rounds, with a 2.7% objective gap and 0.014 constraint residual. At four intervals of delay, these measures become 51 rounds, 4.1%, and 0.026. Expanded radius 0.31 produces 3.5% and 6.8% gaps for the two delay settings, while restricted radius 0.09 produces 3.2% and 5.4%. The full sensitivity comparison is presented in \\ref{tab:parameter_sensitivity}; the relationship between delay and objective gap is also visible in \\ref{fig:scatter_delay_gap}."
+    },
+    {
+      "type": "paragraph",
+      "text": "The pattern indicates that communication delay is associated with a larger objective gap in each tested radius setting. The differences between one and four intervals are not identical, which is consistent with interactions between stale signals and uncertainty width. Under the calibrated setting, delay increases the gap from 2.7% to 4.1%; under the expanded setting it increases from 3.5% to 6.8%. The restricted setting also deteriorates, from 3.2% to 5.4%. A narrow radius is not a general remedy for delay: it reduces conservatism but can underrepresent variation, while a broad radius can protect against cost uncertainty yet increase the burden on coordination."
+    },
+    {
+      "type": "paragraph",
+      "text": "Coordination dynamics provide a second view of the same behavior. The objective gap declines from 12.4% to 2.7% over 34 rounds in the calibrated, low-delay case. Residuals decrease over the run, although delayed communication creates a wider band in later rounds. The radius expands during demand shifts and contracts after observations become stable. These three behaviors, described in \\ref{fig:multi_panel_coordination_dynamics}, connect the method's stopping outcome to its internal signals: objective progress is not achieved by ignoring feasibility, and radius adaptation is not a monotone expansion. Together they support the interpretation of a bounded, responsive process rather than a fixed robust policy."
+    },
+    {
+      "type": "paragraph",
+      "text": "The layer-wise interpretation is that global capacity decisions connect transit, relay, and service layers through coupling constraints, while local operators revise their own path allocations as demand and link availability change. Aggregate congestion summaries carry the information needed to coordinate shared resources without transmitting local demand profiles. This design logic is presented in \\ref{fig:multi_panel_layer_routing}. It also indicates why the method can combine local autonomy with network-level correction: the operators do not need to disclose their full internal state, but they do need to report enough aggregate information for the coordinator to estimate shared-capacity residuals."
+    },
+    {
+      "type": "paragraph",
+      "text": "The disruption sequence in \\ref{fig:image_panel_disruption_recovery} follows the transition from a baseline state through link loss, redistribution, stabilization, and a restored feasible allocation. This ordering reflects the intended role of the proximal mechanism. It does not prevent a change when a route becomes unavailable; rather, it limits unnecessary changes in unaffected parts of the policy while the remaining flows are reassigned. Taken with the lower congestion and recovery measures, the sequence suggests that stability and responsiveness can coexist when the regularizer is applied to the change in routing decision rather than used to freeze the previous decision."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Ablation"
+    },
+    {
+      "type": "paragraph",
+      "text": "Removing either principal component weakens at least one aspect of performance, and removing both produces the largest deterioration. The full method has median policy change 0.08, objective 181.4, peak congestion 0.26, and post-disruption gap 3.1%. With fixed rather than adaptive calibration, the corresponding values are 0.14, 188.9, 0.33, and 4.8%. Without the proximal term, they are 0.21, 184.7, 0.31, and 6.2%. When both components are removed, they rise to 0.29, 197.6, 0.42, and 8.7%. These comparisons are collected in \\ref{tab:ablation_components}."
+    },
+    {
+      "type": "paragraph",
+      "text": "The policy-change distribution offers a direct view of the stability contribution. The full method has a median normalized change of 0.08, compared with 0.14 without calibration, 0.21 without the proximal term, and 0.29 without either component. The ordering is visible in \\ref{fig:box_policy_stability}. In this evaluation, the proximal term has the stronger direct association with temporal stability, while adaptive calibration contributes by adjusting the uncertainty envelope as residual behavior changes. Because the components also affect congestion and recovery, their value is not confined to smoothing the route sequence."
+    },
+    {
+      "type": "paragraph",
+      "text": "The no-proximal variant has a somewhat lower objective than the no-calibration variant, but its policy change and post-disruption gap are larger. This distinction reinforces the need to evaluate more than a single objective value. A reactive method may achieve a competitive operating cost in some intervals while creating a more abrupt policy trajectory and a slower return to a feasible allocation after disruption. Conversely, an overly restrictive stability mechanism could preserve a poor route. In the present comparison, the full method attains both the lowest policy-change median and the best reported objective, congestion, and recovery-gap values."
+    },
+    {
+      "type": "paragraph",
+      "text": "Delayed calibration produces intermediate behavior: policy change 0.12, objective 186.2, peak congestion 0.30, and post-disruption gap 4.1%. The result is consistent with a calibration rule that remains useful when its evidence is not current, but loses some ability to track a regime transition. This finding should be interpreted in light of the particular residual windows and delay settings used here. Longer lags, highly irregular demand changes, or inaccurate link-state reporting could alter the relative contribution of the calibration mechanism."
+    },
+    {
+      "type": "paragraph",
+      "text": "Across ablations, stability and robustness are complementary rather than interchangeable. Adaptive calibration changes the assumed envelope in response to residual evidence; the proximal term controls the movement of the policy within that envelope. If calibration is absent, the uncertainty model can become mismatched as conditions evolve. If the proximal term is absent, changes in that model can translate into large routing revisions. The largest degradation when both are removed is consistent with their interaction: adaptive uncertainty without a stabilizing decision step may be volatile, while stabilization around a fixed envelope may retain systematic mismatch."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Limitations"
+    },
+    {
+      "type": "paragraph",
+      "text": "The evaluation covers two generated routing configurations and a defined set of disruption and demand conditions. It does not establish performance for every topology, traffic distribution, or operator arrangement. Networks with very sparse alternate paths, strongly asymmetric resource ownership, or severe correlated link failures may behave differently. The hierarchy assumes that local feasible sets can be solved reliably and that aggregate summaries arrive often enough to support useful capacity correction. Where those assumptions fail, both feasibility and recovery can deteriorate even if the local optimization steps are individually well behaved."
+    },
+    {
+      "type": "paragraph",
+      "text": "The convergence interpretation also has limits. The bounded-neighborhood result depends on regularity conditions, bounded measurement disturbance, and controlled update parameters. Delayed communication is represented in the experiments through interval settings, but real systems may have variable delays, packet loss, or operators that miss several consecutive coordination rounds. Such patterns can make residual signals stale in ways that a fixed delay level does not capture. The analysis should therefore be read as a guide to how noise, radius, and penalty affect the procedure, not as a guarantee of exact feasibility under arbitrary communication conditions."
+    },
+    {
+      "type": "paragraph",
+      "text": "Privacy is supported by aggregate exchange, not by a formal claim that all information leakage is eliminated. Capacity summaries and residuals may still reveal some operational characteristics when repeated over time, particularly in a small network or where an operator has strong prior information. A deployment requiring stronger privacy protection would need an explicit threat model and may need additional mechanisms whose effect on residual quality and convergence is separately assessed. \\fn{Aggregate exchange reduces the detail disclosed in each coordination round, but repeated summaries can still reveal patterns when combined with other knowledge; the extent of that exposure depends on the network and the observer's information.} Similarly, the method presumes that reported link availability and local flow summaries are accurate enough to build meaningful shared signals."
+    },
+    {
+      "type": "paragraph",
+      "text": "The adaptive radius uses median residual changes and bounded multiplicative updates. This choice reduces sensitivity to isolated extremes, but it can lag behind abrupt regime changes or respond slowly when a sustained shift occurs over a window longer than the calibration horizon. Parameter settings for the bounds, rate, proximal strength, and dual step are consequential. The ablation results demonstrate sensitivity to component removal, but they do not identify a universally optimal setting. Operational deployment would require calibration against local measurement cadence, capacity margins, and the relative cost of congestion versus conservative routing."
+    },
+    {
+      "type": "paragraph",
+      "text": "Finally, cost, congestion index, recovery time, feasibility rate, and policy change do not capture every operational objective. Energy use, service quality, fairness among demand classes, and long-run maintenance effects could change the preferred tradeoff. The cost values also depend on the instance definitions and operating conditions used in the evaluation. Additional assessment across broader network structures and longer operating horizons is needed before conclusions about those objectives or about large-scale deployment can be drawn."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Conclusion"
+    },
+    {
+      "type": "paragraph",
+      "text": "This study presented a hierarchical robust routing procedure for adaptive multi-layer networks with uncertain demand, delayed information, and intermittent link availability. The method separates shared-capacity coordination from local flow adjustment, uses aggregate congestion residuals to update projected dual signals, and applies a proximal term to limit abrupt policy change. Its confidence-weighted uncertainty region adapts to recent residual behavior within prescribed bounds. The resulting design combines robust planning with local autonomy and makes feasibility correction part of the repeated routing process."
+    },
+    {
+      "type": "paragraph",
+      "text": "In the evaluated transit mesh and relay lattice, hierarchical proximal routing achieved lower objective cost and congestion, faster recovery, and higher feasibility rates than the centralized robust and decentralized greedy comparisons. Sensitivity results showed that delay increases objective gaps and constraint residuals, while ablation results indicated that both adaptive calibration and proximal stabilization contribute to performance. In particular, the proximal term was associated with more stable policy updates, and adaptive calibration helped the uncertainty representation respond to changing residual conditions."
+    },
+    {
+      "type": "paragraph",
+      "text": "The results support a practical design principle: coordinate at the level of shared capacity while retaining local authority over rapid flow adaptation. That principle does not remove the need to choose parameters carefully, verify reporting quality, or test assumptions under the topology and delay patterns of the intended network. The analytical guarantee is a bounded-neighborhood statement under specified conditions, and the empirical evidence is limited to the configurations assessed here. Future work should examine variable communication delays, stronger privacy requirements, broader disruption patterns, and objectives that account for service quality and fairness as well as cost and congestion."
+    }
+  ]
+}

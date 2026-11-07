@@ -73,7 +73,7 @@ def _document(html: str, notes: list[str]) -> str:
             f"<body>{body.strip()}</body></html>")
 
 
-def tidy_design(html: str, config, taxonomy, seed: int = 0) -> tuple[str, list[str]]:
+def tidy_design(html: str, config, taxonomy, seed: int = 0, *, table_frame: str | None = None) -> tuple[str, list[str]]:
     """Return the corrected HTML and a list of the corrections made (for the trace)."""
     known = set(taxonomy.text)
     tables = {field.id for field in config.fields if field.kind in {"table", "statement"}}
@@ -81,7 +81,9 @@ def tidy_design(html: str, config, taxonomy, seed: int = 0) -> tuple[str, list[s
     flowing = tables | {field.id for field in config.fields if field.kind in {"notes", "kpis"}}
     repeated_slots = {"running_header", "running_footer"}
     repeated_labels = {"header", "footer", "page_number"}
-    frame = random.Random(seed).choice(FRAMES)
+    if table_frame is not None and table_frame not in FRAMES:
+        raise ValueError(f"Unknown table frame type {table_frame!r}")
+    frame = table_frame or random.Random(seed).choice(FRAMES)
     notes: list[str] = []
 
     def fix(match: re.Match) -> str:
@@ -165,3 +167,83 @@ def tidy_design(html: str, config, taxonomy, seed: int = 0) -> tuple[str, list[s
         )
         html = pattern.sub(to_table, html)
     return html, notes
+
+
+async def tidy_backbone_css(folder, browser, css: str) -> tuple[str, list[dict]]:
+    """Fix only near-threshold text overflow and contrast before returning issues to the agent."""
+    from pathlib import Path
+
+    candidates: dict[tuple[str, str], dict] = {}
+    for path in sorted((Path(folder) / "pages").glob("*.html")):
+        async with browser.page(path) as (page, blocked, failed):
+            if blocked or failed:
+                continue
+            found = await page.evaluate("""() => {
+              const out=[], mm=px=>px*25.4/96;
+              const rgb=s=>(s.match(/[\\d.]+/g)||[]).slice(0,3).map(Number);
+              const lum=c=>c.map(x=>{x/=255;return x<=.04045?x/12.92:((x+.055)/1.055)**2.4})
+                .reduce((s,x,i)=>s+x*[.2126,.7152,.0722][i],0);
+              const contrast=(a,b)=>(Math.max(a,b)+.05)/(Math.min(a,b)+.05);
+              const role=(e)=>[...e.closest('section.page').classList].find(x=>x.startsWith('role-'))?.slice(5)||'';
+              for(const e of document.querySelectorAll('[data-gt-id]')){
+                if(!e.textContent.trim())continue;
+                const id=e.dataset.gtId, r=role(e), s=getComputedStyle(e);
+                let bg=e;
+                while(bg.parentElement && getComputedStyle(bg).backgroundColor==='rgba(0, 0, 0, 0)')bg=bg.parentElement;
+                const background=lum(rgb(getComputedStyle(bg).backgroundColor));
+                const foreground=lum(rgb(s.color)), ratio=contrast(foreground,background);
+                if(ratio>4&&ratio<4.5){
+                  const black=contrast(0,background), white=contrast(1,background);
+                  const color=black>=white?'#000000':'#ffffff';
+                  const best=Math.max(black,white);
+                  if(best>=4.5)out.push({id,role:r,kind:'contrast',ratio,best,color});
+                }
+                const region=e.closest('[data-region]');
+                if(region){
+                  const box=e.getBoundingClientRect(), area=region.getBoundingClientRect();
+                  const horizontal=Math.max(0,box.left-area.left,box.right-area.right,e.scrollWidth-e.clientWidth);
+                  const vertical=Math.max(0,box.top-area.top,box.bottom-area.bottom,e.scrollHeight-e.clientHeight);
+                  const overflow=Math.max(mm(horizontal),mm(vertical));
+                  const font=parseFloat(s.fontSize);
+                  if(overflow>0&&overflow<3&&font>10.67){
+                    const deltaPt=Math.min(.5,Math.max(.1,overflow*.15));
+                    const adjusted=Math.max(10.67,font-deltaPt*96/72);
+                    if(adjusted<font)out.push({id,role:r,kind:'overflow',overflow_mm:overflow,
+                      font_px:adjusted,horizontal_mm:mm(horizontal)});
+                  }
+                }
+              }
+              return out;
+            }""")
+        for item in found:
+            key = (item["role"], item["id"])
+            row = candidates.setdefault(key, {"id": item["id"], "role": item["role"],
+                                                "color": None, "font_px": None, "kinds": set()})
+            row["kinds"].add(item["kind"])
+            if item["kind"] == "contrast":
+                if row["color"] is None or row["color"] == item["color"]:
+                    row["color"] = item["color"]
+                else:
+                    row["color"] = "conflict"
+            if item["kind"] == "overflow":
+                row["font_px"] = min(row["font_px"] or item["font_px"], item["font_px"])
+                row["horizontal_mm"] = max(row.get("horizontal_mm", 0), item["horizontal_mm"])
+
+    rules, corrections = [], []
+    for (role, block_id), row in sorted(candidates.items()):
+        selector = f'section.page.role-{role} [data-gt-id="{block_id}"]'
+        declarations = []
+        if row["color"] not in (None, "conflict"):
+            declarations.append(f'color:{row["color"]}!important')
+        if row["font_px"] is not None:
+            declarations.append(f'font-size:{row["font_px"]:.3f}px!important')
+        if row.get("horizontal_mm", 0) > 0:
+            declarations.append("overflow-wrap:anywhere!important")
+        if declarations:
+            rules.append(selector + "{" + ";".join(declarations) + "}")
+            corrections.append({"id": block_id, "role": role, "fixes": sorted(row["kinds"]),
+                                "color": None if row["color"] == "conflict" else row["color"],
+                                "font_px": row["font_px"], "horizontal_overflow_mm": row.get("horizontal_mm", 0)})
+    if not rules:
+        return css, []
+    return css.rstrip() + "\n/* automatic small-fit and near-threshold contrast corrections */\n" + "\n".join(rules), corrections

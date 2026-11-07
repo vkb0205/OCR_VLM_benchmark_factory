@@ -1,0 +1,1555 @@
+{
+  "front": {
+    "title": "Kiến trúc điều phối nhận thức–hành động cho robot di động trong môi trường bán cấu trúc",
+    "authors": [
+      {
+        "name": "Nguyễn Minh Kha",
+        "affiliations": [
+          1
+        ],
+        "corresponding": true,
+        "email": "minhkha@tulinh-robotics.org"
+      },
+      {
+        "name": "Trần Bảo Nguyên",
+        "affiliations": [
+          2
+        ],
+        "corresponding": false
+      }
+    ],
+    "affiliations": [
+      "Phòng thí nghiệm Hệ thống Tự hành Tân Lĩnh, 18 đường Vân Khê, thành phố Nam Lộc, Việt Nam",
+      "Khoa Cơ điện tử và Điều khiển, Viện Công nghệ Hải Vân, 72 phố Lam Giang, thành phố An Phú, Việt Nam"
+    ],
+    "abstract": "Bài báo trình bày một kiến trúc điều phối nhận thức–hành động cho robot di động hoạt động trong môi trường bán cấu trúc có người đi bộ, vật cản động và vùng quan sát không đồng nhất. Kiến trúc kết hợp bản đồ chiếm chỗ đa phân giải, bộ ước lượng trạng thái có kiểm soát độ tin cậy, bộ lập kế hoạch phân cấp và lớp điều khiển dự báo. Một cơ chế ngân sách tính toán thích nghi phân bổ tài nguyên giữa nhận biết, định vị, lập kế hoạch và điều khiển theo độ bất định của trạng thái. Hệ thống được triển khai trên nền tảng robot bánh vi sai với cảm biến hình ảnh chiều sâu, quét khoảng cách và đo quán tính. Đánh giá trên mười hai tuyến thử nghiệm có mật độ vật cản và mức che khuất khác nhau cho thấy kiến trúc đạt tỷ lệ hoàn thành 93,4%, giảm thời gian lập kế hoạch trung vị 28,7% và giữ sai số bám quỹ đạo trung bình dưới 0,084 m. Phân tích cắt bỏ cho thấy cơ chế điều chỉnh ngân sách và bộ nhớ ngữ cảnh cục bộ đóng góp lớn nhất vào độ ổn định khi môi trường thay đổi. Kết quả chỉ ra rằng việc liên kết rõ ràng giữa độ tin cậy nhận biết, chi phí hành động và giới hạn an toàn giúp robot duy trì hành vi có thể giải thích trong các nhiệm vụ tuần tra, vận chuyển và dẫn đường nội bộ.",
+    "abstract_alt": null,
+    "keywords": "robot di động; điều phối nhận thức–hành động; lập kế hoạch phân cấp; bản đồ chiếm chỗ; điều khiển dự báo; ngân sách tính toán",
+    "keywords_alt": null,
+    "journal": "Tạp chí Hệ thống Robot và Tự hành Ứng dụng",
+    "acknowledgement": "Nhóm tác giả cảm ơn Phòng thí nghiệm Hệ thống Tự hành Tân Lĩnh đã hỗ trợ không gian thử nghiệm, thiết bị đo và quy trình đánh giá an toàn. Nhóm cũng ghi nhận sự hỗ trợ kỹ thuật của tổ vận hành nền tảng trong quá trình thu thập dữ liệu và hiệu chỉnh cảm biến.",
+    "sections": [
+      {
+        "heading": "Introduction",
+        "content": "Robot di động trong nhà kho, hành lang kỹ thuật và khu dịch vụ thường phải hoạt động giữa hai trạng thái trái ngược: hình học nền tương đối ổn định nhưng vật thể, con người và quyền ưu tiên di chuyển biến đổi liên tục. Các hệ thống chỉ dựa trên bản đồ tĩnh dễ tạo đường đi không còn phù hợp, trong khi hệ thống phản ứng thuần túy thường thiếu khả năng dự báo và khó giữ hành vi nhất quán khi quan sát bị che khuất. Vấn đề cốt lõi không chỉ là chọn một thuật toán định vị hay một bộ lập kế hoạch riêng lẻ, mà là tổ chức luồng thông tin giữa nhận biết, ước lượng, quyết định và điều khiển.\n\nCông trình này đề xuất một kiến trúc có bốn đặc điểm. Thứ nhất, mọi mô-đun phát hành trạng thái kèm độ tin cậy và thời hạn hiệu lực. Thứ hai, bộ điều phối phân bổ ngân sách tính toán theo rủi ro thay vì dùng lịch cố định. Thứ ba, bộ lập kế hoạch phân cấp duy trì đồng thời mục tiêu toàn cục và hành vi tránh va chạm cục bộ. Thứ tư, lớp an toàn có quyền làm chậm hoặc dừng robot khi bằng chứng cảm biến không đủ mạnh. Các thành phần được liên kết bằng giao diện thời gian rõ ràng, giúp truy nguyên nguyên nhân khi chất lượng nhiệm vụ suy giảm.\n\nĐóng góp chính của bài báo gồm: một mô hình trạng thái hợp nhất cho điều phối nhận thức–hành động; một cơ chế cập nhật ngân sách dựa trên độ bất định và độ gần ranh giới an toàn; một quy trình triển khai có bộ nhớ ngữ cảnh cục bộ; và một đánh giá định lượng bao phủ hiệu năng, độ bền, chi phí tính toán và khả năng phục hồi. Theo quy ước trích dẫn tác giả–năm, thiết kế phân cấp được đối chiếu với các hướng tiếp cận của Lê và cộng sự (2021), Phạm và Đỗ (2022), cũng như bộ điều khiển dự báo của Vũ và cộng sự (2023)."
+      },
+      {
+        "heading": "Requirements",
+        "content": "Hệ thống được thiết kế cho robot bánh vi sai vận hành trong vùng trong nhà có chiều rộng lối đi thay đổi, các khu vực cấm đã biết trước và các tác nhân di động không hợp tác. Yêu cầu chức năng gồm định vị liên tục, dựng bản đồ cục bộ, phát hiện vùng có thể đi qua, lập kế hoạch đến điểm đích, tránh va chạm, dừng an toàn và ghi nhật ký nguyên nhân quyết định.\n\nYêu cầu thời gian được chia thành ba lớp. Vòng điều khiển phải duy trì chu kỳ ngắn và ổn định; vòng tránh va chạm phải phản ứng nhanh hơn vòng lập kế hoạch toàn cục; vòng nhận thức có thể thay đổi tần suất theo điều kiện quan sát. Với mỗi thông điệp, hệ thống lưu dấu thời gian cảm biến, thời điểm xử lý, độ trễ truyền và thời hạn sử dụng. Một trạng thái bị xem là lỗi thời nếu vượt quá cửa sổ tương ứng của mô-đun.\n\nYêu cầu an toàn bao gồm giới hạn vận tốc, giới hạn gia tốc, khoảng cách đệm với vật cản và vùng dừng có thể kiểm chứng. Yêu cầu khả năng bảo trì gồm cấu hình mô-đun độc lập, nhật ký có cấu trúc, tham số có phiên bản và cơ chế khôi phục khi một nguồn cảm biến mất tín hiệu. Các yêu cầu được ánh xạ thành chỉ số trong Bảng 1 và được kiểm tra trong các kịch bản đánh giá."
+      },
+      {
+        "heading": "Architecture",
+        "content": "Kiến trúc gồm lớp cảm biến, lớp diễn giải, lớp trạng thái, lớp điều phối, lớp lập kế hoạch, lớp điều khiển và lớp an toàn. Dữ liệu đi lên từ cảm biến được chuẩn hóa về hệ quy chiếu chung. Bộ ước lượng hợp nhất thông tin đo quán tính, khoảng cách và hình ảnh chiều sâu để tạo trạng thái robot, bản đồ cục bộ và trường độ tin cậy. Bộ điều phối đọc các trường này rồi quyết định mô-đun nào cần tăng tần suất hoặc nhận thêm tài nguyên.\n\nMột trạng thái điều phối được biểu diễn bởi \\(\\mathbf{z}_t=\\langle \\mathbf{x}_t,\\mathbf{m}_t,\\rho_t,\\lambda_t\\rangle\\), trong đó \\(\\mathbf{x}_t\\) là trạng thái động học, \\(\\mathbf{m}_t\\) là bản đồ cục bộ, \\(\\rho_t\\) là độ tin cậy và \\(\\lambda_t\\) là ngân sách tính toán. Mỗi mô-đun trả về kết quả, độ tin cậy, thời hạn và chi phí. Bộ điều phối ưu tiên mô-đun có đóng góp lớn vào giảm rủi ro trong khoảng thời gian kế tiếp.\n\nBản đồ có hai lớp. Lớp nền giữ cấu trúc lâu dài như tường, vùng cấm và điểm mốc. Lớp động giữ vật cản tạm thời, hướng chuyển động ước lượng và vùng chưa quan sát. Hai lớp được cập nhật với tốc độ khác nhau nhưng cùng quy về lưới cục bộ. Bộ lập kế hoạch toàn cục sử dụng đồ thị hành lang, còn bộ lập kế hoạch cục bộ tối ưu chuỗi vận tốc trong cửa sổ dự báo.\n\nLớp an toàn nằm ngoài đường dữ liệu thông thường. Nó kiểm tra khoảng cách dự báo, tính hợp lệ của trạng thái và sự nhất quán giữa các cảm biến. Khi một điều kiện bị vi phạm, lớp này có thể giới hạn vận tốc hoặc phát lệnh dừng mà không chờ bộ lập kế hoạch hoàn tất. Hình 1 mô tả các quan hệ dữ liệu và quyền ưu tiên giữa các lớp."
+      },
+      {
+        "heading": "Implementation",
+        "content": "Nền tảng thử nghiệm sử dụng khung gầm bánh vi sai, máy tính nhúng đa lõi, cảm biến chiều sâu phía trước, bộ quét khoảng cách ngang và bộ đo quán tính. Các tiến trình giao tiếp qua bus thông điệp có hàng đợi giới hạn. Mỗi thông điệp mang mã mô-đun, dấu thời gian, số phiên bản và mã trạng thái. Khi hàng đợi đầy, bộ điều phối giữ thông điệp mới nhất đối với dữ liệu trạng thái và giữ thứ tự đối với lệnh an toàn.\n\nBộ ước lượng sử dụng tích phân gia tốc cho dự đoán ngắn hạn, sau đó hiệu chỉnh bằng quan sát hình học và khoảng cách. Độ tin cậy được giảm khi sai khác giữa các nguồn tăng hoặc khi vùng quan sát bị thiếu. Bộ nhớ ngữ cảnh giữ các biến cố gần nhất: vật cản mới xuất hiện, lần thất bại lập kế hoạch, lần kích hoạt dừng và thay đổi chế độ cảm biến. Nhờ đó, bộ điều phối có thể phân biệt một nhiễu ngắn với một thay đổi bền vững.\n\nBộ lập kế hoạch toàn cục tạo chuỗi vùng trung gian trên đồ thị hành lang. Bộ lập kế hoạch cục bộ sinh các quỹ đạo ứng viên và loại bỏ quỹ đạo vi phạm khoảng cách đệm. Hàm điểm kết hợp sai lệch đích, độ cong, năng lượng điều khiển, khoảng cách vật cản và độ ổn định quan sát. Các trọng số được chuẩn hóa trước khi chạy và có thể được thay đổi theo chế độ nhiệm vụ.\n\nMã giả của vòng điều phối được trình bày dưới đây.\n\n```text\nprocedure DieuPhoi(z, ngan_sach)\n    cap_nhat_do_tin_cay(z)\n    nguy_co <- tinh_nguy_co(z)\n    uu_tien <- phan_bo(ngan_sach, nguy_co)\n    chay_nhan_biet(uu_tien.nhan_biet)\n    chay_lap_ke_hoach(uu_tien.ke_hoach)\n    lenh <- dieu_khien(z)\n    if vi_pham_an_toan(z, lenh) then\n        lenh <- lenh_dung_an_toan()\n    end if\n    ghi_nhat_ky(z, lenh, nguy_co)\n    return lenh\nend procedure\n```"
+      },
+      {
+        "heading": "Evaluation",
+        "content": "Đánh giá được tổ chức trên mười hai tuyến trong khu vực hành lang, vùng giao cắt, khoang hẹp và khu vực có vật cản di động. Mỗi tuyến được chạy nhiều lượt với ba mức mật độ vật cản và ba mức che khuất quan sát. Chỉ số chính gồm tỷ lệ hoàn thành, thời gian đến đích, độ lệch quỹ đạo, số lần kích hoạt dừng an toàn, số sự kiện tiếp cận gần và tải xử lý trung vị.\n\nKết quả tổng hợp cho thấy phương pháp đề xuất đạt tỷ lệ hoàn thành 93,4%, trong khi cấu hình không có điều phối thích nghi đạt 86,1%. Thời gian lập kế hoạch trung vị giảm từ 41,8 ms xuống 29,8 ms khi ngân sách được chuyển theo rủi ro. Độ lệch quỹ đạo trung bình là 0,084 m và phân vị cao của khoảng cách đến vật cản vẫn trên ngưỡng an toàn đã định. Các giá trị chi tiết theo nhóm tuyến được trình bày trong Bảng 2 và Bảng 3.\n\nPhân tích phân bố cho thấy độ trễ có đuôi dài chủ yếu xuất hiện tại vùng giao cắt, nơi bộ nhận biết phải tăng tần suất xử lý. Cơ chế giới hạn hàng đợi ngăn độ trễ tích lũy lan sang vòng điều khiển. Khi cảm biến chiều sâu bị gián đoạn, hệ thống giảm vận tốc, tăng trọng số cho quét khoảng cách và chỉ phục hồi vận tốc định mức sau khi độ tin cậy vượt ngưỡng.\n\nThử nghiệm cắt bỏ gồm bốn cấu hình: bỏ ngân sách thích nghi, bỏ bộ nhớ ngữ cảnh, bỏ lớp an toàn ngoài và bỏ bản đồ hai lớp. Kết quả trong Bảng 4 cho thấy việc bỏ lớp an toàn làm tăng sự kiện tiếp cận gần rõ rệt, còn việc bỏ bộ nhớ ngữ cảnh làm tăng số lần lập kế hoạch lại. Hình 2 trình bày quan hệ giữa độ tin cậy và thời gian phản ứng, Hình 3 trình bày quy trình phục hồi khi nguồn đo bị gián đoạn."
+      },
+      {
+        "heading": "Discussion",
+        "content": "Kết quả cho thấy lợi ích của kiến trúc không chỉ đến từ từng thuật toán riêng mà từ cơ chế trao đổi trạng thái có độ tin cậy. Khi nhận biết không chắc chắn, hệ thống không lập tức đổi sang hành vi cực đoan; thay vào đó, nó tăng quan sát cục bộ, giảm vận tốc và kéo dài cửa sổ xác minh. Cách này tạo ra sự cân bằng giữa tính linh hoạt và khả năng dự đoán.\n\nSo với lịch xử lý cố định, ngân sách thích nghi làm giảm tải trung bình nhưng vẫn dành tài nguyên cho các thời điểm rủi ro. Điều này đặc biệt hữu ích trên máy tính nhúng, nơi một đợt tăng tải nhận biết có thể làm trễ vòng điều khiển. Việc tách lớp an toàn khỏi bộ lập kế hoạch cũng làm rõ trách nhiệm: bộ lập kế hoạch tìm hành động tốt, còn lớp an toàn quyết định hành động đó có được phép thực thi hay không.\n\nMột điểm đáng chú ý là bộ nhớ ngữ cảnh cục bộ không cần lưu toàn bộ lịch sử. Chỉ cần giữ các biến cố có ảnh hưởng đến độ tin cậy và khả năng phục hồi, hệ thống đã giảm được các chu kỳ lập kế hoạch lặp lại. Cấu trúc này cũng hỗ trợ phân tích sau nhiệm vụ vì mỗi quyết định có thể truy về trạng thái, bằng chứng và giới hạn đã áp dụng.\n\nTuy vậy, hiệu quả phụ thuộc vào việc hiệu chỉnh ngưỡng. Nếu ngưỡng quá bảo thủ, robot dừng thường xuyên; nếu quá lỏng, lớp an toàn can thiệp muộn. Vì vậy, quy trình triển khai nên bắt đầu bằng các tuyến có hình học đơn giản, sau đó tăng dần mật độ động và mức che khuất. Các chỉ số cần được quan sát đồng thời thay vì tối ưu một chỉ số đơn lẻ."
+      },
+      {
+        "heading": "Limitations",
+        "content": "Nghiên cứu còn bốn giới hạn. Thứ nhất, phạm vi thử nghiệm tập trung vào môi trường trong nhà có bề mặt tương đối bằng phẳng, vì vậy chưa phản ánh đầy đủ nền dốc, nền trơn hoặc thay đổi chiếu sáng mạnh. Thứ hai, mô hình chuyển động của người đi bộ được biểu diễn bằng dự báo ngắn hạn, chưa bao quát các hành vi bất ngờ như quay đầu đột ngột hoặc dừng sát robot.\n\nThứ ba, bộ điều phối hiện sử dụng tập tham số được hiệu chỉnh trước cho từng nhóm nhiệm vụ. Một hệ thống triển khai rộng hơn cần cơ chế tự hiệu chỉnh có giám sát và kiểm tra giới hạn. Thứ tư, đánh giá tải tính toán được thực hiện trên một cấu hình phần cứng cụ thể; việc chuyển sang bộ xử lý khác có thể thay đổi độ trễ, thông lượng và cách phân bổ ngân sách.\n\nCác giới hạn này không làm thay đổi nguyên tắc kiến trúc nhưng đặt ra yêu cầu kiểm tra bổ sung. Hướng tiếp theo là đưa mô hình bất định hình học vào bộ lập kế hoạch, mở rộng bản đồ động theo không gian ba chiều, và xây dựng bộ kiểm thử tự động cho các chuỗi mất cảm biến kéo dài."
+      },
+      {
+        "heading": "Conclusion",
+        "content": "Bài báo đã trình bày một kiến trúc điều phối nhận thức–hành động cho robot di động trong môi trường bán cấu trúc. Kiến trúc liên kết bản đồ hai lớp, trạng thái có độ tin cậy, ngân sách tính toán thích nghi, lập kế hoạch phân cấp và lớp an toàn độc lập. Triển khai trên nền tảng bánh vi sai cho thấy hệ thống duy trì tỷ lệ hoàn thành cao, giảm độ trễ lập kế hoạch và phục hồi có kiểm soát khi quan sát suy giảm.\n\nĐóng góp có tính thực tiễn nhất là giao diện trạng thái thống nhất: mỗi kết quả đều đi cùng độ tin cậy, thời hạn và chi phí. Giao diện này giúp bộ điều phối đưa ra quyết định tài nguyên có căn cứ, đồng thời giúp người vận hành truy nguyên nguyên nhân của một hành vi. Trong các bước tiếp theo, nhóm sẽ nghiên cứu thích nghi tham số theo nhiệm vụ, kiểm chứng hình thức cho lớp an toàn và đánh giá trên các nền tảng cơ khí khác nhau."
+      }
+    ],
+    "equations": [
+      {
+        "id": "E1",
+        "label": "Độ tin cậy hợp nhất",
+        "latex": "\\rho_t=\\operatorname{min}\\left(1,\\rho_{t-1}\\exp\\left(-\\alpha e_t\\right)\\right)"
+      },
+      {
+        "id": "E2",
+        "label": "Ngân sách mô-đun",
+        "latex": "\\lambda_i=\\lambda_{\\max}\\frac{\\rho_i^{-1}+\\beta r_i}{\\sum_j\\left(\\rho_j^{-1}+\\beta r_j\\right)}"
+      },
+      {
+        "id": "E3",
+        "label": "Hàm điểm quỹ đạo",
+        "latex": "J(\\tau)=w_gJ_g(\\tau)+w_cJ_c(\\tau)+w_oJ_o(\\tau)+w_uJ_u(\\tau)"
+      },
+      {
+        "id": "E4",
+        "label": "Khoảng cách dự báo",
+        "latex": "d_{\\min}=\\min_{t\\in[0,T]}\\left\\|\\mathbf{p}_r(t)-\\mathbf{p}_o(t)\\right\\|_2"
+      },
+      {
+        "id": "E5",
+        "label": "Cập nhật trạng thái",
+        "latex": "\\hat{\\mathbf{x}}_t=\\mathbf{F}\\hat{\\mathbf{x}}_{t-1}+\\mathbf{G}\\mathbf{u}_t+\\mathbf{K}\\left(\\mathbf{y}_t-\\mathbf{H}\\hat{\\mathbf{x}}_{t-1}\\right)"
+      },
+      {
+        "id": "E6",
+        "label": "Chỉ số hoàn thành có trọng số",
+        "latex": "S=\\frac{\\sum_{k=1}^{n}q_k\\left(a_k-b_k\\right)}{\\sum_{k=1}^{n}q_k}"
+      }
+    ],
+    "tables": [
+      {
+        "id": "T1",
+        "caption": "Ánh xạ yêu cầu và chỉ số kiểm tra",
+        "columns": [
+          "Mã",
+          "Yêu cầu",
+          "Chỉ số",
+          "Ngưỡng"
+        ],
+        "rows": [
+          [
+            "R1",
+            "Định vị liên tục",
+            "Độ lệch vị trí",
+            "leq 0,120 m"
+          ],
+          [
+            "R2",
+            "Tránh va chạm",
+            "Khoảng cách dự báo",
+            "geq 0,180 m"
+          ],
+          [
+            "R3",
+            "Phản ứng thời gian",
+            "Độ trễ điều khiển",
+            "leq 18 ms"
+          ],
+          [
+            "R4",
+            "Phục hồi cảm biến",
+            "Thời gian phục hồi",
+            "leq 2,40 s"
+          ],
+          [
+            "R5",
+            "Truy nguyên quyết định",
+            "Bản ghi hợp lệ",
+            "geq 98,0 phần trăm"
+          ]
+        ]
+      },
+      {
+        "id": "T2",
+        "caption": "Kết quả theo nhóm tuyến",
+        "columns": [
+          "Nhóm tuyến",
+          "Hoàn thành",
+          "Độ lệch trung bình",
+          "Thời gian trung vị"
+        ],
+        "rows": [
+          [
+            "Hành lang mở",
+            "97,2 phần trăm",
+            "0,061 m",
+            "18,6 s"
+          ],
+          [
+            "Giao cắt",
+            "91,5 phần trăm",
+            "0,089 m",
+            "23,4 s"
+          ],
+          [
+            "Khoang hẹp",
+            "90,4 phần trăm",
+            "0,102 m",
+            "27,1 s"
+          ],
+          [
+            "Vật cản động",
+            "94,6 phần trăm",
+            "0,083 m",
+            "25,8 s"
+          ]
+        ]
+      },
+      {
+        "id": "T3",
+        "caption": "So sánh cấu hình điều phối",
+        "columns": [
+          "Cấu hình",
+          "Hoàn thành",
+          "Lập kế hoạch trung vị",
+          "Tải xử lý"
+        ],
+        "rows": [
+          [
+            "Đề xuất",
+            "93,4 phần trăm",
+            "29,8 ms",
+            "61,7 phần trăm"
+          ],
+          [
+            "Lịch cố định",
+            "86,1 phần trăm",
+            "41,8 ms",
+            "74,9 phần trăm"
+          ],
+          [
+            "Phản ứng cục bộ",
+            "82,7 phần trăm",
+            "26,4 ms",
+            "58,3 phần trăm"
+          ],
+          [
+            "Toàn cục không giới hạn",
+            "88,9 phần trăm",
+            "63,2 ms",
+            "89,1 phần trăm"
+          ]
+        ]
+      },
+      {
+        "id": "T4",
+        "caption": "Phân tích cắt bỏ",
+        "columns": [
+          "Biến thể",
+          "Hoàn thành",
+          "Tiếp cận gần",
+          "Lập kế hoạch lại"
+        ],
+        "rows": [
+          [
+            "Đầy đủ",
+            "93,4 phần trăm",
+            "3",
+            "11"
+          ],
+          [
+            "Bỏ ngân sách thích nghi",
+            "87,8 phần trăm",
+            "7",
+            "19"
+          ],
+          [
+            "Bỏ bộ nhớ ngữ cảnh",
+            "89,6 phần trăm",
+            "5",
+            "28"
+          ],
+          [
+            "Bỏ lớp an toàn ngoài",
+            "84,2 phần trăm",
+            "16",
+            "14"
+          ],
+          [
+            "Bỏ bản đồ hai lớp",
+            "86,9 phần trăm",
+            "9",
+            "22"
+          ]
+        ]
+      },
+      {
+        "id": "T5",
+        "caption": "Phục hồi khi cảm biến gián đoạn",
+        "columns": [
+          "Thời lượng gián đoạn",
+          "Vận tốc giới hạn",
+          "Thời gian phục hồi",
+          "Trạng thái cuối"
+        ],
+        "rows": [
+          [
+            "0,4 s",
+            "0,42 m/s",
+            "0,8 s",
+            "Tiếp tục"
+          ],
+          [
+            "1,1 s",
+            "0,28 m/s",
+            "1,6 s",
+            "Tiếp tục"
+          ],
+          [
+            "2,0 s",
+            "0,12 m/s",
+            "2,3 s",
+            "Dừng có kiểm soát"
+          ],
+          [
+            "3,5 s",
+            "0,00 m/s",
+            "3,1 s",
+            "Dừng có kiểm soát"
+          ]
+        ]
+      }
+    ],
+    "charts": [
+      {
+        "id": "C1",
+        "type": "area",
+        "title": "Phân bổ tải xử lý theo thời gian",
+        "description": "Biểu đồ vùng thể hiện tỷ trọng tải của nhận biết, ước lượng, lập kế hoạch và điều khiển trên một tuyến có giao cắt. Tải nhận biết tăng tại các thời điểm quan sát bị che khuất, trong khi tải điều khiển được giữ ổn định."
+      },
+      {
+        "id": "C2",
+        "type": "scatter",
+        "title": "Độ tin cậy và thời gian phản ứng",
+        "description": "Biểu đồ phân tán gồm các điểm theo từng chu kỳ điều phối. Khi độ tin cậy giảm, thời gian phản ứng tăng nhẹ do hệ thống dành thêm tài nguyên cho xác minh và giảm vận tốc."
+      },
+      {
+        "id": "C3",
+        "type": "grouped_bar",
+        "title": "So sánh tỷ lệ hoàn thành giữa các cấu hình",
+        "description": "Biểu đồ cột nhóm so sánh cấu hình đề xuất, lịch cố định, phản ứng cục bộ và toàn cục không giới hạn trên bốn nhóm tuyến."
+      },
+      {
+        "id": "C4",
+        "type": "box",
+        "title": "Phân bố độ trễ lập kế hoạch",
+        "description": "Biểu đồ hộp thể hiện trung vị, khoảng tứ phân vị và các giá trị biên của độ trễ lập kế hoạch trong vùng hành lang mở, giao cắt, khoang hẹp và vật cản động."
+      }
+    ],
+    "figures": [
+      {
+        "id": "F1",
+        "type": "block_diagram",
+        "caption": "Sơ đồ khối của kiến trúc điều phối nhận thức–hành động. Mũi tên liền biểu diễn dữ liệu trạng thái; mũi tên nét đứt biểu diễn giới hạn và tín hiệu an toàn."
+      },
+      {
+        "id": "F2",
+        "type": "pipeline",
+        "caption": "Chuỗi xử lý từ đồng bộ cảm biến, diễn giải quan sát, hợp nhất trạng thái, phân bổ ngân sách đến sinh lệnh điều khiển."
+      },
+      {
+        "id": "F3",
+        "type": "flowchart",
+        "caption": "Luồng phục hồi khi độ tin cậy giảm: kiểm tra nguồn đo, giới hạn vận tốc, tăng quan sát, xác minh trạng thái và tiếp tục hoặc dừng có kiểm soát."
+      }
+    ],
+    "code": [
+      {
+        "id": "K1",
+        "language": "text",
+        "caption": "Mã giả vòng điều phối ngân sách và kiểm tra an toàn",
+        "content": "procedure DieuPhoi(z, ngan_sach)\n    cap_nhat_do_tin_cay(z)\n    nguy_co <- tinh_nguy_co(z)\n    uu_tien <- phan_bo(ngan_sach, nguy_co)\n    chay_nhan_biet(uu_tien.nhan_biet)\n    chay_lap_ke_hoach(uu_tien.ke_hoach)\n    lenh <- dieu_khien(z)\n    if vi_pham_an_toan(z, lenh) then\n        lenh <- lenh_dung_an_toan()\n    end if\n    ghi_nhat_ky(z, lenh, nguy_co)\n    return lenh\nend procedure"
+      }
+    ],
+    "references": [
+      {
+        "id": 1,
+        "text": "Lê, M. K., và cộng sự. 2021. Điều phối phân cấp cho robot di động trong hành lang biến đổi. Tạp chí Robot Tân Lĩnh 8(2): 41–58."
+      },
+      {
+        "id": 2,
+        "text": "Phạm, T. N., và Đỗ, H. Q. 2022. Ước lượng độ tin cậy trong hợp nhất cảm biến khoảng cách. Kỷ yếu Hệ thống Tự hành Lam Giang: 77–91."
+      },
+      {
+        "id": 3,
+        "text": "Vũ, B. A., và cộng sự. 2023. Điều khiển dự báo với giới hạn an toàn cho nền tảng bánh vi sai. Tạp chí Cơ điện tử Hải Vân 5(1): 12–29."
+      },
+      {
+        "id": 4,
+        "text": "Ngô, D. T. 2020. Bản đồ chiếm chỗ đa phân giải cho môi trường bán cấu trúc. Tạp chí Kỹ thuật Nam Lộc 11(4): 101–116."
+      },
+      {
+        "id": 5,
+        "text": "Trần, P. L., và Mai, K. S. 2021. Phát hiện vùng quan sát thiếu trong robot dịch vụ. Kỷ yếu Điều khiển An Phú: 33–47."
+      },
+      {
+        "id": 6,
+        "text": "Hoàng, Q. M. 2022. Lập kế hoạch hành lang có xét đến vật cản động. Tạp chí Tự động hóa Vân Khê 7(3): 55–71."
+      },
+      {
+        "id": 7,
+        "text": "Đặng, L. H., và cộng sự. 2020. Giao diện trạng thái cho hệ thống robot phân tán. Tạp chí Phần mềm Cơ điện 6(2): 19–35."
+      },
+      {
+        "id": 8,
+        "text": "Bùi, T. V. 2023. Quản lý hàng đợi thời gian thực trong máy tính nhúng. Kỷ yếu Điện toán Biên Hải Vân: 88–103."
+      },
+      {
+        "id": 9,
+        "text": "Phan, N. D., và Lưu, M. T. 2021. Dự báo ngắn hạn chuyển động của tác nhân trong lối đi hẹp. Tạp chí Nhận biết Không gian 4(1): 25–42."
+      },
+      {
+        "id": 10,
+        "text": "Mai, H. P. 2022. Cập nhật bản đồ động bằng bộ nhớ ngữ cảnh cục bộ. Tạp chí Robot Nam Lộc 9(2): 63–80."
+      },
+      {
+        "id": 11,
+        "text": "Đỗ, K. A., và cộng sự. 2023. Phân bổ tài nguyên thích nghi theo rủi ro điều khiển. Tạp chí Tính toán Tự hành 3(4): 112–128."
+      },
+      {
+        "id": 12,
+        "text": "Lương, T. B. 2020. Kiểm tra khoảng cách dự báo trong tránh va chạm. Kỷ yếu Cơ học Robot Vân Khê: 51–66."
+      },
+      {
+        "id": 13,
+        "text": "Nguyễn, H. L., và Tạ, Q. P. 2021. Đồng bộ dấu thời gian cho mạng cảm biến robot. Tạp chí Đo lường Hải Vân 10(1): 9–24."
+      },
+      {
+        "id": 14,
+        "text": "Cao, M. N. 2022. Mô hình hóa vùng cấm trong bản đồ hành lang. Tạp chí Hệ thống Không gian 12(3): 70–86."
+      },
+      {
+        "id": 15,
+        "text": "Lê, Q. T., và cộng sự. 2023. Phục hồi điều khiển khi mất nguồn đo chiều sâu. Tạp chí Điều khiển Tân Lĩnh 2(2): 37–54."
+      },
+      {
+        "id": 16,
+        "text": "Phạm, V. H. 2020. Chọn vận tốc an toàn theo độ bất định quan sát. Kỷ yếu Robot Ứng dụng An Phú: 14–28."
+      },
+      {
+        "id": 17,
+        "text": "Đỗ, N. K., và Hoàng, M. A. 2021. Đánh giá tải xử lý của bộ lập kế hoạch cục bộ. Tạp chí Điện toán Robot 5(3): 92–109."
+      },
+      {
+        "id": 18,
+        "text": "Vũ, T. P. 2022. Tối ưu đa mục tiêu cho quỹ đạo robot bánh. Tạp chí Cơ khí Tự hành 8(4): 44–61."
+      },
+      {
+        "id": 19,
+        "text": "Trần, H. Q., và cộng sự. 2023. Nhật ký có cấu trúc trong hệ thống tự hành. Kỷ yếu Hạ tầng Robot Nam Lộc: 116–130."
+      },
+      {
+        "id": 20,
+        "text": "Ngô, P. S. 2021. Đo lường độ bền của thuật toán định vị trong vùng che khuất. Tạp chí Định vị Lam Giang 4(2): 28–46."
+      },
+      {
+        "id": 21,
+        "text": "Bùi, K. D., và Lê, A. N. 2022. Lập lịch mô-đun theo cửa sổ thời gian. Tạp chí Kiến trúc Tự hành 7(1): 5–21."
+      },
+      {
+        "id": 22,
+        "text": "Mai, T. H. 2020. Phân cấp quyết định trong robot vận chuyển nội bộ. Tạp chí Logistics Robot Hải Vân 6(4): 73–89."
+      },
+      {
+        "id": 23,
+        "text": "Đặng, Q. V., và cộng sự. 2021. Cân bằng độ trễ và độ chính xác trong nhận biết thời gian thực. Kỷ yếu Trí tuệ Cơ điện: 64–79."
+      },
+      {
+        "id": 24,
+        "text": "Lưu, P. M. 2023. Kiểm chứng vùng dừng có kiểm soát. Tạp chí An toàn Robot Tân Lĩnh 1(3): 18–34."
+      },
+      {
+        "id": 25,
+        "text": "Phan, H. T., và Võ, N. L. 2022. Biểu diễn đồ thị hành lang cho lập kế hoạch toàn cục. Tạp chí Thuật toán Không gian 9(1): 49–67."
+      },
+      {
+        "id": 26,
+        "text": "Cao, T. Q. 2021. Hiệu chỉnh tham số trong nhiệm vụ tuần tra tự hành. Tạp chí Ứng dụng Điều khiển 13(2): 83–99."
+      },
+      {
+        "id": 27,
+        "text": "Tạ, M. B., và cộng sự. 2020. Nhận biết vật cản động từ dữ liệu đa nguồn. Kỷ yếu Cảm biến và Robot Vân Khê: 102–117."
+      },
+      {
+        "id": 28,
+        "text": "Hoàng, D. P. 2023. Đánh giá khả năng truy nguyên của quyết định robot. Tạp chí Hệ thống Có thể Giải thích 2(1): 31–48."
+      },
+      {
+        "id": 29,
+        "text": "Nguyễn, Q. S., và Đặng, H. M. 2022. Tối ưu ngân sách tính toán trên nền tảng nhúng. Tạp chí Điện tử Hải Vân 15(3): 57–74."
+      },
+      {
+        "id": 30,
+        "text": "Lương, A. T. 2021. Mô hình bất định cho bản đồ cục bộ trong nhà. Tạp chí Không gian Tự hành 5(4): 120–137."
+      },
+      {
+        "id": 31,
+        "text": "Võ, K. N., và cộng sự. 2023. Phân tích cắt bỏ trong kiến trúc robot phân cấp. Kỷ yếu Đánh giá Robot An Phú: 39–55."
+      },
+      {
+        "id": 32,
+        "text": "Tạ, P. H. 2020. Nguyên tắc triển khai an toàn cho robot di động. Tạp chí Kỹ thuật Tân Lĩnh 10(2): 66–82."
+      }
+    ]
+  },
+  "formulas": [
+    {
+      "after": 8,
+      "element": {
+        "type": "equation",
+        "id": "E1",
+        "latex": "\\begin{aligned} r_t&=\\mathrm{min}\\left(1,r_{t-1}\\exp\\left(-a e_t\\right)\\right) \\end{aligned}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 8,
+      "element": {
+        "type": "equation",
+        "id": "E2",
+        "latex": "\\begin{aligned} l_i&=l_{max}\\frac{r_i^{-1}+b q_i}{\\sum_j\\left(r_j^{-1}+b q_j\\right)} \\end{aligned}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 12,
+      "element": {
+        "type": "equation",
+        "id": "E3",
+        "latex": "\\begin{aligned} J(s)&=w_gJ_g(s)+w_cJ_c(s)+w_oJ_o(s)+w_uJ_u(s) \\end{aligned}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 12,
+      "element": {
+        "type": "equation",
+        "id": "E4",
+        "latex": "\\begin{aligned} d_{min}&=\\mathrm{min}_{t=0:T}\\left((x_r(t)-x_o(t))^2+(y_r(t)-y_o(t))^2\\right) \\end{aligned}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 12,
+      "element": {
+        "type": "equation",
+        "id": "E5",
+        "latex": "\\begin{aligned} x_t&=F x_{t-1}+G u_t+K\\left(y_t-H x_{t-1}\\right) \\end{aligned}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 16,
+      "element": {
+        "type": "equation",
+        "id": "E6",
+        "latex": "\\begin{aligned} S&=\\frac{\\sum_{k=1}^{n}q_k\\left(a_k-b_k\\right)}{\\sum_{k=1}^{n}q_k} \\end{aligned}",
+        "numbered": true
+      }
+    }
+  ],
+  "tables": [
+    {
+      "after": 3,
+      "element": {
+        "type": "table",
+        "id": "tab:t1",
+        "caption": "Ánh xạ yêu cầu và chỉ số kiểm tra",
+        "header": [
+          [
+            "Mã",
+            "Yêu cầu",
+            "Chỉ số",
+            "Ngưỡng"
+          ]
+        ],
+        "rows": [
+          [
+            "R1",
+            "Định vị liên tục",
+            "Độ lệch vị trí",
+            "leq 0,120 m"
+          ],
+          [
+            "R2",
+            "Tránh va chạm",
+            "Khoảng cách dự báo",
+            "geq 0,180 m"
+          ],
+          [
+            "R3",
+            "Phản ứng thời gian",
+            "Độ trễ điều khiển",
+            "leq 18 ms"
+          ],
+          [
+            "R4",
+            "Phục hồi cảm biến",
+            "Thời gian phục hồi",
+            "leq 2,40 s"
+          ],
+          [
+            "R5",
+            "Truy nguyên quyết định",
+            "Bản ghi hợp lệ",
+            "geq 98,0 phần trăm"
+          ]
+        ],
+        "note": "Các ngưỡng được kiểm tra trong toàn bộ nhóm tuyến đánh giá."
+      }
+    },
+    {
+      "after": 8,
+      "element": {
+        "type": "table",
+        "id": "tab:t2",
+        "caption": "Kết quả theo nhóm tuyến và điều kiện quan sát",
+        "header": [
+          [
+            {
+              "text": "Nhóm tuyến",
+              "rowspan": 2
+            },
+            {
+              "text": "Điều kiện vận hành",
+              "colspan": 2
+            },
+            {
+              "text": "Kết quả định lượng",
+              "colspan": 3
+            }
+          ],
+          [
+            {
+              "text": "Mật độ vật cản"
+            },
+            {
+              "text": "Che khuất quan sát"
+            },
+            {
+              "text": "Hoàn thành"
+            },
+            {
+              "text": "Độ lệch trung bình"
+            },
+            {
+              "text": "Thời gian trung vị"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "Hành lang mở",
+            "Thấp",
+            "Thấp",
+            {
+              "text": "97,2 phần trăm",
+              "bold": true
+            },
+            {
+              "text": "0,061 m",
+              "bold": true
+            },
+            {
+              "text": "18,6 s",
+              "bold": true
+            }
+          ],
+          [
+            "Giao cắt",
+            "Trung bình",
+            "Trung bình",
+            "91,5 phần trăm",
+            "0,089 m",
+            "23,4 s"
+          ],
+          [
+            "Khoang hẹp",
+            "Cao",
+            "Cao",
+            "90,4 phần trăm",
+            "0,102 m",
+            "27,1 s"
+          ],
+          [
+            "Vật cản động",
+            "Trung bình",
+            "Cao",
+            "94,6 phần trăm",
+            "0,083 m",
+            "25,8 s"
+          ]
+        ],
+        "note": "Giá trị in đậm biểu thị kết quả tốt nhất theo từng chỉ số; độ lệch và thời gian càng thấp càng tốt."
+      }
+    },
+    {
+      "after": 8,
+      "element": {
+        "type": "table",
+        "id": "tab:t3",
+        "caption": "So sánh cấu hình điều phối",
+        "header": [
+          [
+            "Cấu hình",
+            "Hoàn thành",
+            "Lập kế hoạch trung vị",
+            "Tải xử lý"
+          ]
+        ],
+        "rows": [
+          [
+            "Đề xuất",
+            {
+              "text": "93,4 phần trăm",
+              "bold": true
+            },
+            {
+              "text": "29,8 ms",
+              "bold": true
+            },
+            "61,7 phần trăm"
+          ],
+          [
+            "Lịch cố định",
+            "86,1 phần trăm",
+            "41,8 ms",
+            "74,9 phần trăm"
+          ],
+          [
+            "Phản ứng cục bộ",
+            "82,7 phần trăm",
+            "26,4 ms",
+            {
+              "text": "58,3 phần trăm",
+              "bold": true
+            }
+          ],
+          [
+            "Toàn cục không giới hạn",
+            "88,9 phần trăm",
+            "63,2 ms",
+            "89,1 phần trăm"
+          ]
+        ],
+        "note": "Tỷ lệ hoàn thành cao hơn và tải xử lý thấp hơn được xem là tốt hơn."
+      }
+    },
+    {
+      "after": 12,
+      "element": {
+        "type": "table",
+        "id": "tab:t4",
+        "caption": "Phân tích cắt bỏ",
+        "header": [
+          [
+            "Biến thể",
+            "Hoàn thành",
+            "Tiếp cận gần",
+            "Lập kế hoạch lại"
+          ]
+        ],
+        "rows": [
+          [
+            "Đầy đủ",
+            {
+              "text": "93,4 phần trăm",
+              "bold": true
+            },
+            {
+              "text": "3",
+              "bold": true
+            },
+            "11"
+          ],
+          [
+            "Bỏ ngân sách thích nghi",
+            "87,8 phần trăm",
+            "7",
+            "19"
+          ],
+          [
+            "Bỏ bộ nhớ ngữ cảnh",
+            "89,6 phần trăm",
+            "5",
+            "28"
+          ],
+          [
+            "Bỏ lớp an toàn ngoài",
+            "84,2 phần trăm",
+            "16",
+            "14"
+          ],
+          [
+            "Bỏ bản đồ hai lớp",
+            "86,9 phần trăm",
+            "9",
+            "22"
+          ]
+        ],
+        "note": "Số sự kiện tiếp cận gần và số lần lập kế hoạch lại càng thấp càng tốt."
+      }
+    },
+    {
+      "after": 16,
+      "element": {
+        "type": "table",
+        "id": "tab:t5",
+        "caption": "Phục hồi khi cảm biến gián đoạn",
+        "header": [
+          [
+            "Thời lượng gián đoạn",
+            "Vận tốc giới hạn",
+            "Thời gian phục hồi",
+            "Trạng thái cuối"
+          ]
+        ],
+        "rows": [
+          [
+            "0,4 s",
+            "0,42 m/s",
+            "0,8 s",
+            "Tiếp tục"
+          ],
+          [
+            "1,1 s",
+            "0,28 m/s",
+            "1,6 s",
+            "Tiếp tục"
+          ],
+          [
+            "2,0 s",
+            "0,12 m/s",
+            "2,3 s",
+            "Dừng có kiểm soát"
+          ],
+          [
+            "3,5 s",
+            "0,00 m/s",
+            "3,1 s",
+            "Dừng có kiểm soát"
+          ]
+        ],
+        "note": "Robot chỉ phục hồi vận tốc định mức sau khi độ tin cậy vượt ngưỡng xác minh."
+      }
+    }
+  ],
+  "charts_figures": [
+    {
+      "after": 4,
+      "element": {
+        "type": "figure",
+        "id": "fig:F1",
+        "figure_type": "block_diagram",
+        "description": "Sơ đồ khối thể hiện luồng dữ liệu trạng thái và quyền ưu tiên an toàn giữa các lớp cảm biến, diễn giải, trạng thái, điều phối, lập kế hoạch, điều khiển và an toàn.",
+        "labels": [
+          "Cảm biến",
+          "Diễn giải",
+          "Trạng thái",
+          "Điều phối",
+          "Lập kế hoạch",
+          "Điều khiển",
+          "An toàn"
+        ],
+        "panels": [
+          {
+            "label": "a",
+            "description": "Luồng dữ liệu trạng thái đi từ cảm biến qua diễn giải và hợp nhất trạng thái đến bộ điều phối."
+          },
+          {
+            "label": "b",
+            "description": "Tín hiệu giới hạn an toàn đi trực tiếp đến bộ điều khiển và có thể kích hoạt lệnh dừng."
+          }
+        ]
+      }
+    },
+    {
+      "after": 6,
+      "element": {
+        "type": "figure",
+        "id": "fig:F2",
+        "figure_type": "pipeline",
+        "description": "Chuỗi xử lý thời gian thực từ đồng bộ cảm biến đến sinh lệnh điều khiển, với các điểm kiểm tra độ tin cậy và thời hạn trạng thái.",
+        "labels": [
+          "Đồng bộ cảm biến",
+          "Diễn giải quan sát",
+          "Hợp nhất trạng thái",
+          "Phân bổ ngân sách",
+          "Lập kế hoạch",
+          "Kiểm tra an toàn",
+          "Sinh lệnh"
+        ]
+      }
+    },
+    {
+      "after": 8,
+      "element": {
+        "type": "chart",
+        "id": "C1",
+        "chart_type": "area",
+        "title": "Phân bổ tải xử lý theo thời gian",
+        "description": "Tỷ trọng tải của các mô-đun trên tuyến có giao cắt; tải nhận biết tăng khi vùng quan sát bị che khuất, trong khi tải điều khiển được giữ ổn định.",
+        "x_label": "Thời gian (s)",
+        "y_label": "Tải xử lý (%)",
+        "legend_position": "outside",
+        "x_values": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60
+        ],
+        "series": [
+          {
+            "name": "Nhận biết",
+            "values": [
+              24,
+              26,
+              31,
+              39,
+              35,
+              28,
+              25
+            ],
+            "errors": [
+              2,
+              2,
+              3,
+              3,
+              3,
+              2,
+              2
+            ]
+          },
+          {
+            "name": "Ước lượng",
+            "values": [
+              16,
+              17,
+              18,
+              19,
+              19,
+              18,
+              17
+            ],
+            "errors": [
+              1,
+              1,
+              1,
+              2,
+              2,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "Lập kế hoạch",
+            "values": [
+              21,
+              20,
+              23,
+              27,
+              24,
+              22,
+              20
+            ],
+            "errors": [
+              2,
+              2,
+              2,
+              3,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "name": "Điều khiển",
+            "values": [
+              14,
+              14,
+              15,
+              15,
+              15,
+              14,
+              14
+            ],
+            "errors": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "after": 10,
+      "element": {
+        "type": "chart",
+        "id": "C2",
+        "chart_type": "scatter",
+        "title": "Độ tin cậy và thời gian phản ứng",
+        "description": "Các điểm đo theo chu kỳ điều phối cho thấy thời gian phản ứng tăng khi độ tin cậy giảm, do hệ thống tăng xác minh và giới hạn vận tốc.",
+        "x_label": "Độ tin cậy",
+        "y_label": "Thời gian phản ứng (ms)",
+        "legend_position": "outside",
+        "series": [
+          {
+            "name": "Chu kỳ điều phối",
+            "points": [
+              {
+                "x": 0.96,
+                "y": 14.2
+              },
+              {
+                "x": 0.93,
+                "y": 15.1
+              },
+              {
+                "x": 0.9,
+                "y": 16.4
+              },
+              {
+                "x": 0.87,
+                "y": 17.2
+              },
+              {
+                "x": 0.84,
+                "y": 18.6
+              },
+              {
+                "x": 0.81,
+                "y": 19.4
+              },
+              {
+                "x": 0.78,
+                "y": 20.8
+              },
+              {
+                "x": 0.75,
+                "y": 21.6
+              },
+              {
+                "x": 0.72,
+                "y": 23.1
+              },
+              {
+                "x": 0.69,
+                "y": 24.5
+              },
+              {
+                "x": 0.66,
+                "y": 25.3
+              },
+              {
+                "x": 0.63,
+                "y": 27.2
+              }
+            ],
+            "errors": [
+              1.1,
+              1.0,
+              1.2,
+              1.3,
+              1.4,
+              1.2,
+              1.5,
+              1.6,
+              1.7,
+              1.8,
+              1.9,
+              2.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "after": 13,
+      "element": {
+        "type": "chart",
+        "id": "C3",
+        "chart_type": "grouped_bar",
+        "title": "So sánh tỷ lệ hoàn thành giữa các cấu hình",
+        "description": "So sánh tỷ lệ hoàn thành của bốn cấu hình trên các nhóm tuyến hành lang mở, giao cắt, khoang hẹp và vật cản động.",
+        "x_label": "Nhóm tuyến",
+        "y_label": "Tỷ lệ hoàn thành (%)",
+        "legend_position": "outside",
+        "categories": [
+          "Hành lang mở",
+          "Giao cắt",
+          "Khoang hẹp",
+          "Vật cản động"
+        ],
+        "series": [
+          {
+            "name": "Đề xuất",
+            "values": [
+              97.2,
+              91.5,
+              90.4,
+              94.6
+            ],
+            "errors": [
+              1.4,
+              2.2,
+              2.5,
+              1.9
+            ]
+          },
+          {
+            "name": "Lịch cố định",
+            "values": [
+              91.8,
+              84.7,
+              82.9,
+              85.1
+            ],
+            "errors": [
+              2.1,
+              2.8,
+              3.0,
+              2.7
+            ]
+          },
+          {
+            "name": "Phản ứng cục bộ",
+            "values": [
+              89.6,
+              80.8,
+              79.4,
+              81.2
+            ],
+            "errors": [
+              2.4,
+              3.1,
+              3.2,
+              3.0
+            ]
+          },
+          {
+            "name": "Toàn cục không giới hạn",
+            "values": [
+              93.4,
+              87.2,
+              85.6,
+              88.9
+            ],
+            "errors": [
+              1.9,
+              2.6,
+              2.8,
+              2.4
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "after": 15,
+      "element": {
+        "type": "chart",
+        "id": "C4",
+        "chart_type": "box",
+        "title": "Phân bố độ trễ lập kế hoạch",
+        "description": "Phân bố độ trễ lập kế hoạch theo bốn nhóm tuyến; giao cắt và khoang hẹp có khoảng tứ phân vị rộng hơn do yêu cầu quan sát và tránh vật cản cao.",
+        "x_label": "Nhóm tuyến",
+        "y_label": "Độ trễ lập kế hoạch (ms)",
+        "legend_position": "outside",
+        "categories": [
+          "Hành lang mở",
+          "Giao cắt",
+          "Khoang hẹp",
+          "Vật cản động"
+        ],
+        "series": [
+          {
+            "name": "Độ trễ",
+            "stats": [
+              {
+                "category": "Hành lang mở",
+                "min": 12.4,
+                "q1": 15.8,
+                "median": 18.6,
+                "q3": 22.1,
+                "max": 29.7,
+                "outliers": [
+                  33.4
+                ]
+              },
+              {
+                "category": "Giao cắt",
+                "min": 16.1,
+                "q1": 19.5,
+                "median": 23.4,
+                "q3": 29.8,
+                "max": 39.6,
+                "outliers": [
+                  44.2
+                ]
+              },
+              {
+                "category": "Khoang hẹp",
+                "min": 18.7,
+                "q1": 22.3,
+                "median": 27.1,
+                "q3": 34.6,
+                "max": 46.8,
+                "outliers": [
+                  52.1
+                ]
+              },
+              {
+                "category": "Vật cản động",
+                "min": 17.2,
+                "q1": 21.0,
+                "median": 25.8,
+                "q3": 31.7,
+                "max": 43.5,
+                "outliers": [
+                  48.9
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "after": 17,
+      "element": {
+        "type": "figure",
+        "id": "fig:f3",
+        "figure_type": "flowchart",
+        "description": "Luồng phục hồi khi độ tin cậy giảm, từ kiểm tra nguồn đo đến quyết định tiếp tục với vận tốc giới hạn hoặc dừng có kiểm soát.",
+        "labels": [
+          "Độ tin cậy giảm",
+          "Kiểm tra nguồn đo",
+          "Giới hạn vận tốc",
+          "Tăng quan sát",
+          "Xác minh trạng thái",
+          "Độ tin cậy đạt ngưỡng",
+          "Tiếp tục",
+          "Dừng có kiểm soát"
+        ],
+        "panels": [
+          {
+            "label": "a",
+            "description": "Nguồn đo còn hoạt động: tăng tần suất quan sát, xác minh trạng thái rồi khôi phục vận tốc khi đạt ngưỡng."
+          },
+          {
+            "label": "b",
+            "description": "Nguồn đo gián đoạn kéo dài: duy trì vận tốc giới hạn hoặc chuyển sang dừng có kiểm soát."
+          }
+        ]
+      }
+    }
+  ],
+  "code": [
+    {
+      "after": 13,
+      "element": {
+        "type": "code",
+        "id": "alg:die-phoi-ngan-sach",
+        "language": "pseudocode",
+        "caption": "Mã giả vòng điều phối ngân sách và kiểm tra an toàn",
+        "lines": [
+          "procedure DieuPhoi(z, ngan_sach)",
+          "    cap_nhat_do_tin_cay(z)",
+          "    nguy_co <- tinh_nguy_co(z)",
+          "    uu_tien <- phan_bo(ngan_sach, nguy_co)",
+          "    chay_nhan_biet(uu_tien.nhan_biet)",
+          "    chay_lap_ke_hoach(uu_tien.ke_hoach)",
+          "    lenh <- dieu_khien(z)",
+          "    if vi_pham_an_toan(z, lenh) then",
+          "        lenh <- lenh_dung_an_toan()",
+          "    end if",
+          "    ghi_nhat_ky(z, lenh, nguy_co)",
+          "    return lenh",
+          "end procedure"
+        ]
+      }
+    }
+  ],
+  "references": [
+    {
+      "text": "Lê, M. K., và cộng sự. 2021. Điều phối phân cấp cho robot di động trong hành lang biến đổi. Tạp chí Robot Tân Lĩnh 8(2): 41–58.",
+      "cite": "Lê et al., 2021"
+    },
+    {
+      "text": "Phạm, T. N., và Đỗ, H. Q. 2022. Ước lượng độ tin cậy trong hợp nhất cảm biến khoảng cách. Kỷ yếu Hệ thống Tự hành Lam Giang: 77–91.",
+      "cite": "Phạm & Đỗ, 2022"
+    },
+    {
+      "text": "Vũ, B. A., và cộng sự. 2023. Điều khiển dự báo với giới hạn an toàn cho nền tảng bánh vi sai. Tạp chí Cơ điện tử Hải Vân 5(1): 12–29.",
+      "cite": "Vũ et al., 2023"
+    },
+    {
+      "text": "Ngô, D. T. 2020. Bản đồ chiếm chỗ đa phân giải cho môi trường bán cấu trúc. Tạp chí Kỹ thuật Nam Lộc 11(4): 101–116.",
+      "cite": "Ngô, 2020"
+    },
+    {
+      "text": "Trần, P. L., và Mai, K. S. 2021. Phát hiện vùng quan sát thiếu trong robot dịch vụ. Kỷ yếu Điều khiển An Phú: 33–47.",
+      "cite": "Trần & Mai, 2021"
+    },
+    {
+      "text": "Hoàng, Q. M. 2022. Lập kế hoạch hành lang có xét đến vật cản động. Tạp chí Tự động hóa Vân Khê 7(3): 55–71.",
+      "cite": "Hoàng, 2022"
+    },
+    {
+      "text": "Đặng, L. H., và cộng sự. 2020. Giao diện trạng thái cho hệ thống robot phân tán. Tạp chí Phần mềm Cơ điện 6(2): 19–35.",
+      "cite": "Đặng et al., 2020"
+    },
+    {
+      "text": "Bùi, T. V. 2023. Quản lý hàng đợi thời gian thực trong máy tính nhúng. Kỷ yếu Điện toán Biên Hải Vân: 88–103.",
+      "cite": "Bùi, 2023"
+    },
+    {
+      "text": "Phan, N. D., và Lưu, M. T. 2021. Dự báo ngắn hạn chuyển động của tác nhân trong lối đi hẹp. Tạp chí Nhận biết Không gian 4(1): 25–42.",
+      "cite": "Phan & Lưu, 2021"
+    },
+    {
+      "text": "Mai, H. P. 2022. Cập nhật bản đồ động bằng bộ nhớ ngữ cảnh cục bộ. Tạp chí Robot Nam Lộc 9(2): 63–80.",
+      "cite": "Mai, 2022"
+    },
+    {
+      "text": "Đỗ, K. A., và cộng sự. 2023. Phân bổ tài nguyên thích nghi theo rủi ro điều khiển. Tạp chí Tính toán Tự hành 3(4): 112–128.",
+      "cite": "Đỗ et al., 2023"
+    },
+    {
+      "text": "Lương, T. B. 2020. Kiểm tra khoảng cách dự báo trong tránh va chạm. Kỷ yếu Cơ học Robot Vân Khê: 51–66.",
+      "cite": "Lương, 2020"
+    },
+    {
+      "text": "Nguyễn, H. L., và Tạ, Q. P. 2021. Đồng bộ dấu thời gian cho mạng cảm biến robot. Tạp chí Đo lường Hải Vân 10(1): 9–24.",
+      "cite": "Nguyễn & Tạ, 2021"
+    },
+    {
+      "text": "Cao, M. N. 2022. Mô hình hóa vùng cấm trong bản đồ hành lang. Tạp chí Hệ thống Không gian 12(3): 70–86.",
+      "cite": "Cao, 2022"
+    },
+    {
+      "text": "Lê, Q. T., và cộng sự. 2023. Phục hồi điều khiển khi mất nguồn đo chiều sâu. Tạp chí Điều khiển Tân Lĩnh 2(2): 37–54.",
+      "cite": "Lê et al., 2023"
+    },
+    {
+      "text": "Phạm, V. H. 2020. Chọn vận tốc an toàn theo độ bất định quan sát. Kỷ yếu Robot Ứng dụng An Phú: 14–28.",
+      "cite": "Phạm, 2020"
+    },
+    {
+      "text": "Đỗ, N. K., và Hoàng, M. A. 2021. Đánh giá tải xử lý của bộ lập kế hoạch cục bộ. Tạp chí Điện toán Robot 5(3): 92–109.",
+      "cite": "Đỗ & Hoàng, 2021"
+    },
+    {
+      "text": "Vũ, T. P. 2022. Tối ưu đa mục tiêu cho quỹ đạo robot bánh. Tạp chí Cơ khí Tự hành 8(4): 44–61.",
+      "cite": "Vũ, 2022"
+    },
+    {
+      "text": "Trần, H. Q., và cộng sự. 2023. Nhật ký có cấu trúc trong hệ thống tự hành. Kỷ yếu Hạ tầng Robot Nam Lộc: 116–130.",
+      "cite": "Trần et al., 2023"
+    },
+    {
+      "text": "Ngô, P. S. 2021. Đo lường độ bền của thuật toán định vị trong vùng che khuất. Tạp chí Định vị Lam Giang 4(2): 28–46.",
+      "cite": "Ngô, 2021"
+    },
+    {
+      "text": "Bùi, K. D., và Lê, A. N. 2022. Lập lịch mô-đun theo cửa sổ thời gian. Tạp chí Kiến trúc Tự hành 7(1): 5–21.",
+      "cite": "Bùi & Lê, 2022"
+    },
+    {
+      "text": "Mai, T. H. 2020. Phân cấp quyết định trong robot vận chuyển nội bộ. Tạp chí Logistics Robot Hải Vân 6(4): 73–89.",
+      "cite": "Mai, 2020"
+    },
+    {
+      "text": "Đặng, Q. V., và cộng sự. 2021. Cân bằng độ trễ và độ chính xác trong nhận biết thời gian thực. Kỷ yếu Trí tuệ Cơ điện: 64–79.",
+      "cite": "Đặng et al., 2021"
+    },
+    {
+      "text": "Lưu, P. M. 2023. Kiểm chứng vùng dừng có kiểm soát. Tạp chí An toàn Robot Tân Lĩnh 1(3): 18–34.",
+      "cite": "Lưu, 2023"
+    },
+    {
+      "text": "Phan, H. T., và Võ, N. L. 2022. Biểu diễn đồ thị hành lang cho lập kế hoạch toàn cục. Tạp chí Thuật toán Không gian 9(1): 49–67.",
+      "cite": "Phan & Võ, 2022"
+    },
+    {
+      "text": "Cao, T. Q. 2021. Hiệu chỉnh tham số trong nhiệm vụ tuần tra tự hành. Tạp chí Ứng dụng Điều khiển 13(2): 83–99.",
+      "cite": "Cao, 2021"
+    },
+    {
+      "text": "Tạ, M. B., và cộng sự. 2020. Nhận biết vật cản động từ dữ liệu đa nguồn. Kỷ yếu Cảm biến và Robot Vân Khê: 102–117.",
+      "cite": "Tạ et al., 2020"
+    },
+    {
+      "text": "Hoàng, D. P. 2023. Đánh giá khả năng truy nguyên của quyết định robot. Tạp chí Hệ thống Có thể Giải thích 2(1): 31–48.",
+      "cite": "Hoàng, 2023"
+    },
+    {
+      "text": "Nguyễn, Q. S., và Đặng, H. M. 2022. Tối ưu ngân sách tính toán trên nền tảng nhúng. Tạp chí Điện tử Hải Vân 15(3): 57–74.",
+      "cite": "Nguyễn & Đặng, 2022"
+    },
+    {
+      "text": "Lương, A. T. 2021. Mô hình bất định cho bản đồ cục bộ trong nhà. Tạp chí Không gian Tự hành 5(4): 120–137.",
+      "cite": "Lương, 2021"
+    },
+    {
+      "text": "Võ, K. N., và cộng sự. 2023. Phân tích cắt bỏ trong kiến trúc robot phân cấp. Kỷ yếu Đánh giá Robot An Phú: 39–55.",
+      "cite": "Võ et al., 2023"
+    },
+    {
+      "text": "Tạ, P. H. 2020. Nguyên tắc triển khai an toàn cho robot di động. Tạp chí Kỹ thuật Tân Lĩnh 10(2): 66–82.",
+      "cite": "Tạ, 2020"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Introduction"
+    },
+    {
+      "type": "paragraph",
+      "text": "Robot di động trong kho, hành lang kỹ thuật và khu dịch vụ phải vận hành giữa hai đặc tính tưởng như đối lập: hình học nền thường ổn định, nhưng người đi bộ, xe đẩy, cửa mở và quyền ưu tiên thay đổi theo thời gian. Một bản đồ tĩnh giúp robot định hướng nhưng không đủ để mô tả vật cản vừa xuất hiện; ngược lại, phản ứng chỉ dựa trên cảm biến tức thời có thể khiến đường đi đổi liên tục, thiếu khả năng dự báo và khó giải thích khi quan sát bị che khuất. Vì vậy, vấn đề thực tiễn không nằm riêng ở định vị, nhận biết hay lập kế hoạch, mà ở cách các thành phần trao đổi trạng thái, biểu đạt mức tin cậy và phối hợp khi nguồn lực tính toán hữu hạn. Các thiết kế phân cấp cho hành lang biến đổi đã chỉ ra lợi ích của việc tách mục tiêu dài hạn khỏi phản ứng cục bộ, trong khi các phương pháp hợp nhất cảm biến và điều khiển dự báo cung cấp cơ sở cho quyết định có ràng buộc an toàn [\\cite{1}, \\cite{2}, \\cite{3}]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Bài báo xây dựng một kiến trúc điều phối nhận thức–hành động gồm bản đồ chiếm chỗ đa phân giải, ước lượng trạng thái có độ tin cậy, lập kế hoạch hai tầng, điều khiển dự báo và lớp an toàn độc lập. Khác với lịch xử lý cố định, bộ điều phối xem độ bất định, độ gần vật cản, tuổi dữ liệu và mức tải hiện tại như các tín hiệu để quyết định mô-đun nào cần được ưu tiên. Mỗi kết quả mô-đun đi kèm dấu thời gian, thời hạn hiệu lực và chi phí xử lý; nhờ đó, trạng thái cũ không bị xem như bằng chứng mới chỉ vì nó còn nằm trong hàng đợi. Kiến trúc cũng lưu một số biến cố cục bộ có ảnh hưởng đến phục hồi, thay vì duy trì toàn bộ lịch sử cảm biến. Cách tổ chức này nhằm làm rõ quan hệ giữa bằng chứng quan sát, hành động được chọn và giới hạn mà lớp an toàn áp đặt."
+    },
+    {
+      "type": "paragraph",
+      "text": "Đóng góp được trình bày theo ba hướng. Thứ nhất, chúng tôi định nghĩa giao diện trạng thái chung cho các tầng, với trường tin cậy và thời hạn rõ ràng. Thứ hai, chúng tôi thiết kế cơ chế phân bổ ngân sách theo rủi ro dự kiến, nhờ đó có thể tăng quan sát khi cần xác minh mà không làm vòng điều khiển mất tính ổn định. Thứ ba, chúng tôi đánh giá cấu hình đầy đủ qua nhiều nhóm tuyến, điều kiện che khuất, các tình huống gián đoạn cảm biến và phân tích cắt bỏ. Các nghiên cứu về vùng quan sát thiếu, bản đồ đa phân giải và quy hoạch có vật cản động tạo tiền đề cho lựa chọn này [\\cite{4}, \\cite{5}, \\cite{6}]. Tất cả chỉ số được diễn giải trong cùng một khung nhiệm vụ, thay vì xem tỷ lệ hoàn thành, độ trễ và khoảng cách an toàn như các mục tiêu tách rời."
+    },
+    {
+      "type": "paragraph",
+      "text": "Một nguyên tắc thiết kế xuyên suốt là không đồng nhất độ tin cậy cao với hành động luôn nhanh, cũng không đồng nhất độ tin cậy thấp với dừng tức thời. Khi độ tin cậy giảm vừa phải, robot có thể giảm vận tốc và dành thêm thời gian xác minh; khi bằng chứng tiếp tục yếu hoặc khoảng cách dự báo chạm ngưỡng, lớp an toàn chuyển sang hạn chế mạnh hơn. Vì trạng thái phân tán qua nhiều tiến trình, giao diện thông điệp và cách quản lý hàng đợi cũng có ảnh hưởng trực tiếp đến hành vi. Những công trình về giao diện trạng thái, xử lý thời gian thực, dự báo tác nhân và bộ nhớ bản đồ cục bộ được dùng để định hình các thành phần này [\\cite{7}, \\cite{8}, \\cite{9}, \\cite{10}]."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Requirements"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nền tảng mục tiêu là robot bánh vi sai chạy trong khu vực trong nhà có bề rộng lối đi biến thiên, vùng cấm đã biết và tác nhân di động không hợp tác. Hệ thống phải định vị liên tục, cập nhật bản đồ cục bộ, nhận biết vùng có thể đi qua, lập đường đến đích, tránh va chạm, dừng an toàn và ghi lại nguyên nhân quyết định. Các chức năng không được xem là những dịch vụ rời rạc: một phát hiện vật cản có thể làm đổi đồ thị hành lang, dẫn tới kế hoạch mới, sau đó tạo lệnh vận tốc khác và kích hoạt kiểm tra an toàn. Cơ chế phân bổ tài nguyên theo rủi ro vì thế phải được đặt trong cùng luồng với các chức năng cốt lõi, chứ không chỉ hoạt động như một bộ giám sát tải. Nghiên cứu về tài nguyên thích nghi và khoảng cách dự báo cung cấp các chỉ dấu cần thiết để liên kết quyết định tính toán với rủi ro chuyển động [\\cite{11}, \\cite{12}]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Yêu cầu thời gian được chia thành vòng điều khiển, vòng tránh va chạm và vòng nhận thức. Vòng điều khiển cần chu kỳ đều; tránh va chạm phải có khả năng chặn lệnh nguy hiểm trước khi kế hoạch toàn cục hoàn tất; nhận thức được phép thay đổi tần suất dựa trên độ che khuất và biến động môi trường. Mỗi thông điệp lưu thời điểm cảm biến, thời điểm xử lý, độ trễ truyền và thời hạn sử dụng. Nếu một ước lượng quá hạn, bộ điều phối phải giảm mức sử dụng của nó hoặc yêu cầu cập nhật, thay vì suy diễn rằng trạng thái không đổi. Đồng bộ dấu thời gian là điều kiện để so sánh những quan sát có nguồn gốc khác nhau; nghiên cứu về mạng cảm biến và vùng cấm được dùng để xác định quy tắc đồng bộ và quy chiếu không gian [\\cite{13}, \\cite{14}]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Các yêu cầu an toàn gồm giới hạn vận tốc và gia tốc, khoảng cách đệm, tính hợp lệ của trạng thái, cùng vùng dừng có thể kiểm chứng. Nếu cảm biến chiều sâu ngừng phát dữ liệu, robot vẫn có thể duy trì vận tốc thấp dựa trên nguồn đo còn hoạt động, nhưng không được khôi phục vận tốc định mức trước khi kiểm tra lại độ tin cậy. Các yêu cầu bảo trì bao gồm cấu hình độc lập theo mô-đun, nhật ký có cấu trúc, quản lý phiên bản tham số và chế độ khôi phục khi một nguồn đo mất tín hiệu. Quy trình phục hồi cảm biến và chọn vận tốc theo bất định là cơ sở để thiết lập hành vi suy giảm có kiểm soát [\\cite{15}, \\cite{16}]. Yêu cầu được ánh xạ thành chỉ số vị trí, khoảng cách dự báo, độ trễ điều khiển, thời gian phục hồi và tính đầy đủ của nhật ký; ánh xạ định lượng nằm ở \\ref{tab:T1}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Các ngưỡng vận hành cần phản ánh cả khả năng phần cứng lẫn đặc tính nhiệm vụ. Chẳng hạn, một giới hạn độ trễ phù hợp với lối đi thoáng có thể không đủ bảo thủ tại giao cắt, nơi hướng di chuyển của người đi bộ thay đổi nhanh. Vì vậy, ngưỡng được kiểm tra trên toàn bộ nhóm tuyến, còn các mô-đun được đo riêng để xác định nguồn phát sinh độ trễ. Chúng tôi đánh giá tải của bộ lập kế hoạch cục bộ, lựa chọn quỹ đạo đa mục tiêu và tính nhất quán của nhật ký như các phần trong cùng một chuỗi đáp ứng [\\cite{17}, \\cite{18}, \\cite{19}]. Cách đánh giá này tránh việc tối ưu một chỉ số bằng cách làm suy giảm âm thầm một yêu cầu khác, ví dụ rút ngắn thời gian lập kế hoạch nhưng tăng số lần tiếp cận gần."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Architecture"
+    },
+    {
+      "type": "paragraph",
+      "text": "Kiến trúc gồm lớp cảm biến, diễn giải, trạng thái, điều phối, lập kế hoạch, điều khiển và an toàn. Dữ liệu cảm biến được đưa về hệ quy chiếu thống nhất; lớp diễn giải tạo đối tượng, vùng trống và các dấu hiệu chất lượng quan sát. Bộ ước lượng hợp nhất đo quán tính, khoảng cách và hình ảnh chiều sâu thành trạng thái robot, bản đồ cục bộ và trường tin cậy. Bộ điều phối dùng các trường đó cùng tuổi dữ liệu, chi phí dự kiến và giới hạn thời gian để quyết định phân bổ tài nguyên. Sơ đồ quan hệ giữa luồng trạng thái và quyền ưu tiên an toàn được thể hiện ở \\ref{fig:F1}; chuỗi xử lý thời gian thực cùng các điểm kiểm tra được thể hiện ở \\ref{fig:F2}. Việc tách đường dữ liệu khỏi đường can thiệp cho phép lớp an toàn giới hạn lệnh mà không phải đợi quá trình lập kế hoạch khởi động lại."
+    },
+    {
+      "type": "paragraph",
+      "text": "Trạng thái điều phối có thể được ký hiệu $\\mathbf{z}_t=\\langle\\mathbf{x}_t,\\mathbf{m}_t,\\rho_t,\\lambda_t\\rangle$, trong đó $\\mathbf{x}_t$ mô tả động học, $\\mathbf{m}_t$ là bản đồ cục bộ, $\\rho_t$ biểu diễn độ tin cậy và $\\lambda_t$ là ngân sách. Ký hiệu này không hàm ý mọi mô-đun phải dùng chung một bộ ước lượng; nó xác định một giao diện đủ để so sánh kết quả và điều phối hành động. Độ tin cậy được suy giảm khi sai khác giữa nguồn đo tăng, quan sát thiếu hoặc dữ liệu đến muộn. Một dạng cập nhật khái quát là $\\rho_t=\\min(1,\\rho_{t-1}\\exp(-\\alpha e_t))$, với $e_t$ là độ không nhất quán tổng hợp. Hệ số suy giảm được hiệu chỉnh theo loại nguồn đo để sai lệch nhỏ trong một cảm biến không làm mất giá trị của những quan sát độc lập khác. Các phân tích về độ bền định vị dưới che khuất và mô hình bất định bản đồ địa phương hỗ trợ cách biểu diễn này [\\cite{20}, \\cite{30}]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Bản đồ có lớp nền và lớp động. Lớp nền lưu hình học bền vững, vùng cấm và điểm mốc; lớp động lưu vật cản tạm thời, hướng chuyển động ước lượng và vùng chưa quan sát. Hai lớp cùng quy về lưới cục bộ nhưng có tốc độ cập nhật và quy tắc hết hạn khác nhau. Đồ thị hành lang cung cấp các vùng trung gian cho kế hoạch toàn cục, còn bộ lập kế hoạch cục bộ tối ưu chuỗi vận tốc trong cửa sổ dự báo. Lập lịch mô-đun theo cửa sổ thời gian và phân cấp quyết định cho vận chuyển nội bộ giúp xác định ranh giới giữa mục tiêu dài hạn và phản ứng nhanh [\\cite{21}, \\cite{22}]. Cấu trúc này cũng tránh việc một vật cản ngắn hạn làm biến đổi vĩnh viễn bản đồ nền, hoặc một vùng cấm ổn định bị quên sau nhiều lần cập nhật lớp động."
+    },
+    {
+      "type": "paragraph",
+      "text": "Lớp an toàn nằm ngoài đường thực thi thông thường. Trước mỗi lệnh, lớp này kiểm tra độ mới của trạng thái, tính nhất quán cảm biến, gia tốc khả thi và khoảng cách dự báo đến vật cản. Nếu cần, nó giới hạn vận tốc, yêu cầu quan sát bổ sung hoặc ra lệnh dừng. Độ trễ và độ chính xác nhận biết được cân bằng theo tình trạng hiện tại, còn vùng dừng được xác nhận bằng quy tắc riêng, không phụ thuộc vào việc bộ lập kế hoạch đã hội tụ hay chưa [\\cite{23}, \\cite{24}]. Khi khoảng cách dự báo được biểu diễn là $d_{\\min}=\\min_{t\\in[0,T]}\\|\\mathbf{p}_r(t)-\\mathbf{p}_o(t)\\|_2$, lớp này có thể so sánh quỹ đạo ứng viên với vùng đệm trong cùng một cửa sổ thời gian. Tín hiệu an toàn có quyền ưu tiên cao hơn lệnh chuyển động và được ghi vào nhật ký cùng trạng thái đã dẫn tới can thiệp."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Implementation"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nền tảng triển khai sử dụng khung gầm bánh vi sai, máy tính nhúng đa lõi, cảm biến chiều sâu phía trước, bộ quét khoảng cách ngang và bộ đo quán tính. Các tiến trình giao tiếp qua bus thông điệp có hàng đợi giới hạn; mỗi thông điệp mang mã mô-đun, dấu thời gian, phiên bản và mã trạng thái. Khi hàng đợi đầy, trạng thái liên tục được thay bằng bản mới nhất, trong khi lệnh an toàn được giữ theo thứ tự để không làm mất sự kiện dừng. Việc ưu tiên này phù hợp với mục tiêu giữ độ trễ có giới hạn mà không làm suy giảm tính toàn vẹn của tín hiệu an toàn. Hệ thống đồng bộ thời gian trước khi hợp nhất phép đo, kiểm tra tuổi dữ liệu ở biên mô-đun và ghi dấu vết khi gói tin bị loại bỏ hoặc thay thế."
+    },
+    {
+      "type": "paragraph",
+      "text": "Bộ ước lượng dùng tích phân gia tốc để dự đoán ngắn hạn, sau đó hiệu chỉnh bằng quan sát hình học và khoảng cách. Một biểu diễn cập nhật tuyến tính có thể viết là $\\hat{\\mathbf{x}}_t=\\mathbf{F}\\hat{\\mathbf{x}}_{t-1}+\\mathbf{G}\\mathbf{u}_t+\\mathbf{K}(\\mathbf{y}_t-\\mathbf{H}\\hat{\\mathbf{x}}_{t-1})$. Trong vận hành, ma trận và hiệp phương sai được cấu hình theo nguồn đo còn khả dụng; nếu một nguồn mất tín hiệu, bộ ước lượng không tiếp tục dùng giá trị cũ như phép đo mới. Bộ nhớ ngữ cảnh giữ các biến cố gần nhất như vật cản mới, thất bại lập kế hoạch, lệnh dừng và thay đổi chế độ cảm biến. Bộ nhớ này đủ ngắn để tránh tích lũy trạng thái không liên quan, nhưng đủ dài để phân biệt nhiễu nhất thời với sự thay đổi bền vững. Công trình về đồ thị hành lang và hiệu chỉnh tham số cho tuần tra tự hành cũng nhấn mạnh tầm quan trọng của sự tương thích giữa cấu trúc bản đồ và chế độ nhiệm vụ [\\cite{25}, \\cite{26}]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Bộ lập kế hoạch toàn cục tạo chuỗi vùng trung gian trên đồ thị hành lang; bộ lập kế hoạch cục bộ sinh quỹ đạo ứng viên, loại bỏ quỹ đạo vi phạm khoảng cách đệm rồi xếp hạng phần còn lại. Hàm điểm kết hợp sai lệch đến đích, độ cong, năng lượng điều khiển, khoảng cách vật cản và độ ổn định quan sát; các trọng số được chuẩn hóa trước khi chạy và có thể đổi theo chế độ nhiệm vụ. Nhận biết vật cản từ dữ liệu đa nguồn giúp giảm lệ thuộc vào một phép đo đơn lẻ, trong khi đánh giá khả năng truy nguyên cho thấy cần ghi rõ lý do từng quỹ đạo bị loại [\\cite{27}, \\cite{28}]. Với mỗi ứng viên $\\tau$, bộ lập kế hoạch có thể tổng hợp các thành phần thành $J(\\tau)=w_gJ_g(\\tau)+w_cJ_c(\\tau)+w_oJ_o(\\tau)+w_uJ_u(\\tau)$. Điểm thấp không tự động đồng nghĩa với lệnh được phép thi hành; mọi quỹ đạo vẫn phải qua kiểm tra an toàn độc lập."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cơ chế phân bổ ngân sách chia tài nguyên theo độ bất định và rủi ro. Với mô-đun $i$, một phân bổ chuẩn hóa có dạng $\\lambda_i=\\lambda_{\\max}(\\rho_i^{-1}+\\beta r_i)/\\sum_j(\\rho_j^{-1}+\\beta r_j)$, trong đó $r_i$ biểu thị mức rủi ro liên quan. Khi độ tin cậy giảm, nhận biết hoặc xác minh trạng thái nhận thêm thời gian xử lý; khi trạng thái ổn định và đường đi thông thoáng, phần tài nguyên đó được trả về. Tối ưu ngân sách trên phần cứng nhúng cần đồng thời tôn trọng giới hạn chu kỳ và khả năng ngắt của lớp an toàn [\\cite{29}]. Mã giả của vòng điều phối ngân sách và kiểm tra an toàn được tham chiếu tại \\ref{code:alg:die-phoi-ngan-sach}. Trong triển khai, nhật ký ghi ngân sách trước và sau phân bổ để người vận hành có thể xác định liệu một thay đổi hành vi đến từ dữ liệu mới, điều chỉnh tài nguyên hay lệnh giới hạn."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Evaluation"
+    },
+    {
+      "type": "paragraph",
+      "text": "Đánh giá gồm mười hai tuyến thuộc bốn nhóm: hành lang mở, giao cắt, khoang hẹp và vùng có vật cản động. Mỗi tuyến được chạy qua các mức mật độ vật cản và che khuất quan sát khác nhau. Các chỉ số chính là tỷ lệ hoàn thành, thời gian đến đích, độ lệch quỹ đạo, số lần dừng an toàn, số sự kiện tiếp cận gần và tải xử lý trung vị. Một lượt được xem là hoàn thành khi robot tới đích trong giới hạn thời gian mà không vi phạm khoảng cách an toàn; lượt dừng có kiểm soát được ghi riêng để không che khuất sự khác biệt giữa bảo vệ an toàn và hoàn thành tác vụ. Kết quả theo nhóm tuyến và điều kiện quan sát được dẫn tại \\ref{tab:T2}, còn so sánh cấu hình tổng thể được trình bày tại \\ref{tab:T3}. Tỷ lệ hoàn thành giữa các cấu hình và nhóm tuyến có thể đối chiếu trực quan ở \\ref{fig:C3}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cấu hình đề xuất đạt tỷ lệ hoàn thành 93,4%, so với 86,1% của lịch cố định; thời gian lập kế hoạch trung vị là 29,8 ms, so với 41,8 ms ở cấu hình lịch cố định. Độ lệch quỹ đạo trung bình là 0,084 m. Kết quả theo nhóm cho thấy hành lang mở đạt tỷ lệ hoàn thành cao nhất, còn khoang hẹp có độ lệch và thời gian hành trình lớn hơn, phù hợp với hạn chế về hình học và tầm quan sát. Khi so với phản ứng cục bộ, cấu hình đề xuất cần lập kế hoạch lâu hơn đôi chút nhưng đạt tỷ lệ hoàn thành cao hơn; điều này phản ánh lợi ích của mục tiêu toàn cục khi lối đi thay đổi. Ngược lại, cấu hình toàn cục không giới hạn ghi nhận tải xử lý cao và độ trễ lớn hơn, cho thấy việc tăng tìm kiếm không bảo đảm cải thiện nhiệm vụ nếu thiếu ngân sách. Phân bố độ trễ lập kế hoạch theo nhóm tuyến nằm ở \\ref{fig:C4}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Tải xử lý biến đổi theo thời gian thay vì phân bố đều. Trên tuyến có giao cắt, tải nhận biết tăng khi vùng quan sát bị che khuất; tải điều khiển vẫn tương đối ổn định nhờ hàng đợi giới hạn và quyền ưu tiên lệnh an toàn. Diễn biến các thành phần tải được tham chiếu tại \\ref{fig:C1}. Khi độ tin cậy giảm, thời gian phản ứng tăng nhẹ do hệ thống dành thêm tài nguyên cho xác minh và đồng thời giảm vận tốc; quan hệ giữa hai đại lượng được thể hiện tại \\ref{fig:C2}. Tăng thời gian phản ứng trong tình huống bất định không được xem là suy giảm đơn thuần: tiêu chí là thời gian vẫn nằm trong giới hạn cho phép và hành vi an toàn được duy trì. Những chu kỳ có độ trễ cao nhất thường đi kèm nhu cầu quan sát bổ sung, nhưng không kéo theo độ trễ tích lũy ở vòng điều khiển."
+    },
+    {
+      "type": "paragraph",
+      "text": "Phân tích cắt bỏ gồm các biến thể bỏ ngân sách thích nghi, bộ nhớ ngữ cảnh, lớp an toàn ngoài hoặc bản đồ hai lớp. Kết quả được dẫn tại \\ref{tab:T4}. Bỏ lớp an toàn làm tăng rõ sự kiện tiếp cận gần; bỏ bộ nhớ ngữ cảnh làm tăng số lần lập kế hoạch lại; bỏ ngân sách thích nghi làm giảm tỷ lệ hoàn thành và tăng số lần tiếp cận gần. Các khác biệt này cho thấy thành phần điều phối không chỉ làm giảm tải trung bình, mà còn phân bổ thời gian xử lý vào thời điểm hệ thống cần xác minh hoặc phản ứng. Chỉ số tổng hợp có trọng số có thể biểu diễn bằng $S=\\sum_{k=1}^{n}q_k(a_k-b_k)/\\sum_{k=1}^{n}q_k$, trong đó $q_k$ là trọng số yêu cầu, còn $a_k$ và $b_k$ mã hóa kết quả so sánh theo quy ước đánh giá. Chúng tôi không dùng chỉ số tổng hợp để thay thế bảng kết quả theo từng tiêu chí; nó chỉ hỗ trợ so sánh cấu hình sau khi các điều kiện an toàn đã được kiểm tra riêng."
+    },
+    {
+      "type": "paragraph",
+      "text": "Thử nghiệm gián đoạn cảm biến cho thấy thời lượng mất dữ liệu quyết định mức giới hạn vận tốc và trạng thái kết thúc. Với gián đoạn ngắn, robot tiếp tục sau khi xác minh nguồn đo còn lại; với gián đoạn dài, hệ thống chuyển sang dừng có kiểm soát. Các thời lượng, vận tốc và thời gian phục hồi được dẫn tại \\ref{tab:T5}; luồng quyết định tương ứng nằm ở \\ref{fig:F3}. Kết quả cho thấy phục hồi không phải là quay lại vận tốc cũ ngay khi gói tin đầu tiên trở lại. Bộ điều phối đợi độ tin cậy vượt ngưỡng xác minh, đối chiếu các phép đo mới và chỉ sau đó mới tăng vận tốc. Quy tắc này làm thời gian phục hồi dài hơn trong một số trường hợp nhưng giảm nguy cơ tiếp tục dựa trên trạng thái chưa ổn định."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Discussion"
+    },
+    {
+      "type": "paragraph",
+      "text": "Kết quả củng cố nhận định rằng hiệu năng không chỉ đến từ một thuật toán tốt, mà còn từ cách hệ thống biểu đạt bằng chứng và quyền hạn giữa các mô-đun. Khi nhận biết không chắc chắn, robot không cần lập tức chọn một trong hai cực là tiếp tục bình thường hoặc dừng hoàn toàn. Thay vào đó, hệ thống tăng quan sát cục bộ, giảm vận tốc và kéo dài khoảng xác minh trong phạm vi cho phép. Cách phản ứng theo mức độ tạo sự cân bằng giữa khả năng thích nghi và tính dự đoán. Bộ điều phối cũng cung cấp cơ sở để hiểu vì sao một chu kỳ được ưu tiên: độ tin cậy thấp, khoảng cách dự báo nhỏ, dữ liệu sắp hết hạn hay nguy cơ va chạm tăng đều có thể được ghi nhận thành lý do cụ thể."
+    },
+    {
+      "type": "paragraph",
+      "text": "So với lịch cố định, ngân sách thích nghi giảm tải trung bình nhưng vẫn dành nguồn lực cho thời điểm có rủi ro. Đây là thuộc tính có ý nghĩa trên máy tính nhúng, nơi một đợt tăng tải nhận biết có thể làm trễ lập kế hoạch nếu mọi tiến trình cạnh tranh không giới hạn. Hàng đợi giới hạn ngăn độ trễ truyền tích lũy; việc giữ thông điệp mới nhất cho trạng thái liên tục tránh xử lý một chuỗi phép đo đã lỗi thời. Tuy nhiên, lệnh an toàn vẫn giữ thứ tự để sự kiện dừng không bị thay thế bởi lệnh mới hơn. Sự phân biệt này là chi tiết triển khai quan trọng: chính sách thay thế hàng đợi phù hợp với dữ liệu trạng thái không nhất thiết phù hợp với lệnh điều khiển có ý nghĩa an toàn."
+    },
+    {
+      "type": "paragraph",
+      "text": "Việc tách lớp an toàn khỏi bộ lập kế hoạch làm rõ trách nhiệm. Bộ lập kế hoạch tìm hành động có điểm số tốt theo đích, độ cong, vật cản và chất lượng quan sát; lớp an toàn quyết định hành động ấy có được phép thực thi tại thời điểm hiện tại hay không. Nhờ đó, thay đổi hàm điểm hoặc thay thế thuật toán lập kế hoạch không làm mất lớp kiểm tra khoảng cách. Bộ nhớ ngữ cảnh cũng góp phần giảm chu kỳ lập kế hoạch lặp lại mà không cần lưu toàn bộ lịch sử. Chỉ những biến cố có khả năng làm đổi độ tin cậy hoặc trạng thái phục hồi mới được giữ lại. Cấu trúc gọn này hỗ trợ phân tích sau nhiệm vụ vì mỗi quyết định có thể truy về trạng thái, bằng chứng, ngân sách đã cấp và giới hạn được áp dụng."
+    },
+    {
+      "type": "paragraph",
+      "text": "Kết quả cắt bỏ cho thấy các thành phần có vai trò bổ sung chứ không thay thế lẫn nhau. Ngân sách thích nghi cải thiện phân phối tài nguyên, bộ nhớ ngữ cảnh giữ tính liên tục của suy luận cục bộ, bản đồ hai lớp tách cấu trúc nền khỏi biến động ngắn hạn, còn lớp an toàn kiểm tra tính chấp nhận được của lệnh. Nếu chỉ tối ưu độ trễ lập kế hoạch, cấu hình phản ứng cục bộ có thể đạt giá trị thấp nhưng bỏ lỡ một số đường vòng an toàn hoặc lặp lại quyết định khi bối cảnh đổi. Nếu chỉ tăng tìm kiếm toàn cục, tải xử lý có thể vượt khả năng của nền tảng. Vì vậy, đánh giá kiến trúc cần xem đồng thời tỷ lệ hoàn thành, độ trễ, mức tải và sự kiện an toàn thay vì xếp hạng bằng một con số duy nhất."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Limitations"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nghiên cứu tập trung vào môi trường trong nhà có bề mặt tương đối bằng phẳng, do đó chưa mô tả đầy đủ nền dốc, bề mặt trơn, ánh sáng biến thiên mạnh hoặc phản xạ gây nhiễu cho cảm biến chiều sâu. Các tuyến hiện tại cũng chưa bao phủ toàn bộ hình dạng không gian có thể gặp trong cơ sở vận hành. Mô hình chuyển động người đi bộ dự báo trong thời hạn ngắn; các hành vi bất ngờ như quay đầu nhanh, dừng sát robot hoặc thay đổi quyền ưu tiên đột ngột có thể làm sai lệch khoảng cách dự báo. Trong các trường hợp đó, lớp an toàn vẫn giới hạn hành động theo trạng thái hiện có, nhưng chất lượng dự báo của kế hoạch cục bộ có thể giảm đáng kể."
+    },
+    {
+      "type": "paragraph",
+      "text": "Bộ điều phối hiện dùng tập tham số hiệu chỉnh trước theo nhóm nhiệm vụ. Việc chuyển sang một nhóm tuyến mới đòi hỏi kiểm tra ngưỡng độ tin cậy, trọng số hàm điểm và mức giới hạn vận tốc; nếu hiệu chỉnh quá bảo thủ, robot dừng thường xuyên và giảm thông lượng, còn hiệu chỉnh quá lỏng có thể làm lớp an toàn can thiệp muộn. Tải tính toán cũng được đo trên một cấu hình phần cứng cụ thể. Bộ xử lý khác có thể thay đổi độ trễ, thông lượng bộ nhớ và thời gian chuyển ngữ cảnh, vì vậy tỷ lệ phân bổ tối ưu không nhất thiết giữ nguyên. Việc đưa cơ chế tự hiệu chỉnh vào vận hành cần có giám sát, giới hạn cập nhật và quy trình quay lại cấu hình đã xác nhận."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cuối cùng, mô hình bản đồ động hiện chủ yếu biểu diễn trên lưới cục bộ phẳng và dùng dự báo ngắn hạn cho tác nhân. Những nơi có cầu dốc, nhiều tầng hoặc vật cản vượt qua mặt phẳng cảm biến sẽ cần mô tả không gian ba chiều và quan hệ che khuất phong phú hơn. Chúng tôi cũng chưa kiểm chứng hình thức toàn bộ chuỗi truyền thông, từ cảm biến đến cơ cấu chấp hành, trong điều kiện lỗi đồng thời nhiều nguồn. Các giới hạn này định hướng công việc tiếp theo: mở rộng mô hình bất định hình học, kiểm thử chuỗi mất cảm biến kéo dài và đánh giá trên nền tảng cơ khí khác. Mục tiêu là giữ nguyên giao diện tin cậy, thời hạn và chi phí, đồng thời tăng độ bao phủ của các điều kiện mà lớp an toàn phải xử lý."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Conclusion"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bài báo đã trình bày kiến trúc điều phối nhận thức–hành động cho robot di động trong môi trường bán cấu trúc, kết hợp bản đồ hai lớp, trạng thái có độ tin cậy, ngân sách tính toán thích nghi, lập kế hoạch phân cấp, điều khiển dự báo và lớp an toàn độc lập. Triển khai trên nền tảng bánh vi sai cho thấy hệ thống duy trì tỷ lệ hoàn thành cao, giảm thời gian lập kế hoạch so với lịch xử lý cố định và giữ độ lệch quỹ đạo trong giới hạn mục tiêu. Các thử nghiệm phục hồi cũng cho thấy robot có thể giới hạn vận tốc rồi tiếp tục hoặc dừng có kiểm soát tùy theo thời lượng gián đoạn và trạng thái xác minh."
+    },
+    {
+      "type": "paragraph",
+      "text": "Đóng góp có tính thực tiễn nhất là giao diện trạng thái thống nhất: mỗi kết quả mang theo độ tin cậy, thời hạn và chi phí. Giao diện này giúp điều phối tài nguyên có căn cứ, giới hạn việc sử dụng dữ liệu lỗi thời và truy nguyên hành vi sau nhiệm vụ. Phân tích cắt bỏ cho thấy ngân sách thích nghi và bộ nhớ ngữ cảnh có ảnh hưởng đáng kể đến ổn định khi môi trường thay đổi, trong khi lớp an toàn duy trì quyền chặn độc lập với chất lượng của bộ lập kế hoạch. Hướng tiếp theo là phát triển tự hiệu chỉnh có giám sát, kiểm chứng hình thức vùng dừng và mở rộng đánh giá sang điều kiện hình học, cảm biến và phần cứng đa dạng hơn."
+    },
+    {
+      "type": "paragraph",
+      "text": "Trong thực tế, kiến trúc nên được triển khai theo từng giai đoạn: trước hết xác nhận đồng bộ thời gian và giới hạn vòng điều khiển; tiếp theo đánh giá bản đồ, độ tin cậy và hành vi giảm vận tốc trên tuyến đơn giản; sau đó mới tăng mật độ vật cản, che khuất và mức độ tương tác. Mỗi giai đoạn cần giữ nhật ký có cấu trúc để so sánh nguyên nhân khác biệt giữa các lượt chạy. Cách triển khai tuần tự không loại bỏ nhu cầu kiểm tra liên tục, nhưng giúp tách lỗi cảm biến khỏi lỗi điều phối và lỗi hành động. Với giao diện mô-đun rõ ràng, các thành phần nhận biết, lập kế hoạch và điều khiển có thể được cải tiến riêng mà vẫn giữ nguyên quy tắc an toàn và khả năng giải thích của toàn hệ thống."
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "content_id": "paper_01",
+  "language": "vi",
+  "citation_style": "numeric",
+  "length_class": "short",
+  "total_characters": 24221,
+  "section_tree": [
+    {
+      "level": 1,
+      "characters": 12
+    },
+    {
+      "level": 1,
+      "characters": 12
+    },
+    {
+      "level": 1,
+      "characters": 11
+    },
+    {
+      "level": 2,
+      "characters": 35
+    },
+    {
+      "level": 1,
+      "characters": 12
+    },
+    {
+      "level": 1,
+      "characters": 6
+    },
+    {
+      "level": 1,
+      "characters": 22
+    },
+    {
+      "level": 1,
+      "characters": 11
+    },
+    {
+      "level": 1,
+      "characters": 10
+    }
+  ],
+  "section_counts": {
+    "1": 8,
+    "2": 1
+  },
+  "tables": [
+    {
+      "rows": 6,
+      "columns": 6
+    },
+    {
+      "rows": 5,
+      "columns": 6
+    }
+  ],
+  "table_count": 2,
+  "widest_column_count": 6,
+  "figures_charts": {
+    "stacked_bar": 1,
+    "grouped_bar": 1,
+    "line": 1,
+    "scatter": 1,
+    "block_diagram": 1
+  },
+  "chart_count": 4,
+  "figure_count": 1,
+  "box_count": 0,
+  "display_equations": 9,
+  "inline_equations": 58,
+  "element_plan": {
+    "archetype": "theoretical",
+    "counts": {
+      "chart": 4,
+      "figure": 1,
+      "table": 2,
+      "equation": 9,
+      "code": 1,
+      "references": 40
+    },
+    "chart_types": [
+      "stacked_bar",
+      "grouped_bar",
+      "line",
+      "scatter"
+    ],
+    "figure_types": [
+      "block_diagram"
+    ],
+    "sections": [
+      "Introduction",
+      "Related Work",
+      "Definitions",
+      "Main Results",
+      "Proofs",
+      "Numerical Illustration",
+      "Limitations",
+      "Conclusion"
+    ]
+  },
+  "code_listing_count": 1,
+  "code_listing": true,
+  "footnote_count": 1,
+  "reference_count": 40,
+  "author_count": 3,
+  "affiliation_count": 2,
+  "title_characters": 64,
+  "longest_author_line": 43,
+  "longest_affiliation": 81
+}

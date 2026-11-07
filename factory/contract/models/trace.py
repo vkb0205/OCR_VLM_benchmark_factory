@@ -18,6 +18,8 @@ class TraceEvent(BaseModel):
     prompt_id: str | None = None  # prompt file + hash, not the full prompt
     tokens_in: int | None = None
     tokens_out: int | None = None
+    tokens_cached: int | None = None
+    tokens_reasoning: int | None = None
     cost_usd: float | None = None
     detail: dict[str, Any] = {}
 

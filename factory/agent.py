@@ -11,7 +11,7 @@ import re
 from typing import Any
 
 import yaml
-from pydantic import BaseModel, ValidationError
+from pydantic import BaseModel, Field, ValidationError
 
 from factory.content.config import TypeConfig, load_config
 from factory.content.pool import fill_pool, mixed_case, select_pool
@@ -53,6 +53,7 @@ class DesignReply(BaseModel):
     design_spec: dict[str, Any]
     css: str
     pages: dict[str, Any] = {}
+    layout_plan: dict[str, Any] = Field(default_factory=dict)
 
 
 class BatchDesignReply(BaseModel):
@@ -75,7 +76,8 @@ class DocumentAgent:
         self.lang = lang
         self.design_seed = design_seed
         self.ledger_entries = list(ledger or [])
-        self.ledger = [ledger_summary(entry) for entry in self.ledger_entries[-4:]]
+        history = self.ledger_entries if config.design.get("mode") == "backbone" else self.ledger_entries[-4:]
+        self.ledger = [ledger_summary(entry) for entry in history]
         self.doc_type = doc_type or config.document_type or "document"
         self.fields = {field.id: field for field in config.fields}
         self.shared = load_config()
@@ -260,9 +262,11 @@ class DocumentAgent:
         self.ctx.trace.events.append(TraceEvent(
             time=datetime.now(timezone.utc), stage="elements" if kind.startswith("element") else "design",
             kind="llm_call", provider=result.provider, model=result.model,
-            tokens_in=result.tokens_in, tokens_out=result.tokens_out, cost_usd=result.cost_usd,
+            tokens_in=result.tokens_in, tokens_out=result.tokens_out, tokens_cached=result.tokens_cached,
+            tokens_reasoning=result.tokens_reasoning, cost_usd=result.cost_usd,
             detail={"call_kind": kind, "repair_number": repair_number,
-                    "estimated_tokens_in": estimated, "cached": result.cached},
+                    "estimated_tokens_in": estimated, "cached": result.cached,
+                    "tokens_cached": result.tokens_cached, "tokens_reasoning": result.tokens_reasoning},
         ))
         return result
 

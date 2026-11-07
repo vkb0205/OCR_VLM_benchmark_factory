@@ -1,0 +1,414 @@
+{
+  "content_id": "paper_08",
+  "variables": {
+    "lang": "en",
+    "field": "energy storage",
+    "paper_length": "medium",
+    "citation_style": "author_year"
+  },
+  "lang": "en",
+  "values": {
+    "title": "Thermally Adaptive Porous Electrodes for Durable Grid-Scale Energy Storage",
+    "authors": [
+      {
+        "name": "Neris Vauld",
+        "affiliations": [
+          1,
+          3
+        ],
+        "corresponding": true,
+        "email": "neris.vauld@aurelium-storage.org"
+      },
+      {
+        "name": "Ilyra Senq",
+        "affiliations": [
+          2
+        ],
+        "corresponding": false
+      },
+      {
+        "name": "Oren Talveth",
+        "affiliations": [
+          1,
+          2,
+          3
+        ],
+        "corresponding": false
+      }
+    ],
+    "affiliations": [
+      "Aurelium Center for Electrochemical Systems, Lumenford",
+      "Veylan Institute of Thermal Materials, Oris Vale",
+      "Quenara Grid Research Cooperative, Bellmere"
+    ],
+    "abstract": "Thermal gradients within porous electrodes can accelerate capacity loss in stationary energy-storage cells, yet their interaction with ion transport and mechanical strain remains insufficiently resolved. This work presents a coupled electrochemical, thermal, and structural framework for evaluating adaptive porous electrodes under repeated storage operation. The electrode architecture combines a conductive carbon scaffold with a compliant ion-conducting phase whose local transport response changes with temperature. The model links heat generation, electrolyte migration, interfacial reaction kinetics, and stress accumulation across the electrode thickness. Experimental evaluation with coin-sized test cells demonstrates that graded porosity reduces thermal concentration near the current collector and preserves more uniform reaction activity during extended cycling. The adaptive phase also moderates local resistance growth after periods of elevated temperature. Comparison between the model and cell-level measurements shows close agreement in voltage relaxation, temperature evolution, and impedance trends. These findings indicate that thermal-aware pore design can improve service stability without requiring a substantial increase in electrode thickness. The proposed framework offers a practical route for selecting pore gradients and compliant phases in modular storage systems exposed to variable loads.",
+    "abstract_alt": null,
+    "keywords": "energy storage; porous electrodes; thermal gradients; ion transport; electrochemical durability; adaptive materials; grid-scale systems",
+    "keywords_alt": null,
+    "journal": "Journal of Electrochemical Reserve Systems",
+    "acknowledgement": "The authors thank the thermal-analysis staff at the Aurelium Center for Electrochemical Systems and the materials characterization group at the Veylan Institute of Thermal Materials for their assistance with cell assembly, impedance measurements, and microscopy.",
+    "references": [
+      {
+        "text": "Pelvar, I., and D. Soreth. 2021. Thermal fields in graded ion reservoirs. Journal of Porous Reserve Materials 4: 22–37.",
+        "cite": "Pelvar and Soreth (2021)"
+      },
+      {
+        "text": "Qelmar, R., T. Uven, and K. Dareth. 2023. Compliant phases for load-flexible storage. Electrochemical Systems Letters 6: 101–114.",
+        "cite": "Qelmar et al. (2023)"
+      },
+      {
+        "text": "Vauld, N., I. Senq, and O. Talveth. 2024. Thermally adaptive porous electrodes for durable grid-scale energy storage. Journal of Electrochemical Reserve Systems 8: 41–59.",
+        "cite": "Vauld et al. (2024)"
+      },
+      {
+        "text": "Marnel, E., and V. Odris. 2020. Pore-gradient control of ionic resistance in stationary storage cells. Reserve Electrochemistry Quarterly 11: 173–189.",
+        "cite": "Marnel and Odris (2020)"
+      },
+      {
+        "text": "Tavren, L., P. Yelq, and S. Morveth. 2022. Coupled heat and mass transport in thick porous battery electrodes. Journal of Applied Storage Physics 5: 64–82.",
+        "cite": "Tavren et al. (2022)"
+      },
+      {
+        "text": "Orvane, K., J. Pellor, and M. Deyran. 2021. Temperature-dependent relaxation pathways in modular electrochemical reservoirs. Grid Storage Materials 7: 205–221.",
+        "cite": "Orvane et al. (2021)"
+      },
+      {
+        "text": "Selnor, A., R. Veyt, and C. Ulnar. 2023. Mechanical accommodation of graded carbon scaffolds during repeated charge transfer. Journal of Energy Cell Mechanics 3: 88–106.",
+        "cite": "Selnor et al. (2023)"
+      },
+      {
+        "text": "Dareth, K., and F. Ivarn. 2022. Impedance signatures of localized heating in porous storage electrodes. Electrochemical Diagnostics Review 9: 137–154.",
+        "cite": "Dareth and Ivarn (2022)"
+      },
+      {
+        "text": "Uven, T., N. Pelvar, and H. Qorren. 2024. Adaptive ion-conducting networks for variable-load energy storage. Reserve Cell Engineering 12: 261–279.",
+        "cite": "Uven et al. (2024)"
+      },
+      {
+        "text": "Soreth, D., A. Neral, and Y. Vaskel. 2020. Distributed reaction activity across thermally graded electrode architectures. Journal of Storage Transport 2: 49–67.",
+        "cite": "Soreth et al. (2020)"
+      },
+      {
+        "text": "Talveth, O., E. Mavren, and L. Jorq. 2023. Capacity retention under intermittent thermal excursions in stationary cells. Energy Reserve Durability 10: 118–135.",
+        "cite": "Talveth et al. (2023)"
+      },
+      {
+        "text": "Senq, I., B. Orlen, and R. Veylan. 2022. Multiphysics design rules for porous electrodes in modular storage assemblies. Journal of Electrochemical Architecture 6: 302–320.",
+        "cite": "Senq et al. (2022)"
+      }
+    ],
+    "body": [
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "1. Introduction and design rationale"
+      },
+      {
+        "type": "paragraph",
+        "text": "Stationary energy-storage cells operate across changing current, ambient temperature, and duration of service. Even when the cell-level temperature remains within a prescribed operating range, a porous electrode can contain local thermal gradients large enough to alter ionic access and interfacial reaction rates. These effects matter particularly in modular systems, where repeated storage and release intervals are separated by rests of unequal length. Heat produced in a restricted region can slow local transport, shift reaction activity toward neighboring pores, and leave a nonuniform state that persists after the external load has declined. The combined thermal and mechanical consequences have received less attention than either effect alone (Pelvar and Soreth, 2021) \\cite{1}. A useful design approach must therefore connect internal heat generation to electrolyte movement, reaction distribution, and stress rather than optimizing each property in isolation. The coupled pathways are summarized in \\ref{fig:diagram}, including the feedback from transport and stress to reaction activity."
+      },
+      {
+        "type": "paragraph",
+        "text": "The central challenge is to improve thermal spreading without reducing the active volume required for charge storage. A uniform pore network gives a straightforward baseline, but it does not account for the different environments from current collector to separator. Grading the pore structure can offer more open electrolyte pathways where transport is restricted while retaining a connected conductive scaffold. Earlier work on pore-gradient control has linked such design choices to lower ionic resistance, although the balance between transport and mechanical continuity remains important (Marnel and Odris, 2020) \\cite{4}. The measured response across the graded designs is summarized in \\ref{tab:thermal_response}, with the capacity trend also shown in \\ref{fig:chart}. The intended benefit is not simply a lower peak temperature. A more even field can preserve distributed reaction activity and reduce the likelihood that a small region carries a disproportionate share of the current."
+      },
+      {
+        "type": "paragraph",
+        "text": "Here we assess a porous electrode built around a conductive carbon scaffold and a compliant ion-conducting phase. The phase responds locally to temperature, changing its transport contribution as operating conditions vary. This architecture is considered through a coupled electrochemical, thermal, and structural framework and through repeated operation of coin-sized test cells. Prior investigations of compliant phases under changing loads motivate the adaptive component, while the present analysis treats its interaction with heat transfer and strain as part of one operating system (Qelmar et al., 2023) \\cite{2}. The integrated framework is also related to the coupled model formulation in \\ref{eq:thermal_balance}, \\ref{eq:ion_transport}, and \\ref{eq:capacity_retention}. The variable-load outcomes later compared in \\ref{tab:load_comparison} provide a complementary test of recovery behavior. The guiding hypothesis is that an intermediate porosity can balance ionic access, thermal dissipation, and scaffold integrity, producing more durable behavior than either a compact or highly open structure. This study develops that assessment from the earlier architecture to the cell-level evidence (Vauld et al., 2024) \\cite{3}."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "2. Electrode architecture and evaluation protocol"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "2.1 Cell preparation and coupled model"
+      },
+      {
+        "type": "equation",
+        "id": "eq:thermal_balance",
+        "latex": "\\frac{\\partial T}{\\partial t} = \\frac{1}{\\rho c_p}\\nabla\\cdot(k\\nabla T) + \\frac{q_{\\mathrm{rxn}} + q_{\\mathrm{ohm}}}{\\rho c_p}",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Six electrode variants were prepared over a controlled porosity range while maintaining comparable active-material loading. The carbon scaffold provided the principal electronic pathway; the compliant phase occupied connected pore regions near reaction interfaces. Each cell used the same separator family, current-collector geometry, and electrolyte volume, so the comparison focused on electrode architecture rather than changes in cell assembly. The pore network was graded across the electrode thickness to address the distinct transport and thermal conditions near the collector and separator. This choice follows the broader principle that reaction activity should remain distributed across a thermally graded architecture rather than concentrating at one boundary (Soreth et al., 2020) \\cite{10}. The final design still has to preserve continuous electronic pathways: adding pore volume without regard to scaffold connectivity can increase resistance and offset any benefit from improved electrolyte access."
+      },
+      {
+        "type": "paragraph",
+        "text": "The evaluation combined voltage records, surface-temperature measurements, impedance spectra, and post-operation microscopy. Thermal imaging was synchronized with the electrical record, enabling transient heating to be aligned with changes in relaxation behavior. Thickness markers at multiple positions across the electrode plane provided an independent measure of mechanical response. The repeated protocol included storage and release intervals at matched current density, low-current relaxation measurements, and additional high-load and pulse segments. Capacity was assessed from a stabilized discharge interval, and impedance was measured at a consistent state of charge. The stabilized interval used the same endpoint criterion across variants.\\fn{The relaxation interval began after current interruption and ended when voltage change fell below the protocol threshold.} This protocol was designed to distinguish reversible changes during a load excursion from persistent growth in resistance or loss of usable capacity."
+      },
+      {
+        "type": "paragraph",
+        "text": "Related multiphysics work emphasizes that thick porous electrodes couple heat and mass transport over distances that cannot be represented by a single average temperature (Tavren et al., 2022) \\cite{5}. Our model therefore treats the electrode as a heterogeneous domain with temperature-dependent effective conductivity and volumetric heat capacity. The outer surfaces exchange heat with the cell enclosure, while reaction and ohmic heating act as distributed sources. A local heat balance can be written as $\\partial T/\\partial t = \\nabla\\cdot(k\\nabla T)/(\\rho c_p) + (q_{rxn}+q_{ohm})/(\\rho c_p)$. Here $T$ is temperature, $k$ is effective thermal conductivity, and the two source terms denote reaction and ohmic contributions. This representation provides the thermal state passed to the transport and structural calculations."
+      },
+      {
+        "type": "table",
+        "id": "tab:thermal_response",
+        "caption": "Thermal and transport response of graded porous electrodes",
+        "header": [
+          [
+            "Run",
+            "Porosity",
+            "Peak T",
+            "Retained Q",
+            "Impedance",
+            "Strain"
+          ]
+        ],
+        "rows": [
+          [
+            "P1",
+            "0.38",
+            "312 K",
+            "91.4%",
+            "18.7 mOhm",
+            "0.21%"
+          ],
+          [
+            "P2",
+            "0.44",
+            "309 K",
+            "93.1%",
+            "16.9 mOhm",
+            "0.18%"
+          ],
+          [
+            "P3",
+            "0.50",
+            "306 K",
+            "94.6%",
+            "15.2 mOhm",
+            "0.15%"
+          ],
+          [
+            "P4",
+            "0.56",
+            "305 K",
+            "95.0%",
+            "14.8 mOhm",
+            "0.14%"
+          ],
+          [
+            "P5",
+            "0.62",
+            "307 K",
+            "94.2%",
+            "15.6 mOhm",
+            "0.16%"
+          ],
+          [
+            "P6",
+            "0.68",
+            "311 K",
+            "92.5%",
+            "17.4 mOhm",
+            "0.20%"
+          ]
+        ],
+        "note": "Values summarize the final interval of repeated storage operation at matched current density; retained Q denotes capacity relative to the initial measurement."
+      },
+      {
+        "type": "paragraph",
+        "text": "The heat balance expresses a competition between conductive spreading and internally generated heat. An increase in porosity changes both effective conductivity and the spatial arrangement of reaction sites; accordingly, its effect cannot be inferred from pore volume alone. The adaptive phase is intended to limit abrupt transport changes in warmer regions, helping prevent a narrow thermal maximum from becoming a persistent reaction hotspot. Temperature-dependent relaxation pathways have likewise been identified as relevant to modular electrochemical reservoirs (Orvane et al., 2021) \\cite{6}. The model links these pathways to the local concentration field, rather than treating measured relaxation time as an isolated cell-level property. This is especially useful when comparing cells that reach similar terminal voltages by different internal transport histories."
+      },
+      {
+        "type": "equation",
+        "id": "eq:ion_transport",
+        "latex": "\\begin{aligned} \\vec{J}_{i} &= -D(T,\\epsilon)\\nabla c_i - \\frac{D(T,\\epsilon)c_i}{RT}\\nabla\\Phi, \\\\ \\frac{\\partial c_i}{\\partial t} &= -\\nabla\\cdot\\vec{J}_{i} + R_i \\end{aligned}",
+        "numbered": true
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "3. Coupled transport and porosity response"
+      },
+      {
+        "type": "paragraph",
+        "text": "Ionic flux was calculated from concentration gradients and the electrical-potential gradient, with diffusivity varying as a function of temperature and porosity. The source term represents interfacial consumption or release. In compact notation, the constitutive relation is $\\vec{J}_i=-D(T,\\epsilon)\\nabla c_i-[D(T,\\epsilon)c_i/(RT)]\\nabla\\Phi$, with concentration evolution $\\partial c_i/\\partial t=-\\nabla\\cdot\\vec{J}_i+R_i$. The thermal field and transport field were solved together at each time step. Thus, a rise in temperature could alter transport, while a changed concentration distribution could in turn redistribute reaction heat. This coupling is consistent with design rules that treat porous electrodes as interacting physical domains rather than independent functional layers (Senq et al., 2022) \\cite{12}."
+      },
+      {
+        "type": "chart",
+        "id": "fig:chart",
+        "caption": "Retained capacity across graded porosity levels",
+        "chart_type": "bar",
+        "labels": [
+          "0.38",
+          "0.44",
+          "0.50",
+          "0.56",
+          "0.62",
+          "0.68"
+        ],
+        "series": [
+          {
+            "name": "Retained capacity (%)",
+            "values": [
+              91.4,
+              93.1,
+              94.6,
+              95.0,
+              94.2,
+              92.5
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "The porosity sweep was selected to expose the tradeoff between open transport pathways and mechanical continuity. At the lower end, the compact scaffold retains a strong electronic network but offers less ionic access and less effective heat spreading. At the higher end, electrolyte pathways are more open, yet reduced scaffold continuity can increase resistance. The comparison is interpreted as a design window, not as a claim that one porosity is universally optimal: boundary cooling, electrode thickness, and load history can shift the balance. Impedance signatures associated with localized heating provide a useful diagnostic for distinguishing these competing effects (Dareth and Ivarn, 2022) \\cite{8}."
+      },
+      {
+        "type": "paragraph",
+        "text": "The measured response has a broad optimum near the middle of the tested range. P3 and P4 showed the lowest peak temperatures and smallest impedance values, while P1 retained less capacity despite its compact structure. P4 reached a peak of 305 K and retained 95.0% of its initial capacity; at the most open condition, P6, the peak rose to 311 K and retention fell to 92.5%. Strain followed a similar pattern, declining toward the intermediate region before rising at the high-porosity end. These observations support a balance between heat removal and scaffold continuity. Mechanical accommodation of graded carbon structures has been shown to affect repeated charge-transfer performance (Selnor et al., 2023) \\cite{7}, and the present results indicate that the compliant phase can moderate mismatch while preserving the electronic framework."
+      },
+      {
+        "type": "equation",
+        "id": "eq:capacity_retention",
+        "latex": "\\frac{Q_N}{Q_0} = \\exp\\left(-\\int_{0}^{N}\\lambda(T_{\\max})d n\\right)",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "The comparison across porosity levels is also visible in \\ref{fig:chart}. The maximum retained capacity occurs at 0.56 porosity, with lower values at both tested extremes. The decline is not symmetric: the compact side is primarily constrained by heat removal and ionic access, whereas the most open side is increasingly affected by scaffold continuity. A compact descriptive measure is the normalized capacity $r=Q_N/Q_0$, where $Q_N$ is capacity after repeated operation and $Q_0$ is the initial capacity. The range of $r$ in this study is consistent with a broad rather than sharply tuned optimum. The observed trend makes pore grading a practical adjustment variable, but it does not remove the need to characterize thermal boundaries for each cell format."
+      },
+      {
+        "type": "table",
+        "id": "tab:load_comparison",
+        "caption": "Cell response under variable storage loads",
+        "header": [
+          [
+            "Load",
+            "Peak T",
+            "Relaxation",
+            "Resistance",
+            "Activity"
+          ]
+        ],
+        "rows": [
+          [
+            "Low",
+            "303 K",
+            "7.2 min",
+            "13.9 mOhm",
+            "Uniform"
+          ],
+          [
+            "Moderate",
+            "307 K",
+            "8.6 min",
+            "15.1 mOhm",
+            "Uniform"
+          ],
+          [
+            "High",
+            "314 K",
+            "11.4 min",
+            "19.8 mOhm",
+            "Localized"
+          ],
+          [
+            "Pulse",
+            "318 K",
+            "13.1 min",
+            "22.6 mOhm",
+            "Localized"
+          ],
+          [
+            "Recovery",
+            "306 K",
+            "8.1 min",
+            "16.2 mOhm",
+            "Rebalanced"
+          ]
+        ],
+        "note": "The adaptive ion-conducting phase reduced the persistence of resistance growth after elevated-load intervals."
+      },
+      {
+        "type": "paragraph",
+        "text": "The transport calculation reproduced the transition from rapid early relaxation to a slower tail after elevated-load intervals. Cells containing the adaptive phase redistributed concentration gradients before a persistent depleted region developed. This behavior provides a mechanistic interpretation of the voltage records: relaxation reflects both the local transport state and the preceding thermal history. The balance between accessible ionic paths and electronic continuity is particularly consequential during load changes, when the reaction distribution can shift faster than the cell enclosure can dissipate heat. The adaptive network is therefore relevant not only at peak load but also during the subsequent recovery period, when some resistance growth can persist after temperature has begun to fall (Uven et al., 2024) \\cite{9}."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "4. Durability under repeated and variable loads"
+      },
+      {
+        "type": "paragraph",
+        "text": "Capacity loss was linked to the maximum temperature reached during each operating interval. Instead of assigning a fixed loss rate to every cycle, the durability model integrates a temperature-dependent rate across the operating history. In compact form, retention is written as $Q_N/Q_0=\\exp(-\\int_0^N\\lambda(T_{max})dn)$. The rate function $\\lambda$ represents the temperature sensitivity of degradation, and $N$ indexes repeated operation. This model form captures accelerated decline after recurring warm excursions without assuming that every interval contributes equally. Work on intermittent thermal excursions has similarly highlighted the importance of operating history when estimating long-term capacity retention (Talveth et al., 2023) \\cite{11}. The model is used here to compare trends across the tested architectures, not to imply a universal lifetime prediction beyond the measured conditions."
+      },
+      {
+        "type": "figure",
+        "id": "fig:diagram",
+        "figure_type": "block_diagram",
+        "caption": "Coupled pathways in the adaptive porous electrode",
+        "description": "The block diagram follows heat generation from the electrochemical reaction into the thermal field, then links temperature to ion transport, adaptive-phase response, and stress development. Feedback from transport and stress returns to the reaction region to represent the coupled operating state.",
+        "labels": [
+          "Heat generation",
+          "Thermal field",
+          "Ion transport",
+          "Adaptive phase",
+          "Stress response"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Calculated retention curves agreed with the measured capacity sequence across the six porosity conditions. Agreement was strongest for intermediate designs, where the thermal field remained spatially distributed. At either extreme, modest variations in local contact resistance widened the difference between predicted and measured values. This result points to a practical limitation of effective-medium descriptions: a small number of contact regions can matter disproportionately when the larger-scale design is already constrained by poor heat spreading or interrupted scaffold paths. The adaptive architecture reduces, but does not eliminate, sensitivity to such local variations. Capacity retention should consequently be interpreted alongside impedance and temperature rather than as a stand-alone measure of electrode quality."
+      },
+      {
+        "type": "paragraph",
+        "text": "Variable-load results are summarized in \\ref{tab:load_comparison}. Low and moderate loads retained uniform reaction activity and relatively short relaxation times. High and pulse loads increased both peak temperature and resistance, while the recovery interval moved back toward the moderate-load response. The pulse condition reached 318 K, with a relaxation time of 13.1 minutes and a resistance of 22.6 mOhm; recovery reduced these measures to 306 K, 8.1 minutes, and 16.2 mOhm. These data show that the system retains a memory of the excursion even after its thermal maximum has passed. The adaptive ion-conducting phase reduced the persistence of resistance growth, consistent with a redistribution of ionic access during recovery."
+      },
+      {
+        "type": "paragraph",
+        "text": "The load response also clarifies why peak temperature alone is insufficient for assessing service stability. Two operating schedules with similar maxima may differ in the duration of elevated temperature and in the rate at which local concentration gradients relax. A useful comparison can consider a thermal exposure measure such as $\\Theta=\\int_0^{t_f}(T(t)-T_{ref})dt$, where $T_{ref}$ denotes a reference temperature over an interval ending at $t_f$. This quantity is not a replacement for the coupled model, but it highlights the distinction between a brief pulse and a sustained warm period. In combination with impedance and relaxation measurements, it helps relate a cell's operating record to the internal pathways that determine recovery."
+      },
+      {
+        "type": "paragraph",
+        "text": "The coupled pathways are represented in \\ref{fig:diagram}: reaction heat shapes the thermal field, temperature influences ion transport and adaptive-phase response, and stress develops alongside these changes. Feedback from transport and stress to reaction activity completes the operating picture. The diagram emphasizes that the electrode does not pass through a simple sequence of independent states. Instead, transport and mechanics can alter the conditions under which subsequent reaction heat is generated. The framework is consistent with the measured correspondence among voltage relaxation, temperature evolution, and impedance trends, while leaving room for local contact effects not resolved by the effective-medium model."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "5. Mechanical response, interpretation, and limitations"
+      },
+      {
+        "type": "paragraph",
+        "text": "Thermal expansion and local concentration changes generated small but measurable thickness strains. The lowest strain values occurred in the same intermediate porosity region that produced the strongest capacity retention. The compliant phase absorbed part of the mismatch between the carbon scaffold and ion-conducting regions, reducing the accumulation of interfacial stress. A simple comparison of measured strain with the response trend can be expressed as $\\epsilon_m=\\Delta h/h_0$, where $h_0$ is the initial thickness and $\\Delta h$ is its change. The result is not a complete description of stress, since local constraint and pore connectivity also matter, but it provides a consistent indicator across the tested cells. The alignment of strain, impedance, and retention trends suggests that mechanical accommodation contributes to durability alongside thermal management."
+      },
+      {
+        "type": "paragraph",
+        "text": "A key interpretation is that thermal-aware pore design should be optimized for the operating envelope rather than a single nominal current. The best-performing condition in the matched-current sweep also showed favorable behavior under the variable-load protocol, but high and pulse segments still produced localized activity and measurable resistance growth. This is expected: adaptive transport can moderate local gradients, yet cannot prevent heat generation when the applied load exceeds the cell's ability to spread and dissipate energy. A system-level design must therefore coordinate electrode porosity with enclosure cooling, control limits, and the scheduling of recovery intervals. These considerations are particularly relevant to grid storage, where the duty cycle may vary with dispatch requirements."
+      },
+      {
+        "type": "paragraph",
+        "text": "The model assumes a continuous effective-medium description within each porous region and does not resolve every individual pore connection. It also uses a controlled cell geometry rather than the full range of thermal boundary conditions present in a module. Surface-temperature measurements cannot identify every internal temperature maximum, and local contact resistance introduces uncertainty into comparisons at the extremes of the porosity range. Further evaluation should include larger assemblies, longer storage holds, and broader ambient-temperature histories. Measurements that resolve through-thickness temperature and local strain would help separate the contribution of pore-scale transport from that of the compliant phase. Such work would also test whether the intermediate design window remains broad when electrode thickness and cooling conditions change."
+      },
+      {
+        "type": "paragraph",
+        "text": "The study's evidence is strongest when multiple measurements are considered together. Capacity retention identifies accumulated loss, impedance indicates changes in transport and contact pathways, relaxation reflects the response after load removal, and strain gives a mechanical measure of the evolving structure. No single quantity fully captures the coupled state. For instance, a low peak temperature can coexist with rising resistance if scaffold continuity is compromised, while a temporary resistance increase can partly reverse during recovery. The combined framework enables these behaviors to be interpreted within one physical account. The central design implication is therefore a coordinated balance: maintain distributed ionic access, avoid excessive thermal concentration, and preserve sufficient mechanical and electronic continuity."
+      },
+      {
+        "type": "box",
+        "kind": "remark",
+        "title": "Design implication",
+        "text": "The tested results support an intermediate porosity range as a robust starting point for graded porous electrodes. Final selection should account for the cell's thermal boundary conditions and load schedule, and should be verified through capacity, impedance, relaxation, and strain measurements together."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "6. Conclusion"
+      },
+      {
+        "type": "paragraph",
+        "text": "A thermally adaptive porous electrode can balance ionic access, heat spreading, and mechanical compliance during variable storage operation. The coupled model and cell measurements identify an intermediate porosity window in which peak temperature, impedance growth, strain, and capacity loss are jointly reduced. The adaptive ion-conducting phase moderates the persistence of resistance growth after elevated-load intervals, while the graded carbon scaffold preserves a connected electronic pathway. The results support thermal-aware pore grading as a practical design strategy for durable modular energy storage, without requiring a substantial increase in electrode thickness."
+      },
+      {
+        "type": "paragraph",
+        "text": "The broader value of the framework is its connection of thermal, electrochemical, and structural observations. Temperature-dependent transport helps explain relaxation behavior; the durability model links thermal history to capacity retention; and measured strain provides evidence that mechanical accommodation accompanies the transport benefit. The strongest agreement between model and cell measurements occurs in the intermediate designs, where local effects are less dominant. Future work should extend this analysis to module-scale assemblies and longer operating histories, with particular attention to cooling boundaries and intermittent high-power demand. Within the conditions examined here, graded porosity and a compliant adaptive phase offer a balanced route toward stable operation."
+      }
+    ]
+  },
+  "hash": "12445ed3a864ff84c82752bdff57ec2be6da805698bc9c51a227e035a871101b"
+}

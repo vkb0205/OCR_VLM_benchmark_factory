@@ -1,0 +1,445 @@
+{
+  "front": {
+    "title": "Submesoscale Vortex Exchange Across a Seasonally Stratified Shelf Break",
+    "authors": [
+      {
+        "name": "Neris Caldrin",
+        "affiliations": [
+          1
+        ],
+        "corresponding": true,
+        "email": "neris.caldrin@thalorix-marine.org"
+      },
+      {
+        "name": "Oren Vael",
+        "affiliations": [
+          2
+        ]
+      },
+      {
+        "name": "Sava Merith",
+        "affiliations": [
+          1,
+          2
+        ]
+      }
+    ],
+    "affiliations": [
+      "Veyrane Institute for Marine Dynamics, Auralis Coast",
+      "Thalorix Centre for Coastal Observation, Merrow Basin"
+    ],
+    "abstract": "Mesoscale eddies crossing a stratified shelf break can redistribute heat, salt, and suspended material through pathways that are not captured by large-scale transport estimates. We examine how submesoscale filaments alter this exchange during the seasonal transition from weak to strong upper-ocean stratification. A coupled circulation and tracer framework is used to resolve the interaction between along-slope jets, frontal instabilities, and vortex cores. The results indicate that filament formation intermittently redirects offshore transport into narrow, rapidly evolving corridors, while rim-current shear controls the retention of water within the eddy interior. Vertical exchange is strongest when surface buoyancy loss coincides with enhanced curvature of the shelf-break front. The inferred transport pathways remain coherent over several turnover periods but reorganize after intense frontal deformation. These findings show that transient submesoscale structure regulates the timing and spatial distribution of cross-shelf exchange, with implications for heat storage, nutrient delivery, and the interpretation of sparse ocean observations.",
+    "abstract_alt": null,
+    "keywords": "ocean dynamics; shelf-break exchange; submesoscale filaments; mesoscale eddies; stratification; tracer transport",
+    "keywords_alt": null,
+    "journal": "Pelagic Process Letters",
+    "acknowledgement": "The authors acknowledge the coastal observing crews and the technical staff who supported instrument preparation, mooring recovery, and current-field processing. We also thank the early-career researchers who contributed to the discussion of frontal instability and tracer retention."
+  },
+  "formulas": [
+    {
+      "after": 6,
+      "element": {
+        "type": "equation",
+        "id": "eq:tracer_balance",
+        "latex": "\\frac{\\partial C}{\\partial t}+\\vec{u}\\cdot\\nabla C=-\\lambda C+K\\nabla^2 C",
+        "numbered": true
+      }
+    },
+    {
+      "after": 10,
+      "element": {
+        "type": "equation",
+        "id": "eq:cross_shelf_flux",
+        "latex": "\\begin{aligned}\\mathcal{F}_{\\mathrm{off}}&=\\int_{-H}^{0}\\rho\\vec{u}\\cdot\\vec{n}\\,dz\\\\\\mathcal{F}_{\\mathrm{along}}&=\\int_{-H}^{0}\\rho\\vec{u}\\cdot\\vec{t}\\,dz\\\\\\mathcal{R}&=\\frac{\\mathcal{F}_{\\mathrm{off}}}{\\mathcal{F}_{\\mathrm{along}}}\\end{aligned}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 14,
+      "element": {
+        "type": "equation",
+        "id": "eq:effective_richardson",
+        "latex": "\\mathrm{Ri}_{\\mathrm{eff}}=\\frac{N^2}{\\left(\\frac{\\partial U}{\\partial z}\\right)^2+\\epsilon}",
+        "numbered": true
+      }
+    }
+  ],
+  "tables": [
+    {
+      "after": 9,
+      "element": {
+        "type": "table",
+        "id": "tab:cross_shelf_metrics",
+        "caption": "Cross-shelf exchange metrics during frontal reorganization",
+        "header": [
+          [
+            "Run",
+            "Phase",
+            "Front speed",
+            "Core width",
+            "Offshore flux",
+            "Retention"
+          ]
+        ],
+        "rows": [
+          [
+            "A1",
+            "Early",
+            "0.18 m/s",
+            "12 km",
+            "184 units",
+            "0.62"
+          ],
+          [
+            "A2",
+            "Early",
+            "0.21 m/s",
+            "15 km",
+            "207 units",
+            "0.58"
+          ],
+          [
+            "B1",
+            "Transition",
+            "0.27 m/s",
+            "10 km",
+            "263 units",
+            "0.49"
+          ],
+          [
+            "B2",
+            "Transition",
+            "0.31 m/s",
+            "9 km",
+            "291 units",
+            "0.44"
+          ],
+          [
+            "C1",
+            "Late",
+            "0.24 m/s",
+            "14 km",
+            "238 units",
+            "0.55"
+          ],
+          [
+            "C2",
+            "Late",
+            "0.19 m/s",
+            "17 km",
+            "196 units",
+            "0.67"
+          ]
+        ],
+        "note": "Flux values are depth-integrated across the shelf-break section; retention is the fraction remaining within the rotating core after one turnover period."
+      }
+    },
+    {
+      "after": 15,
+      "element": {
+        "type": "table",
+        "id": "tab:tracer_persistence",
+        "caption": "Tracer pathway persistence across stratification states",
+        "header": [
+          [
+            "State",
+            "Stratification",
+            "Filament age",
+            "Vertical exchange",
+            "Pathway status"
+          ]
+        ],
+        "rows": [
+          [
+            "Weak",
+            "Low",
+            "18 h",
+            "Moderate",
+            "Diffuse"
+          ],
+          [
+            "Rising",
+            "Increasing",
+            "11 h",
+            "High",
+            "Narrow"
+          ],
+          [
+            "Peak",
+            "Strong",
+            "7 h",
+            "Very high",
+            "Coherent"
+          ],
+          [
+            "Relaxing",
+            "Declining",
+            "14 h",
+            "Moderate",
+            "Branching"
+          ],
+          [
+            "Mixed",
+            "Low",
+            "22 h",
+            "Low",
+            "Reorganized"
+          ]
+        ],
+        "note": "Filament age denotes the median duration from initial separation to loss of pathway coherence."
+      }
+    }
+  ],
+  "charts_figures": [
+    {
+      "after": 12,
+      "element": {
+        "type": "chart",
+        "id": "fig:chart",
+        "caption": "Offshore flux by frontal phase",
+        "chart_type": "bar",
+        "labels": [
+          "Early",
+          "Transition",
+          "Late"
+        ],
+        "series": [
+          {
+            "name": "Offshore flux",
+            "values": [
+              195.5,
+              277,
+              217
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "after": 18,
+      "element": {
+        "type": "figure",
+        "id": "fig:diagram",
+        "figure_type": "block_diagram",
+        "caption": "Block diagram of the submesoscale exchange pathway",
+        "description": "The shelf-break jet feeds frontal filament formation, which connects to the eddy core. Vertical exchange links the upper boundary and core; offshore export branches from the filament route, while rim-current retention circulates around the core. Frontal deformation reorganizes these connections.",
+        "labels": [
+          "Shelf-break jet",
+          "Frontal filament",
+          "Eddy core",
+          "Vertical exchange"
+        ]
+      }
+    }
+  ],
+  "code": [],
+  "references": [
+    {
+      "text": "[1] Talen Orris, \"Filament-mediated exchange at sloping density fronts,\" Journal of Pelagic Kinematics, 2186, 41-58.",
+      "cite": "Orris (2186)"
+    },
+    {
+      "text": "[2] Mira Veylan and Otho Renn, \"Retention and release in curved shelf-break vortices,\" Annals of Rotating Margins, 2188, 77-96.",
+      "cite": "Veylan and Renn (2188)"
+    },
+    {
+      "text": "[3] Sera Dovik, Iven Raal, and Pera Noll, \"Tracer pathways under seasonal buoyancy forcing,\" Coastal Vector Dynamics, 2189, 12-29.",
+      "cite": "Dovik et al. (2189)"
+    },
+    {
+      "text": "[4] Kalen Aru, \"Diagnosing vertical exchange from rim-current shear,\" Letters in Marine State Transitions, 2190, 101-119.",
+      "cite": "Aru (2190)"
+    },
+    {
+      "text": "[5] Elian Vorq and Nema Sorel, \"Curvature-driven transport across intermittent shelf fronts,\" Oceanic Flow Regimes, 2187, 203-221.",
+      "cite": "Vorq and Sorel (2187)"
+    },
+    {
+      "text": "[6] Yara Pellin, Daro Quen, and Sol Varek, \"Seasonal modulation of submesoscale filament lifetimes,\" Journal of Stratified Sea Processes, 2191, 55-74.",
+      "cite": "Pellin et al. (2191)"
+    },
+    {
+      "text": "[7] Orel Tavin and Cessa Morn, \"Cross-slope leakage from translating mesoscale vortices,\" Pelagic Transport Mechanics, 2188, 145-163.",
+      "cite": "Tavin and Morn (2188)"
+    },
+    {
+      "text": "[8] Neris Caldrin, Oren Vael, and Sava Merith, \"Rim-current control of tracer retention near a shelf break,\" Pelagic Process Letters, 2191, 88-106.",
+      "cite": "Caldrin et al. (2191)"
+    },
+    {
+      "text": "[9] Ilya Dornet, Fera Lusk, and Mavin Orrel, \"Buoyancy loss and frontal overturning in coastal transition zones,\" Marine Stability Reports, 2192, 9-27.",
+      "cite": "Dornet et al. (2192)"
+    },
+    {
+      "text": "[10] Pavan Elt and Rina Vossel, \"Along-slope jets and the geometry of offshore export,\" Shelf Dynamics Quarterly, 2187, 318-337.",
+      "cite": "Elt and Vossel (2187)"
+    },
+    {
+      "text": "[11] Tessa Ruun, Ovik Seln, and Jalen Pire, \"Lagrangian measures of pathway coherence in rotating flows,\" Advances in Oceanic Kinematics, 2190, 166-185.",
+      "cite": "Ruun et al. (2190)"
+    },
+    {
+      "text": "[12] Meris Vaun and Koro Dalen, \"Vertical exchange thresholds across seasonally layered fronts,\" Journal of Coastal Fluid Structure, 2192, 62-81.",
+      "cite": "Vaun and Dalen (2192)"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "1. Framing the exchange problem"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cross-shelf exchange at a seasonally stratified shelf break is not adequately described by a single mean transport. A translating eddy can carry water toward the slope, along the front, or offshore, while narrow filaments repeatedly alter the connections among these pathways. The proposed sequence, summarized by the pathway schematic in \\ref{fig:diagram}, treats the shelf-break jet as an upstream source, frontal deformation as a route-forming process, and the eddy core as a temporary reservoir. This organization is consistent with the view that filament geometry determines where exchange occurs, whereas vortex curvature determines how long displaced water remains associated with the circulation \\cite{1}. The cross-shelf metrics in \\ref{tab:cross_shelf_metrics} provide a complementary diagnostic because they place offshore flux and core retention on the same run-by-run basis. The phase-average flux trend in \\ref{fig:chart} and pathway states in \\ref{tab:tracer_persistence} also frame the seasonal comparison. The tracer balance, section-flux definition, and shear-stability measure are formalized in \\ref{eq:tracer_balance}, \\ref{eq:cross_shelf_flux}, and \\ref{eq:effective_richardson}, respectively. In this setting, exchange efficiency is a dynamical property of the evolving front rather than a fixed characteristic of the shelf break. Curvature-driven export is especially important when a translating vortex intersects a sloping density field, since the intersection creates a moving zone in which along-slope momentum can be converted into offshore displacement \\cite{2,5,7}."
+    },
+    {
+      "type": "paragraph",
+      "text": "The central question is therefore temporal: when does the front create an efficient corridor, and when does the eddy recover control over the transported water? A useful first scale is the advective interval $T=L/U$, where $L$ is the width of the active frontal zone and $U$ is the characteristic speed. If filament formation and decay both occur within this interval, a seasonal mean can conceal alternating episodes of export and retention. The same difficulty arises when a jet translates relative to a vortex, because the section-integrated flux may remain positive even as individual parcels reverse direction. We consequently distinguish instantaneous transport from pathway persistence. A corridor that carries substantial mass for only a few hours can have a greater influence on offshore delivery than a broad, weak current maintained over several days. Along-slope jets also establish the orientation of the density front, so their geometry affects the normal vector used to define offshore motion \\cite{10}."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "1.1 Dynamical questions"
+    },
+    {
+      "type": "paragraph",
+      "text": "Three questions guide the analysis. First, does the seasonal increase in upper-ocean stratification narrow the exchange pathway or merely sharpen its tracer contrast? Second, does enhanced filament production increase net offshore transport at the cost of eddy retention? Third, can vertical exchange replenish a filament after its surface signal begins to disperse? These questions connect Lagrangian pathway coherence with Eulerian flux diagnostics. A route is considered dynamically consequential when it persists through successive frontal states, carries a measurable tracer contrast, and remains connected to either the jet or the vortex interior. Seasonal modulation can shorten the lifetime of a filament while increasing the number of filaments formed, producing high turnover without stable visual continuity \\cite{3,6}. The coherence criterion also follows from trajectory-based measures in rotating flows, where persistence is assessed from the survival of connected parcel groups rather than from the position of a single contour \\cite{11}."
+    },
+    {
+      "type": "paragraph",
+      "text": "The study focuses on the transition from weak to strong stratification and the subsequent relaxation toward a mixed state. This interval is useful because buoyancy forcing, frontal curvature, and rim-current shear change on comparable timescales. A surface buoyancy loss can erode the upper density gradient, but the resulting overturning need not destroy the front; under suitable curvature, it can instead intensify cross-front exchange by bringing subsurface water into the filament pathway. We therefore treat stratification as a control on vertical communication, not simply as a barrier to vertical motion. The analysis retains the distinction between a filament's age and its pathway coherence: an old filament may remain visible while no longer connecting the jet to the eddy, whereas a young filament may rapidly establish a continuous offshore route. This distinction is important when sparse observations are interpreted as evidence for either persistent transport or repeated renewal. The relation between buoyancy loss and frontal overturning motivates the forcing sequence used below \\cite{9,12}. \\fn{Turnover time refers to the interval required for water near the rim to complete one circuit around the rotating core.}"
+    },
+    {
+      "type": "paragraph",
+      "text": "A scale comparison helps separate the relevant regimes. The horizontal Rossby number $Ro=U/(fL)$ measures the importance of relative rotation, while the horizontal Froude number $Fr=U/(NL)$ compares advection with stratification. Neither number is constant through the transition because both $U$ and $N$ vary as the front deforms. When $Ro$ increases locally, curvature and strain can create narrow secondary structures even if the broad eddy remains coherent. When $Fr$ decreases, vertical displacement is more strongly opposed by the density field, yet the same layering can focus horizontal transport into a thin corridor. The combined response is consequently nonmonotonic: stronger stratification may suppress diffuse vertical spreading while concentrating exchange at a few intense interfaces. This provides a dynamical basis for examining offshore flux, retention, and vertical exchange together rather than treating them as separate outcomes."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "2. Coupled circulation and tracer framework"
+    },
+    {
+      "type": "paragraph",
+      "text": "The circulation and tracer components are integrated on a common shelf-break domain containing an along-slope current, a frontal interface, and a coherent vortex that intersects the front. Horizontal resolution is concentrated across the frontal zone so that filament width and curvature can evolve without being replaced by a broad mean gradient. The vertical coordinate extends through the active layer and includes the depth range over which the rim current exchanges water with the upper boundary. A passive tracer is initialized across the interface and within the eddy rim, allowing lateral displacement to be distinguished from loss caused by diffusion or removal. The concentration field follows the balance represented by \\ref{eq:tracer_balance}, in which advection competes with linear loss and horizontal spreading. This construction follows established tracer-pathway reasoning while retaining the circulation features needed to diagnose rim-current control \\cite{3,8}. The tracer is not used as a direct proxy for mass; instead, it identifies the continuity and fate of water parcels carried by the resolved flow."
+    },
+    {
+      "type": "paragraph",
+      "text": "The numerical integration advances velocity, density-related stratification, and tracer concentration through a sequence of forcing states. Surface buoyancy loss is imposed during the transition interval, then reduced during relaxation. The along-slope current is maintained sufficiently long for the vortex to translate relative to the front, while the vortex amplitude is allowed to respond to rim-current shear. We record the position of the front, the width of the coherent core, and the cross-front displacement of tracer contours at every diagnostic time. A pathway is retained in the analysis only when its connected tracer region intersects successive frontal states; isolated patches are treated as dispersed remnants. This rule avoids assigning transport significance to a concentration maximum that has become detached from the main exchange route. The distinction between curvature-driven export and background advection is particularly important because a strong along-slope speed can produce large section transport without producing substantial offshore motion \\cite{2,10}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Diffusive broadening is evaluated relative to advective stretching through the Péclet number $Pe=UL/K$, with $K$ denoting the effective horizontal diffusivity. Large $Pe$ favors thin, elongated filaments, whereas smaller $Pe$ causes the tracer signal to broaden before the circulation has completed a turnover. The concentration decay time is also compared with the local strain time. If $T_{\\mathrm{loss}}=1/\\lambda$ is short, a pathway may remain dynamically active after its tracer contrast has weakened; if loss is slow, the tracer can obscure the distinction between a current-connected filament and a recirculated remnant. In practice, the pathway classification uses both geometry and concentration history. We track the maximum concentration, the connected area above a relative threshold, and the displacement of the connected centroid. These measures give a more reliable account of transport than a single instantaneous image, especially during the rapid deformation that follows frontal sharpening."
+    },
+    {
+      "type": "paragraph",
+      "text": "The section diagnostics are defined with outward and along-front unit vectors, so that the fluxes separate transport normal to the shelf break from transport parallel to it. In compact form, $F_{\\mathrm{off}}=\\int_{-H}^{0}\\rho\\vec{u}\\cdot\\vec{n}\\,dz$ and $F_{\\mathrm{along}}=\\int_{-H}^{0}\\rho\\vec{u}\\cdot\\vec{t}\\,dz$, while the ratio $R=F_{\\mathrm{off}}/F_{\\mathrm{along}}$ measures the relative importance of offshore export. These definitions correspond to \\ref{eq:cross_shelf_flux}. Positive $F_{\\mathrm{off}}$ denotes a net offshore tendency under the chosen orientation, but it does not imply that every depth level moves offshore. Counterflow is expected near the surface and lower edge of the active layer when the front tilts. We therefore retain the depth-integrated values alongside vertical profiles, allowing a large net flux to be traced to a particular layer rather than attributed to the full water column. The diagnostic design follows the geometry-based approach to offshore export described in \\cite{10} and the retention framework developed for curved vortices \\cite{2}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Uncertainty is assessed by repeating the integration with modest changes to the initial front position, the tracer release width, and the timing of buoyancy loss. These perturbations do not represent independent realizations of an external environment; they test whether the ordering of phases is robust to plausible preparation differences. The primary outcome is considered stable when the transition interval retains the highest offshore flux and the lowest core retention in all perturbation runs. We also compare pathways using normalized time, $t/T$, rather than clock time alone. This normalization makes it possible to identify whether a route persists for a fixed fraction of a circulation period even when the absolute turnover duration changes. The approach is compatible with seasonal filament-lifetime estimates, which emphasize the distinction between rapid renewal and long residence \\cite{6}."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "3. Seasonal forcing and filament formation"
+    },
+    {
+      "type": "paragraph",
+      "text": "At the start of the forcing sequence, weak upper-ocean stratification permits tracer to occupy a broad layer around the front. The along-slope jet remains identifiable, but its boundary with the eddy is diffuse and the filament signal is distributed across several adjacent contours. As surface buoyancy loss and front curvature increase, the interface contracts into a narrower zone. The contraction does not simply reduce exchange; it concentrates the normal velocity and increases the contrast between connected and disconnected tracer. A useful buoyancy measure is $B=-g\\alpha Q$, where $Q$ denotes the imposed surface heat flux and $\\alpha$ is the expansion coefficient under the chosen sign convention. The magnitude of $B$ controls the rate at which the upper layer changes, while the spatial alignment of $B$ with front curvature determines whether the response favors vertical exchange or lateral export. This interaction links the forcing sequence to the overturning mechanism reported for coastal transition zones \\cite{9}."
+    },
+    {
+      "type": "paragraph",
+      "text": "During the rising-stratification phase, frontal strain stretches the interface along the direction of the jet and folds it toward the eddy rim. The first filaments are broad enough to contain appreciable tracer but narrow enough to respond to local curvature. As the front sharpens, secondary filaments detach from the primary interface and move offshore in pulses. Their apparent speed is not identical to the speed of the water within them: a phase line can propagate through a nearly stationary parcel field, while a parcel can cross the section without remaining inside the visible filament. We therefore identify formation from connected deformation and diagnose transport from integrated velocity. This distinction prevents front displacement from being confused with material export. It also explains why a narrow pathway can have a large flux even when its geometric width is small. The curvature mechanism is consistent with the intermittent exchange described in \\cite{5}."
+    },
+    {
+      "type": "paragraph",
+      "text": "The seasonal sequence produces a balance between pathway concentration and pathway renewal. At peak stratification, the active filament is narrow and coherent, but its median age is short because new filaments replace older ones as the front continues to strain. During relaxation, the density interface broadens and the route branches. Branching increases the area occupied by tracer while reducing the clarity of the principal offshore connection. The pathway status in \\ref{tab:tracer_persistence} is therefore interpreted as a sequence of geometric states rather than a simple ranking from weak to strong. In particular, a diffuse state can contain substantial tracer, and a coherent state can contain less total tracer while providing a more direct connection between the jet and offshore water. This behavior agrees with the seasonal modulation of filament lifetimes described in \\cite{6}."
+    },
+    {
+      "type": "box",
+      "kind": "remark",
+      "title": "Interpretive constraint",
+      "text": "A short filament age should not be read as rapid tracer loss alone. It can indicate rapid replacement of one connected route by another, especially when the frontal strain rate is high and the eddy rim is simultaneously losing its ability to recapture exported water."
+    },
+    {
+      "type": "paragraph",
+      "text": "The phase relationship between buoyancy forcing and deformation is more consequential than either quantity considered independently. If surface cooling occurs before the front reaches maximum curvature, vertical exchange may precede strong offshore export and leave the filament relatively weak. If cooling coincides with maximum curvature, subsurface water is delivered directly into a narrow route, increasing both vertical exchange and offshore tracer displacement. If cooling follows frontal relaxation, the response is mainly a broadening of the upper layer with limited pathway continuity. This timing dependence suggests that seasonal state labels should be supplemented by local measures of front curvature and strain. It also provides a mechanism for interpreting apparently contradictory observations in which strong stratification coincides with both suppressed diffuse mixing and enhanced exchange along a few concentrated corridors \\cite{9,12}."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "4. Cross-shelf transport and retention"
+    },
+    {
+      "type": "paragraph",
+      "text": "The run sequence reveals a clear separation between export and storage. Early conditions support moderate offshore flux while the eddy retains a relatively large fraction of water within its rotating core. During transition, the front accelerates and the core narrows, producing the strongest offshore values and the weakest retention. In the late phase, the front slows, the core widens, and retention rises even though offshore transport remains appreciable. This ordering is visible in the metric set referenced by \\ref{tab:cross_shelf_metrics}; it is not inferred from a single tracer contour. The corresponding phase-average flux trend is also summarized by \\ref{fig:chart}. Together, these references establish that maximum export occurs during reorganization rather than at the beginning or end of the seasonal sequence. The result supports a two-control interpretation: front speed and curvature regulate how much water leaves the shelf-break section, while rim-current shear regulates whether that water can be recovered by the vortex \\cite{2,8}."
+    },
+    {
+      "type": "paragraph",
+      "text": "The ratio $R=F_{\\mathrm{off}}/F_{\\mathrm{along}}$ increases when the normal component grows faster than the along-front component. Such an increase can occur through stronger cross-front velocity, reduced along-slope transport, or a rotation of the current vector as the front bends. The ratio therefore has to be read with the two component fluxes rather than as an isolated efficiency number. In the transition phase, the offshore rise is accompanied by a reduction in core retention, indicating that the current vector rotates toward export while the rim barrier becomes permeable. In the late phase, a slower front and wider core allow recirculation to regain importance. The vortex then acts less as a source of leakage and more as a storage region. This interpretation is consistent with cross-slope leakage from translating vortices, where displacement depends on the relative motion between the vortex and the surrounding front \\cite{7}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Retention is evaluated after one turnover period, which makes it sensitive to both the initial position of tracer and the rate of rim-current deformation. A water parcel can leave the core rapidly and later return, so a single crossing event does not establish permanent export. Conversely, a parcel that remains within the core for one turnover may still be destined for release after the rim current weakens. The retention measure therefore captures short-term containment rather than indefinite residence. Its greatest value lies in comparison across phases, where the same diagnostic interval exposes the loss of confinement during frontal reorganization. The minimum retention during the transition is especially informative because it occurs while the offshore flux is largest. Export and storage are thus not opposing summaries of one conserved pool; they describe different parts of the pathway, with the former emphasizing passage through the section and the latter emphasizing residence within the vortex."
+    },
+    {
+      "type": "paragraph",
+      "text": "The pathway schematic in \\ref{fig:diagram} helps explain why a large offshore flux need not imply complete destruction of the eddy. The shelf-break jet feeds the filament, the filament carries part of the flow beyond the section, and the rim current continues to circulate the remainder around the core. Vertical exchange can connect the upper boundary to the core without requiring all of that exchanged water to move offshore. Frontal deformation changes the conductance of each connection. When the filament is narrow and strongly curved, the offshore branch dominates; when the rim current strengthens relative to the front, the retention branch becomes more effective. This network interpretation extends the geometric account of vortex release in \\cite{2} and the jet-oriented account of offshore export in \\cite{10}."
+    },
+    {
+      "type": "paragraph",
+      "text": "A further consequence is that phase-averaged transport can conceal alternating signs at individual depths. Surface layers may export while deeper layers move along the slope or return toward the eddy. The depth integral remains valuable because it measures the net exchange relevant to a section budget, but vertical structure is required to determine whether the transport is likely to affect heat storage, salt redistribution, or suspended material at depth. We therefore interpret the integrated metric as a constraint on total exchange and use the tracer pathway as an indicator of where that exchange is organized. This combined view also reduces the risk of assigning a persistent role to a transient surface feature that has no corresponding subsurface connection."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "5. Vertical exchange and stratification states"
+    },
+    {
+      "type": "paragraph",
+      "text": "Vertical exchange changes most strongly when stratification and shear evolve on comparable timescales. We diagnose local stability with $Ri_{\\mathrm{eff}}=N^2/((\\partial U/\\partial z)^2+\\epsilon)$, the quantity defined in \\ref{eq:effective_richardson}. The small positive term $\\epsilon$ prevents a singular value where shear is weak, while preserving the contrast between strongly stratified and strongly sheared regions. A high value indicates that stratification dominates the local shear scale, but it does not by itself imply weak vertical transport. Vertical motion can remain concentrated along a curved front, where ageostrophic adjustment and buoyancy forcing create localized pathways. Conversely, a lower value may indicate vigorous shear without sustained connection between the upper boundary and the eddy core. The effective indicator is therefore interpreted alongside tracer continuity and the phase of frontal deformation, following the rim-current shear perspective in \\cite{4}."
+    },
+    {
+      "type": "paragraph",
+      "text": "The state sequence shows that vertical exchange is moderate under weak stratification, rises as stratification increases, reaches a maximum near peak organization, and then declines during relaxation. This pattern may appear counterintuitive if stratification is treated only as a suppression mechanism. The explanation is geometric: stronger layering confines motion into a smaller number of interfaces, and curvature aligns those interfaces with the vertical branches of the exchange pathway. At peak organization, the tracer route is coherent enough to transmit the effect of surface forcing into the core, even though diffuse vertical spreading is reduced. Once the front relaxes, the connection branches and the same forcing is distributed over a larger region. The state classification in \\ref{tab:tracer_persistence} thus records a change in pathway architecture, not merely a change in mixing intensity. The threshold behavior is consistent with vertical exchange transitions across layered fronts \\cite{12}."
+    },
+    {
+      "type": "paragraph",
+      "text": "The tracer response can be summarized through the concentration variance $\\sigma_C^2=\\langle C^2\\rangle-\\langle C\\rangle^2$. A rising variance indicates that connected high-concentration pathways coexist with low-concentration surroundings, whereas a declining variance may reflect either homogenization or loss from the domain. We separate these possibilities by tracking the connected area and the integrated tracer mass. During peak stratification, variance rises while connected area contracts, indicating concentration into coherent filaments rather than simple accumulation. During relaxation, variance falls as the route branches and the signal spreads. In the mixed state, low vertical exchange and reorganized pathways produce a broad, weak contrast. This diagnostic helps distinguish actual pathway coherence from a broad tracer field that merely retains a high domain-average concentration."
+    },
+    {
+      "type": "paragraph",
+      "text": "Rim-current shear has two competing effects. Moderate shear can sharpen the boundary between core and exterior, preserving a recognizable rotating interior while guiding tracer along the edge. Stronger or more rapidly varying shear can tear material from that boundary and prevent recapture. The relevant quantity is therefore the integrated history of shear, not its instantaneous maximum. A parcel exposed briefly to strong shear may leave the core but later be returned by the mean circulation; a parcel exposed to persistent moderate shear may be steadily displaced offshore. This temporal distinction explains why one-turnover retention and filament age provide complementary information. The former measures containment over a common interval, while the latter measures the duration of route coherence. The relationship between these measures supports the conclusion that rim-current control is central to tracer fate \\cite{4,8}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Vertical exchange also affects the interpretation of heat and salt transport. A filament that reaches offshore waters near the surface can modify the local buoyancy budget immediately, whereas a filament that connects to the core may store its anomaly until later release. The timing of this storage matters because the core continues to translate while the seasonal forcing changes. Thus, a modest instantaneous offshore flux can still have a substantial delayed effect if it transfers buoyancy into a reservoir with a longer residence time. Conversely, a large transition flux may have a shorter climatic or ecological influence if the exported anomaly is rapidly diluted. The coupled circulation-tracer framework is designed to retain this distinction between transfer rate and residence time, which cannot be recovered from a section-integrated flux alone."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "6. Implications and conclusions"
+    },
+    {
+      "type": "paragraph",
+      "text": "The results support a view of shelf-break exchange as a sequence of reorganizing pathways rather than a stationary conveyor. During the early phase, the eddy core retains water effectively and offshore export is moderate. During transition, curvature and frontal strain create narrow corridors that carry the strongest offshore signal, while rim-current shear reduces containment. During relaxation, the front branches and the vortex recovers part of its storage function. The seasonal progression therefore changes both the magnitude and the location of exchange. This result is compatible with filament-mediated transport \\cite{1}, curvature-driven export \\cite{5}, translating-vortex leakage \\cite{7}, and pathway-coherence diagnostics \\cite{11}. It also clarifies why mean circulation estimates can understate the importance of brief events: a short-lived corridor can dominate the integrated export if its normal velocity and tracer contrast are sufficiently large."
+    },
+    {
+      "type": "paragraph",
+      "text": "The principal implication for observation is that position alone is insufficient. A front observed at the same location on two successive surveys may represent a persistent pathway, a renewed filament, or a dispersed remnant. Distinguishing these states requires measurements of velocity orientation, stratification, tracer contrast, and the relation of the feature to the vortex rim. In particular, sparse observations should be interpreted with a turnover-time framework, because a feature may change substantially during one circulation period. The metric set in \\ref{tab:cross_shelf_metrics}, the pathway states in \\ref{tab:tracer_persistence}, and the transport architecture in \\ref{fig:diagram} together offer a practical structure for that interpretation. The chart reference \\ref{fig:chart} further emphasizes that the largest phase-average flux occurs during a transient interval, not necessarily during the season with the greatest mean current."
+    },
+    {
+      "type": "paragraph",
+      "text": "Several limitations define the scope of the conclusions. The tracer is passive, so feedback from suspended material or biological activity is not represented. The removal coefficient is a compact representation of unresolved loss and may combine several physical processes. The active layer is also finite, meaning that exchange below the diagnosed depth range is not included in the section budget. In addition, the forcing sequence imposes a controlled ordering of buoyancy loss and frontal deformation, whereas natural events may overlap irregularly. These limitations do not remove the dynamical result, but they caution against treating the reported phase values as universal constants. The robust finding is the ordering of processes: concentrated filament formation coincides with enhanced export, reduced retention, and strong vertical communication when forcing and curvature are aligned."
+    },
+    {
+      "type": "paragraph",
+      "text": "The analysis suggests three priorities for future field programs. First, velocity observations should resolve both the along-slope jet and the rim current, since their difference determines whether a front-connected parcel is exported or recaptured. Second, stratification profiles should be collected near filament heads and along the vortex boundary, where the effective stability measure changes most rapidly. Third, repeated tracer or temperature mapping should be timed to the expected turnover interval rather than separated only by fixed calendar periods. These priorities follow from the observation that pathway age, coherence, and retention are distinct quantities. They also build on the role of buoyancy loss in frontal overturning \\cite{9}, the seasonal control of filament lifetimes \\cite{6}, and the threshold behavior of vertical exchange \\cite{12}."
+    },
+    {
+      "type": "paragraph",
+      "text": "In conclusion, submesoscale filaments regulate shelf-break exchange by linking three processes that are often diagnosed separately: along-slope advection, cross-front export, and eddy-core storage. Their formation concentrates transport into narrow corridors, their deformation determines whether those corridors remain connected, and their interaction with rim-current shear sets the fraction of water retained after a turnover. Vertical exchange is strongest when stratification, buoyancy forcing, and curvature are synchronized, not simply when any one of them reaches an extreme. The resulting pathways can remain coherent across several circulation periods yet reorganize abruptly after intense frontal deformation. A transport estimate that omits this timing may capture the net sign while missing the mechanism and spatial distribution of exchange. The combined diagnostics, interpreted through \\ref{eq:tracer_balance}, \\ref{eq:cross_shelf_flux}, and \\ref{eq:effective_richardson}, provide a unified basis for connecting tracer observations to ocean dynamics \\cite{3,4,8}."
+    }
+  ]
+}

@@ -1,0 +1,838 @@
+{
+  "front": {
+    "title": "A Variational Theory of Soil–Machine Interaction Under Spatially Distributed Field Resistance",
+    "authors": [
+      {
+        "name": "Elian Veyr",
+        "affiliations": [
+          1,
+          2
+        ],
+        "corresponding": true,
+        "email": "elian.veyr@terralume-agro.org"
+      },
+      {
+        "name": "Maris Quenlo",
+        "affiliations": [
+          1
+        ],
+        "corresponding": false
+      },
+      {
+        "name": "Tovan Rellis",
+        "affiliations": [
+          2
+        ],
+        "corresponding": false
+      }
+    ],
+    "affiliations": [
+      "Department of Agricultural Mechanics, Terralume Institute of Agro-Systems",
+      "Centre for Soil Process Theory, Veylan Polytechnic of Rural Engineering"
+    ],
+    "abstract": "Agricultural machinery operates across fields in which soil resistance varies with moisture, texture, and recent traffic. This study develops a theoretical framework for describing the coupled response of a traction unit and a deformable soil surface when resistance is distributed in space rather than treated as a uniform parameter. The formulation links local shear demand, sinkage tendency, wheel load transfer, and longitudinal motion through a variational description of admissible machine states. A resistance functional is introduced to represent gradual transitions between compacted and less disturbed zones, while a regularity condition ensures that predicted trajectories remain physically coherent across abrupt field boundaries. The resulting theory identifies dimensionless groups governing traction stability, energy dissipation, and sensitivity to spatial heterogeneity. Analysis of limiting cases shows that uniform-resistance formulations arise as a special condition, whereas strong heterogeneity produces delayed load redistribution and localized losses in drawbar efficiency. The framework provides a basis for comparing machine configurations and for designing field-operation strategies that account for soil structure as a continuously evolving mechanical environment.",
+    "abstract_alt": null,
+    "keywords": "agricultural engineering; soil–machine interaction; spatial heterogeneity; traction theory; variational mechanics; drawbar efficiency",
+    "keywords_alt": null,
+    "journal": "Annals of Terralume Agricultural Engineering",
+    "acknowledgement": "The authors acknowledge the Soil Dynamics Laboratory of the Terralume Institute of Agro-Systems for technical discussions concerning continuum descriptions of field resistance."
+  },
+  "formulas": [
+    {
+      "after": 0,
+      "element": {
+        "type": "equation",
+        "id": "eq:variational-functional",
+        "latex": "J[x,s]=\\sum_{i=1}^{n}\\left(\\frac{1}{2}m(\\partial_t x_i)^2-R_i\\right)\\Delta t",
+        "numbered": true
+      }
+    },
+    {
+      "after": 1,
+      "element": {
+        "type": "equation",
+        "id": "eq:distributed-resistance",
+        "latex": "R=\\sum_{i=1}^{n}\\left(r_{s,i}\\frac{s_i^2}{2}+r_{c,i}\\frac{(\\partial_xs_i)^2}{2}\\right)\\Delta x",
+        "numbered": true
+      }
+    },
+    {
+      "after": 2,
+      "element": {
+        "type": "equation",
+        "id": "eq:state-kinematics",
+        "latex": "\\partial_t x(t)=v(t), m\\partial_t v(t)=F_d(t)-F_r(x,s)",
+        "numbered": true
+      }
+    },
+    {
+      "after": 3,
+      "element": {
+        "type": "equation",
+        "id": "eq:sinkage-response",
+        "latex": "s(x)=s_0(x)+\\frac{lq(x)}{k(x)+lq(x)}s_{max}(x)",
+        "numbered": true
+      }
+    },
+    {
+      "after": 4,
+      "element": {
+        "type": "equation",
+        "id": "eq:load-transfer",
+        "latex": "N_f+N_r=mg, N_f-N_r=\\frac{mh}{L}\\partial_t v_x",
+        "numbered": true
+      }
+    },
+    {
+      "after": 5,
+      "element": {
+        "type": "equation",
+        "id": "eq:traction-admissibility",
+        "latex": "M(x)=u(x,s)N(x)-\\left|F_t(x)\\right|, u(x,s)=u_0(x)\\exp\\left(-\\frac{s(x)}{s_c(x)}\\right)",
+        "numbered": true
+      }
+    },
+    {
+      "after": 6,
+      "element": {
+        "type": "equation",
+        "id": "eq:regularity-condition",
+        "latex": "\\sum_{i=1}^{n}(\\partial_x r_i)^2\\Delta x=G, r(x)=a(x)^2",
+        "numbered": true
+      }
+    },
+    {
+      "after": 7,
+      "element": {
+        "type": "equation",
+        "id": "eq:dimensionless-groups",
+        "latex": "PR=\\frac{r_0L}{mg}, PH=\\frac{L}{l_h}, PI=\\frac{v_0^2}{gL}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 8,
+      "element": {
+        "type": "equation",
+        "id": "eq:drawbar-efficiency",
+        "latex": "e_d=\\frac{\\sum_{i=1}^{n}F_{d,i}v_i}{\\sum_{i=1}^{n}(F_{d,i}+F_{r,i})v_i}, \\mathrm{denominator}\\neq0",
+        "numbered": true
+      }
+    }
+  ],
+  "tables": [
+    {
+      "after": 3,
+      "element": {
+        "type": "table",
+        "id": "tab:regime-response",
+        "caption": "Dimensionless response across spatial resistance regimes",
+        "header": [
+          [
+            {
+              "text": "Resistance regime"
+            },
+            {
+              "text": "Heterogeneity scale"
+            },
+            {
+              "text": "Pi_R"
+            },
+            {
+              "text": "Pi_H"
+            },
+            {
+              "text": "Traction response",
+              "colspan": 2
+            }
+          ],
+          [
+            {
+              "text": "Resistance regime"
+            },
+            {
+              "text": "Heterogeneity scale"
+            },
+            {
+              "text": "Pi_R"
+            },
+            {
+              "text": "Pi_H"
+            },
+            {
+              "text": "Stability threshold"
+            },
+            {
+              "text": "Efficiency loss (%)"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "Uniform",
+            "Long",
+            "0.18",
+            "1.00",
+            {
+              "text": "0.92",
+              "bold": true
+            },
+            {
+              "text": "4.1",
+              "bold": true
+            }
+          ],
+          [
+            "Gradual transition",
+            "Intermediate",
+            "0.31",
+            "2.50",
+            "0.86",
+            "8.7"
+          ],
+          [
+            "Localized contrast",
+            "Short",
+            "0.47",
+            "5.00",
+            "0.71",
+            "15.6"
+          ],
+          [
+            "Compacted band",
+            "Short",
+            "0.53",
+            "7.50",
+            "0.64",
+            "19.8"
+          ]
+        ],
+        "note": "Higher stability threshold and lower efficiency loss indicate a more favorable response under the admissibility condition."
+      }
+    },
+    {
+      "after": 7,
+      "element": {
+        "type": "table",
+        "id": "tab:configuration-comparison",
+        "caption": "Theoretical comparison of machine configurations under distributed field resistance",
+        "header": [
+          [
+            {
+              "text": "Configuration"
+            },
+            {
+              "text": "Load distribution",
+              "colspan": 2
+            },
+            {
+              "text": "Resistance response",
+              "colspan": 2
+            },
+            {
+              "text": "Energy metric"
+            }
+          ],
+          [
+            {
+              "text": "Configuration"
+            },
+            {
+              "text": "Front load (%)"
+            },
+            {
+              "text": "Rear load (%)"
+            },
+            {
+              "text": "Peak demand (kN)"
+            },
+            {
+              "text": "Redistribution delay (s)"
+            },
+            {
+              "text": "Drawbar efficiency"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "Balanced axle",
+            "50",
+            "50",
+            "18.4",
+            "0.42",
+            {
+              "text": "0.88",
+              "bold": true
+            }
+          ],
+          [
+            "Front-biased",
+            "58",
+            "42",
+            "21.7",
+            "0.57",
+            "0.81"
+          ],
+          [
+            "Rear-biased",
+            "44",
+            "56",
+            "19.6",
+            "0.49",
+            "0.84"
+          ],
+          [
+            "Adaptive transfer",
+            "52",
+            "48",
+            {
+              "text": "16.9",
+              "bold": true
+            },
+            {
+              "text": "0.35",
+              "bold": true
+            },
+            "0.87"
+          ]
+        ],
+        "note": "The adaptive configuration minimizes peak demand and redistribution delay, while the balanced axle yields the highest drawbar efficiency in the stated theoretical conditions."
+      }
+    }
+  ],
+  "charts_figures": [
+    {
+      "after": 2,
+      "element": {
+        "type": "chart",
+        "chart_type": "box",
+        "id": "fig:resistance-regime-box",
+        "caption": "Distribution of predicted drawbar efficiency across spatial resistance regimes; see \\ref{fig:resistance-regime-box}.",
+        "labels": [
+          "Uniform",
+          "Gradual transition",
+          "Localized contrast",
+          "Compacted band"
+        ],
+        "series": [
+          {
+            "name": "Drawbar efficiency",
+            "stats": [
+              {
+                "min": 0.86,
+                "q1": 0.9,
+                "median": 0.92,
+                "q3": 0.94,
+                "max": 0.96
+              },
+              {
+                "min": 0.79,
+                "q1": 0.84,
+                "median": 0.86,
+                "q3": 0.88,
+                "max": 0.91
+              },
+              {
+                "min": 0.64,
+                "q1": 0.69,
+                "median": 0.71,
+                "q3": 0.74,
+                "max": 0.78
+              },
+              {
+                "min": 0.57,
+                "q1": 0.62,
+                "median": 0.64,
+                "q3": 0.67,
+                "max": 0.72
+              }
+            ],
+            "errors": [
+              0.02,
+              0.02,
+              0.03,
+              0.03
+            ]
+          }
+        ],
+        "x_label": "Resistance regime",
+        "y_label": "Drawbar efficiency",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 4,
+      "element": {
+        "type": "chart",
+        "chart_type": "area",
+        "id": "fig:spatial-loss-area",
+        "caption": "Accumulated efficiency loss along a field transect with distributed resistance",
+        "labels": [
+          "0",
+          "10",
+          "20",
+          "30",
+          "40",
+          "50",
+          "60"
+        ],
+        "series": [
+          {
+            "name": "Gradual transition",
+            "values": [
+              0.0,
+              1.2,
+              2.6,
+              4.1,
+              5.8,
+              7.2,
+              8.7
+            ],
+            "errors": [
+              0.2,
+              0.3,
+              0.3,
+              0.4,
+              0.4,
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "name": "Localized contrast",
+            "values": [
+              0.0,
+              1.8,
+              4.7,
+              8.1,
+              11.6,
+              14.0,
+              15.6
+            ],
+            "errors": [
+              0.2,
+              0.3,
+              0.5,
+              0.6,
+              0.7,
+              0.8,
+              0.9
+            ]
+          }
+        ],
+        "x_label": "Transect distance (m)",
+        "y_label": "Cumulative efficiency loss (%)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 6,
+      "element": {
+        "type": "chart",
+        "chart_type": "grouped_bar",
+        "id": "fig:configuration-demand",
+        "caption": "Peak resistance demand and redistribution delay for alternative machine configurations",
+        "labels": [
+          "Balanced axle",
+          "Front-biased",
+          "Rear-biased",
+          "Adaptive transfer"
+        ],
+        "series": [
+          {
+            "name": "Peak demand",
+            "values": [
+              18.4,
+              21.7,
+              19.6,
+              16.9
+            ],
+            "errors": [
+              0.6,
+              0.8,
+              0.7,
+              0.5
+            ]
+          },
+          {
+            "name": "Redistribution delay",
+            "values": [
+              0.42,
+              0.57,
+              0.49,
+              0.35
+            ],
+            "errors": [
+              0.03,
+              0.04,
+              0.03,
+              0.02
+            ]
+          }
+        ],
+        "x_label": "Machine configuration",
+        "y_label": "Peak demand (kN) and delay (s)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 8,
+      "element": {
+        "type": "chart",
+        "chart_type": "line",
+        "id": "fig:stability-groups",
+        "caption": "Stability threshold as a function of dimensionless resistance and heterogeneity groups",
+        "labels": [
+          "0.18",
+          "0.31",
+          "0.47",
+          "0.53"
+        ],
+        "series": [
+          {
+            "name": "Stability threshold",
+            "values": [
+              0.92,
+              0.86,
+              0.71,
+              0.64
+            ],
+            "errors": [
+              0.02,
+              0.02,
+              0.03,
+              0.03
+            ]
+          },
+          {
+            "name": "Drawbar efficiency",
+            "values": [
+              0.91,
+              0.87,
+              0.76,
+              0.69
+            ],
+            "errors": [
+              0.02,
+              0.02,
+              0.03,
+              0.03
+            ]
+          }
+        ],
+        "x_label": "Dimensionless resistance group Pi_R",
+        "y_label": "Response index",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 9,
+      "element": {
+        "type": "figure",
+        "figure_type": "architecture",
+        "id": "fig:variational-architecture",
+        "caption": "Architecture of the variational soil–machine interaction framework",
+        "description": "Schematic flow from spatial soil resistance fields through constitutive response and load-transfer states to traction admissibility and drawbar efficiency.",
+        "labels": [
+          "Resistance field",
+          "Sinkage state",
+          "Wheel loads",
+          "Motion state",
+          "Traction limit",
+          "Efficiency output"
+        ]
+      }
+    }
+  ],
+  "code": [
+    {
+      "after": 0,
+      "element": {
+        "type": "code",
+        "id": "alg:variational-resistance-update",
+        "language": "pseudocode",
+        "caption": "Iterative update of the variational soil–machine state",
+        "lines": [
+          "Initialize position x, velocity v, sinkage field s, and resistance field rho",
+          "Set time increment dt and spatial increment dx",
+          "while terminal time has not been reached do",
+          "    Evaluate local resistance from rho and the current sinkage field s",
+          "    Compute the resistance gradient along the field coordinate",
+          "    Update sinkage using local demand q and stiffness k",
+          "    Compute front and rear wheel loads from the current longitudinal acceleration",
+          "    Enforce traction admissibility at every spatial location",
+          "    if admissibility is violated then",
+          "        Reduce the applied drive force at the violating locations",
+          "        Recompute the traction response and wheel-load transfer",
+          "    end if",
+          "    Advance velocity from drive force minus distributed resistance",
+          "    Advance position using the updated velocity",
+          "    Apply the regularity constraint to the resistance field",
+          "    Record drawbar efficiency and the dimensionless response groups",
+          "end while",
+          "Return the trajectory, load history, traction state, and efficiency record"
+        ]
+      }
+    }
+  ],
+  "references": [
+    {
+      "text": "Arel, S. (2024). Variational principles for deformable soil contact. Journal of Rural Mechanics, 18, 41–58.",
+      "cite": "Arel 2024"
+    },
+    {
+      "text": "Brenno, T., and Quelis, M. (2025). Spatial resistance fields in traction analysis. Annals of Field Dynamics, 7, 11–29.",
+      "cite": "Brenno and Quelis 2025"
+    },
+    {
+      "text": "Cevra, N. (2026). Continuum descriptions of wheel sinkage and soil response. Terralume Journal of Agricultural Mechanics, 12, 73–91.",
+      "cite": "Cevra 2026"
+    },
+    {
+      "text": "Dalen, R., and Orven, P. (2027). Regularity constraints for heterogeneous terrain models. Rural Systems Theory, 9, 102–119.",
+      "cite": "Dalen and Orven 2027"
+    },
+    {
+      "text": "Elyan, F. (2028). Load transfer in coupled soil–machine systems. Journal of Applied Field Engineering, 15, 25–44.",
+      "cite": "Elyan 2028"
+    },
+    {
+      "text": "Feros, I., and Veyla, C. (2029). Constitutive limits for distributed traction demand. Agricultural Motion Studies, 6, 55–72.",
+      "cite": "Feros and Veyla 2029"
+    },
+    {
+      "text": "Garel, M. (2030). Energy dissipation during traversal of compacted bands. Annals of Soil Process Mechanics, 21, 88–106.",
+      "cite": "Garel 2030"
+    },
+    {
+      "text": "Havor, L., Quen, D., and Rellis, J. (2031). A state-space formulation of wheel–soil interaction. Journal of Terran Agricultural Systems, 14, 137–156.",
+      "cite": "Havor et al. 2031"
+    },
+    {
+      "text": "Ilyr, P. (2032). Dimensionless groups for spatially variable field resistance. Mechanics of Cultivated Terrain, 11, 61–79.",
+      "cite": "Ilyr 2032"
+    },
+    {
+      "text": "Jorven, A., and Kelis, R. (2033). Admissibility conditions in longitudinal traction theory. Rural Engineering Review, 19, 33–51.",
+      "cite": "Jorven and Kelis 2033"
+    },
+    {
+      "text": "Lurev, E. (2034). Sinkage regularization under changing wheel demand. Field Process Mechanics, 8, 94–112.",
+      "cite": "Lurev 2034"
+    },
+    {
+      "text": "Maren, V., and Solen, T. (2035). Variational treatment of soil heterogeneity and machine motion. Journal of Agro-Mechanical Theory, 17, 14–32.",
+      "cite": "Maren and Solen 2035"
+    },
+    {
+      "text": "Neris, G. (2036). Stability thresholds for distributed resistance environments. Agricultural Continuum Research, 10, 119–136.",
+      "cite": "Neris 2036"
+    },
+    {
+      "text": "Orlien, B., and Tavel, S. (2037). Delayed wheel-load redistribution in deformable terrain. Journal of Field Vehicle Mechanics, 13, 47–65.",
+      "cite": "Orlien and Tavel 2037"
+    },
+    {
+      "text": "Parel, J. (2038). Drawbar efficiency as a functional of local resistance. Rural Traction Science, 22, 76–93.",
+      "cite": "Parel 2038"
+    },
+    {
+      "text": "Quelor, H., and Varen, E. (2039). Boundary transitions in spatial soil–machine models. Annals of Cultivated Surface Mechanics, 16, 101–118.",
+      "cite": "Quelor and Varen 2039"
+    },
+    {
+      "text": "Rovel, K. (2040). Theoretical foundations of adaptive traction under heterogeneous soils. Veylan Review of Agricultural Engineering, 20, 5–23.",
+      "cite": "Rovel 2040"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Introduction"
+    },
+    {
+      "type": "paragraph",
+      "text": "Agricultural machinery rarely traverses a field whose mechanical resistance is constant from one wheel contact to the next. Moisture gradients, texture changes, prior traffic, residue accumulation, and local compaction alter the force required to sustain motion. A uniform resistance coefficient can therefore obscure the interaction between a moving machine and the soil structure that it progressively modifies. This study formulates that interaction as a variational problem in which resistance is distributed along a field coordinate and coupled to machine position, velocity, sinkage, and wheel loading. The formulation is theoretical, but it addresses operational questions: when does a traction unit remain admissible, how quickly does load transfer respond to a resistant zone, and which forms of heterogeneity produce disproportionate losses in drawbar efficiency? A footnote is warranted here: \\fn{The field coordinate describes the direction of travel and need not coincide with a global geographic axis.}"
+    },
+    {
+      "type": "paragraph",
+      "text": "The approach treats the soil surface as a spatially organized mechanical environment rather than as a sequence of independent contact points. A resistance field may vary smoothly, contain a narrow transition, or include a strongly compacted band. The machine state is represented by a trajectory and internal fields describing local sinkage and resistance. A variational functional balances inertial contribution against distributed resistance, while constitutive restrictions limit sinkage and traction demand. The architecture of this coupling is summarized by \\ref{fig:variational-architecture}, and the iterative state-update logic is identified by \\ref{alg:variational-resistance-update}; neither representation is needed to establish the analytical claims, but both clarify the order in which physical constraints enter the model."
+    },
+    {
+      "type": "paragraph",
+      "text": "The contribution has four parts. First, it places spatial resistance within a variational description of soil–machine motion. Second, it states regularity and admissibility conditions that prevent arbitrarily abrupt changes in resistance or traction. Third, it derives qualitative stability results and identifies dimensionless groups that organize limiting behavior. Fourth, it interprets the theory through a numerical illustration based on prescribed regimes and machine configurations. Earlier treatments emphasize variational principles for deformable soil contact \\cite{1}, spatial resistance fields for traction analysis \\cite{2}, and continuum descriptions of wheel sinkage \\cite{3}. The present framework joins these strands by allowing resistance, sinkage, and load transfer to evolve together."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Related Work"
+    },
+    {
+      "type": "paragraph",
+      "text": "Continuum descriptions of wheel sinkage have focused on the relation between local demand and soil response. Cevra \\cite{3} develops a perspective in which sinkage is not merely a geometric consequence of wheel passage but a state influenced by stiffness and applied demand. That perspective motivates a sinkage field rather than a single machine-wide displacement. A complementary line of work considers heterogeneous terrain through regularity constraints, arguing that a mechanically meaningful resistance field should not oscillate without bound over arbitrarily small distances \\cite{4}. These ideas support a field-based formulation in which spatial gradients have a direct energetic and computational interpretation."
+    },
+    {
+      "type": "paragraph",
+      "text": "Load transfer is another essential connection. Under acceleration, front and rear normal loads do not remain fixed, and their redistribution affects the traction capacity available at each axle. Elyan \\cite{5} treats load transfer in coupled soil–machine systems, whereas Orlien and Tavel \\cite{14} emphasize the delay between an encountered change in resistance and the resulting wheel-load response. Constitutive traction limits provide the corresponding local bound on drive demand \\cite{6}. Taken together, these studies indicate that a resistance transition cannot be reduced to an instantaneous change in available force: the machine may enter a zone with a permissible traction limit that is temporarily inconsistent with its current load state."
+    },
+    {
+      "type": "paragraph",
+      "text": "Energy-based interpretations further motivate the present work. Traversal of compacted bands creates localized dissipation and may produce losses that persist after the machine has left the resistant region \\cite{7}. A state-space description of wheel–soil interaction offers a useful language for tracking such memory effects \\cite{8}. Dimensionless analysis can distinguish resistance-dominated motion from inertia-dominated motion and can relate the spatial scale of variation to machine length \\cite{9}. The resulting theory differs from a purely empirical force balance because it treats the resistance field as an object subject to regularity, energetic, and kinematic constraints simultaneously."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Definitions"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "State, resistance, and admissibility"
+    },
+    {
+      "type": "paragraph",
+      "text": "Let $x$ denote the longitudinal coordinate over a traversed interval of length $L$, and let $t$ denote time in an operation interval of duration $T$. The machine position is represented by $\\vec{x}(t)$, its velocity by $\\vec{v}(t)$, and its mass by $m$. The scalar field $s(x)$ denotes local sinkage, while $\\rho(x)$ denotes a nonnegative resistance intensity. The applied drive force is $\\vec{F}_{d}(t)$ and the distributed resisting force is $\\vec{F}_{r}(\\vec{x},s)$. These quantities are not independent: a rise in local demand can increase sinkage, sinkage can reduce the traction coefficient, and the resulting traction restriction can alter the trajectory."
+    },
+    {
+      "type": "paragraph",
+      "text": "The central variational object is the action associated with kinetic motion minus resistance. In the notation of the study, the functional is identified by \\ref{eq:variational-functional}. Its role is not to assert that every field operation is conservative; rather, it provides a compact means of selecting mechanically coherent paths from admissible states. If $\\delta\\vec{x}$ is an admissible variation that vanishes at fixed endpoints, stationarity yields a balance between inertial change and the resistance contribution. Dissipative behavior remains present through the resistance functional, which is spatially distributed and may depend on the sinkage field."
+    },
+    {
+      "type": "paragraph",
+      "text": "The resistance functional, referenced as \\ref{eq:distributed-resistance}, contains two terms. The first weights local sinkage through a coefficient $\\rho_s(x)$; the second penalizes rapid spatial change through a coefficient $\\rho_c(x)$. For a smooth field, the penalty is proportional to $\\left(\\partial_xs\\right)^2$, so a sharp sinkage front requires greater resistance than a gradual depression of equal amplitude. The local term records deformation itself, while the gradient term records the cost of maintaining incompatible neighboring states."
+    },
+    {
+      "type": "paragraph",
+      "text": "The state kinematics are given by the relation referenced as \\ref{eq:state-kinematics}. Position advances with velocity and velocity changes according to applied drive minus distributed resistance. Sinkage is constrained by a bounded response law, identified by \\ref{eq:sinkage-response}, in which baseline sinkage $s_0(x)$ is augmented by a fraction involving demand $q(x)$, stiffness $k(x)$, and a response parameter $\\lambda$. The fraction approaches zero when demand is small relative to stiffness and approaches one when demand is large. Thus, $0\\leq s(x)-s_0(x)\\leq s_{max}(x)$ under nonnegative parameters."
+    },
+    {
+      "type": "paragraph",
+      "text": "Normal loads $N_f$ and $N_r$ satisfy the total-load and acceleration relations stated in \\ref{eq:load-transfer}. Here $h$ is the effective height of the machine center of mass and $L$ is the axle separation. A positive longitudinal acceleration increases the front–rear load difference according to the chosen sign convention. Local traction is admissible only if the tangential force norm does not exceed the product of local friction capacity and normal load, as specified in \\ref{eq:traction-admissibility}. The coefficient $\\mu(x,s)$ decreases exponentially with sinkage, so a machine that creates deeper deformation also reduces its own available traction."
+    },
+    {
+      "type": "box",
+      "kind": "remark",
+      "title": "Interpretive condition",
+      "text": "The model does not require the soil field to be everywhere differentiable in a classical operational sense. It requires sufficient regularity for the resistance gradient and the associated energetic penalty to remain finite. A transition can therefore be narrow without being discontinuous, allowing a compacted band to be represented as a steep but admissible change."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Main Results"
+    },
+    {
+      "type": "paragraph",
+      "text": "The first result is a reduction principle. When resistance coefficients, stiffness, and baseline sinkage are spatially constant, the field formulation reduces to a uniform-resistance model after integration over the traversed length. Spatial variation therefore extends the classical balance rather than replacing it. In the opposite direction, if $\\rho(x)$ changes over a length scale much shorter than the machine length, the machine experiences a local demand pulse. The pulse is filtered by inertia, load-transfer delay, and sinkage regularization. Consequently, peak resistance may occur before wheel loads have reached their quasi-static values."
+    },
+    {
+      "type": "paragraph",
+      "text": "The second result concerns regularity. The resistance field is required to satisfy the bound referenced in \\ref{eq:regularity-condition}, with nonnegative $\\rho(x)$. This condition limits the integrated squared spatial gradient and excludes sequences of increasingly narrow, increasingly high oscillations that would otherwise defeat convergence of the variational problem. Under bounded coefficients and fixed endpoint states, the regularized functional admits a minimizing sequence with controlled spatial variation. Two neighboring soil zones may differ substantially, but their transition must consume a finite amount of resistance-field regularity."
+    },
+    {
+      "type": "paragraph",
+      "text": "The third result is a stability criterion based on the traction margin. Define the local margin as the difference between admissible traction capacity and demanded traction. A trajectory remains locally stable while this margin is nonnegative and while the induced sinkage response does not lower the margin faster than load transfer can compensate. The relevant sensitivity has the sign of $\\partial\\mu/\\partial s=-\\mu/s_c$ when $s_c$ is positive. Hence, increases in sinkage are destabilizing whenever normal-load growth is insufficient to offset the decline in $\\mu$. This explains why a moderate resistance rise can be tolerated on a heavily loaded axle but can cause loss of admissibility on a lightly loaded axle."
+    },
+    {
+      "type": "paragraph",
+      "text": "The fourth result identifies three governing groups. The groups in \\ref{eq:dimensionless-groups} are the resistance ratio $\\pi_R$, the heterogeneity ratio $\\pi_H$, and the inertial ratio $\\pi_I$. The first compares characteristic distributed resistance with machine weight. The second compares machine length with the heterogeneity scale $l_h$, so larger $\\pi_H$ indicates more rapid spatial variation relative to the machine. The third compares velocity squared with gravitational acceleration times machine length. In the low-$\\pi_I$ limit, load transfer follows resistance changes more closely; in the high-$\\pi_I$ limit, inertia delays redistribution and amplifies localized loss."
+    },
+    {
+      "type": "paragraph",
+      "text": "The final result concerns energy accounting. Drawbar efficiency is defined by the ratio in \\ref{eq:drawbar-efficiency}, with values between zero and one under nonnegative drive and resistance powers. A uniform field can still produce low efficiency if resistance magnitude is high, but heterogeneity adds a second mechanism: energy is dissipated while the machine adjusts its state at transitions. Two fields with the same spatial mean resistance can therefore yield different efficiencies when their heterogeneity scales differ. This is the principal distinction between averaging resistance before solving the motion and solving the motion with a distributed resistance field."
+    },
+    {
+      "type": "paragraph",
+      "text": "The framework also predicts a configuration effect. A balanced axle arrangement may distribute load evenly and maintain a high average traction margin, whereas a front-biased arrangement can experience elevated peak demand when the leading axle encounters a resistant band. An adaptive transfer strategy can reduce peak demand by changing load allocation before the traction margin becomes negative. These conclusions follow from the coupled load relations rather than from a separate optimization assumption, and they remain meaningful even when exact soil coefficients are uncertain."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Proofs"
+    },
+    {
+      "type": "paragraph",
+      "text": "Consider first the uniform-resistance limit. Set $\\rho_s(x)=\\rho_s$ and $\\rho_c(x)=0$, and let baseline sinkage and stiffness be constant. The resistance functional then depends on the integral of a constant-weighted sinkage contribution. If admissible sinkage is spatially uniform, the integral contributes a factor of $L$, and the Euler variation with respect to trajectory produces the same force balance as a lumped resistance model. This proves the reduction principle in the restricted uniform case. If sinkage remains spatially variable, the local contribution retains field information, so reduction is exact only when the state itself is uniform."
+    },
+    {
+      "type": "paragraph",
+      "text": "For regularity, let $\\rho_n$ be a sequence of nonnegative resistance fields satisfying the bound in \\ref{eq:regularity-condition}. The squared-gradient bound controls the rate of spatial change in an integrated sense. Together with a bound on mean resistance, it prevents unbounded concentration of variation in the interior of the interval. A subsequence can therefore be selected whose fields converge weakly in the derivative term and strongly in the lower-order contribution. Lower semicontinuity of the quadratic terms preserves the variational lower bound. The result is not a claim of smoothness at every point; it is a compactness statement sufficient for stable minimization."
+    },
+    {
+      "type": "paragraph",
+      "text": "For traction admissibility, define $M(x)=\\mu(x,s)N(x)-\\left\\|\\vec{F}_t(x)\\right\\|$. If $M(x)$ is positive on the entry side of a transition and the resistance gradient is bounded, continuity of the constitutive response implies that $M$ remains positive over a sufficiently short interval, provided the accumulated change in demand is smaller than the initial margin. A violation can occur only when the integrated demand increment exceeds that margin or when sinkage lowers the coefficient sufficiently rapidly. Thus admissibility is not lost merely because resistance begins to increase; it is lost when the coupled response consumes the available margin."
+    },
+    {
+      "type": "paragraph",
+      "text": "For efficiency, write the denominator in \\ref{eq:drawbar-efficiency} as useful drive power plus resisting power. Under nonnegative velocity and forces, the denominator is at least as large as the numerator, which yields $\\eta_d\\leq1$. Equality requires vanishing resisting power over the integration domain or a degenerate zero-power condition. The lower bound follows from nonnegative useful drive power. A localized resistance peak lowers efficiency directly through the denominator and indirectly through sinkage and delayed load transfer. This establishes why the spatially resolved theory can rank fields with equal mean resistance differently."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Numerical Illustration"
+    },
+    {
+      "type": "paragraph",
+      "text": "A numerical illustration evaluates four resistance regimes: uniform, gradual transition, localized contrast, and compacted band. The prescribed values span increasing $\\pi_R$ and $\\pi_H$, allowing theoretical trends to be read without introducing an additional calibration problem. The regime response is recorded in \\ref{tab:regime-response}. The favorable uniform case has a stability threshold of 0.92 and an efficiency loss of 4.1 percent, whereas the compacted-band case reaches a threshold of 0.64 and an efficiency loss of 19.8 percent. Intermediate cases show that increasing heterogeneity produces a progressive decline rather than an abrupt change confined to one regime."
+    },
+    {
+      "type": "paragraph",
+      "text": "The same interpretation applies along a transect. For gradual transition, accumulated loss rises from zero to 8.7 percent over the stated travel interval. For localized contrast, it rises to 15.6 percent. The contrast is important because the two fields need not differ only in average resistance; the sharper transition generates a larger temporary mismatch between demanded traction, sinkage, and available load. The spatial accumulation is represented by \\ref{fig:spatial-loss-area}, which should be read as an energetic history rather than as a local coefficient. The result supports operational planning that accounts for the location and scale of resistant zones."
+    },
+    {
+      "type": "paragraph",
+      "text": "A second comparison considers balanced, front-biased, rear-biased, and adaptive-transfer configurations. The theoretical values are given in \\ref{tab:configuration-comparison}. The balanced axle configuration reaches a drawbar efficiency of 0.88, while adaptive transfer reduces peak demand to 16.9 kN and redistribution delay to 0.35 s. The front-biased configuration produces the largest peak demand, 21.7 kN, and the longest delay, 0.57 s. These values are consistent with the load-transfer proof: a configuration that places greater initial demand on the leading axle is more exposed to a resistance increase encountered at the front of the machine."
+    },
+    {
+      "type": "paragraph",
+      "text": "The configuration contrast is also summarized by \\ref{fig:configuration-demand}. The stability threshold and drawbar efficiency decline together as $\\pi_R$ increases from 0.18 to 0.53, as indicated by \\ref{fig:stability-groups}. The decline is not interpreted as a universal empirical law; it is the response of the stated theoretical parameterization. Its value lies in revealing a mechanism: resistance magnitude and heterogeneity scale act jointly, and neither can be safely omitted when comparing machine arrangements."
+    },
+    {
+      "type": "paragraph",
+      "text": "For computational implementation, one may advance position and velocity over a time increment, update sinkage from local demand, calculate wheel loads, enforce traction admissibility, and then apply the regularity constraint to the resistance field. This sequence is precisely the ordering encoded in \\ref{alg:variational-resistance-update}. The numerical procedure should reduce drive force where the local margin becomes negative rather than allowing an inadmissible state to propagate. A smaller time increment is required when $\\pi_H$ is large, because a rapidly changing field can otherwise be crossed in a single update and the associated delay can be misrepresented."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Limitations"
+    },
+    {
+      "type": "paragraph",
+      "text": "The theory has several deliberate limitations. Soil resistance is represented by scalar or effectively reduced fields, whereas real soil can exhibit anisotropy, layered structure, moisture transport, and rate-dependent plasticity. The sinkage law is bounded and monotone, which is useful for analysis but cannot represent every history-dependent recovery process. The traction coefficient decreases with sinkage through an exponential form; other constitutive choices may be more suitable for particular soils or wheel designs. These choices are structural assumptions that make the variational coupling tractable, not universal material laws."
+    },
+    {
+      "type": "paragraph",
+      "text": "The regularity constraint also imposes a modeling judgment. A narrow transition is admissible only when its integrated gradient remains within the prescribed bound. In a field with genuine discontinuities, this may smooth a physically sharp boundary and spread its effect over a finite distance. Conversely, omitting regularization would allow mathematically severe resistance oscillations that are difficult to interpret mechanically. The appropriate value of $\\Gamma$ must consequently be related to spatial observation, wheel footprint, and the scale at which soil properties are meaningfully distinguishable."
+    },
+    {
+      "type": "paragraph",
+      "text": "The numerical illustration is theoretical and does not establish predictive accuracy for a particular machine. Its purpose is to expose implications of the coupled relations and to compare trends under controlled parameter changes. Uncertainty in mass distribution, center-of-mass height, stiffness, and local resistance can alter the reported thresholds. The framework can accommodate such uncertainty through parameter intervals or distributions, but a full uncertainty analysis would require additional assumptions about field measurement and temporal variation."
+    },
+    {
+      "type": "paragraph",
+      "text": "Finally, the present formulation is longitudinal. Lateral slip, steering, wheel angular speed, rut interaction between successive passes, and three-dimensional soil displacement are not resolved. These omissions matter when a machine turns, when axle spacing is comparable to the width of a compacted band, or when repeated traffic changes the resistance field during operation. Extending the state to include lateral coordinates and wheel rotational variables is feasible, but it would introduce additional admissibility conditions and require a more detailed constitutive description."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Conclusion"
+    },
+    {
+      "type": "paragraph",
+      "text": "This study develops a variational theory for soil–machine interaction in fields where resistance is distributed in space. The formulation couples trajectory, sinkage, wheel-load transfer, and traction admissibility through a resistance functional with local and gradient contributions. Uniform resistance appears as a limiting case, while strong heterogeneity produces delayed redistribution, localized dissipation, and lower drawbar efficiency. The regularity condition provides a mathematically controlled way to represent transitions between soil zones without permitting unbounded spatial oscillation."
+    },
+    {
+      "type": "paragraph",
+      "text": "The dimensionless groups $\\pi_R$, $\\pi_H$, and $\\pi_I$ organize the principal regimes. Resistance magnitude governs the available traction margin, heterogeneity scale controls the severity of local adjustment, and inertia determines how rapidly the machine can respond. The theoretical comparisons indicate that balanced loading can preserve high average efficiency, while adaptive transfer can reduce peak demand and delay. These findings suggest that field-operation planning should consider not only mean soil resistance but also the spatial scale and position of resistant zones relative to machine geometry."
+    },
+    {
+      "type": "paragraph",
+      "text": "Future work should connect the variational state to measured resistance maps, incorporate anisotropic and history-dependent soil response, and examine repeated passes in which the machine alters the field it later traverses. Such extensions can retain the central principle established here: traction performance is a property of a coupled trajectory and environment, not of an isolated resistance coefficient. By treating the field as a mechanically evolving spatial system, the framework offers a basis for comparing machine configurations and designing operation strategies that remain admissible under heterogeneous agricultural terrain."
+    },
+    {
+      "type": "paragraph",
+      "text": "The theoretical foundations are situated within prior work on variational contact \\cite{1}, spatial resistance \\cite{2}, sinkage response \\cite{3}, regularity \\cite{4}, load transfer \\cite{5}, traction limits \\cite{6}, energy dissipation \\cite{7}, state-space interaction \\cite{8}, dimensionless analysis \\cite{9}, admissibility \\cite{10}, sinkage regularization \\cite{11}, heterogeneous variational mechanics \\cite{12}, stability thresholds \\cite{13}, delayed redistribution \\cite{14}, drawbar efficiency \\cite{15}, boundary transitions \\cite{16}, and adaptive traction \\cite{17}."
+    }
+  ]
+}

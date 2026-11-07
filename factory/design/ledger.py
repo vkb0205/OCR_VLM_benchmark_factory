@@ -8,7 +8,7 @@ from factory.contract.models import DesignLedgerEntry, DesignSpec
 from factory.paths import OUT
 
 
-def entries(doc_type: str, output: Path = OUT, limit: int = 4) -> list[dict]:
+def entries(doc_type: str, output: Path = OUT, limit: int | None = None) -> list[dict]:
     path = output / "index" / "designs.jsonl"
     if not path.exists():
         return []
@@ -23,7 +23,7 @@ def entries(doc_type: str, output: Path = OUT, limit: int = 4) -> list[dict]:
                 "doc_id": row.doc_id,
                 "design_spec": row.design_spec.model_dump(mode="json"),
             })
-    return rows[-limit:]
+    return rows if limit is None else rows[-limit:]
 
 
 def _part(spec: dict, name: str) -> str:
@@ -42,6 +42,14 @@ def summary(row: dict) -> str:
     style = spec.get("style") or {}
     palette = ",".join(style.get("palette", [])[:4])
     fonts = "/".join(style.get("fonts", [])[:2])
+    if spec.get("mode") == "backbone":
+        concept = (spec.get("brief") or row.get("brief") or {}).get("concept", "")
+        plan = spec.get("layout_plan") or {}
+        roles = plan.get("roles") or {}
+        grid = ", ".join(f"{role}:{len(value.get('regions') or [])}r/{value.get('size', '?')}"
+                          for role, value in roles.items())
+        return (f"{row.get('doc_id', '?')}: {concept[:100]} / {grid} / {palette} / {fonts} / "
+                f"table={spec.get('table_frame_type', '?')}")
     return (
         f"{row.get('doc_id', '?')}: {_part(spec, 'layout')} / {palette} / {fonts} / "
         f"{_part(spec, 'orientation')} / {_part(spec, 'reading_order')}"
@@ -55,10 +63,15 @@ def recent(doc_type: str, output: Path = OUT, limit: int = 4) -> list[str]:
 def append(doc_type: str, spec, output: Path = OUT, doc_id: str = "") -> None:
     path = output / "index" / "designs.jsonl"
     path.parent.mkdir(parents=True, exist_ok=True)
+    data = spec.model_dump(mode="json") if isinstance(spec, DesignSpec) else spec
     model = DesignLedgerEntry(
         doc_id=doc_id,
         doc_type=doc_type,
-        design_spec=DesignSpec.model_validate(spec),
+        design_spec=DesignSpec.model_validate(data),
+        content_id=data.get("content_id"),
+        brief=data.get("brief") or {},
+        fingerprint=data.get("fingerprint") or {},
+        thumbnail_paths=data.get("thumbnail_paths") or [],
     )
     with path.open("a", encoding="utf-8") as handle:
         handle.write(model.model_dump_json() + "\n")

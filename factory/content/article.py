@@ -1,5 +1,6 @@
 """Academic paper content shapes, markup parsing and language-dependent labels."""
 import json
+from copy import deepcopy
 import math
 import re
 import subprocess
@@ -20,7 +21,7 @@ WORDS = {
 ELEMENTS = {'heading', 'paragraph', 'list', 'equation', 'table', 'chart', 'figure', 'code', 'box'}
 FLOATS = {'table': 'tab', 'chart': 'fig', 'figure': 'fig', 'code': 'alg'}
 CHARTS = {'bar', 'grouped_bar', 'stacked_bar', 'line', 'scatter', 'histogram', 'area', 'box', 'donut'}
-FIGURES = {'block_diagram', 'architecture', 'image_panel', 'multi_panel'}
+FIGURES = {'flowchart', 'pipeline', 'block_diagram', 'architecture', 'image_panel', 'multi_panel'}
 BOXES = {'definition', 'theorem', 'lemma', 'remark', 'example'}
 MARKUP = re.compile(r'\$([^$]+)\$|\\cite\{([^}]*)\}|\\ref\{([^}]*)\}|\\fn\{([^}]*)\}')
 LENGTH_WORDS = {'short': 900, 'medium': 1600, 'long': 2600}
@@ -138,8 +139,8 @@ def check_authors(value, text):
 
 
 def check_references(value, text):
-    if not isinstance(value, list) or not 8 <= len(value) <= 25:
-        raise ValueError('references needs 8-25 entries')
+    if not isinstance(value, list) or not 8 <= len(value) <= 45:
+        raise ValueError('references needs 8-45 entries')
     out = []
     for index, reference in enumerate(value, 1):
         if not isinstance(reference, dict) or not isinstance(reference.get('text'), str) or not isinstance(reference.get('cite'), str):
@@ -158,103 +159,187 @@ def check_article(value, text):
         if kind not in ELEMENTS:
             raise ValueError(f'element {number}: unknown type {kind!r}')
         where = f'element {number} ({kind})'
-        item = {'type': kind}
-        ident = element.get('id')
-        id_required = kind in {'table', 'chart', 'figure'} or kind == 'equation' and bool(element.get('numbered', True))
-        if kind == 'code' and ident is not None or id_required:
-            prefix = 'eq' if kind == 'equation' else FLOATS[kind]
-            if not isinstance(ident, str) or not re.fullmatch(prefix + r':[a-z0-9_-]+', ident):
-                raise ValueError(f'{where}: id must look like {prefix}:name')
-            if ident in ids:
-                raise ValueError(f'{where}: duplicate id {ident}')
-            ids.add(ident)
-            item['id'] = ident
+        try:
+            item = {'type': kind}
+            ident = element.get('id')
+            id_required = kind in {'table', 'chart', 'figure'} or kind == 'equation' and bool(element.get('numbered', True))
+            if kind == 'code' and ident is not None or id_required:
+                prefix = 'eq' if kind == 'equation' else FLOATS[kind]
+                if not isinstance(ident, str) or not re.fullmatch(prefix + r':[a-z0-9_-]+', ident):
+                    raise ValueError(f'{where}: id must look like {prefix}:name')
+                if ident in ids:
+                    raise ValueError(f'{where}: duplicate id {ident}')
+                ids.add(ident)
+                item['id'] = ident
 
-        if kind == 'heading':
-            if type(element.get('level')) is not int or element['level'] not in (1, 2, 3):
-                raise ValueError(f'{where}: level must be 1, 2 or 3')
-            item.update(level=element['level'], text=text(element['text']))
-        elif kind == 'paragraph':
-            item['text'] = text(element['text'])
-        elif kind == 'list':
-            list_items = element.get('items')
-            if not isinstance(list_items, list) or not 2 <= len(list_items) <= 10:
-                raise ValueError(f'{where}: 2-10 items')
-            if type(element.get('ordered', False)) is not bool:
-                raise ValueError(f'{where}: ordered must be boolean')
-            item.update(ordered=element.get('ordered', False), items=[text(part) for part in list_items])
-        elif kind == 'equation':
-            latex = element.get('latex')
-            if not isinstance(latex, str) or not latex.strip():
-                raise ValueError(f'{where}: latex required')
-            if type(element.get('numbered', True)) is not bool:
-                raise ValueError(f'{where}: numbered must be boolean')
-            item.update(latex=latex.strip(), numbered=element.get('numbered', True))
-        elif kind == 'table':
-            try:
-                header = [[cell(value, text) for value in row] for row in element['header']]
-                rows = [[cell(value, text) for value in row] for row in element['rows']]
-                if not 1 <= len(header) <= 4 or not 2 <= len(rows) <= 40:
-                    raise ValueError('needs 1-4 header rows and 2-40 body rows')
-                width = grid_width(header)
-                if grid_width(rows) != width:
-                    raise ValueError('body width differs from header width')
-                if type(element.get('landscape', False)) is not bool:
-                    raise ValueError('landscape must be boolean')
-                table_style = element.get('table_style', 'three_line')
-                if table_style not in {'three_line', 'full_grid', 'shaded_header'}:
-                    raise ValueError('table_style must be three_line, full_grid or shaded_header')
-                item.update(caption=text(element['caption']), header=header, rows=rows,
-                            note=text(element['note']) if element.get('note') else None,
-                            landscape=element.get('landscape', False), table_style=table_style)
-            except (KeyError, TypeError) as exc:
-                raise ValueError(f'{where}: invalid table shape ({exc})') from exc
-        elif kind == 'chart':
-            item.update(check_chart(element, text, where), caption=text(element['caption']))
-        elif kind == 'figure':
-            figure_type = element.get('figure_type')
-            if figure_type not in FIGURES:
-                raise ValueError(f'{where}: figure_type must be one of {sorted(FIGURES)}')
-            panels = element.get('panels') or []
-            if figure_type == 'multi_panel':
-                if not isinstance(panels, list) or not 2 <= len(panels) <= 4:
-                    raise ValueError(f'{where}: multi_panel needs 2-4 single panels')
-                normalized_panels = []
-                for panel in panels:
-                    if not isinstance(panel, dict) or panel.get('figure_type') not in FIGURES - {'multi_panel'}:
-                        raise ValueError(f'{where}: each panel needs a supported single-panel figure_type')
-                    normalized_panels.append({'figure_type': panel['figure_type'],
-                                              'description': text(panel['description']),
-                                              'labels': [text(label) for label in panel.get('labels', [])]})
-                panels = normalized_panels
-            labels = element.get('labels', [])
-            if not isinstance(labels, list):
-                raise ValueError(f'{where}: labels must be a list')
-            labels = [text(label) for label in labels]
-            if figure_type in {'block_diagram', 'architecture'} and not 3 <= len(labels) <= 10:
-                raise ValueError(f'{where}: diagrams need 3-10 short box labels')
-            if any(len(label) > 28 for label in labels):
-                raise ValueError(f'{where}: box labels must be at most 28 characters')
-            item.update(figure_type=figure_type, caption=text(element['caption']),
-                        description=text(element['description']), labels=labels, panels=panels)
-        elif kind == 'code':
-            lines = element.get('lines')
-            if not isinstance(lines, list) or not 3 <= len(lines) <= 30 or any(not isinstance(line, str) or len(line) > 90 for line in lines):
-                raise ValueError(f'{where}: 3-30 lines of at most 90 characters')
-            if not isinstance(element.get('language', 'pseudocode'), str):
-                raise ValueError(f'{where}: language must be a string')
-            item.update(language=element.get('language', 'pseudocode'),
-                        caption=text(element['caption']) if element.get('caption') else None,
-                        lines=[line.rstrip() for line in lines])
-        elif kind == 'box':
-            if element.get('kind') not in BOXES:
-                raise ValueError(f'{where}: box kind must be one of {sorted(BOXES)}')
-            item.update(kind=element['kind'], title=text(element['title']), text=text(element['text']))
-        out.append(item)
+            if kind == 'heading':
+                if type(element.get('level')) is not int or element['level'] not in (1, 2, 3):
+                    raise ValueError(f'{where}: level must be 1, 2 or 3')
+                item.update(level=element['level'], text=text(element['text']))
+            elif kind == 'paragraph':
+                item['text'] = text(element['text'])
+            elif kind == 'list':
+                list_items = element.get('items')
+                if not isinstance(list_items, list) or not 2 <= len(list_items) <= 10:
+                    raise ValueError(f'{where}: 2-10 items')
+                if type(element.get('ordered', False)) is not bool:
+                    raise ValueError(f'{where}: ordered must be boolean')
+                item.update(ordered=element.get('ordered', False), items=[text(part) for part in list_items])
+            elif kind == 'equation':
+                latex = element.get('latex')
+                if not isinstance(latex, str) or not latex.strip():
+                    raise ValueError(f'{where}: latex required')
+                if type(element.get('numbered', True)) is not bool:
+                    raise ValueError(f'{where}: numbered must be boolean')
+                item.update(latex=latex.strip(), numbered=element.get('numbered', True))
+            elif kind == 'table':
+                try:
+                    header = [[cell(value, text) for value in row] for row in element['header']]
+                    rows = [[cell(value, text) for value in row] for row in element['rows']]
+                    if not 1 <= len(header) <= 4 or not 2 <= len(rows) <= 40:
+                        raise ValueError('needs 1-4 header rows and 2-40 body rows')
+                    width = grid_width(header)
+                    if grid_width(rows) != width:
+                        raise ValueError('body width differs from header width')
+                    if type(element.get('landscape', False)) is not bool:
+                        raise ValueError('landscape must be boolean')
+                    table_style = element.get('table_style', 'three_line')
+                    if table_style not in {'three_line', 'full_grid', 'shaded_header'}:
+                        raise ValueError('table_style must be three_line, full_grid or shaded_header')
+                    item.update(caption=text(element['caption']), header=header, rows=rows,
+                                note=text(element['note']) if element.get('note') else None,
+                                landscape=element.get('landscape', False), table_style=table_style)
+                except (KeyError, TypeError) as exc:
+                    raise ValueError(f'{where}: invalid table shape ({exc})') from exc
+            elif kind == 'chart':
+                item.update(check_chart(element, text, where), caption=text(element['caption']))
+            elif kind == 'figure':
+                figure_type = element.get('figure_type')
+                if figure_type not in FIGURES:
+                    raise ValueError(f'{where}: figure_type must be one of {sorted(FIGURES)}')
+                panels = element.get('panels') or []
+                if figure_type == 'multi_panel':
+                    if not isinstance(panels, list) or not 2 <= len(panels) <= 4:
+                        raise ValueError(f'{where}: multi_panel needs 2-4 single panels')
+                    normalized_panels = []
+                    for panel in panels:
+                        if not isinstance(panel, dict) or panel.get('figure_type') not in FIGURES - {'multi_panel'}:
+                            raise ValueError(f'{where}: each panel needs a supported single-panel figure_type')
+                        normalized_panels.append({'figure_type': panel['figure_type'],
+                                                  'description': text(panel['description']),
+                                                  'labels': [text(label) for label in panel.get('labels', [])]})
+                    panels = normalized_panels
+                labels = element.get('labels', [])
+                if not isinstance(labels, list):
+                    raise ValueError(f'{where}: labels must be a list')
+                labels = [text(label) for label in labels]
+                if figure_type in {'block_diagram', 'architecture', 'flowchart', 'pipeline'} and not 3 <= len(labels) <= 10:
+                    raise ValueError(f'{where}: diagrams need 3-10 short box labels')
+                if any(len(label) > 28 for label in labels):
+                    raise ValueError(f'{where}: box labels must be at most 28 characters')
+                item.update(figure_type=figure_type, caption=text(element['caption']),
+                            description=text(element['description']), labels=labels, panels=panels)
+            elif kind == 'code':
+                lines = element.get('lines')
+                if not isinstance(lines, list) or not 3 <= len(lines) <= 30 or any(not isinstance(line, str) or len(line) > 90 for line in lines):
+                    raise ValueError(f'{where}: 3-30 lines of at most 90 characters')
+                if not isinstance(element.get('language', 'pseudocode'), str):
+                    raise ValueError(f'{where}: language must be a string')
+                item.update(language=element.get('language', 'pseudocode'),
+                            caption=text(element['caption']) if element.get('caption') else None,
+                            lines=[line.rstrip() for line in lines])
+            elif kind == 'box':
+                if element.get('kind') not in BOXES:
+                    raise ValueError(f'{where}: box kind must be one of {sorted(BOXES)}')
+                item.update(kind=element['kind'], title=text(element['title']), text=text(element['text']))
+            out.append(item)
+        except KeyError as exc:
+            raise ValueError(f'{where}: missing required field {exc.args[0]}') from exc
+        except (TypeError, ValueError) as exc:
+            if str(exc).startswith(where + ':'):
+                raise
+            raise ValueError(f'{where}: {exc}') from exc
     return out
 
 
+def normalize_chart(element):
+    """Coerce numeric strings and discard unusable optional uncertainty data.
+
+    Nonfinite measurements remove their entire aligned category (or scatter point),
+    never invent a measurement or shift a label onto a different observation.
+    Other malformed values remain for the validator to reject with ownership.
+    """
+    element = deepcopy(element)
+    series = element.get('series')
+    labels = element.get('labels')
+    kind = element.get('chart_type')
+    if not isinstance(series, list) or not isinstance(labels, list):
+        return element
+
+    def numeric(value):
+        if isinstance(value, str):
+            try:
+                return float(value.strip())
+            except ValueError:
+                pass
+        return value
+
+    def nonfinite(value):
+        return type(value) in (int, float) and not math.isfinite(value)
+
+    aligned = kind != 'scatter' and bool(series)
+    invalid = set()
+    for source in series:
+        if not isinstance(source, dict):
+            aligned = False
+            continue
+        key = 'points' if kind == 'scatter' else 'stats' if kind == 'box' else 'values'
+        values = source.get(key)
+        if not isinstance(values, list):
+            aligned = False
+            continue
+        if key == 'stats':
+            stat_keys = ('min', 'q1', 'median', 'q3', 'max')
+            values = [[row[k] for k in stat_keys] if isinstance(row, dict) and set(row) == set(stat_keys) else row
+                      for row in values]
+        if key in {'points', 'stats'}:
+            values = [[numeric(v) for v in row] if isinstance(row, list) else row for row in values]
+        else:
+            values = [numeric(v) for v in values]
+        source[key] = values
+        if key == 'points':
+            source[key] = [row for row in values if not isinstance(row, list) or not any(nonfinite(v) for v in row)]
+        elif len(values) != len(labels):
+            aligned = False
+        else:
+            for i, value in enumerate(values):
+                if key == 'stats':
+                    if isinstance(value, list) and any(nonfinite(v) for v in value):
+                        invalid.add(i)
+                elif nonfinite(value):
+                    invalid.add(i)
+        errors = source.get('errors')
+        if errors is not None:
+            normalized = [numeric(v) for v in errors] if isinstance(errors, list) else None
+            if (kind not in {'line', 'bar', 'grouped_bar'} or normalized is None
+                    or len(normalized) != len(labels)
+                    or any(type(v) not in (int, float) or not math.isfinite(v) for v in normalized)):
+                source.pop('errors', None)
+            else:
+                source['errors'] = normalized
+    if aligned and invalid:
+        keep = [i for i in range(len(labels)) if i not in invalid]
+        element['labels'] = [labels[i] for i in keep]
+        key = 'stats' if kind == 'box' else 'values'
+        for source in series:
+            source[key] = [source[key][i] for i in keep]
+            if isinstance(source.get('errors'), list):
+                source['errors'] = [source['errors'][i] for i in keep]
+    return element
+
+
 def check_chart(element, text, where):
+    element = normalize_chart(element)
     chart_type = element.get('chart_type')
     if chart_type not in CHARTS:
         raise ValueError(f'{where}: chart_type must be one of {sorted(CHARTS)}')

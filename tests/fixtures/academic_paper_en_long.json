@@ -1,36 +1,102 @@
 {
+  "content_id": "paper_06",
   "variables": {
     "lang": "en",
-    "field": "energy systems",
+    "field": "ecology",
     "paper_length": "long",
     "citation_style": "numeric"
   },
+  "lang": "en",
   "values": {
-    "title": "Robustness Diagnostics for a Computational Dispatch Queue",
+    "title": "Hydrologic Reconnection and Vegetation Network Recovery Across Fragmented Tidal Marshes",
     "authors": [
       {
-        "name": "R. Aurora-Arc",
-        "affiliations": [
-          1
-        ],
-        "corresponding": false
-      },
-      {
-        "name": "C. Example-Wren",
+        "name": "Elian Voss",
         "affiliations": [
           1,
           2
         ],
-        "email": "cw@auroraresearch.org",
-        "corresponding": true
+        "corresponding": false
+      },
+      {
+        "name": "Mireya Quen",
+        "affiliations": [
+          2,
+          3
+        ],
+        "corresponding": true,
+        "email": "m.quen@veloran-marsh.org"
+      },
+      {
+        "name": "Tovan Rell",
+        "affiliations": [
+          1,
+          3
+        ],
+        "corresponding": false
       }
     ],
     "affiliations": [
-      "Computational Network Unit, Example North-4",
-      "Procedural Systems Cell, Observation Arc Lab"
+      "Nerith Basin Field Observatory, Coastal Processes Unit, Ostelune",
+      "Veloran Institute for Marsh Dynamics, Department of Landscape Ecology, Kestrel Reach",
+      "Cadrin School of Environmental Synthesis, Watershed Interactions Group, Avelin"
     ],
-    "abstract": "This longer computational study extends a paired-trace comparison of dispatch rules with diagnostics for zone imbalance, burst persistence, service-time shifts, and calibration stability. The same generated arrival traces are replayed across policies, while grouped seeds keep related windows on one side of the evaluation split. We report typical delay, tail delay, recovery, and sensitivity to the calibration observation. A reserved service slot improves recovery under several burst settings, but its advantage narrows when service requirements shift. Load-aware dispatch remains effective at moderate load and can concentrate delay in a small zone at peak load. The results illustrate a transparent benchmark protocol and do not represent a real service network.",
-    "keywords": "computational queues; paired traces; dispatch policies; tail delay; recovery",
+    "abstract": "Coastal marshes are shaped by interacting hydrologic, geomorphic, and biological processes, yet restoration assessments often emphasize vegetation cover without resolving the mechanisms that organize recovery. We investigated how reconnection of tidal exchange influences plant community assembly, spatial turnover, and functional structure across fragmented marsh landscapes. Field observations were paired with measurements of inundation duration, porewater salinity, sediment elevation, organic matter, and propagule movement along restored and unrestored shoreline reaches. We evaluated vegetation responses at local and landscape scales and used network analysis to identify links among hydrologic conditions, plant traits, and habitat configuration. Reconnected reaches displayed greater continuity of low marsh habitat, stronger association between elevation and community composition, and more even distribution of functional strategies. Recovery was not uniform: areas with persistent sediment deficits retained high environmental variability and supported patch mosaics dominated by stress-tolerant species. Vegetation similarity increased where tidal channels connected isolated depressions, while compositional divergence remained pronounced across reaches separated by engineered barriers. The results indicate that hydrologic reconnection can promote ecological recovery by restoring both material exchange and pathways for plant establishment, but its effects depend on sediment supply and the spatial arrangement of remnant habitat. Restoration planning should therefore combine channel reconnection with measures that retain elevation diversity, protect dispersal corridors, and track community structure over multiple seasons. A process-based view of recovery can improve forecasts of resilience under rising water levels and intensifying coastal disturbance.",
+    "abstract_alt": null,
+    "keywords": "tidal marsh ecology; hydrologic reconnection; plant community assembly; functional diversity; coastal restoration; habitat fragmentation; sediment dynamics; ecological resilience",
+    "keywords_alt": null,
+    "journal": "Annals of Brackish Systems Ecology",
+    "acknowledgement": "The authors thank the marsh wardens and shoreline stewards of the Nerith Basin for access coordination and field guidance. We are grateful to the Coastal Processes Unit and the Watershed Interactions Group for assistance with vegetation surveys, porewater measurements, and data curation. Editorial comments from two anonymous reviewers helped clarify the interpretation of community turnover and restoration trajectories.",
+    "references": [
+      {
+        "text": "[1] Vaelor, N., and Qerin, S. (2086). Tidal pathways and the assembly of coastal plant mosaics. Journal of Nerithan Shore Processes, 12(1), 41-58.",
+        "cite": "Vaelor & Qerin, 2086"
+      },
+      {
+        "text": "[2] Osen, T. (2087). Beyond canopy return: Structural indicators for marsh recovery. Brackish Landscape Review, 7(2), 113-129.",
+        "cite": "Osen, 2087"
+      },
+      {
+        "text": "[3] Rhal, M., and Doven, E. (2088). Material exchange as an ecological driver in low-relief marshes. Coastal Flux Studies, 19(1), 66-84.",
+        "cite": "Rhal & Doven, 2088"
+      },
+      {
+        "text": "[4] Quelor, I. (2088). Elevation deficits and delayed vegetation response after channel restoration. Estuarine Recovery Reports, 5(3), 22-39.",
+        "cite": "Quelor, 2088"
+      },
+      {
+        "text": "[5] Veyran, P., and Orrel, D. (2089). Habitat configuration and the persistence of stress-tolerant plant strategies. Marsh Systems Quarterly, 14(4), 201-219.",
+        "cite": "Veyran & Orrel, 2089"
+      },
+      {
+        "text": "[6] Tareth, L. (2090). Reopening tidal corridors in embanked coastal basins. Annals of Shoreline Dynamics, 9(2), 75-93.",
+        "cite": "Tareth, 2090"
+      },
+      {
+        "text": "[7] Meren, A., and Solq, J. (2090). Repeated reach surveys for detecting vegetation turnover. Coastal Field Methods, 11(1), 8-27.",
+        "cite": "Meren & Solq, 2090"
+      },
+      {
+        "text": "[8] Varon, C. (2091). Propagule movement along shallow tidal margins. Journal of Plant Dispersal Networks, 4(3), 144-161.",
+        "cite": "Varon, 2091"
+      },
+      {
+        "text": "[9] Elar, R., and Vossan, H. (2091). Multilayer networks for linking hydrology and plant traits. Landscape Interaction Studies, 16(2), 51-70.",
+        "cite": "Elar & Vossan, 2091"
+      },
+      {
+        "text": "[10] Darel, Y. (2092). Long-term indicators for marsh resilience under changing water levels. Basin Ecology Monographs, 3(1), 91-108.",
+        "cite": "Darel, 2092"
+      },
+      {
+        "text": "[11] Kelvar, M., and Ithren, P. (2093). Sediment retention, microtopography, and functional diversity in restored tidal wetlands. Estuarine Pattern Dynamics, 8(2), 134-152.",
+        "cite": "Kelvar & Ithren, 2093"
+      },
+      {
+        "text": "[12] Noreth, A., Pellan, R., and Zovar, E. (2094). Connectivity thresholds for plant community recovery in fragmented salt marshes. Coastal Resilience Ecology, 21(3), 287-309.",
+        "cite": "Noreth et al., 2094"
+      }
+    ],
     "body": [
       {
         "type": "heading",
@@ -39,338 +105,357 @@
       },
       {
         "type": "paragraph",
-        "text": "Procedural courier studies make it possible to test queue policies while keeping every route, arrival, and service time under control. This paper studies a computational campus-like network with no connection to a real institution. We compare a fixed dispatch rule, a load-aware rule, and a conservative rule that reserves capacity for delayed tasks. The same arrival traces are replayed for each policy, and the split between calibration and evaluation traces is frozen before any threshold is selected. The central quantity is the wait residual $r_i = wait_i - target_i$. We report its median together with a high quantile, because an acceptable average can coexist with a small set of severe delays. The full trace generator is specified so that the experiment can be reconstructed without outside data."
+        "text": "Tidal marsh restoration is often judged by whether plant cover returns, but canopy recovery alone cannot show whether the processes that sustain a marsh have also recovered. Vegetation may expand briefly in sheltered pockets while tidal exchange remains restricted, sediment elevation continues to decline, or dispersal routes stay severed. A more informative assessment asks whether hydrology, landform, plant traits, and habitat configuration are again linked in ways that can support persistence through environmental change. This distinction matters because a marsh is not simply a set of occupied plots: it is a changing landscape in which channels transport water and material, elevations sort plant strategies, and connected patches provide routes for recolonization. Conceptually, recovery requires exchange to outweigh the constraints imposed by isolation, expressed as $X_{tidal} > B_{barrier}$ at the scale relevant to establishment. Prior work on tidal pathways and coastal plant mosaics similarly frames community assembly as a product of spatially structured processes rather than cover alone \\cite{1}."
       },
       {
         "type": "paragraph",
-        "text": "The first question concerns stability under a gradual increase in requests. If a dispatch rule only performs well at one load, its apparent advantage may be an artifact of a chosen scenario. We therefore vary the arrival rate across a prespecified grid and keep the service-time distribution fixed within each comparison. Prior computational queue exercises have often summarized throughput alone, which hides who waits longest and whether the queue drains after a burst \\cite{1,2}. Our evaluation records both completed tasks and the longest sustained backlog. A normalized load $rho = arrivals / capacity$ provides a common axis for the experiments. The interpretation remains conditional on this generator: no measurement from a real building or service team is used."
+        "text": "We examine hydrologic reconnection and vegetation recovery across fragmented shoreline reaches, focusing on the associations among inundation, salinity, elevation, functional diversity, compositional turnover, and propagule movement. The analysis treats reconnection not as a binary engineering outcome but as a change in the duration and continuity of tidal exchange. This choice recognizes that a breach may be open yet convey little water to interior depressions, whereas a functioning corridor can redistribute both water and propagules across a broader portion of the marsh. The conceptual basis follows research emphasizing material exchange as an ecological driver in low-relief wetlands, where modest differences in flow pathways can produce substantial contrasts in environmental exposure and resource delivery \\cite{3}. We therefore ask whether connected reaches show more coherent vegetation structure and whether that response varies with sediment and elevation conditions."
+      },
+      {
+        "type": "paragraph",
+        "text": "The reach-level observations are summarized in the hydrologic and vegetation comparison at \\ref{tab:reach-conditions}; recovery indicators are assembled at \\ref{tab:recovery-patterns}. The similarity pattern across reaches is visualized at \\ref{fig:chart}, while the proposed sequence of physical and biological feedbacks is laid out at \\ref{fig:diagram}. These cross-references orient the reader to the evidence before the detailed interpretation. Together, the displays distinguish relatively consistent recovery in connected reaches from the variable or declining patterns associated with persistent isolation. We interpret those contrasts in relation to landscape position and local environmental constraints, rather than treating each reach as an interchangeable unit. This approach also allows the observed association between reconnection and vegetation condition to be considered alongside plausible alternative influences, especially sediment deficits and inherited differences in marsh elevation."
+      },
+      {
+        "type": "paragraph",
+        "text": "Our central proposition is that reconnection can facilitate recovery through two linked routes: it can restore regular hydrologic and material exchange, and it can open dispersal pathways that improve the likelihood of plant establishment. These routes need not operate at the same rate. Water movement may change quickly after a corridor opens, while plant composition responds over several growing seasons and may remain constrained by elevation deficits or a depleted propagule pool. Structural indicators beyond canopy return are therefore essential for recognizing incomplete recovery, as emphasized in assessments of marsh structure \\cite{2}. We focus on the organization of communities as well as their abundance, asking whether habitat continuity, functional strategy balance, and similarity among reaches indicate a return of ecological connectivity."
       },
       {
         "type": "heading",
         "level": 1,
-        "text": "2. Computational queue model"
+        "text": "2. Study design and analytical approach"
+      },
+      {
+        "type": "equation",
+        "id": "eq:hydrologic-reconnection",
+        "latex": "\\mathcal{R}_{h}=\\frac{\\sum_{i=1}^{n}\\Delta t_{i}^{\\mathrm{conn}}}{\\sum_{i=1}^{n}\\Delta t_{i}^{\\mathrm{base}}}",
+        "numbered": true
       },
       {
         "type": "heading",
         "level": 2,
-        "text": "2.1. Event generation and split"
+        "text": "2.1. Reach comparison and process variables"
       },
       {
         "type": "paragraph",
-        "text": "Each trace contains a warm-up interval followed by a scoring interval. Warm-up observations initialize the queue state but are excluded from reported errors, so the first empty-queue period does not make the policy look artificially fast. We use paired traces: every policy sees the same arrival sequence and the same service requirements. This reduces irrelevant variation between runs and makes a policy difference easier to interpret. The simulator records an event whenever a task joins, begins service, or leaves the queue. A queue state $q_t$ is updated after each event, rather than at fixed time steps, to avoid discretization artifacts. The event list is sorted by a stable tie-breaking rule that is included in the fixture description."
+        "text": "The comparison covers six monitored shoreline reaches distributed across three marsh sectors. Three reaches are classified as reconnected and three as unreconnected, allowing us to contrast areas with restored tidal access against areas where engineered separation or restricted channels continue to limit exchange. The reach design is intended to capture meaningful landscape contrasts, not to erase variation within each status category. Each reach contains microtopographic and vegetation mosaics, and local differences in elevation, channel distance, and exposure may influence response even where the nominal restoration status is the same. Repeated observations of vegetation and environmental conditions provide a basis for interpreting these contrasts over time, consistent with the value of repeated reach surveys for detecting compositional change \\cite{7}. \\fn{Matched locations were revisited across survey rounds so that shifts in composition could be distinguished from differences among locations.}"
       },
       {
         "type": "paragraph",
-        "text": "The calibration split is grouped by trace seed. No two windows cut from the same generated trace appear on opposite sides of the split, because nearby windows share the same burst structure. Dispatch thresholds are selected on calibration traces only and then held constant for all evaluation runs. We also repeat the comparison with a second set of seeds to estimate variability from trace generation. Let $m_g$ be the median wait for group $g$; we compare groups rather than treating each event as independent evidence. These safeguards make the reported uncertainty broader than a naive event-level interval and prevent the same burst from being counted twice. The split rule is simple enough to reproduce from the seed list alone."
-      },
-      {
-        "type": "paragraph",
-        "text": "Three dispatch policies share the same task priority and differ only in how they allocate the next available courier. The fixed rule selects the oldest eligible task. The load-aware rule chooses a task from the most congested zone, while the conservative rule holds one service slot when recent delays exceed a fixed calibration threshold. We do not change the threshold during evaluation. A score $S_j = wait_j + penalty_j$ ranks eligible tasks, and the penalty is zero for the fixed rule. The other policies use bounded penalties so that a task cannot be postponed indefinitely solely because its zone is busy. This bound is stated in the configuration and is identical across all seeds."
-      },
-      {
-        "type": "equation",
-        "id": "eq:wait",
-        "latex": "W_i = T_i - A_i",
-        "numbered": true
-      },
-      {
-        "type": "paragraph",
-        "text": "The wait decomposition is checked against the event log after each replay. A task cannot begin before it arrives, and the recorded service interval cannot overlap another task on the same resource. We use $W_i = B_i - A_i$ for the observed wait, with arrival time $A_i$ and service start $B_i$. The queue length after event k is $Q_k = Q_{k-1} + arrivals_k - starts_k$. These identities detect bookkeeping errors before the policy metrics are calculated. Each check is applied to every trace, including traces with no burst, so that the most difficult scenarios do not receive special handling."
-      },
-      {
-        "type": "equation",
-        "id": "eq:aligned",
-        "latex": "\\begin{aligned}\\bar W &= \\frac{1}{n}\\sum_i W_i \\\\ Q_k &= Q_{k-1}+a_k-s_k\\end{aligned}",
-        "numbered": true
-      },
-      {
-        "type": "heading",
-        "level": 1,
-        "text": "3. Evaluation measures"
-      },
-      {
-        "type": "paragraph",
-        "text": "The outcome table summarizes median wait, the upper-tail wait, and the proportion of traces that return to an empty queue after a burst. These measures answer different questions: median wait describes a typical task, the upper tail describes difficult cases, and recovery indicates whether congestion persists. The largest load level is retained even when all policies degrade there, since removing it would conceal the operating boundary. We show each policy separately rather than ranking them with a composite score. The table is referenced as \\ref{tab:queue}, and its values should be read with the load curve in \\ref{fig:load}. The units are simulation ticks, not clock minutes, and the scale has no real-world calibration."
+        "text": "Hydrologic exposure was characterized through mean inundation duration per tidal cycle, while porewater salinity described a complementary aspect of the conditions experienced by plants. Sediment elevation provided a measure of the vertical setting in which inundation and drainage occur. Vegetation measurements included cover and functional diversity, alongside composition-based indicators of similarity, turnover, and patchiness. Propagule movement was recorded as a landscape process connecting source vegetation to potential establishment areas. These measures were selected because no single one is an adequate proxy for recovery: high cover can coexist with low functional diversity, and a reach with favorable mean conditions may still contain isolated depressions that receive few propagules. Linking water, sediment, plants, and space makes it possible to distinguish these different states."
       },
       {
         "type": "table",
-        "id": "tab:queue",
-        "caption": "Wait and recovery summaries across computational load settings",
+        "id": "tab:reach-conditions",
+        "caption": "Hydrologic and vegetation conditions across monitored marsh reaches",
         "header": [
           [
-            "Policy",
-            "Median wait",
-            "Upper tail",
-            "Recovery"
+            "Reach",
+            "Status",
+            "Flood h",
+            "Sal ppt",
+            "Elev cm",
+            "Cover %",
+            "FD"
           ]
         ],
         "rows": [
           [
-            "Fixed",
-            "8.4",
-            "21.0",
-            "0.71"
+            "R1-A",
+            "Reconnected",
+            "6.8",
+            "18.4",
+            "42",
+            "71",
+            "0.68"
           ],
           [
-            "Load-aware",
-            "7.2",
-            "23.8",
-            "0.74"
-          ],
-          [
-            "Conservative",
-            "9.1",
-            "18.6",
-            "0.86"
-          ]
-        ],
-        "table_style": "three_line"
-      },
-      {
-        "type": "chart",
-        "id": "fig:load",
-        "caption": "Wait summaries by normalized request load",
-        "chart_type": "line",
-        "labels": [
-          "low",
-          "moderate",
-          "high",
-          "peak"
-        ],
-        "series": [
-          {
-            "name": "median",
-            "values": [
-              4.0,
-              7.2,
-              12.8,
-              21.1
-            ],
-            "errors": [
-              0.8,
-              1.0,
-              1.8,
-              2.9
-            ]
-          },
-          {
-            "name": "upper tail",
-            "values": [
-              11.2,
-              18.4,
-              32.0,
-              49.5
-            ]
-          }
-        ],
-        "x_label": "normalized load",
-        "y_label": "simulation ticks"
-      },
-      {
-        "type": "paragraph",
-        "text": "In the middle of the tested load range, the load-aware policy reduces the median wait while preserving a similar recovery rate. At the highest level its upper-tail wait grows faster, suggesting that routing by congestion can concentrate work in one zone. The conservative policy has a slightly higher median in quiet scenarios but limits the longest backlog after burst arrivals. This trade-off is visible in the computational line chart, where the median and tail curves separate as load rises. The chart uses the same fixed seeds as the table; error bars represent the central spread across trace batches. The expression $delta = wait_policy - wait_fixed$ is computed within each paired trace before the aggregate summary is formed."
-      },
-      {
-        "type": "figure",
-        "id": "fig:queue",
-        "figure_type": "architecture",
-        "caption": "Computational queue and dispatch sequence",
-        "description": "A procedural diagram shows arrival events passing through a shared queue, a policy selector, and a service pool.",
-        "labels": [
-          "Arrival stream",
-          "Shared queue",
-          "Policy rule",
-          "Service pool"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "The diagram at \\ref{fig:queue} separates the queue state from the dispatch rule so that a policy change does not alter event generation. A task enters the shared queue with its arrival timestamp and fixed service requirement. The selector chooses among eligible tasks, then the service pool updates its state when a task completes. This separation is important for paired replay: the same arrival trace can be evaluated under several dispatch policies without regenerating the workload. The figure is a schematic of code structure, not a map of a real site. Its labels identify only the components needed to understand the simulation."
-      },
-      {
-        "type": "equation",
-        "id": "eq:recovery",
-        "latex": "R = empty_traces / all_traces",
-        "numbered": true
-      },
-      {
-        "type": "paragraph",
-        "text": "The result does not identify a universal best policy. A deployment with strict tail constraints might prefer the conservative rule, whereas a system judged primarily by typical delay could prefer load-aware dispatch at moderate load. Such a choice would require real service objectives and measurements, neither of which is included here. We instead state the conditional finding: under the computational arrival process, load-aware dispatch improves typical delay at intermediate load, while the conservative reserve recovers more reliably after bursts. The queue model assumes that every task is served once and that service requirements are known to the simulator. It excludes cancellations, human decisions, and correlated equipment failure, all of which could change the ranking \\cite{3,4}."
-      },
-      {
-        "type": "heading",
-        "level": 1,
-        "text": "4. Sensitivity and limitations"
-      },
-      {
-        "type": "paragraph",
-        "text": "A further sensitivity check changes the duration of the warm-up interval and the size of the calibration group. Short warm-up periods leave more initial-state influence in the score; longer periods make the estimate less sensitive but reduce the fraction of each trace available for evaluation. Increasing calibration size stabilizes the threshold for the conservative rule, although the benefit becomes small after the principal burst patterns have appeared. We report the tested settings rather than extrapolating beyond them. The confidence width $w = q95 - q05$ is included as a descriptive spread and is not presented as a guarantee for unobserved traces. These comparisons help separate simulation noise from a policy effect without claiming that the generator represents a particular service network."
-      },
-      {
-        "type": "paragraph",
-        "text": "The study has several limits. The computational network has a small number of zones, fixed travel costs, and no route conflicts. Service times are drawn independently of task type, so the experiment cannot assess specialist workload or priority rules that depend on task content. The arrival generator includes bursts but not long-term seasonality. We also compare only three policies and do not tune them against a common operational objective. The effect size may therefore change under a different graph or cost model. Our purpose is to show a transparent comparison pattern: paired traces, group-based splitting, separate typical and tail metrics, and explicit reporting of recovery. Any follow-up should first define its target setting and validate the simulator against data collected for that purpose."
-      },
-      {
-        "type": "paragraph",
-        "text": "The procedure is deliberately compact. It creates a trace, locks its split, calibrates thresholds, replays each dispatch rule, and records wait and recovery outcomes. The pseudocode lists the sequence without hiding a second optimization step inside the evaluation loop. The event trace and parameter record are retained for every computational run, allowing a reviewer to inspect why a task waited or why a queue remained nonempty. We cite the auxiliary design notes for the event ordering and uncertainty summaries \\cite{5,6,7,8}. The result is a small benchmark example rather than a recommendation about courier staffing. Its main contribution is that every reported value can be traced back to an explicit generated scenario."
-      },
-      {
-        "type": "paragraph",
-        "text": "The longer-burst and service-shift outcomes are summarized in \\ref{tab:robustness}; the invariant sequence is listed in \\ref{alg:audit}."
-      },
-      {
-        "type": "heading",
-        "level": 1,
-        "text": "5. Robustness diagnostics"
-      },
-      {
-        "type": "paragraph",
-        "text": "Zone imbalance is introduced by changing the share of arrivals assigned to each computational zone while keeping the total number of tasks fixed. This isolates concentration from overall volume. The load-aware rule can reduce the global median while sending a disproportionate share of work through one busy zone, so we report zone-specific tail delay as well as the network-wide summary. A zone metric is calculated only when that zone has enough evaluation events; otherwise it is marked as unavailable instead of being stabilized with an undocumented correction. This choice makes the table less complete but keeps its meaning transparent. The imbalance ratio $h = max(arrivals_z) / mean(arrivals_z)$ is recorded for each trace and used as a descriptive scenario label."
-      },
-      {
-        "type": "paragraph",
-        "text": "Burst persistence is varied independently of average arrival rate. In short bursts, the queue can drain between peaks; in longer bursts, a reserve slot may be used continuously and no longer functions as a reserve. We therefore record the time from the last burst arrival to the next empty state, not only the largest queue size. The recovery measure is censored when the trace ends before the queue empties, and censored cases remain in the denominator for a conservative summary. A sensitivity run lengthens the trace while holding the scoring window constant, which distinguishes a delayed recovery from a recovery that never occurs during the observation period. These outcomes clarify what the recovery percentage in the first table does and does not mean."
-      },
-      {
-        "type": "paragraph",
-        "text": "Service-time shifts test whether a policy tuned on one work profile remains useful after the average task duration changes. We multiply every service requirement by the same factor within a scenario, preserving the ordering of tasks but changing capacity pressure. A second condition adds a small random spread around that shift so that the result is not determined by one uniform multiplier. The fixed rule is comparatively insensitive in the low-load region, whereas both adaptive rules change more as the reserve or congestion signal becomes active. These results are not evidence about real service times; they show why a benchmark should disclose whether it changes arrivals, capacity, or both. We denote the factor by $k_s$ and list each tested level in the configuration record."
-      },
-      {
-        "type": "paragraph",
-        "text": "Threshold stability is assessed by repeating calibration with several grouped seed sets. Each calibration set contains complete traces, preventing windows from one underlying burst pattern from leaking into both fitting and checking. The conservative rule uses a quantile of calibration delay, but the quantile is chosen before evaluation and kept fixed across all evaluation traces. Its value varies modestly across seed groups at moderate load and more at peak load, where a few long bursts dominate the upper tail. A threshold that moves substantially across groups should be treated as unstable even if its mean evaluation score is competitive. We consequently include the spread of the chosen threshold in the supplementary summary and do not tune a separate threshold for each displayed chart point."
-      },
-      {
-        "type": "paragraph",
-        "text": "The expanded result table separates policy performance from trace recovery and lists medians alongside upper-tail delay. Every number is computed from trace-level summaries before aggregation, so one long trace cannot contribute hundreds of nominally independent events. The note below the table identifies the computational time unit and the censoring convention. In the peak condition, all methods have higher tail delay than at moderate load, but their recovery rates differ. This is precisely the setting where a single composite score would hide the operational trade-off. We avoid ranking the policies with a weighted score because the weights would encode an objective not supplied by the computational experiment. The associated table is \\ref{tab:robustness}."
-      },
-      {
-        "type": "table",
-        "id": "tab:robustness",
-        "caption": "Robustness summaries under changed burst and service conditions",
-        "header": [
-          [
-            "Condition",
-            "Median wait",
-            "Tail wait",
-            "Recovery"
-          ]
-        ],
-        "rows": [
-          [
-            "short burst",
-            "8.1",
-            "20.2",
-            "0.82"
-          ],
-          [
-            "long burst",
-            "12.7",
-            "38.4",
+            "R1-B",
+            "Reconnected",
+            "5.9",
+            "20.1",
+            "38",
+            "64",
             "0.63"
           ],
           [
-            "shifted service",
-            "10.4",
-            "31.6",
-            "0.70"
+            "R2-A",
+            "Reconnected",
+            "7.4",
+            "16.9",
+            "47",
+            "78",
+            "0.71"
+          ],
+          [
+            "R2-B",
+            "Unreconnected",
+            "3.1",
+            "24.8",
+            "31",
+            "39",
+            "0.44"
+          ],
+          [
+            "R3-A",
+            "Unreconnected",
+            "2.6",
+            "27.3",
+            "28",
+            "34",
+            "0.39"
+          ],
+          [
+            "R3-B",
+            "Reconnected",
+            "6.2",
+            "19.7",
+            "40",
+            "69",
+            "0.66"
           ]
         ],
-        "note": "Computational ticks only; unfinished recovery traces are counted conservatively."
+        "note": "Flood duration is reported as mean hours per tidal cycle; salinity is measured in porewater; FD denotes functional diversity."
       },
       {
         "type": "paragraph",
-        "text": "We also inspect the sensitivity of the apparent policy advantage to the choice of summary statistic. Mean delay reacts strongly to a few extreme traces, while the median is less affected; neither statistic alone describes all users in the simulated network. The interquartile range offers a compact description of the middle half, and the 95th percentile gives a view of the upper tail. We calculate these quantities on trace-level values and retain the trace identifiers in the supplementary output. The difference $g = tail_{adaptive} - tail_{fixed}$ is paired by trace, so a negative value indicates a lower tail delay for the adaptive rule under that generated workload. This is a conditional paired contrast, not a population estimate."
+        "text": "We express relative hydrologic reconnection as $R_h = T_{conn}/T_{base}$, where connected inundation duration is compared with the baseline duration across the monitored intervals. The ratio is useful for organizing temporal change, but it does not imply that every interval contributes equally to plant response. A brief period of deep flooding may have a different biological effect from a longer sequence of shallow inundation, and the measure does not by itself encode water velocity, salinity pulses, or the timing of drainage. We therefore interpret it jointly with porewater conditions and elevation. Material exchange can influence several processes at once, including sediment delivery and the redistribution of organic matter, so a hydrologic index should be viewed as a pathway indicator rather than as a complete description of marsh functioning \\cite{3}."
+      },
+      {
+        "type": "equation",
+        "id": "eq:community-structure",
+        "latex": "\\begin{aligned}\\mathcal{D}_{F}&=1-\\sum_{k=1}^{K}p_{k}^{2}\\\\\\mathcal{S}_{ij}&=\\frac{2\\sum_{k=1}^{K}\\min(p_{ik},p_{jk})}{\\sum_{k=1}^{K}p_{ik}+\\sum_{k=1}^{K}p_{jk}}\\end{aligned}",
+        "numbered": true
       },
       {
         "type": "paragraph",
-        "text": "Implementation checks validate event conservation before computing the outcomes. Every generated arrival must be either waiting, in service, or completed; every service start must correspond to one queued task; and a resource cannot serve two tasks at once. The checks run on empty, low-load, and overloaded traces. When an invariant fails, the trace is rejected and the run is recorded as invalid rather than silently repaired. This protects the comparison from a procedural bug that might affect only one policy. The fixture preserves the parameters and event ordering needed to reproduce a valid trace. An audit of the flow of those checks appears in \\ref{alg:audit}, and the results table lists only runs that meet these invariants."
+        "text": "Vegetation structure was characterized with complementary indices. Functional diversity was represented as $D_F = 1 - \\sum_{k=1}^{K} p_k^2$, where $p_k$ is the relative representation of functional strategy $k$. This index increases when the community is less dominated by a single strategy, although its ecological meaning depends on how traits and strategy classes are defined. Pairwise similarity was considered through shared representation across reaches, with low similarity and high turnover indicating stronger compositional differentiation. We avoid reading either measure as an unqualified measure of ecological quality: some turnover is expected across elevation gradients, and high functional diversity can arise from mixed conditions that are not necessarily stable. The indices are most useful when interpreted together with environmental gradients and habitat continuity."
       },
       {
-        "type": "code",
-        "id": "alg:audit",
-        "caption": "Trace invariant audit",
-        "language": "pseudocode",
-        "lines": [
-          "for event in trace:",
-          "  update_queue_state(event)",
-          "  assert arrivals == waiting + active + done",
-          "  assert each_start_has_queued_task()",
-          "  assert resource_has_at_most_one_task()",
-          "  reject_trace_if_invariant_fails()"
+        "type": "paragraph",
+        "text": "The analysis also considers spatial links between source stands, tidal corridors, and potential establishment locations. Propagules may travel through shallow channels, move with ebb and flood currents, or become retained in sheltered margins; their arrival does not guarantee establishment. Studies of movement along shallow tidal margins underline that dispersal depends on both transport pathways and the opportunities for retention \\cite{8}. We therefore treat propagule movement as a link between hydrologic reconnection and vegetation assembly, rather than as a direct substitute for recruitment. The distinction is important when a reconnected reach exhibits improved transport but continues to lack suitable elevations or stable sediment for seedling survival."
+      },
+      {
+        "type": "chart",
+        "id": "fig:chart",
+        "caption": "Vegetation similarity across monitored shoreline reaches",
+        "chart_type": "bar",
+        "labels": [
+          "R1-A",
+          "R1-B",
+          "R2-A",
+          "R2-B",
+          "R3-A",
+          "R3-B"
+        ],
+        "series": [
+          {
+            "name": "Similarity index",
+            "values": [
+              0.74,
+              0.68,
+              0.79,
+              0.42,
+              0.37,
+              0.71
+            ]
+          }
         ]
       },
       {
         "type": "paragraph",
-        "text": "An additional counterfactual removes the reserve slot from the conservative rule after calibration. This diagnostic is not treated as a fourth competing policy because it is designed to isolate the effect of one mechanism. Its median delay is slightly lower at moderate load, but burst recovery becomes less reliable in the tested traces. The difference is consistent with the intended role of the reserve, although it does not establish that reserving capacity is always desirable. An actual system would need a cost for idle capacity and a service objective for delays. We report this counterfactual to expose the mechanism behind the policy result, not to suggest an operational change. The comparison reinforces the need to pair performance values with the design choices that produce them."
+        "text": "For interpretation, we relate the response in vegetation organization to hydrologic connection, elevation change, and environmental variability. A compact representation is $V_r = \\beta_0 + \\beta_1 R_{h,r} + \\beta_2 \\Delta E_r - \\beta_3 \\sigma_r$, where the terms denote reach-level recovery response, reconnection, elevation change, and variability, respectively. This expression summarizes the expected directions of association; it is not a claim that one linear relationship captures every process or that coefficients are independent of landscape context. In particular, a large variability term can reflect unresolved sediment instability, fluctuating salinity, or heterogeneous inundation. These components motivate a process-based interpretation, while the reach contrasts and repeated observations provide the empirical basis for judging how well that interpretation fits."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "3. Observed patterns of hydrology and vegetation"
       },
       {
         "type": "equation",
-        "latex": "spread = q75 - q25",
-        "numbered": false
-      },
-      {
-        "type": "box",
-        "kind": "definition",
-        "title": "Trace-level aggregation",
-        "text": "A trace summary is computed before policy values are aggregated across generated seeds. Events within one trace are not counted as independent traces."
+        "id": "eq:recovery-response",
+        "latex": "\\widehat{\\Delta V}_{r}=\\beta_{0}+\\beta_{1}\\mathcal{R}_{h,r}+\\beta_{2}\\Delta E_{r}-\\beta_{3}\\sigma_{r}",
+        "numbered": true
       },
       {
         "type": "paragraph",
-        "text": "One footnote records the time convention used throughout the experiment\\fn{A simulation tick is a unit defined by the fixture and is not converted to minutes.}."
+        "text": "Connected reaches generally experienced longer inundation and had lower porewater salinity than the unreconnected reaches. The contrasts are especially apparent between the connected reaches R2-A and R3-B and the isolated reaches R2-B and R3-A. This pattern is consistent with restored tidal exchange altering the duration and reach of flooding, although local channel geometry and marsh elevation also shape the exposure experienced at each location. Vegetation cover and functional diversity were higher in the connected set as a whole, but the differences were not uniform enough to support a simple rule that reconnection immediately produces equivalent outcomes everywhere. The comparison at \\ref{tab:reach-conditions} is best read as evidence of a broad association coupled with substantial reach-to-reach variation."
+      },
+      {
+        "type": "table",
+        "id": "tab:recovery-patterns",
+        "caption": "Community recovery indicators by shoreline reach",
+        "header": [
+          [
+            "Reach",
+            "Corr",
+            "Turn",
+            "Patch",
+            "Prop",
+            "Trend"
+          ]
+        ],
+        "rows": [
+          [
+            "R1-A",
+            "0.74",
+            "0.26",
+            "0.18",
+            "0.63",
+            "Rising"
+          ],
+          [
+            "R1-B",
+            "0.68",
+            "0.31",
+            "0.22",
+            "0.57",
+            "Rising"
+          ],
+          [
+            "R2-A",
+            "0.79",
+            "0.21",
+            "0.15",
+            "0.69",
+            "Stable"
+          ],
+          [
+            "R2-B",
+            "0.42",
+            "0.58",
+            "0.47",
+            "0.29",
+            "Variable"
+          ],
+          [
+            "R3-A",
+            "0.37",
+            "0.63",
+            "0.52",
+            "0.24",
+            "Declining"
+          ],
+          [
+            "R3-B",
+            "0.71",
+            "0.29",
+            "0.20",
+            "0.61",
+            "Rising"
+          ]
+        ],
+        "note": "Corr indicates vegetation similarity among connected reaches; Turn denotes compositional turnover; Patch is the proportion of discontinuous habitat; Prop records propagule movement."
+      },
+      {
+        "type": "paragraph",
+        "text": "The relationship between hydrologic access and vegetation structure is stronger when similarity and patch configuration are considered alongside cover. Connected reaches show comparatively high similarity values, while the unreconnected reaches are associated with lower similarity and greater turnover. The bar pattern in \\ref{fig:chart} makes this contrast readily visible: R2-A is among the most similar reaches, whereas R3-A has the lowest reported similarity. In aggregate, the contrast is expressed as $\\bar{S}_{conn} > \\bar{S}_{unconn}$, although the reach-level spread remains consequential. Such differences indicate that reconnection is associated not merely with more vegetation, but with a more coherent distribution of community composition across the connected portion of the landscape. They do not imply that all connected reaches have identical vegetation, since elevation and exposure continue to sort species and functional strategies within the reconnected area."
+      },
+      {
+        "type": "paragraph",
+        "text": "The recovery indicators also show that higher connectivity tends to coincide with less discontinuous habitat and greater propagule movement. The reconnected reaches are generally characterized by rising or stable trends, while the unreconnected reaches show variable or declining trajectories. At R2-A, stability occurs alongside comparatively high similarity and propagule movement, suggesting that recovery can reach a maintenance phase rather than increase continually. By contrast, the lower similarity and greater patchiness at R3-A coincide with a declining trend. These combinations are informative because a single trend label could conceal whether a reach is stable due to persistence of an established community or merely shows little change under ongoing stress. The indicator set at \\ref{tab:recovery-patterns} supports a more differentiated reading of trajectory."
+      },
+      {
+        "type": "paragraph",
+        "text": "The association between elevation and community composition is particularly important for interpreting spatial turnover. Where elevation differences align with distinct inundation regimes, composition can vary predictably across a marsh rather than randomly among disconnected patches. In that case, turnover may represent environmental sorting and contribute to landscape-level diversity. Where engineered isolation interrupts exchange, however, high turnover can also reflect the persistence of separated communities with limited opportunities for recolonization. We therefore distinguish patterned replacement along environmental gradients from fragmentation-related divergence. The evidence suggests that connected reaches have stronger coordination between elevation and vegetation structure, while barriers leave some locations exposed to a combination of altered hydrology and reduced recolonization. This interpretation is consistent with findings that elevation deficits can delay vegetation response after channel restoration \\cite{4}."
+      },
+      {
+        "type": "figure",
+        "id": "fig:diagram",
+        "figure_type": "block_diagram",
+        "caption": "Process pathway linking tidal exchange to community recovery",
+        "description": "A left-to-right block diagram begins with tidal exchange, which leads to sediment elevation and propagule movement. These processes converge on plant establishment, followed by habitat continuity and community recovery. Feedback arrows connect habitat continuity back to material retention and plant establishment, indicating that biological development can reinforce the physical benefits of reconnection.",
+        "labels": [
+          "Tidal exchange",
+          "Sediment elevation",
+          "Plant establishment",
+          "Habitat continuity",
+          "Community recovery"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Functional diversity follows a related but not identical pattern. Reconnected reaches tend to have a more even distribution of strategies, whereas the least connected reaches show stronger dominance by stress-tolerant forms. A community dominated by tolerant plants can maintain cover under salinity or flooding stress, yet low representation of other strategies may limit its capacity to respond when conditions shift. Conversely, high functional diversity is not automatically evidence of resilience if the mixture is sustained only under unstable conditions. Trait-based interpretation must therefore incorporate sediment retention, microtopography, and the temporal reliability of environmental conditions. Work connecting sediment retention and functional diversity similarly emphasizes that physical heterogeneity can support a broader set of plant strategies when elevations remain viable \\cite{11}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Across the observations, the broad signal is one of improved continuity rather than uniform convergence. Connected reaches are more alike in composition, but they retain local differences that correspond to elevation and environmental exposure. Unreconnected reaches are more divergent and more patchy, a pattern compatible with restricted exchange and persistent environmental stress. The results thus support a scale-dependent view: local heterogeneity can remain ecologically valuable, while excessive isolation among patches can constrain recovery at the landscape scale. Similarity should not be maximized without regard to habitat variation. Rather, recovery is indicated when communities become connected enough for material and biological exchange while preserving a range of elevations and habitat conditions."
       },
       {
         "type": "heading",
         "level": 1,
-        "text": "6. Appendix: scenario record"
+        "text": "4. Mechanisms linking reconnection to community recovery"
       },
       {
         "type": "paragraph",
-        "text": "A replication record should include the trace seeds, zone graph, arrival shares, service multiplier, burst duration, warm-up length, scoring window, threshold quantile, and each policy setting. The record should also state whether recovery was censored and how trace-level summaries were aggregated. Any alteration to one of these settings creates a new scenario and should receive a separate identifier. This appendix gives a checklist rather than a default configuration, because the study does not identify one universally appropriate queue model. A reviewer can use the fields to distinguish a repeated run from a new sensitivity condition and can verify that the evaluation split stayed fixed."
+        "text": "The first pathway begins with tidal exchange. More regular flooding can convey sediment and organic matter into areas that were formerly isolated, alter drainage patterns, and moderate local salinity through periodic flushing. These changes can influence plant performance directly and can also modify the physical template on which later establishment depends. Reopened tidal corridors in embanked basins have been discussed as interventions that restore movement through the landscape, but their ecological consequences depend on whether the new pathway reaches interior habitats and transports material effectively \\cite{6}. Our observations are consistent with this process account: connected reaches combine longer inundation with vegetation conditions that are generally less fragmented. The association does not isolate the effect of each transported material, but it supports the idea that restoring exchange is more than a change in water level."
+      },
+      {
+        "type": "paragraph",
+        "text": "A second pathway concerns sediment elevation. Elevation mediates the frequency and duration of inundation, so small gains or losses can move a location across thresholds in plant tolerance. Where sediment delivery is sufficient, reconnection may gradually improve elevation conditions and increase the range of species able to establish. Where sediment deficits persist, opening a channel can increase tidal exposure without correcting the vertical position of the marsh surface. Such locations may experience a longer period of flooding while remaining vulnerable to poor establishment or erosion. This is one reason the responses are not uniform: hydrologic access can be restored faster than a suitable landform can be rebuilt. The distinct elevation deficits reported after channel restoration provide a parallel explanation for delayed biological response \\cite{4}."
+      },
+      {
+        "type": "paragraph",
+        "text": "The third pathway is dispersal. Tidal connections can link source stands to newly accessible margins, transporting propagules into places where recruitment was previously limited by distance or barriers. Yet connectivity affects both movement and retention. Strong currents can carry propagules past an establishment site, while fine-scale topography and vegetation can create sheltered areas where they lodge and germinate. An opened route therefore increases opportunity, not certainty. The association between propagule movement and recovery in the connected reaches is consistent with this distinction. Network approaches that link hydrology with plant traits offer a useful way to represent these coupled pathways, because they make explicit that a route in the water network can connect to a trait-defined plant response only when suitable habitat occurs along the route \\cite{9}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Once plants establish, biological development can reinforce physical change. Stems and roots slow local flow, retain suspended material, and help stabilize the surface. Increasing habitat continuity may thus support more consistent material retention, which can improve conditions for further plant growth. This feedback is represented in the process pathway at \\ref{fig:diagram}. The feedback should not be assumed to operate indefinitely or at the same strength under every disturbance regime. Sparse vegetation may retain little sediment, and dense stands can redirect flow in ways that create erosion elsewhere. Nevertheless, the possibility of a reinforcing loop helps explain why modest initial differences between connected and disconnected reaches may grow over time, particularly where remnant vegetation provides nearby sources for recolonization."
+      },
+      {
+        "type": "paragraph",
+        "text": "Landscape configuration moderates each pathway. A connected channel can provide little benefit to an interior patch if engineered barriers remain between them, and a favorable establishment site can remain unoccupied when source populations are distant. Conversely, a sequence of small remnant patches may function as stepping stones when tidal corridors permit gradual movement among them. The distribution of stress-tolerant strategies is also shaped by configuration: isolated patches may persist because they are protected from some disturbances, yet their restricted exchange can reduce their ability to recover after local loss. Research on habitat configuration and strategy persistence highlights this tension between local persistence and landscape-wide exchange \\cite{5}. Restoration must consequently address not only the condition of a channel but also the spatial relationship among channels, remnant vegetation, and suitable elevations."
+      },
+      {
+        "type": "paragraph",
+        "text": "Recovery is also time dependent. Hydrologic conditions can respond within a short interval after reconnection, while vegetation composition may lag as plants disperse, establish, and alter local sediment retention. A snapshot can therefore misclassify a delayed response as failure or an early increase in cover as completed recovery. Long-term resilience indicators are needed to identify whether observed gains persist under changing water levels and disturbance \\cite{10}. Repeated observation makes it possible to distinguish trajectory from state: a reach with moderate cover but rising functional diversity may be moving toward recovery, whereas a reach with high cover but declining propagule movement may be vulnerable. This temporal perspective is central to evaluating whether reconnection creates lasting ecological capacity rather than a transient response."
       },
       {
         "type": "heading",
         "level": 1,
-        "text": "7. Conclusion"
+        "text": "5. Implications for marsh restoration and monitoring"
       },
       {
         "type": "paragraph",
-        "text": "The extended diagnostics show that dispatch policy results depend on load, burst persistence, zone balance, and the rule used to summarize delay. Load-aware dispatch lowers typical delay in intermediate scenarios, while the reserve rule improves recovery in several burst conditions. At peak load, both adaptive policies can change their behavior as thresholds activate, and no single summary captures every trade-off. We provide paired computational traces, fixed calibration rules, trace invariants, and explicit limitations so the comparison can be reviewed and repeated. The benchmark is an example of method reporting, not a recommendation about a real service network."
+        "text": "Restoration planning should pair channel reconnection with an assessment of sediment supply and surface elevation. Opening a corridor is most likely to support vegetation recovery where tidal exchange can deliver material to locations capable of retaining it. Where elevation deficits are pronounced, complementary measures may be needed to reduce sediment limitation or protect existing elevation diversity. The objective should not be to raise every part of the marsh to a uniform surface. Variation in elevation creates a range of inundation conditions and supports different plant strategies; removing that variation could reduce habitat options even if mean elevation increases. Planning should instead identify which locations require improved material delivery, which should remain as low-elevation habitat, and which remnant surfaces are essential as sources of propagules."
+      },
+      {
+        "type": "paragraph",
+        "text": "Connectivity should be evaluated at more than one spatial scale. At the reach scale, a project may restore local flooding and improve vegetation cover. At the landscape scale, the same project may leave patches separated by barriers or fail to link source vegetation with suitable establishment areas. Mapping channel pathways alongside remnant habitat and elevations can reveal these mismatches before intervention. Thresholds may occur where a small increase in connectivity produces a substantial change in the probability of recolonization, but those thresholds are likely to vary with source abundance, dispersal distance, and habitat suitability. Research on connectivity thresholds in fragmented marshes underscores the need to consider network position rather than relying only on the length of a restored channel \\cite{12}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Monitoring should include complementary indicators and be repeated across seasons. Inundation and salinity describe exposure, elevation and sediment measures describe the physical setting, and vegetation composition, functional diversity, and patchiness describe biological organization. Propagule movement helps determine whether a potential route is being used, while repeated recruitment observations reveal whether arrivals result in establishment. A monitoring program based only on total cover could miss a loss of functional strategies or an increase in isolation among patches. Likewise, a single season of low recruitment may reflect timing rather than persistent dispersal limitation. Combining these measures enables managers to distinguish hydrologic success from broader ecological recovery and to adapt interventions where physical changes are not followed by biological response."
+      },
+      {
+        "type": "paragraph",
+        "text": "The findings also argue for retaining remnant habitat during construction and subsequent maintenance. Existing patches provide both local refugia and sources from which vegetation can expand. Removing them to simplify channel geometry may diminish the very networks needed for recovery. Where patch mosaics are already present, management can protect stepping-stone vegetation, preserve microtopographic variation, and avoid works that sever shallow secondary pathways. This does not mean every patch must be connected directly to every other patch. Rather, the goal is to maintain sufficient routes for movement and material exchange while allowing local environmental contrasts to persist. A connected landscape can contain distinct communities; connectivity concerns the opportunity for ecological exchange, not uniformity of composition."
+      },
+      {
+        "type": "paragraph",
+        "text": "Under rising water levels and more intense coastal disturbance, restoration performance will depend on whether marshes can adjust rather than simply retain their current vegetation. Elevation-building processes, dispersal access, and functional variation together influence that capacity. A process-based evaluation therefore asks whether a project has restored the conditions for sediment retention, plant establishment, and onward recovery after disturbance. It also recognizes that outcomes can diverge among reaches if sediment supply is uneven or the wider landscape remains fragmented. By tracking trajectories and linkages, managers can identify where additional intervention is warranted and where natural feedbacks appear to be operating. The evidence supports reconnection as an important foundation, not as a guarantee of uniform recovery."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "6. Limitations and conclusions"
+      },
+      {
+        "type": "paragraph",
+        "text": "Several limitations shape the interpretation. Reach status summarizes a complex gradient of hydrologic access, and it cannot represent every difference in channel geometry, exposure, or restoration history. The observed associations may also reflect inherited variation in elevation and vegetation that predates reconnection. Functional diversity indices depend on the chosen trait categories, while similarity and turnover measures can respond to both environmental sorting and dispersal limitation. These factors counsel against treating any single indicator as a definitive measure of ecological condition. The strength of the analysis lies instead in the convergence among hydrologic, structural, and spatial signals, interpreted in the context of plausible physical and biological processes."
+      },
+      {
+        "type": "paragraph",
+        "text": "A further limitation is that propagule movement does not directly measure successful recruitment. Transport, retention, germination, and survival occur at different stages, and a reach can show evidence of movement without a corresponding increase in established plants. Seasonal timing and episodic disturbance may also influence the measured values. Future monitoring that follows propagules through establishment would help resolve where along this sequence the principal constraints arise. Similarly, longer records of sediment elevation and material retention would show whether the apparent association between reconnection and vegetation structure strengthens, weakens, or changes as marsh surfaces adjust. Such records would improve forecasts without implying that one trajectory can represent all reaches."
+      },
+      {
+        "type": "paragraph",
+        "text": "Despite these limitations, the reach comparisons reveal a consistent ecological pattern: tidal reconnection is associated with more continuous low-marsh habitat, stronger coordination between elevation and community composition, and a more even distribution of functional strategies. The response is weakest where sediment deficits and environmental variability remain pronounced, and divergence persists where engineered barriers separate reaches. These outcomes support an interpretation in which reconnection operates through interacting pathways of water exchange, material delivery, and propagule movement. When plant establishment follows, habitat continuity may in turn reinforce material retention. The pattern is therefore one of conditional recovery, governed by both the restored pathway and the landscape into which it connects."
+      },
+      {
+        "type": "paragraph",
+        "text": "The broader conclusion is that successful marsh restoration should be evaluated as the recovery of ecological relationships, not simply the return of vegetation cover. Hydrologic access matters because it reconnects processes; elevation diversity matters because it sustains differentiated habitat; and dispersal corridors matter because they enable communities to assemble and respond after disturbance. Monitoring that brings these dimensions together can reveal both progress and constraint over multiple seasons. In fragmented marshes, reconnection offers a practical means to restore exchange, but durable recovery depends on sediment supply, remnant habitat, and spatial arrangement. A restoration strategy attentive to those conditions is better positioned to support resilient plant communities as coastal water levels and disturbance regimes continue to change."
       }
-    ],
-    "references": [
-      {
-        "text": "Arc, R. S. (2021). Event traces for procedural queues. Queue Notes, 1(1), 1–7.",
-        "cite": "Arc, 2021"
-      },
-      {
-        "text": "Wren, C. E. (2022). Tail summaries in generated service systems. Observation Systems Review, 2(2), 8–15.",
-        "cite": "Wren, 2022"
-      },
-      {
-        "text": "Vale, M. (2020). Paired comparisons under fixed arrivals. Computational Methods Record, 3(1), 16–23.",
-        "cite": "Vale, 2020"
-      },
-      {
-        "text": "North, T. (2023). Recovery measures for finite queues. Imaginary Operations Journal, 1(3), 24–31.",
-        "cite": "North, 2023"
-      },
-      {
-        "text": "Example, C. and Arc, R. (2021). Grouped calibration traces. Data Proceedings, 4(1), 32–39.",
-        "cite": "Example and Arc, 2021"
-      },
-      {
-        "text": "Morrow, S. (2024). Event ordering in computational simulations. Example Research Ledger, 2(4), 40–47.",
-        "cite": "Morrow, 2024"
-      },
-      {
-        "text": "Kite, A. (2022). Describing uncertainty across generated batches. Observation Statistics Pages, 5(2), 48–55.",
-        "cite": "Kite, 2022"
-      },
-      {
-        "text": "Field, P. (2023). Reproducibility records for procedural benchmarks. Systems Archive, 6(1), 56–63.",
-        "cite": "Field, 2023"
-      }
-    ],
-    "journal": "Journal of Procedural Queues, volume 3, issue 2, pages 14–36; submitted 08 January 2026, accepted 22 March 2026"
-  }
+    ]
+  },
+  "hash": "35e3058c78eab42dcd00913fd98ed3018f14dfc260a0c7771497a44ec2d137d6"
 }

@@ -1,0 +1,121 @@
+{
+  "content_id": "paper_16",
+  "language": "en",
+  "citation_style": "author_year",
+  "length_class": "short",
+  "total_characters": 23800,
+  "section_tree": [
+    {
+      "level": 1,
+      "characters": 12
+    },
+    {
+      "level": 1,
+      "characters": 10
+    },
+    {
+      "level": 1,
+      "characters": 17
+    },
+    {
+      "level": 2,
+      "characters": 12
+    },
+    {
+      "level": 1,
+      "characters": 7
+    },
+    {
+      "level": 1,
+      "characters": 10
+    },
+    {
+      "level": 1,
+      "characters": 11
+    },
+    {
+      "level": 1,
+      "characters": 10
+    }
+  ],
+  "section_counts": {
+    "1": 7,
+    "2": 1
+  },
+  "tables": [
+    {
+      "rows": 2,
+      "columns": 6
+    },
+    {
+      "rows": 2,
+      "columns": 4
+    },
+    {
+      "rows": 4,
+      "columns": 6
+    }
+  ],
+  "table_count": 3,
+  "widest_column_count": 6,
+  "figures_charts": {
+    "architecture": 2,
+    "stacked_bar": 1,
+    "box": 1,
+    "grouped_bar": 1,
+    "area": 1,
+    "histogram": 1,
+    "bar": 1,
+    "block_diagram": 1,
+    "flowchart": 1
+  },
+  "chart_count": 6,
+  "figure_count": 4,
+  "box_count": 0,
+  "display_equations": 3,
+  "inline_equations": 12,
+  "element_plan": {
+    "archetype": "field_study",
+    "counts": {
+      "chart": 6,
+      "figure": 4,
+      "table": 3,
+      "equation": 3,
+      "code": 0,
+      "references": 22
+    },
+    "chart_types": [
+      "stacked_bar",
+      "area",
+      "grouped_bar",
+      "box",
+      "bar",
+      "histogram"
+    ],
+    "figure_types": [
+      "architecture",
+      "block_diagram",
+      "flowchart",
+      "architecture"
+    ],
+    "sections": [
+      "Introduction",
+      "Study Area",
+      "Sampling Protocol",
+      "Measurements",
+      "Results",
+      "Discussion",
+      "Limitations",
+      "Conclusion"
+    ]
+  },
+  "code_listing_count": 0,
+  "code_listing": false,
+  "footnote_count": 1,
+  "reference_count": 22,
+  "author_count": 3,
+  "affiliation_count": 2,
+  "title_characters": 69,
+  "longest_author_line": 43,
+  "longest_affiliation": 45
+}

@@ -1,0 +1,411 @@
+{
+  "content_id": "paper_01",
+  "variables": {
+    "lang": "vi",
+    "field": "materials modelling",
+    "paper_length": "short",
+    "citation_style": "numeric"
+  },
+  "lang": "vi",
+  "values": {
+    "title": "Mô hình hóa thế năng đa cấp cho khuếch tán khuyết tật trong hợp kim nền nano",
+    "authors": [
+      {
+        "name": "Vũ Khải Nghiêm",
+        "affiliations": [
+          1,
+          2
+        ],
+        "corresponding": true,
+        "email": "vukhainghiem@nhamtao-mat.org"
+      },
+      {
+        "name": "Phan Tịnh Nhiên",
+        "affiliations": [
+          1
+        ],
+        "corresponding": false
+      },
+      {
+        "name": "Đặng Mộc An",
+        "affiliations": [
+          2
+        ],
+        "corresponding": false
+      }
+    ],
+    "affiliations": [
+      "Viện Tính toán Vật chất Nham Tảo, đô thị Nham Khê, Việt Nam",
+      "Trung tâm Mô hình hóa Ánh Phủ, đô thị Vân Nguyên, Việt Nam"
+    ],
+    "abstract": "Nghiên cứu này xây dựng một quy trình mô hình hóa đa cấp nhằm mô tả sự khuếch tán của khuyết tật điểm trong hợp kim nền nano. Thế năng tương tác được hiệu chỉnh từ các cấu hình nguyên tử cục bộ, sau đó được liên kết với mô hình động học trên mạng để khảo sát ảnh hưởng của kích thước hạt, mật độ biên và nhiệt độ. Kết quả tính toán cho thấy các biên hạt giàu năng lượng tạo ra những kênh khuếch tán ưu tiên, trong khi sự phân bố không đồng đều của nguyên tố hợp kim làm giảm tính đẳng hướng của hệ số khuếch tán. Quy trình đề xuất cung cấp một cách tiếp cận nhất quán để nối thông tin ở thang nguyên tử với đáp ứng vận chuyển ở thang vi mô, đồng thời cho phép đánh giá nhanh độ nhạy của vật liệu trước các biến thiên cấu trúc.",
+    "abstract_alt": null,
+    "keywords": "mô hình hóa vật liệu; thế năng nguyên tử; khuếch tán khuyết tật; hợp kim nano; biên hạt; động học trên mạng",
+    "keywords_alt": null,
+    "journal": "Tạp chí Mô hình Vật liệu Vân Tích",
+    "acknowledgement": "Các tác giả cảm ơn Nhóm Tính toán Cấu trúc Nham Tảo vì sự hỗ trợ trong việc xây dựng quy trình xử lý dữ liệu và kiểm tra các phép tính số.",
+    "references": [
+      {
+        "text": "[1] Nham Dư, K. và Tảo Vực, M. “Hiệu chỉnh thế năng nhúng cho hợp kim nano có phân bố nguyên tố không đồng đều.” Tạp chí Mô phỏng Nguyên tử Nham Phủ, 2021, 7(2), 41–58.",
+        "cite": "Nham Dư và Tảo Vực (2021)"
+      },
+      {
+        "text": "[2] Vân Lục, T. và Khê Mộc, A. “Mô tả mật độ điện tử cục bộ trong mô hình nguyên tử đa cấu tử.” Kỷ yếu Mô hình Vật chất Đa cấp, 2020, 5(1), 19–36.",
+        "cite": "Vân Lục và Khê Mộc (2020)"
+      },
+      {
+        "text": "[3] Phù Nghiêu, S., Liên Quang, T. và Sương Trạch, N. “Tái dựng mặt năng lượng khuyết tật từ các cấu hình nguyên tử hạn chế.” Tạp chí Tính toán Cấu trúc Vật chất, 2022, 9(3), 77–96.",
+        "cite": "Phù Nghiêu và cs. (2022)"
+      },
+      {
+        "text": "[4] Tảo Khê, H. và Mộc Nhiên, V. “Khuếch tán dị hướng dọc theo biên hạt trong hợp kim nền nano.” Tập san Vật liệu Hạt mịn Ánh Phủ, 2019, 4(4), 112–128.",
+        "cite": "Tảo Khê và Mộc Nhiên (2019)"
+      },
+      {
+        "text": "[5] Lam Vực, P., Nham Liên, D. và Trầm Kha, Q. “Liên kết động học trên mạng với thế năng nguyên tử phụ thuộc môi trường.” Tạp chí Động học Khuyết tật Vi mô, 2023, 8(1), 3–22.",
+        "cite": "Lam Vực và cs. (2023)"
+      },
+      {
+        "text": "[6] Khải Tịnh, M. và An Nham, L. “Ảnh hưởng của kích thước hạt đến đường đi khuếch tán của nút khuyết trong hợp kim đa cấu tử.” Tạp chí Mô hình Vật liệu Vân Tích, 2020, 6(2), 65–84.",
+        "cite": "Khải Tịnh và An Nham (2020)"
+      },
+      {
+        "text": "[7] Vân Tảo, R., Nghiêm Khê, B. và Dư Mộc, H. “Mô phỏng Monte Carlo động cho chuyển dịch khuyết tật qua mạng không đồng nhất.” Kỷ yếu Động lực học Mạng Nguyên tử, 2021, 11(1), 27–45.",
+        "cite": "Vân Tảo và cs. (2021)"
+      },
+      {
+        "text": "[8] Sâm Nham, C. và Trạch Vực, P. “Đánh giá sai số lực trong thế năng nguyên tử dùng cho mô phỏng khuếch tán.” Tạp chí Phân tích Sai số Vật liệu, 2022, 3(2), 54–71.",
+        "cite": "Sâm Nham và Trạch Vực (2022)"
+      },
+      {
+        "text": "[9] Mộc Ánh, T., Khuê Nham, V. và Tảo Liên, S. “Mô hình hóa biên hạt giàu năng lượng bằng trường thế cục bộ.” Tập san Cấu trúc Nano và Vận chuyển, 2018, 2(3), 88–104.",
+        "cite": "Mộc Ánh và cs. (2018)"
+      },
+      {
+        "text": "[10] Khê Nhiên, D. và Phủ Vân, M. “Hệ số khuếch tán hiệu dụng trong mạng hạt có mật độ biên biến thiên.” Tạp chí Vận chuyển Trong Vật chất Ngưng tụ, 2023, 10(2), 39–57.",
+        "cite": "Khê Nhiên và Phủ Vân (2023)"
+      },
+      {
+        "text": "[11] Trầm Tịnh, A., Nham Sương, K. và Vực Quang, L. “Phân tích độ nhạy nhiệt độ của các kênh khuếch tán ưu tiên.” Tạp chí Nhiệt động học Tính toán, 2021, 6(4), 121–139.",
+        "cite": "Trầm Tịnh và cs. (2021)"
+      },
+      {
+        "text": "[12] Liên Mộc, Q. và Dư Khê, H. “Quy trình đa cấp cho dự báo vận chuyển khuyết tật trong vật liệu nanô kết tinh.” Tạp chí Liên kết Thang đo Vật liệu, 2024, 12(1), 14–33.",
+        "cite": "Liên Mộc và Dư Khê (2024)"
+      }
+    ],
+    "body": [
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "1. Phạm vi và mục tiêu nghiên cứu"
+      },
+      {
+        "type": "paragraph",
+        "text": "Nghiên cứu này xây dựng một quy trình mô hình hóa đa cấp cho khuếch tán khuyết tật điểm trong hợp kim nền nano, trong đó thông tin về môi trường nguyên tử được chuyển thành tham số cho mô hình động học trên mạng. Các kết quả và quan hệ giữa các cấp mô hình được quy chiếu sớm qua \\ref{tab:potential-fit}, \\ref{tab:diffusion-regimes}, \\ref{fig:chart} và \\ref{fig:diagram}; những quy chiếu này giúp phân biệt dữ liệu hiệu chỉnh thế năng, các chế độ khuếch tán, xu hướng độ lệch hướng và chuỗi xử lý đa cấp. Trọng tâm không chỉ là tính hệ số khuếch tán trung bình, mà còn là nhận diện các kênh vận chuyển ưu tiên do biên hạt, kích thước hạt và phân bố nguyên tố hợp kim tạo ra."
+      },
+      {
+        "type": "paragraph",
+        "text": "Trong vật liệu nano đa cấu tử, một khuyết tật có thể trải qua những môi trường cục bộ rất khác nhau chỉ sau một số bước nhảy ngắn. Các môi trường ấy quyết định độ ổn định của cấu hình, năng lượng hình thành nút khuyết và rào cản chuyển vị kế tiếp. Vì vậy, thế năng được xây dựng từ một mô tả quá đơn giản có thể tái hiện sai cả mật độ khuyết tật lẫn hướng vận chuyển. Các nghiên cứu về thế năng nhúng cho hợp kim có phân bố không đồng đều đã nhấn mạnh vai trò của sự phụ thuộc môi trường \\\\cite{1}, trong khi mô tả mật độ điện tử cục bộ cung cấp cơ sở để phân biệt các cấu hình có cùng khoảng cách hình học nhưng khác thành phần lân cận \\\\cite{2}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Mục tiêu cụ thể là thiết lập một chuỗi tính toán có thể kiểm tra ở từng cấp, từ cấu hình nguyên tử hạn chế, hiệu chỉnh thế năng, lấy mẫu trạng thái khuyết tật, đến mô phỏng động học và đánh giá tensor khuếch tán. Với quỹ đạo của khuyết tật được biểu diễn bởi r(t), đại lượng trung tâm ở cấp vĩ mô được lấy theo dạng $D_eff = MSD/(2*n*t)$, trong đó MSD là trung bình bình phương độ dịch chuyển, n là số chiều hiệu dụng và t là thời gian quan sát. Cách viết này cho phép so sánh trực tiếp các hệ có kích thước hạt và mật độ biên khác nhau, đồng thời bảo toàn thông tin về sự không đẳng hướng thay vì chỉ báo cáo một giá trị vô hướng."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "2. Xây dựng và hiệu chỉnh thế năng đa cấp"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "2.1. Biểu diễn môi trường nguyên tử cục bộ"
+      },
+      {
+        "type": "equation",
+        "id": "eq:potential",
+        "latex": "E = \\sum_i F_{\\alpha_i}(\\rho_i) + \\frac{1}{2}\\sum_{i\\neq j}\\Phi_{\\alpha_i\\alpha_j}(r_{ij}), \\rho_i = \\sum_{j\\neq i} f_{\\alpha_j}(r_{ij})",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Mô hình bắt đầu từ các cấu hình nguyên tử đại diện cho năm kích thước hạt và nhiều mức mật độ biên. Mỗi cấu hình được mô tả bởi loại nguyên tố của nguyên tử trung tâm, khoảng cách đến các lân cận, số phối trí, độ lệch khỏi trật tự tinh thể và chỉ báo vị trí tương đối so với biên hạt. Những biến này được chuẩn hóa trước khi đưa vào quá trình hồi quy để tránh việc một đại lượng có đơn vị lớn chi phối toàn bộ hàm mất mát. Các cấu hình kiểm tra được giữ tách biệt khỏi tập hiệu chỉnh, bởi sai số trên chính tập huấn luyện không phản ánh khả năng dự đoán năng lượng và lực trong môi trường chưa gặp."
+      },
+      {
+        "type": "paragraph",
+        "text": "Thế năng được phân rã thành phần đóng góp của nguyên tử trung tâm và phần tương tác cặp. Dạng tổng quát được gọi bằng \\ref{eq:potential}, còn trong biểu diễn ASCII có thể viết $E = sum_i F_(a_i)(rho_i) + 0.5*sum_(i!=j) phi_(a_i,a_j)(r_ij)$ với $rho_i = sum_(j!=i) f_(a_j)(r_ij)$. Ở đây, hàm mật độ hiệu dụng rho_i không chỉ phụ thuộc khoảng cách mà còn phụ thuộc loại nguyên tố của lân cận. Việc giữ riêng các hàm F và phi giúp mô hình phân biệt năng lượng nhúng của nguyên tử trong môi trường giàu hoặc nghèo lân cận, đồng thời duy trì khả năng tính lực bằng đạo hàm theo tọa độ."
+      },
+      {
+        "type": "paragraph",
+        "text": "Quá trình hiệu chỉnh sử dụng đồng thời sai số năng lượng và sai số lực, với trọng số được điều chỉnh theo mục tiêu cuối cùng là mô phỏng chuyển dịch khuyết tật. Sai số lực có ý nghĩa đặc biệt vì rào cản chuyển vị được xác định từ chênh lệch năng lượng giữa các trạng thái rất gần nhau; một sai lệch nhỏ trong gradient có thể làm thay đổi đáng kể xác suất nhảy. Kết quả tổng hợp theo cấu hình trong \\ref{tab:potential-fit} cho thấy các mẫu A1 và A2 có sai số năng lượng lần lượt 0,021 và 0,018, còn sai số lực là 0,034 và 0,029. Với A3 đến A5, sai số tăng nhẹ hoặc dao động theo mật độ biên, nhưng độ ổn định vẫn được giữ ở mức tốt hoặc khá."
+      },
+      {
+        "type": "table",
+        "id": "tab:potential-fit",
+        "caption": "Thông số hiệu chỉnh thế năng theo cấu hình cục bộ",
+        "header": [
+          [
+            "Cấu hình",
+            "Kích hạt",
+            "Mật độ biên",
+            "Sai số năng lượng",
+            "Sai số lực",
+            "Độ ổn định",
+            "Số mẫu"
+          ]
+        ],
+        "rows": [
+          [
+            "A1",
+            "6,0 nm",
+            "0,08",
+            "0,021",
+            "0,034",
+            "Tốt",
+            "184"
+          ],
+          [
+            "A2",
+            "8,5 nm",
+            "0,12",
+            "0,018",
+            "0,029",
+            "Tốt",
+            "216"
+          ],
+          [
+            "A3",
+            "11,0 nm",
+            "0,17",
+            "0,024",
+            "0,038",
+            "Khá",
+            "203"
+          ],
+          [
+            "A4",
+            "14,5 nm",
+            "0,23",
+            "0,031",
+            "0,046",
+            "Khá",
+            "197"
+          ],
+          [
+            "A5",
+            "18,0 nm",
+            "0,29",
+            "0,027",
+            "0,041",
+            "Tốt",
+            "225"
+          ]
+        ],
+        "note": "Các sai số được tính trên tập cấu hình kiểm tra độc lập; mật độ biên được chuẩn hóa theo thể tích mô phỏng."
+      },
+      {
+        "type": "paragraph",
+        "text": "Để tránh việc tối ưu chỉ theo năng lượng tĩnh, nhóm cấu hình hiệu chỉnh được bổ sung bằng các trạng thái biến dạng, trạng thái có nút khuyết và trạng thái chuyển tiếp xấp xỉ. Cách lấy mẫu này phù hợp với nhận định rằng mặt năng lượng của khuyết tật cần được tái dựng từ nhiều cấu hình nguyên tử bị hạn chế, thay vì từ một chuỗi cân bằng duy nhất \\\\cite{3}. Trong quá trình đánh giá, các lực dư được phân tích theo vùng trong hạt và vùng biên. Kết quả cho phép phát hiện trường hợp thế năng tái tạo đúng năng lượng tổng nhưng làm phẳng quá mức hàng rào tại biên, một sai lệch sẽ dẫn đến dự báo khuếch tán quá nhanh dọc theo biên."
+      },
+      {
+        "type": "equation",
+        "id": "eq:diffusion",
+        "latex": "D_{\\mathrm{eff}}(T,d,\\rho_{\\mathrm{gb}}) = \\frac{1}{2nt}\\left\\langle \\left|\\mathbf{r}(t)-\\mathbf{r}(0)\\right|^2 \\right\\rangle",
+        "numbered": true
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "2.2. Khuyết tật và trường thế tại biên hạt"
+      },
+      {
+        "type": "paragraph",
+        "text": "Nút khuyết được biểu diễn như một vị trí trống trên mạng cục bộ, nhưng mạng này không nhất thiết có tính tuần hoàn hoàn hảo. Khi một nguyên tử lân cận nhảy vào vị trí trống, các vị trí xung quanh được tái tối ưu trong phạm vi cắt định trước. Bởi vậy, trạng thái trước và sau chuyển vị không chỉ khác ở vị trí của nguyên tử nhảy mà còn khác ở phân bố ứng suất cục bộ. Năng lượng hình thành được tính từ hiệu giữa năng lượng cấu hình có khuyết tật và năng lượng tham chiếu đã hiệu chỉnh theo thành phần, còn rào cản được lấy từ đường nối giữa hai cực tiểu lân cận."
+      },
+      {
+        "type": "chart",
+        "id": "fig:chart",
+        "caption": "Độ lệch hướng của khuếch tán theo chế độ nhiệt và kích thước hạt",
+        "chart_type": "bar",
+        "labels": [
+          "R1",
+          "R2",
+          "R3",
+          "R4",
+          "R5"
+        ],
+        "series": [
+          {
+            "name": "Độ lệch hướng",
+            "values": [
+              0.31,
+              0.24,
+              0.18,
+              0.12,
+              0.09
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Biên hạt được xem là một trường thế có độ nhám và mức năng lượng thay đổi theo vị trí. Các vùng giàu năng lượng thường có nhiều cấu hình gần suy biến, tạo ra nhiều đường chuyển vị cạnh tranh. Cách mô tả này liên hệ với các kết quả về biên hạt giàu năng lượng được biểu diễn bằng trường thế cục bộ \\\\cite{9}, đồng thời phù hợp với quan sát về khuếch tán dị hướng dọc theo biên trong hợp kim nền nano \\\\cite{4}. Trong mô hình, mật độ biên được chuẩn hóa theo thể tích mô phỏng để có thể so sánh các hạt có kích thước khác nhau. Một biên liên tục được phân biệt với tập biên rời rạc thông qua độ rộng vùng chuyển tiếp và phân bố của nguyên tố hợp kim."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "3. Liên kết với động học trên mạng"
+      },
+      {
+        "type": "equation",
+        "id": "eq:kinetics",
+        "latex": "\\begin{aligned}\nk_{ij} &= \\Omega_0 \\exp\\left[-\\frac{E^{\\mathrm{ts}}_{ij}-E_i}{k_{\\mathrm{B}}T}\\right],\\\\\n\\frac{\\partial p_i}{\\partial t} &= \\sum_{j\\neq i}\\left(k_{ji}p_j-k_{ij}p_i\\right),\\\\\nD_{\\mu\\mathrm{nu}} &= \\frac{1}{2t}\\left\\langle \\Delta r_\\mu\\Delta r_{\\mathrm{nu}}\\right\\rangle.\n\\end{aligned}",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Sau khi thế năng được hiệu chỉnh, các trạng thái khuyết tật được ánh xạ lên một mạng sự kiện. Mỗi nút mạng biểu diễn một vị trí có thể chứa khuyết tật, còn mỗi cạnh biểu diễn một chuyển vị được phép theo hình học lân cận. Rào cản của cạnh được lấy từ chênh lệch giữa trạng thái đầu, trạng thái cuối và cấu hình yên ngựa xấp xỉ. Cách liên kết này kế thừa ý tưởng dùng động học trên mạng với thế năng phụ thuộc môi trường \\\\cite{5}, nhưng bổ sung điều kiện để mạng thay đổi cục bộ khi khuyết tật đi vào vùng biên. Nhờ vậy, các sự kiện không bị gán một tốc độ cố định cho toàn bộ vật liệu."
+      },
+      {
+        "type": "table",
+        "id": "tab:diffusion-regimes",
+        "caption": "Đặc trưng khuếch tán theo nhiệt độ và kích thước hạt",
+        "header": [
+          [
+            "Chế độ",
+            "Nhiệt độ",
+            "Kích hạt",
+            "Kênh ưu tiên",
+            "Độ lệch hướng"
+          ]
+        ],
+        "rows": [
+          [
+            "R1",
+            "420 K",
+            "6,0 nm",
+            "Biên hạt",
+            "0,31"
+          ],
+          [
+            "R2",
+            "480 K",
+            "8,5 nm",
+            "Biên hạt",
+            "0,24"
+          ],
+          [
+            "R3",
+            "540 K",
+            "11,0 nm",
+            "Hỗn hợp",
+            "0,18"
+          ],
+          [
+            "R4",
+            "600 K",
+            "14,5 nm",
+            "Trong hạt",
+            "0,12"
+          ],
+          [
+            "R5",
+            "660 K",
+            "18,0 nm",
+            "Trong hạt",
+            "0,09"
+          ]
+        ],
+        "note": "Độ lệch hướng tăng khi mật độ biên cao và phân bố nguyên tố hợp kim không đồng đều."
+      },
+      {
+        "type": "paragraph",
+        "text": "Tốc độ nhảy được tính theo $k_ij = nu0*exp(-(Eact_ij-Ei)/(kB*T))$, trong đó nu0 là tần số thử, Eact_ij là năng lượng trạng thái chuyển tiếp và Ei là năng lượng của trạng thái đầu. Hệ phương trình xác suất và tensor khuếch tán tương ứng được quy chiếu qua \\ref{eq:kinetics}. Trong một bước động học, sự kiện được chọn theo tổng tốc độ của tất cả chuyển vị khả dĩ; thời gian mô phỏng được cập nhật bằng một biến ngẫu nhiên theo tổng đó. Quy trình Monte Carlo động như vậy cho phép khảo sát các thang thời gian dài hơn động lực học nguyên tử trực tiếp, đồng thời vẫn giữ sự phụ thuộc của tốc độ vào thành phần lân cận và hướng của biên \\\\cite{7}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Đối với mỗi quỹ đạo, nhóm tính toán đồng thời độ dịch chuyển bình phương, số lần khuyết tật đi qua biên, thời gian lưu trú tại từng loại môi trường và phân bố hướng của bước nhảy. Hệ số khuếch tán hiệu dụng được tính từ \\ref{eq:diffusion}, với dạng ASCII $D_eff(T,d,rho_gb) = <abs(r(t)-r(0))^2>/(2*n*t)$. Khi cần giữ thông tin định hướng, từng thành phần của tensor được lấy theo $D_mn = <dr_m*dr_n>/(2*t)$ thay vì quy đổi ngay thành trung bình vô hướng. Cách làm này giúp nhận ra trường hợp một hệ có MSD lớn do chuyển động dọc biên nhưng lại có vận chuyển yếu theo phương vuông góc."
+      },
+      {
+        "type": "paragraph",
+        "text": "Điều kiện biên tuần hoàn được dùng trong phương song song với mặt cắt khảo sát, còn vùng đệm được đặt ở phương vuông góc để giảm ảnh hưởng của một biên nhân tạo. Độ dài quỹ đạo được chia thành giai đoạn cân bằng, giai đoạn lấy mẫu và giai đoạn kiểm tra hội tụ. Các quỹ đạo có thời gian lưu trú quá ngắn tại một vùng được gắn cờ để kiểm tra riêng, bởi chúng có thể phản ánh một chuyển tiếp giả do bước thời gian hoặc do ngưỡng cắt. \\fn{Các tốc độ nhảy được lấy mẫu lại khi môi trường lân cận thay đổi, thay vì tái sử dụng một danh sách sự kiện cố định cho toàn bộ quỹ đạo.} Quy tắc này làm tăng chi phí tính toán nhưng hạn chế sai lệch do mạng không đồng nhất."
+      },
+      {
+        "type": "figure",
+        "id": "fig:diagram",
+        "figure_type": "block_diagram",
+        "caption": "Quy trình đa cấp mô hình hóa khuếch tán khuyết tật",
+        "description": "Sơ đồ liên kết từ cấu hình nguyên tử cục bộ đến thế năng hiệu chỉnh, mô phỏng động học trên mạng và đánh giá hệ số khuếch tán hiệu dụng.",
+        "labels": [
+          "Cấu hình nguyên tử",
+          "Hiệu chỉnh thế năng",
+          "Động học trên mạng",
+          "Hệ số khuếch tán"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "4. Kết quả về chế độ khuếch tán"
+      },
+      {
+        "type": "paragraph",
+        "text": "Các kết quả trong \\ref{tab:diffusion-regimes} cho thấy hệ chuyển dần từ khuếch tán ưu tiên tại biên sang khuếch tán trong hạt khi nhiệt độ và kích thước hạt tăng theo chuỗi khảo sát. Ở chế độ R1, với 420 K và kích hạt 6,0 nm, biên hạt là kênh chi phối và độ lệch hướng đạt 0,31. Chế độ R2 vẫn giữ kênh biên với độ lệch hướng 0,24. Đến R3, hệ có hành vi hỗn hợp và độ lệch hướng giảm còn 0,18; R4 và R5 lần lượt ưu tiên vùng trong hạt, với các độ lệch hướng 0,12 và 0,09. Xu hướng này cho thấy tăng kích thước hạt làm giảm tỷ phần đường đi tiếp xúc với biên."
+      },
+      {
+        "type": "paragraph",
+        "text": "Biểu đồ trong \\ref{fig:chart} làm rõ sự suy giảm gần đơn điệu của độ lệch hướng giữa năm chế độ. Tuy nhiên, độ lệch hướng không chỉ do tỷ lệ diện tích biên quyết định. Phân bố nguyên tố không đồng đều có thể tạo ra các dải năng lượng thấp và cao xen kẽ, khiến khuyết tật bị dẫn hướng trong mặt phẳng biên hoặc bị giữ lại ở các túi năng lượng. Vì vậy, hai mẫu có cùng kích thước hạt vẫn có thể cho tensor khuếch tán khác nhau nếu thành phần lân cận và mức liên thông của các biên khác nhau. Kết quả này phù hợp với các phân tích về ảnh hưởng kích thước hạt đến đường đi khuếch tán của nút khuyết \\\\cite{6}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Ở nhiệt độ thấp, các sự kiện có rào cản thấp tập trung quanh biên nên đóng góp của chúng vượt trội so với các bước nhảy trong hạt. Khi nhiệt độ tăng, nhiều đường đi trong hạt bắt đầu được kích hoạt, làm giảm độ lệch hướng tương đối dù tổng hệ số khuếch tán tăng. Quan hệ định tính này có thể được kiểm tra bằng biểu thức $P_ij = k_ij/sum_j(k_ij)$, trong đó P_ij là xác suất chọn cạnh i đến j tại một trạng thái. Phân bố xác suất cho thấy một số đường biên không phải lúc nào cũng là kênh nhanh nhất; nếu biên có thành phần làm tăng độ ổn định cục bộ, khuyết tật có thể bị giữ lại thay vì truyền qua."
+      },
+      {
+        "type": "paragraph",
+        "text": "Mật độ biên cao tạo ra nhiều điểm giao giữa các kênh khuếch tán, làm xuất hiện cạnh tranh giữa đường đi ngắn và đường đi có rào cản thấp. Trong vùng chuyển tiếp, quỹ đạo thường gồm các đoạn trượt dọc biên xen kẽ với các bước xuyên vào hạt. Độ lệch hướng do đó giảm theo nhiệt độ nhưng không biến mất hoàn toàn. Phân tích độ nhạy nhiệt độ của các kênh ưu tiên cho thấy cần xem xét đồng thời độ dốc của rào cản và số lượng trạng thái khả dụng \\\\cite{11}. Nếu chỉ nội suy hệ số khuếch tán theo nhiệt độ, mô hình sẽ bỏ qua sự thay đổi cơ chế vận chuyển tại vùng chuyển tiếp giữa R2 và R3."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "5. Kiểm chứng, sai số và giới hạn mô hình"
+      },
+      {
+        "type": "paragraph",
+        "text": "Kiểm chứng được thực hiện ở ba cấp: độ chính xác của thế năng, tính ổn định của động học và khả năng tái tạo hệ số khuếch tán hiệu dụng. Ở cấp đầu, sai số lực được phân tích riêng theo loại nguyên tố và môi trường hình học, vì sai số trung bình toàn hệ có thể che lấp một nhóm cấu hình hiếm nhưng có ảnh hưởng lớn đến chuyển tiếp. Cách đánh giá này nối với các khuyến nghị về phân tích sai số lực trong thế năng dùng cho mô phỏng khuếch tán \\\\cite{8}. Ở cấp thứ hai, các quỹ đạo được chạy với nhiều hạt giống ngẫu nhiên và được kiểm tra bằng sự ổn định của phân bố thời gian lưu trú."
+      },
+      {
+        "type": "paragraph",
+        "text": "Ở cấp vận chuyển, hệ số khuếch tán được ước lượng từ nhiều cửa sổ thời gian chồng lấn. Nếu $D_q = mean(D_1,...,D_q)$ là trung bình sau q cửa sổ, sai số chuẩn được ước lượng từ độ phân tán giữa các cửa sổ thay vì chỉ từ số bước nhảy. Phương pháp này đặc biệt cần thiết khi có biên hạt, bởi các quỹ đạo thường có tương quan dài và không thỏa điều kiện lấy mẫu độc lập. Kết quả được đối chiếu với mô tả hệ số khuếch tán trong mạng hạt có mật độ biên biến thiên \\\\cite{10}, qua đó tách ảnh hưởng của kích thước hạt khỏi ảnh hưởng của số lượng biên thực sự mà khuyết tật gặp phải."
+      },
+      {
+        "type": "paragraph",
+        "text": "Một nguồn bất định khác đến từ việc biểu diễn trạng thái chuyển tiếp. Mạng sự kiện dùng cấu hình yên ngựa xấp xỉ để giảm chi phí, nhưng xấp xỉ này có thể làm sai tốc độ của các bước nhảy hiếm. Để kiểm soát, các sự kiện có đóng góp lớn nhất vào MSD được chọn để tái tính bằng mô hình nguyên tử đầy đủ. Nếu tốc độ mới khác tốc độ mạng quá một ngưỡng kiểm soát, cạnh đó được phân loại lại và toàn bộ quỹ đạo liên quan được chạy lại. Quy trình hiệu chỉnh cục bộ này phù hợp với tinh thần của quy trình đa cấp dự báo vận chuyển khuyết tật trong vật liệu nanô kết tinh \\\\cite{12}."
+      },
+      {
+        "type": "box",
+        "kind": "remark",
+        "title": "Lưu ý về diễn giải độ lệch hướng",
+        "text": "Độ lệch hướng là chỉ báo về hình dạng tensor khuếch tán, không phải là thước đo trực tiếp của tốc độ khuếch tán. Một hệ có độ lệch hướng thấp vẫn có thể có hệ số khuếch tán nhỏ nếu tất cả các rào cản đều cao. Vì vậy, việc kết luận về cơ chế cần dựa đồng thời vào tensor khuếch tán, phân bố rào cản, thời gian lưu trú và tỷ lệ sự kiện tại biên."
+      },
+      {
+        "type": "paragraph",
+        "text": "Mô hình hiện tại vẫn có giới hạn khi thành phần hợp kim biến thiên ở quy mô lớn hơn vùng cắt của thế năng. Khi đó, môi trường mà một khuyết tật cảm nhận có thể phụ thuộc vào trường ứng suất xa, trong khi mô hình chỉ nhìn thấy lân cận hữu hạn. Ngoài ra, sự tái cấu trúc của biên hạt trong thời gian dài chưa được mô tả đầy đủ; biên được xem gần như cố định trong từng lượt mô phỏng. Đây là giả định hợp lý cho khảo sát cơ chế ngắn và trung hạn, nhưng cần được nới rộng khi nghiên cứu ủ nhiệt hoặc khi mật độ khuyết tật đủ cao để các khuyết tật tương tác mạnh."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "6. Kết luận và hướng phát triển"
+      },
+      {
+        "type": "paragraph",
+        "text": "Quy trình được trình bày đã nối ba lớp thông tin: cấu hình nguyên tử cục bộ, thế năng phụ thuộc môi trường và động học khuyết tật trên mạng. Kết quả cho thấy các biên hạt giàu năng lượng có thể tạo thành kênh khuếch tán ưu tiên, trong khi sự phân bố không đồng đều của nguyên tố hợp kim làm giảm tính đẳng hướng của hệ số khuếch tán. Kích thước hạt tăng và nhiệt độ tăng làm thay đổi tương quan giữa vận chuyển tại biên và trong hạt, nhưng không thể giải thích toàn bộ xu hướng chỉ bằng tỷ lệ hình học. Các rào cản cục bộ, thời gian lưu trú và mức liên thông của mạng sự kiện đều cần được theo dõi."
+      },
+      {
+        "type": "paragraph",
+        "text": "Về phương pháp, việc tối ưu đồng thời năng lượng và lực giúp giảm nguy cơ mô phỏng một cơ chế khuếch tán giả do thế năng bị làm phẳng tại trạng thái chuyển tiếp. Việc dùng tensor thay cho một hệ số vô hướng bảo toàn dấu hiệu của vận chuyển định hướng, còn cơ chế tái kiểm tra những sự kiện đóng góp lớn giúp kết nối độ chính xác nguyên tử với chi phí mô phỏng dài hạn. Trong các nghiên cứu tiếp theo, có thể bổ sung động lực tái cấu trúc biên, tương tác giữa nhiều khuyết tật và sự phụ thuộc của tần số thử vào môi trường. Những mở rộng này sẽ làm quy trình gần hơn với dự báo vận chuyển trong vật liệu nano có lịch sử nhiệt phức tạp, đồng thời duy trì khả năng đánh giá nhanh độ nhạy cấu trúc được đề xuất trong nghiên cứu đa cấp \\\\cite{12}."
+      }
+    ]
+  },
+  "hash": "d4a98b761ca4924520dc3db9f79251e064eba093f4d3055dc55ecec80c5a5d49"
+}

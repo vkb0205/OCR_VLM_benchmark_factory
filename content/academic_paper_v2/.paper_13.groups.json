@@ -1,0 +1,975 @@
+{
+  "front": {
+    "title": "Điều khiển phối hợp mạng trao đổi nhiệt trong hệ thống thu hồi nhiệt phân tán",
+    "authors": [
+      {
+        "name": "Đỗ Lam Kỳ",
+        "affiliations": [
+          1
+        ],
+        "corresponding": true,
+        "email": "lamky@nhietluu-hv.org"
+      },
+      {
+        "name": "Vũ Quang Nhiên",
+        "affiliations": [
+          1,
+          2
+        ],
+        "corresponding": false
+      },
+      {
+        "name": "Trần Mộc An",
+        "affiliations": [
+          2
+        ],
+        "corresponding": false
+      }
+    ],
+    "affiliations": [
+      "Bộ môn Kỹ thuật Nhiệt, Trung tâm Công nghệ Nhiệt Lưu Hạo Nguyên",
+      "Phòng Mô phỏng Hệ thống Năng lượng, Viện Nghiên cứu Cơ nhiệt Lam Giang"
+    ],
+    "abstract": "Nghiên cứu trình bày một cấu trúc điều khiển phối hợp cho mạng trao đổi nhiệt có nhiều nguồn nhiệt phân tán và tải biến thiên. Mô hình hệ thống kết hợp cân bằng năng lượng, giới hạn nhiệt độ và độ trễ truyền nhiệt trong từng nhánh. Bộ điều khiển phân bổ lưu lượng theo sai lệch nhiệt độ, đồng thời duy trì mức thu hồi nhiệt ổn định khi phụ tải thay đổi. Kết quả tính toán cho thấy cấu trúc đề xuất giảm dao động nhiệt, hạn chế quá tải cục bộ và cải thiện khả năng đáp ứng của toàn mạng. Phương pháp phù hợp với các hệ thống cần vận hành linh hoạt dưới điều kiện nguồn nhiệt không đồng đều.",
+    "abstract_alt": null,
+    "keywords": "mạng trao đổi nhiệt; thu hồi nhiệt; điều khiển phối hợp; nguồn nhiệt phân tán; vận hành linh hoạt",
+    "keywords_alt": null,
+    "journal": "Tạp chí Cơ nhiệt và Hệ thống Năng lượng Ứng dụng",
+    "acknowledgement": "Nhóm tác giả trân trọng ghi nhận sự hỗ trợ về mô phỏng và kiểm định dữ liệu của Phòng Mô phỏng Hệ thống Năng lượng thuộc Viện Nghiên cứu Cơ nhiệt Lam Giang."
+  },
+  "formulas": [
+    {
+      "after": 0,
+      "element": {
+        "type": "equation",
+        "id": "eq:energy_balance",
+        "latex": "Q_i=\\dot{m}_i c_p(T_{i,out}-T_{i,in})",
+        "numbered": true
+      }
+    },
+    {
+      "after": 1,
+      "element": {
+        "type": "equation",
+        "id": "eq:network_balance",
+        "latex": "\\sum_{i=1}^{N}Q_i=\\sum_{j=1}^{M}L_j",
+        "numbered": true
+      }
+    },
+    {
+      "after": 2,
+      "element": {
+        "type": "equation",
+        "id": "eq:thermal_dynamics",
+        "latex": "\\tau_i\\dfrac{dT_i}{dt}=T_{i,in}-T_i+\\dfrac{Q_i}{\\dot{m}_i c_p}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 3,
+      "element": {
+        "type": "equation",
+        "id": "eq:flow_control",
+        "latex": "\\dot{m}_i=\\bar{m}_i+K_i(T_i^{ref}-T_i)",
+        "numbered": true
+      }
+    },
+    {
+      "after": 4,
+      "element": {
+        "type": "equation",
+        "id": "eq:operating_limits",
+        "latex": "T_i^{min}\\leq T_i\\leq T_i^{max},\\quad \\dot{m}_i^{min}\\leq\\dot{m}_i\\leq\\dot{m}_i^{max}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 5,
+      "element": {
+        "type": "equation",
+        "id": "eq:coordination_objective",
+        "latex": "J=\\sum_{i=1}^{N}\\left[(T_i-T_i^{ref})^2+\\lambda(\\dot{m}_i-\\bar{m}_i)^2\\right]",
+        "numbered": true
+      }
+    }
+  ],
+  "tables": [
+    {
+      "after": 0,
+      "element": {
+        "type": "table",
+        "id": "tab:network_parameters",
+        "caption": "Thông số vận hành của các nhánh trao đổi nhiệt",
+        "header": [
+          [
+            {
+              "text": "Nhánh",
+              "rowspan": 2
+            },
+            {
+              "text": "Nguồn nhiệt",
+              "colspan": 2
+            },
+            {
+              "text": "Tải nhiệt",
+              "colspan": 2
+            },
+            {
+              "text": "Độ trễ",
+              "rowspan": 2
+            }
+          ],
+          [
+            {
+              "text": "Nhiệt độ vào (°C)"
+            },
+            {
+              "text": "Lưu lượng danh định (kg/s)"
+            },
+            {
+              "text": "Công suất yêu cầu (kW)"
+            },
+            {
+              "text": "Nhiệt độ đặt (°C)"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "N1",
+            "128",
+            "1,80",
+            "205",
+            "92",
+            "18"
+          ],
+          [
+            "N2",
+            "116",
+            "1,55",
+            "174",
+            "88",
+            "24"
+          ],
+          [
+            "N3",
+            "104",
+            "1,30",
+            "143",
+            "84",
+            "31"
+          ],
+          [
+            "N4",
+            "97",
+            "1,10",
+            "119",
+            "80",
+            "27"
+          ]
+        ],
+        "note": "Các thông số được dùng làm điều kiện ban đầu cho mô hình mạng bốn nhánh."
+      }
+    },
+    {
+      "after": 1,
+      "element": {
+        "type": "table",
+        "id": "tab:control_results",
+        "caption": "So sánh kết quả điều khiển dưới phụ tải biến thiên",
+        "header": [
+          [
+            {
+              "text": "Chỉ tiêu",
+              "rowspan": 2
+            },
+            {
+              "text": "Điều khiển độc lập",
+              "colspan": 2
+            },
+            {
+              "text": "Điều khiển phối hợp",
+              "colspan": 2
+            },
+            {
+              "text": "Mức cải thiện",
+              "rowspan": 2
+            }
+          ],
+          [
+            {
+              "text": "Giá trị trung bình"
+            },
+            {
+              "text": "Độ lệch chuẩn"
+            },
+            {
+              "text": "Giá trị trung bình"
+            },
+            {
+              "text": "Độ lệch chuẩn"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "Độ lệch nhiệt độ (°C)",
+            "3,84",
+            "1,72",
+            "2,16",
+            "0,91",
+            {
+              "text": "43,8",
+              "bold": true
+            }
+          ],
+          [
+            "Dao động lưu lượng (kg/s)",
+            "0,42",
+            "0,19",
+            "0,25",
+            "0,11",
+            {
+              "text": "40,5",
+              "bold": true
+            }
+          ],
+          [
+            "Quá tải cục bộ (kW)",
+            "18,6",
+            "7,40",
+            "8,2",
+            "3,10",
+            {
+              "text": "55,9",
+              "bold": true
+            }
+          ],
+          [
+            "Thời gian xác lập (s)",
+            "46,0",
+            "12,4",
+            "31,5",
+            "8,60",
+            {
+              "text": "31,5",
+              "bold": true
+            }
+          ]
+        ],
+        "note": "Giá trị nhỏ hơn biểu thị đáp ứng ổn định hơn; các trị số in đậm là mức cải thiện lớn nhất theo từng chỉ tiêu."
+      }
+    },
+    {
+      "after": 2,
+      "element": {
+        "type": "table",
+        "id": "tab:load_scenarios",
+        "caption": "Đáp ứng của mạng khi tải nhiệt thay đổi",
+        "header": [
+          [
+            {
+              "text": "Kịch bản",
+              "rowspan": 2
+            },
+            {
+              "text": "Tải tổng",
+              "colspan": 2
+            },
+            {
+              "text": "Nhiệt độ nút điều phối",
+              "colspan": 2
+            },
+            {
+              "text": "Thu hồi nhiệt",
+              "rowspan": 2
+            }
+          ],
+          [
+            {
+              "text": "Mức (%)"
+            },
+            {
+              "text": "Biến thiên (kW)"
+            },
+            {
+              "text": "Trước điều khiển (°C)"
+            },
+            {
+              "text": "Sau điều khiển (°C)"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "S1 – tải thấp",
+            "70",
+            "−36",
+            "79,4",
+            "81,2",
+            "88,6"
+          ],
+          [
+            "S2 – tải danh định",
+            "100",
+            "0",
+            "83,1",
+            "83,4",
+            {
+              "text": "94,8",
+              "bold": true
+            }
+          ],
+          [
+            "S3 – tải cao",
+            "125",
+            "+42",
+            "87,9",
+            "85,6",
+            "91,7"
+          ],
+          [
+            "S4 – nguồn không đồng đều",
+            "110",
+            "+18",
+            "90,2",
+            "86,8",
+            "92,4"
+          ]
+        ],
+        "note": "Điều khiển phối hợp duy trì nhiệt độ nút trong giới hạn vận hành và hạn chế suy giảm tỷ lệ thu hồi khi tải tăng."
+      }
+    }
+  ],
+  "charts_figures": [
+    {
+      "after": 0,
+      "element": {
+        "type": "chart",
+        "chart_type": "box",
+        "id": "fig:temperature_deviation_box",
+        "caption": "Phân bố độ lệch nhiệt độ của bốn nhánh dưới hai chiến lược điều khiển.",
+        "labels": [
+          "Độc lập",
+          "Phối hợp"
+        ],
+        "series": [
+          {
+            "name": "Độ lệch nhiệt độ",
+            "stats": [
+              [
+                1.42,
+                2.61,
+                3.84,
+                4.97,
+                7.18
+              ],
+              [
+                0.71,
+                1.52,
+                2.16,
+                2.79,
+                4.03
+              ]
+            ]
+          }
+        ],
+        "x_label": "Chiến lược điều khiển",
+        "y_label": "Độ lệch nhiệt độ (°C)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 1,
+      "element": {
+        "type": "chart",
+        "chart_type": "scatter",
+        "id": "fig:flow_temperature_scatter",
+        "caption": "Quan hệ giữa sai lệch nhiệt độ và biến thiên lưu lượng tại các thời điểm đo.",
+        "labels": [
+          "N1",
+          "N2",
+          "N3",
+          "N4"
+        ],
+        "series": [
+          {
+            "name": "Điều khiển phối hợp",
+            "points": [
+              [
+                -3.8,
+                0.31
+              ],
+              [
+                -2.4,
+                0.27
+              ],
+              [
+                -1.1,
+                0.22
+              ],
+              [
+                0.6,
+                0.18
+              ],
+              [
+                1.8,
+                0.24
+              ],
+              [
+                3.2,
+                0.29
+              ],
+              [
+                4.4,
+                0.35
+              ]
+            ],
+            "values": [
+              0.31,
+              0.27,
+              0.22,
+              0.18,
+              0.24,
+              0.29,
+              0.35
+            ],
+            "errors": [
+              0.03,
+              0.02,
+              0.02,
+              0.02,
+              0.03,
+              0.03,
+              0.04
+            ]
+          },
+          {
+            "name": "Điều khiển độc lập",
+            "points": [
+              [
+                -3.8,
+                0.48
+              ],
+              [
+                -2.4,
+                0.41
+              ],
+              [
+                -1.1,
+                0.36
+              ],
+              [
+                0.6,
+                0.32
+              ],
+              [
+                1.8,
+                0.39
+              ],
+              [
+                3.2,
+                0.47
+              ],
+              [
+                4.4,
+                0.56
+              ]
+            ],
+            "values": [
+              0.48,
+              0.41,
+              0.36,
+              0.32,
+              0.39,
+              0.47,
+              0.56
+            ],
+            "errors": [
+              0.05,
+              0.04,
+              0.03,
+              0.03,
+              0.04,
+              0.05,
+              0.06
+            ]
+          }
+        ],
+        "x_label": "Sai lệch nhiệt độ (°C)",
+        "y_label": "Biến thiên lưu lượng (kg/s)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 2,
+      "element": {
+        "type": "chart",
+        "chart_type": "bar",
+        "id": "fig:performance_improvement_bar",
+        "caption": "Mức cải thiện của cấu trúc điều khiển phối hợp theo các chỉ tiêu vận hành.",
+        "labels": [
+          "Độ lệch nhiệt độ",
+          "Dao động lưu lượng",
+          "Quá tải cục bộ",
+          "Thời gian xác lập"
+        ],
+        "series": [
+          {
+            "name": "Mức cải thiện",
+            "values": [
+              43.8,
+              40.5,
+              55.9,
+              31.5
+            ],
+            "errors": [
+              2.1,
+              1.8,
+              3.4,
+              2.6
+            ]
+          }
+        ],
+        "x_label": "Chỉ tiêu vận hành",
+        "y_label": "Mức cải thiện (%)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 3,
+      "element": {
+        "type": "chart",
+        "chart_type": "line",
+        "id": "fig:recovery_load_line",
+        "caption": "Tỷ lệ thu hồi nhiệt theo mức tải tổng của mạng.",
+        "labels": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "series": [
+          {
+            "name": "Thu hồi nhiệt",
+            "values": [
+              88.6,
+              94.8,
+              91.7,
+              92.4
+            ],
+            "errors": [
+              0.7,
+              0.5,
+              0.8,
+              0.6
+            ]
+          },
+          {
+            "name": "Nhiệt độ nút sau điều khiển",
+            "values": [
+              81.2,
+              83.4,
+              85.6,
+              86.8
+            ],
+            "errors": [
+              0.4,
+              0.3,
+              0.5,
+              0.4
+            ]
+          }
+        ],
+        "x_label": "Kịch bản tải",
+        "y_label": "Giá trị đo (%) hoặc (°C)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 4,
+      "element": {
+        "type": "chart",
+        "chart_type": "histogram",
+        "id": "fig:settling_time_histogram",
+        "caption": "Phân bố thời gian xác lập của mạng trong các lần chạy tải biến thiên.",
+        "labels": [
+          "10–20",
+          "20–30",
+          "30–40",
+          "40–50",
+          "50–60"
+        ],
+        "series": [
+          {
+            "name": "Điều khiển độc lập",
+            "values": [
+              3,
+              7,
+              11,
+              8,
+              4
+            ],
+            "errors": [
+              1,
+              1,
+              2,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "Điều khiển phối hợp",
+            "values": [
+              8,
+              15,
+              9,
+              3,
+              1
+            ],
+            "errors": [
+              1,
+              2,
+              1,
+              1,
+              1
+            ]
+          }
+        ],
+        "x_label": "Khoảng thời gian xác lập (s)",
+        "y_label": "Số lần đo",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 5,
+      "element": {
+        "type": "figure",
+        "figure_type": "image_panel",
+        "id": "fig:distributed_heat_network_image",
+        "caption": "Ảnh nhiệt hồng ngoại của các nhánh trao đổi nhiệt trong trạng thái tải danh định.",
+        "description": "Bốn vùng trao đổi nhiệt được ghi nhận đồng thời, với vùng nóng tập trung tại đầu vào N1 và gradient nhiệt giảm dần về phía N4.",
+        "labels": [
+          "N1",
+          "N2",
+          "N3",
+          "N4",
+          "cảm biến nhiệt",
+          "ống góp"
+        ],
+        "panels": [
+          {
+            "label": "a",
+            "description": "Phân bố nhiệt trên cụm nguồn phía trước."
+          },
+          {
+            "label": "b",
+            "description": "Phân bố nhiệt tại cụm tải phía sau."
+          }
+        ]
+      }
+    },
+    {
+      "after": 6,
+      "element": {
+        "type": "figure",
+        "figure_type": "block_diagram",
+        "id": "fig:coordinated_control_architecture",
+        "caption": "Sơ đồ khối của cấu trúc điều khiển phối hợp cho mạng bốn nhánh.",
+        "description": "Các tín hiệu nhiệt độ và lưu lượng được thu thập tại từng nhánh, truyền tới bộ điều phối, sau đó lệnh phân bổ được gửi tới các van điều chỉnh.",
+        "labels": [
+          "nguồn nhiệt",
+          "cảm biến",
+          "bộ điều phối",
+          "bộ điều khiển nhánh",
+          "van điều chỉnh",
+          "tải nhiệt"
+        ]
+      }
+    },
+    {
+      "after": 7,
+      "element": {
+        "type": "figure",
+        "figure_type": "block_diagram",
+        "id": "fig:thermal_energy_path",
+        "caption": "Sơ đồ khối đường truyền năng lượng từ nguồn phân tán tới tải nhiệt.",
+        "description": "Dòng năng lượng đi qua bộ trao đổi nhiệt, nút điều phối và các nhánh tải; tín hiệu phản hồi được đưa trở lại bộ điều khiển để hiệu chỉnh lưu lượng.",
+        "labels": [
+          "nguồn N1–N4",
+          "bộ trao đổi nhiệt",
+          "nút điều phối",
+          "đường hồi tiếp",
+          "tải L1–L4",
+          "bộ đo lưu lượng"
+        ]
+      }
+    },
+    {
+      "after": 8,
+      "element": {
+        "type": "figure",
+        "figure_type": "flowchart",
+        "id": "fig:control_execution_flowchart",
+        "caption": "Lưu đồ thực hiện thuật toán điều khiển phối hợp trong mỗi chu kỳ tính toán.",
+        "description": "Quy trình bắt đầu bằng thu nhận trạng thái mạng, kiểm tra giới hạn vận hành, tính sai lệch nhiệt độ, cập nhật lưu lượng và xác nhận điều kiện ổn định.",
+        "labels": [
+          "khởi tạo",
+          "đọc trạng thái",
+          "kiểm tra giới hạn",
+          "tính sai lệch",
+          "cập nhật lưu lượng",
+          "đánh giá ổn định",
+          "ghi kết quả"
+        ]
+      }
+    }
+  ],
+  "code": [
+    {
+      "after": 0,
+      "element": {
+        "type": "code",
+        "id": "alg:coordinated_flow_update",
+        "language": "pseudocode",
+        "caption": "Thuật toán cập nhật lưu lượng phối hợp theo sai lệch nhiệt độ và giới hạn vận hành",
+        "lines": [
+          "Khởi tạo lưu lượng cho từng nhánh theo giá trị danh định",
+          "Đọc nhiệt độ đo được, nhiệt độ đặt và tải nhiệt hiện thời",
+          "Tính sai lệch nhiệt độ cho mỗi nhánh",
+          "Ước lượng nhu cầu nhiệt từ tải của từng nhánh",
+          "Phân bổ nhu cầu nhiệt theo công suất sẵn có của các nguồn",
+          "Tính lưu lượng hiệu chỉnh từ sai lệch và hệ số điều khiển",
+          "Giới hạn lưu lượng trong khoảng vận hành cho phép",
+          "Dự báo nhiệt độ nhánh sau thời gian trễ truyền nhiệt",
+          "Nếu nhiệt độ dự báo vượt giới hạn thì giảm phân bổ tại nhánh đó",
+          "Phân phối phần nhiệt còn thiếu tới các nhánh còn khả năng đáp ứng",
+          "Cập nhật lệnh van và gửi tới bộ điều khiển nhánh",
+          "Lặp lại phép tính cho đến khi sai lệch và tải ổn định",
+          "Ghi nhiệt độ, lưu lượng và trạng thái giới hạn của mạng"
+        ]
+      }
+    }
+  ],
+  "references": [
+    {
+      "text": "[1] Bùi Kha Nghiêm, Lê Tường Vi. Mô hình cân bằng năng lượng cho mạng trao đổi nhiệt phân tán. Tạp chí Cơ nhiệt Phương Nam. 2018;12(2):41–50.",
+      "cite": "Bùi và Lê, 2018"
+    },
+    {
+      "text": "[2] Phan Mộc Thuyên. Điều phối lưu lượng trong các hệ thống thu hồi nhiệt nhiều nhánh. Kỷ yếu Hội nghị Điều khiển Nhiệt Lưu. 2019:73–80.",
+      "cite": "Phan, 2019"
+    },
+    {
+      "text": "[3] Đặng Huyền Trạc, Võ Tấn Du. Tác động của độ trễ truyền nhiệt đến đáp ứng mạng tải biến thiên. Tạp chí Mô phỏng Cơ nhiệt. 2020;8(1):15–26.",
+      "cite": "Đặng và Võ, 2020"
+    },
+    {
+      "text": "[4] Trần Quý Nhạn. Phân bổ công suất nhiệt dưới giới hạn vận hành cục bộ. Nghiên cứu Hệ thống Nhiệt. 2017;6(3):102–111.",
+      "cite": "Trần, 2017"
+    },
+    {
+      "text": "[5] Nguyễn Bảo Khuê, Huỳnh Mẫn Chiêu. Điều khiển phản hồi lưu lượng cho bộ trao đổi nhiệt ghép nối. Tạp chí Kỹ thuật Nhiệt Lưu. 2021;14(4):188–197.",
+      "cite": "Nguyễn và Huỳnh, 2021"
+    },
+    {
+      "text": "[6] Lưu Tường Kha. Đánh giá ổn định nhiệt của mạng thu hồi năng lượng quy mô cụm. Công nghệ Nhiệt và Dòng chảy. 2016;5(2):59–68.",
+      "cite": "Lưu, 2016"
+    },
+    {
+      "text": "[7] Mai Đan Phúc, Đỗ Cẩm Liên. Điều khiển phối hợp nhiều biến cho các nhánh nhiệt có tải không đồng đều. Tạp chí Cơ nhiệt Phương Nam. 2022;16(1):27–39.",
+      "cite": "Mai và Đỗ, 2022"
+    },
+    {
+      "text": "[8] Hoàng Vỹ Tâm. Giới hạn nhiệt độ và phân bổ tải trong mạng trao đổi năng lượng. Kỷ yếu Hội thảo Mạng Nhiệt Ứng dụng. 2015:114–121.",
+      "cite": "Hoàng, 2015"
+    },
+    {
+      "text": "[9] Vũ Tịnh Nghi, Phạm Khải Lương. Mô phỏng động lực học nhánh trao đổi nhiệt với thời gian trễ. Tạp chí Mô phỏng Cơ nhiệt. 2023;11(2):66–78.",
+      "cite": "Vũ và Phạm, 2023"
+    },
+    {
+      "text": "[10] Lê Mẫn Tường. Phương pháp tối ưu hóa lưu lượng trong hệ thống nhiệt nhiều nguồn. Nghiên cứu Hệ thống Nhiệt. 2014;3(4):201–210.",
+      "cite": "Lê, 2014"
+    },
+    {
+      "text": "[11] Đinh Uyên Lam, Tạ Minh Châu. Đáp ứng nhiệt của mạng phân tán dưới biến động phụ tải theo chu kỳ. Tạp chí Kỹ thuật Nhiệt Lưu. 2024;17(1):9–21.",
+      "cite": "Đinh và Tạ, 2024"
+    },
+    {
+      "text": "[12] Phạm Duy Kính. Ước lượng nhu cầu nhiệt trực tuyến cho các nhánh tải ghép nối. Công nghệ Nhiệt và Dòng chảy. 2019;8(3):122–131.",
+      "cite": "Phạm, 2019"
+    },
+    {
+      "text": "[13] Cao Tường Nghi, Bùi Lạc Vân. Khống chế quá tải cục bộ trong mạng thu hồi nhiệt. Tạp chí Cơ nhiệt Phương Nam. 2020;14(3):143–152.",
+      "cite": "Cao và Bùi, 2020"
+    },
+    {
+      "text": "[14] Trịnh Khánh Mộc. Đánh giá sai lệch nhiệt độ và thời gian xác lập của bộ điều khiển nhánh. Nghiên cứu Hệ thống Nhiệt. 2022;11(4):231–240.",
+      "cite": "Trịnh, 2022"
+    },
+    {
+      "text": "[15] Võ Nhã Thư, Lâm Tấn Quỳnh. Phân tích cân bằng nguồn và tải trong cụm trao đổi nhiệt liên kết. Kỷ yếu Hội nghị Điều khiển Nhiệt Lưu. 2018:96–104.",
+      "cite": "Võ và Lâm, 2018"
+    },
+    {
+      "text": "[16] Đoàn Tường Kỳ. Điều khiển dự báo có ràng buộc cho quá trình nhiệt có quán tính. Tạp chí Mô phỏng Cơ nhiệt. 2025;13(1):32–44.",
+      "cite": "Đoàn, 2025"
+    },
+    {
+      "text": "[17] Hà Mộc Dung, Nguyễn Tường Vinh. Độ bền vận hành của hệ thống thu hồi nhiệt khi nguồn cấp phân bố không đều. Tạp chí Kỹ thuật Nhiệt Lưu. 2023;16(3):157–169.",
+      "cite": "Hà và Nguyễn, 2023"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Mở đầu"
+    },
+    {
+      "type": "paragraph",
+      "text": "Mạng trao đổi nhiệt có nhiều nguồn phân tán thường vận hành trong điều kiện nhiệt độ cấp không đồng đều, tải thay đổi theo thời gian và các nhánh có quán tính khác nhau. Khi từng nhánh tự điều chỉnh lưu lượng mà không xét trạng thái toàn mạng, một nhánh có thể tăng lấy nhiệt trong lúc nhánh khác thiếu năng lượng; hệ quả là nhiệt độ nút dao động, tải cục bộ vượt mức và khả năng thu hồi giảm. Bài báo này trình bày một cấu trúc điều khiển phối hợp nhằm dung hòa cân bằng nguồn–tải với yêu cầu đáp ứng riêng của từng nhánh. Trọng tâm không chỉ là duy trì nhiệt độ đặt, mà còn phân bổ lưu lượng trong giới hạn thiết bị và tính đến thời gian trễ truyền nhiệt."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cách tiếp cận dựa trên mô hình cân bằng năng lượng và phản hồi nhiệt độ, kết hợp ước lượng nhu cầu tải để cập nhật lệnh cho các van. Cân bằng của một nhánh được biểu diễn bằng $Q_i=\\dot{m}_i c_p(T_{i,out}-T_{i,in})$, trong đó công suất trao đổi phụ thuộc lưu lượng khối và chênh lệch nhiệt độ. Mô hình cân bằng năng lượng cho mạng nhiều nhánh là nền tảng quan trọng để diễn giải sự phân bổ này [1], trong khi các nghiên cứu về phối hợp lưu lượng nhấn mạnh nhu cầu xét đồng thời nhiều tải [2]. Kết quả dưới đây được đánh giá trên mạng bốn nhánh với những điều kiện khởi đầu và kịch bản tải đã xác định."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Yêu cầu vận hành"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cấu trúc điều khiển cần đáp ứng bốn yêu cầu liên quan. Thứ nhất, tổng nhiệt cấp phải theo sát tổng tải, không chỉ tại trạng thái danh định mà cả khi tải thay đổi. Thứ hai, nhiệt độ và lưu lượng của từng nhánh phải nằm trong giới hạn cho phép. Thứ ba, độ trễ truyền nhiệt phải được đưa vào dự báo để tránh hiệu chỉnh quá mức trước khi phản hồi của lệnh trước đó xuất hiện. Thứ tư, thuật toán cần đủ đơn giản để cập nhật theo chu kỳ, sử dụng các phép đo sẵn có và vẫn có thể hoạt động khi nguồn cấp phân bố không đều. Những yêu cầu này tạo thành một bài toán điều phối có tương tác, thay vì tập hợp các bộ điều khiển độc lập."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ở cấp mạng, nguyên tắc bảo toàn được viết dưới dạng $\\sum_{i=1}^{N}Q_i=\\sum_{j=1}^{M}L_j$, với $L_j$ là nhu cầu nhiệt của tải thứ j. Sai lệch giữa hai vế không thể được khắc phục chỉ bằng tăng lưu lượng ở mọi nhánh: năng lực nguồn, đặc tính trao đổi và giới hạn vận hành đều khác nhau. Nghiên cứu về cân bằng nguồn và tải trong cụm liên kết cung cấp cơ sở để xem xét quan hệ này [15]; các phân tích về ước lượng tải trực tuyến cũng cho thấy nhu cầu có thể thay đổi trong thời gian vận hành [12]. Vì vậy, bộ điều phối cần cập nhật phân bổ dựa trên cả trạng thái đo và thông tin tải hiện thời."
+    },
+    {
+      "type": "paragraph",
+      "text": "Giới hạn nhiệt độ có ý nghĩa bảo vệ thiết bị và duy trì chất lượng cấp nhiệt, còn giới hạn lưu lượng ngăn lệnh điều khiển vượt khả năng van hoặc bơm. Việc đồng thời xử lý các ràng buộc cục bộ và mục tiêu toàn mạng phù hợp với các nghiên cứu về phân bổ công suất dưới giới hạn vận hành [4], giới hạn nhiệt độ [8] và khống chế quá tải cục bộ [13]. Mô hình phải giữ được tính giải thích được: người vận hành cần xác định vì sao một nhánh bị giảm phân bổ, nhánh nào có khả năng nhận phần tải còn thiếu, và điều kiện nào khiến trạng thái được xem là ổn định."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Kiến trúc hệ thống"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Mô hình nhiệt và tín hiệu phản hồi"
+    },
+    {
+      "type": "paragraph",
+      "text": "Mỗi nhánh được mô tả bằng cân bằng năng lượng tức thời và đáp ứng động bậc nhất có thời gian trễ đặc trưng. Dạng rút gọn $\\tau_i\\dfrac{dT_i}{dt}=T_{i,in}-T_i+\\dfrac{Q_i}{\\dot{m}_i c_p}$ cho thấy nhiệt độ nhánh không đổi ngay sau khi lưu lượng thay đổi. Hệ số $\\tau_i$ vì thế ảnh hưởng trực tiếp tới thời điểm đánh giá hiệu quả của lệnh mới. Các nghiên cứu về độ trễ truyền nhiệt và động lực học nhánh cho thấy bỏ qua quán tính có thể làm dự báo đáp ứng sai lệch [3, 9]. Đặc tính tải biến thiên theo chu kỳ cũng cần được xét khi phân tích ổn định nhiệt [11]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Các tín hiệu nhiệt độ và lưu lượng được thu tại từng nhánh, sau đó chuyển tới bộ điều phối. Bộ điều phối tính sai lệch so với giá trị đặt, cân đối nhu cầu tải với năng lực còn lại của nguồn, rồi gửi lệnh lưu lượng tới bộ điều khiển nhánh. Cấu trúc dòng năng lượng và phản hồi được mô tả trong \\\\ref{fig:thermal_energy_path}; bố trí chức năng điều phối giữa cảm biến và van được trình bày tại \\\\ref{fig:coordinated_control_architecture}. Mô tả phân bố nhiệt ở trạng thái tải danh định trong \\\\ref{fig:distributed_heat_network_image} giúp liên hệ tín hiệu đo với gradient nhiệt trên các nhánh. Những sơ đồ này làm rõ rằng phép đo cục bộ chỉ có giá trị điều khiển khi được đặt trong quan hệ với trạng thái các nhánh còn lại."
+    },
+    {
+      "type": "paragraph",
+      "text": "Lệnh cơ sở của nhánh được hiệu chỉnh theo sai lệch: $\\dot{m}_i=\\bar{m}_i+K_i(T_i^{ref}-T_i)$. Trong cấu trúc phối hợp, biểu thức này không được áp dụng như một quy tắc độc lập bất kể trạng thái mạng; lệnh sau hiệu chỉnh còn được kiểm tra theo giới hạn và khả năng cấp nhiệt. Phản hồi lưu lượng cho bộ trao đổi nhiệt ghép nối đã được nghiên cứu như một thành phần quan trọng của đáp ứng [5], còn các phương pháp tối ưu hóa lưu lượng cung cấp hướng tiếp cận để cân bằng hiệu quả nhiệt với chi phí điều chỉnh [10]. Hệ số điều khiển cần được chọn sao cho phản hồi đủ nhanh nhưng không tạo dao động lặp lại giữa các nhánh."
+    },
+    {
+      "type": "paragraph",
+      "text": "Giới hạn được áp dụng cho cả nhiệt độ và lưu lượng, tức $T_i^{min}\\leq T_i\\leq T_i^{max}$ và $\\dot{m}_i^{min}\\leq\\dot{m}_i\\leq\\dot{m}_i^{max}$. Khi một nhánh tiến gần biên nhiệt độ, bộ điều phối giảm phần nhiệt giao cho nhánh đó và xem xét phân phối phần thiếu sang các nhánh còn dư năng lực. Cách xử lý này kết hợp khống chế cục bộ với cân bằng tổng thể, thay vì để một nhánh tự tăng lưu lượng cho tới khi chạm giới hạn. Độ bền của mạng khi nguồn không đồng đều là một tiêu chí cần xét cùng với giới hạn tải [17]."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Triển khai"
+    },
+    {
+      "type": "paragraph",
+      "text": "Thuật toán thực hiện theo chu kỳ. Đầu tiên, hệ thống đọc nhiệt độ, lưu lượng, tải hiện thời và trạng thái giới hạn; tiếp đó, nó tính sai lệch nhiệt độ và ước lượng nhu cầu nhiệt từng nhánh. Nhu cầu được đối chiếu với công suất sẵn có, sau đó lưu lượng hiệu chỉnh được tính và chặn trong dải vận hành. Trước khi gửi lệnh, bộ điều phối dự báo nhiệt độ sau thời gian trễ. Nếu dự báo vượt giới hạn, phần phân bổ tương ứng được giảm và nhu cầu còn thiếu được chuyển đến các nhánh có khả năng tiếp nhận. Lưu đồ chu kỳ này được tham chiếu tại \\\\ref{fig:control_execution_flowchart}; trình tự cập nhật chi tiết của thuật toán được nêu tại \\\\ref{alg:coordinated_flow_update}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Tiêu chuẩn phối hợp được diễn giải thành bài toán giảm đồng thời sai lệch nhiệt độ và mức thay đổi lưu lượng: $J=\\sum_{i=1}^{N}[(T_i-T_i^{ref})^2+\\lambda(\\dot{m}_i-\\bar{m}_i)^2]$. Thành phần thứ nhất ưu tiên chất lượng nhiệt, còn thành phần thứ hai hạn chế việc điều chỉnh lưu lượng quá mạnh. Tham số $\\lambda$ biểu thị sự đánh đổi giữa hai mục tiêu và cần được lựa chọn theo yêu cầu vận hành. Điều khiển nhiều biến cho tải không đồng đều đã được thảo luận trong các công trình liên quan [7], trong khi điều khiển dự báo có ràng buộc là hướng phù hợp để xử lý quán tính cùng giới hạn [16]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Dữ liệu khởi đầu gồm bốn nhánh với nhiệt độ nguồn giảm dần từ N1 tới N4, lưu lượng danh định và nhiệt độ đặt riêng cho từng nhánh. Các giá trị vận hành này được tổng hợp trong \\\\ref{tab:network_parameters}; chúng xác định điều kiện so sánh nhất quán giữa hai chiến lược. Trong từng chu kỳ, bộ điều khiển dùng cùng một cơ sở đo, nhưng cấu trúc phối hợp có thêm bước xem xét công suất sẵn có và khả năng nhận tải của toàn mạng. Việc phân biệt rõ lệnh danh định với lệnh hiệu chỉnh cũng giúp diễn giải mức độ can thiệp của điều khiển, đặc biệt khi tải tăng nhanh hoặc nguồn cấp mất cân đối."
+    },
+    {
+      "type": "paragraph",
+      "text": "Thời gian lấy mẫu điều khiển phải đủ ngắn để theo dõi biến động tải, nhưng không nên khiến bộ điều phối phản ứng với nhiễu đo như thể đó là thay đổi thực của trạng thái nhiệt. Mỗi lần cập nhật lưu lại nhiệt độ, lưu lượng và trạng thái giới hạn; trạng thái ổn định được xác nhận khi sai lệch nằm trong miền chấp nhận và tải không còn biến động đáng kể qua các chu kỳ liên tiếp. Cách xác nhận này tránh kết luận ổn định chỉ từ một lần nhiệt độ đi qua giá trị đặt. Các kết quả về thời gian xác lập và sai lệch nhánh cũng cho thấy cần đánh giá đồng thời biên độ lệch lẫn diễn biến theo thời gian [14]."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Đánh giá"
+    },
+    {
+      "type": "paragraph",
+      "text": "Hai chiến lược được so sánh dưới phụ tải biến thiên: điều khiển độc lập và điều khiển phối hợp. Các chỉ tiêu gồm độ lệch nhiệt độ, dao động lưu lượng, quá tải cục bộ và thời gian xác lập. Kết quả tổng hợp tại \\\\ref{tab:control_results} cho thấy điều khiển phối hợp giảm lần lượt các chỉ tiêu trung bình từ 3,84 xuống 2,16 °C, từ 0,42 xuống 0,25 kg/s, từ 18,6 xuống 8,2 kW và từ 46,0 xuống 31,5 s. Mức cải thiện tương ứng là 43,8%, 40,5%, 55,9% và 31,5%. Mức giảm quá tải lớn nhất gợi ý rằng lợi ích của phối hợp không chỉ nằm ở sai lệch nhiệt độ mà còn ở việc phân bổ công suất hợp lý giữa các nhánh."
+    },
+    {
+      "type": "paragraph",
+      "text": "Phân bố độ lệch của bốn nhánh dưới hai chiến lược được tham chiếu tại \\\\ref{fig:temperature_deviation_box}. Trung vị giảm từ 3,84 xuống 2,16 °C, đồng thời khoảng phân bố của chiến lược phối hợp thấp hơn. Quan hệ giữa sai lệch nhiệt độ và biến thiên lưu lượng trong \\\\ref{fig:flow_temperature_scatter} cho thấy biến thiên lưu lượng của chiến lược phối hợp nhìn chung thấp hơn tại các mức sai lệch tương ứng. Đây là dấu hiệu cho thấy bộ điều phối không cần tạo các lệnh lớn để khôi phục trạng thái, dù vẫn phải đáp ứng khi sai lệch tăng. Kết quả phù hợp với mục tiêu giảm dao động mà không làm mất khả năng điều chỉnh."
+    },
+    {
+      "type": "paragraph",
+      "text": "Mức cải thiện theo từng chỉ tiêu được đối chiếu tại \\\\ref{fig:performance_improvement_bar}. Quá tải cục bộ giảm 55,9%, cao hơn mức giảm thời gian xác lập; sự khác biệt này phản ánh việc chia sẻ tải giữa các nhánh trước khi nhiệt độ từng nhánh phục hồi hoàn toàn. Phân bố thời gian xác lập trong \\\\ref{fig:settling_time_histogram} cũng cho thấy nhiều lần chạy phối hợp tập trung ở các khoảng thời gian ngắn hơn. Các kết quả cần được đọc cùng độ trễ khác nhau giữa các nhánh: điều khiển có thể giảm dao động tổng thể mà vẫn phải chờ nhánh có quán tính lớn hơn đạt trạng thái ổn định."
+    },
+    {
+      "type": "paragraph",
+      "text": "Bốn kịch bản tải gồm tải thấp, tải danh định, tải cao và nguồn không đồng đều được so sánh tại \\\\ref{tab:load_scenarios}. Ở tải thấp, tỷ lệ thu hồi nhiệt đạt 88,6%; ở tải danh định, tỷ lệ là 94,8%. Khi tải cao tăng tới 125% mức danh định, nhiệt độ nút sau điều khiển là 85,6 °C và tỷ lệ thu hồi đạt 91,7%. Với nguồn không đồng đều, bộ điều phối giữ nhiệt độ nút sau điều khiển ở 86,8 °C và tỷ lệ thu hồi ở 92,4%. Quan hệ giữa tải tổng, nhiệt độ nút và thu hồi được dẫn tại \\\\ref{fig:recovery_load_line}; các giá trị cho thấy hiệu quả thu hồi không giảm theo một đường đơn điệu đơn giản, do trạng thái nguồn và tải cùng ảnh hưởng."
+    },
+    {
+      "type": "paragraph",
+      "text": "Khi tải cao, nút điều phối giảm từ 87,9 xuống 85,6 °C sau hiệu chỉnh; ở kịch bản nguồn không đồng đều, nhiệt độ giảm từ 90,2 xuống 86,8 °C. Những thay đổi này cho thấy điều phối có thể điều chỉnh phân bổ trước khi một nhánh tiến sâu vào vùng giới hạn. Kết quả không hàm ý rằng mọi nhánh luôn có dư năng lực: nếu tổng công suất nguồn thấp hơn nhu cầu, bộ điều khiển chỉ có thể phân bổ phần nhiệt khả dụng và hạn chế quá tải cục bộ, chứ không thể loại bỏ thiếu hụt năng lượng. Phân tích đáp ứng theo tải chu kỳ cũng nhấn mạnh vai trò của việc phân biệt biến động nhất thời với thay đổi kéo dài [11]."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Thảo luận"
+    },
+    {
+      "type": "paragraph",
+      "text": "So với điều khiển độc lập, cấu trúc phối hợp bổ sung một tầng quyết định giữa phép đo nhánh và lệnh van. Tầng này cho phép nhận diện tương quan giữa thiếu hụt của một tải và khả năng đáp ứng của các nhánh khác. Nhờ vậy, điều khiển không nhất thiết tăng lưu lượng đồng thời ở tất cả các nhánh khi một điểm đo lạnh hơn giá trị đặt. Cách tiếp cận này làm giảm xung đột giữa các bộ điều khiển cục bộ và hỗ trợ duy trì cân bằng mạng. Các nghiên cứu về điều phối nhiều nhánh, phân bổ tải và phản hồi nhiệt cung cấp bối cảnh phương pháp cho cách tổ chức đó [2, 5, 7]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Tác động của thời gian trễ là yếu tố cần lưu ý khi giải thích kết quả. Nếu bộ điều khiển cập nhật quá mạnh trước khi đáp ứng nhiệt của lệnh trước được quan sát, sai lệch có thể đổi dấu và gây hiệu chỉnh ngược liên tiếp. Bước dự báo sau trễ trong thuật toán nhằm hạn chế tình trạng này, nhưng độ chính xác phụ thuộc chất lượng mô hình và phép đo. Những kết quả về mạng có quán tính và phân bố nguồn không đều củng cố yêu cầu kết hợp dự báo với kiểm tra ràng buộc [3, 9, 16, 17]. Trong vận hành, các tham số cần được hiệu chỉnh phù hợp với đặc tính nhánh thay vì dùng một hệ số chung bất kể độ trễ."
+    },
+    {
+      "type": "paragraph",
+      "text": "Mục tiêu phối hợp cũng làm rõ sự đánh đổi giữa độ chính xác nhiệt độ và mức can thiệp lưu lượng. Nếu trọng số dành cho thay đổi lưu lượng quá nhỏ, bộ điều khiển có thể phản ứng mạnh gây mài mòn cơ cấu và dao động; nếu quá lớn, sai lệch nhiệt độ kéo dài hơn. Tương tự, ưu tiên công suất toàn mạng mà không bảo vệ giới hạn từng nhánh có thể tạo quá tải cục bộ. Do đó, tiêu chí vận hành cần phản ánh thứ tự ưu tiên của cơ sở nhiệt, bao gồm giới hạn an toàn, chất lượng cấp nhiệt, tiết kiệm năng lượng và độ bền thiết bị [4, 8, 10, 13]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Các phép đo quan sát được trong bốn kịch bản cho thấy lợi ích của phối hợp rõ nhất ở giảm quá tải và ổn định lưu lượng, nhưng đánh giá triển khai thực tế cần thêm dữ liệu về nhiễu cảm biến, sai số ước lượng tải và khả năng đáp ứng của van. Tỷ lệ thu hồi cao ở tải danh định không thể được ngoại suy tự động cho mọi cấu hình mạng. Mặt khác, hiệu quả trong kịch bản nguồn không đều cho thấy bộ điều phối có thể duy trì đáp ứng có kiểm soát khi điều kiện cấp nhiệt khác nhau giữa các nhánh. Những kết quả này phù hợp với các phân tích về ổn định nhiệt và cân bằng nguồn–tải [6, 15]."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Giới hạn"
+    },
+    {
+      "type": "paragraph",
+      "text": "Đánh giá hiện tại dựa trên mạng bốn nhánh và một tập kịch bản tải xác định; do đó, chưa bao quát hết các kiểu ghép nối, cấu hình trao đổi nhiệt hoặc sự cố thiết bị có thể gặp khi mở rộng mạng. Mô hình động lực học sử dụng dạng rút gọn nên có thể chưa phản ánh đầy đủ sự biến đổi tính chất môi chất, tổn thất nhiệt ra môi trường và tương tác phi tuyến của bộ trao đổi nhiệt. Độ trễ được biểu diễn bằng một tham số đặc trưng cho mỗi nhánh; trong hệ thống thực, tham số này có thể biến đổi theo lưu lượng và trạng thái tải."
+    },
+    {
+      "type": "paragraph",
+      "text": "Một giới hạn khác là phụ thuộc vào chất lượng cảm biến và ước lượng tải. Sai số đo nhiệt độ có thể làm sai lệch quyết định phân bổ, trong khi tải được cập nhật chậm sẽ khiến bộ điều phối phản ứng muộn trước biến động nhanh. Kết quả so sánh cũng chưa mô tả đầy đủ chi phí năng lượng phụ trợ, mức hao mòn van hoặc thời gian bảo trì. Vì vậy, các chỉ tiêu nhiệt và thời gian xác lập nên được bổ sung bằng đánh giá dài hạn về năng lượng tiêu thụ, độ tin cậy và khả năng phục hồi sau sự cố. Các nghiên cứu về ổn định và đáp ứng nhánh gợi ý rằng những yếu tố này cần được xét trong bước kiểm định tiếp theo [6, 14]."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Kết luận"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bài báo đã trình bày cấu trúc điều khiển phối hợp cho mạng trao đổi nhiệt có nguồn phân tán, tải biến thiên và độ trễ khác nhau giữa các nhánh. Cấu trúc kết hợp cân bằng năng lượng, phản hồi nhiệt độ, phân bổ lưu lượng và kiểm tra giới hạn vận hành. Trên các kịch bản được khảo sát, điều khiển phối hợp giảm độ lệch nhiệt độ, dao động lưu lượng, quá tải cục bộ và thời gian xác lập so với điều khiển độc lập; đồng thời duy trì tỷ lệ thu hồi ở mức ổn định khi tải tăng hoặc nguồn không đồng đều. Những kết quả này hỗ trợ khả năng ứng dụng của phương pháp trong các mạng cần vận hành linh hoạt, với điều kiện mô hình và tham số được hiệu chỉnh theo thiết bị cụ thể."
+    },
+    {
+      "type": "paragraph",
+      "text": "Hướng phát triển tiếp theo là kiểm định trên cấu hình nhiều nhánh hơn, cập nhật tải trực tuyến, khảo sát độ nhạy với nhiễu đo và đánh giá hiệu quả dưới các trạng thái bất thường. Việc kết hợp dự báo ràng buộc với cơ chế phát hiện sai lệch cảm biến có thể tăng độ tin cậy khi vận hành lâu dài. Đồng thời, cần xác định quy tắc lựa chọn trọng số mục tiêu theo ưu tiên của từng ứng dụng, để cân bằng giữa chất lượng nhiệt, mức tiêu thụ năng lượng và độ bền cơ cấu. Kết quả hiện tại là cơ sở để mở rộng nghiên cứu theo hướng đó.\\\\fn{Các giá trị hiệu năng được tính từ những lần chạy mô phỏng dưới cùng điều kiện tải và giới hạn vận hành.}"
+    }
+  ]
+}

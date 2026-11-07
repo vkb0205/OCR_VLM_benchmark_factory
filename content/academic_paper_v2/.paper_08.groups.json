@@ -1,0 +1,904 @@
+{
+  "front": {
+    "title": "Thermal-Pulse Conditioning of Porous Sodium-Ion Storage Cells for Improved Low-Temperature Cycling",
+    "authors": [
+      {
+        "name": "Elian Vossari",
+        "affiliations": [
+          1,
+          2
+        ],
+        "corresponding": false
+      },
+      {
+        "name": "Mira Quenel",
+        "affiliations": [
+          1
+        ],
+        "corresponding": true,
+        "email": "mira.quenel@nexovar-research.org"
+      },
+      {
+        "name": "Tavian Orsik",
+        "affiliations": [
+          2
+        ],
+        "corresponding": false
+      }
+    ],
+    "affiliations": [
+      "Nexovar Energy Materials Laboratory, Department of Electrochemical Systems",
+      "Veylan Institute for Thermal Process Engineering"
+    ],
+    "abstract": "This study examines a thermal-pulse conditioning protocol for porous sodium-ion storage cells operated below room temperature. Cells containing a hard-carbon negative electrode and a layered phosphate positive electrode were conditioned through repeated 90-second heating pulses before constant-current cycling. Relative to cells held at a fixed temperature, the conditioned group showed lower initial polarization, more uniform electrolyte wetting, and improved capacity retention during operation at 5 degrees C. After 300 cycles at 1 C, the conditioned cells retained 91.4 percent of their initial discharge capacity, compared with 82.7 percent for the fixed-temperature group. Impedance measurements indicated a reduction in charge-transfer resistance that persisted after the thermal pulses were discontinued. Microscopy of the electrode interfaces revealed fewer isolated regions and a more continuous interphase layer. The results indicate that short, moderate heating intervals can improve early-stage transport without imposing the prolonged thermal load associated with continuous heating. The protocol offers a practical route for stabilizing cold-start performance in stationary storage modules.",
+    "abstract_alt": null,
+    "keywords": "sodium-ion storage; thermal conditioning; low-temperature cycling; porous electrodes; impedance analysis; capacity retention",
+    "keywords_alt": null,
+    "journal": "Journal of Adaptive Storage Materials",
+    "acknowledgement": "The authors thank the electrochemical workshop team at the Veylan Institute for assistance with cell assembly and temperature-control testing. The authors also acknowledge the microscopy facility staff for interface imaging and analysis."
+  },
+  "formulas": [
+    {
+      "after": 0,
+      "element": {
+        "type": "equation",
+        "id": "eq:capacity-retention",
+        "latex": "\\mathrm{CR}(N)=\\frac{Q_d(N)}{Q_d(0)}\\times 100",
+        "numbered": true
+      }
+    },
+    {
+      "after": 1,
+      "element": {
+        "type": "equation",
+        "id": "eq:charge-transfer-change",
+        "latex": "\\Delta R_{ct}=R_{ct,0}-R_{ct,N}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 2,
+      "element": {
+        "type": "equation",
+        "id": "eq:pulse-temperature-average",
+        "latex": "\\overline{T}_{p}=\\frac{1}{\\tau_p}\\int_{0}^{\\tau_p}T(t)\\,dt",
+        "numbered": true
+      }
+    }
+  ],
+  "tables": [
+    {
+      "after": 0,
+      "element": {
+        "type": "table",
+        "id": "tab:conditioning-cycling",
+        "caption": "Thermal-pulse conditioning parameters and low-temperature cycling performance",
+        "header": [
+          [
+            {
+              "text": "Conditioning protocol",
+              "colspan": 2
+            },
+            {
+              "text": "Electrical response",
+              "colspan": 2
+            },
+            {
+              "text": "Cycling outcome",
+              "colspan": 2
+            }
+          ],
+          [
+            {
+              "text": "Cell group"
+            },
+            {
+              "text": "Pulse duration (s)"
+            },
+            {
+              "text": "Initial polarization (mV)"
+            },
+            {
+              "text": "Charge-transfer resistance (ohm)"
+            },
+            {
+              "text": "Capacity retention at 300 cycles (%)"
+            },
+            {
+              "text": "Discharge capacity at 5 degrees C (mAh g-1)"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "Thermal-pulse",
+            "90",
+            "68",
+            "42",
+            "91.4",
+            "118.6"
+          ],
+          [
+            "Fixed-temperature",
+            "0",
+            "96",
+            "67",
+            "82.7",
+            "107.3"
+          ],
+          [
+            "Difference",
+            "90",
+            "-28",
+            "-25",
+            "8.7",
+            "11.3"
+          ]
+        ],
+        "note": "Values are means from constant-current cycling at 1 C and 5 degrees C; lower polarization and resistance indicate improved transport."
+      }
+    },
+    {
+      "after": 1,
+      "element": {
+        "type": "table",
+        "id": "tab:pulse-profile",
+        "caption": "Temperature-control profile during repeated conditioning pulses",
+        "header": [
+          [
+            {
+              "text": "Operating stage",
+              "rowspan": 2
+            },
+            {
+              "text": "Set temperature",
+              "rowspan": 2
+            },
+            {
+              "text": "Pulse duration",
+              "rowspan": 2
+            },
+            {
+              "text": "Number of pulses",
+              "colspan": 2
+            },
+            {
+              "text": "Average pulse temperature",
+              "rowspan": 2
+            }
+          ],
+          [
+            {
+              "text": "Heating interval"
+            },
+            {
+              "text": "Rest interval"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "Preconditioning",
+            "35 degrees C",
+            "90 s",
+            "6",
+            "6",
+            "32.8 degrees C"
+          ],
+          [
+            "Cycling hold",
+            "5 degrees C",
+            "0 s",
+            "0",
+            "6",
+            "5.1 degrees C"
+          ],
+          [
+            "Recovery check",
+            "25 degrees C",
+            "90 s",
+            "3",
+            "3",
+            "24.6 degrees C"
+          ]
+        ],
+        "note": "The heating and rest intervals were applied before the first low-temperature cycling sequence; average values were obtained from the recorded temperature trace."
+      }
+    },
+    {
+      "after": 2,
+      "element": {
+        "type": "table",
+        "id": "tab:interface-impedance",
+        "caption": "Impedance and interface observations before and after low-temperature cycling",
+        "header": [
+          [
+            {
+              "text": "Measurement domain",
+              "colspan": 2
+            },
+            {
+              "text": "Fixed-temperature group",
+              "colspan": 2
+            },
+            {
+              "text": "Thermal-pulse group",
+              "colspan": 2
+            }
+          ],
+          [
+            {
+              "text": "Metric"
+            },
+            {
+              "text": "Direction"
+            },
+            {
+              "text": "Before cycling"
+            },
+            {
+              "text": "After 300 cycles"
+            },
+            {
+              "text": "Before cycling"
+            },
+            {
+              "text": "After 300 cycles"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "Charge-transfer resistance",
+            "ohm",
+            "61",
+            "67",
+            "43",
+            "42"
+          ],
+          [
+            "Interphase continuity",
+            "percent of inspected regions",
+            "72",
+            "69",
+            "74",
+            "92"
+          ],
+          [
+            "Isolated interface regions",
+            "count per field",
+            "11",
+            "14",
+            "10",
+            "4"
+          ],
+          [
+            "Polarization at 1 C",
+            "mV",
+            "94",
+            "101",
+            "69",
+            "73"
+          ]
+        ],
+        "note": "Bold values identify the more favorable post-cycling result for each metric; lower values are preferred for resistance, isolated regions, and polarization, whereas higher continuity is preferred."
+      }
+    }
+  ],
+  "charts_figures": [
+    {
+      "after": 0,
+      "element": {
+        "type": "chart",
+        "chart_type": "bar",
+        "id": "fig:discharge-capacity",
+        "caption": "Discharge capacity at 5 degrees C after thermal-pulse conditioning and fixed-temperature holding.",
+        "labels": [
+          "Thermal-pulse",
+          "Fixed-temperature"
+        ],
+        "series": [
+          {
+            "name": "Discharge capacity",
+            "values": [
+              118.6,
+              107.3
+            ],
+            "errors": [
+              2.1,
+              2.4
+            ]
+          }
+        ],
+        "x_label": "Conditioning protocol",
+        "y_label": "Discharge capacity (mAh g-1)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 1,
+      "element": {
+        "type": "chart",
+        "chart_type": "stacked_bar",
+        "id": "fig:retained-lost-capacity",
+        "caption": "Retained and lost capacity fractions after 300 low-temperature cycles.",
+        "labels": [
+          "Thermal-pulse",
+          "Fixed-temperature"
+        ],
+        "series": [
+          {
+            "name": "Retained capacity",
+            "values": [
+              91.4,
+              82.7
+            ],
+            "errors": [
+              0.8,
+              1.1
+            ]
+          },
+          {
+            "name": "Capacity loss",
+            "values": [
+              8.6,
+              17.3
+            ],
+            "errors": [
+              0.8,
+              1.1
+            ]
+          }
+        ],
+        "x_label": "Conditioning protocol",
+        "y_label": "Capacity fraction (%)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 2,
+      "element": {
+        "type": "chart",
+        "chart_type": "scatter",
+        "id": "fig:resistance-continuity",
+        "caption": "Relationship between post-cycling charge-transfer resistance and interphase continuity for the two conditioning groups.",
+        "labels": [
+          "Fixed-temperature",
+          "Thermal-pulse"
+        ],
+        "series": [
+          {
+            "name": "Fixed-temperature",
+            "points": [
+              [
+                64,
+                67
+              ],
+              [
+                66,
+                68
+              ],
+              [
+                67,
+                69
+              ],
+              [
+                68,
+                70
+              ],
+              [
+                70,
+                71
+              ]
+            ]
+          },
+          {
+            "name": "Thermal-pulse",
+            "points": [
+              [
+                40,
+                90
+              ],
+              [
+                41,
+                91
+              ],
+              [
+                42,
+                92
+              ],
+              [
+                43,
+                93
+              ],
+              [
+                44,
+                94
+              ]
+            ]
+          }
+        ],
+        "x_label": "Charge-transfer resistance (ohm)",
+        "y_label": "Interphase continuity (% of inspected regions)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 3,
+      "element": {
+        "type": "chart",
+        "chart_type": "histogram",
+        "id": "fig:polarization-distribution",
+        "caption": "Distribution of polarization measurements recorded during 1 C cycling at 5 degrees C.",
+        "labels": [
+          "60-69",
+          "70-79",
+          "80-89",
+          "90-99",
+          "100-109"
+        ],
+        "series": [
+          {
+            "name": "Measurement count",
+            "values": [
+              3,
+              7,
+              5,
+              4,
+              2
+            ],
+            "errors": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        ],
+        "x_label": "Polarization interval (mV)",
+        "y_label": "Count of measurements",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 4,
+      "element": {
+        "type": "chart",
+        "chart_type": "line",
+        "id": "fig:capacity-retention-cycling",
+        "caption": "Capacity retention during 1 C cycling at 5 degrees C for thermally conditioned and fixed-temperature cells.",
+        "labels": [
+          "0",
+          "50",
+          "100",
+          "150",
+          "200",
+          "250",
+          "300"
+        ],
+        "series": [
+          {
+            "name": "Thermal-pulse",
+            "values": [
+              100,
+              98.7,
+              97.1,
+              95.6,
+              94,
+              92.5,
+              91.4
+            ],
+            "errors": [
+              0.5,
+              0.6,
+              0.6,
+              0.7,
+              0.8,
+              0.8,
+              0.8
+            ]
+          },
+          {
+            "name": "Fixed-temperature",
+            "values": [
+              100,
+              96.1,
+              93,
+              90.4,
+              87.8,
+              85,
+              82.7
+            ],
+            "errors": [
+              0.5,
+              0.7,
+              0.8,
+              0.9,
+              1,
+              1.1,
+              1.1
+            ]
+          }
+        ],
+        "x_label": "Cycle number",
+        "y_label": "Capacity retention (%)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 5,
+      "element": {
+        "type": "figure",
+        "figure_type": "image_panel",
+        "id": "fig:interface-micrographs",
+        "caption": "Interface imaging reveals a more continuous interphase and fewer isolated regions after thermal-pulse conditioning.",
+        "description": "Paired microscopy panels compare electrode interfaces before cycling and after 300 cycles under the two thermal protocols.",
+        "labels": [
+          "Fixed before",
+          "Fixed after",
+          "Pulse before",
+          "Pulse after"
+        ],
+        "panels": [
+          {
+            "label": "Fixed before",
+            "description": "Interface with moderate continuity and dispersed isolated regions before cycling."
+          },
+          {
+            "label": "Fixed after",
+            "description": "Interface showing increased isolated regions after 300 low-temperature cycles."
+          },
+          {
+            "label": "Pulse before",
+            "description": "Interface with an initially continuous interphase after thermal conditioning."
+          },
+          {
+            "label": "Pulse after",
+            "description": "Interface retaining broad continuous coverage and fewer isolated regions after cycling."
+          }
+        ]
+      }
+    },
+    {
+      "after": 6,
+      "element": {
+        "type": "figure",
+        "figure_type": "flowchart",
+        "id": "fig:conditioning-workflow",
+        "caption": "Workflow for thermal-pulse conditioning, low-temperature cycling, and electrochemical evaluation.",
+        "description": "Process flow from cell preparation through repeated heating pulses, temperature equilibration, cycling, impedance measurement, and interface inspection.",
+        "labels": [
+          "Cell assembly",
+          "Heating pulses",
+          "Rest intervals",
+          "Cold cycling",
+          "Impedance check",
+          "Interface imaging"
+        ],
+        "panels": [
+          {
+            "label": "Cell assembly",
+            "description": "Prepare porous sodium-ion cells with hard-carbon negative and layered phosphate positive electrodes."
+          },
+          {
+            "label": "Heating pulses",
+            "description": "Apply six 90-second intervals at a 35 degrees C set temperature."
+          },
+          {
+            "label": "Rest intervals",
+            "description": "Allow six controlled rest intervals while recording the temperature trace."
+          },
+          {
+            "label": "Cold cycling",
+            "description": "Cycle at 1 C and 5 degrees C for 300 cycles."
+          },
+          {
+            "label": "Impedance check",
+            "description": "Measure charge-transfer resistance before and after cycling."
+          },
+          {
+            "label": "Interface imaging",
+            "description": "Assess interphase continuity and isolated regions after cycling."
+          }
+        ]
+      }
+    }
+  ],
+  "code": [],
+  "references": [
+    {
+      "text": "Aren, T., and M. Solven. 2019. Pore-scale transport limitations in cold-operated sodium-ion cells. Journal of Porous Electrochemical Systems 8: 114–126.",
+      "cite": "Aren and Solven 2019"
+    },
+    {
+      "text": "Brel, K., J. Ostav, and P. Nerin. 2021. Thermal relaxation pathways in hard-carbon electrodes during intermittent heating. Electrochemical Storage Letters 14: 201–213.",
+      "cite": "Brel et al. 2021"
+    },
+    {
+      "text": "Cevan, L., and R. Tovik. 2018. Interphase development on layered phosphate cathodes under subambient cycling. Materials for Adaptive Batteries 6: 77–89.",
+      "cite": "Cevan and Tovik 2018"
+    },
+    {
+      "text": "Darel, S., P. Veyon, and N. Quaris. 2022. Charge-transfer resistance evolution in porous sodium-ion electrodes. Journal of Cell Interface Engineering 11: 45–59.",
+      "cite": "Darel et al. 2022"
+    },
+    {
+      "text": "Elvar, M., and D. Rusk. 2020. Pulsed thermal treatment for enhanced electrolyte infiltration in porous electrodes. Thermal Electrochemistry 5: 133–145.",
+      "cite": "Elvar and Rusk 2020"
+    },
+    {
+      "text": "Faron, I., K. Melen, and A. Orvett. 2023. Low-temperature polarization in layered phosphate sodium-ion cells. Advanced Storage Processes 17: 301–315.",
+      "cite": "Faron et al. 2023"
+    },
+    {
+      "text": "Gevra, N., and L. Taren. 2017. Temperature-dependent wetting of carbon-based negative electrodes. Journal of Electrolyte Transport 9: 22–34.",
+      "cite": "Gevra and Taren 2017"
+    },
+    {
+      "text": "Hovan, E., M. Qerin, and S. Valek. 2021. Intermittent heating strategies for stationary sodium-ion storage modules. Stationary Energy Materials 12: 88–101.",
+      "cite": "Hovan et al. 2021"
+    },
+    {
+      "text": "Istren, P., and V. Lomel. 2019. Impedance signatures of porous electrode homogenization during formation. Electrochemical Diagnostics Review 4: 156–168.",
+      "cite": "Istren and Lomel 2019"
+    },
+    {
+      "text": "Jarev, O., R. Selvik, and T. Noren. 2020. Thermal gradients and ionic transport in compact storage cells. Journal of Applied Cell Thermodynamics 7: 241–253.",
+      "cite": "Jarev et al. 2020"
+    },
+    {
+      "text": "Kalen, V., and E. Dorsin. 2022. Capacity fade mechanisms in sodium-ion cells cycled below ambient temperature. Battery Degradation Studies 10: 61–75.",
+      "cite": "Kalen and Dorsin 2022"
+    },
+    {
+      "text": "Lurek, A., F. Meron, and C. Tavik. 2018. Interface continuity and localized degradation in porous electrode composites. Electrochemical Materials Reports 3: 109–121.",
+      "cite": "Lurek et al. 2018"
+    },
+    {
+      "text": "Mavren, D., and H. Quelor. 2023. Controlled heating intervals for improving cold-start electrochemical response. Energy Storage Engineering 15: 174–187.",
+      "cite": "Mavren and Quelor 2023"
+    },
+    {
+      "text": "Neris, P., J. Volan, and G. Turek. 2019. Modeling electrolyte redistribution during thermal conditioning. Computational Electrochemistry 6: 51–64.",
+      "cite": "Neris et al. 2019"
+    },
+    {
+      "text": "Orven, S., and B. Kelar. 2021. Hard-carbon electrode morphology after repeated low-temperature cycling. Journal of Carbon Storage Interfaces 13: 92–105.",
+      "cite": "Orven and Kelar 2021"
+    },
+    {
+      "text": "Parel, M., A. Vostek, and Y. Rinel. 2020. Short-duration thermal pulses and their influence on cell polarization. Experimental Battery Materials 9: 118–130.",
+      "cite": "Parel et al. 2020"
+    },
+    {
+      "text": "Qarin, T., and N. Belor. 2022. Electrolyte wetting kinetics in tortuous electrode architectures. Porous Energy Systems 16: 33–47.",
+      "cite": "Qarin and Belor 2022"
+    },
+    {
+      "text": "Ravel, E., K. Soren, and M. Deyar. 2017. Charge-transfer resistance as an indicator of early interphase stabilization. Journal of Storage Electrochemistry 2: 201–212.",
+      "cite": "Ravel et al. 2017"
+    },
+    {
+      "text": "Selor, J., and P. Varen. 2024. Thermal management protocols for cold-operated sodium-ion modules. Modular Energy Materials 18: 9–23.",
+      "cite": "Selor and Varen 2024"
+    },
+    {
+      "text": "Tavren, C., L. Orel, and D. Mivar. 2019. Microscopic assessment of interphase continuity in porous composite electrodes. Interface Characterization Quarterly 5: 66–79.",
+      "cite": "Tavren et al. 2019"
+    },
+    {
+      "text": "Ulen, F., and R. Kavor. 2021. Cycling-rate effects on sodium-ion storage performance at reduced temperature. Journal of Low-Temperature Batteries 8: 142–155.",
+      "cite": "Ulen and Kavor 2021"
+    },
+    {
+      "text": "Veyra, H., M. Solik, and T. Arven. 2022. Thermal history and reversible impedance changes in electrochemical storage cells. Electrochemical Process Materials 14: 219–232.",
+      "cite": "Veyra et al. 2022"
+    },
+    {
+      "text": "Warel, N., and I. Qovan. 2018. Rest-interval design for pulsed thermal conditioning of porous cells. Thermal Process Studies 4: 38–50.",
+      "cite": "Warel and Qovan 2018"
+    },
+    {
+      "text": "Xeran, P., D. Loven, and A. Merik. 2020. Capacity retention analysis for sodium-ion cells under prolonged cold cycling. Journal of Storage Lifetime 7: 184–197.",
+      "cite": "Xeran et al. 2020"
+    },
+    {
+      "text": "Yarel, S., and C. Navor. 2023. Linking interface morphology with electrochemical polarization in composite electrodes. Materials Interfaces for Energy 11: 257–270.",
+      "cite": "Yarel and Navor 2023"
+    },
+    {
+      "text": "Zoren, L., E. Paret, and J. Vasken. 2019. Thermal equilibration and transport uniformity in multilayer storage cells. Electrochemical Thermal Science 6: 73–86.",
+      "cite": "Zoren et al. 2019"
+    },
+    {
+      "text": "Avel, R., K. Teren, and O. Merek. 2024. Practical conditioning protocols for stationary sodium-ion energy storage. Journal of Applied Storage Research 19: 121–135.",
+      "cite": "Avel et al. 2024"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Introduction"
+    },
+    {
+      "type": "paragraph",
+      "text": "Low-temperature operation remains a central reliability challenge for sodium-ion storage cells intended for stationary service. Reduced temperature slows ionic motion, increases electrolyte viscosity, and amplifies concentration gradients within porous electrodes. These effects can appear as elevated polarization during the first few cycles and can later accelerate irreversible capacity loss. Pore-scale transport limitations have been associated with incomplete utilization of active regions in cold-operated cells \\cite{1}, while temperature-dependent wetting of carbonaceous negative electrodes can leave spatially uneven ionic pathways \\cite{7}. Thermal gradients across compact multilayer cells further complicate interpretation because a nominal chamber temperature may not represent the temperature experienced throughout the electrode stack \\cite{10}. The present study evaluates whether short heating pulses can improve the initial transport state without requiring continuous heating during operation.\\fn{The temperature values reported here refer to the controlled cell-fixture environment unless an internal measurement is explicitly identified.}"
+    },
+    {
+      "type": "paragraph",
+      "text": "The central approach combines repeated moderate-temperature intervals with controlled rest periods before constant-current cycling. Prior work on intermittent heating suggests that thermal relaxation can redistribute electrolyte and reduce transient transport barriers \\cite{2}; pulsed treatment has also been linked with improved electrolyte infiltration in porous structures \\cite{5}. However, the relationship between conditioning history, interphase continuity, charge-transfer resistance, and long-duration cold cycling remains insufficiently resolved. We therefore compare a thermal-pulse group with a fixed-temperature group using identical porous sodium-ion cell construction, 1 C cycling, impedance measurements, and interface imaging. The complete workflow is introduced here through \\ref{fig:conditioning-workflow}, and the principal electrical comparison is identified in \\ref{tab:conditioning-cycling} before the detailed methods are given."
+    },
+    {
+      "type": "paragraph",
+      "text": "Capacity retention is evaluated as $\\mathrm{CR}(N)=\\frac{Q_d(N)}{Q_d(0)}\\times 100$, where $Q_d(N)$ denotes discharge capacity after cycle $N$. We also define the resistance change as $\\Delta R_{ct}=R_{ct,0}-R_{ct,N}$, so a positive value indicates a reduction after cycling. The average temperature during a pulse is represented by $\\overline{T}_{p}=\\frac{1}{\\tau_p}\\int_{0}^{\\tau_p}T(t)\\,dt$. These quantities provide a common basis for comparing electrical response, thermal history, and degradation. The study addresses three questions: whether pulse conditioning lowers initial polarization, whether its influence persists after the pulses stop, and whether changes in interface morphology help explain capacity retention."
+    },
+    {
+      "type": "paragraph",
+      "text": "The motivation is also practical. Continuous heating can impose a persistent energy demand on a stationary module, whereas intermittent heating concentrates thermal input at the stage when wetting and charge-transfer limitations are most severe. Controlled heating intervals have been proposed for cold-start improvement \\cite{13}, and short-duration pulses have been associated with reduced polarization \\cite{16}. Rest-interval design is important because rapid temperature changes can produce local gradients rather than uniform conditioning \\cite{23}. In this work, six 90-second intervals at a 35 degrees C set temperature are followed by controlled rests and then by cycling at 5 degrees C. The measurements are designed to distinguish a durable conditioning effect from a temporary reduction in electrolyte viscosity."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Related Work"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cold performance in sodium-ion cells reflects coupled limitations rather than a single material property. Electrode tortuosity restricts electrolyte redistribution, while reduced mobility increases the distance over which concentration gradients persist. Wetting kinetics in tortuous architectures can therefore determine whether nominally accessible capacity is reached during a fixed current interval \\cite{17}. Hard-carbon morphology is especially relevant because repeated low-temperature cycling can alter pore accessibility and intensify local nonuniformity \\cite{15}. The resulting voltage response may contain contributions from ohmic loss, charge-transfer kinetics, and concentration polarization, making a single end-point capacity measurement inadequate for mechanistic interpretation."
+    },
+    {
+      "type": "paragraph",
+      "text": "Interphase development provides a second explanatory pathway. Layered phosphate cathodes can develop temperature-sensitive interphase structures under subambient cycling \\cite{3}. Localized degradation is more likely when interphase coverage is discontinuous, because isolated regions experience greater current-density variation and repeated local expansion or contraction \\cite{12}. Microscopic continuity has consequently been linked with electrochemical polarization in composite electrodes \\cite{25}. Charge-transfer resistance is useful as an intermediate observable because early interphase stabilization can produce a measurable resistance signature before substantial capacity loss is visible \\cite{18}. The present work treats impedance and microscopy as complementary rather than interchangeable measurements."
+    },
+    {
+      "type": "paragraph",
+      "text": "Thermal history can produce reversible as well as persistent changes. Intermittent heating strategies have been investigated for stationary modules because they may restore transport during start-up while limiting total thermal exposure \\cite{8}. Thermal history is also known to affect reversible impedance changes in electrochemical cells \\cite{22}. Modeling studies describe electrolyte redistribution during thermal conditioning as a competition between temperature-driven mobility and capillary retention within small pores \\cite{14}. In a multilayer assembly, equilibration may lag behind the programmed set point, so the recorded trace must be used to estimate the actual pulse exposure rather than relying only on the controller setting \\cite{26}. These considerations shaped the temperature logging and rest protocol used here."
+    },
+    {
+      "type": "paragraph",
+      "text": "The degradation context is equally important. Cells cycled below ambient temperature may lose capacity through incomplete reversible utilization, interphase growth, and mechanically isolated active regions \\cite{11}. Cycling-rate effects can intensify these processes because a higher imposed current leaves less time for concentration recovery \\cite{21}. Prolonged cold cycling therefore provides a stringent test of any conditioning protocol. Recent thermal-management guidance for cold-operated modules emphasizes uniformity, bounded peak temperature, and avoidance of unnecessary sustained heating \\cite{19}. Practical conditioning protocols must also fit module control constraints and should not depend on elaborate thermal hardware. This study tests those requirements using a compact, repeatable pulse sequence and considers the practical protocol range discussed by Avel et al. \\cite{27}."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Materials and Methods"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Cell construction and conditioning protocol"
+    },
+    {
+      "type": "paragraph",
+      "text": "The cells contained a porous hard-carbon negative electrode and a layered phosphate positive electrode assembled with a sodium-ion electrolyte and a porous separator. Electrode loading, separator placement, and electrolyte volume were held constant across the two groups. The thermal-pulse group received six heating intervals, each lasting 90 seconds, with a controller set to 35 degrees C. Each heating interval was followed by a rest interval during which the cell remained electrically inactive and its temperature was recorded. The fixed-temperature group underwent the same handling time but received no intentional heating. This arrangement isolates the effect of thermal history while preserving the same elapsed preparation period."
+    },
+    {
+      "type": "paragraph",
+      "text": "Temperature was monitored at the cell housing and at the fixture surrounding the active stack. The average pulse temperature was calculated from the recorded trace using $\\overline{T}_{p}=\\frac{1}{\\tau_p}\\int_{0}^{\\tau_p}T(t)\\,dt$. The preconditioning sequence produced an average of 32.8 degrees C rather than the nominal 35 degrees C because the cell approached the set point gradually. Six rest intervals were included after the heating events, allowing the temperature field to approach equilibrium before the cold hold. A recovery check at 25 degrees C was conducted on a subset of cells to determine whether the electrical response depended on immediate residual heat."
+    },
+    {
+      "type": "paragraph",
+      "text": "Initial formation and diagnostic cycling were conducted under controlled current before the low-temperature sequence. The discharge capacity at cycle zero, $Q_d(0)$, was established after stabilization, and subsequent capacity values were normalized to this quantity. Current was set according to the measured cell capacity so that 1 C represented a full nominal charge or discharge in one hour. The same voltage limits and rest durations were used for both groups. The measured capacity difference was interpreted together with polarization and impedance because capacity alone cannot identify whether transport, reaction kinetics, or active-material isolation dominates the response."
+    },
+    {
+      "type": "paragraph",
+      "text": "Electrochemical impedance was measured before cold cycling and after 300 cycles. Spectra were fitted over the selected frequency range using the same equivalent-circuit procedure for every cell. The charge-transfer resistance, $R_{ct}$, was extracted from the fitted response, and the change $\\Delta R_{ct}=R_{ct,0}-R_{ct,N}$ was calculated for each condition. Resistance evolution in porous sodium-ion electrodes has been used as an indicator of transport homogenization \\cite{4}, but fitting uncertainty can increase when several relaxation processes overlap. We therefore report resistance alongside direct polarization measurements and interface observations rather than treating it as a standalone proof."
+    },
+    {
+      "type": "paragraph",
+      "text": "Interface imaging was performed before cycling and after the 300-cycle sequence. Regions were selected from comparable positions within the electrode stack, and image assessment recorded interphase continuity and the count of isolated regions per field. The continuity metric was computed as the fraction of inspected regions showing connected interphase coverage. The imaging approach follows established microscopic assessment practices for porous composite electrodes \\cite{20}. A continuous layer does not necessarily imply ideal chemistry, but it can indicate more uniform local transport. Conversely, isolated regions may signal current constriction, incomplete wetting, or localized degradation."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Experimental Setup"
+    },
+    {
+      "type": "paragraph",
+      "text": "The cells were mounted in a temperature-controlled fixture capable of switching between the conditioning temperature, the rest state, and the 5 degrees C cycling environment. The sequence consisted of cell assembly, six heating pulses, six rest intervals, thermal equilibration, low-temperature cycling, impedance checks, and interface inspection. The recorded temperature profile is summarized by \\ref{tab:pulse-profile}, while the workflow was planned before measurements were interpreted. The fixture limited direct heat loss from the cell edges and used the same clamping pressure for both groups. This was necessary because pressure changes can alter contact resistance and confound comparisons of polarization."
+    },
+    {
+      "type": "paragraph",
+      "text": "After conditioning, cells were transferred to the 5 degrees C environment and allowed to equilibrate until the measured housing temperature remained within a narrow control band. Constant-current cycling then continued for 300 cycles at 1 C. Voltage was sampled throughout charge and discharge, and polarization was calculated from the prescribed voltage landmarks at the operating current. The distribution of these measurements is referenced by \\ref{fig:polarization-distribution}, which is introduced here to establish the spread used in later interpretation. Discharge capacity was determined by integrating current over the discharge interval, giving $Q_d(N)=\\int I_d(t)\\,dt$ under the stated current convention."
+    },
+    {
+      "type": "paragraph",
+      "text": "The design included repeated cells in each condition and retained the same diagnostic order for every unit. Measurements were grouped by conditioning protocol before calculating means and dispersion. A difference in means was considered meaningful only when it was consistent across capacity, resistance, polarization, and interface metrics. The discharge-capacity comparison is identified in \\ref{fig:discharge-capacity}, and the retained-versus-lost capacity comparison is identified in \\ref{fig:retained-lost-capacity}. These references connect the narrative to the corresponding visual records without introducing additional measurement categories."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Results"
+    },
+    {
+      "type": "paragraph",
+      "text": "Thermal-pulse conditioning reduced the initial polarization from 96 mV in the fixed-temperature group to 68 mV in the conditioned group. The initial charge-transfer resistance likewise declined from 67 ohm to 42 ohm. At 5 degrees C, the conditioned cells delivered 118.6 mAh g-1, whereas the fixed-temperature cells delivered 107.3 mAh g-1. After 300 cycles, capacity retention was 91.4 percent for the pulse group and 82.7 percent for the comparison group. The corresponding capacity loss was 8.6 percent and 17.3 percent, respectively. These values indicate that the protocol improved both early transport and later retention."
+    },
+    {
+      "type": "paragraph",
+      "text": "The retention trajectories diverged progressively rather than immediately. By cycle 50, the conditioned group retained 98.7 percent, compared with 96.1 percent for the fixed-temperature group. At cycle 150, the values were 95.6 percent and 90.4 percent, and at cycle 300 they reached 91.4 percent and 82.7 percent. The trajectory in \\ref{fig:capacity-retention-cycling} therefore supports a cumulative benefit rather than a single transient capacity increase. The normalized decline rate can be represented as $k=\\frac{1-\\mathrm{CR}(N)/100}{N}$, although this simple quantity does not imply a constant degradation mechanism across all cycles."
+    },
+    {
+      "type": "paragraph",
+      "text": "Impedance measurements showed that the lower resistance of the pulse group persisted after the heating events had ended. Its charge-transfer resistance changed from 43 ohm before cycling to 42 ohm after 300 cycles, while the fixed-temperature group increased from 61 ohm to 67 ohm. Thus, $\\Delta R_{ct}$ was approximately 1 ohm for the pulse group and -6 ohm for the fixed-temperature group under the stated definition. The resistance-continuity relation in \\ref{fig:resistance-continuity} places the pulse condition at low resistance and high interphase continuity, whereas the comparison condition occupies the opposite region."
+    },
+    {
+      "type": "paragraph",
+      "text": "Interface inspection provided a structural counterpart to the electrical measurements. Interphase continuity in the pulse group increased from 74 percent before cycling to 92 percent after cycling, while the fixed-temperature group declined from 72 percent to 69 percent. Isolated regions fell from 10 to 4 per field in the pulse group and increased from 11 to 14 per field in the fixed-temperature group. The paired panels in \\ref{fig:interface-micrographs} show the corresponding change in coverage and isolation. Because the imaging fields were selected using the same positional rules, the directional contrast is consistent with a protocol effect rather than a difference in inspection location."
+    },
+    {
+      "type": "paragraph",
+      "text": "The full cross-domain comparison is assembled in \\ref{tab:interface-impedance}. Lower resistance, lower polarization, fewer isolated regions, and higher continuity all favored the thermal-pulse condition after cycling. The pattern is internally coherent: reduced transport resistance coincided with a more continuous interphase and a smaller population of isolated regions. This agreement is important because any one metric could be affected by measurement uncertainty, whereas the joint movement of four metrics provides stronger evidence for improved electrochemical uniformity. The principal parameter and cycling comparison is also summarized in \\ref{tab:conditioning-cycling}."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Discussion"
+    },
+    {
+      "type": "paragraph",
+      "text": "The results support a mechanism in which moderate heating improves electrolyte access to regions that remain poorly wetted at 5 degrees C. During a pulse, increased molecular mobility can reduce local concentration gradients and permit redistribution through tortuous pores. The subsequent rest interval allows the temperature field and liquid distribution to approach a less stressed state. This interpretation agrees with prior accounts of electrolyte infiltration under pulsed thermal treatment \\cite{5} and with studies linking wetting kinetics to porous architecture \\cite{17}. It also explains why a short sequence can have an effect that remains visible after the cell returns to the cold environment."
+    },
+    {
+      "type": "paragraph",
+      "text": "A second mechanism concerns interphase development. If the initial ionic flux is more evenly distributed, local reaction hotspots may be reduced during early cycling. A connected interphase can then develop over a broader area, limiting the formation of isolated high-resistance regions. The observed continuity increase and isolation decrease are consistent with this pathway and with prior links between morphology and polarization \\cite{25}. The result does not establish the chemical composition of the interphase, but it does show that spatial organization changed in the same direction as charge-transfer resistance. This distinction matters because a chemically stable but discontinuous layer could still produce uneven current distribution."
+    },
+    {
+      "type": "paragraph",
+      "text": "The persistence of the resistance benefit also argues against a purely viscous explanation. If the improvement were caused only by residual heat, the resistance contrast should largely disappear after equilibration at 5 degrees C. Instead, the pulse group maintained a resistance near 42 ohm after 300 cycles, while the comparison group rose to 67 ohm. Reversible thermal effects may contribute during the first measurements, but the later interface and retention results imply that conditioning altered the subsequent evolution of the cell. Thermal history is known to produce reversible impedance changes, yet the present data indicate an additional durable component \\cite{22}."
+    },
+    {
+      "type": "paragraph",
+      "text": "The protocol also offers a useful balance between performance and thermal burden. The pulse set temperature was 35 degrees C, while the cycling environment remained at 5 degrees C. The average pulse exposure was lower than the controller setting, and the total heating duration was limited to nine minutes. This arrangement differs from continuous heating, which may maintain transport but consumes energy throughout operation. Module-level thermal management benefits from bounded exposure and temperature uniformity \\cite{19}; the present sequence follows those principles while retaining a measurable electrochemical advantage."
+    },
+    {
+      "type": "paragraph",
+      "text": "The capacity result is particularly relevant for stationary operation. At 300 cycles, the conditioned group retained 8.7 percentage points more capacity than the fixed-temperature group. If a module is sized near its required usable-energy boundary, that difference could delay the point at which cold-weather operation becomes service-limiting. Nevertheless, retention should not be interpreted as immunity from degradation. Capacity fade under reduced temperature can arise from several overlapping processes, including incomplete utilization and localized structural change \\cite{11}. The pulse protocol appears to reduce the severity of these processes during the tested interval rather than eliminate them."
+    },
+    {
+      "type": "paragraph",
+      "text": "A useful dimensionless measure of the observed benefit is $B=\\frac{\\mathrm{CR}_{p}(300)-\\mathrm{CR}_{f}(300)}{100}$, which equals 0.087 for the reported retention values. A corresponding normalized resistance contrast can be written as $R=\\frac{R_{ct,f}-R_{ct,p}}{R_{ct,f}}$, giving approximately 0.373 when post-cycling values are used. These quantities are descriptive, not universal performance laws. They show that the relative gain in retained capacity is accompanied by a substantial separation in charge-transfer resistance. The agreement between the two measures strengthens the interpretation that improved transport contributes to the long-term result."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Limitations"
+    },
+    {
+      "type": "paragraph",
+      "text": "Several limitations constrain the scope of the conclusions. The study used one electrode formulation, one electrolyte composition, one pulse temperature, and one pulse duration. A different pore-size distribution could alter the balance between capillary retention and thermal redistribution. The observed average pulse temperature was obtained from the recorded housing trace and may not equal the temperature at every internal interface. Thermal gradients in compact cells can influence ionic transport and reaction distribution \\cite{10}, so internal sensing would improve future validation."
+    },
+    {
+      "type": "paragraph",
+      "text": "The cycle count was sufficient to reveal a clear divergence but does not establish end-of-life behavior. Longer operation could produce convergence between the groups, or the pulse group could retain its advantage over a wider interval. The 1 C rate and 5 degrees C environment also represent a defined operating window rather than the full range of stationary duty. Cycling-rate effects at reduced temperature can change both polarization and usable capacity \\cite{21}. Additional work should vary current, ambient temperature, pulse number, and rest duration independently."
+    },
+    {
+      "type": "paragraph",
+      "text": "Impedance fitting and image assessment introduce further uncertainty. Overlapping relaxation processes can make $R_{ct}$ sensitive to circuit choice, while continuity percentages depend on segmentation criteria and field selection. The microscopy results establish a strong morphological contrast but do not identify the chemical species within the interphase. Chemical mapping, cross-sectional analysis, and spatially resolved current measurements would help determine whether the observed coverage reflects composition, thickness, porosity, or all three. Such measurements would also test the proposed connection between isolated regions and local current constriction."
+    },
+    {
+      "type": "paragraph",
+      "text": "Finally, the energy cost of the heating sequence was not measured at the module controller level. A practical deployment assessment requires the electrical input to the heater, heat-transfer efficiency, standby losses, and the value of the recovered discharge capacity. Intermittent heating has been proposed as a route to lower thermal overhead, but system-level benefits depend on insulation, ambient conditions, and duty schedule \\cite{8}. The present work establishes electrochemical feasibility; it does not provide a complete economic or control optimization."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Conclusion"
+    },
+    {
+      "type": "paragraph",
+      "text": "Repeated 90-second heating pulses at a 35 degrees C set temperature improved the cold-operation behavior of porous sodium-ion storage cells containing hard-carbon and layered phosphate electrodes. Relative to fixed-temperature holding, conditioning reduced initial polarization from 96 mV to 68 mV, reduced post-conditioning charge-transfer resistance, increased discharge capacity at 5 degrees C from 107.3 to 118.6 mAh g-1, and raised 300-cycle capacity retention from 82.7 to 91.4 percent. The electrical benefit was accompanied by greater interphase continuity and fewer isolated interface regions."
+    },
+    {
+      "type": "paragraph",
+      "text": "The findings indicate that a short thermal history can influence subsequent low-temperature cycling beyond the period of direct heating. Improved wetting, more uniform early reaction, and stabilized interphase development provide a coherent explanation for the combined capacity, impedance, and microscopy results. The approach is compatible with a control strategy that applies heat only during preparation or cold start, thereby avoiding the sustained thermal demand of continuous heating. Further work should assess internal temperature gradients, broader cycling conditions, and module-level energy balance before deployment."
+    },
+    {
+      "type": "box",
+      "kind": "remark",
+      "title": "Interpretive note",
+      "text": "The reported advantage is defined by the joint behavior of capacity retention, polarization, charge-transfer resistance, interphase continuity, and isolated-region count. No single metric is treated as sufficient evidence of conditioning efficacy."
+    }
+  ]
+}

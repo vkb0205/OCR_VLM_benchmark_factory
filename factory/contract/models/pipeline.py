@@ -44,15 +44,23 @@ class DesignCriterion(BaseModel):
 
 
 class DesignSpec(BaseModel):
+    direction: dict[str, Any] = Field(default_factory=dict)
     seed: int = 0
     draws: dict[str, list[float]] = Field(default_factory=dict)
-    layout: DesignCriterion
-    style: DesignCriterion
-    reading_order: DesignCriterion
-    orientation: DesignCriterion
+    layout: DesignCriterion = Field(default_factory=DesignCriterion)
+    style: DesignCriterion = Field(default_factory=DesignCriterion)
+    reading_order: DesignCriterion = Field(default_factory=DesignCriterion)
+    orientation: DesignCriterion = Field(default_factory=DesignCriterion)
     pages: list[Any] = Field(default_factory=list)
     skipped: list[Any] = Field(default_factory=list)
     params: dict[str, Any] = Field(default_factory=dict)  # code-drawn design parameters
+    mode: str = "legacy"
+    content_id: str | None = None
+    layout_plan: dict[str, Any] = Field(default_factory=dict)
+    brief: dict[str, Any] = Field(default_factory=dict)
+    table_frame_type: str | None = None
+    fingerprint: dict[str, Any] = Field(default_factory=dict)
+    thumbnail_paths: list[str] = Field(default_factory=list)
 
 
 class DocumentRunRecord(BaseModel):
@@ -62,6 +70,8 @@ class DocumentRunRecord(BaseModel):
     calls: int = 0
     tokens_in: int = 0
     tokens_out: int = 0
+    tokens_cached: int = 0
+    tokens_reasoning: int = 0
     cost_usd: float = 0
     seconds: float = 0
     failure_stage: str | None = None
@@ -92,6 +102,10 @@ class DesignLedgerEntry(BaseModel):
     doc_id: str
     doc_type: str
     design_spec: DesignSpec
+    content_id: str | None = None
+    brief: dict[str, Any] = Field(default_factory=dict)
+    fingerprint: dict[str, Any] = Field(default_factory=dict)
+    thumbnail_paths: list[str] = Field(default_factory=list)
 
 
 class LanguageStats(RootModel[dict[str, Any]]):

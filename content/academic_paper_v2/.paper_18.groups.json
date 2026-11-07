@@ -1,0 +1,1120 @@
+{
+  "front": {
+    "title": "Robust Network Adjustment for Multi-Scale Geodetic Control Using Adaptive Stochastic Modeling",
+    "authors": [
+      {
+        "name": "Elian Veyron",
+        "affiliations": [
+          1
+        ],
+        "corresponding": true,
+        "email": "elian.ve yron@meridianquill.org"
+      },
+      {
+        "name": "Mara Quenfall",
+        "affiliations": [
+          2
+        ],
+        "corresponding": false
+      },
+      {
+        "name": "Tovin Arclune",
+        "affiliations": [
+          1,
+          3
+        ],
+        "corresponding": false
+      }
+    ],
+    "affiliations": [
+      "Department of Geometric Measurement, Arclune Institute of Spatial Sciences, Veyra",
+      "Laboratory for Terrestrial Reference Systems, Norellian Technical Forum, Caldris",
+      "Center for Uncertainty Propagation, Pelagos Cartographic Union, Oriven"
+    ],
+    "abstract": "This study presents a robust adjustment procedure for geodetic control networks observed with heterogeneous terrestrial and satellite techniques. The method combines variance-component estimation, adaptive observation weighting, and spatially correlated disturbance modeling within a constrained least-squares framework. A hierarchical stochastic model is used to distinguish instrument noise, session-dependent effects, and persistent local distortion. The adjustment begins with a free-network solution, followed by datum realization through minimum-norm constraints and an iterative reliability assessment. Observation residuals are screened with standardized measures derived from the posterior covariance matrix, while down-weighting is controlled by a continuously varying influence function rather than by abrupt rejection. The procedure also propagates coordinate covariance through a scale-dependent spatial model, allowing uncertainty estimates to remain consistent when control points are transformed between regional and local frames. Numerical trials were conducted on a mixed network containing angular, distance, height-difference, and three-dimensional baseline observations. Across the tested configurations, the proposed procedure reduced the median absolute residual by 18.6 percent relative to a fixed-weight adjustment and lowered the largest standardized residual from 4.9 to 2.7. Coordinate repeatability improved most strongly in weakly connected subnetworks, where correlated disturbance terms prevented excessive confidence in locally clustered observations. The resulting variance factors remained stable under progressive removal of redundant measurements, indicating that the method is less sensitive to uneven observation density. A separate perturbation analysis showed that horizontal and vertical uncertainty retained coherent propagation under datum changes, with the largest coordinate displacement remaining below 6.4 millimetres in the assessed regional configuration. The findings support the use of adaptive stochastic modeling for control-network maintenance, deformation screening, and integrated geodetic processing where observation quality and spatial correlation vary across the network.",
+    "abstract_alt": null,
+    "keywords": "geodetic network adjustment; stochastic modeling; variance-component estimation; robust weighting; covariance propagation; datum realization; control-network reliability",
+    "keywords_alt": null,
+    "journal": "Journal of Meridian Geodesy and Spatial Measurement",
+    "acknowledgement": "The authors acknowledge the technical assistance provided by the Geometric Computation Unit of the Arclune Institute of Spatial Sciences and the field coordination support of the Norellian Technical Forum. Computational resources were supplied through the Pelagos Cartographic Union’s shared processing facility. The authors also thank the anonymous technical reviewers whose comments led to clearer definitions of the weighting strategy and improved discussion of covariance propagation."
+  },
+  "formulas": [
+    {
+      "after": 0,
+      "element": {
+        "type": "equation",
+        "id": "eq:observation_model",
+        "latex": "\\vec{l}=\\mathbf{A}\\vec{x}+\\mathbf{B}\\vec{beta}+\\vec{epsilon}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 1,
+      "element": {
+        "type": "equation",
+        "id": "eq:stochastic_model",
+        "latex": "\\mathbf{Sigma}_{l}=\\sigma_{0}^{2}\\left(\\mathbf{Q}_{0}+\\sum_{k=1}^{m}\\lambda_{k}\\mathbf{Q}_{k}\\right)",
+        "numbered": true
+      }
+    },
+    {
+      "after": 2,
+      "element": {
+        "type": "equation",
+        "id": "eq:constrained_adjustment",
+        "latex": "\\hat{\\vec{x}}=\\operatorname*{argmin}_{\\vec{x}}\\left(\\vec{l}-\\mathbf{A}\\vec{x}\\right)^{T}\\mathbf{Sigma}_{l}^{-1}\\left(\\vec{l}-\\mathbf{A}\\vec{x}\\right)",
+        "numbered": true
+      }
+    },
+    {
+      "after": 3,
+      "element": {
+        "type": "equation",
+        "id": "eq:minimum_norm_constraint",
+        "latex": "\\hat{\\vec{x}}=\\vec{x}_{f}-\\mathbf{Sigma}_{f}\\mathbf{C}^{T}\\left(\\mathbf{C}\\mathbf{Sigma}_{f}\\mathbf{C}^{T}\\right)^{-1}\\left(\\mathbf{C}\\vec{x}_{f}-\\vec{d}\\right)",
+        "numbered": true
+      }
+    },
+    {
+      "after": 4,
+      "element": {
+        "type": "equation",
+        "id": "eq:standardized_residual",
+        "latex": "r_{i}=\\dfrac{v_{i}}{\\hat{\\sigma}_{0}\\sqrt{q_{v_{i}v_{i}}}}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 5,
+      "element": {
+        "type": "equation",
+        "id": "eq:adaptive_weight",
+        "latex": "w_{i}=\\left(1+\\left(\\dfrac{\\lvert r_{i}\\rvert}{c}\\right)^{2}\\right)^{-1}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 6,
+      "element": {
+        "type": "equation",
+        "id": "eq:variance_factor",
+        "latex": "\\hat{\\sigma}_{0}^{2}=\\dfrac{\\vec{v}^{T}\\mathbf{P}\\vec{v}}{n-u+q}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 7,
+      "element": {
+        "type": "equation",
+        "id": "eq:spatial_covariance",
+        "latex": "\\operatorname{Cov}\\left(\\vec{x}_{i},\\vec{x}_{j}\\right)=\\sigma_{s}^{2}\\exp\\left(-\\dfrac{\\lvert d_{ij}\\rvert}{\\rho}\\right)\\mathbf{I}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 8,
+      "element": {
+        "type": "equation",
+        "id": "eq:covariance_propagation",
+        "latex": "\\mathbf{Sigma}_{y}=\\mathbf{J}\\mathbf{Sigma}_{x}\\mathbf{J}^{T}",
+        "numbered": true
+      }
+    }
+  ],
+  "tables": [
+    {
+      "after": 9,
+      "element": {
+        "type": "table",
+        "id": "tab:network_configuration",
+        "caption": "Composition of the adjusted control network by observation class and processing scale",
+        "header": [
+          [
+            {
+              "text": "Observation class",
+              "rowspan": 2,
+              "bold": true
+            },
+            {
+              "text": "Regional scale",
+              "colspan": 2,
+              "bold": true
+            },
+            {
+              "text": "Local scale",
+              "colspan": 2,
+              "bold": true
+            },
+            {
+              "text": "Total",
+              "rowspan": 2,
+              "bold": true
+            }
+          ],
+          [
+            {
+              "text": "Count"
+            },
+            {
+              "text": "Nominal precision (mm)"
+            },
+            {
+              "text": "Count"
+            },
+            {
+              "text": "Nominal precision (mm)"
+            },
+            {
+              "text": "Count",
+              "bold": true
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "Horizontal direction",
+            "184",
+            "1.8",
+            "96",
+            "1.2",
+            "280"
+          ],
+          [
+            "Slope distance",
+            "132",
+            "2.6",
+            "74",
+            "1.9",
+            "206"
+          ],
+          [
+            "Height difference",
+            "168",
+            "3.1",
+            "112",
+            "2.4",
+            "280"
+          ],
+          [
+            "Three-dimensional baseline",
+            "76",
+            "4.4",
+            "58",
+            "3.6",
+            "134"
+          ],
+          [
+            "Total",
+            "560",
+            "—",
+            "340",
+            "—",
+            "900"
+          ]
+        ],
+        "note": "Counts refer to retained observations after initial screening; precision values are one-standard-deviation targets in millimetres."
+      }
+    },
+    {
+      "after": 13,
+      "element": {
+        "type": "table",
+        "id": "tab:adjustment_comparison",
+        "caption": "Adjustment performance under fixed and adaptive stochastic models",
+        "header": [
+          [
+            {
+              "text": "Configuration",
+              "rowspan": 2,
+              "bold": true
+            },
+            {
+              "text": "Median absolute residual",
+              "colspan": 2,
+              "bold": true
+            },
+            {
+              "text": "Largest standardized residual",
+              "colspan": 2,
+              "bold": true
+            },
+            {
+              "text": "Variance factor",
+              "rowspan": 2,
+              "bold": true
+            }
+          ],
+          [
+            {
+              "text": "mm"
+            },
+            {
+              "text": "Change (%)"
+            },
+            {
+              "text": "Initial"
+            },
+            {
+              "text": "Final"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "Fixed weights",
+            "2.42",
+            "—",
+            "4.9",
+            "4.1",
+            "1.38"
+          ],
+          [
+            "Adaptive weights",
+            "1.97",
+            {
+              "text": "−18.6",
+              "bold": true
+            },
+            "4.9",
+            {
+              "text": "2.7",
+              "bold": true
+            },
+            "1.06"
+          ],
+          [
+            "Adaptive weights with spatial terms",
+            "1.84",
+            {
+              "text": "−24.0",
+              "bold": true
+            },
+            "4.6",
+            {
+              "text": "2.4",
+              "bold": true
+            },
+            "1.02"
+          ],
+          [
+            "Minimum-norm datum realization",
+            "2.01",
+            "−16.9",
+            "4.7",
+            "2.8",
+            "1.04"
+          ]
+        ],
+        "note": "Residual changes are referenced to the fixed-weight configuration. Lower values indicate improved residual control except where explicitly identified as an initial diagnostic."
+      }
+    },
+    {
+      "after": 17,
+      "element": {
+        "type": "table",
+        "id": "tab:repeatability_by_subnetwork",
+        "caption": "Coordinate repeatability across subnetworks with differing connectivity",
+        "header": [
+          [
+            {
+              "text": "Subnetwork",
+              "rowspan": 2,
+              "bold": true
+            },
+            {
+              "text": "Stations",
+              "rowspan": 2,
+              "bold": true
+            },
+            {
+              "text": "Connectivity index",
+              "rowspan": 2,
+              "bold": true
+            },
+            {
+              "text": "Horizontal repeatability (mm)",
+              "colspan": 2,
+              "bold": true
+            },
+            {
+              "text": "Vertical repeatability (mm)",
+              "rowspan": 2,
+              "bold": true
+            }
+          ],
+          [
+            {
+              "text": "Fixed weights"
+            },
+            {
+              "text": "Adaptive model"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "Central frame",
+            "18",
+            "0.92",
+            "3.8",
+            {
+              "text": "2.6",
+              "bold": true
+            },
+            "4.1"
+          ],
+          [
+            "Northern branch",
+            "11",
+            "0.67",
+            "5.9",
+            {
+              "text": "3.7",
+              "bold": true
+            },
+            "6.4"
+          ],
+          [
+            "Eastern branch",
+            "9",
+            "0.54",
+            "7.2",
+            {
+              "text": "4.5",
+              "bold": true
+            },
+            "7.8"
+          ],
+          [
+            "Southern cluster",
+            "7",
+            "0.41",
+            "8.6",
+            {
+              "text": "5.1",
+              "bold": true
+            },
+            "9.2"
+          ],
+          [
+            "Network median",
+            "—",
+            "0.64",
+            "6.1",
+            {
+              "text": "4.0",
+              "bold": true
+            },
+            "6.9"
+          ]
+        ],
+        "note": "Repeatability is reported as the median coordinate difference across independent processing sessions. The connectivity index is dimensionless."
+      }
+    },
+    {
+      "after": 21,
+      "element": {
+        "type": "table",
+        "id": "tab:perturbation_analysis",
+        "caption": "Coordinate displacement and propagated uncertainty under datum perturbations",
+        "header": [
+          [
+            {
+              "text": "Perturbation case",
+              "rowspan": 2,
+              "bold": true
+            },
+            {
+              "text": "Horizontal displacement (mm)",
+              "colspan": 2,
+              "bold": true
+            },
+            {
+              "text": "Vertical displacement (mm)",
+              "colspan": 2,
+              "bold": true
+            },
+            {
+              "text": "95% horizontal uncertainty (mm)",
+              "rowspan": 2,
+              "bold": true
+            }
+          ],
+          [
+            {
+              "text": "Before propagation"
+            },
+            {
+              "text": "After propagation"
+            },
+            {
+              "text": "Before propagation"
+            },
+            {
+              "text": "After propagation"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "Regional-to-local transformation",
+            "4.8",
+            "5.2",
+            "3.6",
+            "4.1",
+            "6.4"
+          ],
+          [
+            "Scale-factor increase",
+            "3.1",
+            "3.5",
+            "2.2",
+            "2.6",
+            "4.8"
+          ],
+          [
+            "Correlated disturbance retained",
+            "2.7",
+            {
+              "text": "2.4",
+              "bold": true
+            },
+            "2.9",
+            {
+              "text": "2.5",
+              "bold": true
+            },
+            "4.1"
+          ],
+          [
+            "Redundant observation removal",
+            "5.6",
+            "6.0",
+            "4.3",
+            "4.9",
+            "7.2"
+          ],
+          [
+            "Median across cases",
+            "4.0",
+            "4.3",
+            "3.3",
+            "3.8",
+            {
+              "text": "5.6",
+              "bold": true
+            }
+          ]
+        ],
+        "note": "Displacements and uncertainty components are expressed in millimetres. Bold values identify the lowest value within the corresponding comparison column."
+      }
+    }
+  ],
+  "charts_figures": [
+    {
+      "after": 1,
+      "element": {
+        "type": "figure",
+        "figure_type": "flowchart",
+        "id": "fig:adaptive_adjustment_pipeline",
+        "caption": "Processing sequence for adaptive geodetic network adjustment",
+        "description": "The workflow begins with heterogeneous observation ingestion and quality screening, proceeds through free-network estimation and variance-component evaluation, applies continuously varying residual weights, realizes the datum with minimum-norm constraints, and ends with reliability assessment and covariance propagation.",
+        "labels": [
+          "Observation intake",
+          "Quality screening",
+          "Free-network solution",
+          "Variance estimation",
+          "Adaptive weighting",
+          "Datum realization",
+          "Reliability assessment",
+          "Covariance propagation"
+        ]
+      }
+    },
+    {
+      "after": 6,
+      "element": {
+        "type": "figure",
+        "figure_type": "flowchart",
+        "id": "fig:stochastic_model_update",
+        "caption": "Iterative update path for the hierarchical stochastic model",
+        "description": "Observation classes enter separate instrument-noise, session-effect, and local-distortion branches. Their variance contributions are combined, residual diagnostics are evaluated, and the updated covariance model is returned to the adjustment until the variance factor and standardized residuals stabilize.",
+        "labels": [
+          "Observation classes",
+          "Instrument noise",
+          "Session effects",
+          "Local distortion",
+          "Covariance assembly",
+          "Residual diagnostics",
+          "Model update",
+          "Convergence check"
+        ]
+      }
+    },
+    {
+      "after": 10,
+      "element": {
+        "type": "chart",
+        "chart_type": "stacked_bar",
+        "id": "fig:network_observation_composition",
+        "caption": "Regional and local composition of retained observations by observation class",
+        "labels": [
+          "Horizontal direction",
+          "Slope distance",
+          "Height difference",
+          "Three-dimensional baseline"
+        ],
+        "series": [
+          {
+            "name": "Regional scale",
+            "values": [
+              184,
+              132,
+              168,
+              76
+            ],
+            "errors": [
+              1.8,
+              2.6,
+              3.1,
+              4.4
+            ]
+          },
+          {
+            "name": "Local scale",
+            "values": [
+              96,
+              74,
+              112,
+              58
+            ],
+            "errors": [
+              1.2,
+              1.9,
+              2.4,
+              3.6
+            ]
+          }
+        ],
+        "x_label": "Observation class",
+        "y_label": "Retained observations (count)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 14,
+      "element": {
+        "type": "chart",
+        "chart_type": "grouped_bar",
+        "id": "fig:adjustment_performance",
+        "caption": "Residual control and variance-factor comparison across adjustment configurations",
+        "labels": [
+          "Fixed weights",
+          "Adaptive weights",
+          "Adaptive plus spatial terms",
+          "Minimum-norm datum"
+        ],
+        "series": [
+          {
+            "name": "Median absolute residual",
+            "values": [
+              2.42,
+              1.97,
+              1.84,
+              2.01
+            ],
+            "errors": [
+              0.12,
+              0.1,
+              0.09,
+              0.11
+            ]
+          },
+          {
+            "name": "Largest standardized residual",
+            "values": [
+              4.1,
+              2.7,
+              2.4,
+              2.8
+            ],
+            "errors": [
+              0.2,
+              0.2,
+              0.2,
+              0.2
+            ]
+          },
+          {
+            "name": "Variance factor",
+            "values": [
+              1.38,
+              1.06,
+              1.02,
+              1.04
+            ],
+            "errors": [
+              0.04,
+              0.03,
+              0.03,
+              0.03
+            ]
+          }
+        ],
+        "x_label": "Adjustment configuration",
+        "y_label": "Metric value (mm for residuals; dimensionless otherwise)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 19,
+      "element": {
+        "type": "figure",
+        "figure_type": "flowchart",
+        "id": "fig:datum_perturbation_propagation",
+        "caption": "Flow of datum perturbation analysis and coordinate uncertainty propagation",
+        "description": "Each datum perturbation is applied to the adjusted coordinates, followed by Jacobian-based propagation through the regional-to-local transformation. Horizontal and vertical displacements are compared before and after propagation, and the resulting uncertainty diagnostics are retained for network maintenance decisions.",
+        "labels": [
+          "Datum perturbation",
+          "Adjusted coordinates",
+          "Transformation Jacobian",
+          "Horizontal component",
+          "Vertical component",
+          "Uncertainty propagation",
+          "Displacement comparison",
+          "Maintenance decision"
+        ]
+      }
+    }
+  ],
+  "code": [
+    {
+      "after": 7,
+      "element": {
+        "type": "code",
+        "id": "alg:adaptive_network_adjustment",
+        "language": "pseudocode",
+        "caption": "Adaptive adjustment procedure for heterogeneous geodetic control observations",
+        "lines": [
+          "Input observations, design operators, covariance components, datum constraints, and tolerances",
+          "Partition observations by technique, scale, and acquisition session",
+          "Initialize variance components and weights from nominal precision targets",
+          "Compute a free-network estimate and its posterior covariance",
+          "Evaluate residuals and standardized diagnostics",
+          "Update observation weights with the continuous influence rule",
+          "Estimate variance components from residual groups while preserving spatial correlation",
+          "Assemble covariance from instrument, session, and local-distortion contributions",
+          "Repeat adjustment and covariance assembly until factors and weights stabilize",
+          "Apply minimum-norm constraints to realize the selected datum",
+          "Propagate coordinate covariance through the scale-dependent transformation Jacobian",
+          "Recompute reliability measures for observations and weak subnetworks",
+          "Flag persistent high-impact observations for review without abrupt removal",
+          "Return adjusted coordinates, covariance, diagnostics, and reliability measures"
+        ]
+      }
+    }
+  ],
+  "references": [
+    {
+      "text": "[1] Veyron, E., and Quenfall, M. (2018). Adaptive stochastic models for heterogeneous terrestrial control networks. Journal of Meridian Geodesy, 12(3), 141–158.",
+      "cite": "Veyron-2018"
+    },
+    {
+      "text": "[2] Arclune, T., and Norell, S. (2019). Robust residual screening in constrained geodetic adjustment. Cartographic Measurement Review, 8(2), 55–72.",
+      "cite": "Arclune-2019"
+    },
+    {
+      "text": "[3] Pelorin, J., Dalmere, V., and Sareth, O. (2020). Variance-component estimation for mixed angular and distance observations. Survey Computation Quarterly, 15(4), 201–219.",
+      "cite": "Pelorin-2020"
+    },
+    {
+      "text": "[4] Quenfall, M., and Orvane, L. (2017). Minimum-norm datum realization for weakly connected control frames. Terrestrial Reference Methods, 6(1), 19–36.",
+      "cite": "Quenfall-2017"
+    },
+    {
+      "text": "[5] Veyron, E., Arclune, T., and Merovan, P. (2021). Spatially correlated disturbance terms in regional network adjustment. Meridian Spatial Science, 17(2), 88–107.",
+      "cite": "Veyron-2021"
+    },
+    {
+      "text": "[6] Norell, S., and Caldrin, H. (2016). Posterior covariance diagnostics for integrated geodetic observations. Journal of Applied Coordinate Analysis, 9(3), 113–129.",
+      "cite": "Norell-2016"
+    },
+    {
+      "text": "[7] Dalmere, V., and Quenfall, M. (2022). Continuous influence weighting for observation reliability control. Geometric Measurement Letters, 11(2), 64–81.",
+      "cite": "Dalmere-2022"
+    },
+    {
+      "text": "[8] Sareth, O., and Pelorin, J. (2018). Hierarchical noise separation in multi-session control surveys. Reference Systems and Networks, 13(1), 27–45.",
+      "cite": "Sareth-2018"
+    },
+    {
+      "text": "[9] Orvane, L., Veyron, E., and Neral, C. (2020). Free-network initialization under heterogeneous precision assumptions. Journal of Spatial Adjustment, 10(4), 231–249.",
+      "cite": "Orvane-2020"
+    },
+    {
+      "text": "[10] Merovan, P., and Arclune, T. (2019). Reliability measures for clustered terrestrial observations. Surveying and Coordinate Methods, 14(3), 156–174.",
+      "cite": "Merovan-2019"
+    },
+    {
+      "text": "[11] Caldrin, H., and Dalmere, V. (2021). Covariance propagation through scale-dependent coordinate transformations. Geodetic Uncertainty Review, 7(2), 39–58.",
+      "cite": "Caldrin-2021"
+    },
+    {
+      "text": "[12] Neral, C., and Sareth, O. (2017). Datum sensitivity in regional-to-local reference transformations. Spatial Reference Engineering, 5(4), 184–202.",
+      "cite": "Neral-2017"
+    },
+    {
+      "text": "[13] Pelorin, J., and Orvane, L. (2023). Iterative stochastic updating for integrated control networks. Meridian Methods in Geodesy, 19(1), 7–26.",
+      "cite": "Pelorin-2023"
+    },
+    {
+      "text": "[14] Quenfall, M., and Merovan, P. (2020). Residual influence functions for mixed observation adjustment. Journal of Geometric Inference, 12(2), 93–111.",
+      "cite": "Quenfall-2020"
+    },
+    {
+      "text": "[15] Veyron, E., and Norell, S. (2018). Precision transfer between regional and local geodetic frames. Coordinate Science Annals, 4(3), 118–136.",
+      "cite": "Veyron-2018b"
+    },
+    {
+      "text": "[16] Arclune, T., and Caldrin, H. (2022). Detection of persistent local distortion in control networks. Terrestrial Modeling Journal, 16(4), 207–225.",
+      "cite": "Arclune-2022"
+    },
+    {
+      "text": "[17] Dalmere, V., Sareth, O., and Neral, C. (2019). Session effects in repeated three-dimensional baseline processing. Geodetic Processing Studies, 9(1), 41–59.",
+      "cite": "Dalmere-2019"
+    },
+    {
+      "text": "[18] Orvane, L., and Pelorin, J. (2021). Joint treatment of angular, distance, and height-difference observations. Survey Integration Review, 18(2), 72–91.",
+      "cite": "Orvane-2021"
+    },
+    {
+      "text": "[19] Merovan, P., and Veyron, E. (2017). Constraint design for stable coordinate datum realization. Journal of Reference Frame Practice, 6(3), 132–149.",
+      "cite": "Merovan-2017"
+    },
+    {
+      "text": "[20] Norell, S., and Quenfall, M. (2023). Adaptive weighting under uneven observation density. Spatial Measurement Reports, 21(2), 101–120.",
+      "cite": "Norell-2023"
+    },
+    {
+      "text": "[21] Caldrin, H., Arclune, T., and Pelorin, J. (2020). Reliability propagation from observations to adjusted coordinates. Coordinate Quality Journal, 8(4), 244–263.",
+      "cite": "Caldrin-2020"
+    },
+    {
+      "text": "[22] Sareth, O., and Merovan, P. (2018). Correlation-aware precision assessment for weak network branches. Geodetic Network Research, 10(1), 15–33.",
+      "cite": "Sareth-2018b"
+    },
+    {
+      "text": "[23] Neral, C., and Dalmere, V. (2022). Robust estimation of variance factors in constrained adjustment. Journal of Survey Inference, 13(3), 169–188.",
+      "cite": "Neral-2022"
+    },
+    {
+      "text": "[24] Pelorin, J., Veyron, E., and Orvane, L. (2019). Multi-scale covariance models for control-point maintenance. Meridian Cartographic Methods, 7(2), 84–103.",
+      "cite": "Pelorin-2019"
+    },
+    {
+      "text": "[25] Quenfall, M., and Sareth, O. (2021). Standardized residual diagnostics with posterior uncertainty. Journal of Terrestrial Computation, 15(1), 28–47.",
+      "cite": "Quenfall-2021"
+    },
+    {
+      "text": "[26] Arclune, T., and Norell, S. (2020). Influence control without abrupt observation rejection. Geometric Reliability Quarterly, 11(4), 219–238.",
+      "cite": "Arclune-2020"
+    },
+    {
+      "text": "[27] Veyron, E., and Caldrin, H. (2023). Jacobian-based uncertainty transfer in changing spatial scales. Applied Reference Systems, 20(3), 137–156.",
+      "cite": "Veyron-2023"
+    },
+    {
+      "text": "[28] Merovan, P., Dalmere, V., and Neral, C. (2018). Network connectivity and coordinate repeatability. Survey Network Dynamics, 5(2), 61–79.",
+      "cite": "Merovan-2018"
+    },
+    {
+      "text": "[29] Orvane, L., and Sareth, O. (2022). Localized covariance inflation for clustered observations. Geodesy and Spatial Statistics, 14(4), 198–217.",
+      "cite": "Orvane-2022"
+    },
+    {
+      "text": "[30] Pelorin, J., and Arclune, T. (2017). Stochastic modeling of instrument, session, and site effects. Journal of Measurement Uncertainty, 3(1), 34–52.",
+      "cite": "Pelorin-2017"
+    },
+    {
+      "text": "[31] Norell, S., Veyron, E., and Quenfall, M. (2021). Progressive redundancy analysis in geodetic control maintenance. Reference Network Engineering, 12(3), 145–164.",
+      "cite": "Norell-2021"
+    },
+    {
+      "text": "[32] Caldrin, H., and Merovan, P. (2019). Minimum-norm constraints and covariance consistency. Spatial Datum Studies, 8(2), 96–114.",
+      "cite": "Caldrin-2019"
+    },
+    {
+      "text": "[33] Dalmere, V., and Orvane, L. (2020). Integrated reliability assessment for heterogeneous survey sessions. Geometric Observation Review, 16(1), 23–42.",
+      "cite": "Dalmere-2020"
+    },
+    {
+      "text": "[34] Sareth, O., Pelorin, J., and Neral, C. (2023). Perturbation testing for regional geodetic transformations. Journal of Coordinate Propagation, 18(4), 226–245.",
+      "cite": "Sareth-2023"
+    },
+    {
+      "text": "[35] Arclune, T., and Veyron, E. (2022). Maintenance-oriented adjustment of adaptive control networks. Meridian Geodetic Methods, 22(1), 53–74.",
+      "cite": "Arclune-2022b"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Introduction"
+    },
+    {
+      "type": "paragraph",
+      "text": "Geodetic control networks increasingly combine angular directions, slope distances, height differences, and three-dimensional baselines acquired at different scales and during separate sessions. Such integration offers stronger geometric coverage, yet it also creates a stochastic structure that cannot be represented adequately by a single diagonal weight matrix. Instrument precision, session conditions, local monument behavior, and spatially persistent disturbance may all contribute to the observed discrepancy. If these contributions are ignored, a dense local cluster can dominate a regional frame, while a weakly connected branch can acquire unrealistically small coordinate uncertainty. The resulting coordinates may appear numerically stable while their reliability measures remain misleading. Adaptive stochastic models have therefore become important for heterogeneous terrestrial control networks [1, 5, 8]."
+    },
+    {
+      "type": "paragraph",
+      "text": "This study develops a constrained adjustment procedure that combines free-network initialization, variance-component estimation, continuously varying residual weights, minimum-norm datum realization, and covariance propagation across regional and local scales. The central premise is that observation quality should be learned from the network while preserving the geometric information carried by observations that are unusual but not necessarily erroneous. Rather than rejecting an observation after a hard threshold is crossed, the procedure reduces its influence according to a smooth function of its posterior standardized residual. This approach follows the reliability perspective advanced for mixed observations and uneven observation density [7, 20, 26]."
+    },
+    {
+      "type": "paragraph",
+      "text": "The observation model is written as $\\vec{l}=\\mathbf{A}\\vec{x}+\\mathbf{B}\\vec{beta}+\\vec{epsilon}$, where $\\vec{l}$ contains measured quantities, $\\vec{x}$ contains coordinate unknowns, $\\vec{beta}$ contains nuisance parameters, and $\\vec{epsilon}$ represents measurement disturbance. The formulation accommodates rank deficiency during the initial free-network stage and postpones datum decisions until the stochastic structure has been assessed. This separation is important because constraints can conceal weak geometry if they are imposed before the network has revealed its intrinsic modes of variation [4, 9, 19]."
+    },
+    {
+      "type": "paragraph",
+      "text": "The work addresses four methodological questions. First, can observation-class variance components be estimated without allowing the most numerous class to dictate the entire covariance model? Second, does continuous influence control improve residual behavior while retaining useful observations? Third, can spatial correlation prevent excessive confidence in clustered points and weak branches? Fourth, does covariance remain coherent when coordinates are transferred between regional and local frames? The numerical assessment is organized around these questions and reports both residual diagnostics and coordinate repeatability. The processing sequence is summarized conceptually by the observation intake, free solution, stochastic update, datum realization, and propagation stages referenced in \\ref{fig:adaptive_adjustment_pipeline}."
+    },
+    {
+      "type": "paragraph",
+      "text": "The contributions are methodological rather than tied to a particular instrument or field configuration. A hierarchical covariance model separates instrument noise, session effects, and persistent local distortion. A posterior diagnostic uses the residual covariance rather than only nominal precision. A smooth influence rule limits the effect of high-impact observations without abrupt removal. Finally, the same covariance representation is carried through a scale-dependent coordinate transformation. These components are evaluated together because each affects the interpretation of the others. In particular, residual reduction alone is not treated as sufficient evidence of improvement when it is obtained by excessive down-weighting."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Related Work"
+    },
+    {
+      "type": "paragraph",
+      "text": "Classical network adjustment generally assumes that observation variances are known up to a common factor. This assumption is convenient for computation but restrictive for integrated networks whose measurement classes have different error mechanisms. Variance-component estimation provides a route to infer relative contributions from residual groups, although its performance depends on adequate redundancy and on a parameterization that does not confound geometry with noise [3, 13, 23]. The present procedure retains class-specific components while adding session and local-distortion terms, thereby allowing a persistent pattern to remain correlated rather than being dispersed into independent residuals."
+    },
+    {
+      "type": "paragraph",
+      "text": "Robust adjustment has often been framed as a contest between retaining all observations and rejecting observations that exceed a diagnostic threshold. Posterior residual screening improves this decision because the residual variance includes the leverage of each observation and the covariance of the adjusted parameters [2, 6, 25]. Influence functions offer a more gradual alternative. Their advantage is especially relevant when an observation is affected by a modest local disturbance that is shared with nearby observations. In that setting, abrupt rejection can remove the only connection between two parts of a network, whereas gradual reduction preserves geometric continuity [14, 26]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Datum realization is another source of apparent precision. A constrained solution can be numerically well conditioned even when the underlying free network contains translations, rotations, or weakly determined local modes. Minimum-norm constraints are designed to select a datum with the smallest correction compatible with the chosen reference conditions [4, 32]. Their use is particularly suitable for maintenance networks in which a regional frame must be related to a local frame without assigning excessive authority to a single monument. Constraint design should nevertheless be inspected alongside coordinate covariance because a stable datum realization does not eliminate physical instability [19]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Spatial correlation has received increasing attention in regional adjustment. Observations collected near one another can share atmospheric, monument, or processing effects, and treating them as independent can make a cluster appear more informative than it is. Correlation-aware precision assessment reduces this risk by assigning covariance to the distance-dependent relationship among coordinate disturbances [5, 22, 29]. The challenge is to avoid excessive correlation that masks genuine local information. The proposed method therefore estimates the magnitude of the spatial term jointly with class and session components, while retaining a bounded correlation range."
+    },
+    {
+      "type": "paragraph",
+      "text": "Prior work also shows that repeatability depends strongly on connectivity. A branch with few independent ties can exhibit large coordinate differences between sessions even when its internal residuals are moderate [28]. Reliability should thus be assessed at both the observation and subnetwork levels. Progressive redundancy analysis provides a useful stress test by removing observations in stages and monitoring variance factors and coordinate changes [31]. This study extends that perspective by combining redundancy removal with adaptive weights and covariance propagation. The intent is to distinguish a stable network response from a fortuitous fit produced by a particular observation density."
+    },
+    {
+      "type": "paragraph",
+      "text": "Scale transfer introduces a further issue. A coordinate covariance defined in a regional frame is transformed by the local Jacobian, and the transformation can amplify or rotate uncertainty components. Jacobian-based transfer is therefore preferable to carrying scalar standard deviations from one frame to another [11, 27]. Datum sensitivity studies likewise show that small reference changes can produce different horizontal and vertical responses depending on the geometry of the control points [12]. The present method treats this propagation as part of adjustment reliability rather than as a separate cartographic operation."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Method"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Hierarchical stochastic representation"
+    },
+    {
+      "type": "paragraph",
+      "text": "Let the observation vector be partitioned into angular, distance, height-difference, and three-dimensional baseline groups. Each group is further indexed by processing scale and acquisition session. The covariance model is expressed as $\\mathbf{Sigma}_{l}=\\sigma_{0}^{2}\\left(\\mathbf{Q}_{0}+\\sum_{k=1}^{m}\\lambda_{k}\\mathbf{Q}_{k}\\right)$, where $\\mathbf{Q}_{0}$ is the nominal covariance structure and each $\\mathbf{Q}_{k}$ represents a component associated with a distinguishable disturbance source. The coefficients $\\lambda_{k}$ are estimated iteratively, with nonnegative bounds imposed to prevent a component from compensating for a misspecified sign or an unmodeled datum effect. This structure follows hierarchical noise separation principles for multi-session control [8, 30]."
+    },
+    {
+      "type": "paragraph",
+      "text": "The instrument component describes class-dependent random error using the stated precision targets as starting values. The session component links observations acquired under a common setup or processing session, allowing a shared disturbance to affect several records. The local component is associated with nearby control points and is represented through a distance-dependent covariance kernel. The resulting covariance is positive semidefinite after projection onto the estimable subspace. If a component is weakly identified, it is held at its initial value for the next iteration rather than being allowed to fluctuate without constraint. This safeguard is useful when redundancy is uneven or when two classes have nearly identical geometry."
+    },
+    {
+      "type": "paragraph",
+      "text": "The spatial term between coordinates $i$ and $j$ is represented as $\\operatorname{Cov}\\left(\\vec{x}_{i},\\vec{x}_{j}\\right)=\\sigma_{s}^{2}\\exp\\left(-\\dfrac{\\lvert d_{ij}\\rvert}{\\rho}\\right)\\mathbf{I}$, where $\\sigma_{s}^{2}$ is the local disturbance magnitude, $d_{ij}$ is separation distance, and $\\rho$ is the correlation range. The exponential form is not intended to assert a universal physical law; it provides a monotone and interpretable decay for the assessed network. A lower bound on $\\rho$ prevents the model from collapsing into independent noise, while an upper bound prevents all points from becoming effectively identical. Similar localized covariance inflation has been used to prevent dense clusters from receiving disproportionate precision [29]."
+    },
+    {
+      "type": "paragraph",
+      "text": "The adjustment minimizes the weighted discrepancy subject to the current covariance model. In compact form, the constrained objective is $\\hat{\\vec{x}}=\\operatorname*{argmin}_{\\vec{x}}\\left(\\vec{l}-\\mathbf{A}\\vec{x}\\right)^{T}\\mathbf{Sigma}_{l}^{-1}\\left(\\vec{l}-\\mathbf{A}\\vec{x}\\right)$. During free-network estimation, the coordinate vector is represented in a generalized inverse space and no fixed point is privileged. A small numerical ridge is used only for factorization diagnostics and is removed from the reported covariance. After stochastic convergence, datum constraints are introduced through the minimum-norm transformation $\\hat{\\vec{x}}=\\vec{x}_{f}-\\mathbf{Sigma}_{f}\\mathbf{C}^{T}\\left(\\mathbf{C}\\mathbf{Sigma}_{f}\\mathbf{C}^{T}\\right)^{-1}\\left(\\mathbf{C}\\vec{x}_{f}-\\vec{d}\\right)$. This order separates model learning from reference realization."
+    },
+    {
+      "type": "paragraph",
+      "text": "The workflow also includes an explicit review state for persistent high-impact observations. Such an observation is not removed solely because its residual is large. Instead, its influence, leverage, session membership, neighboring-point behavior, and effect on weak subnetworks are considered together. An observation that remains influential after down-weighting is retained in the adjusted solution but is flagged for field or processing review. This distinction is important for maintenance decisions, where an anomalous record may indicate a monument change or a localized physical event rather than a recording mistake."
+    },
+    {
+      "type": "box",
+      "kind": "remark",
+      "title": "Interpretation of adaptive influence",
+      "text": "A reduced weight is treated as a statement about information contribution, not as a declaration that the underlying observation is false. The adjustment retains the record, its provenance, and its covariance contribution so that later reprocessing can revisit the decision."
+    },
+    {
+      "type": "paragraph",
+      "text": "The posterior standardized residual for observation $i$ is $r_{i}=\\dfrac{v_{i}}{\\hat{\\sigma}_{0}\\sqrt{q_{v_{i}v_{i}}}}$. Here $v_{i}$ is the adjusted residual and $q_{v_{i}v_{i}}$ is the corresponding diagonal element of the residual cofactor matrix. The adaptive weight is then $w_{i}=\\left(1+\\left(\\dfrac{\\lvert r_{i}\\rvert}{c}\\right)^{2}\\right)^{-1}$, where $c$ controls the transition from nearly full influence to substantial reduction. Because the rule is continuous, two observations with nearby diagnostics receive nearby weights. This avoids the instability that can occur when a small change in covariance moves a record across a fixed rejection boundary [14, 25]."
+    },
+    {
+      "type": "paragraph",
+      "text": "Variance factors are computed from grouped residual contributions. The global factor is estimated as $\\hat{\\sigma}_{0}^{2}=\\dfrac{\\vec{v}^{T}\\mathbf{P}\\vec{v}}{n-u+q}$, with $n$ observations, $u$ effective coordinate unknowns, and $q$ estimated stochastic components. Group factors are regularized toward their previous values when the effective degrees of freedom are small. The denominator is therefore interpreted as an information measure rather than merely a count. This treatment reduces oscillation during iterations and is consistent with robust variance-factor estimation in constrained systems [23]."
+    },
+    {
+      "type": "paragraph",
+      "text": "The iterative cycle begins with nominal weights, obtains a free solution, computes posterior residual diagnostics, updates influence weights, estimates variance components, and assembles the covariance matrix again. Convergence requires the relative change in the global variance factor, the maximum change in an adaptive weight, and the change in the spatial range to remain below prescribed tolerances for two consecutive cycles. The full processing logic is referenced by \\ref{alg:adaptive_network_adjustment}. The hierarchical update path, including instrument, session, and local branches, is referenced by \\ref{fig:stochastic_model_update}."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Experimental Setup"
+    },
+    {
+      "type": "paragraph",
+      "text": "The assessment uses a mixed control network containing 900 retained observations distributed between regional and local processing scales. The observation inventory includes 280 horizontal directions, 206 slope distances, 280 height differences, and 134 three-dimensional baselines. Regional observations are less numerous in some classes but provide the broad geometric ties, whereas local observations increase density around several weakly connected branches. Nominal one-standard-deviation targets range from 1.2 to 4.4 millimetres according to class and scale. The complete configuration is referenced by \\ref{tab:network_configuration}, and the regional-local composition is referenced by \\ref{fig:network_observation_composition}."
+    },
+    {
+      "type": "paragraph",
+      "text": "The network is divided into a central frame and three peripheral branches. The central frame has the strongest connectivity and includes repeated ties across all observation classes. The northern, eastern, and southern branches have progressively lower connectivity, with the southern branch containing the smallest number of stations and the greatest reliance on local observations. Independent processing sessions are used to assess coordinate repeatability. Each session is adjusted with the same coordinate parameterization, while session-specific effects are estimated within the hierarchical covariance model rather than absorbed into the coordinate corrections."
+    },
+    {
+      "type": "paragraph",
+      "text": "Four processing configurations are compared. The first uses fixed nominal weights and no adaptive influence update. The second adds the continuous residual-based weights. The third adds spatial covariance terms to the adaptive model. The fourth applies minimum-norm datum realization after adaptive stochastic estimation. This sequence is intended to isolate the contribution of each methodological stage without implying that datum realization is an alternative to stochastic modeling. All configurations use the same retained observations and the same initial coordinate approximations."
+    },
+    {
+      "type": "paragraph",
+      "text": "The main diagnostics are median absolute residual, largest standardized residual, global variance factor, and coordinate repeatability. Median absolute residual is reported in millimetres and summarizes the central behavior without allowing a small number of large records to dominate. The largest standardized residual is retained as a stress indicator, although it is interpreted together with leverage and residual covariance. Repeatability is the median coordinate difference between independent sessions. For each branch, horizontal and vertical components are assessed separately because height differences and three-dimensional baselines contribute differently to vertical precision."
+    },
+    {
+      "type": "paragraph",
+      "text": "Perturbation tests apply regional-to-local transformations, scale-factor changes, retention of correlated disturbances, and progressive removal of redundant observations. Coordinate covariance is propagated through the transformation Jacobian according to $\\mathbf{Sigma}_{y}=\\mathbf{J}\\mathbf{Sigma}_{x}\\mathbf{J}^{T}$. The perturbation workflow is referenced by \\ref{fig:datum_perturbation_propagation}. The aim is not to identify a single preferred transformation but to determine whether the uncertainty response remains coherent when the datum or observation density changes."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Results"
+    },
+    {
+      "type": "paragraph",
+      "text": "The fixed-weight adjustment produced a median absolute residual of 2.42 millimetres and a global variance factor of 1.38. Introducing continuous adaptive weights reduced the median absolute residual to 1.97 millimetres, a decrease of 18.6 percent, and reduced the largest standardized residual from 4.9 at the initial diagnostic to 2.7 after convergence. The variance factor decreased to 1.06, indicating that the nominal precision targets had overstated the effective discrepancy for several observation groups. These changes were obtained without deleting observations, so the improvement reflects redistribution of influence rather than a smaller retained data set."
+    },
+    {
+      "type": "paragraph",
+      "text": "Adding spatial terms reduced the median absolute residual further to 1.84 millimetres and lowered the final largest standardized residual to 2.4. The variance factor reached 1.02. This additional improvement was concentrated in clustered local observations, where several records had similar directional residual patterns. Under independent weighting, those records collectively exerted more authority than their shared disturbance justified. The spatial term reduced that collective authority while preserving the observations as geometric ties. The comparison is summarized in \\ref{tab:adjustment_comparison} and the corresponding performance reference is \\ref{fig:adjustment_performance}."
+    },
+    {
+      "type": "paragraph",
+      "text": "The minimum-norm datum realization produced a median absolute residual of 2.01 millimetres and a final largest standardized residual of 2.8. The slight increase relative to the fully spatial model is expected because the datum constraints redistribute corrections among coordinates and observations. The variance factor remained close to unity at 1.04, showing that the datum transformation did not create a major stochastic inconsistency. More importantly, the coordinate covariance retained the anisotropic behavior identified in the free solution instead of being replaced by scalar coordinate uncertainties."
+    },
+    {
+      "type": "paragraph",
+      "text": "The strongest gains in repeatability occurred in weakly connected subnetworks. The central frame improved from 3.8 to 2.6 millimetres in horizontal repeatability, while the northern branch improved from 5.9 to 3.7 millimetres. The eastern branch improved from 7.2 to 4.5 millimetres, and the southern cluster improved from 8.6 to 5.1 millimetres. Vertical repeatability followed the same pattern, although its absolute values were larger. The branch comparison is given in \\ref{tab:repeatability_by_subnetwork}. These results indicate that adaptive weighting is not merely reducing residuals in the densest portion of the network; it is also limiting the propagation of locally shared disturbance into weak coordinate modes."
+    },
+    {
+      "type": "paragraph",
+      "text": "Progressive removal of redundant observations provided a further stability check. Under fixed weights, removing records from the central frame caused the global variance factor to rise rapidly and produced marked shifts in the weakest branch. Under the adaptive spatial model, the variance factor changed more gradually, and coordinate shifts remained concentrated near the removed ties. This behavior suggests that the model distinguishes redundancy from independent support. A dense set of correlated records does not count as unlimited evidence, while an observation that uniquely connects two regions retains meaningful influence even when its residual is moderately large."
+    },
+    {
+      "type": "paragraph",
+      "text": "The covariance propagation assessment showed that the regional-to-local transformation increased the median horizontal displacement from 4.8 to 5.2 millimetres and the vertical displacement from 3.6 to 4.1 millimetres. The largest assessed 95 percent horizontal uncertainty was 6.4 millimetres. When correlated disturbance was retained, propagated horizontal displacement decreased from 2.7 to 2.4 millimetres and vertical displacement decreased from 2.9 to 2.5 millimetres, because the covariance structure prevented independent accumulation of nearby contributions. The full perturbation values are referenced in \\ref{tab:perturbation_analysis}."
+    },
+    {
+      "type": "paragraph",
+      "text": "The perturbation results also show why covariance transfer should be performed after stochastic estimation. A scale-factor increase changed horizontal displacement from 3.1 to 3.5 millimetres and vertical displacement from 2.2 to 2.6 millimetres. Removing redundant observations produced the largest median response, with horizontal displacement increasing from 5.6 to 6.0 millimetres and vertical displacement from 4.3 to 4.9 millimetres. These changes are not evidence of failure by themselves; they identify configurations in which maintenance decisions should be accompanied by a renewed adjustment and reliability assessment."
+    },
+    {
+      "type": "paragraph",
+      "text": "Across all configurations, the method preserved a distinction between residual fit and coordinate reliability. The adaptive model improved the central residual statistics, but the spatially correlated model provided the clearest reduction in weak-branch repeatability. This distinction matters because a robust estimator can reduce residual magnitude by lowering the influence of difficult observations without necessarily improving the physical stability of the frame. In the assessed network, improvement in both measures occurred only when residual weighting and covariance propagation were treated as connected operations."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Ablation"
+    },
+    {
+      "type": "paragraph",
+      "text": "The first ablation removes the adaptive influence function while retaining the hierarchical covariance components. In this configuration, class and session factors are estimated, but each observation keeps its nominal relative weight. The variance factor remains below the fixed-weight baseline because shared disturbance is modeled, yet several high-impact records continue to control local coordinate corrections. The result confirms that covariance modeling and influence control address different mechanisms: one describes dependence among errors, while the other limits the effect of individual observations whose posterior behavior is inconsistent with the current model."
+    },
+    {
+      "type": "paragraph",
+      "text": "The second ablation removes the spatial covariance term while retaining adaptive weights. Median residuals decrease relative to fixed weights, but coordinate repeatability in the eastern and southern branches is poorer than under the full model. The difference is largest where several nearby points are tied by observations from the same session. Without a spatial term, the adjustment interprets partially shared disturbances as separate evidence. This finding agrees with correlation-aware precision studies that caution against treating clustered observations as independent [22, 29]."
+    },
+    {
+      "type": "paragraph",
+      "text": "The third ablation applies hard rejection at a standardized residual threshold instead of continuous down-weighting. Several records cross the threshold during early iterations and are removed before the variance components stabilize. The resulting network has a smaller effective observation set and a less stable solution in the southern branch. A later run in which those records are restored produces different component estimates, showing path dependence. Continuous influence avoids this behavior by allowing the covariance model to mature before a persistent issue is flagged for review [26]."
+    },
+    {
+      "type": "paragraph",
+      "text": "The fourth ablation imposes datum constraints before the free-network stochastic update. The solution converges numerically, but the estimated session component is smaller and the coordinate covariance is more concentrated near the constrained points. This result demonstrates that early constraints can transfer datum assumptions into stochastic estimates. The minimum-norm transformation is therefore applied only after the free-network solution and residual diagnostics have stabilized. The covariance-consistency principle is especially important when a regional frame is related to a local frame through a small set of reference conditions [32]."
+    },
+    {
+      "type": "paragraph",
+      "text": "The final ablation suppresses progressive redundancy analysis. Without that stress test, the full model still gives favorable residual statistics, but it provides less information about how the network behaves when maintenance removes or suspends observations. Reintroducing progressive removal reveals that variance-factor stability is a useful complement to ordinary residual assessment. A network that fits well under complete observation density may still be vulnerable when one branch loses a key tie. The ablation therefore supports retaining redundancy analysis as a routine maintenance diagnostic [31]."
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Estimate the free network before imposing reference constraints.",
+        "Separate instrument, session, and local-distortion contributions in the covariance model.",
+        "Use posterior residual covariance when computing standardized diagnostics.",
+        "Apply continuous influence reduction rather than immediate observation removal.",
+        "Propagate the complete coordinate covariance through every scale-dependent transformation.",
+        "Reassess weak subnetworks after progressive removal of redundant observations."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Limitations"
+    },
+    {
+      "type": "paragraph",
+      "text": "The method depends on sufficient redundancy for separating variance components. When a class contains only a few observations or has nearly the same geometry as another class, its component may not be identifiable. The regularization strategy limits numerical instability but cannot create information that the network does not contain. In operational use, component estimates should therefore be accompanied by effective degrees of freedom and sensitivity checks. A variance factor close to unity is not, by itself, evidence that the stochastic model is physically correct."
+    },
+    {
+      "type": "paragraph",
+      "text": "The spatial covariance model is intentionally simple. An exponential decay with one range parameter cannot represent directional anisotropy, discontinuities, or a disturbance field with several characteristic scales. A more elaborate kernel could be justified for networks spanning substantial terrain or atmospheric gradients, but additional parameters would increase the risk of confounding spatial correlation with coordinate deformation. The current model is best understood as a controlled representation of local dependence rather than a complete physical model of all environmental effects."
+    },
+    {
+      "type": "paragraph",
+      "text": "The continuous influence rule also requires judgment. The transition constant $c$ determines how quickly an observation loses authority as its standardized residual grows. A value that is too small can flatten legitimate geometric information, whereas a value that is too large can leave persistent disturbance insufficiently controlled. The study uses a common rule across observation classes, although class-specific transition behavior may be appropriate when the consequences of an angular and a vertical discrepancy differ. Future maintenance systems should expose this choice rather than hiding it inside an automated processing chain."
+    },
+    {
+      "type": "paragraph",
+      "text": "The perturbation assessment is limited to the transformations and observation removals considered in the network design. It does not address time-dependent deformation explicitly, nor does it distinguish monument motion from session-specific measurement disturbance when both produce similar residual patterns. A persistent high-impact observation is consequently flagged rather than automatically classified. External deformation evidence, field inspection, and longer temporal sequences would be needed before assigning a physical interpretation."
+    },
+    {
+      "type": "paragraph",
+      "text": "Finally, the results concern one integrated network configuration and a finite range of precision targets. The conclusions support the internal behavior of the proposed procedure, but transfer to a different geometry requires checking rank, connectivity, component identifiability, and transformation conditioning. In particular, a network with extensive independent long-range ties may gain less from local covariance terms, while a network dominated by a single technique may require a different hierarchical partition. These limitations motivate conservative reporting of propagated uncertainty and continued review of observations with high maintenance impact."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Conclusion"
+    },
+    {
+      "type": "paragraph",
+      "text": "This study presented a robust adjustment procedure for heterogeneous geodetic control networks observed across regional and local scales. The procedure begins with a free-network solution, estimates hierarchical covariance components, applies continuous residual-based influence control, realizes the datum through minimum-norm constraints, and propagates coordinate covariance through scale-dependent transformations. Its design keeps stochastic learning separate from datum realization and treats clustered observations as potentially correlated rather than automatically independent."
+    },
+    {
+      "type": "paragraph",
+      "text": "In the assessed network, adaptive weighting reduced the median absolute residual by 18.6 percent relative to fixed weights and reduced the largest standardized residual from 4.9 to 2.7. Adding spatial terms lowered the median absolute residual to 1.84 millimetres and the variance factor to 1.02. Coordinate repeatability improved most in weakly connected subnetworks, where the southern cluster changed from 8.6 to 5.1 millimetres in horizontal repeatability. These results indicate that residual control and coordinate reliability can improve together when observation influence and covariance dependence are modeled jointly."
+    },
+    {
+      "type": "paragraph",
+      "text": "The perturbation analysis showed that covariance remained coherent under regional-to-local transformation, scale-factor changes, correlated disturbance retention, and progressive redundancy removal. The largest propagated 95 percent horizontal uncertainty was 6.4 millimetres in the assessed configuration. This result supports the use of Jacobian-based covariance transfer for network maintenance, but it does not remove the need for geometry-specific sensitivity assessment. The response to a datum change depends on both the transformation and the structure of the adjusted network."
+    },
+    {
+      "type": "paragraph",
+      "text": "The practical implication is that control-network processing should report more than adjusted coordinates and a single variance factor. It should identify observation classes, session effects, local correlation, posterior influence, subnetwork repeatability, and the response to observation loss. Records with persistent impact should be retained with an explicit review status rather than silently removed. Such reporting supports maintenance decisions while preserving the possibility of later reprocessing when new observations or field evidence become available."
+    },
+    {
+      "type": "paragraph",
+      "text": "Future work should investigate anisotropic and multi-range spatial models, time-dependent deformation, class-specific influence constants, and Bayesian or restricted-likelihood variance estimation under severe redundancy imbalance. It should also evaluate the method on networks with changing monument conditions and longer observation histories. The principal conclusion remains that adaptive stochastic modeling is most effective when treated as an integrated adjustment and reliability framework, not as an isolated residual filter."
+    },
+    {
+      "type": "paragraph",
+      "text": "The methodological record is supported by prior work on heterogeneous stochastic models \\cite{1}, robust residual screening \\cite{2}, variance-component estimation \\cite{3}, minimum-norm datum realization \\cite{4}, spatial disturbance modeling \\cite{5}, posterior covariance diagnostics \\cite{6}, continuous influence functions \\cite{7}, hierarchical noise separation \\cite{8}, free-network initialization \\cite{9}, clustered-observation reliability \\cite{10}, scale-dependent covariance transfer \\cite{11}, datum sensitivity \\cite{12}, iterative stochastic updating \\cite{13}, mixed-observation influence functions \\cite{14}, precision transfer \\cite{15}, persistent local distortion \\cite{16}, session effects \\cite{17}, integrated observation treatment \\cite{18}, constraint design \\cite{19}, uneven-density weighting \\cite{20}, reliability propagation \\cite{21}, weak-branch correlation \\cite{22}, constrained variance factors \\cite{23}, multi-scale covariance \\cite{24}, standardized residual diagnostics \\cite{25}, non-abrupt influence control \\cite{26}, Jacobian transfer \\cite{27}, connectivity and repeatability \\cite{28}, localized covariance inflation \\cite{29}, instrument and site effects \\cite{30}, progressive redundancy analysis \\cite{31}, covariance-consistent constraints \\cite{32}, integrated session reliability \\cite{33}, perturbation testing \\cite{34}, and maintenance-oriented adjustment \\cite{35}. The associated processing description is referenced by \\ref{alg:adaptive_network_adjustment}, while the observation inventory, comparison, repeatability, and perturbation records are referenced by \\ref{tab:network_configuration}, \\ref{tab:adjustment_comparison}, \\ref{tab:repeatability_by_subnetwork}, and \\ref{tab:perturbation_analysis}."
+    },
+    {
+      "type": "paragraph",
+      "text": "A footnote concerning interpretation is recorded here. \\fn{All reported changes describe the assessed adjustment configurations and should be read together with their covariance and connectivity diagnostics.}"
+    }
+  ]
+}

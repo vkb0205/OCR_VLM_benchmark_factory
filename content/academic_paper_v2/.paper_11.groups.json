@@ -1,0 +1,982 @@
+{
+  "front": {
+    "title": "Khung lý thuyết về ảnh hưởng của dị hướng ứng suất đến trạng thái tới hạn của đất hạt mịn",
+    "authors": [
+      {
+        "name": "Ngụy Lam Từ",
+        "affiliations": [
+          1
+        ],
+        "corresponding": true,
+        "email": "lamtu@nenmocson.org"
+      },
+      {
+        "name": "Phan Hạo Nghiêm",
+        "affiliations": [
+          1,
+          2
+        ],
+        "corresponding": false
+      }
+    ],
+    "affiliations": [
+      "Bộ môn Địa cơ, Viện Kỹ thuật Nền Mộc Sơn",
+      "Trung tâm Mô hình hóa Địa vật liệu, Học viện Cơ học Lam Giang"
+    ],
+    "abstract": "Bài viết xây dựng một khung lý thuyết cho mô tả ứng xử cơ học của đất hạt mịn có dị hướng cấu trúc dưới điều kiện tải biến đổi. Mô hình kết hợp biến trạng thái thể tích, ứng suất hữu hiệu và một tham số định hướng để biểu diễn sự chuyển tiếp giữa miền đàn hồi, miền dẻo và trạng thái tới hạn. Quan hệ giữa mặt chảy, quy luật hóa bền và hướng gia tải được thiết lập theo nguyên lý công suất tiêu tán không âm, đồng thời cho phép xem xét sự suy giảm cấu trúc do cắt lặp. Phân tích cho thấy dị hướng ban đầu có thể làm thay đổi đáng kể áp suất tiền cố kết, độ dốc đường nén và vị trí của đường trạng thái tới hạn trong không gian ứng suất. Khi tham số định hướng tiến về giá trị cân bằng, ảnh hưởng của lịch sử chế tạo và phương nén giảm dần, trong khi cơ chế biến dạng thể tích vẫn phụ thuộc vào độ quá cố kết và hệ số rỗng. Khung đề xuất cung cấp cơ sở thống nhất để diễn giải các đường ứng suất không đồng nhất và hỗ trợ hiệu chỉnh mô hình cho bài toán nền đất chịu tải theo chu kỳ.",
+    "abstract_alt": null,
+    "keywords": "cơ học đất; trạng thái tới hạn; dị hướng; ứng suất hữu hiệu; hóa bền; biến dạng dẻo",
+    "keywords_alt": null,
+    "journal": "Tạp chí Cơ học Đất và Môi trường Địa kỹ thuật",
+    "acknowledgement": "Các tác giả trân trọng ghi nhận sự hỗ trợ chuyên môn của Nhóm Nghiên cứu Địa cơ Mộc Sơn trong quá trình trao đổi về cơ sở lý thuyết và hoàn thiện bản thảo."
+  },
+  "formulas": [
+    {
+      "after": 0,
+      "element": {
+        "type": "equation",
+        "id": "eq:effective_mean_stress",
+        "latex": "p=-\\frac{1}{3}\\sum_{i=1}^{3}sig_{ii}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 1,
+      "element": {
+        "type": "equation",
+        "id": "eq:deviatoric_stress",
+        "latex": "q=\\left(\\frac{3}{2}\\sum_{i=1}^{3}\\sum_{j=1}^{3}s_{ij}s_{ij}\\right)^{1/2}, s_{ij}=sig_{ij}+p d_{ij}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 2,
+      "element": {
+        "type": "equation",
+        "id": "eq:stress_ratio",
+        "latex": "eta=\\frac{q}{p}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 3,
+      "element": {
+        "type": "equation",
+        "id": "eq:specific_volume",
+        "latex": "v=1+e",
+        "numbered": true
+      }
+    },
+    {
+      "after": 4,
+      "element": {
+        "type": "equation",
+        "id": "eq:critical_state_isotropic",
+        "latex": "q=Mp, v=gam-lam\\ln p",
+        "numbered": true
+      }
+    },
+    {
+      "after": 5,
+      "element": {
+        "type": "equation",
+        "id": "eq:directional_parameter",
+        "latex": "A=\\sum_{i=1}^{3}\\sum_{j=1}^{3}a_{ij}n_i n_j",
+        "numbered": true
+      }
+    },
+    {
+      "after": 6,
+      "element": {
+        "type": "equation",
+        "id": "eq:anisotropic_yield_surface",
+        "latex": "f=q^2+M^2p\\left[p-pc(1+A)\\right]\\leq 0",
+        "numbered": true
+      }
+    },
+    {
+      "after": 7,
+      "element": {
+        "type": "equation",
+        "id": "eq:plastic_flow_rule",
+        "latex": "\\begin{aligned}\\frac{deps_v}{dt}&=\\frac{dL}{dt}\\frac{\\partial f}{\\partial p} \\\\ \\frac{deps_q}{dt}&=\\frac{dL}{dt}\\frac{\\partial f}{\\partial q}\\end{aligned}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 8,
+      "element": {
+        "type": "equation",
+        "id": "eq:preconsolidation_hardening",
+        "latex": "\\frac{dpc}{dt}=\\frac{pc}{lam-kap}\\frac{deps_v}{dt}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 9,
+      "element": {
+        "type": "equation",
+        "id": "eq:anisotropy_evolution",
+        "latex": "\\frac{dA}{dt}=rA(Aeq-A)-cA A\\left(\\frac{2}{3}\\sum_{i=1}^{3}\\sum_{j=1}^{3}\\frac{deps_{ij}}{dt}\\frac{deps_{ij}}{dt}\\right)^{1/2}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 10,
+      "element": {
+        "type": "equation",
+        "id": "eq:dissipation_inequality",
+        "latex": "D=p\\frac{deps_v}{dt}+q\\frac{deps_q}{dt}\\geq 0",
+        "numbered": true
+      }
+    }
+  ],
+  "tables": [
+    {
+      "after": 2,
+      "element": {
+        "type": "table",
+        "id": "tab:critical_state_parameters",
+        "caption": "Bộ tham số trạng thái tới hạn theo mức dị hướng ban đầu",
+        "header": [
+          [
+            {
+              "text": "Kịch bản",
+              "rowspan": 2
+            },
+            {
+              "text": "Định hướng",
+              "colspan": 2
+            },
+            {
+              "text": "Trạng thái tới hạn",
+              "colspan": 3
+            }
+          ],
+          [
+            {
+              "text": "A"
+            },
+            {
+              "text": "p′c (kPa)"
+            },
+            {
+              "text": "M"
+            },
+            {
+              "text": "λ"
+            },
+            {
+              "text": "Γ"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            {
+              "text": "Đẳng hướng"
+            },
+            {
+              "text": "0,00"
+            },
+            {
+              "text": "180"
+            },
+            {
+              "text": "0,92"
+            },
+            {
+              "text": "0,085"
+            },
+            {
+              "text": "2,48"
+            }
+          ],
+          [
+            {
+              "text": "Dị hướng thấp"
+            },
+            {
+              "text": "0,15"
+            },
+            {
+              "text": "198"
+            },
+            {
+              "text": "0,95"
+            },
+            {
+              "text": "0,087"
+            },
+            {
+              "text": "2,51"
+            }
+          ],
+          [
+            {
+              "text": "Dị hướng vừa"
+            },
+            {
+              "text": "0,30"
+            },
+            {
+              "text": "221"
+            },
+            {
+              "text": "0,99"
+            },
+            {
+              "text": "0,090"
+            },
+            {
+              "text": "2,55"
+            }
+          ],
+          [
+            {
+              "text": "Dị hướng cao"
+            },
+            {
+              "text": "0,45"
+            },
+            {
+              "text": "247"
+            },
+            {
+              "text": "1,04",
+              "bold": true
+            },
+            {
+              "text": "0,094",
+              "bold": true
+            },
+            {
+              "text": "2,60",
+              "bold": true
+            }
+          ]
+        ],
+        "note": "Các giá trị được suy ra từ khung trạng thái tới hạn có tham số định hướng; p′c tăng theo A, trong khi các tham số λ và Γ tiến tới giá trị cân bằng của cấu trúc. Cách diễn giải phù hợp với quan hệ lý thuyết được trình bày bởi Từ và Nghiêm (2024)."
+      }
+    },
+    {
+      "after": 8,
+      "element": {
+        "type": "table",
+        "id": "tab:loading_path_response",
+        "caption": "Đáp ứng lý thuyết trên các đường gia tải với lịch sử ứng suất khác nhau",
+        "header": [
+          [
+            {
+              "text": "Đường gia tải",
+              "rowspan": 2
+            },
+            {
+              "text": "Điều kiện đầu",
+              "colspan": 2
+            },
+            {
+              "text": "Đáp ứng cực trị",
+              "colspan": 2
+            },
+            {
+              "text": "Hậu hóa bền",
+              "rowspan": 2
+            },
+            {
+              "text": "A cuối",
+              "rowspan": 2
+            }
+          ],
+          [
+            {
+              "text": "p′0 (kPa)"
+            },
+            {
+              "text": "A0"
+            },
+            {
+              "text": "qmax (kPa)"
+            },
+            {
+              "text": "εv,p,max (%)"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            {
+              "text": "Nén trục đối xứng"
+            },
+            {
+              "text": "80"
+            },
+            {
+              "text": "0,00"
+            },
+            {
+              "text": "118",
+              "bold": true
+            },
+            {
+              "text": "−2,8"
+            },
+            {
+              "text": "1,000"
+            },
+            {
+              "text": "0,06"
+            }
+          ],
+          [
+            {
+              "text": "Nén có định hướng"
+            },
+            {
+              "text": "80"
+            },
+            {
+              "text": "0,20"
+            },
+            {
+              "text": "146"
+            },
+            {
+              "text": "−3,4"
+            },
+            {
+              "text": "0,824"
+            },
+            {
+              "text": "0,11"
+            }
+          ],
+          [
+            {
+              "text": "Cắt lặp thuận chiều"
+            },
+            {
+              "text": "80"
+            },
+            {
+              "text": "0,35"
+            },
+            {
+              "text": "169"
+            },
+            {
+              "text": "−4,1"
+            },
+            {
+              "text": "0,671"
+            },
+            {
+              "text": "0,17"
+            }
+          ],
+          [
+            {
+              "text": "Cắt lặp đảo chiều"
+            },
+            {
+              "text": "80"
+            },
+            {
+              "text": "0,35"
+            },
+            {
+              "text": "157"
+            },
+            {
+              "text": "−3,7",
+              "bold": true
+            },
+            {
+              "text": "0,704"
+            },
+            {
+              "text": "0,14",
+              "bold": true
+            }
+          ]
+        ],
+        "note": "qmax là ứng suất lệch cực đại; εv,p,max là biến dạng thể tích dẻo cực đại theo quy ước nén âm. Giá trị A cuối phản ánh sự suy giảm định hướng do cắt lặp, còn hệ số hậu hóa bền được chuẩn hóa theo trạng thái ban đầu (Từ và Nghiêm, 2024)."
+      }
+    }
+  ],
+  "charts_figures": [
+    {
+      "after": 3,
+      "element": {
+        "type": "chart",
+        "chart_type": "stacked_bar",
+        "id": "fig:stacked_qmax_components",
+        "caption": "Phân rã đóng góp vào ứng suất lệch cực đại trên các đường gia tải",
+        "labels": [
+          "Nén trục đối xứng",
+          "Nén có định hướng",
+          "Cắt lặp thuận chiều",
+          "Cắt lặp đảo chiều"
+        ],
+        "series": [
+          {
+            "name": "Ứng suất nền",
+            "values": [
+              80,
+              80,
+              80,
+              80
+            ],
+            "errors": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          {
+            "name": "Đóng góp dị hướng",
+            "values": [
+              18,
+              42,
+              61,
+              49
+            ],
+            "errors": [
+              2,
+              3,
+              4,
+              4
+            ]
+          },
+          {
+            "name": "Hậu hóa bền",
+            "values": [
+              20,
+              24,
+              28,
+              28
+            ],
+            "errors": [
+              2,
+              2,
+              3,
+              3
+            ]
+          }
+        ],
+        "x_label": "Đường gia tải",
+        "y_label": "Ứng suất lệch q (kPa)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 6,
+      "element": {
+        "type": "chart",
+        "chart_type": "line",
+        "id": "fig:anisotropy_decay",
+        "caption": "Suy giảm tham số định hướng theo biến dạng cắt dẻo tích lũy",
+        "labels": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "series": [
+          {
+            "name": "A0 = 0,00",
+            "values": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "errors": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "A0 = 0,20",
+            "values": [
+              0.2,
+              0.18,
+              0.16,
+              0.14,
+              0.12,
+              0.11
+            ],
+            "errors": [
+              0.01,
+              0.01,
+              0.01,
+              0.01,
+              0.01,
+              0.01
+            ]
+          },
+          {
+            "name": "A0 = 0,35",
+            "values": [
+              0.35,
+              0.31,
+              0.27,
+              0.23,
+              0.2,
+              0.17
+            ],
+            "errors": [
+              0.02,
+              0.02,
+              0.02,
+              0.02,
+              0.02,
+              0.02
+            ]
+          }
+        ],
+        "x_label": "Biến dạng cắt dẻo tích lũy (%)",
+        "y_label": "Tham số định hướng A",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 9,
+      "element": {
+        "type": "chart",
+        "chart_type": "histogram",
+        "id": "fig:critical_pressure_distribution",
+        "caption": "Phân bố áp suất tiền cố kết sau các mức điều chỉnh định hướng",
+        "labels": [
+          "160–180",
+          "181–200",
+          "201–220",
+          "221–240",
+          "241–260"
+        ],
+        "series": [
+          {
+            "name": "Số trường hợp",
+            "values": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "errors": [
+              0.2,
+              0.2,
+              0.2,
+              0.2,
+              0.2
+            ]
+          }
+        ],
+        "x_label": "Khoảng p′c (kPa)",
+        "y_label": "Số trường hợp",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 12,
+      "element": {
+        "type": "chart",
+        "chart_type": "bar",
+        "id": "fig:critical_state_slopes",
+        "caption": "So sánh các tham số đường trạng thái tới hạn theo mức dị hướng",
+        "labels": [
+          "Đẳng hướng",
+          "Dị hướng thấp",
+          "Dị hướng vừa",
+          "Dị hướng cao"
+        ],
+        "series": [
+          {
+            "name": "M",
+            "values": [
+              0.92,
+              0.95,
+              0.99,
+              1.04
+            ],
+            "errors": [
+              0.02,
+              0.02,
+              0.02,
+              0.02
+            ]
+          },
+          {
+            "name": "λ",
+            "values": [
+              0.085,
+              0.087,
+              0.09,
+              0.094
+            ],
+            "errors": [
+              0.003,
+              0.003,
+              0.003,
+              0.003
+            ]
+          },
+          {
+            "name": "Γ",
+            "values": [
+              2.48,
+              2.51,
+              2.55,
+              2.6
+            ],
+            "errors": [
+              0.04,
+              0.04,
+              0.04,
+              0.04
+            ]
+          }
+        ],
+        "x_label": "Mức dị hướng ban đầu",
+        "y_label": "Giá trị tham số",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 5,
+      "element": {
+        "type": "figure",
+        "figure_type": "flowchart",
+        "id": "fig:theoretical_update_flow",
+        "caption": "Sơ đồ luân chuyển biến trạng thái trong khung lý thuyết dị hướng",
+        "description": "Quy trình bắt đầu từ trạng thái ứng suất hữu hiệu và cấu trúc ban đầu, sau đó cập nhật biến trạng thái thể tích, mặt chảy, quy luật hóa bền và tham số định hướng trước khi kiểm tra điều kiện tiêu tán.",
+        "labels": [
+          "Ứng suất hữu hiệu",
+          "Cấu trúc ban đầu",
+          "Mặt chảy",
+          "Hóa bền",
+          "Cập nhật định hướng",
+          "Kiểm tra tiêu tán"
+        ]
+      }
+    },
+    {
+      "after": 10,
+      "element": {
+        "type": "figure",
+        "figure_type": "architecture",
+        "id": "fig:constitutive_architecture",
+        "caption": "Kiến trúc khái niệm của mô hình trạng thái tới hạn có dị hướng",
+        "description": "Kiến trúc gồm lớp đầu vào ứng suất và lịch sử gia tải, lõi trạng thái tới hạn liên kết với mặt chảy và luật dòng dẻo, cùng lớp đầu ra biểu diễn áp suất tiền cố kết, biến dạng thể tích và hướng gia tải.",
+        "labels": [
+          "Lịch sử gia tải",
+          "Ứng suất hữu hiệu",
+          "Biến trạng thái",
+          "Mặt chảy",
+          "Luật dòng dẻo",
+          "Đáp ứng đầu ra"
+        ],
+        "panels": [
+          {
+            "label": "Lớp đầu vào",
+            "description": "Ứng suất hữu hiệu, hệ số rỗng và lịch sử gia tải được đưa vào khung tính toán."
+          },
+          {
+            "label": "Lõi trạng thái",
+            "description": "Mặt chảy, tham số định hướng và quy luật hóa bền được liên kết trong không gian p′–q."
+          },
+          {
+            "label": "Lớp đầu ra",
+            "description": "Áp suất tiền cố kết, biến dạng dẻo và sự suy giảm định hướng được cập nhật theo thời gian."
+          }
+        ]
+      }
+    }
+  ],
+  "code": [],
+  "references": [
+    {
+      "text": "Bạch, K. D., và Vũ, M. L. (2011). Mô tả trạng thái tới hạn của đất hạt mịn chịu nén ba trục. Tạp chí Địa cơ Lam Giang, 7(2), 41–58.",
+      "cite": "Bạch và Vũ-2011"
+    },
+    {
+      "text": "Cao, T. N., và Đỗ, H. Q. (2012). Ảnh hưởng của lịch sử ứng suất đến đường trạng thái tới hạn. Kỷ yếu Cơ học Nền Mộc, 3, 15–29.",
+      "cite": "Cao và Đỗ-2012"
+    },
+    {
+      "text": "Đàm, P. V., và Lê, T. K. (2013). Biến trạng thái thể tích trong mô hình đất cố kết có cấu trúc. Tạp chí Vật liệu Địa kỹ thuật Hạ Lam, 5(1), 22–39.",
+      "cite": "Đàm và Lê-2013"
+    },
+    {
+      "text": "Hà, N. M., và Phùng, Q. S. (2014). Mặt chảy phi tuyến cho đất hạt mịn chịu tải không đồng nhất. Chuyên san Cơ học Địa vật liệu, 9(4), 66–84.",
+      "cite": "Hà và Phùng-2014"
+    },
+    {
+      "text": "Kha, V. T., và Mai, D. P. (2015). Quy luật hóa bền thể tích trong không gian ứng suất hữu hiệu. Tạp chí Nền đất Vân Khê, 8(3), 37–53.",
+      "cite": "Kha và Mai-2015"
+    },
+    {
+      "text": "Lâm, H. G., và Nghiêm, T. A. (2016). Mô hình hóa biến dạng dẻo của đất quá cố kết dưới đường gia tải đảo chiều. Tạp chí Cơ học Địa tầng, 11(2), 51–70.",
+      "cite": "Lâm và Nghiêm-2016"
+    },
+    {
+      "text": "Mạc, Q. H., và Trịnh, B. V. (2017). Tham số định hướng trong mô tả cấu trúc đất sét. Kỷ yếu Mô hình hóa Địa vật liệu, 6, 93–108.",
+      "cite": "Mạc và Trịnh-2017"
+    },
+    {
+      "text": "Ngô, P. D., và Tạ, L. N. (2018). Quan hệ giữa dị hướng ban đầu và áp suất tiền cố kết. Tạp chí Địa kỹ thuật Trường Lưu, 12(1), 11–27.",
+      "cite": "Ngô và Tạ-2018"
+    },
+    {
+      "text": "Phan, M. C., và Bùi, K. T. (2019). Điều kiện tiêu tán trong các mô hình đàn dẻo của đất. Chuyên san Cơ học Nền Địa, 14(2), 74–91.",
+      "cite": "Phan và Bùi-2019"
+    },
+    {
+      "text": "Quách, D. H., và Vương, N. P. (2020). Tiến hóa cấu trúc dưới tác động của biến dạng cắt tích lũy. Tạp chí Địa cơ Bắc Lam, 10(3), 28–46.",
+      "cite": "Quách và Vương-2020"
+    },
+    {
+      "text": "Sơn, T. Q., và Lục, H. M. (2020). Hiệu chỉnh luật dòng dẻo cho đất hạt mịn dị hướng. Kỷ yếu Nền móng và Môi trường Địa kỹ thuật, 4, 119–136.",
+      "cite": "Sơn và Lục-2020"
+    },
+    {
+      "text": "Từ, N. L., và Nghiêm, P. H. (2021). Khung biến trạng thái cho đất có cấu trúc suy giảm. Tạp chí Cơ học Đất và Môi trường Địa kỹ thuật, 16(4), 57–76.",
+      "cite": "Từ và Nghiêm-2021"
+    },
+    {
+      "text": "Uông, V. K., và Châu, D. T. (2021). Ảnh hưởng của phương nén đến độ dốc đường nén cố kết. Tạp chí Kỹ thuật Nền Hạ Giang, 13(2), 34–49.",
+      "cite": "Uông và Châu-2021"
+    },
+    {
+      "text": "Võ, H. S., và Dương, P. L. (2022). Mô tả ứng suất lệch trong không gian bất biến của đất dẻo. Chuyên san Địa vật liệu Lam Sơn, 7(3), 45–63.",
+      "cite": "Võ và Dương-2022"
+    },
+    {
+      "text": "Yên, T. B., và Hoàng, Q. M. (2022). Sự chuyển tiếp giữa miền đàn hồi và trạng thái tới hạn của đất cố kết. Tạp chí Cơ học Nền Phù Sa, 9(1), 19–35.",
+      "cite": "Yên và Hoàng-2022"
+    },
+    {
+      "text": "Trần, K. A., và Diệp, N. V. (2023). Quy luật hồi phục tham số dị hướng trong cắt lặp. Kỷ yếu Địa cơ Ứng dụng Lam Giang, 8, 81–98.",
+      "cite": "Trần và Diệp-2023"
+    },
+    {
+      "text": "Tạ, H. D., và Bạch, P. Q. (2023). Liên kết giữa hóa bền, mặt chảy và lịch sử gia tải. Tạp chí Mô hình Địa kỹ thuật Mộc Hà, 15(2), 62–79.",
+      "cite": "Tạ và Bạch-2023"
+    },
+    {
+      "text": "Từ, N. L., và Nghiêm, P. H. (2024). Khung lý thuyết về ảnh hưởng của dị hướng ứng suất đến trạng thái tới hạn của đất hạt mịn. Tạp chí Cơ học Đất và Môi trường Địa kỹ thuật, 18(1), 1–24.",
+      "cite": "Từ và Nghiêm-2024"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Introduction"
+    },
+    {
+      "type": "paragraph",
+      "text": "Đất hạt mịn trong nền tự nhiên thường không đạt trạng thái cấu trúc đẳng hướng, bởi quá trình lắng đọng, cố kết, nén theo phương ưu tiên và lịch sử cắt tạo ra sự phân bố định hướng của hạt cũng như liên kết giữa chúng. Vì vậy, cùng một giá trị ứng suất hữu hiệu trung bình, vật liệu có thể biểu hiện sức kháng lệch, độ nén và khả năng giãn nở khác nhau tùy theo phương gia tải. Các mô tả trạng thái tới hạn cổ điển đã cung cấp nền tảng hữu ích để liên hệ ứng suất với thể tích, nhưng thường quy toàn bộ ảnh hưởng của cấu trúc vào các tham số cố định. Những nghiên cứu về nén ba trục và lịch sử ứng suất cho thấy giả định đó không còn phù hợp khi đường gia tải thay đổi đáng kể \\cite{1}, \\cite{2}. Bài viết này xây dựng một khung lý thuyết cho đất hạt mịn có dị hướng cấu trúc, tập trung vào mối liên hệ giữa biến trạng thái thể tích, áp suất tiền cố kết, mặt chảy và sự tiến hóa của tham số định hướng."
+    },
+    {
+      "type": "paragraph",
+      "text": "Mục tiêu chính là mô tả nhất quán ba miền ứng xử: đàn hồi, dẻo và trạng thái tới hạn. Khung đề xuất không xem dị hướng như một hiệu chỉnh độc lập cho sức kháng, mà coi nó là một biến trạng thái có khả năng thay đổi theo biến dạng dẻo. Cách tiếp cận này cho phép diễn giải sự gia tăng sức kháng ban đầu do định hướng hạt, đồng thời mô tả sự suy giảm cấu trúc khi cắt lặp hoặc khi hướng tải đảo chiều. Biến trạng thái thể tích được biểu diễn bởi thể tích riêng $v=1+e$, trong đó $e$ là hệ số rỗng, còn tỷ số ứng suất được biểu diễn bởi $\\eta=q/p'$. Các quan hệ này liên kết trực tiếp với truyền thống trạng thái tới hạn và tạo cơ sở so sánh những đường gia tải có lịch sử khác nhau. Những kết quả về biến trạng thái trong đất cố kết có cấu trúc cũng nhấn mạnh vai trò của sự suy giảm nội tại trong quá trình biến dạng \\cite{3}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Đóng góp của nghiên cứu gồm bốn điểm. Thứ nhất, một tham số vô hướng định hướng được đưa vào mặt chảy để biểu diễn ảnh hưởng của cấu trúc ban đầu theo phương tải. Thứ hai, quy luật hóa bền thể tích được ghép với quy luật tiến hóa định hướng, nhờ đó áp suất tiền cố kết không chỉ phụ thuộc vào biến dạng thể tích mà còn phản ánh trạng thái cấu trúc. Thứ ba, điều kiện tiêu tán không âm được dùng làm tiêu chuẩn kiểm tra tính hợp lệ của quá trình dẻo. Thứ tư, khung được minh họa bằng các giá trị lý thuyết tương ứng với nén trục đối xứng, nén có định hướng và cắt lặp. Phạm vi phân tích là ứng suất nén hữu hiệu, trong đó quy ước dấu được giữ nhất quán để tránh nhầm lẫn khi diễn giải biến dạng thể tích."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Related Work"
+    },
+    {
+      "type": "paragraph",
+      "text": "Các mô hình trạng thái tới hạn cho đất hạt mịn thường bắt đầu từ quan hệ giữa ứng suất lệch và áp suất hữu hiệu trung bình. Trong miền biến dạng lớn, trạng thái vật liệu được xác định không chỉ bởi độ lớn ứng suất mà còn bởi thể tích riêng và lịch sử cố kết. Những nghiên cứu về mặt chảy phi tuyến đã mở rộng mô tả cho trường ứng suất không đồng nhất, trong khi các công trình về hóa bền thể tích làm rõ sự dịch chuyển của miền dẻo trong không gian ứng suất hữu hiệu \\cite{4}, \\cite{5}. Tuy nhiên, nếu mặt chảy chỉ được mở rộng theo biến ứng suất, ảnh hưởng của phương nén và cấu trúc định hướng vẫn chưa được phản ánh đầy đủ. Đặc biệt, hai vật liệu có cùng áp suất tiền cố kết nhưng được chế tạo theo hai phương khác nhau có thể đạt sức kháng lệch cực đại khác nhau."
+    },
+    {
+      "type": "paragraph",
+      "text": "Lịch sử tải đảo chiều tạo ra một thách thức bổ sung. Khi hướng cắt thay đổi, các liên kết hạt chịu tải không còn hoạt động theo cơ chế ban đầu; một phần cấu trúc bị phá vỡ, trong khi phần khác được sắp xếp lại theo hướng mới. Các nghiên cứu về đất quá cố kết dưới đường gia tải đảo chiều cho thấy biến dạng dẻo có thể tích lũy ngay cả khi ứng suất hiện thời chưa vượt xa miền tải trước đó \\cite{6}. Tham số định hướng vì vậy cần có cả thành phần hồi phục về trạng thái cân bằng và thành phần suy giảm tỷ lệ với cường độ biến dạng cắt dẻo. Ý tưởng này phù hợp với các mô tả định hướng cấu trúc đất sét và các quy luật tiến hóa dưới cắt tích lũy \\cite{7}, \\cite{10}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Một hướng nghiên cứu khác tập trung vào việc liên hệ dị hướng ban đầu với áp suất tiền cố kết và độ dốc đường nén. Khi cấu trúc có hướng ưu tiên trùng với phương nén, sức chống nén biểu kiến tăng và điểm chuyển tiếp sang biến dạng dẻo bị đẩy về áp suất lớn hơn. Trái lại, khi tải cắt lệch khỏi phương cấu trúc, sự suy giảm định hướng có thể làm giảm nhanh sức kháng sau đỉnh. Kết quả về áp suất tiền cố kết và phương nén cho thấy cùng một vật liệu có thể cần các tham số hiệu chỉnh khác nhau nếu không theo dõi lịch sử chế tạo \\cite{8}, \\cite{13}. Các nghiên cứu về điều kiện tiêu tán và luật dòng dẻo cũng chỉ ra rằng mọi mở rộng mặt chảy phải được kiểm tra đồng thời ở cấp độ năng lượng, không chỉ ở hình học mặt chảy \\cite{9}, \\cite{11}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Các công trình gần đây đã đề xuất liên kết giữa hóa bền, mặt chảy và lịch sử gia tải, cũng như cơ chế hồi phục tham số dị hướng trong cắt lặp \\cite{17}, \\cite{16}. Dù vậy, nhiều mô tả vẫn tách rời tham số định hướng khỏi biến trạng thái thể tích hoặc chỉ xét một đường gia tải đơn. Khung hiện tại nhằm khắc phục hạn chế đó bằng cách đặt các biến trong cùng một cấu trúc lý thuyết. Độ dốc đường nén cố kết được xem là đại lượng có thể thay đổi theo trạng thái định hướng, còn đường trạng thái tới hạn được cho phép dịch chuyển dần khi cấu trúc tiến về cân bằng. Những kết quả về ứng suất lệch trong không gian bất biến và sự chuyển tiếp giữa miền đàn hồi với trạng thái tới hạn cung cấp cơ sở cho lựa chọn này \\cite{14}, \\cite{15}."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Definitions"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Biến trạng thái và đại lượng ứng suất"
+    },
+    {
+      "type": "paragraph",
+      "text": "Xét một phần tử đất bão hòa chịu tensor ứng suất hữu hiệu $\\sigma'_{ij}$. Áp suất hữu hiệu trung bình $p'$ được dùng để mô tả thành phần nén, còn ứng suất lệch $q$ đại diện cho cường độ biến dạng hình dạng. Từ đó, tỷ số $\\eta=q/p'$ là biến không thứ nguyên thuận tiện để so sánh các trạng thái ở các mức áp suất khác nhau. Khi $p'$ tiến gần giá trị rất nhỏ, tỷ số này cần được diễn giải thận trọng vì sai số tương đối tăng mạnh. Thể tích riêng $v$ được liên hệ với hệ số rỗng bằng $v=1+e$, giúp nối mô tả cơ học với biến đổi cấu trúc lỗ rỗng. Trong toàn bộ phân tích, các đại lượng này được xem là biến trạng thái tức thời, còn lịch sử biến dạng được lưu giữ thông qua $p'_c$ và $A$."
+    },
+    {
+      "type": "paragraph",
+      "text": "Đối với vật liệu đẳng hướng, đường trạng thái tới hạn có thể viết dưới dạng $q=Mp'$ và $v=\\Gamma-\\lambda\\ln p'$. Ở đây $M$ là độ dốc trong mặt phẳng $p'$–$q$, $\\lambda$ mô tả tốc độ giảm thể tích riêng theo áp suất, còn $\\Gamma$ xác định vị trí đường trạng thái tại áp suất quy ước. Khi đất có cấu trúc định hướng, các tham số này không nhất thiết giữ nguyên trong mọi hướng tải. Tuy nhiên, việc cho phép tất cả tham số biến thiên độc lập sẽ làm tăng số lượng đại lượng cần hiệu chỉnh và có thể gây mất tính nhận dạng. Vì vậy, khung này dùng $A$ làm biến điều khiển chính, qua đó mô tả sự dịch chuyển có giới hạn của $M$, $\\lambda$ và $\\Gamma$. Cách lựa chọn này tương thích với các khảo sát về đường trạng thái tới hạn của đất hạt mịn và sự phụ thuộc của chúng vào lịch sử ứng suất \\cite{1}, \\cite{2}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Tham số định hướng được định nghĩa từ tensor cấu trúc $a_{ij}$ và vector đơn vị $n_i$ theo quan hệ $A=\\sum_{i=1}^{3}\\sum_{j=1}^{3}a_{ij}n_i n_j$. Giá trị $A=0$ biểu thị trạng thái không có ưu tiên định hướng theo phương đang xét, còn $A>0$ biểu thị sự tăng cường cấu trúc theo phương đó. Do $A$ được dùng như một biến vô hướng đã chiếu, nó không thay thế đầy đủ tensor cấu trúc trong các bài toán ba chiều tổng quát. Dẫu vậy, nó đủ để mô tả lớp bài toán có một phương chính rõ ràng, chẳng hạn nền đất lắng đọng theo lớp hoặc vật liệu được nén theo một trục. Phép chiếu này cũng làm rõ vai trò của phương tải mà không đưa thêm các thành phần quay phức tạp vào luật vật liệu."
+    },
+    {
+      "type": "box",
+      "kind": "remark",
+      "title": "Quy ước diễn giải",
+      "text": "Trong khung này, $p'$ và $q$ là các đại lượng ứng suất hữu hiệu không âm trong miền nén. Biến dạng thể tích dẻo mang dấu âm khi vật liệu bị nén, còn độ lớn biến dạng cắt dẻo được dùng để đo mức độ phá hủy định hướng. Vì vậy, sự giảm của $A$ không nhất thiết đồng nghĩa với giảm ngay lập tức của mọi thành phần sức kháng; nó phản ánh sự mất trật tự cấu trúc theo phương đang xét. Quy ước dấu phải được giữ nguyên trong toàn bộ phép kiểm tra."
+    },
+    {
+      "type": "paragraph",
+      "text": "Trong diễn giải vi mô, $A$ không phải là đại lượng đo trực tiếp duy nhất mà là biến tổng hợp của nhiều cơ chế sắp xếp hạt. Nó có thể chịu ảnh hưởng của phương lắng đọng, mức độ cố kết, sự phân bố liên kết và lịch sử ứng suất hữu hiệu. Vì vậy, cùng một giá trị $A$ hiệu dụng có thể được tạo nên bởi các cấu trúc khác nhau ở cấp hạt. Cách quy đổi này hữu ích ở cấp mô hình liên tục vì giảm số biến cần theo dõi, nhưng đồng thời đòi hỏi quá trình hiệu chỉnh phải sử dụng nhiều trạng thái tải. Việc kết hợp dữ liệu biến dạng thể tích với dữ liệu sức kháng giúp hạn chế khả năng nhiều bộ tham số khác nhau cùng mô tả một đường ứng suất."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Main Results"
+    },
+    {
+      "type": "paragraph",
+      "text": "Mặt chảy dị hướng được xây dựng dưới dạng $f=q^2+M^2p'[p'-p'_c(1+A)]\\leq 0$. Khi $A=0$, biểu thức trở về dạng trạng thái tới hạn cơ sở với áp suất tiền cố kết $p'_c$. Khi $A$ tăng, giao điểm đặc trưng theo phương nén dịch chuyển ra ngoài, cho thấy vật liệu có thể chịu áp suất lớn hơn trước khi phát triển biến dạng dẻo đáng kể. Thành phần $A$ không làm thay đổi trực tiếp toàn bộ hình dạng mặt chảy, mà điều chỉnh vị trí của miền dẻo qua tích $p'_c(1+A)$. Đây là lựa chọn có ý nghĩa vật lý vì định hướng ban đầu thường ảnh hưởng mạnh đến ngưỡng kích hoạt dẻo hơn là đến mọi cơ chế biến dạng ở trạng thái tới hạn. Kết quả tổng hợp được đối chiếu sớm với \\ref{tab:critical_state_parameters} và \\ref{fig:stacked_qmax_components}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Từ mặt chảy, luật dòng dẻo được viết theo gradient của $f$, với tốc độ nhân dẻo $d\\Lambda/dt$ không âm trong quá trình tải dẻo. Thành phần thể tích dẻo phụ thuộc vào đạo hàm của mặt chảy theo $p'$, còn thành phần lệch phụ thuộc vào đạo hàm theo $q$. Do $A$ xuất hiện trong phần chứa áp suất tiền cố kết, nó tác động đồng thời đến xu hướng nén và sức kháng lệch. Một trạng thái có $A$ lớn có thể biểu hiện giai đoạn đầu ít nén hơn, sau đó chuyển sang nén dẻo mạnh khi mặt chảy mở rộng và cấu trúc suy giảm. Tính không đồng nhất này là lý do không nên suy ra biến dạng thể tích chỉ từ một giá trị $M$ cố định."
+    },
+    {
+      "type": "paragraph",
+      "text": "Quy luật hóa bền được xác định bởi quan hệ $d p'_c/dt=(p'_c/(\\lambda-kappa))d eps^p_v/dt$, trong đó kappa là hệ số nén hồi phục và $\\lambda$ là hệ số nén dẻo. Với quy ước biến dạng nén âm, dấu của tốc độ cần được đặt nhất quán trong phép tích phân lịch sử; về mặt vật lý, độ lớn nén dẻo làm thay đổi kích thước miền đàn hồi. Khi $A$ thay đổi, $p'_c$ không chỉ phản ánh lượng nén tích lũy mà còn phản ánh hiệu ứng định hướng thông qua vị trí mặt chảy. Điều này giải thích tại sao hai đường gia tải có cùng độ nén cuối cùng vẫn có thể đạt các đỉnh sức kháng khác nhau. Tập kết quả về các đường gia tải được tham chiếu tại \\ref{tab:loading_path_response}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Sự tiến hóa định hướng được mô tả bởi $dA/dt=\\rho_A(A_{eq}-A)-c_AA\\sqrt{(2/3)\\sum_{i=1}^{3}\\sum_{j=1}^{3}(d eps^p_{ij}/dt)(d eps^p_{ij}/dt)}$. Thành phần đầu biểu diễn xu hướng hồi phục về giá trị cân bằng $A_{eq}$, còn thành phần sau biểu diễn sự suy giảm do cắt dẻo. Hai hệ số $\\rho_A$ và $c_A$ lần lượt kiểm soát tốc độ hồi phục và tốc độ mất định hướng. Nếu không có cắt dẻo, $A$ tiến dần về $A_{eq}$; nếu cắt tích lũy đủ lớn, thành phần suy giảm có thể chi phối và làm giảm nhanh ảnh hưởng của lịch sử chế tạo. Xu thế này được minh họa qua \\ref{fig:anisotropy_decay}, trong khi miền áp suất tương ứng được đối chiếu tại \\ref{fig:critical_pressure_distribution}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Một kết quả quan trọng là ảnh hưởng của dị hướng không dừng ở việc làm tăng sức kháng ban đầu. Khi $A$ lớn, áp suất tiền cố kết hiệu dụng tăng, độ dốc trạng thái tới hạn có thể thay đổi và biến dạng thể tích cực trị xuất hiện muộn hơn trên đường tải. Tuy nhiên, dưới cắt lặp, lợi thế này giảm dần vì cấu trúc bị phá hủy. Việc cho phép $M$, $\\lambda$ và $\\Gamma$ phụ thuộc có kiểm soát vào $A$ giúp mô tả đồng thời sự thay đổi sức kháng và sự dịch chuyển thể tích. So sánh các độ dốc trạng thái theo mức định hướng được nêu tại \\ref{fig:critical_state_slopes}; cách diễn giải này phù hợp với các nghiên cứu về cấu trúc suy giảm và hiệu chỉnh luật dòng dẻo \\cite{12}, \\cite{18}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Điều kiện năng lượng của mô hình được kiểm tra thông qua bất đẳng thức tiêu tán $D=p'd eps^p_v/dt+qd eps^p_q/dt\\geq 0$. Nếu luật dòng và quy luật hóa bền được chọn sao cho tốc độ nhân dẻo không âm, phần công dẻo do mặt chảy phải không âm trong mọi trạng thái hoạt động. Điều kiện này không tự động bảo đảm ổn định số, nhưng loại bỏ những tham số dẫn đến tạo năng lượng trong quá trình dẻo. Sơ đồ luân chuyển biến trạng thái tại \\ref{fig:theoretical_update_flow} cho thấy thứ tự khái niệm: xác định ứng suất hữu hiệu, cập nhật thể tích, kiểm tra mặt chảy, tiến hành hóa bền, cập nhật định hướng và cuối cùng kiểm tra tiêu tán. Kiến trúc tổng thể của các liên kết này được tham chiếu tại \\ref{fig:constitutive_architecture}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Trong trường hợp tải thay đổi chậm, biến thể tích riêng và áp suất tiền cố kết có thể được cập nhật gần như liên tục, trong khi sự biến đổi của $A$ thường phụ thuộc mạnh vào các giai đoạn có cắt. Điều này dẫn đến sự phân biệt giữa hóa bền do nén và tái định hướng do biến dạng hình dạng. Nếu chỉ dùng một biến dẻo tổng hợp, hai cơ chế có thể bị gộp nhầm, làm sai lệch dự báo độ dốc đường nén hoặc sức kháng sau đỉnh. Khung hiện tại giữ riêng các đại lượng để có thể kiểm tra từng đóng góp. Cách phân tách này cũng phù hợp với quan điểm rằng lịch sử ứng suất cần được lưu giữ như một phần của trạng thái vật liệu \\cite{3}, \\cite{8}."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Proofs"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ta xét trước tính hợp lệ của mặt chảy trong miền nén. Với $p'>0$, $M^2>0$ và $p'_c(1+A)>0$, điều kiện $f=0$ xác định một biên kín theo phương áp suất trong mặt phẳng $p'$–$q$, miễn là $A$ nằm trong miền được hiệu chỉnh. Khi $A$ tăng, nghiệm tại $q=0$ thay đổi theo $p'_c(1+A)$, nên miền đàn hồi mở rộng theo hướng nén. Đồng thời, đạo hàm của $f$ theo $q$ tăng theo $q$, bảo đảm gradient lệch đổi dấu đúng khi hướng ứng suất lệch đổi dấu. Vì vậy, mặt chảy không tạo ra ưu tiên giả theo dấu của $q$ trong trường hợp đối xứng này."
+    },
+    {
+      "type": "paragraph",
+      "text": "Tiếp theo, xét tính đơn điệu của biến định hướng khi cắt dẻo. Đặt cường độ cắt dẻo không âm là $g^p=\\sqrt{(2/3)\\sum_{i=1}^{3}\\sum_{j=1}^{3}(d eps^p_{ij}/dt)(d eps^p_{ij}/dt)}$. Khi $A>A_{eq}$, thành phần hồi phục $\\rho_A(A_{eq}-A)$ âm. Thành phần suy giảm $-c_AAg^p$ cũng âm nếu $A$ không âm. Do đó, trong giai đoạn cắt đủ mạnh, $dA/dt<0$ và định hướng giảm đơn điệu cho đến khi tiến gần miền cân bằng. Ngược lại, nếu $A<A_{eq}$ và cắt nhỏ, thành phần hồi phục có thể làm $A$ tăng. Cơ chế này ngăn mô hình duy trì vô hạn một trạng thái định hướng cực đại sau khi lịch sử tải đã thay đổi."
+    },
+    {
+      "type": "paragraph",
+      "text": "Để kiểm tra tiêu tán, xét một bước tải dẻo với $d\\Lambda/dt\\geq0$. Luật dòng liên kết tốc độ biến dạng với gradient mặt chảy, vì vậy công dẻo có thể được phân tích thành phần do biến dạng thể tích và thành phần do biến dạng lệch. Các tham số $\\lambda$, kappa, $M$ và $A$ phải được giới hạn để phần công do hóa bền không làm đảo dấu tổng tiêu tán. Nói cách khác, việc hiệu chỉnh riêng từng tham số theo dữ liệu đường tải là chưa đủ; cần kiểm tra cả quỹ đạo năng lượng của toàn bộ mô hình. Đây là điểm then chốt khi chuyển từ mô tả hiện tượng sang mô hình vật liệu có khả năng dự báo \\cite{9}, \\cite{11}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Một hệ quả khác có thể chứng minh là ảnh hưởng của lịch sử ban đầu giảm dần khi biến dạng cắt tích lũy tăng. Nếu $c_A>0$ và $g^p$ duy trì dương trên một khoảng thời gian đủ dài, tích phân của thành phần suy giảm làm giảm phần đóng góp của $A_0$. Thành phần hồi phục sau đó kéo trạng thái về $A_{eq}$, khiến hai vật liệu có định hướng ban đầu khác nhau tiến gần cùng một quỹ đạo. Kết luận này giải thích vì sao các đường tải lặp có thể hội tụ ở giai đoạn sau, dù giai đoạn đầu khác biệt rõ rệt. Nó cũng phù hợp với quan sát lý thuyết về sự hồi phục tham số trong cắt đảo chiều \\cite{16}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Tính duy nhất cục bộ của phép cập nhật có thể được xem xét khi các hàm vật liệu liên tục theo $p'$, $q$, $p'_c$ và $A$. Trong miền mà $\\lambda-kappa$ dương, luật hóa bền không tạo ra kỳ dị do mẫu số bằng không. Nếu các hệ số hồi phục và suy giảm không âm, phương trình tiến hóa của $A$ giữ được hướng biến đổi phù hợp với lịch sử cắt. Tuy nhiên, tính duy nhất toàn cục còn phụ thuộc vào giới hạn của miền tham số và cách xử lý khi đường tải đảo chiều. Vì vậy, phép chứng minh lý thuyết cần được kết hợp với kiểm tra số trên nhiều gia số tải và nhiều trạng thái ban đầu."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Numerical Illustration"
+    },
+    {
+      "type": "paragraph",
+      "text": "Một minh họa lý thuyết được xây dựng bằng cách giữ $p'_0=80$ kPa và xét bốn lịch sử tải: nén trục đối xứng, nén có định hướng, cắt lặp thuận chiều và cắt lặp đảo chiều. Các giá trị đầu vào của $A$ lần lượt là $0$, $0.20$, $0.35$ và $0.35$. Kết quả cho thấy cường độ lệch cực đại tăng từ trường hợp đẳng hướng đến cắt lặp thuận chiều, trong khi trường hợp đảo chiều có mức giảm do cấu trúc không còn phù hợp với hướng tải mới. Biến dạng thể tích dẻo cũng tăng theo mức độ tương tác giữa định hướng và cắt. Những xu hướng này là hệ quả của bộ tham số được chọn để khảo sát cơ chế."
+    },
+    {
+      "type": "paragraph",
+      "text": "Khi so sánh các mức định hướng ban đầu, $p'_c$ tăng cùng $A$, còn $M$, $\\lambda$ và $\\Gamma$ thay đổi theo hướng cân bằng của cấu trúc. Sự tăng của $M$ làm đường trạng thái tới hạn dốc hơn trong mặt phẳng ứng suất, trong khi sự tăng của $\\lambda$ biểu thị mức giảm thể tích riêng lớn hơn theo áp suất. Nếu chỉ quan sát sức kháng lệch cực đại, người phân tích có thể đánh giá quá cao vai trò của $A$; cần đồng thời theo dõi biến dạng thể tích, áp suất tiền cố kết và giá trị cuối của định hướng. Vì vậy, việc đối chiếu \\ref{tab:critical_state_parameters} với \\ref{tab:loading_path_response} cung cấp cách đọc đầy đủ hơn về cơ chế."
+    },
+    {
+      "type": "paragraph",
+      "text": "Trong đường cắt lặp, $A$ giảm theo biến dạng cắt dẻo tích lũy, nhưng tốc độ giảm không cố định. Với $A_0=0.20$, sự suy giảm chậm hơn về độ lớn tuyệt đối so với trường hợp $A_0=0.35$, trong khi trạng thái cuối vẫn phụ thuộc vào $A_{eq}$ và cường độ cắt. Cắt đảo chiều làm giảm hiệu quả định hướng nhanh hơn cắt thuận chiều vì các liên kết được sắp xếp theo hướng trước đó phải tái tổ chức. Do đó, mô hình dự báo đỉnh sức kháng thấp hơn và biến dạng thể tích dẻo khác biệt trong đường đảo chiều. Diễn giải này liên kết trực tiếp giữa \\ref{fig:anisotropy_decay} và các giá trị hậu hóa bền trong \\ref{tab:loading_path_response}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Quy trình cập nhật có thể thực hiện theo từng gia số tải. Trước hết, ứng suất hữu hiệu và hệ số rỗng được xác định tại trạng thái hiện thời. Sau đó, $f$ được đánh giá để phân biệt bước đàn hồi với bước dẻo. Nếu trạng thái nằm ngoài miền đàn hồi, tốc độ biến dạng dẻo, $p'_c$ và $A$ được cập nhật đồng thời, rồi kiểm tra lại tiêu tán. Cấu trúc này tránh việc cập nhật định hướng sau cùng như một hiệu chỉnh rời rạc, bởi $A$ có ảnh hưởng trực tiếp đến vị trí mặt chảy trong cùng bước tải. Các thành phần khái niệm của quy trình được mô tả trong \\ref{fig:theoretical_update_flow}; kiến trúc liên kết đầu vào, lõi trạng thái và đầu ra được nêu tại \\ref{fig:constitutive_architecture}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Các kết quả định lượng cần được sử dụng như cơ sở kiểm tra quan hệ giữa các biến, không phải như bộ giá trị áp dụng cho mọi địa tầng. Chẳng hạn, cùng một $A_0$ nhưng thay đổi $\\rho_A$ sẽ làm khác tốc độ hồi phục, còn thay đổi $c_A$ sẽ làm khác mức mất định hướng sau cắt. Tương tự, tỷ số $\\lambda/kappa$ điều khiển mức độ dịch chuyển của áp suất tiền cố kết khi có nén dẻo. Việc hiệu chỉnh nên dựa trên nhiều đường tải, bao gồm cả tải thuận chiều và đảo chiều, để tách ảnh hưởng của hóa bền khỏi ảnh hưởng của cấu trúc. Cách tiếp cận này tiếp nối các nghiên cứu về liên kết giữa hóa bền và lịch sử gia tải \\cite{17}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Việc đọc kết quả cần chú ý đến quy ước nén âm của biến dạng thể tích dẻo. Một giá trị âm lớn hơn về độ lớn biểu thị mức nén dẻo mạnh hơn, không phải sự giãn nở. Đồng thời, $q$ được xem là độ lớn ứng suất lệch nên không mang dấu chỉ hướng cắt. Khi so sánh tải thuận chiều và đảo chiều, hướng tải được lưu giữ trong biến tiến hóa của cấu trúc, còn đại lượng $q$ chỉ mô tả cường độ. Phân biệt hai vai trò này giúp tránh kết luận rằng hai trạng thái có cùng $q$ nhất thiết có cùng trạng thái vật liệu."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Limitations"
+    },
+    {
+      "type": "paragraph",
+      "text": "Hạn chế đầu tiên là việc quy tensor cấu trúc về một tham số vô hướng. Mô tả này phù hợp với một phương chính chi phối, nhưng chưa thể biểu diễn đầy đủ vật liệu có nhiều phương định hướng đồng thời hoặc có cấu trúc quay mạnh trong không gian ba chiều. Hạn chế thứ hai là mặt chảy được chọn có dạng tương đối đơn giản, chưa xét rõ ảnh hưởng của bất biến ứng suất thứ ba, áp lực nước lỗ rỗng thay đổi nhanh hoặc sự phân bố không đồng nhất theo không gian. Hạn chế thứ ba là luật dòng được giả định liên kết trực tiếp với gradient mặt chảy; trong một số đất tự nhiên, dòng dẻo không kết hợp có thể cần thêm tham số độc lập."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ngoài ra, quy luật tiến hóa $A$ hiện chỉ phụ thuộc vào cường độ cắt dẻo và xu hướng hồi phục. Nó chưa mô tả riêng sự phá vỡ liên kết xi măng, sự tái cấu trúc do thấm, ảnh hưởng của thời gian lưu giữ hay sự thay đổi nhiệt độ. Việc dùng $A_{eq}$ cố định cũng có thể không phù hợp khi trạng thái cân bằng phụ thuộc vào áp suất, tốc độ tải và độ ẩm. Các tham số $\\rho_A$ và $c_A$ cần được xác định từ chuỗi tải đủ dài, nếu không sự suy giảm dự báo có thể bị nhầm với hóa bền hoặc mềm hóa. Do đó, khung này nên được mở rộng sau khi có dữ liệu độc lập về cấu trúc và biến dạng."
+    },
+    {
+      "type": "paragraph",
+      "text": "Một hạn chế thực hành là sự nhạy cảm của kết quả đối với quy ước dấu và cách xác định biến dạng thể tích. Nếu biến dạng nén được ghi dương thay vì âm, phương trình hóa bền và điều kiện tiêu tán phải được biến đổi tương ứng. Ngoài ra, khi $p'$ nhỏ, tỷ số $\\eta=q/p'$ trở nên nhạy với nhiễu đo, còn khi $A$ gần biên cho phép, mặt chảy có thể mất tính ổn định nếu không áp đặt miền tham số. Những vấn đề này cho thấy cần kiểm tra tính nhạy, tính hội tụ và tính dương của tiêu tán trước khi áp dụng vào dự báo nền chịu tải chu kỳ."
+    },
+    {
+      "type": "paragraph",
+      "text": "Một giới hạn khác liên quan đến khả năng nhận dạng tham số. Sự tăng của $p'_c$ có thể được mô tả bởi hóa bền thể tích, bởi sự mở rộng do $A$, hoặc bởi sự kết hợp của cả hai cơ chế. Nếu chỉ có một đường tải, việc tách các đóng góp này thường không ổn định. Cần có các đường nén thuần túy, đường cắt với nhiều mức áp suất và đường đảo chiều để xác định riêng $\\lambda$, kappa, $c_A$ và $\\rho_A$. Các quan sát ở cấp hạt hoặc phép đo định hướng độc lập sẽ làm tăng khả năng kiểm chứng ý nghĩa vật lý của $A$, thay vì chỉ xem nó như một tham số điều chỉnh hình dạng đường cong."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Conclusion"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bài viết đã trình bày một khung trạng thái tới hạn có dị hướng cho đất hạt mịn, trong đó ứng suất hữu hiệu, thể tích riêng, áp suất tiền cố kết và tham số định hướng được cập nhật trong cùng một mô tả. Mặt chảy dị hướng làm thay đổi ngưỡng kích hoạt dẻo theo cấu trúc ban đầu; quy luật hóa bền liên hệ sự dịch chuyển miền đàn hồi với biến dạng thể tích; còn quy luật tiến hóa định hướng mô tả đồng thời hồi phục và suy giảm do cắt. Từ điều kiện tiêu tán không âm, mô hình có thể được kiểm tra ở cấp năng lượng thay vì chỉ so sánh hình dạng đường ứng suất."
+    },
+    {
+      "type": "paragraph",
+      "text": "Các minh họa cho thấy dị hướng ban đầu có thể làm tăng áp suất tiền cố kết, sức kháng lệch và độ dốc đường trạng thái tới hạn, nhưng lợi thế này giảm khi cắt dẻo tích lũy hoặc khi hướng tải đảo chiều. Vì vậy, lịch sử gia tải không nên được xem như thông tin phụ trợ; nó là một phần của trạng thái vật liệu. Trong các nghiên cứu tiếp theo, cần mở rộng tham số định hướng thành tensor, đưa bất biến ứng suất thứ ba vào mặt chảy, và kiểm chứng mô hình bằng các chuỗi tải nhiều giai đoạn. Việc kết hợp các mở rộng đó với quan sát vi cấu trúc sẽ giúp phân biệt rõ hơn giữa hóa bền, mềm hóa và tái định hướng."
+    },
+    {
+      "type": "paragraph",
+      "text": "Sau cùng, khung được đề xuất có thể hỗ trợ phân tích nền đất chịu tải theo chu kỳ, đặc biệt khi phương tải thay đổi hoặc khi vật liệu trải qua nhiều giai đoạn cố kết và cắt. Giá trị của nó nằm ở sự liên kết có kiểm soát giữa các biến trạng thái, chứ không ở việc thay thế mọi mô hình chuyên biệt. Khi được hiệu chỉnh từ các đường tải phù hợp và kiểm tra bằng điều kiện năng lượng, mô hình có thể cung cấp một ngôn ngữ thống nhất để diễn giải sự chuyển tiếp từ cấu trúc ban đầu đến trạng thái tới hạn. Nhận định này nhất quán với khung lý thuyết tổng hợp đã được trình bày trong nghiên cứu liên quan \\cite{18}."
+    },
+    {
+      "type": "paragraph",
+      "text": "\\cite{1} \\cite{2} \\cite{3} \\cite{4} \\cite{5} \\cite{6} \\cite{7} \\cite{8} \\cite{9} \\cite{10} \\cite{11} \\cite{12} \\cite{13} \\cite{14} \\cite{15} \\cite{16} \\cite{17} \\cite{18} \\fn{Quy ước dấu của biến dạng thể tích dẻo được giữ nhất quán trong toàn bộ khung; khi chuyển sang quy ước nén dương, cả luật hóa bền và điều kiện tiêu tán phải được biến đổi tương ứng.}"
+    }
+  ]
+}

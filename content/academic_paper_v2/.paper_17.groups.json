@@ -1,0 +1,1004 @@
+{
+  "front": {
+    "title": "Đặc trưng lưu biến của nhựa nhiệt dẻo tái chế trong điều kiện gia công tại hiện trường",
+    "authors": [
+      {
+        "name": "Nguyễn Khải Minh",
+        "affiliations": [
+          1,
+          2
+        ],
+        "corresponding": true,
+        "email": "minh.nguyen@vienthanhluu.vn"
+      },
+      {
+        "name": "Trần Bảo Ngọc",
+        "affiliations": [
+          1
+        ],
+        "corresponding": false
+      },
+      {
+        "name": "Lê Hoàng Phúc",
+        "affiliations": [
+          2
+        ],
+        "corresponding": false
+      }
+    ],
+    "affiliations": [
+      "Viện Kỹ thuật Vật liệu Thành Lưu, Thành phố Vạn Giang, Việt Nam",
+      "Trung tâm Công nghệ Gia công Polyme Nam Khê, Tỉnh Hải Lâm, Việt Nam"
+    ],
+    "abstract": "Nghiên cứu này khảo sát đặc trưng lưu biến của nhựa nhiệt dẻo tái chế trong dây chuyền đùn vận hành tại hiện trường, với trọng tâm là ảnh hưởng của lịch sử gia công, độ ẩm và thời gian lưu đến độ nhớt biểu kiến. Các phép đo được thực hiện ở nhiều tốc độ cắt và nhiệt độ đại diện cho vùng vận hành thực tế. Kết quả cho thấy vật liệu có tính giảm nhớt theo tốc độ cắt, trong khi độ phân tán giữa các mẻ tăng rõ rệt khi độ ẩm vượt ngưỡng kiểm soát. Mô đun đàn hồi và ứng suất chảy giảm sau các chu kỳ gia công liên tiếp, phản ánh sự suy giảm khối lượng phân tử và sự thay đổi tương tác giữa các pha. Phân tích dữ liệu tại hiện trường cho thấy nhiệt độ đầu khuôn và thời gian lưu là hai biến vận hành có ảnh hưởng lớn nhất đến độ ổn định lưu biến. Một khoảng nhiệt độ gia công hẹp được xác định, trong đó độ nhớt, năng suất đùn và chất lượng bề mặt duy trì mức biến động thấp. Các kết quả cung cấp cơ sở để thiết lập quy trình kiểm soát nguyên liệu và điều chỉnh thông số đùn đối với polyme tái chế.",
+    "abstract_alt": null,
+    "keywords": "lưu biến polyme; nhựa nhiệt dẻo tái chế; độ nhớt biểu kiến; đùn tại hiện trường; độ ẩm; thời gian lưu",
+    "keywords_alt": null,
+    "journal": "Tạp chí Vật liệu và Lưu biến Ứng dụng",
+    "acknowledgement": "Nhóm tác giả trân trọng cảm ơn Phòng Đo lường Lưu biến thuộc Trung tâm Công nghệ Gia công Polyme Nam Khê đã hỗ trợ bố trí thiết bị, theo dõi điều kiện vận hành và kiểm tra dữ liệu trong suốt thời gian khảo sát."
+  },
+  "formulas": [
+    {
+      "after": 3,
+      "element": {
+        "type": "equation",
+        "id": "eq:carreau-yasuda",
+        "latex": "\\eta(\\gamma)=\\eta_{\\infty}+(\\eta_0-\\eta_{\\infty})[1+(\\lambda\\gamma)^2]^{(n-1)/2}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 7,
+      "element": {
+        "type": "equation",
+        "id": "eq:power-law-viscosity",
+        "latex": "\\sigma=K\\gamma^n,\\quad \\eta_{app}=\\frac{\\sigma}{\\gamma}=K\\gamma^{n-1}",
+        "numbered": true
+      }
+    }
+  ],
+  "tables": [
+    {
+      "after": 4,
+      "element": {
+        "type": "table",
+        "id": "tab:die-line-conditions",
+        "caption": "Điều kiện vận hành và chế độ lấy dữ liệu tại các vị trí khảo sát",
+        "header": [
+          [
+            "Vị trí đo",
+            "Nhiệt độ đầu khuôn (°C)",
+            "Tốc độ trục vít (vòng/phút)",
+            "Độ ẩm nguyên liệu (%)",
+            "Thời gian lưu (phút)"
+          ]
+        ],
+        "rows": [
+          [
+            "A — cấp liệu",
+            "205",
+            "42",
+            "0,34",
+            "6,8"
+          ],
+          [
+            "B — vùng nén",
+            "215",
+            "48",
+            "0,37",
+            "7,5"
+          ],
+          [
+            "C — đầu khuôn",
+            "225",
+            "55",
+            "0,41",
+            "8,2"
+          ],
+          [
+            "D — đầu khuôn",
+            "235",
+            "55",
+            "0,46",
+            "8,7"
+          ]
+        ],
+        "note": "Mỗi điều kiện được duy trì ổn định trước khi ghi nhận dữ liệu lưu biến; độ ẩm được xác định bằng phép sấy khối lượng."
+      }
+    },
+    {
+      "after": 8,
+      "element": {
+        "type": "table",
+        "id": "tab:rheology-cycle-results",
+        "caption": "Thông số lưu biến theo số chu kỳ gia công và tốc độ cắt",
+        "header": [
+          [
+            "Chu kỳ gia công",
+            "Tốc độ cắt (s⁻¹)",
+            "Độ nhớt biểu kiến (Pa·s)",
+            "Chỉ số giảm nhớt n",
+            "Ứng suất chảy (Pa)"
+          ]
+        ],
+        "rows": [
+          [
+            "1",
+            "1",
+            "1840",
+            "0,71",
+            "426"
+          ],
+          [
+            "1",
+            "10",
+            "690",
+            "0,69",
+            "318"
+          ],
+          [
+            "1",
+            "100",
+            "214",
+            "0,66",
+            "226"
+          ],
+          [
+            "3",
+            "1",
+            "1510",
+            "0,68",
+            "371"
+          ],
+          [
+            "3",
+            "10",
+            "574",
+            "0,65",
+            "284"
+          ],
+          [
+            "3",
+            "100",
+            "186",
+            "0,62",
+            "198"
+          ],
+          [
+            "5",
+            "1",
+            "1295",
+            "0,65",
+            "338"
+          ],
+          [
+            "5",
+            "10",
+            "492",
+            "0,62",
+            "251"
+          ],
+          [
+            "5",
+            "100",
+            "163",
+            "0,59",
+            "174"
+          ]
+        ],
+        "note": "Giá trị là trung vị của các lần đo lặp tại cùng điều kiện; độ nhớt giảm khi tốc độ cắt tăng và sau các chu kỳ gia công liên tiếp."
+      }
+    },
+    {
+      "after": 11,
+      "element": {
+        "type": "table",
+        "id": "tab:operating-window",
+        "caption": "Đánh giá cửa sổ vận hành theo nhóm nhiệt độ và độ ẩm",
+        "header": [
+          [
+            {
+              "text": "Nhóm điều kiện",
+              "rowspan": 2
+            },
+            {
+              "text": "Độ ẩm nguyên liệu",
+              "colspan": 2
+            },
+            {
+              "text": "Nhiệt độ đầu khuôn",
+              "colspan": 2
+            },
+            {
+              "text": "Độ ổn định quá trình",
+              "rowspan": 2
+            }
+          ],
+          [
+            {
+              "text": "Khoảng (%)"
+            },
+            {
+              "text": "Độ nhớt trung vị (Pa·s)"
+            },
+            {
+              "text": "Khoảng (°C)"
+            },
+            {
+              "text": "Hệ số biến thiên (%)"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "I",
+            "0,25–0,35",
+            "812",
+            "220–225",
+            "4,8",
+            "Tốt"
+          ],
+          [
+            "II",
+            "0,36–0,45",
+            "768",
+            "225–230",
+            "3,9",
+            "Tốt nhất"
+          ],
+          [
+            "III",
+            "0,46–0,55",
+            "641",
+            "230–235",
+            "8,7",
+            "Trung bình"
+          ],
+          [
+            "IV",
+            "0,56–0,65",
+            "528",
+            "235–240",
+            "13,6",
+            "Kém"
+          ]
+        ],
+        "note": "Nhóm II cho độ phân tán thấp nhất và duy trì đồng thời độ nhớt, năng suất đùn và chất lượng bề mặt ở mức ổn định; các giá trị tốt nhất được in đậm.",
+        "header_style": {
+          "bold_best": true
+        },
+        "best_cells": [
+          {
+            "row": 1,
+            "column": 4
+          },
+          {
+            "row": 1,
+            "column": 5
+          }
+        ],
+        "rows_bold": [
+          {
+            "row": 1,
+            "columns": [
+              4,
+              5
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "charts_figures": [
+    {
+      "after": 1,
+      "element": {
+        "type": "chart",
+        "chart_type": "histogram",
+        "id": "fig:humidity-distribution",
+        "caption": "Phân bố độ ẩm nguyên liệu trong các lượt ghi nhận tại dây chuyền",
+        "labels": [
+          "0,25–0,35",
+          "0,36–0,45",
+          "0,46–0,55",
+          "0,56–0,65"
+        ],
+        "series": [
+          {
+            "name": "Số lượt đo",
+            "values": [
+              18,
+              26,
+              17,
+              9
+            ],
+            "errors": [
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        ],
+        "x_label": "Độ ẩm nguyên liệu (%)",
+        "y_label": "Số lượt đo",
+        "legend_position": "outside",
+        "text_reference": "Phân bố độ ẩm được đối chiếu với \\ref{fig:humidity-distribution}."
+      }
+    },
+    {
+      "after": 2,
+      "element": {
+        "type": "chart",
+        "chart_type": "area",
+        "id": "fig:viscosity-cycle-area",
+        "caption": "Biến thiên độ nhớt biểu kiến theo tốc độ cắt qua các chu kỳ gia công",
+        "labels": [
+          "1",
+          "10",
+          "100"
+        ],
+        "series": [
+          {
+            "name": "Chu kỳ 1",
+            "values": [
+              1840,
+              690,
+              214
+            ]
+          },
+          {
+            "name": "Chu kỳ 3",
+            "values": [
+              1510,
+              574,
+              186
+            ]
+          },
+          {
+            "name": "Chu kỳ 5",
+            "values": [
+              1295,
+              492,
+              163
+            ]
+          }
+        ],
+        "x_label": "Tốc độ cắt (s⁻¹)",
+        "y_label": "Độ nhớt biểu kiến (Pa·s)",
+        "legend_position": "outside",
+        "text_reference": "Biến thiên độ nhớt theo tốc độ cắt và chu kỳ gia công được trình bày tại \\ref{fig:viscosity-cycle-area}."
+      }
+    },
+    {
+      "after": 3,
+      "element": {
+        "type": "chart",
+        "chart_type": "scatter",
+        "id": "fig:temperature-residence-scatter",
+        "caption": "Quan hệ giữa nhiệt độ đầu khuôn, thời gian lưu và độ nhớt biểu kiến",
+        "labels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H"
+        ],
+        "series": [
+          {
+            "name": "Độ nhớt biểu kiến",
+            "points": [
+              [
+                205,
+                1210
+              ],
+              [
+                210,
+                1085
+              ],
+              [
+                215,
+                972
+              ],
+              [
+                220,
+                884
+              ],
+              [
+                225,
+                812
+              ],
+              [
+                230,
+                739
+              ],
+              [
+                235,
+                641
+              ],
+              [
+                240,
+                528
+              ]
+            ],
+            "errors": [
+              35,
+              31,
+              29,
+              27,
+              25,
+              24,
+              30,
+              38
+            ]
+          }
+        ],
+        "x_label": "Nhiệt độ đầu khuôn (°C)",
+        "y_label": "Độ nhớt biểu kiến (Pa·s)",
+        "legend_position": "outside",
+        "text_reference": "Quan hệ giữa nhiệt độ đầu khuôn, thời gian lưu và độ nhớt được theo dõi theo \\ref{fig:temperature-residence-scatter}."
+      }
+    },
+    {
+      "after": 4,
+      "element": {
+        "type": "chart",
+        "chart_type": "bar",
+        "id": "fig:cycle-yield-stress",
+        "caption": "Ứng suất chảy trung vị theo số chu kỳ gia công",
+        "labels": [
+          "Chu kỳ 1",
+          "Chu kỳ 3",
+          "Chu kỳ 5"
+        ],
+        "series": [
+          {
+            "name": "1 s⁻¹",
+            "values": [
+              426,
+              371,
+              338
+            ],
+            "errors": [
+              18,
+              16,
+              15
+            ]
+          },
+          {
+            "name": "10 s⁻¹",
+            "values": [
+              318,
+              284,
+              251
+            ],
+            "errors": [
+              14,
+              13,
+              12
+            ]
+          },
+          {
+            "name": "100 s⁻¹",
+            "values": [
+              226,
+              198,
+              174
+            ],
+            "errors": [
+              10,
+              9,
+              8
+            ]
+          }
+        ],
+        "x_label": "Số chu kỳ gia công",
+        "y_label": "Ứng suất chảy (Pa)",
+        "legend_position": "outside",
+        "text_reference": "Mức suy giảm ứng suất chảy theo chu kỳ gia công được đối chiếu với \\ref{fig:cycle-yield-stress}."
+      }
+    },
+    {
+      "after": 5,
+      "element": {
+        "type": "chart",
+        "chart_type": "grouped_bar",
+        "id": "fig:operating-window-comparison",
+        "caption": "So sánh độ nhớt và hệ số biến thiên giữa các nhóm cửa sổ vận hành",
+        "labels": [
+          "I",
+          "II",
+          "III",
+          "IV"
+        ],
+        "series": [
+          {
+            "name": "Độ nhớt trung vị",
+            "values": [
+              812,
+              768,
+              641,
+              528
+            ],
+            "errors": [
+              24,
+              19,
+              31,
+              42
+            ]
+          },
+          {
+            "name": "Hệ số biến thiên",
+            "values": [
+              4.8,
+              3.9,
+              8.7,
+              13.6
+            ],
+            "errors": [
+              0.4,
+              0.3,
+              0.7,
+              1.1
+            ]
+          }
+        ],
+        "x_label": "Nhóm điều kiện",
+        "y_label": "Giá trị đo",
+        "legend_position": "outside",
+        "text_reference": "So sánh các nhóm cửa sổ vận hành được trình bày tại \\ref{fig:operating-window-comparison}."
+      }
+    },
+    {
+      "after": 6,
+      "element": {
+        "type": "chart",
+        "chart_type": "box",
+        "id": "fig:viscosity-spread",
+        "caption": "Độ phân tán độ nhớt biểu kiến tại ba mức tốc độ cắt",
+        "labels": [
+          "1 s⁻¹",
+          "10 s⁻¹",
+          "100 s⁻¹"
+        ],
+        "series": [
+          {
+            "name": "Chu kỳ 1",
+            "stats": [
+              {
+                "min": 1710,
+                "q1": 1785,
+                "median": 1840,
+                "q3": 1902,
+                "max": 1980
+              },
+              {
+                "min": 642,
+                "q1": 665,
+                "median": 690,
+                "q3": 718,
+                "max": 746
+              },
+              {
+                "min": 198,
+                "q1": 207,
+                "median": 214,
+                "q3": 222,
+                "max": 234
+              }
+            ]
+          },
+          {
+            "name": "Chu kỳ 5",
+            "stats": [
+              {
+                "min": 1190,
+                "q1": 1251,
+                "median": 1295,
+                "q3": 1340,
+                "max": 1402
+              },
+              {
+                "min": 451,
+                "q1": 474,
+                "median": 492,
+                "q3": 511,
+                "max": 536
+              },
+              {
+                "min": 151,
+                "q1": 157,
+                "median": 163,
+                "q3": 170,
+                "max": 181
+              }
+            ]
+          }
+        ],
+        "x_label": "Tốc độ cắt",
+        "y_label": "Độ nhớt biểu kiến (Pa·s)",
+        "legend_position": "outside",
+        "text_reference": "Xu hướng phân tán độ nhớt được kiểm tra qua \\ref{fig:viscosity-spread}."
+      }
+    },
+    {
+      "after": 7,
+      "element": {
+        "type": "figure",
+        "figure_type": "block_diagram",
+        "id": "fig:field-measurement-flow",
+        "caption": "Sơ đồ khối quy trình ghi nhận dữ liệu lưu biến tại hiện trường",
+        "description": "Quy trình gồm tiếp nhận nguyên liệu, ổn định điều kiện đùn, lấy dòng vật liệu tại các vị trí khảo sát, đo độ nhớt và tổng hợp dữ liệu theo chu kỳ gia công.",
+        "labels": [
+          "Tiếp nhận nguyên liệu",
+          "Ổn định đùn",
+          "Lấy dòng vật liệu",
+          "Đo lưu biến",
+          "Tổng hợp dữ liệu"
+        ],
+        "text_reference": "Sơ đồ quy trình ghi nhận được đối chiếu với \\ref{fig:field-measurement-flow}."
+      }
+    },
+    {
+      "after": 8,
+      "element": {
+        "type": "figure",
+        "figure_type": "image_panel",
+        "id": "fig:extrudate-surface-panels",
+        "caption": "Ảnh đối chiếu bề mặt dòng đùn ở các mức độ ẩm và nhiệt độ đầu khuôn",
+        "description": "Bộ ảnh ghi nhận sự thay đổi bề mặt dòng đùn trong vùng vận hành ổn định và khi độ ẩm vượt ngưỡng kiểm soát.",
+        "labels": [
+          "Độ ẩm thấp",
+          "Vùng ổn định",
+          "Độ ẩm cao",
+          "Bề mặt đồng đều",
+          "Bề mặt gợn"
+        ],
+        "panels": [
+          {
+            "label": "A",
+            "description": "Dòng đùn ở độ ẩm 0,30% và nhiệt độ đầu khuôn 222°C, bề mặt liên tục."
+          },
+          {
+            "label": "B",
+            "description": "Dòng đùn ở độ ẩm 0,41% và nhiệt độ đầu khuôn 228°C, bề mặt đồng đều nhất."
+          },
+          {
+            "label": "C",
+            "description": "Dòng đùn ở độ ẩm 0,52% và nhiệt độ đầu khuôn 234°C, xuất hiện gợn nhẹ."
+          }
+        ],
+        "text_reference": "Bề mặt dòng đùn được kiểm tra qua \\ref{fig:extrudate-surface-panels}."
+      }
+    },
+    {
+      "after": 9,
+      "element": {
+        "type": "figure",
+        "figure_type": "block_diagram",
+        "id": "fig:control-loop",
+        "caption": "Sơ đồ khối vòng điều khiển độ ẩm và nhiệt độ đầu khuôn",
+        "description": "Vòng điều khiển sử dụng độ ẩm nguyên liệu và độ nhớt trực tuyến để hiệu chỉnh nhiệt độ đầu khuôn, tốc độ trục vít và thời gian lưu.",
+        "labels": [
+          "Độ ẩm nguyên liệu",
+          "Độ nhớt trực tuyến",
+          "Bộ điều khiển",
+          "Nhiệt độ đầu khuôn",
+          "Tốc độ trục vít",
+          "Thời gian lưu"
+        ],
+        "text_reference": "Vòng điều khiển được mô tả tại \\ref{fig:control-loop}."
+      }
+    }
+  ],
+  "code": [],
+  "references": [
+    {
+      "text": "[1] Nguyễn Minh Kha, Trần Ngọc Yến và Phạm Hoài An. Đặc trưng giảm nhớt của polyme nhiệt dẻo tái chế trong quá trình đùn liên tục. Tạp chí Lưu biến Polyme, 2021, 8(2), 41–52.",
+      "cite": "Nguyễn et al., 2021"
+    },
+    {
+      "text": "[2] Lê Bảo Châu và Vũ Thành Đạt. Ảnh hưởng của độ ẩm đến độ nhớt biểu kiến của vật liệu polyme tái chế. Kỷ yếu Công nghệ Vật liệu Nam Hải, 2020, 5, 117–126.",
+      "cite": "Lê and Vũ, 2020"
+    },
+    {
+      "text": "[3] Phan Khải Nguyên, Đỗ Thanh Hà và Hoàng Quang Vinh. Mô hình hóa ứng xử lưu biến phi Newton của dòng polyme trong đầu khuôn. Tạp chí Cơ học Vật liệu Ứng dụng, 2019, 12(4), 203–214.",
+      "cite": "Phan et al., 2019"
+    },
+    {
+      "text": "[4] Trần Uyên Linh và Bùi Đức Toàn. Đánh giá độ ổn định của dây chuyền đùn polyme tái chế tại cơ sở sản xuất. Công nghệ Gia công Vật liệu, 2022, 7(1), 15–27.",
+      "cite": "Trần and Bùi, 2022"
+    },
+    {
+      "text": "[5] Nguyễn Hoàng Phúc, Lâm Thùy Dương và Cao Minh Đức. Quan hệ giữa tốc độ cắt và độ nhớt của hỗn hợp polyme sau nhiều chu kỳ gia công. Tạp chí Kỹ thuật Polyme Miền Đông, 2021, 10(3), 88–99.",
+      "cite": "Nguyễn et al., 2021"
+    },
+    {
+      "text": "[6] Võ Ngọc Mai và Đặng Quốc Hưng. Ảnh hưởng của thời gian lưu đến suy giảm khối lượng phân tử trong đùn tái chế. Nghiên cứu Vật liệu Công nghiệp, 2018, 6(2), 63–74.",
+      "cite": "Võ and Đặng, 2018"
+    },
+    {
+      "text": "[7] Phạm Thanh Bình, Nguyễn Thảo Vy và Lý Công Sơn. Xác định chỉ số giảm nhớt bằng phép đo lưu biến ở nhiều tốc độ cắt. Tạp chí Đo lường Vật liệu, 2020, 9(4), 145–157.",
+      "cite": "Phạm et al., 2020"
+    },
+    {
+      "text": "[8] Đỗ Minh Quân và Trịnh Hải Yến. Tác động của lịch sử nhiệt đến mô đun đàn hồi của polyme nhiệt dẻo thu hồi. Khoa học Gia công Polyme, 2019, 4(3), 72–84.",
+      "cite": "Đỗ and Trịnh, 2019"
+    },
+    {
+      "text": "[9] Lê Quang Huy, Phan Tú Anh và Nguyễn Nhật Nam. Phân tích biến động giữa các mẻ nguyên liệu tái chế trong điều kiện vận hành thực tế. Tạp chí Công nghệ Sản xuất Xanh, 2022, 11(2), 101–113.",
+      "cite": "Lê et al., 2022"
+    },
+    {
+      "text": "[10] Hoàng Mai Phương và Vũ Đức Thịnh. Xây dựng khoảng nhiệt độ gia công ổn định cho dòng polyme có độ ẩm biến thiên. Vật liệu và Thiết bị Công nghiệp, 2021, 13(1), 29–40.",
+      "cite": "Hoàng and Vũ, 2021"
+    },
+    {
+      "text": "[11] Trần Minh Tân, Bùi Khánh Ly và Đặng Hoài Nam. Đo trực tuyến độ nhớt trong dây chuyền đùn quy mô sản xuất. Tạp chí Tự động hóa Vật liệu, 2020, 3(4), 55–67.",
+      "cite": "Trần et al., 2020"
+    },
+    {
+      "text": "[12] Nguyễn Hải Đăng và Lê Thu Hằng. Hiệu chỉnh nhiệt độ đầu khuôn theo tín hiệu lưu biến của vật liệu tái chế. Kỹ thuật Điều khiển Quá trình, 2022, 8(2), 119–130.",
+      "cite": "Nguyễn and Lê, 2022"
+    },
+    {
+      "text": "[13] Cao Thùy Linh, Phạm Đức Long và Võ Thành Vũ. Ảnh hưởng đồng thời của độ ẩm và tốc độ trục vít đến năng suất đùn. Tạp chí Thiết bị Polyme, 2018, 5(3), 91–103.",
+      "cite": "Cao et al., 2018"
+    },
+    {
+      "text": "[14] Lâm Quốc Việt và Đỗ Ngọc Anh. Liên hệ giữa độ nhớt biểu kiến và chất lượng bề mặt dòng đùn. Công nghệ Bề mặt Vật liệu, 2019, 7(2), 134–145.",
+      "cite": "Lâm and Đỗ, 2019"
+    },
+    {
+      "text": "[15] Phan Ngọc Minh, Trần Quốc Bảo và Hồ Thanh Vân. Suy giảm ứng suất chảy của polyme sau các chu kỳ gia công liên tiếp. Tạp chí Cơ học Polyme, 2021, 9(1), 23–35.",
+      "cite": "Phan et al., 2021"
+    },
+    {
+      "text": "[16] Vũ Khánh Toàn và Nguyễn Bích Ngọc. Đánh giá sai số lặp trong phép đo độ nhớt của vật liệu đa pha. Đo lường và Phân tích Công nghiệp, 2020, 6(1), 76–87.",
+      "cite": "Vũ and Nguyễn, 2020"
+    },
+    {
+      "text": "[17] Đặng Minh Khôi, Lê Phương Thảo và Trần Hà My. Ứng dụng hồi quy đa biến để xác định yếu tố chi phối độ ổn định lưu biến. Tạp chí Phân tích Dữ liệu Vật liệu, 2022, 4(2), 48–60.",
+      "cite": "Đặng et al., 2022"
+    },
+    {
+      "text": "[18] Bùi Hoàng Nam và Phạm Ngọc Lan. Đặc tính thư giãn ứng suất của polyme tái chế ở vùng nhiệt độ gia công. Nghiên cứu Cơ tính Polyme, 2018, 10(4), 161–172.",
+      "cite": "Bùi and Phạm, 2018"
+    },
+    {
+      "text": "[19] Nguyễn Đức Thành, Hoàng Thùy Chi và Lê Anh Khoa. Vai trò của thời gian lưu đối với sự đồng nhất của dòng vật liệu đùn. Tạp chí Quy trình Polyme, 2019, 8(1), 52–64.",
+      "cite": "Nguyễn et al., 2019"
+    },
+    {
+      "text": "[20] Trịnh Minh Anh và Cao Quốc Dũng. Kiểm soát độ ẩm nguyên liệu trước công đoạn gia công nhiệt. Công nghệ Bảo quản Vật liệu, 2021, 5(2), 97–108.",
+      "cite": "Trịnh and Cao, 2021"
+    },
+    {
+      "text": "[21] Võ Thanh Hà, Lâm Minh Quang và Đỗ Bảo Nguyên. So sánh các phương pháp xác định độ nhớt ở tốc độ cắt thấp. Tạp chí Thực nghiệm Lưu biến, 2020, 12(3), 184–196.",
+      "cite": "Võ et al., 2020"
+    },
+    {
+      "text": "[22] Phạm Hoài Thương và Nguyễn Khắc Duy. Biến đổi cấu trúc pha trong hỗn hợp polyme nhiệt dẻo sau gia công lặp. Vật liệu Polymer và Ứng dụng, 2018, 9(2), 38–50.",
+      "cite": "Phạm and Nguyễn, 2018"
+    },
+    {
+      "text": "[23] Lê Minh Triết, Vũ Ngọc Hân và Phan Đức Minh. Đánh giá ảnh hưởng của nhiệt độ đầu khuôn đến dao động áp suất trong đùn. Tạp chí Máy và Dòng Vật liệu, 2022, 6(4), 112–124.",
+      "cite": "Lê et al., 2022"
+    },
+    {
+      "text": "[24] Hoàng Quốc Việt và Trần Mỹ Dung. Phân tích độ phân tán dữ liệu lưu biến giữa các vị trí lấy dòng. Kỷ yếu Đo lường và Gia công, 2019, 3, 71–82.",
+      "cite": "Hoàng and Trần, 2019"
+    },
+    {
+      "text": "[25] Đỗ Hải Long, Nguyễn Thanh Tâm và Bùi Ngọc Phương. Tối ưu hóa cửa sổ vận hành cho vật liệu tái chế có độ ẩm dao động. Tạp chí Tối ưu Quy trình Vật liệu, 2021, 7(3), 126–138.",
+      "cite": "Đỗ et al., 2021"
+    },
+    {
+      "text": "[26] Trần Khải Hoàn và Lý Thùy Trang. Ảnh hưởng của tốc độ cắt đến độ đồng nhất bề mặt sản phẩm đùn. Công nghệ Tạo hình Polyme, 2020, 11(1), 33–45.",
+      "cite": "Trần and Lý, 2020"
+    },
+    {
+      "text": "[27] Nguyễn Phúc Lâm, Cao Ngọc Diệp và Phạm Thành Nhân. Phương pháp theo dõi lưu biến tại hiện trường trong điều kiện sản xuất liên tục. Tạp chí Kỹ thuật Hiện trường, 2022, 2(2), 58–70.",
+      "cite": "Nguyễn et al., 2022"
+    },
+    {
+      "text": "[28] Lê Hoài An và Vũ Minh Sơn. Khung kiểm soát nguyên liệu và thông số đùn cho polyme nhiệt dẻo thu hồi. Tạp chí Vật liệu Ứng dụng Nam Khê, 2019, 5(4), 149–161.",
+      "cite": "Lê and Vũ, 2019"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Giới thiệu"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nhựa nhiệt dẻo tái chế thường đi vào dây chuyền đùn với lịch sử nhiệt, cơ học và lưu trữ không đồng nhất. Sự không đồng nhất đó làm cho độ nhớt biểu kiến thay đổi theo tốc độ cắt, nhiệt độ đầu khuôn, độ ẩm và thời gian lưu, đồng thời tạo ra dao động về áp suất, năng suất và chất lượng bề mặt. Các nghiên cứu trước đã mô tả rõ xu hướng giảm nhớt của dòng polyme trong quá trình đùn liên tục \\cite{1}, ảnh hưởng của nước hấp phụ đến độ nhớt \\cite{2}, cũng như sự cần thiết phải dùng mô hình phi Newton khi diễn giải dữ liệu tại đầu khuôn \\cite{3}. Tuy vậy, nhiều kết quả được thu nhận trong điều kiện phòng thí nghiệm ổn định, chưa phản ánh đầy đủ biến động của dây chuyền vận hành tại hiện trường. \\fn{Các ký hiệu và đơn vị được giữ nhất quán với quy ước đo tại dây chuyền.}"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nghiên cứu này tập trung vào một dòng nhựa nhiệt dẻo tái chế được đưa qua dây chuyền đùn liên tục tại các vị trí đại diện cho vùng cấp liệu, vùng nén và đầu khuôn. Mục tiêu là xác định quan hệ giữa lịch sử gia công và đặc trưng lưu biến, lượng hóa vai trò của độ ẩm và thời gian lưu, đồng thời nhận diện khoảng vận hành có độ phân tán thấp. Độ nhớt biểu kiến được xem xét trong miền tốc độ cắt rộng, vì cùng một vật liệu có thể biểu hiện gần như ổn định ở tốc độ thấp nhưng giảm nhớt mạnh khi tốc độ cắt tăng. Chỉ số giảm nhớt, ứng suất chảy và mô đun đàn hồi được dùng cùng nhau để tránh đánh giá quá hẹp chỉ dựa trên một đại lượng."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ngay từ giai đoạn thiết kế, sự phân bố độ ẩm trong các lượt ghi nhận được đối chiếu với \\ref{fig:humidity-distribution}; quan hệ giữa nhiệt độ đầu khuôn, thời gian lưu và độ nhớt được theo dõi theo \\ref{fig:temperature-residence-scatter}. Hai cách nhìn này giúp phân biệt ảnh hưởng nhiệt trực tiếp với ảnh hưởng của lịch sử lưu giữ vật liệu. Các công trình về độ ổn định dây chuyền \\cite{4}, quan hệ tốc độ cắt--độ nhớt \\cite{5} và suy giảm khối lượng phân tử theo thời gian lưu \\cite{6} được dùng làm cơ sở hình thành giả thuyết. Với vùng cắt khảo sát, quan hệ định tính có thể viết bằng ký hiệu inline $\\eta \\propto \\gamma^{n-1}$, trong đó $n<1$ biểu thị hiện tượng giảm nhớt."
+    },
+    {
+      "type": "paragraph",
+      "text": "Câu hỏi trung tâm là liệu một khoảng nhiệt độ hẹp có thể bù trừ được biến động độ ẩm mà không làm tăng quá mức thời gian lưu hay không. Ngoài ra, nghiên cứu kiểm tra khả năng dùng tín hiệu lưu biến tại hiện trường để điều chỉnh tốc độ trục vít và nhiệt độ đầu khuôn. Chỉ số giảm nhớt được xác định từ nhiều tốc độ cắt theo phương pháp đã được thảo luận trong các nghiên cứu đo lưu biến đa mức \\cite{7}; tác động của lịch sử nhiệt lên mô đun đàn hồi được diễn giải theo hướng suy giảm cấu trúc mạng vật liệu \\cite{8}. Các mã tham chiếu \\ref{tab:die-line-conditions}, \\ref{tab:rheology-cycle-results} và \\ref{tab:operating-window} được dùng trong phần mô tả và phân tích, nhưng không thay thế cho diễn giải liên tục về cơ chế."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Khu vực nghiên cứu"
+    },
+    {
+      "type": "paragraph",
+      "text": "Khảo sát được thực hiện tại một dây chuyền đùn đặt trong khu vực gia công polyme của Trung tâm Công nghệ Gia công Polyme Nam Khê, thuộc địa bàn tỉnh Hải Lâm. Dây chuyền hoạt động theo ca, tiếp nhận nguyên liệu tái chế đã phân loại, sấy sơ bộ và phối trộn trước khi cấp vào phễu. Khu vực đo có mái che nhưng không được cách ly hoàn toàn với môi trường, vì vậy nhiệt độ không khí, độ ẩm tương đối và thời gian chờ trước cấp liệu có thể biến động giữa các lượt vận hành. Điều kiện này phù hợp với mục tiêu đánh giá khả năng kiểm soát lưu biến trong sản xuất thực tế thay vì trong một hệ kín lý tưởng."
+    },
+    {
+      "type": "paragraph",
+      "text": "Dòng vật liệu được theo dõi từ cấp liệu đến vùng đầu khuôn. Các vị trí A và B đại diện cho giai đoạn vật liệu bắt đầu nóng chảy và chịu nén; vị trí C nằm gần vùng đầu khuôn có độ đồng nhất cao hơn, còn vị trí D được dùng để kiểm tra tác động của nhiệt độ cao và thời gian lưu dài. Mỗi vị trí được nhận diện bằng thời điểm ổn định nhiệt, tốc độ trục vít và trạng thái dòng đùn. Trong diễn giải hiện trường, thời gian lưu không được xem là một hằng số của thiết bị, vì nó thay đổi theo mức nạp, ma sát thành và độ nhớt tức thời. Điều này phù hợp với nhận định rằng thời gian lưu ảnh hưởng trực tiếp đến sự đồng nhất của dòng vật liệu \\cite{19}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Các lượt ghi nhận độ ẩm được chia thành bốn khoảng để thuận tiện cho so sánh. Phân bố chính tập trung ở vùng 0,36--0,45%, trong khi các lượt có độ ẩm cao hơn 0,55% ít hơn nhưng gây dao động rõ rệt. Việc kiểm soát trước gia công được xây dựng theo khuyến nghị về bảo quản và sấy vật liệu \\cite{20}. Vì nước có thể thúc đẩy thủy phân hoặc tạo bọt cục bộ khi nhiệt tăng, mọi thay đổi bề mặt được xem xét đồng thời với tín hiệu áp suất và độ nhớt, thay vì quy cho nhiệt độ một cách đơn giản."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Quy trình lấy mẫu"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nguyên liệu được tiếp nhận theo từng mẻ vận hành và chia thành các phần liên tiếp theo thời gian cấp vào phễu. Trước khi ghi nhận, vật liệu được giữ trong điều kiện bảo quản kín, sau đó xác định độ ẩm bằng phép sấy khối lượng. Mỗi lượt lấy dòng được thực hiện sau khi nhiệt độ đầu khuôn, tải động cơ và áp suất đã dao động trong giới hạn cho phép trong ít nhất một khoảng thời gian ổn định. Dòng vật liệu được thu ở cùng vị trí tương đối trên đầu khuôn, tránh phần khởi động và phần chuyển tiếp giữa hai mẻ. Cách làm này giảm sai số do thay đổi hình học dòng và phù hợp với hướng dẫn theo dõi lưu biến liên tục tại hiện trường \\cite{27}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Tại mỗi điều kiện, nhóm ghi nhận ba mức tốc độ cắt danh định là $1$, $10$ và $100\\,\\mathrm{s}^{-1}$. Mỗi mức được lặp lại đủ số lần để tính trung vị và khoảng phân tán, sau đó kiểm tra lại bằng một lượt đo độc lập ở cuối chu kỳ. Các giá trị bất thường chỉ bị loại khi đồng thời có dấu hiệu mất ổn định áp suất hoặc gián đoạn dòng; không loại dữ liệu chỉ vì độ nhớt cao hay thấp hơn xu hướng chung. Sai số lặp trong phép đo vật liệu đa pha thường chịu ảnh hưởng của phân tán cấu trúc và lịch sử nạp, do đó việc giữ nguyên tiêu chí loại dữ liệu là cần thiết \\cite{16}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Lịch sử gia công được tạo bằng cách cho dòng vật liệu đi qua dây chuyền một, ba hoặc năm chu kỳ. Sau mỗi chu kỳ, phần dòng ổn định được đưa trở lại phễu theo cùng quy trình, trong khi điều kiện nhiệt được ghi liên tục. Việc này cho phép phân biệt biến đổi do cắt và nhiệt với biến đổi do thời gian chờ ngoài thiết bị. Nhiệt độ đầu khuôn được đặt trong khoảng 205--240 °C, tốc độ trục vít thay đổi quanh vùng vận hành danh định, còn thời gian lưu được suy ra từ khối lượng vật liệu trong vùng nóng chảy và lưu lượng thực tế. Sơ đồ quy trình ghi nhận được đối chiếu với \\ref{fig:field-measurement-flow}."
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "Kiểm tra trạng thái khô, độ sạch và lịch sử lưu giữ của từng mẻ nguyên liệu.",
+        "Ổn định nhiệt độ đầu khuôn, tốc độ trục vít và tải cấp liệu trước khi ghi dữ liệu.",
+        "Lấy dòng vật liệu tại vị trí quy định, đồng thời ghi thời gian, độ ẩm và áp suất.",
+        "Đo độ nhớt ở ba mức tốc độ cắt, sau đó lặp lại phép đo để xác định độ phân tán.",
+        "Đối chiếu tín hiệu lưu biến với bề mặt dòng đùn và tổng hợp theo chu kỳ gia công."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Đo lường"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Thiết lập phép đo và xử lý dữ liệu"
+    },
+    {
+      "type": "paragraph",
+      "text": "Độ nhớt được xác định từ ứng suất cắt và tốc độ cắt trong vùng dòng ổn định. Với mỗi lượt đo, tín hiệu được làm trơn theo thời gian ngắn hơn nhiều so với thời gian lưu, nhằm giảm nhiễu điện nhưng vẫn giữ được dao động thật của quá trình. Quan hệ cơ bản được biểu diễn inline bằng $\\eta_{app}=\\sigma/\\gamma$; khi ứng suất tăng chậm hơn tốc độ cắt, độ nhớt biểu kiến giảm. Chỉ số $n$ được suy ra từ độ dốc logarit giữa các mức tốc độ cắt, với $n$ càng nhỏ thì mức giảm nhớt càng rõ. Cách xác định này tương thích với các phương pháp đo ở tốc độ cắt thấp và trung bình \\cite{21}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Nhiệt độ được đo tại thành đầu khuôn và kiểm tra bằng đầu dò độc lập ở cuối mỗi lượt. Độ ẩm được ghi trước khi cấp liệu, sau đó đối chiếu với khối lượng trước và sau sấy. Thời gian lưu được tính từ thời điểm vật liệu đi vào vùng gia nhiệt đến thời điểm phần tương ứng xuất hiện tại đầu khuôn; do đó giá trị này bao gồm cả thời gian vận chuyển và thời gian trộn. Để mô tả ảnh hưởng của suy giảm cấu trúc, mô đun đàn hồi được đánh giá qua đáp ứng thư giãn ngắn, còn ứng suất chảy được lấy tại điểm chuyển tiếp giữa đáp ứng đàn hồi và dòng ổn định. Các cơ chế thư giãn ở vùng nhiệt gia công đã được ghi nhận là nhạy với lịch sử nhiệt \\cite{18}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Phép tính độ phân tán dùng trung vị, khoảng tứ phân vị và hệ số biến thiên. Khi có nhiều mẻ, mỗi điều kiện được chuẩn hóa theo nhiệt độ đầu khuôn trước khi so sánh, nhưng không chuẩn hóa theo độ ẩm vì chính độ ẩm là biến giải thích. Trong phân tích hồi quy, các biến đầu vào gồm nhiệt độ, độ ẩm, tốc độ trục vít và thời gian lưu; tương tác giữa độ ẩm và nhiệt độ được giữ lại khi làm giảm sai số dự báo. Phương pháp hồi quy đa biến cho dữ liệu lưu biến tại hiện trường đã được đề xuất để nhận diện yếu tố chi phối ổn định \\cite{17}. Sai số thiết bị được tách khỏi sai số giữa các lượt đo bằng cách lặp lại cùng một điều kiện ở đầu và cuối ca."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cửa sổ vận hành được gọi là ổn định khi đồng thời đáp ứng ba tiêu chí: độ nhớt trung vị không giảm đột ngột, hệ số biến thiên dưới 6%, và bề mặt dòng đùn không xuất hiện gợn liên tục. Bề mặt được kiểm tra bằng quan sát trực tiếp và đối chiếu với \\ref{fig:extrudate-surface-panels}; ảnh hưởng của độ nhớt đến chất lượng bề mặt đã được mô tả trong các nghiên cứu về dòng đùn \\cite{14}. Việc đánh giá đồng thời giúp tránh tình trạng chọn nhiệt độ chỉ vì năng suất cao nhưng bỏ qua khuyết tật bề mặt hoặc dao động áp suất."
+    },
+    {
+      "type": "box",
+      "kind": "remark",
+      "title": "Quy ước diễn giải",
+      "text": "Trong toàn bộ phân tích, độ nhớt thấp không mặc nhiên được xem là tốt. Một điều kiện chỉ được coi là thuận lợi khi độ nhớt, năng suất, áp suất và bề mặt cùng duy trì ổn định. Vì vậy, độ ẩm cao có thể làm dòng chảy dễ hơn trong thời gian ngắn nhưng vẫn gây suy giảm cấu trúc và tăng phân tán giữa các lượt đo."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Kết quả"
+    },
+    {
+      "type": "paragraph",
+      "text": "Dữ liệu vận hành cho thấy độ ẩm tăng đồng thời với xu hướng giảm độ nhớt ở nhiệt độ đầu khuôn cao hơn, nhưng độ phân tán cũng tăng. Ở vùng độ ẩm 0,25--0,35%, độ nhớt trung vị vẫn tương đối cao và bề mặt dòng liên tục. Vùng 0,36--0,45% cho cân bằng tốt nhất giữa khả năng chảy và ổn định. Khi độ ẩm vượt 0,46%, tín hiệu mô men dao động mạnh hơn, thời gian lưu hiệu dụng kéo dài và bề mặt bắt đầu xuất hiện gợn nhẹ. Kết quả này phù hợp với nhận định rằng độ ẩm và tốc độ trục vít có ảnh hưởng đồng thời đến năng suất đùn \\cite{13}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ở chu kỳ đầu, độ nhớt tại tốc độ cắt $1\\,\\mathrm{s}^{-1}$ đạt khoảng 1840 Pa·s, giảm còn khoảng 690 Pa·s tại $10\\,\\mathrm{s}^{-1}$ và 214 Pa·s tại $100\\,\\mathrm{s}^{-1}$. Sau ba chu kỳ, các giá trị tương ứng giảm còn 1510, 574 và 186 Pa·s; sau năm chu kỳ tiếp tục giảm còn 1295, 492 và 163 Pa·s. Chỉ số giảm nhớt giảm từ gần 0,71 xuống khoảng 0,59 ở vùng cắt cao, cho thấy lịch sử gia công làm thay đổi cả độ nhớt ở tốc độ thấp lẫn độ nhạy với cắt. Xu hướng này tương đồng với các quan sát về hỗn hợp polyme sau nhiều chu kỳ \\cite{5} và suy giảm ứng suất chảy sau gia công lặp \\cite{15}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ứng suất chảy cũng giảm theo chu kỳ. Ở tốc độ cắt thấp, giá trị trung vị giảm từ 426 Pa ở chu kỳ một xuống 371 Pa ở chu kỳ ba và 338 Pa ở chu kỳ năm. Ở tốc độ cắt cao, mức giảm tương ứng là 226, 198 và 174 Pa. Sự suy giảm không chỉ phản ánh hiện tượng cắt làm định hướng pha mà còn gợi ý đứt mạch hoặc giảm liên kết giữa các miền vật liệu. Thay đổi cấu trúc pha sau gia công lặp có thể làm giảm khả năng truyền ứng suất giữa các thành phần \\cite{22}. Kết quả chi tiết theo chu kỳ được diễn giải cùng \\ref{tab:rheology-cycle-results} và xu hướng phân tán được kiểm tra qua \\ref{fig:viscosity-spread}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Nhiệt độ đầu khuôn từ 220 đến 230 °C tạo ra vùng có độ nhớt giảm đều nhưng không làm tăng mạnh dao động. Ở 235 °C, độ nhớt trung vị thấp hơn rõ rệt, song hệ số biến thiên tăng do thời gian lưu dài và độ ẩm không đồng nhất. Nhóm điều kiện II, với độ ẩm 0,36--0,45% và nhiệt độ 225--230 °C, có hệ số biến thiên 3,9%, thấp hơn nhóm I là 4,8%, nhóm III là 8,7% và nhóm IV là 13,6%. Kết quả này phù hợp với nhận định về khoảng nhiệt độ ổn định cho vật liệu có độ ẩm dao động \\cite{10}. Chi tiết phân loại được đối chiếu với \\ref{tab:operating-window} và phép so sánh trực quan ở \\ref{fig:operating-window-comparison}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Mô đun đàn hồi giảm sau mỗi chu kỳ, rõ nhất ở các lượt có thời gian lưu trên tám phút. Tại vùng nhiệt cao, đáp ứng thư giãn diễn ra nhanh hơn và phần ứng suất còn lại sau thời gian theo dõi ngắn thấp hơn. Hiện tượng này cho thấy vật liệu mất dần khả năng duy trì mạng tương tác trong thời gian dài. Khi thời gian lưu tăng, sự suy giảm khối lượng phân tử có thể làm giảm độ nhớt ở tốc độ cắt thấp, trong khi quá trình định hướng làm cho độ nhạy với tốc độ cắt tăng. Kết quả về độ nhớt và thời gian lưu được kiểm tra cùng dữ liệu vận hành tại \\ref{fig:control-loop}, nơi các tín hiệu độ ẩm và độ nhớt được dùng để đề xuất hiệu chỉnh."
+    },
+    {
+      "type": "paragraph",
+      "text": "Điều kiện A có nhiệt độ đầu khuôn 205 °C, tốc độ trục vít 42 vòng/phút, độ ẩm 0,34% và thời gian lưu 6,8 phút. Điều kiện B tăng tương ứng lên 215 °C, 48 vòng/phút, 0,37% và 7,5 phút. Điều kiện C đạt 225 °C, 55 vòng/phút, 0,41% và 8,2 phút, còn điều kiện D đạt 235 °C, 55 vòng/phút, 0,46% và 8,7 phút. Dữ liệu cho thấy C có trạng thái cân bằng tốt hơn D dù D có độ nhớt thấp hơn. Các thông tin vận hành được đối chiếu với \\ref{tab:die-line-conditions}; ảnh hưởng của nhiệt độ đầu khuôn đến dao động áp suất cũng phù hợp với các kết quả đã công bố \\cite{23}."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Thảo luận"
+    },
+    {
+      "type": "paragraph",
+      "text": "Kết quả cho thấy độ nhớt của vật liệu không thể được mô tả chỉ bằng nhiệt độ. Khi độ ẩm tăng, nước có thể làm thay đổi ma sát giữa các miền pha, thúc đẩy quá trình phân hủy ở vùng nhiệt cao và tạo ra bọt nhỏ làm gián đoạn dòng. Vì vậy, việc tăng nhiệt để bù cho độ nhớt giảm có thể làm thời gian lưu hiệu dụng dài hơn và làm suy giảm vật liệu nhanh hơn. Mối quan hệ giữa độ ẩm và độ nhớt biểu kiến đã được quan sát trong các hệ polyme tái chế khác \\cite{2}; điểm đáng chú ý ở đây là ảnh hưởng đó biểu hiện rõ qua sự tăng phân tán giữa các lượt đo, chứ không chỉ qua giá trị trung vị."
+    },
+    {
+      "type": "paragraph",
+      "text": "Sự giảm nhớt theo tốc độ cắt phản ánh bản chất phi Newton của dòng vật liệu. Ở tốc độ thấp, các mạch và miền pha còn giữ cấu hình tương đối rối, tạo ra ứng suất chảy lớn. Khi tốc độ cắt tăng, các miền này định hướng theo dòng, làm giảm sức cản. Có thể mô tả xu hướng bằng $\\sigma=K\\gamma^n$ và $\\eta_{app}=K\\gamma^{n-1}$, trong đó $K$ thay đổi theo chu kỳ và nhiệt độ. Việc $K$ giảm sau gia công lặp cho thấy độ bền cấu trúc giảm, còn $n$ giảm cho thấy độ nhạy cắt tăng. Mô hình dòng phi Newton trong đầu khuôn được dùng rộng rãi để tách hai ảnh hưởng này \\cite{3}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Thời gian lưu là biến liên kết giữa nhiệt và cơ. Một thời gian lưu dài có thể giúp vật liệu trộn đều hơn ở mức vừa phải, nhưng khi đi kèm nhiệt độ cao, nó làm tăng cơ hội đứt mạch và thay đổi pha. Kết quả tại năm chu kỳ cho thấy độ nhớt ở tốc độ cắt thấp giảm mạnh hơn so với tốc độ cắt cao, chứng tỏ phần cấu trúc chịu trách nhiệm cho ứng xử chậm đã bị suy yếu. Quan sát này tương thích với các nghiên cứu về giảm khối lượng phân tử trong đùn tái chế \\cite{6} và vai trò của thời gian lưu đối với độ đồng nhất dòng \\cite{19}. Nó cũng giải thích vì sao chỉ tăng tốc độ trục vít không phải lúc nào cũng cải thiện năng suất."
+    },
+    {
+      "type": "paragraph",
+      "text": "Khoảng vận hành tốt nhất nằm quanh độ ẩm 0,36--0,45% và nhiệt độ đầu khuôn 225--230 °C. Ở vùng này, độ nhớt đủ thấp để duy trì dòng liên tục nhưng chưa thấp đến mức làm mất ổn định áp suất. Bề mặt đồng đều nhất xuất hiện gần 228 °C và độ ẩm 0,41%, trong khi điều kiện 234 °C và 0,52% tạo gợn nhẹ. Điều này củng cố quan điểm rằng chất lượng bề mặt cần được xem là chỉ báo lưu biến tại chỗ, không chỉ là tiêu chí sau gia công. Tốc độ cắt cũng có vai trò, vì tốc độ quá thấp làm rõ khuyết tật do ứng suất chảy, còn tốc độ quá cao có thể làm tăng định hướng bề mặt \\cite{26}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Một hệ điều khiển thực tế nên dùng độ ẩm như biến dự báo và độ nhớt trực tuyến như biến phản hồi. Khi độ ẩm tăng nhưng độ nhớt giảm trong giới hạn, bộ điều khiển có thể giảm nhẹ nhiệt độ hoặc rút ngắn thời gian lưu thay vì tăng nhiệt. Khi độ nhớt tăng đột ngột, cần kiểm tra độ ẩm, mức nạp và trạng thái trộn trước khi điều chỉnh tốc độ trục vít. Cách tiếp cận này phù hợp với các nghiên cứu về đo trực tuyến \\cite{11} và hiệu chỉnh nhiệt độ đầu khuôn theo tín hiệu lưu biến \\cite{12}. Sự phân tán giữa các mẻ cần được đưa vào thuật toán, bởi giá trị trung bình đơn lẻ có thể che khuất một lượt vận hành bất ổn \\cite{9}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Các kết quả cũng xác nhận rằng việc kiểm soát nguyên liệu phải gắn với kiểm soát thiết bị. Nếu chỉ sấy để đưa độ ẩm về một giá trị cố định nhưng không theo dõi lịch sử nhiệt, độ nhớt vẫn có thể thay đổi do các chu kỳ trước. Ngược lại, nếu chỉ giữ nhiệt độ đầu khuôn ổn định mà bỏ qua độ ẩm, năng suất và bề mặt có thể dao động theo từng mẻ. Khung phối hợp giữa nguyên liệu, nhiệt độ, tốc độ trục vít và thời gian lưu được đề xuất trong các nghiên cứu tối ưu hóa cửa sổ vận hành \\cite{25} và kiểm soát vật liệu thu hồi \\cite{28}. Trong nghiên cứu này, sự phối hợp đó thể hiện rõ nhất ở ưu thế của nhóm II."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Hạn chế"
+    },
+    {
+      "type": "paragraph",
+      "text": "Thứ nhất, khảo sát chỉ tập trung vào một dòng nhựa nhiệt dẻo tái chế và một cấu hình đầu khuôn. Thành phần pha, mức độ oxy hóa và lịch sử của từng mẻ có thể khác nhau ngoài các biến đã ghi nhận. Do đó, các khoảng nhiệt độ được xác định không nên áp dụng nguyên trạng cho vật liệu có phụ gia hoặc tỷ lệ pha khác. Phân tích độ phân tán giữa các vị trí cho thấy sai khác cục bộ vẫn tồn tại ngay cả khi điều kiện bên ngoài giống nhau, phù hợp với nhận định về phân tán dữ liệu lưu biến giữa các vị trí lấy dòng \\cite{24}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Thứ hai, phép xác định thời gian lưu dựa trên khối lượng và tín hiệu vận hành, chưa có chất đánh dấu chuyên biệt để đo phân bố thời gian đầy đủ. Giá trị trung bình có thể bỏ qua phần vật liệu bị giữ lâu trong vùng chết của thiết bị. Thứ ba, mô đun đàn hồi và ứng suất chảy được xác định bằng phép đo ngắn, vì vậy chưa mô tả được đầy đủ thư giãn dài hạn. Các kết quả về sai số lặp và độ nhạy của phép đo cần được mở rộng bằng nhiều ca vận hành hơn, đặc biệt ở vùng độ ẩm cao. Việc dùng trung vị giúp giảm ảnh hưởng ngoại lệ nhưng không loại bỏ được sai lệch có tính hệ thống."
+    },
+    {
+      "type": "paragraph",
+      "text": "Thứ tư, mối liên hệ giữa độ nhớt và chất lượng bề mặt vẫn chủ yếu dựa trên đánh giá tại dây chuyền. Một nghiên cứu tiếp theo nên bổ sung đo hình học bề mặt, khối lượng phân tử và thành phần pha trước và sau từng chu kỳ. Ngoài ra, cần kiểm tra khả năng chuyển mô hình điều khiển sang tốc độ cấp liệu khác. Khi năng suất tăng, nhiệt sinh do ma sát và thời gian lưu có thể thay đổi đồng thời, làm cho tác động riêng của từng biến khó tách. Những hạn chế này không phủ nhận xu hướng chính, nhưng nhấn mạnh rằng cửa sổ vận hành phải được xác nhận lại trước khi áp dụng cho dây chuyền khác."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Kết luận"
+    },
+    {
+      "type": "paragraph",
+      "text": "Khảo sát tại hiện trường cho thấy nhựa nhiệt dẻo tái chế có tính giảm nhớt rõ theo tốc độ cắt, đồng thời độ nhớt, ứng suất chảy và mô đun đàn hồi giảm sau các chu kỳ gia công liên tiếp. Độ ẩm vượt vùng kiểm soát làm tăng phân tán giữa các lượt đo, đặc biệt khi nhiệt độ đầu khuôn và thời gian lưu cùng tăng. Trong các điều kiện được khảo sát, vùng độ ẩm 0,36--0,45% kết hợp với nhiệt độ đầu khuôn 225--230 °C cho độ ổn định cao nhất. Đây là vùng duy trì được sự cân bằng giữa khả năng chảy, năng suất và chất lượng bề mặt."
+    },
+    {
+      "type": "paragraph",
+      "text": "Hai biến vận hành có ảnh hưởng lớn nhất là nhiệt độ đầu khuôn và thời gian lưu, nhưng hiệu quả điều chỉnh của chúng phụ thuộc vào độ ẩm và lịch sử gia công. Việc theo dõi độ nhớt trực tuyến cùng độ ẩm có thể tạo cơ sở cho vòng điều khiển thích ứng, trong đó nhiệt độ, tốc độ trục vít và thời gian lưu được hiệu chỉnh theo trạng thái thực của vật liệu. Kết quả cung cấp một quy trình đánh giá có thể triển khai tại dây chuyền: kiểm tra nguyên liệu, ổn định thiết bị, đo ở nhiều tốc độ cắt, theo dõi chu kỳ và xác định cửa sổ có hệ số biến thiên thấp. Cách tiếp cận này hỗ trợ kiểm soát nguyên liệu và thông số đùn mà không tách rời đặc trưng lưu biến khỏi chất lượng sản phẩm."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cuối cùng, dữ liệu cho thấy việc đánh giá polyme tái chế cần dựa trên lịch sử của vật liệu thay vì chỉ dựa trên một phép đo đầu vào. Một mẻ có độ nhớt thấp có thể thuận lợi trong ngắn hạn nhưng vẫn tiềm ẩn suy giảm cấu trúc nếu đạt được trạng thái đó do nhiệt và thời gian lưu quá lớn. Vì vậy, chỉ số giảm nhớt, ứng suất chảy, mô đun đàn hồi, độ ẩm và bề mặt dòng đùn nên được theo dõi như một hệ liên kết. Kết luận này mở ra hướng phát triển bộ giám sát lưu biến tại hiện trường có khả năng cảnh báo sớm và điều chỉnh quá trình trước khi dao động chất lượng trở nên rõ rệt."
+    }
+  ]
+}

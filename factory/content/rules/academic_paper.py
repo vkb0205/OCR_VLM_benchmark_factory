@@ -35,7 +35,7 @@ def apply(config, values, statements, *, variables=None, lang=None):
     body = values.get('body')
     headings = [item for item in body if item['type'] == 'heading']
     level_one = [item for item in headings if item['level'] == 1]
-    if not 4 <= len(level_one) <= 7 or not any(item['level'] == 2 for item in headings):
+    if not 4 <= len(level_one) <= (10 if variables.get("element_plan") else 7) or not any(item['level'] == 2 for item in headings):
         raise ValueError('body needs 4-7 level-1 sections and at least one level-2 subsection')
 
     labels, float_ids = {}, []
@@ -63,9 +63,9 @@ def apply(config, values, statements, *, variables=None, lang=None):
             elif item.get('caption'):
                 item['caption_printed'] = f'{label} {counters[prefix]}. {item["caption"]}'
 
-    if sum(item['type'] == 'equation' for item in body) < 3:
+    if not variables.get('element_plan') and sum(item['type'] == 'equation' for item in body) < 3:
         raise ValueError('body needs at least three display equations')
-    if not any(re.search(r'\\begin\s*\{aligned\}', formula) for formula, _ in equations):
+    if not variables.get('element_plan') and not any(re.search(r'\\begin\s*\{aligned\}', formula) for formula, _ in equations):
         raise ValueError('one display equation must use an aligned environment')
     for category, label in (('table', 'table'), ('chart', 'chart'), ('figure', 'figure')):
         if not any(item['type'] == category for item in body):

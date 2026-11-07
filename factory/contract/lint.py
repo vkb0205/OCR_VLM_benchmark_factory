@@ -9,7 +9,7 @@ from typing import NamedTuple
 import unicodedata
 
 from factory.contract.extract import Element, extract, extract_text, normalize, parse_html, table_html
-from factory.contract.models import CONTRACT_VERSION, BaseSpec, DocIR, DocumentManifest, Pagination, Trace
+from factory.contract.models import CONTRACT_VERSION, SUPPORTED_CONTRACT_VERSIONS, BaseSpec, DocIR, DocumentManifest, Pagination, Trace
 from factory.contract.taxonomy import Taxonomy
 
 
@@ -80,16 +80,16 @@ def lint_static(folder: Path, taxonomy: Taxonomy | None = None) -> list[Violatio
         report("C001", "pages/ and assets/ must be directories")
         return issues
     try:
-        manifest = DocumentManifest.model_validate_json((folder / "document.json").read_text())
-        docir = DocIR.model_validate_json((folder / "content.json").read_text())
-        pagination = Pagination.model_validate_json((folder / "pagination.json").read_text())
-        spec = BaseSpec.model_validate_json((folder / "spec.json").read_text())
-        trace = Trace.model_validate_json((folder / "trace.json").read_text())
+        manifest = DocumentManifest.model_validate_json((folder / "document.json").read_text(encoding="utf-8"))
+        docir = DocIR.model_validate_json((folder / "content.json").read_text(encoding="utf-8"))
+        pagination = Pagination.model_validate_json((folder / "pagination.json").read_text(encoding="utf-8"))
+        spec = BaseSpec.model_validate_json((folder / "spec.json").read_text(encoding="utf-8"))
+        trace = Trace.model_validate_json((folder / "trace.json").read_text(encoding="utf-8"))
         if any(obj.doc_id != manifest.doc_id for obj in (docir, pagination, spec, trace)):
             raise ValueError("Bundle document IDs disagree")
         if docir.doc_type != manifest.doc_type or spec.doc_type != manifest.doc_type:
             raise ValueError("Bundle document types disagree")
-        if manifest.contract_version != CONTRACT_VERSION:
+        if manifest.contract_version not in SUPPORTED_CONTRACT_VERSIONS:
             raise ValueError("Unsupported contract version")
         if not re.fullmatch(re.escape(manifest.doc_type) + r"_\d{6}", manifest.doc_id):
             raise ValueError("Invalid document ID")
@@ -265,14 +265,17 @@ def lint_static(folder: Path, taxonomy: Taxonomy | None = None) -> list[Violatio
             original_rows = [n for n in original.walk() if n.tag == "tr"]
             headers, body_rows = original_rows[:content.header_rows], original_rows[content.header_rows:]
             actual_rows, ranges = [], []
+            occurrence_by_page = defaultdict(int)
             for page_index, node in occurrences:
                 rows = [n for n in node.walk() if n.tag == "tr"]
                 if [table_html(n) for n in rows[:content.header_rows]] != [table_html(n) for n in headers]:
                     report("C013", f"Repeated header changed: {bid}", page_index)
                 actual_rows.extend(rows[content.header_rows:])
                 refs = [r for p in pagination.pages if p.index == page_index for r in p.blocks if r.id == bid]
-                if refs and refs[0].row_range is not None:
-                    start, end = refs[0].row_range
+                offset = occurrence_by_page[page_index]
+                occurrence_by_page[page_index] += 1
+                if offset < len(refs) and refs[offset].row_range is not None:
+                    start, end = refs[offset].row_range
                     ranges.append((start, end))
                     if [table_html(n) for n in rows[content.header_rows:]] != [table_html(n) for n in body_rows[start:end]]:
                         report("C012", f"Table row range differs from DOM: {bid}", page_index)
@@ -302,7 +305,8 @@ async def lint_document(folder: Path, browser, taxonomy: Taxonomy | None = None)
     issues = lint_static(folder, taxonomy)
     if any(v.rule_id == "C001" for v in issues):
         return issues
-    manifest = DocumentManifest.model_validate_json((folder / "document.json").read_text())
+    manifest = DocumentManifest.model_validate_json((folder / "document.json").read_text(encoding="utf-8"))
+    ro_measurements = []
     for entry in manifest.pages:
         try:
             result = await browser.measure(safe_path(folder, entry.file))
@@ -318,6 +322,42 @@ async def lint_document(folder: Path, browser, taxonomy: Taxonomy | None = None)
             b = result["body"]
             if abs(b["width"] - entry.width_mm * 96 / 25.4) > 1 or abs(b["height"] - entry.height_mm * 96 / 25.4) > 1:
                 issues.append(Violation("C002", "E", entry.index, "Body dimensions differ from manifest"))
+            if manifest.doc_type == "academic_paper":
+                async with browser.page(safe_path(folder, entry.file)) as (page, blocked, failed):
+                    if blocked or failed:
+                        raise ValueError(f"resources blocked while measuring academic regions: {blocked + failed}")
+                    regions = await page.evaluate("""() => {
+                      const main=document.querySelector('section.page>main');
+                      if(!main) return null;
+                      const m=main.getBoundingClientRect();
+                      return [...main.querySelectorAll('[data-region]')].map(n=>{
+                        const r=n.getBoundingClientRect();
+                        return {chain:parseInt(n.dataset.chain||'0',10),span:parseInt(n.dataset.floatSpan||'1',10),
+                          box:[(r.left-m.left)/m.width,(r.top-m.top)/m.height,r.width/m.width,r.height/m.height]};
+                      }).sort((a,b)=>a.chain-b.chain);
+                    }""")
+                root = parse_html(safe_path(folder, entry.file).read_text(encoding="utf-8"))
+                section = next((n for n in root.walk() if n.tag == "section" and "page" in n.attrs.get("class", "").split()), None)
+                level = section.attrs.get("data-ro-level") if section else None
+                if not regions:
+                    issues.append(Violation("C013", "E", entry.index, "Academic regions could not be measured for reading-order level"))
+                else:
+                    from factory.design.backbone import geometry_signature
+                    ro_measurements.append((entry.index, level, entry.ro_level,
+                                            [tuple(row["box"]) for row in regions],
+                                            [row["span"] for row in regions],
+                                            geometry_signature([tuple(row["box"]) for row in regions])))
         except Exception as exc:
             issues.append(Violation("C003", "E", entry.index, str(exc)))
+    if ro_measurements:
+        from factory.design.backbone import derive_ro_level
+        varied = len({row[5] for row in ro_measurements}) > 1
+        for index, html_level, entry_level, boxes, spans, _signature in ro_measurements:
+            expected = "L4" if varied else derive_ro_level(boxes, spans)
+            if html_level != expected or entry_level != expected:
+                issues.append(Violation(
+                    "C013", "E", index,
+                    f"Academic reading-order level must be {expected} from measured region geometry "
+                    f"(HTML {html_level!r}, manifest {entry_level!r})",
+                ))
     return issues

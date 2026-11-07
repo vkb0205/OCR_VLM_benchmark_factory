@@ -1,0 +1,43 @@
+version: 1
+doc_type: academic_paper
+allowed_sizes:
+  - a4
+  - a4_landscape
+  - a3
+  - a3_landscape
+  - letter
+  - letter_landscape
+  - legal
+  - legal_landscape
+page_roles:
+  title_page:
+    slots: [title, authors, affiliations, abstract, abstract_alt, keywords, keywords_alt, journal]
+    optional_slots: [abstract_alt, keywords_alt, journal]
+    header_slot: journal
+    page_number: true
+  body:
+    slots: [body]
+    optional_slots: []
+    header_label: header
+    page_number: true
+  references:
+    slots: [references]
+    optional_slots: []
+    header_label: header
+    page_number: true
+  appendix:
+    slots: [acknowledgement]
+    optional_slots: [acknowledgement]
+    header_label: header
+    page_number: true
+frame:
+  margin_mm: 15
+  header_height_mm: 16
+  footer_clearance_mm: 13
+limits:
+  min_line_characters: 35
+  average_glyph_width_em: 0.5
+  min_region_height_mm: 35
+  figure_max_height_mm: 120
+  float_spans: [1, 2, 3, 4, 5]
+  float_policies: [here, top_column, top_page, next_page]

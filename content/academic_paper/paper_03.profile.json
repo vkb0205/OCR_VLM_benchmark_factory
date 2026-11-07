@@ -1,0 +1,67 @@
+{
+  "content_id": "paper_03",
+  "language": "vi",
+  "citation_style": "author_year",
+  "length_class": "long",
+  "total_characters": 38358,
+  "section_tree": [
+    {
+      "level": 1,
+      "characters": 9
+    },
+    {
+      "level": 1,
+      "characters": 46
+    },
+    {
+      "level": 2,
+      "characters": 49
+    },
+    {
+      "level": 1,
+      "characters": 33
+    },
+    {
+      "level": 1,
+      "characters": 20
+    },
+    {
+      "level": 1,
+      "characters": 10
+    },
+    {
+      "level": 1,
+      "characters": 24
+    }
+  ],
+  "section_counts": {
+    "1": 6,
+    "2": 1
+  },
+  "tables": [
+    {
+      "rows": 6,
+      "columns": 7
+    },
+    {
+      "rows": 5,
+      "columns": 6
+    }
+  ],
+  "table_count": 2,
+  "widest_column_count": 7,
+  "figures_charts": {
+    "bar": 1,
+    "block_diagram": 1
+  },
+  "display_equations": 3,
+  "inline_equations": 14,
+  "code_listing": false,
+  "footnote_count": 1,
+  "reference_count": 12,
+  "author_count": 4,
+  "affiliation_count": 3,
+  "title_characters": 117,
+  "longest_author_line": 51,
+  "longest_affiliation": 108
+}

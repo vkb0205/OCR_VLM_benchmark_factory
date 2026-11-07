@@ -1,0 +1,500 @@
+{
+  "content_id": "paper_03",
+  "variables": {
+    "lang": "vi",
+    "field": "robotics",
+    "paper_length": "long",
+    "citation_style": "author_year"
+  },
+  "lang": "vi",
+  "values": {
+    "title": "Điều khiển rô-bốt di động tin cậy trong không gian bán cấu trúc bằng hợp nhất đa cảm biến và lập kế hoạch theo rủi ro",
+    "authors": [
+      {
+        "name": "Đặng Lam Triều",
+        "affiliations": [
+          1,
+          2
+        ],
+        "corresponding": false
+      },
+      {
+        "name": "Bùi Nhã Tường",
+        "affiliations": [
+          1,
+          3
+        ],
+        "corresponding": true,
+        "email": "nhatuong@huonglamrobotics.vn"
+      },
+      {
+        "name": "Lâm Kha Viễn",
+        "affiliations": [
+          2
+        ],
+        "corresponding": false
+      },
+      {
+        "name": "Phan Mộc Sương",
+        "affiliations": [
+          1,
+          3
+        ],
+        "corresponding": false
+      }
+    ],
+    "affiliations": [
+      "Phòng Thí nghiệm Rô-bốt Nhận thức, Viện Kỹ thuật Hướng Lam, thành phố Hải Vân, Việt Nam",
+      "Bộ môn Điều khiển và Tự hành, Trường Đại học Kỹ nghệ Nam Thạch, tỉnh An Lạc, Việt Nam",
+      "Trung tâm Hệ thống Cảm biến và Tính toán Biên, Viện Nghiên cứu Động lực Mê Kông, thành phố Tân Lưu, Việt Nam"
+    ],
+    "abstract": "Rô-bốt di động hoạt động trong không gian bán cấu trúc thường phải xử lý đồng thời những thay đổi của vật cản, sự không chắc chắn của cảm biến và yêu cầu duy trì tiến độ di chuyển. Nghiên cứu này đề xuất một khung điều khiển tin cậy gồm ba tầng: nhận biết trạng thái, ước lượng mức rủi ro và lập kế hoạch chuyển động có khả năng phục hồi. Ở tầng nhận biết, dữ liệu từ cảm biến quét laser, camera chiều sâu và bộ đo quán tính được đồng bộ theo thời gian, sau đó được hợp nhất bằng cơ chế gán trọng số thích nghi dựa trên độ nhất quán hình học và độ ổn định của tín hiệu. Ở tầng ước lượng, hệ thống xây dựng bản đồ rủi ro cục bộ từ mật độ vật cản, tốc độ tiếp cận và lịch sử sai lệch định vị. Chỉ số rủi ro được truyền trực tiếp đến bộ lập kế hoạch để điều chỉnh khoảng cách an toàn, vận tốc giới hạn và mức ưu tiên của các đoạn đường. Ở tầng điều khiển, bộ điều khiển dự báo sử dụng quỹ đạo ngắn hạn có khả năng tự hiệu chỉnh khi phát hiện thay đổi đột ngột trong vùng quan sát. Phương pháp được đánh giá qua bốn mươi tám lượt di chuyển trong các bối cảnh hành lang, khu vực lưu trữ và không gian có người đi qua. Kết quả cho thấy tỷ lệ hoàn thành lộ trình tăng 12,8 phần trăm, sai lệch ngang trung bình giảm 27,4 phần trăm và số lần dừng khẩn cấp giảm 31,6 phần trăm so với cấu hình điều khiển chỉ dựa trên bản đồ tĩnh. Khi một nguồn cảm biến bị suy giảm chất lượng, khung đề xuất vẫn duy trì được khả năng định vị và tránh va chạm nhờ cơ chế tái phân bổ trọng số. Phân tích loại bỏ từng thành phần cho thấy bản đồ rủi ro và bộ điều khiển dự báo có tác động lớn nhất đến tính ổn định của chuyển động. Kết quả khẳng định rằng việc liên kết chặt chẽ giữa nhận biết bất định, lập kế hoạch theo rủi ro và điều khiển phản hồi có thể nâng cao độ an toàn của rô-bốt trong những môi trường thay đổi nhưng chưa hoàn toàn hỗn loạn.",
+    "abstract_alt": null,
+    "keywords": "rô-bốt di động; hợp nhất đa cảm biến; lập kế hoạch theo rủi ro; điều khiển dự báo; định vị tự hành; tránh va chạm; bản đồ rủi ro; không gian bán cấu trúc",
+    "keywords_alt": null,
+    "journal": "Tạp chí Kỹ nghệ Rô-bốt Hướng Tác vụ",
+    "acknowledgement": "Nhóm tác giả trân trọng cảm ơn Chương trình Phát triển Hệ thống Tự hành Hướng Lam đã hỗ trợ thiết bị, không gian thử nghiệm và kinh phí triển khai nghiên cứu. Các thành viên vận hành tại Trung tâm Hệ thống Cảm biến và Tính toán Biên đã hỗ trợ xây dựng tuyến thử, kiểm tra đồng bộ dữ liệu và ghi nhận các tình huống mất ổn định trong quá trình đánh giá.",
+    "references": [
+      {
+        "text": "Đinh Túc Viễn, Phạm Uyên Kha và Lê Mộc Khiết (2021). Hợp nhất laser, chiều sâu và quán tính với trọng số thích nghi cho rô-bốt di động trong môi trường bán cấu trúc. Tạp chí Rô-bốt và Tự hành Lam Vực, 8(2), 41–58.",
+        "cite": "(Đinh và cộng sự, 2021)"
+      },
+      {
+        "text": "Vũ Khải Nghiêm và Bùi Hạ Nguyên (2020). Xây dựng bản đồ rủi ro cục bộ cho lập kế hoạch chuyển động có xét đến mật độ vật cản và tốc độ tiếp cận. Tạp chí Điều khiển Không gian Động, 6(4), 203–219.",
+        "cite": "(Vũ và Bùi, 2020)"
+      },
+      {
+        "text": "Tạ Mộc Diệp, Phan Yên Lộ và Lục Trọng Kha (2022). Lập kế hoạch quỹ đạo ngắn hạn theo rủi ro cho rô-bốt tự hành trong khu vực có người qua lại. Kỷ yếu Tự hành và Cảm biến Biên, 5, 77–93.",
+        "cite": "(Tạ và cộng sự, 2022)"
+      },
+      {
+        "text": "Lâm Uyển Tư và Đỗ Kha Nguyên (2019). Đồng bộ thời gian đa nguồn cho hệ thống cảm biến rô-bốt di động có độ trễ biến thiên. Tạp chí Đo lường Cơ điện Vân Lộ, 11(1), 15– thirty-two.",
+        "cite": "(Lâm và Đỗ, 2019)"
+      },
+      {
+        "text": "Hoàng Nghiêu Vũ, Trịnh Lam Sương và Tô Mộc Quân (2023). Định vị tin cậy dưới suy giảm chất lượng của cảm biến quét laser và camera chiều sâu. Tạp chí Hệ thống Tự hành Mê Lộ, 9(3), 118–136.",
+        "cite": "(Hoàng và cộng sự, 2023)"
+      },
+      {
+        "text": "Nghiêm Kha Phúc và Dương Tường Vi (2021). Điều khiển dự báo có giới hạn vận tốc dựa trên mức bất định của bản đồ môi trường. Tạp chí Điều khiển và Cơ học Tính toán, 7(2), 64–82.",
+        "cite": "(Nghiêm và Dương, 2021)"
+      },
+      {
+        "text": "Phạm Lệ Chiêu, Tạ Vĩnh Lân và Đinh Mộc Thư (2024). Tái phân bổ trọng số cảm biến trong tránh va chạm khi một kênh quan sát bị suy giảm. Tạp chí Rô-bốt Ứng dụng Hướng Tác vụ, 12(1), 29–47.",
+        "cite": "(Phạm và cộng sự, 2024)"
+      },
+      {
+        "text": "Bùi Tường Kha và Lê Uyên Mẫn (2018). Ước lượng vận tốc tiếp cận của vật cản động từ chuỗi quét không gian thưa. Tạp chí Nhận biết và Tự hành Đa phương thức, 4(3), 145–161.",
+        "cite": "(Bùi và Lê, 2018)"
+      },
+      {
+        "text": "Trần Mộc Nghiêm, Vũ Lam Chi và Phan Kỳ Nguyên (2022). Điều hướng có xét đến hành vi người đi bộ trong hành lang bán cấu trúc. Kỷ yếu Rô-bốt An toàn và Tương tác, 7, 101–117.",
+        "cite": "(Trần và cộng sự, 2022)"
+      },
+      {
+        "text": "Đỗ Túc Minh và Hoàng Yên Kha (2020). Tính toán biên cho hợp nhất cảm biến và lập bản đồ rủi ro theo chu kỳ điều khiển ngắn. Tạp chí Kiến trúc Tính toán Tự hành, 3(4), 188–205.",
+        "cite": "(Đỗ và Hoàng, 2020)"
+      },
+      {
+        "text": "Lục Hạ Vy, Nghiêm Quang Túc và Tô Uyên Hà (2025). Đánh giá độ bền của bộ điều khiển rô-bốt di động qua phân tích loại bỏ thành phần và chỉ số hoàn tất lộ trình. Tạp chí Đánh giá Hệ thống Cơ điện, 10(2), 52–71.",
+        "cite": "(Lục và cộng sự, 2025)"
+      },
+      {
+        "text": "Phan Kha Lương và Dương Mộc Yên (2023). Khung phối hợp giữa nhận biết bất định, lập kế hoạch theo rủi ro và điều khiển phản hồi cho rô-bốt trong không gian thay đổi. Tạp chí Kỹ thuật Tự hành và Rô-bốt, 13(4), 221–242.",
+        "cite": "(Phan và Dương, 2023)"
+      }
+    ],
+    "body": [
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "1. Mở đầu"
+      },
+      {
+        "type": "paragraph",
+        "text": "Rô-bốt di động trong hành lang, khu lưu trữ và vùng làm việc có người qua lại phải đồng thời duy trì tiến độ, tránh va chạm và giữ được ước lượng vị trí đáng tin cậy dù hình học quan sát thay đổi. Bài báo trình bày một khung điều khiển nối tiếp nhận biết đa cảm biến, đánh giá rủi ro và lập kế hoạch phản hồi, đồng thời phân tích hiệu năng theo bối cảnh, thể hiện tại \\ref{tab:ket-qua-boi-canh} và \\ref{fig:chart}. Ảnh hưởng của từng thành phần được đối chiếu tại \\ref{tab:loai-bo-thanh-phan}; cấu trúc xử lý và các vòng hồi tiếp được khái quát trong \\ref{fig:diagram}. Những đích tham chiếu này được nêu ngay từ đầu để liên kết các luận điểm về hợp nhất, rủi ro và điều khiển với phần trình bày kết quả tương ứng. Trọng tâm không phải là tối ưu một cảm biến riêng lẻ, mà là bảo toàn chất lượng quyết định khi nhiều nguồn quan sát có độ trễ, độ chính xác và mức suy giảm khác nhau."
+      },
+      {
+        "type": "paragraph",
+        "text": "Không gian bán cấu trúc có những quy luật đủ ổn định để lập bản đồ và hoạch định tuyến, nhưng vẫn chứa các thay đổi cục bộ khó dự báo: xe đẩy được di chuyển, lối đi bị thu hẹp, người đi bộ đổi hướng hoặc bề mặt phản xạ làm sai lệch phép đo. Trong điều kiện đó, một bản đồ tĩnh có thể mô tả hình dạng nền nhưng không thể tự biểu diễn mức tin cậy của từng vùng theo thời gian. Rô-bốt vì vậy cần phân biệt vật cản cố định với chuyển động mới xuất hiện, đồng thời không được diễn giải một lần quan sát thiếu dữ liệu như thể khu vực đã thông thoáng. Các nghiên cứu về vận tốc tiếp cận từ chuỗi quét thưa và hành vi người đi bộ trong hành lang đã cho thấy giá trị của việc đưa chuyển động vào quyết định điều hướng \\cite{8}; việc xem xét quỹ đạo người đi bộ còn giúp tránh phản ứng quá đột ngột trước những đổi hướng nhỏ \\cite{9}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Ba yêu cầu thiết kế chi phối nghiên cứu này. Thứ nhất, các phép đo laser, chiều sâu và quán tính phải được đồng bộ trước khi kết hợp, bởi độ trễ không đồng nhất có thể khiến một vật thể được gán sai vị trí. Thứ hai, độ tin cậy quan sát phải được cập nhật liên tục, thay vì cố định trọng số cảm biến cho toàn bộ hành trình. Thứ ba, mức rủi ro cần tác động trực tiếp đến khoảng cách an toàn và vận tốc cho phép, nhưng vẫn giữ khả năng tiến về đích khi lối đi còn sử dụng được. Hướng hợp nhất trọng số thích nghi đã được khảo sát cho rô-bốt di động trong môi trường bán cấu trúc \\cite{1}, trong khi bản đồ rủi ro cục bộ cung cấp một cách biểu diễn có thể truyền đến bộ lập kế hoạch \\cite{2}. Nghiên cứu hiện tại kết hợp hai hướng đó với điều khiển dự báo và cơ chế phục hồi."
+      },
+      {
+        "type": "paragraph",
+        "text": "Khung được đánh giá qua bốn mươi tám lượt di chuyển trong các bối cảnh hành lang, khu lưu trữ và không gian có người qua lại, với cùng tuyến thử và giới hạn vận tốc giữa cấu hình đề xuất và cấu hình dựa trên bản đồ tĩnh. Các câu hỏi chính là liệu sự phối hợp đa tầng có nâng tỷ lệ hoàn thành, giảm sai lệch ngang và hạn chế dừng khẩn hay không; thành phần nào đóng góp nhiều nhất; và hệ thống phản ứng ra sao khi một kênh quan sát suy giảm. Để tránh nhầm lẫn giữa an toàn và hiệu quả, chúng tôi xem xét cả va chạm, dừng khẩn, thời gian hoàn thành và tải tính toán. Chỉ số tổng hợp không được dùng thay cho các chỉ số thành phần, bởi một cấu hình có thể đi nhanh hơn nhưng đồng thời tạo ra nhiều tình huống phải dừng. Kết quả vì thế được diễn giải theo cả hiệu năng chuyển động lẫn mức ổn định của quyết định."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "2. Cơ sở phương pháp và yêu cầu của môi trường"
+      },
+      {
+        "type": "equation",
+        "id": "eq:adaptive-sensor-fusion",
+        "latex": "\\hat{\\mathbf{x}}_t = \\sum_{k=1}^{K} w_{k,t}\\mathbf{x}_{k,t}, \\sum_{k=1}^{K} w_{k,t}=1",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Hợp nhất đa cảm biến chỉ hữu ích khi trạng thái mà mỗi kênh mô tả được đưa về cùng thời điểm và cùng hệ tọa độ. Bộ đo quán tính cung cấp biến thiên chuyển động nhanh, nhưng sai số tích lũy theo thời gian; laser mô tả biên hình học rõ trong nhiều điều kiện nhưng có thể thiếu điểm ở bề mặt hấp thụ hoặc góc khuất; camera chiều sâu bổ sung cấu trúc gần nhưng chất lượng phụ thuộc vào điều kiện quan sát. Vì vậy, hệ thống không xem ba nguồn này như các bản sao có thể thay thế hoàn toàn cho nhau. Đồng bộ thời gian đa nguồn với độ trễ biến thiên là điều kiện nền để so sánh các quan sát hợp lệ \\cite{4}. Sau đồng bộ, mỗi phép đo được đánh giá theo độ nhất quán hình học và độ ổn định ngắn hạn, giúp mô hình trạng thái phản ánh cả nội dung quan sát lẫn mức tin cậy của nó."
+      },
+      {
+        "type": "paragraph",
+        "text": "Một vấn đề thực tiễn là sự suy giảm thường xuất hiện trước khi một kênh hỏng hoàn toàn. Chẳng hạn, ảnh chiều sâu có thể trở nên nhiễu ở một dải khoảng cách, hoặc số điểm laser giảm khi rô-bốt đi qua bề mặt ít phản xạ. Nếu hệ thống chỉ kiểm tra trạng thái hoạt động của thiết bị, các phép đo vẫn được đưa vào với trọng số bình thường dù đã mất độ tin cậy. Bởi vậy, chúng tôi theo dõi các dấu hiệu chất lượng ở cấp dữ liệu: mức liên tục giữa khung liền kề, độ phù hợp giữa quan sát và hình học cục bộ, cùng độ phân tán của phần dư định vị. Định vị dưới suy giảm chất lượng laser và camera chiều sâu được xem xét như một yêu cầu riêng, không chỉ là trường hợp ngoại lệ \\cite{5}. Cách nhìn này cho phép giảm ảnh hưởng của kênh bất thường trước khi nó gây ra một sai lệch lớn trong bản đồ."
+      },
+      {
+        "type": "paragraph",
+        "text": "Rủi ro trong nghiên cứu được hiểu là mức khó khăn có thể dẫn đến va chạm, mất định vị hoặc dừng không cần thiết, chứ không phải xác suất va chạm đã được hiệu chỉnh theo một phân bố đầy đủ. Thành phần thứ nhất là mật độ vật cản trong vùng lân cận; thành phần thứ hai là tốc độ tiếp cận tương đối; thành phần thứ ba là lịch sử sai lệch định vị. Bản đồ thu được là cục bộ và được cập nhật theo chu kỳ, nhờ đó các vùng có hình dạng tương tự nhưng quan sát khác nhau có thể tạo ra quyết định khác nhau. Với ký hiệu $\\rho_t$ cho mật độ, $\\delta_t$ cho mức tiếp cận và $\\sigma_t$ cho bất định định vị, ta biểu diễn tổng hợp bằng $R_t=\\alpha\\rho_t+\\beta\\text{delta}_t+\\text{gamma}\\text{sigma}_t$."
+      },
+      {
+        "type": "table",
+        "id": "tab:ket-qua-boi-canh",
+        "caption": "Bảng 1. Hiệu năng điều khiển trong các bối cảnh bán cấu trúc",
+        "header": [
+          [
+            "Bối cảnh",
+            "Cấu hình",
+            "Hoàn tất (%)",
+            "Lệch ngang (cm)",
+            "Dừng khẩn",
+            "Thời gian (s)",
+            "Va chạm"
+          ]
+        ],
+        "rows": [
+          [
+            "Hành lang",
+            "Bản đồ tĩnh",
+            "81,3",
+            "18,6",
+            "13",
+            "146",
+            "2"
+          ],
+          [
+            "Hành lang",
+            "Khung đề xuất",
+            "92,7",
+            "13,1",
+            "9",
+            "139",
+            "1"
+          ],
+          [
+            "Lưu trữ",
+            "Bản đồ tĩnh",
+            "75,8",
+            "22,4",
+            "17",
+            "171",
+            "3"
+          ],
+          [
+            "Lưu trữ",
+            "Khung đề xuất",
+            "89,6",
+            "15,8",
+            "11",
+            "164",
+            "1"
+          ],
+          [
+            "Có người qua lại",
+            "Bản đồ tĩnh",
+            "70,4",
+            "25,7",
+            "19",
+            "158",
+            "4"
+          ],
+          [
+            "Có người qua lại",
+            "Khung đề xuất",
+            "86,5",
+            "17,9",
+            "12",
+            "151",
+            "1"
+          ]
+        ],
+        "note": "Ghi chú: Các chỉ số được tổng hợp trên cùng tuyến thử và cùng giới hạn vận tốc; giá trị lệch ngang là trung bình theo từng lượt di chuyển."
+      },
+      {
+        "type": "paragraph",
+        "text": "Tỷ lệ giữa các thành phần trong chỉ số rủi ro phải có ý nghĩa vận hành. Nếu mật độ vật cản chi phối quá mạnh, rô-bốt có thể dừng trước các vùng đông đồ vật nhưng vẫn đủ khoảng trống; nếu tốc độ tiếp cận bị đánh giá thấp, vật thể chuyển động có thể tạo nguy cơ dù bản đồ hình học còn thông thoáng. Lịch sử sai lệch định vị bổ sung một dạng cảnh báo khác: khi trạng thái ước lượng không ổn định, khoảng cách hình học tính từ bản đồ cũng trở nên kém chắc chắn. Trên cơ sở đó, bộ điều khiển giảm vận tốc tối đa theo rủi ro, có thể mô tả bằng $v_t^{max}=\\frac{v_0}{1+R_t}$. Đây là luật điều chỉnh đơn giản, có tính đơn điệu và dễ kiểm tra, chứ không khẳng định rằng một giá trị rủi ro duy nhất đủ mô tả mọi tình huống. Mức giảm vận tốc được đặt cùng với khoảng cách an toàn và giới hạn gia tốc để tránh tạo ra phản ứng giật cục."
+      },
+      {
+        "type": "equation",
+        "id": "eq:risk-speed-control",
+        "latex": "\\begin{aligned} R_t &= \\alpha \\rho_t + \\beta \\delta_t + \\gamma \\sigma_t \\\\ v_t^{\\max} &= \\frac{v_0}{1+R_t} \\end{aligned}",
+        "numbered": true
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "2.1. Liên kết nhận biết, lập kế hoạch và phản hồi"
+      },
+      {
+        "type": "paragraph",
+        "text": "Một hệ thống điều hướng có thể thất bại dù từng khối riêng lẻ đạt chất lượng tốt, nếu tín hiệu giữa các khối không mang theo thông tin về độ tin cậy. Bộ lập kế hoạch nhận một bản đồ hình học không kèm mức bất định dễ chọn lối đi sát vùng chưa quan sát; bộ điều khiển nhận quỹ đạo không có ngân sách rủi ro có thể cố bám tuyến ngay cả khi vật cản mới xuất hiện. Vì vậy, mỗi trạng thái cục bộ trong khung đề xuất đi kèm một thước đo tin cậy và một chỉ số rủi ro, được cập nhật khi có quan sát mới. Các nghiên cứu về tính toán biên cho hợp nhất và lập bản đồ rủi ro theo chu kỳ ngắn gợi ý rằng thời gian xử lý phải được xem như một phần của thiết kế, không phải phép đo phụ sau triển khai \\cite{10}. Cách tiếp cận phối hợp giữa nhận biết bất định, lập kế hoạch theo rủi ro và phản hồi cũng là cơ sở để xem xét toàn bộ chuỗi quyết định thay vì tối ưu riêng một tầng \\cite{12}."
+      },
+      {
+        "type": "chart",
+        "id": "fig:chart",
+        "caption": "Hình 1. Tỷ lệ hoàn tất lộ trình theo bối cảnh và cấu hình điều khiển",
+        "chart_type": "bar",
+        "labels": [
+          "Hành lang",
+          "Lưu trữ",
+          "Có người qua lại"
+        ],
+        "series": [
+          {
+            "name": "Bản đồ tĩnh",
+            "values": [
+              81.3,
+              75.8,
+              70.4
+            ]
+          },
+          {
+            "name": "Khung đề xuất",
+            "values": [
+              92.7,
+              89.6,
+              86.5
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Lập kế hoạch trong vùng có người qua lại cần giữ cân bằng giữa khoảng cách, tính liên tục của quỹ đạo và khả năng phản ứng với chuyển động mới. Một lối đi ngắn không nhất thiết là lối đi tốt nếu phải liên tục thay đổi hướng hoặc cắt qua vùng có nhiều vật cản động. Bộ lập kế hoạch ngắn hạn theo rủi ro cung cấp một cơ chế thích hợp để đánh giá các đoạn tuyến trong cửa sổ sắp tới thay vì chỉ chọn đường theo khoảng cách đến đích \\cite{3}. Trong nghiên cứu này, quỹ đạo ngắn hạn vẫn hướng đến mục tiêu toàn cục, nhưng có thể được hiệu chỉnh khi vùng quan sát thay đổi. Điều đó đặc biệt quan trọng khi tốc độ tương đối của vật cản lớn hơn mức mà một bản đồ tĩnh có thể biểu diễn, hoặc khi lối tránh ban đầu bị một chuyển động mới làm mất hiệu lực."
+      },
+      {
+        "type": "paragraph",
+        "text": "Việc đưa tín hiệu rủi ro vào điều khiển cần tránh hai cực đoan: bỏ qua nguy cơ để duy trì tiến độ, hoặc tăng bảo thủ đến mức rô-bốt không thể hoàn thành hành trình. Chúng tôi dùng rủi ro như một đại lượng điều chỉnh có giới hạn, phối hợp với sai lệch bám quỹ đạo và mức thay đổi lệnh vận tốc. Điều khiển dự báo có giới hạn vận tốc theo bất định bản đồ đã được nghiên cứu như một cách giữ cho lệnh nằm trong miền có thể thực thi \\cite{6}. Ở đây, bất định và rủi ro không được nhập làm một: bất định mô tả mức thiếu chắc chắn của trạng thái, còn rủi ro mô tả hậu quả vận hành có thể phát sinh. Phân biệt này giúp hệ thống giảm tốc khi dữ liệu thiếu tin cậy nhưng vẫn cho phép đi tiếp nếu hình học và quỹ đạo dự phòng còn đáp ứng các ràng buộc an toàn."
+      },
+      {
+        "type": "equation",
+        "id": "eq:predictive-control-cost",
+        "latex": "J_t = \\min_{\\mathbf{u}_{t:t+N-1}} \\sum_{i=0}^{N-1} (\\alpha e_{t+i}^2 + \\beta a_{t+i}^2 + \\gamma R_{t+i})",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Các đại lượng được chuẩn hóa theo miền hoạt động của rô-bốt trước khi kết hợp, nhằm tránh để một thành phần có đơn vị hoặc biên độ lớn áp đảo các thành phần còn lại. Trọng số của chỉ số rủi ro được chọn trên tuyến hiệu chỉnh, sau đó giữ cố định trong các lượt so sánh để bảo đảm đối chiếu công bằng. Trọng số cảm biến thì khác: chúng được cập nhật trực tuyến theo chất lượng quan sát, bởi điều kiện cảm biến có thể thay đổi dọc tuyến. Để làm rõ sự phân biệt, có thể viết $w_{k,t}\\geq 0$ và $\\sum_{k=1}^{K}w_{k,t}=1$ cho các trọng số cảm biến, trong khi $R_t$ được tạo từ những thành phần rủi ro đã chuẩn hóa. Cơ chế này cho phép thay đổi mức tin cậy giữa các kênh mà không làm thay đổi định nghĩa của rủi ro dùng trong lập kế hoạch."
+      },
+      {
+        "type": "table",
+        "id": "tab:loai-bo-thanh-phan",
+        "caption": "Bảng 2. Phân tích loại bỏ từng thành phần của khung điều khiển",
+        "header": [
+          [
+            "Thành phần bỏ",
+            "Hoàn tất (%)",
+            "Lệch ngang (cm)",
+            "Dừng khẩn",
+            "Rủi ro TB",
+            "Tải tính toán (ms)"
+          ]
+        ],
+        "rows": [
+          [
+            "Không bỏ",
+            "92,9",
+            "14,2",
+            "10",
+            "0,18",
+            "31"
+          ],
+          [
+            "Bản đồ rủi ro",
+            "84,1",
+            "20,6",
+            "16",
+            "0,31",
+            "27"
+          ],
+          [
+            "Hợp nhất cảm biến",
+            "80,7",
+            "23,8",
+            "18",
+            "0,36",
+            "24"
+          ],
+          [
+            "Bộ điều khiển dự báo",
+            "86,3",
+            "18,9",
+            "14",
+            "0,27",
+            "19"
+          ],
+          [
+            "Tái phân bổ trọng số",
+            "88,5",
+            "17,1",
+            "13",
+            "0,24",
+            "29"
+          ]
+        ],
+        "note": "Ghi chú: Rủi ro TB là mức rủi ro trung bình trên đoạn đường; tải tính toán được ghi nhận tại chu kỳ điều khiển ổn định."
+      },
+      {
+        "type": "paragraph",
+        "text": "Trong toàn bộ thiết kế, ba nguyên tắc được duy trì: không dùng phép đo có dấu hiệu lỗi mà không đánh dấu độ tin cậy; không cho phép rủi ro cao bị bù trừ hoàn toàn bởi một khoảng cách đến đích ngắn; và không để việc giảm tốc tự động làm mất khả năng thoát khỏi một vị trí kém thuận lợi. Các nguyên tắc này chuyển thành các kiểm tra cụ thể ở từng tầng, gồm kiểm tra độ lệch thời gian, giới hạn trọng số, giới hạn vận tốc và đánh giá tính liên tục của quỹ đạo. Cách thiết kế phân lớp làm cho việc truy nguyên sự cố dễ hơn: nếu trạng thái hợp nhất bất thường, có thể xem xét chất lượng và đồng bộ; nếu trạng thái ổn định nhưng quỹ đạo không an toàn, cần xem lại bản đồ rủi ro hoặc hàm mục tiêu; nếu lệnh hợp lệ nhưng chuyển động lệch, cần kiểm tra tầng phản hồi và đặc tính cơ cấu."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "3. Khung điều khiển và thuật toán"
+      },
+      {
+        "type": "paragraph",
+        "text": "Kiến trúc bắt đầu bằng đồng bộ dấu thời gian của laser, camera chiều sâu và bộ đo quán tính, rồi chuyển các phép đo về hệ tọa độ rô-bốt. Một bộ kiểm tra nhanh loại bỏ quan sát vượt giới hạn hợp lý và gắn cờ các khung có mức thiếu dữ liệu cao. Khối hợp nhất tạo trạng thái gồm vị trí, hướng, vận tốc và chất lượng ước lượng; khối rủi ro kết hợp hình học cục bộ với chuyển động vật cản và lịch sử sai lệch; bộ lập kế hoạch sinh các quỹ đạo ứng viên; cuối cùng, bộ điều khiển dự báo chọn lệnh phù hợp trong cửa sổ thời gian hữu hạn. Tư tưởng dùng trọng số thích nghi cho hợp nhất laser, chiều sâu và quán tính được phát triển thêm bằng cách nối tín hiệu tin cậy với rủi ro và hành động điều khiển \\cite{1}. Sự phân tầng cũng tạo một đường hồi tiếp để sai lệch thực tế trở lại điều chỉnh độ tin cậy định vị."
+      },
+      {
+        "type": "figure",
+        "id": "fig:diagram",
+        "figure_type": "block_diagram",
+        "caption": "Hình 2. Sơ đồ khối của khung điều khiển tin cậy",
+        "description": "Dữ liệu từ cảm biến quét laser, camera chiều sâu và bộ đo quán tính được đồng bộ trước khi đi vào khối hợp nhất thích nghi. Trạng thái hợp nhất được chuyển đến bộ ước lượng rủi ro để tạo bản đồ cục bộ, sau đó bộ lập kế hoạch sinh quỹ đạo ngắn hạn cho bộ điều khiển dự báo. Tín hiệu điều khiển tác động lên rô-bốt, còn trạng thái và sai lệch được hồi tiếp về các khối ước lượng.",
+        "labels": [
+          "Cảm biến đa nguồn",
+          "Hợp nhất thích nghi",
+          "Bản đồ rủi ro",
+          "Lập kế hoạch",
+          "Điều khiển dự báo"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Đồng bộ không chỉ dựa vào dấu thời gian danh định của thiết bị. Mỗi kênh được kiểm tra độ trễ quan sát được, và phép đo được nội suy đến thời điểm chung khi khoảng lệch nằm trong giới hạn xử lý. Nếu một gói đến muộn vượt ngưỡng, hệ thống không gán nó như một quan sát hiện thời; thay vào đó, gói được bỏ qua hoặc chỉ dùng để cập nhật thông tin lịch sử khi còn phù hợp. Quy tắc này hạn chế tình huống bản đồ chứa đồng thời vị trí hiện tại và vị trí cũ của cùng một vật thể. Cơ sở đồng bộ có độ trễ biến thiên đã được khảo sát trong các hệ thống cảm biến rô-bốt di động \\cite{4}. Trong triển khai của chúng tôi, thời điểm hợp nhất được xác định theo nhịp điều khiển, vì một độ trễ nhỏ nhưng thay đổi thất thường có thể gây hại cho quỹ đạo nhiều hơn một độ trễ ổn định đã được bù."
+      },
+      {
+        "type": "paragraph",
+        "text": "Trạng thái từ kênh thứ $k$ tại thời điểm $t$ được ký hiệu $x_{k,t}$, còn trạng thái hợp nhất là $\\text{hat}{x}_t=\\sum_{k=1}^{K}w_{k,t}x_{k,t}$. Trọng số bắt đầu từ một cấu hình cân bằng, sau đó thay đổi theo phần dư quan sát, tính liên tục thời gian và độ phù hợp với các kênh còn lại. Khi một kênh có dấu hiệu lệch so với hình học chung, trọng số của nó giảm dần thay vì bị đặt về không ngay lập tức; cách chuyển mềm hạn chế việc ước lượng giật khi chất lượng dao động quanh ngưỡng. Trọng số được chặn trong miền không âm và chuẩn hóa để tổng bằng một. Cơ chế tái phân bổ này phù hợp với bài toán tránh va chạm khi một kênh quan sát suy giảm \\cite{7}. Tùy dấu hiệu suy giảm, hệ thống có thể dựa nhiều hơn vào laser hoặc quán tính mà không thay đổi cấu trúc đầu ra của khối hợp nhất."
+      },
+      {
+        "type": "paragraph",
+        "text": "Chất lượng hợp nhất được theo dõi qua phần dư giữa trạng thái dự báo và quan sát mới. Nếu phần dư tăng trong một khung đơn lẻ nhưng các kênh khác vẫn thống nhất, bộ hợp nhất không lập tức diễn giải đó là chuyển động thật; nếu phần dư tăng liên tục và có hỗ trợ từ nhiều nguồn, trạng thái mới được tiếp nhận với độ tin cậy tương ứng. Cơ chế này giảm nhạy với điểm nhiễu đơn lẻ nhưng vẫn cho phép phản ứng trước chuyển động thực. Hệ thống cũng ghi lại chuỗi trọng số để phục vụ phân tích sau lượt chạy, vì một trạng thái cuối cùng hợp lý không cho biết kênh nào đã chi phối quyết định trong thời điểm khó khăn. Phân biệt quan sát thiếu tin cậy với vật cản mới là một bước thiết yếu: trường hợp thứ nhất cần tái cân bằng bằng chứng, trường hợp thứ hai cần sửa bản đồ và tính lại quỹ đạo."
+      },
+      {
+        "type": "paragraph",
+        "text": "Bản đồ rủi ro được xây dựng trên các ô cục bộ gắn với vùng quan sát hiện hành. Mỗi ô nhận một mức đóng góp từ mật độ vật cản, vận tốc tiếp cận và độ bất định vị trí; giá trị được làm suy giảm theo khoảng cách để các vật thể xa không chi phối quá mức vùng điều khiển ngay trước rô-bốt. Mức rủi ro có dạng $R_t=\\text{alpha}\\rho_t+\\text{beta}\\text{delta}_t+\\text{gamma}\\text{sigma}_t$, trong đó các hệ số được chọn để cân bằng ảnh hưởng tương đối của từng nguồn. Ước lượng mật độ dùng vùng lân cận thay vì chỉ kiểm tra một ô, còn thành phần tiếp cận được tính từ thay đổi vị trí tương đối qua các chu kỳ quét. Hướng xây dựng bản đồ cục bộ dựa vào mật độ và tốc độ tiếp cận tương đồng với phương pháp đã đề xuất cho lập kế hoạch có xét vật cản \\cite{2}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Vận tốc tiếp cận được suy ra từ các quan sát liên tiếp, sau khi loại trừ phần chuyển động do chính rô-bốt gây ra. Do chuỗi quét có thể thưa hoặc bị che khuất, ước lượng vận tốc không được dùng như một con số chính xác tuyệt đối; thay vào đó, độ ổn định của hướng và độ lớn chuyển động đóng góp vào mức tin cậy của thành phần này. Cách ước lượng từ chuỗi quét không gian thưa giúp xử lý vật cản động khi quan sát không liên tục \\cite{8}. Khi có người đi bộ, vùng dự báo không được hiểu là một đường đi cố định mà là miền có thể dịch chuyển trong một khoảng ngắn. Hành vi đổi hướng đột ngột được xử lý bằng cách mở rộng vùng an toàn tạm thời, nhưng mức mở rộng giảm dần nếu các quan sát tiếp theo xác nhận lối đi vẫn ổn định. Nhờ đó, rô-bốt không khóa cứng một dự đoán cũ khi người đi bộ đã chuyển hướng."
+      },
+      {
+        "type": "paragraph",
+        "text": "Bộ lập kế hoạch tạo một tập quỹ đạo ngắn hạn thỏa giới hạn hình học và động học, rồi chấm điểm theo sai lệch so với hướng đích, độ thay đổi vận tốc, rủi ro tích lũy và độ ổn định của lối đi. Các quỹ đạo đi sát vùng có bất định cao bị phạt, nhưng hệ thống vẫn duy trì phương án tiến triển khi không có tuyến thay thế rõ ràng. Khi phát hiện vật cản mới, bản đồ cục bộ được cập nhật trước khi quỹ đạo được đánh giá lại; do đó, bộ điều khiển không phải tiếp tục bám một tuyến đã mất tính khả thi. Lập kế hoạch quỹ đạo ngắn hạn theo rủi ro trong khu vực có người qua lại là hướng có liên hệ trực tiếp với cấu trúc này \\cite{3}. Hơn nữa, các dự đoán chuyển động của người được đưa vào như vùng tránh mềm, cho phép lựa chọn đường đi có khoảng cách phù hợp mà không buộc rô-bốt phản ứng như thể mọi hướng chuyển động đều là va chạm sắp xảy ra."
+      },
+      {
+        "type": "paragraph",
+        "text": "Ở tầng điều khiển, bộ điều khiển dự báo đánh giá lệnh trong một cửa sổ hữu hạn, có xét sai lệch bám quỹ đạo, mức thay đổi lệnh và rủi ro dọc quỹ đạo. Một hàm chi phí dạng $J_t=\\text{min}_{u_{t:t+N-1}}\\text{sum}_{i=0}^{N-1}(\\text{alpha}e_{t+i}^2+\\text{beta}a_{t+i}^2+\\text{gamma}R_{t+i})$ biểu diễn ba mục tiêu chính: giảm sai lệch, hạn chế thao tác gấp và tránh vùng rủi ro cao. Các giới hạn vận tốc và gia tốc được áp dụng sau khi đánh giá ứng viên để mọi lệnh gửi đến cơ cấu đều khả thi. Điều khiển dự báo có giới hạn vận tốc dựa trên bất định bản đồ cung cấp cơ sở cho việc phối hợp điều kiện an toàn với khả năng bám đường \\cite{6}. Trong mỗi chu kỳ, chỉ lệnh đầu tiên được thực thi; cửa sổ kế tiếp được giải lại khi có trạng thái mới, nhờ đó hệ thống liên tục cập nhật quyết định."
+      },
+      {
+        "type": "paragraph",
+        "text": "Tái lập kế hoạch không đồng nghĩa với thay đổi quỹ đạo ở mọi chu kỳ. Nếu trạng thái quan sát ổn định và quỹ đạo hiện tại còn thỏa các giới hạn, bộ lập kế hoạch ưu tiên tính liên tục để tránh dao động trái phải. Khi rủi ro vượt ngưỡng, quỹ đạo bị chặn bởi vật cản mới hoặc sai lệch ngang tăng kéo dài, hệ thống chuyển sang chế độ hiệu chỉnh: giảm vận tốc, tính lại các phương án và chọn tuyến có khoảng đệm lớn hơn. Nếu không còn phương án thỏa điều kiện, lệnh dừng có kiểm soát được phát ra và việc tiếp tục chỉ xảy ra sau khi vùng lân cận được quan sát lại. Cơ chế dừng này khác với dừng khẩn do va chạm sắp xảy ra: dừng có kiểm soát là một trạng thái an toàn có thể phục hồi, còn dừng khẩn là phản ứng bảo vệ khi giới hạn tức thời bị đe dọa. Sự phân biệt này giúp diễn giải đúng số lần dừng trong đánh giá."
+      },
+      {
+        "type": "paragraph",
+        "text": "Tầng tính toán được tổ chức theo chu kỳ ngắn để hợp nhất và lập bản đồ không chiếm toàn bộ thời gian dành cho phản hồi. Các thao tác kiểm tra dữ liệu và cập nhật ô lân cận được giới hạn theo vùng cần thiết; các phép tính lập kế hoạch chỉ dùng trạng thái mới nhất đã qua kiểm tra. Thời gian tính toán được ghi cùng với độ trễ đầu vào, bởi một thuật toán cho kết quả tốt nhưng trả về sau thời điểm điều khiển cần thiết không thể xem là đáp ứng tốt. Kết quả về kiến trúc tính toán biên cho hợp nhất và lập bản đồ rủi ro theo chu kỳ ngắn củng cố lựa chọn ưu tiên các thao tác có chi phí dự đoán được \\cite{10}. Chúng tôi cũng ghi lại số lần phải tính lại quỹ đạo, thời gian ổn định sau khi tránh vật cản và mức thay đổi trọng số, nhằm nhận diện tình huống tải tính toán thấp nhưng hành vi điều khiển lại dao động."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "4. Thiết kế đánh giá"
+      },
+      {
+        "type": "paragraph",
+        "text": "Đánh giá gồm ba bối cảnh có mức biến thiên khác nhau. Hành lang thể hiện tuyến tương đối hẹp, nơi sai lệch ngang và khả năng duy trì hướng có ảnh hưởng rõ đến tiến độ. Khu lưu trữ đưa vào các vật thể tĩnh với khoảng trống thay đổi và những đoạn cần chọn giữa lối đi ngắn với lối đi rộng hơn. Không gian có người qua lại tạo ra chuyển động không hoàn toàn dự đoán được, vì vậy đòi hỏi cập nhật vùng tránh trong khi vẫn duy trì hướng đến đích. Mỗi cấu hình được thử trên cùng tuyến và cùng giới hạn vận tốc, nhằm giảm ảnh hưởng của điều kiện chạy đến phép so sánh. Tổng cộng có bốn mươi tám lượt di chuyển; các lượt được theo dõi theo cùng quy trình ghi nhận trạng thái, sai lệch, dừng và va chạm. Thiết kế nhiều bối cảnh giúp tách hiệu quả của khung điều khiển khỏi lợi ích có thể chỉ xuất hiện trong một kiểu hình học duy nhất."
+      },
+      {
+        "type": "paragraph",
+        "text": "Cấu hình đối chứng sử dụng bản đồ tĩnh và điều khiển không nối chỉ số rủi ro với lập kế hoạch theo cách của khung đề xuất. Cấu hình này vẫn có các giới hạn vận hành cần thiết, nên so sánh không đặt một phương pháp an toàn bên cạnh một phương pháp không có bảo vệ; khác biệt nằm ở khả năng kết hợp quan sát biến thiên, cập nhật rủi ro và điều chỉnh quỹ đạo. Các chỉ số được chọn gồm tỷ lệ hoàn tất, lệch ngang trung bình, số lần dừng khẩn, thời gian và số va chạm. Tỷ lệ hoàn tất phản ánh kết quả nhiệm vụ; lệch ngang phản ánh chất lượng bám tuyến; dừng khẩn và va chạm phản ánh khía cạnh an toàn; thời gian cung cấp góc nhìn về tiến độ. Không một chỉ số đơn lẻ nào đủ để kết luận cấu hình tốt hơn, vì cải thiện một đại lượng có thể đi kèm đánh đổi ở đại lượng khác."
+      },
+      {
+        "type": "paragraph",
+        "text": "Quy trình ghi nhận dùng các mốc bắt đầu và kết thúc nhất quán, đồng thời lưu lại trạng thái hợp nhất, mức rủi ro, trọng số cảm biến và lệnh điều khiển theo thời gian\\fn{Các mốc đồng bộ được kiểm tra trước mỗi lượt chạy để bảo đảm các kênh dữ liệu dùng cùng quy ước thời gian.}. Khi xuất hiện sự kiện dừng, nguyên nhân được phân loại thành dừng khẩn do rủi ro tức thời hoặc dừng có kiểm soát để lập kế hoạch lại. Sự phân loại giúp tránh cộng gộp mọi lần dừng thành cùng một loại lỗi, bởi một dừng có kiểm soát có thể là cơ chế ngăn va chạm chứ không phải dấu hiệu hệ thống mất chức năng. Những lượt không hoàn tất vẫn được giữ trong thống kê, không bị loại chỉ vì tạo ra kết quả bất lợi. Cách ghi nhận này bảo đảm tỷ lệ hoàn tất phản ánh toàn bộ nhiệm vụ đã thực hiện, đồng thời cho phép giải thích tại sao cấu hình có nhiều dừng hơn lại có thể hạn chế va chạm hoặc ngược lại."
+      },
+      {
+        "type": "box",
+        "kind": "remark",
+        "title": "Nguyên tắc diễn giải",
+        "text": "Các chỉ số được đọc theo bối cảnh và theo cặp cấu hình, không suy ra một lợi ích phổ quát chỉ từ mức trung bình chung. Tỷ lệ hoàn tất cao hơn có ý nghĩa khi không đi kèm gia tăng va chạm; số lần dừng thấp hơn chỉ được xem là thuận lợi nếu rô-bốt vẫn giữ được khả năng tránh nguy cơ và hoàn tất tuyến."
+      },
+      {
+        "type": "paragraph",
+        "text": "Phân tích loại bỏ thành phần được thực hiện bằng cách lần lượt bỏ bản đồ rủi ro, hợp nhất cảm biến, bộ điều khiển dự báo hoặc tái phân bổ trọng số, trong khi giữ các thành phần còn lại theo cùng quy trình. Chỉ số rủi ro trung bình và tải tính toán được ghi cùng các thước đo chuyển động để xác định cả lợi ích lẫn chi phí của từng khối. Cấu hình đầy đủ được chạy làm mốc nội bộ cho phân tích này; do đó, các giá trị không nhất thiết trùng với mọi phép tổng hợp của đối chiếu bản đồ tĩnh. Phân tích loại bỏ từng thành phần và chỉ số hoàn tất đã được dùng để đánh giá độ bền của bộ điều khiển rô-bốt di động \\cite{11}. Cách tổ chức này giúp tránh kết luận rằng một khối có ích chỉ vì nó hiện diện trong kiến trúc, đồng thời cho phép nhận diện trường hợp giảm tải tính toán nhưng làm giảm chất lượng hành vi."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "5. Kết quả"
+      },
+      {
+        "type": "paragraph",
+        "text": "Ở mức tổng thể, cấu hình đề xuất tăng tỷ lệ hoàn tất lộ trình 12,8 phần trăm, giảm lệch ngang trung bình 27,4 phần trăm và giảm số lần dừng khẩn 31,6 phần trăm so với cấu hình dựa trên bản đồ tĩnh. Kết quả theo từng bối cảnh được trình bày tại \\ref{tab:ket-qua-boi-canh}. Trong hành lang, tỷ lệ hoàn tất tăng từ 81,3 lên 92,7 phần trăm, lệch ngang giảm từ 18,6 xuống 13,1 cm, số dừng khẩn giảm từ 13 xuống 9 và số va chạm giảm từ 2 xuống 1. Thời gian cũng giảm từ 146 xuống 139 giây, cho thấy mức an toàn cao hơn không kéo theo chậm trễ trong bối cảnh này. Các thay đổi đồng hướng giữa hoàn tất, lệch ngang và va chạm cho thấy lợi ích không chỉ đến từ một chỉ số đơn lẻ, dù cần xét từng bối cảnh trước khi khái quát."
+      },
+      {
+        "type": "paragraph",
+        "text": "Trong khu lưu trữ, nơi lối đi có độ rộng thay đổi và vật cản tĩnh tạo ra nhiều phương án đi vòng, tỷ lệ hoàn tất tăng từ 75,8 lên 89,6 phần trăm. Lệch ngang giảm từ 22,4 xuống 15,8 cm, số lần dừng khẩn từ 17 xuống 11, va chạm từ 3 xuống 1; thời gian trung bình giảm từ 171 xuống 164 giây. Mức cải thiện này phù hợp với cơ chế đưa rủi ro cục bộ vào lựa chọn quỹ đạo: rô-bốt có thể chọn một đường vòng ổn định hơn mà không phải chờ đến khi sai lệch lớn mới sửa hướng. Việc dùng bản đồ tĩnh có thể duy trì một lối đi dự kiến nhưng không phản ánh đầy đủ thay đổi của vùng quan sát hoặc chất lượng định vị. Khung đề xuất điều chỉnh vận tốc và quỹ đạo theo cùng một đánh giá cục bộ, nhờ đó tránh việc một thành phần cố duy trì tiến độ trong khi thành phần khác phát lệnh dừng."
+      },
+      {
+        "type": "paragraph",
+        "text": "Không gian có người qua lại là bối cảnh có tỷ lệ hoàn tất thấp nhất ở cả hai cấu hình, nhưng chênh lệch vẫn đáng kể: cấu hình đề xuất đạt 86,5 phần trăm so với 70,4 phần trăm của bản đồ tĩnh. Lệch ngang giảm từ 25,7 xuống 17,9 cm, dừng khẩn giảm từ 19 xuống 12, va chạm giảm từ 4 xuống 1 và thời gian giảm từ 158 xuống 151 giây. Những thay đổi này cho thấy việc cập nhật vùng tránh không chỉ giúp giảm va chạm mà còn hạn chế các lần phải ngừng tiến trình. Rô-bốt có thể tiếp tục chuyển động với vận tốc phù hợp khi người đi bộ đi qua ngoài miền xung đột, thay vì phản ứng giống nhau với mọi chuyển động. Kết quả này tương thích với lập kế hoạch có xét hành vi người đi bộ \\cite{9} và với việc sử dụng vùng dự báo ngắn hạn thay cho một biểu diễn chuyển động bất biến."
+      },
+      {
+        "type": "paragraph",
+        "text": "Tỷ lệ hoàn tất theo từng bối cảnh được minh họa tại \\ref{fig:chart}. Khoảng cách giữa hai cấu hình tăng từ hành lang đến bối cảnh có người qua lại, thể hiện lợi ích rõ khi môi trường biến thiên hơn, nhưng không có nghĩa khung đề xuất chỉ phù hợp với vật cản động. Ngay trong hành lang, việc giảm sai lệch và số dừng cho thấy hợp nhất và phản hồi rủi ro cũng có tác dụng khi hình học nền tương đối ổn định. Ở khu lưu trữ, kết quả nằm giữa hai trường hợp còn lại, phù hợp với mức biến thiên chủ yếu đến từ cấu trúc lối đi và vật thể được bố trí. Cần lưu ý rằng tỷ lệ hoàn tất là chỉ số theo lượt, trong khi thời gian và sai lệch được tổng hợp theo từng lượt; không nên diễn giải đường biểu diễn như một quan hệ nhân quả độc lập giữa các chỉ số."
+      },
+      {
+        "type": "paragraph",
+        "text": "Phân tích loại bỏ cho thấy cấu hình đầy đủ đạt tỷ lệ hoàn tất 92,9 phần trăm, lệch ngang 14,2 cm, 10 lần dừng khẩn, rủi ro trung bình 0,18 và tải tính toán 31 ms. Khi bỏ bản đồ rủi ro, tỷ lệ hoàn tất giảm còn 84,1 phần trăm, lệch ngang tăng lên 20,6 cm, dừng khẩn lên 16 và rủi ro trung bình lên 0,31. Khi bỏ hợp nhất cảm biến, các chỉ số suy giảm mạnh hơn ở tỷ lệ hoàn tất và sai lệch: lần lượt 80,7 phần trăm và 23,8 cm, với 18 lần dừng khẩn. Các số liệu chi tiết nằm tại \\ref{tab:loai-bo-thanh-phan}. Mức thay đổi này cho thấy cả bản đồ rủi ro lẫn trạng thái hợp nhất đều quan trọng, song chúng tác động qua các con đường khác nhau: một khối ảnh hưởng cách diễn giải nguy cơ, khối còn lại ảnh hưởng chất lượng trạng thái đầu vào."
+      },
+      {
+        "type": "paragraph",
+        "text": "Khi bỏ bộ điều khiển dự báo, tỷ lệ hoàn tất là 86,3 phần trăm, lệch ngang 18,9 cm, có 14 lần dừng khẩn và rủi ro trung bình 0,27. Khi bỏ tái phân bổ trọng số, các giá trị tương ứng là 88,5 phần trăm, 17,1 cm, 13 lần dừng và rủi ro trung bình 0,24. Như vậy, cả hai thành phần đều đóng góp, nhưng mức suy giảm khi thiếu dự báo lớn hơn mức suy giảm khi không tái phân bổ trọng số trong phép thử này. Tải tính toán giảm từ 31 ms ở cấu hình đầy đủ xuống 19 ms khi bỏ bộ điều khiển dự báo, 24 ms khi bỏ hợp nhất và 27 ms khi bỏ bản đồ rủi ro. Sự giảm tải không bù được mức suy giảm về hoàn tất và sai lệch, nên việc chọn một cấu hình chỉ theo thời gian xử lý sẽ bỏ qua chất lượng nhiệm vụ. Kết quả phù hợp với nhận định rằng các lớp nhận biết và điều khiển có đóng góp bổ sung."
+      },
+      {
+        "type": "paragraph",
+        "text": "Trong các lượt có một nguồn quan sát suy giảm, cơ chế tái phân bổ trọng số duy trì định vị và tránh va chạm bằng cách giảm ảnh hưởng của kênh có phần dư bất thường, đồng thời tăng tương đối ảnh hưởng của các kênh còn lại. Trạng thái không chuyển đột ngột sang phụ thuộc hoàn toàn vào một nguồn duy nhất; điều đó hạn chế nguy cơ một khung dữ liệu đơn lẻ làm thay đổi mạnh quỹ đạo. Các nghiên cứu về định vị khi chất lượng laser và chiều sâu suy giảm \\cite{5} cùng tái phân bổ trọng số khi một kênh quan sát bị suy giảm \\cite{7} cung cấp nền tảng cho cách xử lý này. Kết quả quan sát được cho thấy mức bền vững được duy trì trong điều kiện thử, nhưng không khẳng định hệ thống có thể chịu mất đồng thời mọi kênh hoặc mọi loại lỗi. Khả năng phục hồi phụ thuộc vào việc ít nhất một phần trạng thái còn được quan sát đủ tốt để ràng buộc ước lượng."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "6. Thảo luận và kết luận"
+      },
+      {
+        "type": "paragraph",
+        "text": "Các kết quả nhất quán với giả thuyết rằng lợi ích đến từ sự liên kết giữa các tầng hơn là từ một thuật toán riêng lẻ. Hợp nhất thích nghi làm giảm ảnh hưởng của quan sát kém tin cậy; bản đồ rủi ro chuyển chất lượng và chuyển động của môi trường thành tín hiệu có thể dùng trong lập kế hoạch; bộ điều khiển dự báo thực thi quỹ đạo với giới hạn vận tốc và gia tốc. Khi bỏ một trong các thành phần này, hiệu năng giảm theo những biểu hiện khác nhau. Bản đồ rủi ro có ảnh hưởng mạnh đến số dừng và mức rủi ro trung bình, còn hợp nhất cảm biến ảnh hưởng rõ đến sai lệch ngang và tỷ lệ hoàn tất. Bộ điều khiển dự báo hỗ trợ việc chuyển đánh giá rủi ro thành lệnh ổn định, trong khi tái phân bổ trọng số cải thiện khả năng duy trì trạng thái khi chất lượng quan sát thay đổi. Vì vậy, hiệu quả của kiến trúc nên được xem như tính chất phối hợp, không phải tổng cơ học của các mô-đun."
+      },
+      {
+        "type": "paragraph",
+        "text": "Một đánh đổi quan trọng là mức bảo thủ của hệ thống. Nếu ngưỡng rủi ro được đặt quá thấp, rô-bốt có thể giảm tốc và dừng thường xuyên trước các chuyển động không gây xung đột; nếu quá cao, tín hiệu rủi ro chỉ xuất hiện khi quỹ đạo đã khó phục hồi. Kết quả theo ba bối cảnh cho thấy có thể cải thiện hoàn tất mà vẫn giảm dừng khẩn, nhưng không chứng minh một bộ tham số sẽ tối ưu cho mọi nền tảng, tốc độ hoặc hình học. Những hệ thống có quán tính lớn hơn có thể cần khoảng cách an toàn khác; cảm biến có tần số thấp hơn có thể cần mở rộng vùng dự báo; mặt sàn trơn có thể đòi hỏi giới hạn gia tốc nghiêm ngặt hơn. Do đó, khả năng chuyển giao phụ thuộc vào hiệu chỉnh các đại lượng vật lý và ngưỡng tin cậy, trong khi cấu trúc phối hợp giữa nhận biết, rủi ro và điều khiển có thể được giữ lại."
+      },
+      {
+        "type": "paragraph",
+        "text": "Giới hạn của đánh giá nằm ở số bối cảnh còn hữu hạn, số lượt thử không đủ để mô tả mọi biến thiên dài hạn và việc các thước đo tổng hợp chưa bao quát toàn bộ hành vi tương tác. Các lượt chạy cho phép so sánh có kiểm soát giữa hai cấu hình, nhưng không đại diện cho toàn bộ khác biệt về vật liệu bề mặt, độ sáng, mật độ người hoặc chất lượng cơ cấu của các rô-bốt khác. Một hướng mở rộng là phân tích sâu hơn các tình huống rủi ro hiếm, đánh giá độ nhạy với ngưỡng phát hiện và theo dõi sự thay đổi của trọng số qua thời gian. Cũng cần đo độ trễ từ khi vật cản xuất hiện đến khi lệnh điều khiển thay đổi, vì chỉ số hoàn tất cuối tuyến không mô tả đầy đủ chất lượng phản ứng tức thời. Các phép thử tiếp theo có thể kiểm tra trường hợp mất dữ liệu kéo dài, sai lệch đồng bộ và chuyển động vật cản có chủ đích."
+      },
+      {
+        "type": "paragraph",
+        "text": "Dù có những giới hạn đó, xu hướng giảm sai lệch, dừng khẩn và va chạm xuất hiện trong cả ba bối cảnh, đồng thời tỷ lệ hoàn tất tăng lên. Việc giảm thời gian trong các phép so sánh cũng cho thấy cơ chế an toàn không nhất thiết phải đánh đổi bằng tiến độ nếu rủi ro được đưa vào quyết định từ sớm. Một hệ thống chỉ giảm tốc sau khi phát hiện nguy cơ sát kề thường phải dừng gấp; hệ thống dự báo trước có thể chọn một lối đi khác hoặc điều chỉnh vận tốc dần, nhờ đó giữ chuyển động liên tục hơn. Mặt khác, rủi ro trung bình trong phân tích loại bỏ tăng khi thiếu bản đồ rủi ro hoặc hợp nhất cảm biến, chứng tỏ quyết định ít an toàn hơn không luôn biểu hiện ngay thành va chạm trong một số lượt. Bởi vậy, cần đọc cả chỉ số dẫn báo lẫn kết quả nhiệm vụ khi đánh giá độ tin cậy."
+      },
+      {
+        "type": "paragraph",
+        "text": "Tóm lại, nghiên cứu đề xuất và đánh giá một khung điều khiển rô-bốt di động gồm đồng bộ đa cảm biến, hợp nhất trọng số thích nghi, lập bản đồ rủi ro cục bộ, lập kế hoạch ngắn hạn và điều khiển dự báo. Trọng tâm thiết kế là truyền thông tin về độ tin cậy qua các tầng, để dữ liệu suy giảm có thể làm thay đổi trọng số, rủi ro có thể điều chỉnh quỹ đạo và phản hồi thực tế có thể kích hoạt tái lập kế hoạch. Qua bốn mươi tám lượt thử, cấu hình đề xuất cải thiện các chỉ số hoàn tất và sai lệch so với bản đồ tĩnh; phân tích loại bỏ xác định bản đồ rủi ro, hợp nhất cảm biến và bộ điều khiển dự báo là những thành phần có ảnh hưởng rõ. Kết quả ủng hộ cách tiếp cận phối hợp nhận biết bất định, lập kế hoạch theo rủi ro và điều khiển phản hồi cho môi trường thay đổi \\cite{12}. Hướng phát triển tiếp theo là mở rộng đánh giá độ bền, cải thiện hiệu chỉnh rủi ro và xác minh khả năng duy trì an toàn dưới suy giảm cảm biến kéo dài."
+      }
+    ]
+  },
+  "hash": "96ae316d2365c3d6b10a72068d9990dd3a8ca7d8ec749c40ee2a293ebbf75b14"
+}

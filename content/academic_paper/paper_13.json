@@ -1,0 +1,377 @@
+{
+  "content_id": "paper_13",
+  "variables": {
+    "lang": "vi",
+    "field": "thermal engineering",
+    "paper_length": "short",
+    "citation_style": "numeric"
+  },
+  "lang": "vi",
+  "values": {
+    "title": "Tối ưu hóa cánh tản nhiệt rỗng cho bộ trao đổi nhiệt khí–khí công suất thấp",
+    "authors": [
+      {
+        "name": "Nguyễn Kha Tường",
+        "affiliations": [
+          1
+        ],
+        "corresponding": true,
+        "email": "nguyen.kha@lamgiang-heatlab.vn"
+      },
+      {
+        "name": "Đỗ Lam Yên",
+        "affiliations": [
+          2
+        ],
+        "corresponding": false
+      }
+    ],
+    "affiliations": [
+      "Bộ môn Kỹ thuật Nhiệt, Viện Kỹ thuật Lam Giang, Thành phố Vân Tích, Việt Nam",
+      "Phòng Công nghệ Trao đổi Nhiệt, Trung tâm Năng lượng Vân Tích, Việt Nam"
+    ],
+    "abstract": "Nghiên cứu trình bày phương pháp tối ưu hóa cánh tản nhiệt rỗng dạng zíc zắc dùng cho bộ trao đổi nhiệt khí–khí công suất thấp. Một mô hình số ba chiều được xây dựng để đánh giá đồng thời truyền nhiệt, phân bố nhiệt độ và tổn thất áp suất trong các cấu hình có tỷ lệ rỗng khác nhau. Kết quả cho thấy tỷ lệ rỗng 0,42 tạo ra sự cân bằng tốt giữa diện tích trao đổi nhiệt và trở lực dòng chảy. So với cánh đặc có cùng thể tích vật liệu, cấu hình tối ưu làm tăng hệ số truyền nhiệt trung bình 18,6% và giảm khối lượng 27,4%, trong khi tổn thất áp suất chỉ tăng 4,2%. Phân tích độ nhạy xác định bước gấp và chiều cao cánh là hai thông số chi phối mạnh nhất hiệu suất nhiệt. Kết quả cung cấp cơ sở cho thiết kế thiết bị trao đổi nhiệt nhỏ gọn làm việc với dòng khí có lưu lượng biến đổi.",
+    "abstract_alt": null,
+    "keywords": "truyền nhiệt đối lưu; cánh tản nhiệt rỗng; bộ trao đổi nhiệt; tối ưu hóa hình học; tổn thất áp suất",
+    "keywords_alt": null,
+    "journal": "Tạp chí Kỹ thuật Nhiệt Lam Giang",
+    "acknowledgement": "Nhóm tác giả trân trọng cảm ơn Phòng Công nghệ Trao đổi Nhiệt thuộc Trung tâm Năng lượng Vân Tích đã hỗ trợ thiết bị đo nhiệt độ và kiểm tra độ ổn định của hệ thống.",
+    "references": [
+      {
+        "text": "[1] Lưu Kha Nghiêm và Ninh Vũ Thạch, “Mô hình dòng khí qua cánh rỗng zíc zắc ở chế độ lưu lượng thấp,” Tập san Nhiệt lưu Lam Vực, tập 8, số 1, tr. 19–32, 2022.",
+        "cite": "Lưu và Ninh, 2022"
+      },
+      {
+        "text": "[2] Quách Lam Tịnh, Bạch Kỳ Nam và Đoàn Yên Khê, “Tối ưu đa mục tiêu bề mặt trao đổi nhiệt gấp cho thiết bị khí–khí,” Chuyên san Cơ nhiệt Vân Châu, tập 6, số 3, tr. 44–58, 2021.",
+        "cite": "Quách và cs., 2021"
+      },
+      {
+        "text": "[3] Hạ Minh Nhuận và Phan Duy Trạch, “Phân tích trở lực trong kênh dẫn có vách gấp xen kẽ,” Tạp chí Trao đổi Nhiệt Nhịp Dòng, tập 5, số 2, tr. 11–25, 2020.",
+        "cite": "Hạ và Phan, 2020"
+      },
+      {
+        "text": "[4] Mộc Tấn Sương, Kha Lưu Nghiêm và Vũn Trác Uyên, “Ảnh hưởng độ rỗng đến truyền nhiệt đối lưu trong mô–đun nhỏ gọn,” Kỷ yếu Nhiệt động Vực Kín, tập 9, số 1, tr. 63–77, 2023.",
+        "cite": "Mộc và cs., 2023"
+      },
+      {
+        "text": "[5] Lục Quang Tín và Đan Kỳ Lưu, “Hiệu chỉnh mô hình rối cho dòng khí qua cấu trúc cánh mỏng,” Tạp chí Mô phỏng Nhiệt lưu Trắc Vân, tập 7, số 4, tr. 28–41, 2021.",
+        "cite": "Lục và Đan, 2021"
+      },
+      {
+        "text": "[6] Yên Khải Mộc, Trác Minh Khuê và Nghiêm Lam Phủ, “Đánh giá nhiệt–thủy lực của bộ trao đổi nhiệt dạng tấm có khoang rỗng,” Chuyên san Thiết bị Năng lượng Khe Dòng, tập 4, số 2, tr. 36–51, 2019.",
+        "cite": "Yên và cs., 2019"
+      },
+      {
+        "text": "[7] Tạ Vân Khiêm và Hà Kỳ Lâm, “Phân bố nhiệt độ trong kênh khí có cánh chuyển tiếp,” Tập san Kỹ thuật Nhiệt Vực Lam, tập 10, số 2, tr. 72–86, 2024.",
+        "cite": "Tạ và Hà, 2024"
+      },
+      {
+        "text": "[8] Bùi Mộc Trầm, Lê Kha Nguyệt và Phạm Tấn Vi, “Thiết kế cánh nhẹ bằng phương pháp quét tham số và chỉ số hiệu năng,” Tạp chí Cấu trúc Nhiệt Lưu Tịnh, tập 3, số 3, tr. 15–29, 2022.",
+        "cite": "Bùi và cs., 2022"
+      },
+      {
+        "text": "[9] Nghiêm Vũ Kha và Dư Lam Chi, “Độ nhạy hình học của mô–đun trao đổi nhiệt khi lưu lượng biến đổi,” Chuyên san Phân tích Nhiệt Vân Kết, tập 5, số 1, tr. 52–66, 2023.",
+        "cite": "Nghiêm và Dư, 2023"
+      },
+      {
+        "text": "[10] Trần Kỳ Sâm, Mẫn Quang Dụ và Lưu Yên Trạch, “Đo tổn thất áp suất và hệ số truyền nhiệt của kênh gấp quy mô nhỏ,” Tạp chí Đo lường Nhiệt Cơ Lam, tập 6, số 4, tr. 9–23, 2020.",
+        "cite": "Trần và cs., 2020"
+      },
+      {
+        "text": "[11] Phan Kha Mẫn và Hoàng Vũ Nghiêu, “Tối ưu bước gấp và chiều cao cánh dưới ràng buộc công suất quạt,” Tập san Thiết kế Nhiệt Nhịp Kênh, tập 11, số 1, tr. 47–61, 2024.",
+        "cite": "Phan và Hoàng, 2024"
+      },
+      {
+        "text": "[12] Đỗ Lam Khê, Ninh Trác Vân và Khuê Mộc Dương, “Khung đánh giá đồng thời khối lượng, truyền nhiệt và trở lực cho thiết bị khí–khí,” Tạp chí Hiệu năng Nhiệt Vực Mở, tập 8, số 3, tr. 88–103, 2022.",
+        "cite": "Đỗ và cs., 2022"
+      }
+    ],
+    "body": [
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "1. Bối cảnh và mục tiêu nghiên cứu"
+      },
+      {
+        "type": "paragraph",
+        "text": "Trong các bộ trao đổi nhiệt khí–khí công suất thấp, diện tích trao đổi nhiệt thường bị giới hạn bởi thể tích thiết bị, còn công suất quạt lại không đủ lớn để bù cho tổn thất áp suất cao. Vì vậy, thiết kế cánh tản nhiệt phải đồng thời cải thiện truyền nhiệt, giảm khối lượng và duy trì phân bố dòng tương đối ổn định. Các nghiên cứu về kênh gấp, khoang rỗng và bề mặt trao đổi nhiệt có cấu trúc đã chỉ ra rằng sự xáo trộn lớp biên có thể nâng cao hiệu năng nhiệt–thủy lực, nhưng lợi ích này thường đi kèm với trở lực tăng nhanh \\cite{1}. Những kết quả về tối ưu đa mục tiêu cũng cho thấy một cấu hình đạt hệ số truyền nhiệt lớn nhất chưa chắc là cấu hình phù hợp nhất khi thiết bị làm việc với lưu lượng biến đổi \\cite{2}. Trong bài viết này, các đối tượng kết quả được gọi sớm để bảo đảm liên kết đọc thống nhất, gồm \\ref{tab:configurations}, \\ref{tab:sensitivity}, \\ref{fig:chart} và \\ref{fig:diagram}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Mục tiêu chính là xác định tỷ lệ rỗng, bước gấp và chiều cao cánh thích hợp cho cánh tản nhiệt rỗng dạng zíc zắc. Cấu hình được đánh giá theo ba nhóm chỉ tiêu: hệ số truyền nhiệt trung bình, tổn thất áp suất và khối lượng vật liệu. Với cùng điều kiện nhiệt ở cửa vào, tải nhiệt có thể mô tả khái quát bởi $Q = U A \\Delta T$, trong đó diện tích hữu hiệu $A$ tăng sẽ không tự động làm hiệu năng tổng thể tăng nếu trở lực dòng cũng tăng mạnh. Một thiết kế cân bằng cần tạo ra đủ diện tích vách, duy trì vận tốc phân bố đều và hạn chế vùng tuần hoàn kéo dài. Phân tích về ảnh hưởng của độ rỗng trong mô–đun nhỏ gọn cho thấy hình học rỗng chỉ có lợi khi phần diện tích mất đi được bù bằng sự tăng cường trao đổi nhiệt cục bộ \\cite{4}. Do đó, nghiên cứu không tối ưu từng đại lượng riêng rẽ mà xem xét đồng thời tác động nhiệt và thủy lực."
+      },
+      {
+        "type": "paragraph",
+        "text": "Phạm vi khảo sát bao gồm sáu cấu hình có tỷ lệ rỗng từ 0,28 đến 0,60, bước gấp từ 6 đến 10 mm và chiều cao cánh từ 16 đến 24 mm. Cánh đặc có cùng thể tích vật liệu được dùng làm mốc so sánh để đánh giá lợi ích về khối lượng. Số Reynolds được xác định từ quan hệ $Re = \\frac{\\rho u D_h}{\\mu}$, còn hệ số truyền nhiệt trung bình được biểu diễn qua $Nu = \\frac{h D_h}{k}$, tương ứng với các định nghĩa được thảo luận trong các nghiên cứu về mô hình rối và kênh dẫn có hình học phức tạp \\cite{5}. Cách lựa chọn miền biến thiết kế dựa trên yêu cầu thiết bị nhỏ gọn, khả năng chế tạo vách mỏng và chế độ vận hành có lưu lượng thay đổi \\cite{6}. Ghi chú kỹ thuật trong \\fn{Các giá trị so sánh được quy đổi về cùng lưu lượng khí và cùng thể tích vật liệu trước khi tính chỉ số hiệu năng.} giúp tránh việc diễn giải sai do khác biệt về kích thước ban đầu."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "2. Phương pháp mô hình hóa và tiêu chí đánh giá"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "2.1. Xây dựng miền tính và điều kiện biên"
+      },
+      {
+        "type": "equation",
+        "id": "eq:nusselt-mean",
+        "latex": "\\mathrm{Nu} = \\frac{h D_h}{k}",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Mô hình số ba chiều gồm hai nhánh khí được ngăn cách bởi các vách cánh rỗng xen kẽ. Dòng khí đi vào qua một đoạn phân phối, tiếp tục qua vùng zíc zắc và rời khỏi mô–đun tại cửa ra. Hình học được tạo từ các đoạn vách nghiêng nối tiếp, trong đó bước gấp quyết định khoảng cách giữa hai lần đổi hướng liên tiếp, còn chiều cao cánh xác định bề rộng vùng trao đổi nhiệt. Đường kính thủy lực được tính từ tiết diện dòng và chu vi ướt tương ứng. Phương trình bảo toàn khối lượng, động lượng và năng lượng được giải đồng thời với tính chất khí giữ nhất quán giữa các cấu hình. Cách thiết lập này phù hợp với phân tích trở lực trong kênh có vách gấp xen kẽ, nơi tổn thất cục bộ tại đỉnh gấp có thể chi phối tổn thất toàn tuyến \\cite{3}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Điều kiện nhiệt được đặt sao cho chênh lệch nhiệt độ giữa hai nhánh được duy trì ổn định trong quá trình so sánh. Tại cửa vào, vận tốc khối lượng và nhiệt độ được chỉ định; tại cửa ra, áp suất tham chiếu được dùng để thu được độ sụt áp của toàn mô–đun. Vùng tiếp xúc giữa cánh và dòng khí được mô tả với điều kiện không trượt, trong khi dẫn nhiệt qua vách được tính liên tục từ mặt nóng sang mặt lạnh. Đại lượng truyền nhiệt được suy ra từ cân bằng năng lượng giữa dòng vào và dòng ra, sau đó kiểm tra bằng phân bố nhiệt tại các mặt cánh. Các phương trình chuẩn hóa cho tải nhiệt và độ sụt áp được đối chiếu với \\ref{eq:heat-pressure-balance}; chỉ số Nusselt trung bình được diễn giải theo \\ref{eq:nusselt-mean}. Cách làm này giúp phân biệt ảnh hưởng của tăng diện tích với ảnh hưởng của vận tốc cục bộ."
+      },
+      {
+        "type": "paragraph",
+        "text": "Lưới tính được tinh chỉnh tại các đỉnh gấp, chân cánh, vùng tiếp giáp vách và cửa ra. Đây là các vị trí có gradient vận tốc và nhiệt độ lớn, đồng thời dễ phát sinh sai số nếu kích thước phần tử quá thô. Ba mức tinh chỉnh được kiểm tra bằng cách theo dõi biến thiên của hệ số truyền nhiệt trung bình và tổn thất áp suất. Khi kết quả giữa hai mức lưới cuối chênh lệch nhỏ, lưới trung gian được chọn để giảm thời gian tính mà vẫn bảo toàn xu hướng vật lý. Việc kiểm tra độ nhạy của mô hình đối với cách hiệu chỉnh dòng rối được thực hiện theo hướng dẫn từ các công trình về cấu trúc cánh mỏng \\cite{5} và đo lường kênh gấp quy mô nhỏ \\cite{10}. Các đại lượng đầu ra được lưu theo từng mặt cắt để có thể truy nguyên nguồn gốc của vùng nóng và vùng mất áp."
+      },
+      {
+        "type": "table",
+        "id": "tab:configurations",
+        "caption": "So sánh các cấu hình cánh tản nhiệt rỗng",
+        "header": [
+          [
+            "Cấu hình",
+            "Độ rỗng",
+            "Bước gấp",
+            "Chiều cao",
+            "Tăng nhiệt",
+            "Mất áp"
+          ]
+        ],
+        "rows": [
+          [
+            "R1",
+            "0,28",
+            "8 mm",
+            "18 mm",
+            "14,2%",
+            "38 Pa"
+          ],
+          [
+            "R2",
+            "0,34",
+            "8 mm",
+            "20 mm",
+            "16,7%",
+            "41 Pa"
+          ],
+          [
+            "R3",
+            "0,42",
+            "7 mm",
+            "20 mm",
+            "18,6%",
+            "43 Pa"
+          ],
+          [
+            "R4",
+            "0,48",
+            "7 mm",
+            "22 mm",
+            "19,1%",
+            "49 Pa"
+          ],
+          [
+            "R5",
+            "0,54",
+            "6 mm",
+            "22 mm",
+            "19,4%",
+            "57 Pa"
+          ],
+          [
+            "R6",
+            "0,60",
+            "6 mm",
+            "24 mm",
+            "19,0%",
+            "68 Pa"
+          ]
+        ],
+        "note": "Các giá trị được ghi nhận tại cùng lưu lượng khí và cùng thể tích vật liệu."
+      },
+      {
+        "type": "paragraph",
+        "text": "Tiêu chí tổng hợp gồm hiệu suất nhiệt, khối lượng và yêu cầu công suất quạt. Hiệu suất nhiệt được tính theo $\\eta = \\frac{Q}{m c_p \\Delta T}$, tương ứng với biểu thức trong \\ref{eq:thermal-efficiency}, nhưng không được sử dụng đơn độc để xếp hạng cấu hình. Một thiết kế có thể đạt $\\eta$ cao nhờ làm tăng vận tốc, song đồng thời làm tăng công suất cần thiết cho quạt. Vì thế, mỗi cấu hình được kiểm tra trong cùng miền lưu lượng và cùng thể tích vật liệu. Cách chuẩn hóa này tương thích với các nghiên cứu đánh giá nhiệt–thủy lực của bộ trao đổi nhiệt có khoang rỗng \\cite{6}, đồng thời cho phép so sánh trực tiếp với cánh đặc. Bảng cấu hình tại \\ref{tab:configurations} và sơ đồ dòng tại \\ref{fig:diagram} được dùng làm mốc khi diễn giải kết quả, dù các đối tượng đó không được tái dựng trong phần văn bản này."
+      },
+      {
+        "type": "equation",
+        "id": "eq:heat-pressure-balance",
+        "latex": "\\begin{aligned} Q &= U A \\Delta T, \\\\ \\Delta p &= f \\frac{L}{D_h} \\frac{\\rho u^2}{2} \\end{aligned}",
+        "numbered": true
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "3. Kết quả truyền nhiệt và tổn thất áp suất"
+      },
+      {
+        "type": "paragraph",
+        "text": "Kết quả tính toán cho thấy tỷ lệ rỗng thấp làm diện tích vách hữu hiệu giảm, khiến mức tăng hệ số truyền nhiệt chưa đạt yêu cầu dù tổn thất áp suất tương đối nhỏ. Khi tỷ lệ rỗng tăng từ 0,28 lên 0,42, các vùng dòng đổi hướng trở nên rõ hơn và lớp biên bị xáo trộn đều hơn dọc theo kênh. Cấu hình R3, có tỷ lệ rỗng 0,42, bước gấp 7 mm và chiều cao cánh 20 mm, đạt mức tăng hệ số truyền nhiệt trung bình 18,6% so với cánh đặc có cùng thể tích vật liệu. Tổn thất áp suất của cấu hình này là 43 Pa, trong khi khối lượng giảm 27,4%. Xu hướng giữa diện tích, vận tốc và tổn thất được mô tả bằng quan hệ $\\Delta p = f \\frac{L}{D_h} \\frac{\\rho u^2}{2}$, cho thấy vận tốc tăng có thể nhanh chóng làm tăng thành phần tổn thất ma sát. Các kết quả về phân bố nhiệt trong kênh có cánh chuyển tiếp cũng nhấn mạnh vai trò của vùng đầu vào đối với tổng tải nhiệt \\cite{7}."
+      },
+      {
+        "type": "chart",
+        "id": "fig:chart",
+        "caption": "Mức tăng hệ số truyền nhiệt theo cấu hình",
+        "chart_type": "bar",
+        "labels": [
+          "R1",
+          "R2",
+          "R3",
+          "R4",
+          "R5",
+          "R6"
+        ],
+        "series": [
+          {
+            "name": "Tăng nhiệt (%)",
+            "values": [
+              14.2,
+              16.7,
+              18.6,
+              19.1,
+              19.4,
+              19.0
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Từ R1 đến R3, mức tăng nhiệt tăng khá nhanh vì diện tích trao đổi tăng đồng thời với sự xáo trộn tại các đỉnh gấp. Sau R3, việc tiếp tục tăng tỷ lệ rỗng hoặc giảm bước gấp chỉ đem lại cải thiện nhỏ về hệ số truyền nhiệt, trong khi tổn thất áp suất tăng rõ rệt. R4 đạt mức tăng nhiệt 19,1%, R5 đạt 19,4%, nhưng các giá trị mất áp lần lượt tăng lên 49 Pa và 57 Pa. R6 không còn duy trì xu hướng tăng do phần vách hữu hiệu giảm và vùng vận tốc thấp mở rộng. Quan hệ này được thể hiện trong \\ref{fig:chart}, còn các giá trị đối chiếu giữa R1–R6 được quy tụ tại \\ref{tab:configurations}. So sánh cho thấy R3 không phải cấu hình có mức tăng nhiệt tuyệt đối lớn nhất, nhưng có tỷ số lợi ích nhiệt trên trở lực tốt hơn các cấu hình rỗng cao hơn."
+      },
+      {
+        "type": "paragraph",
+        "text": "Phân bố nhiệt độ trong R3 cho thấy vùng nóng tập trung ở nửa đầu kênh, nơi chênh lệch nhiệt độ giữa vách và dòng khí còn lớn. Sau mỗi đỉnh gấp, nhiệt độ dòng được san đều hơn do dòng phụ trộn với vùng sát vách. Các vùng vận tốc thấp chủ yếu giới hạn quanh chân cánh, không tạo thành dải tuần hoàn kéo dài theo toàn bộ chiều cao. Khi vận hành ở lưu lượng thấp, đặc điểm này giúp hạn chế nguy cơ nhiệt tích tụ cục bộ; khi lưu lượng tăng, tổn thất bổ sung vẫn được giữ trong phạm vi có thể kiểm soát. Kết quả đo tổn thất áp suất và hệ số truyền nhiệt trong các kênh nhỏ cho thấy việc đánh giá đồng thời hai đại lượng là cần thiết để tránh chọn thiết kế chỉ có lợi trong một điều kiện dòng hẹp \\cite{10}. Mô hình hiện tại cũng cho thấy chênh lệch nhiệt độ cửa ra ổn định hơn ở R3 so với R5."
+      },
+      {
+        "type": "equation",
+        "id": "eq:thermal-efficiency",
+        "latex": "\\eta = \\frac{Q}{m c_p \\Delta T}",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "So với cánh đặc, cấu hình R3 làm tăng hệ số truyền nhiệt trung bình 18,6%, giảm khối lượng 27,4% và chỉ làm tổn thất áp suất tăng 4,2%. Con số tăng áp suất nhỏ hơn nhiều so với mức tăng tại các cấu hình có bước gấp 6 mm, bởi R3 vẫn giữ được tiết diện dòng đủ rộng. Nếu chỉ dùng điều kiện cực đại của $Nu$ để lựa chọn, R5 có thể được ưu tiên; tuy nhiên, khi đưa công suất quạt và khối lượng vào cùng hàm mục tiêu, R3 có biên vận hành an toàn hơn. Sự cân bằng này phù hợp với các kết quả về thiết kế cánh nhẹ bằng quét tham số, trong đó giảm vật liệu cần đi kèm kiểm soát trở lực \\cite{8}. Như vậy, hình học rỗng đem lại lợi ích rõ nhất khi mức rỗng được giữ trong miền trung gian."
+      },
+      {
+        "type": "table",
+        "id": "tab:sensitivity",
+        "caption": "Xếp hạng ảnh hưởng của các thông số hình học",
+        "header": [
+          [
+            "Thông số",
+            "Mức thấp",
+            "Mức cao",
+            "Biến thiên nhiệt",
+            "Xếp hạng"
+          ]
+        ],
+        "rows": [
+          [
+            "Bước gấp",
+            "6 mm",
+            "10 mm",
+            "11,8%",
+            "1"
+          ],
+          [
+            "Chiều cao cánh",
+            "16 mm",
+            "24 mm",
+            "9,6%",
+            "2"
+          ],
+          [
+            "Độ rỗng",
+            "0,28",
+            "0,60",
+            "7,9%",
+            "3"
+          ],
+          [
+            "Chiều dày vách",
+            "0,6 mm",
+            "1,2 mm",
+            "3,4%",
+            "4"
+          ]
+        ],
+        "note": "Biến thiên nhiệt biểu thị mức thay đổi của hệ số truyền nhiệt trung bình trong miền khảo sát."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "4. Phân tích độ nhạy của thông số hình học"
+      },
+      {
+        "type": "paragraph",
+        "text": "Phân tích độ nhạy được thực hiện bằng cách thay đổi lần lượt bước gấp, chiều cao cánh, tỷ lệ rỗng và chiều dày vách trong miền khảo sát. Kết quả tổng hợp trong \\ref{tab:sensitivity} cho thấy bước gấp có ảnh hưởng lớn nhất, với mức biến thiên hệ số truyền nhiệt 11,8% giữa hai mức biên. Chiều cao cánh đứng thứ hai với biến thiên 9,6%, tiếp theo là tỷ lệ rỗng ở mức 7,9% và chiều dày vách ở mức 3,4%. Các xu hướng này phù hợp với phân tích độ nhạy hình học khi lưu lượng biến đổi, trong đó kích thước quyết định số lần đổi hướng và thời gian tiếp xúc giữa dòng với vách \\cite{9}. Trong mỗi đoạn, hệ số truyền nhiệt có thể viết dưới dạng $h \\propto \\frac{Nu k}{D_h}$, vì vậy thay đổi hình học tác động đồng thời đến $Nu$ và $D_h$."
+      },
+      {
+        "type": "paragraph",
+        "text": "Khi bước gấp giảm từ 10 xuống 6 mm, số lần đổi hướng trên cùng chiều dài tăng, làm lớp biên bị phá vỡ thường xuyên hơn. Tuy nhiên, sự gia tăng này cũng làm xuất hiện nhiều vùng tách dòng và làm độ sụt áp tăng nhanh. Bước gấp 7 mm tạo được sự cân bằng tốt hơn bước 6 mm, bởi dòng vẫn có đủ chiều dài để tái phát triển trước lần đổi hướng kế tiếp. Chiều cao cánh từ 16 đến 20 mm làm diện tích trao đổi tăng rõ, nhưng khi vượt quá 20 mm, lợi ích bổ sung giảm do phân bố vận tốc không còn đồng đều ở vùng xa trục dòng chính. Kết luận về vai trò nổi trội của bước gấp và chiều cao cánh tương đồng với nghiên cứu tối ưu dưới ràng buộc công suất quạt \\cite{11}. Do đó, hai thông số này cần được khóa trước khi tinh chỉnh tỷ lệ rỗng."
+      },
+      {
+        "type": "figure",
+        "id": "fig:diagram",
+        "figure_type": "block_diagram",
+        "caption": "Sơ đồ khối của mô-đun trao đổi nhiệt",
+        "description": "Sơ đồ dòng khí đi qua kênh vào, vùng cánh rỗng và kênh ra; các mũi tên biểu thị chiều chuyển động, còn khối trao đổi nhiệt liên kết hai nhánh.",
+        "labels": [
+          "Không khí vào",
+          "Vùng cánh rỗng",
+          "Trao đổi qua vách",
+          "Không khí ra"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Ảnh hưởng của chiều dày vách nhỏ hơn các thông số còn lại trong miền khảo sát, nhưng không thể bỏ qua trong thiết kế chế tạo. Vách quá mỏng làm giảm khối lượng và tăng thể tích rỗng, song có thể làm suy giảm dẫn nhiệt ngang và gây sai lệch hình dạng tại đỉnh gấp. Vách dày hơn cải thiện độ cứng, nhưng phần vật liệu bổ sung làm giảm tiết diện dòng và tăng khối lượng. Tỷ lệ rỗng cũng có tác động phi tuyến: ở mức thấp, diện tích trao đổi bị giới hạn; ở mức cao, diện tích vách hữu hiệu và khả năng truyền nhiệt qua vật liệu giảm. Chỉ số đánh giá tổng hợp có thể viết khái quát là $I = \\frac{Q}{\\Delta p}$, sau đó được kiểm tra thêm theo khối lượng. Cách tiếp cận đồng thời ba mục tiêu này phù hợp với khung đánh giá thiết bị khí–khí có ràng buộc về khối lượng, truyền nhiệt và trở lực \\cite{12}."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "5. Bàn luận về khả năng vận hành và giới hạn mô hình"
+      },
+      {
+        "type": "paragraph",
+        "text": "Ưu điểm chính của R3 là duy trì được phân bố dòng tương đối đều trong khi vẫn tạo ra đủ diện tích trao đổi. Với lưu lượng thấp, các đỉnh gấp thúc đẩy trộn dòng và hạn chế lớp khí tù đọng sát vách; với lưu lượng cao hơn, tiết diện dòng chưa bị thu hẹp quá mức nên công suất quạt không tăng đột biến. Điều này có ý nghĩa đối với các thiết bị làm việc theo tải thay đổi, trong đó điểm vận hành không cố định trong suốt chu kỳ. Các nghiên cứu về bề mặt gấp đa mục tiêu cũng đề xuất ưu tiên miền thiết kế có độ dốc hiệu năng vừa phải thay vì điểm cực trị nhạy với nhiễu \\cite{2}. R3 đáp ứng đặc điểm đó vì mức tăng nhiệt và tổn thất áp suất thay đổi tương đối có kiểm soát quanh điều kiện danh định."
+      },
+      {
+        "type": "paragraph",
+        "text": "Mô hình hiện tại giả định tính chất khí nhất quán và dòng ổn định, do đó chưa mô tả đầy đủ ảnh hưởng của dao động lưu lượng nhanh, bức xạ nhiệt hoặc sai số chế tạo tại các đỉnh gấp. Trong thực tế, độ nhám bề mặt và sai lệch chiều dày vách có thể làm thay đổi hệ số ma sát. Khi nhiệt độ tăng đáng kể, độ nhớt và khối lượng riêng cũng thay đổi theo vị trí, khiến $Re$ và $Nu$ không còn phân bố đơn giản theo chiều dài. Vì vậy, kết quả R3 nên được dùng làm cơ sở thiết kế ban đầu, sau đó kiểm tra bằng phép đo trên mô–đun chế tạo ở nhiều mức lưu lượng. Các công trình đo trực tiếp trong kênh gấp cho thấy việc hiệu chuẩn cảm biến nhiệt và áp suất có thể ảnh hưởng đáng kể đến độ tin cậy của chênh lệch nhỏ giữa các cấu hình \\cite{10}. Đây là lý do cần kết hợp mô phỏng với kiểm tra thực nghiệm có kiểm soát."
+      },
+      {
+        "type": "paragraph",
+        "text": "Một hướng mở rộng là xây dựng hàm mục tiêu có trọng số thay đổi theo chế độ vận hành. Ở tải thấp, trọng số của tổn thất áp suất có thể lớn hơn vì công suất quạt bị giới hạn; ở tải cao, trọng số của tải nhiệt và độ ổn định nhiệt có thể được tăng lên. Khi đó, cấu hình tối ưu không nhất thiết cố định ở R3 cho mọi điều kiện, nhưng R3 vẫn là điểm khởi đầu hợp lý nhờ tính cân bằng. Các nghiên cứu về mô–đun nhỏ gọn và cánh nhẹ đều cho thấy việc tối ưu cần gắn với ràng buộc chế tạo, độ bền và khả năng vệ sinh \\cite{4}. Việc bổ sung dữ liệu dao động nhiệt theo thời gian cũng giúp đánh giá tốt hơn tuổi thọ của vách mỏng. Những mở rộng này có thể được tổ chức quanh các đại lượng $Q$, $\\Delta p$ và $m$ mà không thay đổi cấu trúc so sánh hiện tại."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "6. Kết luận"
+      },
+      {
+        "type": "paragraph",
+        "text": "Nghiên cứu đã xây dựng phương pháp đánh giá cánh tản nhiệt rỗng dạng zíc zắc cho bộ trao đổi nhiệt khí–khí công suất thấp. Sáu cấu hình được so sánh trong cùng điều kiện lưu lượng và cùng thể tích vật liệu, qua đó làm rõ sự đánh đổi giữa diện tích trao đổi nhiệt, khối lượng và tổn thất áp suất. Kết quả chỉ ra rằng tỷ lệ rỗng 0,42, bước gấp 7 mm và chiều cao cánh 20 mm tạo nên cấu hình cân bằng nhất. R3 làm tăng hệ số truyền nhiệt trung bình 18,6%, giảm khối lượng 27,4% và chỉ làm tổn thất áp suất tăng 4,2% so với cánh đặc. Các kết quả này phù hợp với nhận định rằng cánh rỗng có hiệu quả cao nhất trong miền rỗng trung gian, nơi diện tích vách và khả năng xáo trộn vẫn cùng được duy trì \\cite{1}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Phân tích độ nhạy cho thấy bước gấp là thông số chi phối mạnh nhất, tiếp theo là chiều cao cánh, tỷ lệ rỗng và chiều dày vách. Vì vậy, quy trình thiết kế nên xác định bước gấp và chiều cao trước, sau đó mới tinh chỉnh độ rỗng để đạt yêu cầu về khối lượng và trở lực. Chỉ số nhiệt–thủy lực cần được xem xét cùng công suất quạt, đặc biệt khi lưu lượng thay đổi theo tải. Cách lựa chọn này tránh việc chạy theo mức tăng nhiệt cực đại mà bỏ qua điều kiện vận hành dài hạn. Kết luận về thứ tự ảnh hưởng cũng nhất quán với các nghiên cứu về quét tham số và tối ưu bước gấp dưới ràng buộc quạt \\cite{8}; \\cite{11}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Trong các bước tiếp theo, cần kiểm tra R3 bằng mô–đun chế tạo, đo đồng thời nhiệt độ, lưu lượng và áp suất tại nhiều vị trí dọc kênh. Dữ liệu đo sẽ cho phép hiệu chỉnh hệ số ma sát, đánh giá sai lệch do bề mặt và xác định giới hạn vận hành an toàn. Ngoài ra, việc khảo sát chu kỳ tải, độ bền vách và ảnh hưởng của bụi bám sẽ giúp chuyển kết quả mô phỏng thành quy trình thiết kế thực dụng. Khung đánh giá nên tiếp tục giữ ba trục chính là tải nhiệt, trở lực và khối lượng, bởi chỉ một đại lượng riêng lẻ không phản ánh đầy đủ chất lượng của mô–đun \\cite{12}. Với định hướng đó, cánh tản nhiệt rỗng zíc zắc có thể hỗ trợ phát triển các thiết bị nhỏ gọn, tiết kiệm vật liệu và thích nghi tốt hơn với dòng khí biến đổi."
+      }
+    ]
+  },
+  "hash": "bd9e0e0585bed92ed5964f45dfb9613f62d8e636201065c6d158c25863b736f8"
+}

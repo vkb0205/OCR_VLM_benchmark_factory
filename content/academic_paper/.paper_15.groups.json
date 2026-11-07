@@ -1,0 +1,472 @@
+{
+  "front": {
+    "title": "Suy luận mạng điều hòa gen động từ dữ liệu phiên mã đơn bào bằng mô hình xác suất đa tầng",
+    "authors": [
+      {
+        "name": "Nguyễn Tường An",
+        "affiliations": [
+          1,
+          2
+        ],
+        "corresponding": true,
+        "email": "nguyen.tuong.an@lamhai-bio.vn"
+      },
+      {
+        "name": "Phạm Kha Vỹ",
+        "affiliations": [
+          1
+        ],
+        "corresponding": false
+      },
+      {
+        "name": "Lê Minh Tảo",
+        "affiliations": [
+          2
+        ],
+        "corresponding": false
+      },
+      {
+        "name": "Bùi Lam Khuê",
+        "affiliations": [
+          1,
+          2
+        ],
+        "corresponding": false
+      }
+    ],
+    "affiliations": [
+      "Phòng Sinh học Tính toán, Trung tâm Hệ gen Lam Hải, Khu học thuật Tân Lộ, Việt Nam",
+      "Bộ môn Toán - Tin Sinh học, Viện Khoa học Sự sống Vân Giang, Việt Nam"
+    ],
+    "abstract": "Việc tái dựng mạng điều hòa gen từ dữ liệu phiên mã đơn bào thường bị hạn chế bởi độ thưa của tín hiệu, sự không đồng bộ giữa các trạng thái tế bào và ảnh hưởng của biến thiên kỹ thuật. Chúng tôi trình bày một khung suy luận xác suất đa tầng có tên ĐộngMạng, kết hợp mô hình chuyển trạng thái tế bào, quan hệ điều hòa có hướng và cơ chế hiệu chỉnh nhiễu phụ thuộc độ sâu đọc. Phương pháp sử dụng thông tin đồng biến động giữa các gen, thứ tự trạng thái dọc theo quỹ đạo biệt hóa và mức bảo tồn của các tương tác trong nhiều quần thể tế bào. Một quy trình chọn biến theo tầng được áp dụng trước khi tối ưu hậu nghiệm, nhờ đó giảm số cạnh giả và duy trì các tín hiệu yếu nhưng ổn định. Trên mười tám bộ dữ liệu phiên mã đơn bào thuộc các hệ biệt hóa và đáp ứng stress khác nhau, ĐộngMạng cải thiện độ chính xác phát hiện cạnh điều hòa lần lượt 11,8% và 9,4% so với hai mô hình tương quan có trọng số. Phân tích loại bỏ từng thành phần cho thấy mô hình chuyển trạng thái đóng góp lớn nhất vào khả năng phân biệt điều hòa theo thời gian với tương quan đồng thời. Khi áp dụng cho quần thể tế bào tiền thân thần kinh, phương pháp nhận diện một mô-đun gồm các gen kiểm soát chu kỳ, kết dính và chuyển hóa lipid, đồng thời chỉ ra một nhóm cạnh có thể liên quan đến quyết định đi vào trạng thái trưởng thành. Các dự đoán được kiểm tra bằng dữ liệu phiên mã độc lập và đạt mức nhất quán cao ở cấp mô-đun. Kết quả cho thấy việc kết hợp động học tế bào với cấu trúc mạng có hướng có thể cung cấp một cách diễn giải bền vững hơn cho dữ liệu đơn bào, đồng thời tạo nền tảng để xếp hạng các nút điều hòa cần được khảo sát bằng thí nghiệm tiếp theo.",
+    "abstract_alt": null,
+    "keywords": "sinh học tính toán; mạng điều hòa gen; phiên mã đơn bào; suy luận Bayes; động học tế bào; học đa tầng",
+    "keywords_alt": null,
+    "journal": "Tạp chí Mạng lưới Sinh học Phân tử",
+    "acknowledgement": "Nhóm tác giả cảm ơn Phòng Hạ tầng Dữ liệu của Trung tâm Hệ gen Lam Hải đã hỗ trợ tổ chức quy trình tính toán và kiểm tra độ ổn định của kết quả. Chúng tôi cũng ghi nhận sự hỗ trợ chuyên môn từ Nhóm Phân tích Tế bào Vân Giang trong việc diễn giải các trạng thái biệt hóa. Công trình được thực hiện với kinh phí của Chương trình Nghiên cứu Nhịp Mạch về Sinh học Định lượng."
+  },
+  "formulas": [
+    {
+      "after": 6,
+      "element": {
+        "type": "equation",
+        "id": "eq:observation-rate",
+        "latex": "\\hat{\\Lambda}_{ig}=\\exp\\left(\\eta_g+\\delta_i+\\sum_{k=1}^{K}w_{gk}z_{ik}\\right)",
+        "numbered": true
+      }
+    },
+    {
+      "after": 10,
+      "element": {
+        "type": "equation",
+        "id": "eq:edge-score",
+        "latex": "\\begin{aligned} P(a_{gh}=1;Y,Z)&\\propto\\pi_{gh}\\exp\\left(\\mathcal{L}_{gh}(Y,Z)\\right),\\\\ \\mathcal{L}_{gh}(Y,Z)&=\\sum_{i=1}^{n-1}\\left[z_{i+1,h}-z_{ih}\\right]\\left[z_{i,g}-z_{i+1,g}\\right] \\end{aligned}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 14,
+      "element": {
+        "type": "equation",
+        "id": "eq:network-objective",
+        "latex": "\\hat{\\mathbf{A}}=\\max_{\\mathbf{A}}\\left\\{\\sum_{g=1}^{G}\\sum_{h=1}^{G}\\left[A_{gh}\\mathcal{L}_{gh}-\\lambda A_{gh}\\right]-\\rho\\sum_{g=1}^{G}\\sum_{h=1}^{G}A_{gh}A_{hg}\\right\\}",
+        "numbered": true
+      }
+    }
+  ],
+  "tables": [
+    {
+      "after": 9,
+      "element": {
+        "type": "table",
+        "id": "tab:dataset-summary",
+        "caption": "Đặc điểm các bộ dữ liệu phiên mã đơn bào",
+        "header": [
+          [
+            "Bộ dữ liệu",
+            "Hệ tế bào",
+            "Tế bào",
+            "Gen giữ lại",
+            "Đọc trung vị",
+            "Trạng thái",
+            "Độ nhất quán"
+          ]
+        ],
+        "rows": [
+          [
+            "DG-01",
+            "tiền thân thần kinh",
+            "12.480",
+            "8.731",
+            "18.640 lượt",
+            "bốn",
+            "0,91"
+          ],
+          [
+            "DG-02",
+            "biệt hóa cơ",
+            "9.760",
+            "7.984",
+            "16.220 lượt",
+            "năm",
+            "0,88"
+          ],
+          [
+            "DG-03",
+            "đáp ứng oxy thấp",
+            "14.315",
+            "9.102",
+            "21.570 lượt",
+            "ba",
+            "0,86"
+          ],
+          [
+            "DG-04",
+            "biệt hóa biểu mô",
+            "11.208",
+            "8.445",
+            "17.930 lượt",
+            "sáu",
+            "0,90"
+          ],
+          [
+            "DG-05",
+            "đáp ứng nhiệt",
+            "8.940",
+            "7.216",
+            "15.480 lượt",
+            "bốn",
+            "0,84"
+          ],
+          [
+            "DG-06",
+            "tiền thân tạo máu",
+            "13.670",
+            "8.903",
+            "19.760 lượt",
+            "năm",
+            "0,89"
+          ]
+        ],
+        "note": "Các giá trị được tổng hợp sau bước lọc chất lượng; độ nhất quán là mức tương đồng mô-đun giữa hai lần chạy độc lập."
+      }
+    },
+    {
+      "after": 15,
+      "element": {
+        "type": "table",
+        "id": "tab:ablation-results",
+        "caption": "Đánh giá loại bỏ thành phần trên tập kiểm tra",
+        "header": [
+          [
+            "Cấu hình",
+            "Phân biệt cạnh",
+            "Độ bao phủ",
+            "Cạnh giả",
+            "Ổn định mô-đun",
+            "Tín hiệu yếu"
+          ]
+        ],
+        "rows": [
+          [
+            "Đầy đủ",
+            "0,86",
+            "0,89",
+            "0,12",
+            "0,88",
+            "giữ tốt"
+          ],
+          [
+            "Bỏ chuyển trạng thái",
+            "0,74",
+            "0,78",
+            "0,21",
+            "0,76",
+            "giảm rõ"
+          ],
+          [
+            "Bỏ hiệu chỉnh độ sâu",
+            "0,81",
+            "0,84",
+            "0,17",
+            "0,82",
+            "giảm nhẹ"
+          ],
+          [
+            "Bỏ bảo tồn tương tác",
+            "0,79",
+            "0,82",
+            "0,19",
+            "0,80",
+            "giảm vừa"
+          ],
+          [
+            "Chỉ tương quan đồng thời",
+            "0,68",
+            "0,71",
+            "0,29",
+            "0,69",
+            "mất nhiều"
+          ]
+        ],
+        "note": "Độ phân biệt và độ bao phủ được tính trên các cạnh đã được xác nhận bằng dữ liệu phiên mã độc lập."
+      }
+    }
+  ],
+  "charts_figures": [
+    {
+      "after": 12,
+      "element": {
+        "type": "chart",
+        "id": "fig:chart",
+        "caption": "Độ nhất quán mô-đun giữa các bộ dữ liệu",
+        "chart_type": "bar",
+        "labels": [
+          "DG-01",
+          "DG-02",
+          "DG-03",
+          "DG-04",
+          "DG-05",
+          "DG-06"
+        ],
+        "series": [
+          {
+            "name": "Độ nhất quán",
+            "values": [
+              0.91,
+              0.88,
+              0.86,
+              0.9,
+              0.84,
+              0.89
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "after": 18,
+      "element": {
+        "type": "figure",
+        "id": "fig:diagram",
+        "figure_type": "block_diagram",
+        "caption": "Sơ đồ suy luận mạng điều hòa gen động",
+        "description": "Sơ đồ gồm khối tín hiệu phiên mã, khối suy ra trạng thái tế bào, khối ước lượng mạng điều hòa có hướng và khối xếp hạng cạnh. Các khối nối tuần tự bằng mũi tên; một vòng phản hồi từ mạng về trạng thái biểu thị bước cập nhật hậu nghiệm.",
+        "labels": [
+          "Tín hiệu phiên mã",
+          "Trạng thái tế bào",
+          "Mạng điều hòa có hướng",
+          "Xếp hạng cạnh"
+        ]
+      }
+    }
+  ],
+  "code": [],
+  "references": [
+    {
+      "text": "Tạ Vân Khước, Nghiêm Kha Trực, và Quách Lam Diệp (2021). Suy luận mạng điều hòa gen có hướng từ dữ liệu phiên mã đơn bào bằng mô hình trạng thái Bayes đa tầng. Tạp chí Sinh học Tính toán Vân Hải, 7(2), 115–132.",
+      "cite": "(Tạ et al., 2021)"
+    },
+    {
+      "text": "Lữ Tường Nghiên, Mạc Huyên Trì, Đan Túc Uyên, và La Minh Sưởng (2020). Hiệu chỉnh độ sâu đọc và phân rã biến thiên kỹ thuật trong ma trận đếm đơn bào. Tin sinh học Định lượng, 5(4), 241–259.",
+      "cite": "(Lữ et al., 2020)"
+    },
+    {
+      "text": "Nghiêm Kha Trực, Dư Tịnh Lạc, và Yên Quang Lập (2022). Phân biệt đồng biến động đồng thời với quan hệ điều hòa theo quỹ đạo biệt hóa. Mạng lưới Hệ gen, 9(1), 33–51.",
+      "cite": "(Nghiêm et al., 2022)"
+    },
+    {
+      "text": "Quách Lam Diệp, Tạ Vân Khước, và Hàm Vũ Châu (2019). Chọn biến phân cấp cho suy luận cạnh yếu trong mạng điều hòa gen thưa. Toán học Sinh học Ứng dụng, 6(3), 178–196.",
+      "cite": "(Quách et al., 2019)"
+    },
+    {
+      "text": "Đan Túc Uyên, Lữ Tường Nghiên, Bùi Kỳ Mộc, và Mạc Huyên Trì (2023). Bảo tồn mô-đun điều hòa qua các quần thể tế bào và lần khởi tạo hậu nghiệm. Hệ thống Điều hòa Sinh học, 11(2), 87–106.",
+      "cite": "(Đan et al., 2023)"
+    },
+    {
+      "text": "La Minh Sưởng, Doãn Kha Nhiên, và Nghiêm Kha Trực (2021). Lan truyền bất định trong mô hình chuyển trạng thái của quỹ đạo tế bào đơn. Phân tích Tế bào Đơn, 4(2), 64–82.",
+      "cite": "(La et al., 2021)"
+    },
+    {
+      "text": "Dư Tịnh Lạc, Yên Quang Lập, Hàm Vũ Châu, và Tạ Vân Khước (2024). Đánh giá độ phân biệt cạnh và độ ổn định mô-đun trong các phương pháp suy luận mạng đơn bào. Phương pháp Tính toán trong Sinh học, 12(1), 19–39.",
+      "cite": "(Dư et al., 2024)"
+    },
+    {
+      "text": "Mạc Huyên Trì, Quách Lam Diệp, và Lữ Tường Nghiên (2022). Mô hình chuyển trạng thái thưa cho phân tích biệt hóa nhiều nhánh ở tế bào tiền thân. Gen và Quỹ đạo Tế bào, 8(4), 221–240.",
+      "cite": "(Mạc et al., 2022)"
+    },
+    {
+      "text": "Hàm Vũ Châu, Đan Túc Uyên, và La Minh Sưởng (2020). Tái dựng mô-đun điều hòa trong đáp ứng oxy thấp bằng dữ liệu phiên mã đơn bào. Sinh học Hệ thống Tân Nguyên, 10(3), 154–173.",
+      "cite": "(Hàm et al., 2020)"
+    },
+    {
+      "text": "Doãn Kha Nhiên, Bùi Kỳ Mộc, và Dư Tịnh Lạc (2023). Xếp hạng cạnh yếu bằng tích hợp thứ tự biểu hiện và mức lặp lại giữa các quần thể tế bào. Tạp chí Mô hình Hệ gen, 7(1), 45–63.",
+      "cite": "(Doãn et al., 2023)"
+    },
+    {
+      "text": "Yên Quang Lập, Nghiêm Kha Trực, và Mạc Huyên Trì (2024). Tích hợp tín hiệu phiên mã với dấu chuẩn trạng thái trong suy luận mạng điều hòa động. Tạp chí Mạng lưới Sinh học Phân tử, 13(2), 101–120.",
+      "cite": "(Yên et al., 2024)"
+    },
+    {
+      "text": "Bùi Kỳ Mộc, Tạ Vân Khước, Quách Lam Diệp, và Hàm Vũ Châu (2018). Khung kiểm định chéo cho mô hình xác suất đa tầng trên dữ liệu tế bào không đồng nhất. Biên khảo Tin sinh học Việt Nguyên, 3(4), 267–286.",
+      "cite": "(Bùi et al., 2018)"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "1. Bối cảnh và câu hỏi nghiên cứu"
+    },
+    {
+      "type": "paragraph",
+      "text": "Tái dựng mạng điều hòa gen từ phiên mã đơn bào đòi hỏi phân biệt những quan hệ có khả năng đi trước biến đổi trạng thái với các tương quan chỉ cùng xuất hiện trong một nhóm tế bào. Đây không chỉ là vấn đề chọn một thước đo tương quan thích hợp. Ma trận đếm thường thưa, độ sâu đọc khác nhau giữa các tế bào, còn quá trình biệt hóa làm thay đổi đồng thời nhiều chương trình biểu hiện. Nếu các nguồn biến thiên ấy bị gộp vào một lớp duy nhất, một gen điều hòa có tín hiệu yếu nhưng ổn định có thể bị bỏ qua, trong khi một cặp gen cùng đáp ứng với điều kiện đo lại được xếp thành cạnh có hướng. Ở mức khái quát, tín hiệu quan sát của gen g tại tế bào i có thể ký hiệu là $Y_{ig}$. \\fn{Thứ tự trạng thái là đại lượng suy luận từ dữ liệu phiên mã, không phải thời gian đo trực tiếp.} ĐộngMạng được xây dựng để xử lý đồng thời các trở ngại đó bằng một mô hình xác suất đa tầng, trong đó trạng thái tế bào, mức biểu hiện và cấu trúc điều hòa được ước lượng có liên hệ nhưng không đồng nhất với nhau."
+    },
+    {
+      "type": "paragraph",
+      "text": "Câu hỏi trung tâm là liệu thứ tự tương đối của các trạng thái dọc quỹ đạo có giúp phân biệt quan hệ điều hòa động với đồng biến động đồng thời hay không. Một mạng có hướng biểu diễn giả thuyết về chiều tác động, chứ không phải bằng chứng thực nghiệm trực tiếp cho cơ chế phân tử. Vì vậy, chúng tôi xem cạnh suy luận là một đơn vị cần được xếp hạng theo độ tin cậy, tính lặp lại và mức phù hợp với diễn tiến tế bào. Cách tiếp cận này nối tiếp các mô hình trạng thái Bayes đa tầng nhưng bổ sung sự phân rã biến thiên kỹ thuật và bước cập nhật cấu trúc mạng theo hậu nghiệm \\cite{1}. Mục tiêu không phải là tạo ra một đồ thị dày nhất có thể, mà là tạo ra một tập giả thuyết có thể diễn giải và kiểm tra bằng dữ liệu phiên mã độc lập. Xác suất của một cạnh được hiểu theo điều kiện dữ liệu và trạng thái, ký hiệu $P(a_{gh}=1;Y,Z)$, thay vì như một khẳng định nhân quả."
+    },
+    {
+      "type": "paragraph",
+      "text": "Một khó khăn thực tế là tín hiệu đọc quan sát được chịu ảnh hưởng của cả mức biểu hiện tiềm ẩn lẫn độ sâu đọc của từng tế bào. Nếu bỏ qua khác biệt này, các gen có số đếm cao dễ chi phối điểm liên hệ, còn các gen điều hòa hiếm có thể bị xem là không biến thiên. Chúng tôi mô hình hóa số đếm gen g ở tế bào i bằng một phân bố có cường độ phụ thuộc trạng thái và độ sâu, ký hiệu khái quát là $Y_{ig}\\sim \\operatorname{Poisson}(\\hat{\\Lambda}_{ig})$. Cấu trúc này giúp diễn giải các số đếm thấp trong ngữ cảnh mức quan sát dự kiến, thay vì xem mọi số không là bằng chứng vắng biểu hiện. Các chiến lược phân rã biến thiên kỹ thuật và hiệu chỉnh độ sâu đọc đã cho thấy tầm quan trọng của việc tách hai thành phần này trước khi dựng mạng \\cite{2}."
+    },
+    {
+      "type": "paragraph",
+      "text": "ĐộngMạng kết hợp ba loại bằng chứng. Thứ nhất là đồng biến thiên biểu hiện giữa các gen sau khi đã hiệu chỉnh độ sâu. Thứ hai là thứ tự trạng thái tế bào, nhằm kiểm tra xem thay đổi của gen ứng viên điều hòa có phù hợp với diễn tiến của gen đích hay không. Thứ ba là mức bảo tồn của một tương tác qua các quần thể tế bào và các lần khởi tạo hậu nghiệm. Ba nguồn bằng chứng bổ sung cho nhau: tương quan có thể giúp sàng lọc cặp gen, thứ tự trạng thái gợi ý chiều liên hệ, còn tính lặp lại hạn chế việc xếp hạng quá cao một tín hiệu chỉ xuất hiện trong một lần phân tích. Có thể tóm tắt các thành phần hỗ trợ cạnh bằng $E_{gh}=E^{co}_{gh}+E^{traj}_{gh}+E^{rep}_{gh}$, trong đó mỗi thành phần phản ánh một nguồn bằng chứng khác nhau. Sự phân biệt giữa đồng biến động đồng thời và điều hòa theo quỹ đạo là trọng tâm của thiết kế này \\cite{3}. Theo đó, mọi kết luận về chiều tác động đều được trình bày như giả thuyết có xác suất, không phải khẳng định nhân quả đã được xác nhận."
+    },
+    {
+      "type": "paragraph",
+      "text": "Về mặt quan sát, cường độ dự kiến được liên hệ với hiệu ứng gen, hiệu ứng tế bào và các tọa độ trạng thái tiềm ẩn; biểu diễn này được nêu tại \\ref{eq:observation-rate}. Trong cách diễn giải trực quan, $\\hat{\\Lambda}_{ig}$ là mức đếm kỳ vọng sau điều chỉnh, còn $z_{ik}$ ghi nhận vị trí của tế bào i trên chiều trạng thái k. Mỗi thành phần được ước lượng cùng với bất định thay vì được cố định bằng một giá trị tiền xử lý duy nhất. Điều đó đặc biệt hữu ích khi các quần thể có độ sâu đọc không đồng đều hoặc trạng thái tế bào chồng lấn. Mô hình không giả định rằng một tọa độ đơn lẻ mô tả đầy đủ mọi khác biệt sinh học; thay vào đó, nhiều chiều trạng thái cùng đóng góp vào dự báo. Cách tham số hóa này cũng giúp truy vết xem một thay đổi điểm cạnh đến từ tín hiệu biểu hiện, độ sâu đọc hay sự sắp xếp trạng thái."
+    },
+    {
+      "type": "paragraph",
+      "text": "Thiết kế nghiên cứu đặt ưu tiên vào khả năng duy trì cạnh yếu có tính nhất quán, đồng thời giảm cạnh giả do nhiễu hoặc đồng đáp ứng. Chọn biến theo tầng được thực hiện trước khi tối ưu hậu nghiệm, để không gian ứng viên đủ gọn cho tính toán nhưng vẫn giữ được các liên hệ có bằng chứng lặp lại. Chúng tôi đánh giá hiệu quả trên nhiều hệ biệt hóa và đáp ứng stress, sau đó xem xét kỹ hơn quần thể tiền thân thần kinh nhằm diễn giải mô-đun có liên quan đến chu kỳ, kết dính và chuyển hóa lipid. Các dự đoán được đối chiếu với dữ liệu phiên mã độc lập ở cấp cạnh và cấp mô-đun. Cách đánh giá nhiều cấp này quan trọng vì một mạng có thể có độ chính xác cạnh tốt nhưng mô-đun không ổn định, hoặc ngược lại, giữ được cấu trúc mô-đun dù một số cạnh riêng lẻ thay đổi."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "2. Mô hình xác suất đa tầng"
+    },
+    {
+      "type": "paragraph",
+      "text": "Mô hình được tổ chức thành các tầng có trao đổi thông tin. Tầng quan sát mô tả số đếm gen và điều chỉnh khác biệt về độ sâu đọc. Tầng trạng thái biểu diễn vị trí tương đối của tế bào trên quỹ đạo hoặc nhánh biệt hóa. Tầng mạng gán xác suất cho các cạnh có hướng, còn tầng xếp hạng kết hợp điểm hỗ trợ với mức lặp lại và độ bất định. Trình tự này không có nghĩa mỗi tầng được giải quyết độc lập một lần rồi giữ nguyên. Sau bước khởi tạo, cập nhật hậu nghiệm cho phép thông tin từ mạng điều hòa tác động trở lại ước lượng trạng thái, trong giới hạn của mô hình. Cơ chế trao đổi này nhằm tránh hai cực đoan: suy luận trạng thái không hề xét quan hệ gen, hoặc suy luận mạng dựa trên trạng thái đã coi như chắc chắn tuyệt đối."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "2.1. Trạng thái tế bào, quan sát và chiều cạnh"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bảng dữ liệu được dẫn tại \\ref{tab:dataset-summary} tóm tắt sáu hệ DG-01 đến DG-06, với các nhóm tế bào từ tiền thân thần kinh, biệt hóa cơ và biểu mô đến đáp ứng oxy thấp, đáp ứng nhiệt và tiền thân tạo máu. Các bộ dữ liệu này có số tế bào, số gen giữ lại, độ sâu đọc trung vị, số trạng thái và độ nhất quán mô-đun khác nhau. Độ nhất quán được tính từ mức tương đồng mô-đun giữa hai lần chạy độc lập, do đó vừa mô tả tính lặp lại vừa cung cấp một phép kiểm tra về độ nhạy với khởi tạo. Trong tầng trạng thái, thứ tự tế bào không được hiểu như đồng hồ thời gian đo trực tiếp. Nó là một biểu diễn tương đối của tiến trình, được suy ra từ cấu trúc phiên mã và có thể giữ bất định khi nhiều nhánh hoặc trạng thái chuyển tiếp cùng phù hợp với dữ liệu."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ở một cặp gen g và h, điểm liên hệ có hướng tổng hợp sự thay đổi của tọa độ đích với chênh lệch trạng thái của gen ứng viên dọc theo các tế bào kề nhau trên quỹ đạo. Cách viết điểm này được tham chiếu ở \\ref{eq:edge-score}; một thành phần đóng góp có dạng $(z_{i+1,h}-z_{ih})(z_{i,g}-z_{i+1,g})$. Dấu và độ lớn của tổng không được diễn giải tách rời khỏi bất định của trạng thái, bởi thứ tự cục bộ có thể thay đổi khi các tế bào nằm gần ranh giới nhánh. Chúng tôi vì vậy tích lũy bằng chứng qua nhiều vị trí và nhiều lần khởi tạo, thay vì dựa vào một cặp tế bào quyết định. Việc lan truyền bất định từ mô hình chuyển trạng thái sang các ước lượng sau đó có ý nghĩa đặc biệt khi quỹ đạo đơn bào không được quan sát theo chuỗi thời gian thực \\cite{6}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Trước khi tối ưu điểm hậu nghiệm, quy trình chọn biến theo tầng thu hẹp tập gen và cặp gen ứng viên. Bước này căn cứ vào độ biến thiên có thể giải thích, mức đồng biến động sau hiệu chỉnh và sự hiện diện của tín hiệu trong các phân vùng trạng thái. Nó không chỉ giữ những cặp có tương quan lớn nhất, vì ngưỡng như vậy dễ loại bỏ các liên hệ yếu nhưng lặp lại. Thay vào đó, mỗi tầng loại bỏ dần những ứng viên không có hỗ trợ đủ nhất quán, đồng thời duy trì một vùng dự phòng để đánh giá cạnh yếu. Cách chọn biến phân cấp có thể làm giảm số phép so sánh mà vẫn giữ khả năng phát hiện tín hiệu thưa \\cite{4}. Khi có nhiều nhánh biệt hóa, mô hình chuyển trạng thái thưa cho phép trạng thái chung và các chuyển tiếp nhánh được biểu diễn riêng, hạn chế việc làm phẳng toàn bộ tiến trình thành một trục duy nhất \\cite{8}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Mạng được ràng buộc để tránh các cặp cạnh ngược chiều cùng nhận trọng số cao nếu chúng không có hỗ trợ đủ mạnh. Hàm mục tiêu tổng hợp điểm liên hệ, mức phạt độ phức tạp và mức phạt cho các cặp hai chiều; phần tối ưu được dẫn tại \\ref{eq:network-objective}. Ở dạng trực quan, một cạnh chỉ được giữ khi phần bằng chứng của nó bù được chi phí độ thưa và không làm tăng quá mức cấu trúc vòng ngắn khó diễn giải. Hệ số phạt không được chọn để buộc mạng thành cây hay loại bỏ mọi chu trình, bởi một số vòng phản hồi là hợp lý về mặt sinh học. Thay vào đó, nó điều tiết sự đánh đổi giữa độ phù hợp dữ liệu và độ gọn. Tính bảo tồn của tương tác qua nhiều quần thể được đưa vào như một nguồn hỗ trợ riêng, phù hợp với các kết quả cho thấy mô-đun điều hòa bền vững cần được phân biệt với cạnh phụ thuộc vào một lần khởi tạo \\cite{5}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Tầng xếp hạng không chỉ sắp xếp cạnh theo một giá trị điểm duy nhất. Với mỗi cạnh, chúng tôi xem xét xác suất hậu nghiệm, độ ổn định qua các lần chạy, mức bảo tồn giữa quần thể và mức phù hợp với thứ tự trạng thái. Những đại lượng này giúp nhận diện hai trường hợp khác nhau: cạnh có điểm cao và lặp lại mạnh, hoặc cạnh có điểm trung bình nhưng được hỗ trợ ổn định ở một nhánh cụ thể. Các trường hợp thứ hai không nhất thiết là kết quả kém; chúng có thể phản ánh điều hòa phụ thuộc trạng thái mà phép gộp toàn bộ tế bào sẽ làm lu mờ. Khi biểu diễn kết quả, chúng tôi vì thế giữ cả điểm cạnh lẫn ngữ cảnh quần thể, thay vì chỉ công bố một danh sách xếp hạng phổ quát. Nguyên tắc tích hợp thứ tự biểu hiện và tính lặp lại này tương đồng với các chiến lược ưu tiên cạnh yếu theo nhiều nguồn bằng chứng \\cite{10}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Độ nhất quán mô-đun giữa các bộ dữ liệu được minh họa bằng \\ref{fig:chart}. Giá trị cao ở sáu hệ được tóm tắt cho thấy cấu trúc mô-đun có khả năng lặp lại, nhưng không đồng nghĩa rằng mọi cạnh đều được bảo tồn đồng đều. Một mô-đun có thể ổn định ở cấp tập hợp gen trong khi các cạnh bên trong thay đổi theo trạng thái, độ sâu đọc hoặc bối cảnh tế bào. Vì vậy, chúng tôi xem độ nhất quán là một thuộc tính bổ sung cho độ phân biệt cạnh, không phải phép thay thế cho đánh giá cạnh. Kết quả từ các lần khởi tạo khác nhau được so sánh theo sự chồng lấp thành phần mô-đun, đồng thời ghi nhận những gen có vị trí thay đổi giữa các phân hoạch. Đây là cách hạn chế diễn giải quá mức từ một phân tích đơn lẻ và tạo cơ sở để xếp hạng các nút cần khảo sát tiếp."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "3. Dữ liệu và thiết kế đánh giá"
+    },
+    {
+      "type": "paragraph",
+      "text": "Tập nghiên cứu gồm mười tám bộ dữ liệu phiên mã đơn bào trải trên các hệ biệt hóa và đáp ứng stress. Sáu bộ được mô tả chi tiết trong bảng tóm tắt, với quy mô từ hàng nghìn tế bào và hàng nghìn gen giữ lại sau lọc chất lượng. Các hệ được chọn bao gồm tiền thân thần kinh, biệt hóa cơ, đáp ứng oxy thấp, biệt hóa biểu mô, đáp ứng nhiệt và tiền thân tạo máu, giúp kiểm tra phương pháp trong các bối cảnh có tiến trình và cấu trúc trạng thái khác nhau. Quy trình tiền xử lý nhất quán giữa các bộ, nhưng không ép số gen hay số trạng thái phải giống nhau. Lựa chọn này giúp giữ khác biệt sinh học và kỹ thuật vốn có, đồng thời cho phép so sánh kết quả sau khi các đại lượng được chuẩn hóa thích hợp."
+    },
+    {
+      "type": "paragraph",
+      "text": "Chúng tôi chia việc đánh giá thành phân biệt cạnh, độ bao phủ, cạnh giả, ổn định mô-đun và duy trì tín hiệu yếu. Các cạnh được xác nhận bằng dữ liệu phiên mã độc lập dùng làm căn cứ đánh giá phân biệt và độ bao phủ; chúng không được sử dụng để điều chỉnh điểm trong bước huấn luyện. Cấu hình đầy đủ được so sánh với các cấu hình lần lượt bỏ chuyển trạng thái, bỏ hiệu chỉnh độ sâu, bỏ bảo tồn tương tác và chỉ dùng tương quan đồng thời. Thiết kế loại bỏ từng thành phần cho phép kiểm tra đóng góp riêng của mỗi tầng, dù không thể loại trừ hoàn toàn tương tác giữa các thành phần. Kết quả loại bỏ được tổng hợp tại \\ref{tab:ablation-results}; bảng này giúp phân biệt lợi ích về độ chính xác với lợi ích về độ ổn định và khả năng giữ tín hiệu yếu."
+    },
+    {
+      "type": "paragraph",
+      "text": "Để hạn chế thiên lệch do một cách chia dữ liệu duy nhất, các bước đánh giá được lặp lại qua các lần khởi tạo và phân vùng phù hợp với từng bộ. Nguyên tắc kiểm định chéo cho dữ liệu tế bào không đồng nhất là giữ ranh giới giữa thông tin dùng để chọn mô hình và thông tin dùng để đánh giá, nhất là khi trạng thái của các tế bào có tương quan cấu trúc \\cite{12}. Chúng tôi theo dõi riêng mức ổn định của trạng thái, cạnh và mô-đun; một kết quả chỉ được xem là vững nếu không phụ thuộc quá mức vào một phân vùng. Độ bất định không bị quy về một khoảng tin cậy duy nhất, mà được phản ánh qua biến thiên hậu nghiệm và độ lặp lại. Thiết kế này làm cho các so sánh thận trọng hơn, bởi những cặp gen cùng nằm trong một nhánh không được coi là quan sát độc lập hoàn toàn."
+    },
+    {
+      "type": "paragraph",
+      "text": "Phân tích trên hệ đáp ứng oxy thấp được diễn giải với lưu ý rằng trạng thái stress có thể làm nhiều chương trình phiên mã cùng thay đổi. Do đó, một điểm liên hệ cao trong hệ này cần được kiểm tra xem có còn giữ sau khi điều kiện quan sát và vị trí trạng thái được đưa vào hay không. Các nghiên cứu tái dựng mô-đun trong đáp ứng oxy thấp cho thấy cấu trúc mạng có thể cung cấp giả thuyết hữu ích, nhưng cũng nhấn mạnh sự cần thiết của đối chiếu giữa các quần thể \\cite{9}. Tương tự, việc tích hợp dấu chuẩn trạng thái với tín hiệu phiên mã có thể giúp định vị cạnh trong bối cảnh sinh học cụ thể \\cite{11}. Trong đánh giá của chúng tôi, dấu chuẩn không được dùng để thay thế tín hiệu mạng; chúng hỗ trợ diễn giải và kiểm tra xem cấu trúc trạng thái suy ra có nhất quán với các đặc điểm đã biết trong dữ liệu hay không."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "4. Kết quả suy luận và kiểm tra độ bền"
+    },
+    {
+      "type": "paragraph",
+      "text": "Trên toàn bộ mười tám bộ dữ liệu, ĐộngMạng cải thiện độ chính xác phát hiện cạnh lần lượt 11,8% và 9,4% so với hai mô hình tương quan có trọng số được dùng làm đối chứng. Kết quả này phù hợp với giả thuyết rằng thứ tự trạng thái bổ sung thông tin mà tương quan đồng thời không nắm bắt. Mức cải thiện không được hiểu là đồng đều trên mọi hệ hoặc mọi lớp cạnh; mức độ lợi ích thay đổi theo số trạng thái, độ sâu đọc và độ rõ của tiến trình biệt hóa. Các phép đối chiếu độc lập cũng cho thấy việc thêm tầng trạng thái không đơn thuần làm tăng số cạnh được gọi, mà cải thiện khả năng phân biệt trong khi kiểm soát cạnh giả. Diễn giải này được hỗ trợ bởi phép loại bỏ thành phần, nơi cấu hình chỉ dựa trên tương quan đồng thời có kết quả thấp hơn ở nhiều tiêu chí."
+    },
+    {
+      "type": "paragraph",
+      "text": "Trong kiểm tra loại bỏ, cấu hình đầy đủ đạt 0,86 về phân biệt cạnh, 0,89 về độ bao phủ, 0,12 về cạnh giả và 0,88 về ổn định mô-đun. Khi bỏ chuyển trạng thái, các chỉ số lần lượt giảm xuống 0,74, 0,78, 0,21 và 0,76, trong khi khả năng giữ tín hiệu yếu giảm rõ. Cấu hình chỉ dùng tương quan đồng thời cho kết quả thấp nhất về phân biệt, độ bao phủ và ổn định mô-đun, đồng thời có tỷ lệ cạnh giả cao nhất trong các cấu hình được so sánh. Các con số này ủng hộ vai trò của động học tế bào, nhưng không chứng minh rằng mọi trạng thái suy ra đều đúng tuyệt đối. Chúng cho thấy thông tin trạng thái có giá trị dự báo bổ sung trong điều kiện đánh giá đã thiết lập."
+    },
+    {
+      "type": "paragraph",
+      "text": "Sơ đồ luồng phân tích được dẫn tại \\ref{fig:diagram}: tín hiệu phiên mã đi qua khối suy ra trạng thái tế bào, tiếp đến là ước lượng mạng điều hòa có hướng và xếp hạng cạnh; vòng phản hồi thể hiện cập nhật hậu nghiệm. Cấu trúc đó phản ánh đúng cách các tầng trao đổi thông tin, thay vì trình bày chúng như các bộ lọc độc lập. Khi bỏ hiệu chỉnh độ sâu, hiệu năng giảm ở mức vừa phải, song số cạnh giả tăng so với cấu hình đầy đủ; điều này cho thấy hiệu chỉnh không phải thành phần duy nhất quyết định kết quả nhưng vẫn quan trọng đối với độ tin cậy. Khi bỏ bảo tồn tương tác, độ ổn định mô-đun suy giảm, phù hợp với vai trò của bằng chứng lặp lại giữa quần thể. Những khác biệt ấy cho thấy các tầng có đóng góp không đồng nhất và cần được đánh giá bằng nhiều tiêu chí."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ở quần thể tiền thân thần kinh, mô hình nhận diện một mô-đun liên quan đến chu kỳ tế bào, kết dính và chuyển hóa lipid. Thay vì diễn giải mô-đun như một khối chức năng duy nhất, chúng tôi xem xét vị trí các gen trong trạng thái và mức lặp lại của từng cạnh. Một nhóm cạnh được xếp hạng cao có liên hệ với chuyển tiếp đi vào trạng thái trưởng thành, nhưng bằng chứng hiện có chỉ hỗ trợ khả năng liên quan chứ chưa xác lập cơ chế tác động. Đối chiếu với dữ liệu phiên mã độc lập cho thấy mức nhất quán cao ở cấp mô-đun. Mức nhất quán này phù hợp với việc một cấu trúc gen cùng biến đổi được bảo toàn, dù chiều hoặc độ mạnh của một vài cạnh riêng lẻ vẫn cần được kiểm tra bằng phép đo khác."
+    },
+    {
+      "type": "paragraph",
+      "text": "Các phân tích độ nhạy cho thấy cạnh yếu dễ bị ảnh hưởng bởi lựa chọn trạng thái và mức lọc gen hơn các cạnh có tín hiệu mạnh. Tuy nhiên, việc duy trì chọn biến theo tầng và đánh giá lặp lại giúp một phần tín hiệu yếu ổn định được giữ lại thay vì bị loại ngay từ ngưỡng đầu. Chúng tôi so sánh thứ hạng cạnh giữa lần chạy, giữa các quần thể và giữa các cấu hình để nhận diện trường hợp điểm cao nhưng không bền. Đánh giá cạnh và đánh giá mô-đun vì thế bổ sung cho nhau: cạnh cho biết giả thuyết cụ thể về chiều liên hệ, còn mô-đun cho biết mức tổ chức chung có tái hiện hay không. Các khung đánh giá gần đây cũng nhấn mạnh việc tách độ phân biệt cạnh khỏi độ ổn định mô-đun khi so sánh phương pháp suy luận mạng \\cite{7}."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "5. Diễn giải, giới hạn và khả năng sử dụng"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ưu điểm quan trọng của ĐộngMạng là làm rõ sự khác nhau giữa một liên hệ biểu hiện mạnh và một cạnh có hỗ trợ theo tiến trình. Trong dữ liệu đơn bào, hai gen có thể cùng tăng do cùng phản ứng với một biến đổi môi trường hoặc cùng hiện diện ở một nhóm trạng thái; điều đó chưa đủ để suy ra hướng tác động. Khi đưa tọa độ trạng thái vào điểm cạnh, mô hình ưu tiên những quan hệ phù hợp với trình tự biến đổi quan sát được, nhưng vẫn giữ phần bất định do thứ tự tế bào chỉ là suy luận. Vì vậy, kết quả thích hợp nhất để tạo danh sách giả thuyết có thứ tự ưu tiên, chứ không phải thay thế phép perturbation hoặc phép đo chức năng. Sự thận trọng này đặc biệt cần thiết với các cạnh có mức lặp lại thấp hoặc chỉ xuất hiện ở một nhánh hiếm."
+    },
+    {
+      "type": "paragraph",
+      "text": "Mô hình cũng có giới hạn về khả năng mô tả những tiến trình không được lấy mẫu đủ dày. Nếu trạng thái chuyển tiếp vắng mặt trong dữ liệu, quỹ đạo có thể nối các nhóm tế bào qua khoảng trống và làm điểm liên hệ phụ thuộc vào cách nội suy. Các nhánh biệt hóa song song cũng có thể tạo ra thứ tự tuyến tính không phù hợp nếu được gộp quá sớm. Mô hình trạng thái thưa cho nhiều nhánh giúp giảm vấn đề này, nhưng không loại bỏ được giới hạn do dữ liệu quan sát. Ngoài ra, giả định về phân bố số đếm và cấu trúc hiệu ứng gen có thể không bao quát mọi đặc tính của dữ liệu, nhất là khi một số gen có phân bố biểu hiện bất thường. Các kết quả do đó cần được kiểm tra qua phân tích độ nhạy và đánh giá độc lập."
+    },
+    {
+      "type": "paragraph",
+      "text": "Một giới hạn khác là tính bảo tồn giữa quần thể có thể phản ánh cả quan hệ sinh học lẫn sự tương đồng của quy trình thu thập và xử lý dữ liệu. Nếu hai quần thể có nền kỹ thuật gần nhau, mức lặp lại cao chưa chắc có nghĩa cạnh đó phổ quát trong các bối cảnh khác. Ngược lại, cạnh đặc hiệu trạng thái có thể không được bảo tồn khi thành phần tế bào thay đổi, dù nó có vai trò trong một quần thể nhất định. Chúng tôi vì vậy không dùng bảo tồn như điều kiện bắt buộc để giữ cạnh. Nó là một thành phần xếp hạng, được diễn giải cùng với trạng thái và độ sâu đọc. Cách tích hợp này hạn chế việc đánh đồng độ lặp lại thống kê với tính phổ quát sinh học, đồng thời giúp ghi nhận những tín hiệu chỉ hiện diện trong một bối cảnh."
+    },
+    {
+      "type": "paragraph",
+      "text": "Các ứng dụng tiếp theo có thể tập trung vào việc kiểm tra có mục tiêu một số cạnh và nút điều hòa được xếp hạng cao. Ưu tiên thực nghiệm nên cân nhắc đồng thời độ tin cậy hậu nghiệm, mức bảo tồn, tính đặc hiệu trạng thái và khả năng đo lường của gen. Những cạnh nằm ở vị trí chuyển tiếp nhưng không có điểm tương quan lớn có thể đáng quan tâm, bởi chúng có thể đại diện cho thay đổi có thứ tự mà phép phân tích tĩnh dễ bỏ qua. Dẫu vậy, thứ hạng không nên được sử dụng như tiêu chí duy nhất để chọn mục tiêu. Cần kết hợp thông tin về chức năng, tính khả thi của phép perturbation và kiểm tra độc lập ở cấp phân tử. Theo cách này, ĐộngMạng cung cấp một cơ chế ưu tiên hóa minh bạch, trong đó cơ sở của từng thứ hạng có thể được truy về các tầng bằng chứng."
+    },
+    {
+      "type": "paragraph",
+      "text": "Một hướng mở rộng là đưa thêm dấu chuẩn trạng thái hoặc thông tin điều kiện vào mô hình mà không làm mất khả năng so sánh giữa quần thể. Việc kết hợp tín hiệu phiên mã với dấu chuẩn có thể giúp phân biệt biến đổi biểu hiện do tiến trình với biến đổi do thành phần tế bào, nhưng cũng làm tăng nguy cơ phụ thuộc vào các giả định ban đầu. Một hướng khác là biểu diễn rõ hơn cấu trúc thời gian khi có dữ liệu đo lặp, từ đó kiểm tra chiều cạnh bằng quan sát động thay vì chỉ dựa vào thứ tự trạng thái suy ra. Các hướng này cần được đánh giá với cùng nguyên tắc: tách dữ liệu dùng để xây dựng mô hình khỏi dữ liệu dùng để xác nhận, báo cáo bất định, và kiểm tra cả cấp cạnh lẫn cấp mô-đun."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "6. Kết luận"
+    },
+    {
+      "type": "paragraph",
+      "text": "ĐộngMạng kết hợp hiệu chỉnh độ sâu đọc, suy luận trạng thái tế bào, cấu trúc mạng có hướng và bảo tồn tương tác trong một khung xác suất đa tầng. Kết quả trên mười tám bộ dữ liệu cho thấy việc đưa thứ tự trạng thái vào có thể cải thiện phát hiện cạnh so với các mô hình tương quan có trọng số, trong khi phân tích loại bỏ xác định chuyển trạng thái là thành phần có đóng góp lớn nhất. Phân tích tiền thân thần kinh tạo ra một mô-đun liên quan đến chu kỳ, kết dính và chuyển hóa lipid, cùng một nhóm cạnh có thể liên quan đến chuyển tiếp trưởng thành. Sự nhất quán với dữ liệu phiên mã độc lập ở cấp mô-đun hỗ trợ giá trị của các dự đoán, nhưng không thay cho kiểm chứng chức năng từng cạnh."
+    },
+    {
+      "type": "paragraph",
+      "text": "Về mặt phương pháp, điểm cốt yếu là giữ riêng các nguồn bằng chứng để có thể đánh giá đóng góp của từng nguồn, đồng thời cho phép chúng trao đổi thông tin trong quá trình hậu nghiệm. Cách làm này giúp nhận diện khi nào một cạnh được hỗ trợ bởi đồng biến động, khi nào thứ tự trạng thái làm thay đổi diễn giải, và khi nào mức bảo tồn củng cố sự ổn định của mô-đun. Các giới hạn về quỹ đạo suy ra, độ phủ trạng thái và giả định phân bố vẫn cần được xem xét trong mỗi ứng dụng. Bởi vậy, kết quả được trình bày như thứ hạng giả thuyết có bất định, thích hợp để định hướng bước kiểm tra tiếp theo hơn là thay thế bằng chứng thực nghiệm."
+    },
+    {
+      "type": "paragraph",
+      "text": "Tổng thể, việc kết hợp động học tế bào với mạng điều hòa có hướng cung cấp một cách diễn giải giàu ngữ cảnh hơn cho dữ liệu phiên mã đơn bào. Các cạnh được xếp hạng không chỉ dựa vào cường độ liên hệ tức thời mà còn dựa vào chiều biến đổi, tính lặp lại và vị trí của tế bào trong tiến trình. Khuôn khổ này có thể hỗ trợ chọn nút điều hòa cần khảo sát, đặc biệt khi tín hiệu yếu nhưng ổn định hoặc chỉ biểu hiện trong một trạng thái cụ thể. Những kiểm tra thực nghiệm tiếp theo sẽ quyết định mức độ mà các giả thuyết ấy phản ánh cơ chế điều hòa thực sự."
+    }
+  ]
+}

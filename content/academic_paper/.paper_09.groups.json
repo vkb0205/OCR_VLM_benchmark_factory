@@ -1,0 +1,459 @@
+{
+  "front": {
+    "title": "Khung nhận dạng vùng vật thể có cấu trúc cho ảnh thiếu sáng bằng hợp nhất biên đa tỉ lệ",
+    "authors": [
+      {
+        "name": "Lâm Uyên Trạch",
+        "affiliations": [
+          1,
+          2
+        ],
+        "corresponding": true,
+        "email": "u.trach@vienmachsuong.vn"
+      },
+      {
+        "name": "Vũ Yên Tường",
+        "affiliations": [
+          1
+        ],
+        "corresponding": false
+      },
+      {
+        "name": "Đặng Mộc Khuê",
+        "affiliations": [
+          2,
+          3
+        ],
+        "corresponding": false
+      }
+    ],
+    "affiliations": [
+      "Phòng Nghiên cứu Thị giác Mạch Sương, Viện Công nghệ Nhận dạng Không gian, Đô thị Lam Khê",
+      "Nhóm Tín hiệu Hình học, Trung tâm Kính Quang Tĩnh, Khu học thuật Vân Cảnh",
+      "Khoa Kỹ thuật Dữ liệu Ảnh, Viện Cao nguyên Tịnh Lưu, Đô thị Ngân Mộc"
+    ],
+    "abstract": "Nhận dạng vùng vật thể trong ảnh thiếu sáng thường chịu ảnh hưởng đồng thời của nhiễu cảm biến, suy giảm tương phản, sai lệch màu và sự đứt gãy đường biên. Các phương pháp hiện có thường cải thiện độ rõ của ảnh trước khi phân tích, nhưng quá trình tăng cường riêng rẽ có thể khuếch đại nhiễu và làm mất những chi tiết hình học mảnh. Bài viết trình bày một khung nhận dạng vùng vật thể có cấu trúc dựa trên hợp nhất biên đa tỉ lệ, trong đó thông tin cường độ, màu sắc, kết cấu và hình học được xử lý trong các nhánh bổ trợ rồi kết hợp thông qua cơ chế chú ý định hướng theo vùng. Mục tiêu của khung là duy trì đường bao vật thể ổn định, phục hồi các vùng bị che khuất bởi bóng tối và hạn chế sự lan truyền của nhiễu sang các khu vực lân cận.\n\nKiến trúc đề xuất gồm mô-đun chuẩn hóa chiếu sáng, bộ mã hóa đặc trưng phân cấp, mô-đun tạo biên mềm và bộ giải mã nhận dạng vùng. Mô-đun chuẩn hóa chiếu sáng ước lượng nền chiếu không đồng nhất bằng trường biến thiên chậm, đồng thời giữ lại các chuyển tiếp có ý nghĩa đối với hình dạng. Bộ mã hóa phân cấp thu nhận đặc trưng ở nhiều kích thước không gian, sau đó mô-đun tạo biên mềm suy luận mức tin cậy cho từng đường biên thay vì áp dụng ngưỡng cứng. Cơ chế chú ý định hướng theo vùng cho phép các điểm ảnh gần đường bao nhận thêm thông tin từ cấu trúc bên trong vật thể, trong khi những vùng có tín hiệu không ổn định được giảm trọng số. Bộ giải mã cuối cùng kết hợp bản đồ vùng, bản đồ biên và bản đồ độ tin cậy để tạo mặt nạ nhận dạng có tính liên tục cao.\n\nĐể tối ưu toàn bộ khung, nghiên cứu sử dụng hàm mục tiêu gồm thành phần phân loại vùng, thành phần khớp đường biên, thành phần nhất quán hình thái và thành phần bảo toàn chi tiết sáng yếu. Thành phần khớp đường biên được tính trên nhiều mức phân giải nhằm giảm hiện tượng đường bao bị co rút khi vật thể có kích thước nhỏ. Thành phần nhất quán hình thái ràng buộc sự liên kết giữa vùng bên trong và đường bao, còn thành phần bảo toàn chi tiết sáng yếu khuyến khích mô hình duy trì các cấu trúc có tương phản thấp nhưng lặp lại ổn định trong không gian. Quy trình huấn luyện kết hợp các phép biến đổi chiếu sáng, thay đổi nhiễu, che khuất cục bộ và biến dạng hình học nhẹ để tăng khả năng thích nghi với nhiều điều kiện thu nhận.\n\nĐánh giá được tiến hành trên các nhóm cảnh gồm lối đi trong nhà, khu vực sản xuất, không gian ngoài trời khi chạng vạng và cảnh có nguồn sáng ngược. Kết quả cho thấy khung đề xuất tạo vùng nhận dạng liền mạch hơn tại các khu vực tối, giảm hiện tượng thủng mặt nạ ở phần thân vật thể và giữ được đường viền mảnh quanh các cấu trúc có hình dạng phức tạp. Khi nguồn sáng thay đổi nhanh trong cùng một cảnh, mô hình vẫn duy trì sự ổn định của vùng dự đoán nhờ bản đồ độ tin cậy và cơ chế hợp nhất đa tỉ lệ. Phân tích loại bỏ từng mô-đun cho thấy chuẩn hóa chiếu sáng có vai trò chính trong việc giảm nhiễu nền, mô-đun tạo biên mềm cải thiện sự liên tục của đường bao, còn thành phần nhất quán hình thái giúp hạn chế các vùng dương tính rời rạc.\n\nNgoài chất lượng nhận dạng, nghiên cứu còn xem xét chi phí tính toán và khả năng triển khai trên thiết bị có tài nguyên hạn chế. Các nhánh xử lý được tổ chức theo mức độ quan trọng của đặc trưng, cho phép giảm số phép tính tại những vùng có độ tin cậy cao mà không làm suy giảm đáng kể chất lượng đường biên. Cách thiết kế này phù hợp với các hệ thống giám sát quang học, robot di chuyển trong môi trường thiếu sáng và thiết bị kiểm tra tự động cần phản hồi nhanh. Kết quả nghiên cứu gợi mở hướng phát triển các bộ nhận dạng có khả năng tự điều chỉnh theo điều kiện chiếu sáng, đồng thời cung cấp cơ sở cho việc kết hợp thông tin hình học với tín hiệu thời gian trong các chuỗi ảnh liên tiếp.",
+    "abstract_alt": null,
+    "keywords": "thị giác máy tính; nhận dạng vùng vật thể; ảnh thiếu sáng; hợp nhất biên; đặc trưng đa tỉ lệ; chú ý theo vùng; nhất quán hình thái",
+    "keywords_alt": null,
+    "journal": "Tạp chí Nhận dạng Hình ảnh Vân Cảnh",
+    "acknowledgement": "Nhóm tác giả trân trọng cảm ơn Phòng Lưu trữ Quang ảnh Mạch Sương đã hỗ trợ tổ chức các cảnh quan sát và kiểm tra chất lượng dữ liệu. Nhóm cũng cảm ơn các cộng tác viên thuộc Khu học thuật Vân Cảnh vì những trao đổi chuyên môn về đánh giá đường biên, điều kiện chiếu sáng và khả năng triển khai trên thiết bị hạn chế tài nguyên."
+  },
+  "formulas": [
+    {
+      "after": 6,
+      "element": {
+        "type": "equation",
+        "id": "eq:illumination_normalization",
+        "latex": "\\widehat{I}(\\vec{x})=\\frac{I(\\vec{x})}{\\exp(\\tilde{L}(\\vec{x}))+\\epsilon}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 10,
+      "element": {
+        "type": "equation",
+        "id": "eq:multitask_objective",
+        "latex": "\\begin{aligned}\\mathcal{L}&=\\lambda_{r}\\mathcal{L}_{region}+\\lambda_{e}\\mathcal{L}_{edge}+\\lambda_{m}\\mathcal{L}_{morph}+\\lambda_{d}\\mathcal{L}_{detail}\\\\\\mathcal{L}_{region}&=-\\frac{1}{N}\\sum_{i=1}^{N}\\left[y_i\\ln(p_i)+(1-y_i)\\ln(1-p_i)\\right]\\end{aligned}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 14,
+      "element": {
+        "type": "equation",
+        "id": "eq:multiscale_boundary_fusion",
+        "latex": "\\widehat{B}(\\vec{x})=\\sum_{s=1}^{S}\\alpha_s(\\vec{x})B_s(\\vec{x}),\\text{ }\\alpha_s(\\vec{x})=\\frac{\\exp(q_s(\\vec{x}))}{\\sum_{t=1}^{S}\\exp(q_t(\\vec{x}))}",
+        "numbered": true
+      }
+    }
+  ],
+  "tables": [
+    {
+      "after": 9,
+      "element": {
+        "type": "table",
+        "id": "tab:scene_results",
+        "caption": "Kết quả nhận dạng theo nhóm cảnh quan sát",
+        "header": [
+          [
+            "Nhóm cảnh",
+            "Phương pháp",
+            "F1 vùng",
+            "IoU vùng",
+            "F1 biên",
+            "Thời gian"
+          ]
+        ],
+        "rows": [
+          [
+            "Lối đi trong nhà",
+            "Khung đề xuất",
+            "91,8%",
+            "86,7%",
+            "84,9%",
+            "42 ms"
+          ],
+          [
+            "Lối đi trong nhà",
+            "Mạng vùng cơ sở",
+            "87,2%",
+            "80,5%",
+            "77,1%",
+            "36 ms"
+          ],
+          [
+            "Khu vực sản xuất",
+            "Khung đề xuất",
+            "89,6%",
+            "83,4%",
+            "81,2%",
+            "45 ms"
+          ],
+          [
+            "Khu vực sản xuất",
+            "Mạng vùng cơ sở",
+            "84,1%",
+            "76,8%",
+            "73,5%",
+            "38 ms"
+          ],
+          [
+            "Ngoài trời chạng vạng",
+            "Khung đề xuất",
+            "86,9%",
+            "79,7%",
+            "78,6%",
+            "47 ms"
+          ],
+          [
+            "Nguồn sáng ngược",
+            "Khung đề xuất",
+            "83,7%",
+            "75,9%",
+            "74,3%",
+            "49 ms"
+          ]
+        ],
+        "note": "Các giá trị được tính trên toàn bộ vùng dự đoán; thời gian xử lý đo ở độ phân giải đầu vào cố định."
+      }
+    },
+    {
+      "after": 15,
+      "element": {
+        "type": "table",
+        "id": "tab:ablation",
+        "caption": "Phân tích loại bỏ từng thành phần của khung",
+        "header": [
+          [
+            "Cấu hình",
+            "F1 vùng",
+            "F1 biên",
+            "Độ liên tục",
+            "Vùng thủng",
+            "Bộ nhớ"
+          ]
+        ],
+        "rows": [
+          [
+            "Khung đầy đủ",
+            "91,8%",
+            "84,9%",
+            "93,1%",
+            "2,8%",
+            "1,00 GB"
+          ],
+          [
+            "Bỏ chuẩn hóa chiếu sáng",
+            "87,5%",
+            "80,6%",
+            "88,4%",
+            "5,9%",
+            "0,94 GB"
+          ],
+          [
+            "Bỏ tạo biên mềm",
+            "89,1%",
+            "77,2%",
+            "84,7%",
+            "4,6%",
+            "0,96 GB"
+          ],
+          [
+            "Bỏ nhất quán hình thái",
+            "88,7%",
+            "81,3%",
+            "86,2%",
+            "6,7%",
+            "0,98 GB"
+          ],
+          [
+            "Bỏ chú ý theo vùng",
+            "89,4%",
+            "82,1%",
+            "87,5%",
+            "4,9%",
+            "0,91 GB"
+          ]
+        ],
+        "note": "Độ liên tục là tỷ lệ đường bao không bị đứt; vùng thủng là tỷ lệ diện tích bên trong mặt nạ bị phân mảnh."
+      }
+    }
+  ],
+  "charts_figures": [
+    {
+      "after": 12,
+      "element": {
+        "type": "chart",
+        "id": "fig:chart",
+        "caption": "So sánh F1 vùng và IoU vùng theo nhóm cảnh quan sát",
+        "chart_type": "bar",
+        "labels": [
+          "Lối đi trong nhà",
+          "Khu vực sản xuất",
+          "Ngoài trời chạng vạng",
+          "Nguồn sáng ngược"
+        ],
+        "series": [
+          {
+            "name": "F1 vùng (%)",
+            "values": [
+              91.8,
+              89.6,
+              86.9,
+              83.7
+            ]
+          },
+          {
+            "name": "IoU vùng (%)",
+            "values": [
+              86.7,
+              83.4,
+              79.7,
+              75.9
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "after": 18,
+      "element": {
+        "type": "figure",
+        "id": "fig:diagram",
+        "figure_type": "block_diagram",
+        "caption": "Sơ đồ luồng xử lý của khung hợp nhất biên đa tỉ lệ",
+        "description": "Sơ đồ gồm chuỗi xử lý từ ảnh thiếu sáng qua mô-đun chuẩn hóa chiếu sáng, bộ mã hóa đặc trưng phân cấp, mô-đun tạo biên mềm và bộ giải mã nhận dạng vùng. Các nhánh đặc trưng cường độ, màu sắc, kết cấu và hình học được hợp nhất theo nhiều mức không gian trước khi tạo mặt nạ vùng cuối cùng.",
+        "labels": [
+          "Ảnh thiếu sáng",
+          "Chuẩn hóa chiếu sáng",
+          "Mã hóa đa tỉ lệ",
+          "Tạo biên mềm",
+          "Giải mã vùng"
+        ]
+      }
+    }
+  ],
+  "code": [],
+  "references": [
+    {
+      "text": "[1] Tạ Huyền Mộc, Bùi Cảnh Luân và Phan Kỳ Tĩnh. Hợp nhất biên đa tỉ lệ cho nhận dạng vùng vật thể trong ảnh thiếu sáng. Tạp chí Kỹ thuật Thị giác Lam Khê, 2021, 7(2), tr. 33–49.",
+      "cite": "Tạ và cs., 2021"
+    },
+    {
+      "text": "[2] Nghiêm Vân Khải và Đỗ Mộc Nhiên. Ước lượng trường chiếu sáng biến thiên chậm trong ảnh quan sát có tương phản thấp. Tạp chí Tín hiệu Quang học Vân Cảnh, 2020, 5(4), tr. 112–128.",
+      "cite": "Nghiêm và Đỗ, 2020"
+    },
+    {
+      "text": "[3] Phạm Uyên Lạc, Trịnh Quang Mẫn và Lê Tĩnh Nguyên. Mã hóa đặc trưng phân cấp cho phân đoạn vật thể dưới điều kiện nhiễu cảm biến. Tạp chí Phân tích Ảnh Tịnh Lưu, 2022, 9(1), tr. 15–31.",
+      "cite": "Phạm và cs., 2022"
+    },
+    {
+      "text": "[4] Vũ Mộc Yên và Cao Huyền Tâm. Suy luận đường biên mềm dựa trên độ tin cậy cục bộ trong mạng nhận dạng vùng. Kỷ yếu Nghiên cứu Thị giác Không gian, 2021, 4, tr. 76–91.",
+      "cite": "Vũ và Cao, 2021"
+    },
+    {
+      "text": "[5] Đặng Kỳ Lam, Lâm Trí Viễn và Hoàng Mộc Thư. Chú ý định hướng theo vùng cho cấu trúc vật thể có đường bao đứt gãy. Tạp chí Hình học Tính toán Ngân Mộc, 2023, 6(3), tr. 54–72.",
+      "cite": "Đặng và cs., 2023"
+    },
+    {
+      "text": "[6] Bạch Uyên Phong và Tô Cảnh Nghi. Ràng buộc nhất quán hình thái trong phân đoạn ảnh thiếu sáng có vùng che khuất. Tạp chí Nhận dạng Cấu trúc Quang ảnh, 2022, 8(2), tr. 97–115.",
+      "cite": "Bạch và Tô, 2022"
+    },
+    {
+      "text": "[7] Trần Huyền Kha, Mạc Yên Bình và Dư Quang Tĩnh. Bảo toàn chi tiết tương phản thấp bằng tổn thất biên ở nhiều mức phân giải. Tạp chí Mô hình Hóa Hình ảnh Mạch Sương, 2023, 10(1), tr. 21–40.",
+      "cite": "Trần và cs., 2023"
+    },
+    {
+      "text": "[8] Lê Cảnh Dao và Nguyễn Tịnh Khuê. Kết hợp đặc trưng cường độ, màu sắc và kết cấu cho nhận dạng vùng trong cảnh chạng vạng. Tạp chí Thị giác Máy tính Tĩnh Quang, 2020, 3(2), tr. 61–79.",
+      "cite": "Lê và Nguyễn, 2020"
+    },
+    {
+      "text": "[9] Hồ Mộc Duyên, Tạ Quang Sâm và Bùi Uyên Nhi. Học thích nghi theo điều kiện thu nhận cho phân đoạn cảnh có nguồn sáng ngược. Tạp chí Hệ thống Ảnh Vân Nguyệt, 2024, 11(2), tr. 88–107.",
+      "cite": "Hồ và cs., 2024"
+    },
+    {
+      "text": "[10] Phan Tĩnh Mộc và Đỗ Huyền Lam. Giảm chi phí suy luận bằng phân bổ nhánh đặc trưng theo độ tin cậy không gian. Tạp chí Điện toán Thị giác Lam Khê, 2024, 5(3), tr. 42–59.",
+      "cite": "Phan và Đỗ, 2024"
+    },
+    {
+      "text": "[11] Cao Uyên Trạch, Nghiêm Cảnh Hòa và Vũ Quang Kỳ. Phục hồi mặt nạ vật thể trong bóng tối bằng hợp nhất thông tin bên trong và đường bao. Tạp chí Phân đoạn Ảnh Vân Cảnh, 2025, 12(1), tr. 9–28.",
+      "cite": "Cao và cs., 2025"
+    },
+    {
+      "text": "[12] Tô Mộc An, Lâm Huyền Túc và Phạm Cảnh Vi. Ổn định nhận dạng vùng qua chuỗi ảnh có biến thiên chiếu sáng nhanh. Tạp chí Tín hiệu Không gian Tịnh Lưu, 2025, 7(4), tr. 119–138.",
+      "cite": "Tô và cs., 2025"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "1. Đặt vấn đề và động cơ nghiên cứu"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nhận dạng vùng vật thể trong ảnh thiếu sáng là một bài toán có tính liên ngành giữa khôi phục tín hiệu, phân tích hình học và suy luận ngữ cảnh. Khi lượng photon giảm, ảnh không chỉ tối hơn mà còn xuất hiện nhiều biến đổi đồng thời: nhiễu cảm biến tăng, màu bị lệch, tương phản giữa vật thể và nền suy giảm, các đoạn biên bị ngắt và cấu trúc bên trong bị che lấp bởi những vùng bóng không đồng đều. Một vật thể có đường bao rõ trong điều kiện ban ngày có thể trở thành một tập hợp những mảng rời rạc khi được quan sát ở hành lang ít đèn, khu vực sản xuất có nguồn sáng cục bộ hoặc ngoài trời lúc chạng vạng. Vì vậy, việc chỉ cải thiện độ sáng rồi áp dụng bộ nhận dạng thông thường không bảo đảm giữ được hình dạng. Mục tiêu của nghiên cứu là xây dựng một khung có khả năng dùng đồng thời cường độ, màu sắc, kết cấu, tín hiệu biên và quan hệ hình học để hình thành vùng nhận dạng liên tục hơn."
+    },
+    {
+      "type": "paragraph",
+      "text": "Các hướng nghiên cứu trước đã chỉ ra giá trị của việc hợp nhất tín hiệu biên ở nhiều kích thước không gian, đặc biệt khi những chi tiết mảnh chỉ xuất hiện ổn định tại một số mức phân giải \\cite{1}. Tuy nhiên, biên trong ảnh thiếu sáng thường không phải một đường nhị phân rõ ràng; nó có thể trải rộng thành dải chuyển tiếp với độ tin cậy thay đổi theo vị trí. Mặt khác, trường chiếu sáng nền biến thiên chậm có thể làm cho hai vùng có cùng vật liệu nhưng khác độ sáng bị phân loại thành hai lớp khác nhau. Việc ước lượng trường nền cần tách được thành phần chiếu sáng khỏi các chuyển tiếp có ý nghĩa hình dạng, theo định hướng của những nghiên cứu về trường chiếu sáng tương phản thấp \\cite{2}. Trong khung này, ảnh quan sát tại điểm ảnh $\\vec{x}$ được xem là tín hiệu $I(\\vec{x})$ chịu tác động của một trường nền $\\tilde{L}(\\vec{x})$, còn đầu ra chuẩn hóa được ký hiệu là $\\widehat{I}(\\vec{x})$. Công thức chiếu sáng được trình bày tại \\ref{eq:illumination_normalization}, và chỉ số đánh giá theo nhóm cảnh được đặt trong \\ref{tab:scene_results} để làm cơ sở đối chiếu các lựa chọn thiết kế."
+    },
+    {
+      "type": "paragraph",
+      "text": "Đóng góp chính của khung là tổ chức lại quá trình nhận dạng quanh đường bao thay vì coi đường bao như một hậu xử lý của bản đồ vùng. Bộ mã hóa phân cấp thu nhận tín hiệu ở các mức kích thước khác nhau, trong khi mô-đun tạo biên mềm ước lượng độ tin cậy liên tục cho từng chuyển tiếp. Cách biểu diễn này cho phép mô hình phân biệt một đường biên mảnh nhưng lặp lại ổn định với dao động ngẫu nhiên do nhiễu. Những đặc trưng phân cấp cũng làm giảm sự phụ thuộc vào kích thước vật thể, bởi một cấu trúc nhỏ có thể được nhận biết ở mức không gian cao hơn còn hình dạng tổng thể được duy trì ở mức thấp hơn. Vai trò của bộ mã hóa trong điều kiện nhiễu cảm biến có liên hệ với cách phân tầng đặc trưng đã được thảo luận trong các nghiên cứu về phân đoạn dưới nhiễu \\cite{3}. Trong quá trình suy luận, mô hình không ép mọi điểm ảnh biên vào quyết định cứng ngay từ đầu mà giữ lại một trường tin cậy để các mô-đun sau sử dụng."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "2. Kiến trúc khung hợp nhất biên đa tỉ lệ"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "2.1. Phân rã tín hiệu và chuẩn hóa chiếu sáng"
+    },
+    {
+      "type": "paragraph",
+      "text": "Đầu vào của khung là ảnh màu thiếu sáng cùng kích thước không gian cố định. Thay vì tăng cường toàn ảnh bằng một phép biến đổi duy nhất, hệ thống phân rã tín hiệu thành bốn nhánh bổ trợ: cường độ, màu sắc, kết cấu và hình học. Nhánh cường độ giữ các chuyển tiếp sáng tối; nhánh màu theo dõi quan hệ tương đối giữa các kênh; nhánh kết cấu mô tả dao động cục bộ có tính lặp; còn nhánh hình học tập trung vào hướng, độ dài và tính liên kết của đường bao. Sơ đồ xử lý tổng thể được tham chiếu tại \\ref{fig:diagram}, trong đó ảnh thiếu sáng đi qua chuẩn hóa chiếu sáng, mã hóa đa tỉ lệ, tạo biên mềm rồi được giải mã thành vùng cuối cùng. Việc phân rã này không nhằm tạo ra bốn ảnh độc lập, mà tạo ra những mô tả có trọng số để bộ mã hóa có thể điều chỉnh mức đóng góp theo điều kiện quan sát. Cách kết hợp cường độ, màu sắc và kết cấu trong cảnh chạng vạng cũng phù hợp với nhận xét rằng một tín hiệu riêng lẻ thường không đủ ổn định \\cite{8}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Mô-đun chuẩn hóa chiếu sáng ước lượng một trường biến thiên chậm bằng các phép tích chập có vùng tiếp nhận rộng, sau đó truyền thông tin chuyển tiếp cục bộ qua một nhánh giữ chi tiết. Nếu trường nền bị làm trơn quá mức, các cạnh thật của vật thể sẽ bị xem như biến thiên chiếu sáng và bị loại bỏ; nếu không đủ trơn, nhiễu cảm biến sẽ bị khuếch đại như một cấu trúc có ý nghĩa. Do đó, mô-đun dùng một bản đồ tin cậy để điều chỉnh mức khử nền theo vị trí. Với một điểm ảnh, có thể diễn tả trực giác này bằng $\\widehat{I}(\\vec{x})=I(\\vec{x})/(\\exp(\\tilde{L}(\\vec{x}))+\\epsilon)$, trong đó $\\epsilon$ giữ cho phép chia ổn định khi tín hiệu rất nhỏ. Các đặc trưng sau chuẩn hóa vẫn được nối với đặc trưng trước chuẩn hóa qua đường truyền tắt, nhờ đó những dấu hiệu màu hoặc đường nét yếu không bị mất hoàn toàn. Cơ chế này cũng giúp mô hình thích nghi với cảnh có nhiều vùng chiếu sáng cục bộ mà không cần áp dụng cùng một hệ số cho toàn khung hình."
+    },
+    {
+      "type": "paragraph",
+      "text": "Bộ mã hóa phân cấp gồm các tầng có độ phân giải giảm dần và chiều sâu đặc trưng tăng dần. Ở tầng đầu, các bộ lọc nhỏ thu nhận cạnh, điểm góc và biến đổi màu cục bộ; ở tầng giữa, các đặc trưng được gom theo vùng để mô tả bộ phận của vật thể; ở tầng sâu, quan hệ giữa bên trong, đường bao và nền được biểu diễn trong trường tiếp nhận rộng. Mỗi tầng đưa ra một bản đồ đặc trưng cho mô-đun hợp nhất, thay vì chỉ truyền bản đồ cuối cùng đến bộ giải mã. Những đường nối ngang bảo toàn thông tin vị trí, còn phép gộp có điều kiện giúp hạn chế việc tín hiệu của nền tràn vào vùng vật thể. Mô hình được khởi tạo với trọng số cân bằng giữa các nhánh, sau đó học điều chỉnh bằng dữ liệu huấn luyện có biến đổi chiếu sáng và nhiễu. Cấu trúc phân cấp này kế thừa tinh thần của các bộ mã hóa đa mức, nhưng nhấn mạnh hơn đến sự tương ứng giữa kích thước vật thể và độ tin cậy đường biên. Nhờ vậy, mô hình có thể xử lý cả vật thể lớn bị bóng che lẫn cấu trúc nhỏ có đường viền mảnh."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "2.2. Biên mềm, chú ý theo vùng và giải mã"
+    },
+    {
+      "type": "paragraph",
+      "text": "Mô-đun tạo biên mềm nhận đặc trưng từ nhiều tầng rồi dự đoán một bản đồ giá trị liên tục trong khoảng từ không đến một. Giá trị này không chỉ phản ánh xác suất có biên mà còn biểu diễn mức tin cậy của biên trong bối cảnh lân cận. Một đoạn chuyển tiếp có độ tương phản thấp nhưng được củng cố bởi kết cấu bên trong sẽ có giá trị cao hơn một vệt sáng đơn độc do nhiễu. Để bảo đảm tính định hướng, mô-đun dùng các bộ lọc phản hồi theo nhiều hướng và một phép tổng hợp theo vùng. Cơ chế chú ý định hướng theo vùng cho phép điểm ảnh gần đường bao nhận thông tin từ phần bên trong vật thể, đồng thời giảm ảnh hưởng của nền khi nền có dao động mạnh. Hướng tiếp cận này gần với cơ chế chú ý dành cho đường bao đứt gãy được trình bày trong nghiên cứu về hình học vùng \\cite{5}, nhưng được mở rộng bằng tín hiệu cường độ và màu sau chuẩn hóa. Bản đồ biên mềm sau đó được đưa qua các tầng khôi phục để hỗ trợ cả phân loại vùng lẫn bảo toàn đường viền."
+    },
+    {
+      "type": "paragraph",
+      "text": "Đầu ra của bộ giải mã gồm bản đồ vùng, bản đồ biên và bản đồ độ tin cậy. Ba bản đồ này không được xử lý tách rời ở bước cuối; chúng được nối theo kênh, rồi đi qua các tầng tích chập có điều kiện để tạo mặt nạ liên tục. Với vị trí $\\vec{x}$, điểm số vùng $p(\\vec{x})$ được điều chỉnh bởi giá trị biên $B(\\vec{x})$ và trọng số tin cậy $r(\\vec{x})$, vì vậy một điểm ảnh nằm sát biên nhưng không có hỗ trợ từ cấu trúc lân cận sẽ không dễ dàng tạo thành vùng dương tính riêng. Nguyên tắc này nhằm ngăn hiện tượng mặt nạ bị thủng ở phần thân vật thể hoặc mọc gai dọc theo nền. Ràng buộc nhất quán hình thái đóng vai trò nối vùng bên trong với đường bao, phù hợp với các kết quả về bảo toàn hình dạng trong cảnh có che khuất \\cite{6}. Ngoài ra, thành phần bảo toàn chi tiết tương phản thấp được đưa vào để những cấu trúc nhỏ, dù không nổi bật về độ sáng, vẫn được duy trì nếu chúng lặp lại ổn định ở nhiều mức phân giải \\cite{7}. Mục tiêu đa nhiệm được mô tả trong \\ref{eq:multitask_objective}, còn ảnh hưởng riêng của từng mô-đun được kiểm tra trong \\ref{tab:ablation}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Trong quá trình hợp nhất, mô hình không gán trọng số cố định cho từng mức phân giải. Thay vào đó, mỗi mức tạo ra một điểm truy vấn $q_s(\\vec{x})$, từ đó suy ra trọng số $\\alpha_s(\\vec{x})$ trên tập mức $\\mathcal{S}$. Có thể biểu diễn nguyên tắc này bằng $\\alpha_s(\\vec{x})=\\exp(q_s(\\vec{x}))/\\sum_{t=1}^{S}\\exp(q_t(\\vec{x}))$. Khi vật thể nhỏ, mức có độ phân giải cao thường được ưu tiên; khi đường bao bị che khuất hoặc nhiễu, mức có vùng tiếp nhận rộng có thể đóng góp nhiều hơn. Bản đồ biên hợp nhất $\\widehat{B}(\\vec{x})$ vì vậy thay đổi theo vị trí, không phải một phép trung bình đơn giản. Mô tả đầy đủ của quy tắc này được tham chiếu tại \\ref{eq:multiscale_boundary_fusion}. Cơ chế trên cũng tạo điều kiện cho việc giảm tính toán: các vùng có tin cậy cao có thể dùng ít nhánh hơn, còn vùng bất định mới kích hoạt các tầng phân tích sâu."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "3. Hàm mục tiêu và quy trình huấn luyện"
+    },
+    {
+      "type": "paragraph",
+      "text": "Hàm mục tiêu được thiết kế để cân bằng bốn yêu cầu: phân loại đúng vùng, bám sát đường biên, duy trì tính liên kết hình thái và bảo toàn chi tiết sáng yếu. Thành phần vùng dùng sai số xác suất cho từng điểm ảnh, nhưng được điều chỉnh trọng số để tránh việc nền chiếm ưu thế khi vật thể có diện tích nhỏ. Thành phần biên so sánh bản đồ dự đoán với đường bao gán nhãn ở nhiều mức phân giải, trong đó những đoạn mảnh được tăng trọng số khi có nguy cơ bị mất. Thành phần hình thái phạt các lỗ nhỏ bên trong vùng, các cầu nối không có cơ sở và các đoạn đường bao bị đứt. Thành phần chi tiết dùng sự tương đồng giữa các mô tả cục bộ ở nhiều mức để khuyến khích mô hình giữ những cấu trúc có tương phản thấp nhưng lặp lại ổn định. Các hệ số $\\lambda_r$, $\\lambda_e$, $\\lambda_m$ và $\\lambda_d$ được điều chỉnh theo từng giai đoạn huấn luyện, tránh để biên chi phối toàn bộ quá trình từ đầu."
+    },
+    {
+      "type": "paragraph",
+      "text": "Trong giai đoạn đầu, mô hình được học với các biến đổi chiếu sáng có biên độ vừa phải để bộ mã hóa hình thành biểu diễn ổn định trước những thay đổi rõ rệt hơn. Giai đoạn giữa bổ sung nhiễu cảm biến theo nhiều mức, nhiễu màu, che khuất cục bộ và thay đổi tương phản không gian. Giai đoạn cuối tăng các biến dạng hình học nhẹ, gồm co giãn, xoay nhỏ, biến đổi phối cảnh và dịch chuyển vùng quan sát. Những phép biến đổi này được áp dụng có kiểm soát để không phá hỏng quan hệ hình học của đường bao. Mỗi ảnh huấn luyện được đi kèm mặt nạ vùng, đường bao và bản đồ độ tin cậy do quy trình gán nhãn tạo ra. Độ tin cậy thấp được dùng cho những đoạn không thể xác định chắc chắn do bóng hoặc che khuất, nhờ đó mô hình không bị ép học một ranh giới giả. Cách tổ chức nhãn mềm này phù hợp với quan điểm rằng suy luận biên nên phản ánh bất định cục bộ thay vì chỉ dùng quyết định nhị phân \\cite{4}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Một quy trình kiểm tra chéo theo nhóm cảnh được dùng để hạn chế việc mô hình ghi nhớ điều kiện chiếu sáng riêng của từng khu vực. Các nhóm lối đi trong nhà, khu vực sản xuất, ngoài trời chạng vạng và nguồn sáng ngược được phân bố vào các phần huấn luyện, kiểm tra và đánh giá theo nguyên tắc không trùng cảnh. Trong mỗi vòng, ngưỡng mặt nạ được chọn trên phần kiểm tra bằng tiêu chí cân bằng giữa F1 vùng và F1 biên, sau đó giữ nguyên khi đánh giá cuối. Ngoài điểm số trung bình, nghiên cứu ghi nhận độ liên tục đường bao, tỷ lệ vùng thủng, sai số ở vùng bị che và thời gian xử lý. Các chỉ số này phản ánh trực tiếp mục tiêu của khung hơn là chỉ dựa vào độ chính xác điểm ảnh. Độ tin cậy cũng được kiểm tra bằng cách thay đổi cường độ sáng và mức nhiễu theo từng nấc, rồi đo độ thay đổi của mặt nạ giữa hai điều kiện liên tiếp. Nhờ vậy, một mô hình có điểm số cao nhưng phản ứng thất thường trước biến đổi chiếu sáng sẽ được nhận diện rõ."
+    },
+    {
+      "type": "paragraph",
+      "text": "Để tránh sự mất cân bằng giữa vùng trong và vùng ngoài vật thể, các điểm ảnh gần đường bao được lấy với xác suất cao hơn trong các lô huấn luyện, nhưng vẫn giữ đủ vùng nền để học ngữ cảnh. Đối với vật thể nhỏ, bản đồ vùng được phóng đại ở tầng trung gian trước khi so sánh với nhãn, sau đó kết quả được đưa về kích thước ban đầu. Đối với vật thể lớn, các phép gộp vùng được giới hạn để đường bao không bị làm trơn quá mức. Các hàm phạt hình thái chỉ tác động mạnh khi xuất hiện lỗ hoặc đoạn rời có diện tích vượt ngưỡng, nhằm không xóa những khoảng rỗng vốn có trong cấu trúc thật. Bản đồ chi tiết sáng yếu được giám sát bằng sự tương đồng giữa các mức phân giải, với điều kiện những điểm tương đồng phải nằm trong vùng có hỗ trợ hình học. Cách này làm giảm nguy cơ nhiễu lặp lại bị hiểu nhầm là hoa văn của vật thể. Hệ quả là quá trình tối ưu không chỉ hướng đến mặt nạ đẹp ở một mức ngưỡng mà còn hình thành trường đặc trưng ổn định trước các thay đổi nhỏ của đầu vào."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "4. Thiết kế đánh giá và khả năng triển khai"
+    },
+    {
+      "type": "paragraph",
+      "text": "Đánh giá được tổ chức trên bốn nhóm cảnh có tính chất khác nhau. Lối đi trong nhà thường có vùng tối kéo dài, ánh sáng từ các cửa bên và nền tương đối phẳng. Khu vực sản xuất có nhiều vật cản, bề mặt phản xạ và nguồn sáng cục bộ, tạo ra những đường biên giả. Cảnh ngoài trời chạng vạng có màu sắc thay đổi nhanh, tương phản tổng thể thấp nhưng vẫn chứa nhiều chi tiết kết cấu. Cảnh có nguồn sáng ngược tạo vùng tối sâu phía trước nguồn sáng, làm cho đường bao vật thể dễ hòa vào nền. Các khung hình được chuẩn hóa về kích thước đầu vào, nhưng không ép cùng một mức sáng giữa các nhóm. Tập đánh giá giữ nguyên phân bố điều kiện quan sát để phản ánh độ ổn định trong sử dụng thực tế. Chỉ số vùng và biên được tính trên toàn mặt nạ, trong khi độ liên tục được tính trên đường bao đã làm mảnh. So sánh trực quan và định lượng giữa F1 vùng với IoU vùng được minh họa qua \\ref{fig:chart}, nơi xu hướng suy giảm theo độ khó của cảnh được thể hiện rõ."
+    },
+    {
+      "type": "paragraph",
+      "text": "Mạng vùng cơ sở được dùng làm đối chứng với cùng kích thước đầu vào và quy trình huấn luyện tương đương, nhưng không có chuẩn hóa chiếu sáng, biên mềm và chú ý theo vùng. Đối chứng này giúp tách tác động của kiến trúc khỏi lợi ích do dữ liệu hoặc thời gian huấn luyện. Bên cạnh F1 vùng và IoU vùng, F1 biên được tính với vùng dung sai nhỏ quanh đường bao tham chiếu, bởi sai lệch một vài điểm ảnh có thể chấp nhận được khi nhãn nằm trong vùng bóng. Độ liên tục được định nghĩa là tỷ lệ chiều dài đường bao không bị đứt; tỷ lệ vùng thủng là phần diện tích bên trong mặt nạ bị chia thành các thành phần không cần thiết. Các phép đo được lặp lại trên nhiều ngưỡng tin cậy để xem mô hình có duy trì ưu thế hay chỉ phù hợp với một ngưỡng duy nhất. Kết quả tổng hợp theo nhóm cảnh được trình bày tại \\ref{tab:scene_results}, còn tác động của từng thành phần được kiểm tra riêng ở \\ref{tab:ablation}. Cách báo cáo này cho phép phân biệt chất lượng vùng tổng thể với chất lượng đường bao."
+    },
+    {
+      "type": "paragraph",
+      "text": "Chi phí suy luận được đo trên thiết bị có tài nguyên hạn chế ở độ phân giải đầu vào cố định. Thời gian bao gồm chuẩn hóa, mã hóa, hợp nhất và giải mã, nhưng không tính thời gian đọc dữ liệu từ kho lưu trữ. Bộ nhớ đỉnh được ghi nhận trong toàn bộ một lượt xử lý, đặc biệt chú ý đến các bản đồ trung gian ở nhiều mức. Cơ chế phân bổ nhánh theo độ tin cậy chỉ kích hoạt tầng sâu tại vùng chưa chắc chắn; các vùng có bằng chứng mạnh dùng đường xử lý ngắn hơn. Nguyên tắc này tương đồng với hướng giảm chi phí bằng phân bổ nhánh theo không gian \\cite{10}, nhưng trong khung hiện tại việc bỏ nhánh vẫn phải giữ đường bao liên tục. Với mỗi vùng, điều kiện kích hoạt được suy ra từ trung bình tin cậy và độ biến thiên lân cận, có thể mô tả ngắn bằng $c(\\vec{x})=\\operatorname{mean}(r(\\vec{x}))$ và ngưỡng quyết định $c(\\vec{x})\\geq\\theta$. Mức ngưỡng được cố định sau giai đoạn kiểm tra để tránh thay đổi tùy ý khi triển khai."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ngoài đánh giá tĩnh, nghiên cứu còn xem xét khả năng xử lý liên tiếp trong những chuỗi ảnh có biến thiên chiếu sáng nhanh. Bộ nhớ thời gian không được dùng như một mô-đun bắt buộc của khung cơ sở, nhưng bản đồ tin cậy của khung trước được dùng để kiểm tra sự thay đổi bất thường của mặt nạ ở khung sau. Nếu biến động vượt ngưỡng, hệ thống tạm thời tăng mức xử lý ở các vùng bất định thay vì làm lại toàn bộ ảnh với chi phí cao. Cách kiểm tra này nhằm phục vụ các hệ thống giám sát quang học và robot di chuyển, nơi một vài khung có thể tối đột ngột do nguồn sáng thay đổi. Những quan sát về ổn định vùng trong chuỗi ảnh có biến thiên nhanh được đối chiếu với hướng nghiên cứu thích nghi theo thời gian \\cite{12}. Kết quả không được dùng để thay đổi điểm số của đánh giá tĩnh, mà chỉ để phân tích khả năng mở rộng của kiến trúc. Điều này giữ cho so sánh giữa các phương pháp công bằng, đồng thời cho thấy khung có thể trở thành thành phần của một hệ thống nhận thức liên tục."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "5. Kết quả và phân tích loại bỏ thành phần"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "5.1. Hiệu quả theo nhóm cảnh"
+    },
+    {
+      "type": "paragraph",
+      "text": "Khung đề xuất đạt kết quả cao nhất ở nhóm lối đi trong nhà, nơi ánh sáng không đồng đều nhưng cấu trúc nền tương đối ổn định. F1 vùng đạt 91,8 phần trăm, IoU vùng đạt 86,7 phần trăm và F1 biên đạt 84,9 phần trăm, với thời gian xử lý 42 ms. So với mạng vùng cơ sở, mức tăng tương ứng là 4,6 điểm phần trăm ở F1 vùng, 6,2 điểm ở IoU vùng và 7,8 điểm ở F1 biên. Khoảng cách lớn hơn ở chỉ số biên cho thấy đóng góp của bản đồ tin cậy và hợp nhất đa tỉ lệ không chỉ làm vùng đầy hơn mà còn làm đường bao chính xác hơn. Ở khu vực sản xuất, khung đạt 89,6 phần trăm F1 vùng và 83,4 phần trăm IoU vùng, trong khi thời gian tăng lên 45 ms do nhiều vùng bất định được kích hoạt. Với cảnh ngoài trời chạng vạng, các giá trị lần lượt là 86,9 và 79,7 phần trăm. Nhóm nguồn sáng ngược khó nhất, nhưng vẫn đạt 83,7 phần trăm F1 vùng và 75,9 phần trăm IoU vùng. Những kết quả này được trình bày thống nhất trong \\ref{tab:scene_results} và xu hướng được trực quan hóa trong \\ref{fig:chart}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Phân tích mặt nạ cho thấy khung đề xuất giảm rõ rệt các lỗ nhỏ ở phần thân vật thể, đặc biệt khi vùng bên trong có độ sáng gần với nền. Trong các trường hợp này, tín hiệu cường độ đơn thuần không đủ phân biệt vật thể, nhưng kết cấu lặp và quan hệ giữa vùng trong với đường bao cung cấp thêm bằng chứng. Ở đoạn biên bị che khuất một phần, mô hình thường tạo một đường chuyển tiếp mềm trước khi quyết định mặt nạ, nhờ đó ít xuất hiện các mảnh dương tính tách rời. Các sai lệch còn lại chủ yếu nằm ở vùng phản xạ mạnh, nơi kết cấu nền có hình dạng gần giống vật thể. So với phương pháp cơ sở, mô hình cũng ít kéo đường bao vào phía vùng tối lân cận khi nguồn sáng thay đổi theo không gian. Hiện tượng này cho thấy chuẩn hóa chiếu sáng đã làm giảm sự phụ thuộc của điểm số vùng vào độ sáng tuyệt đối. Tuy nhiên, sự cải thiện không đồng đều giữa các nhóm: cảnh có nguồn sáng ngược vẫn có F1 biên thấp hơn do một số đoạn đường bao không có tín hiệu quan sát đủ mạnh. Đây là giới hạn của việc suy luận từ một ảnh đơn."
+    },
+    {
+      "type": "paragraph",
+      "text": "Kết quả loại bỏ thành phần cho thấy khung đầy đủ có F1 vùng 91,8 phần trăm, F1 biên 84,9 phần trăm, độ liên tục 93,1 phần trăm và tỷ lệ vùng thủng 2,8 phần trăm. Khi bỏ chuẩn hóa chiếu sáng, F1 vùng giảm còn 87,5 phần trăm, độ liên tục còn 88,4 phần trăm và vùng thủng tăng lên 5,9 phần trăm. Khi bỏ tạo biên mềm, F1 biên giảm mạnh xuống 77,2 phần trăm, trong khi vùng thủng tăng lên 4,6 phần trăm. Bỏ nhất quán hình thái làm tỷ lệ vùng thủng tăng cao nhất, đạt 6,7 phần trăm, dù F1 biên vẫn ở mức 81,3 phần trăm. Bỏ chú ý theo vùng làm độ liên tục giảm còn 87,5 phần trăm và vùng thủng tăng lên 4,9 phần trăm. Toàn bộ phép so sánh được ghi trong \\ref{tab:ablation}. Các con số cho thấy từng mô-đun tác động lên một khía cạnh khác nhau: chuẩn hóa làm sạch nền, biên mềm bảo toàn đường bao, nhất quán hình thái nối vùng và chú ý định hướng kiểm soát sự lan truyền của đặc trưng."
+    },
+    {
+      "type": "paragraph",
+      "text": "Sự thay đổi bộ nhớ giữa các cấu hình cũng cung cấp thông tin về giá phải trả của chất lượng. Khung đầy đủ dùng 1,00 GB, cao hơn các cấu hình loại bỏ thành phần, vì phải lưu nhiều bản đồ đặc trưng và bản đồ tin cậy. Tuy nhiên, chi phí này không tăng theo tỷ lệ với số nhánh do cơ chế phân bổ không kích hoạt toàn bộ tầng ở mọi vùng. Bỏ chú ý theo vùng làm bộ nhớ giảm xuống 0,91 GB nhưng chất lượng liên tục giảm đáng kể, cho thấy phần tiết kiệm chưa đủ bù cho tổn thất hình học. Bỏ chuẩn hóa chỉ giảm xuống 0,94 GB nhưng gây suy giảm lớn hơn ở F1 vùng và tỷ lệ vùng thủng. Vì vậy, việc tối ưu triển khai nên ưu tiên giảm các bản đồ trung gian ít quan trọng thay vì loại bỏ mô-đun nền tảng. Các phép đo chi phí cũng cho thấy thời gian 42 đến 49 ms vẫn phù hợp với phản hồi gần thời gian thực ở độ phân giải đã chọn. Trong hệ thống có giới hạn bộ nhớ nghiêm ngặt, có thể dùng lượng tử hóa đặc trưng ở các tầng sâu, miễn là giữ độ chính xác của nhánh biên."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "6. Bàn luận, giới hạn và kết luận"
+    },
+    {
+      "type": "paragraph",
+      "text": "Một kết luận quan trọng là chất lượng nhận dạng trong ảnh thiếu sáng không thể được đánh giá đầy đủ bằng độ trùng khớp vùng. Một mặt nạ có IoU khá vẫn có thể chứa đường bao bị đứt, lỗ bên trong hoặc phần nhô sai ở những chi tiết mảnh. Ngược lại, một đường bao lệch nhẹ do bất định quan sát có thể vẫn bảo toàn hình dạng hữu ích cho bước theo dõi hoặc điều khiển. Khung đề xuất xử lý sự khác biệt này bằng cách tối ưu đồng thời vùng, biên và hình thái. Bản đồ tin cậy giúp biểu diễn vùng không chắc chắn thay vì che giấu nó dưới một ngưỡng cứng. Khi độ tương phản thấp, mô hình dựa vào sự đồng thuận giữa các mức không gian và giữa các nhánh đặc trưng. Khi nền có kết cấu mạnh, chú ý theo vùng giảm trọng số cho những tín hiệu không có liên hệ với bên trong vật thể. Đây là lý do khung giữ được đường viền mảnh tốt hơn so với kiến trúc chỉ dựa trên bản đồ vùng. Các kết quả về phục hồi mặt nạ bằng kết hợp thông tin bên trong và đường bao cũng củng cố cách nhìn này \\cite{11}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Dù vậy, khung vẫn có những giới hạn cần được xem xét. Khi vật thể hoàn toàn hòa vào nền trong một vùng rộng, không có tín hiệu hình học hoặc kết cấu đủ mạnh để phục hồi đường bao một cách đáng tin cậy. Mô hình có thể kéo dài đường bao dựa trên ngữ cảnh, nhưng phần kéo dài này cần được đánh dấu là bất định thay vì xem như quan sát trực tiếp. Các vật thể trong suốt, bề mặt phản xạ biến đổi nhanh hoặc có họa tiết trùng với nền cũng gây khó khăn cho nhánh màu và kết cấu. Ngoài ra, việc gán nhãn đường bao trong vùng bóng phụ thuộc vào quy ước của người đánh giá, nên một phần sai số phản ánh khác biệt nhãn chứ không chỉ năng lực mô hình. Những giới hạn này cho thấy cần kết hợp thêm thông tin thời gian, chiều sâu hoặc cảm biến bổ trợ trong các ứng dụng yêu cầu an toàn cao. Mô hình hiện tại mới dùng chuỗi ảnh như một phép kiểm tra mở rộng, chưa đưa bộ nhớ thời gian vào hàm mục tiêu chính. Vì thế, các nghiên cứu tiếp theo có thể học sự ổn định liên khung mà vẫn bảo toàn phản ứng nhanh trước chuyển động thật."
+    },
+    {
+      "type": "paragraph",
+      "text": "Về triển khai, kiến trúc có thể được điều chỉnh theo mức độ quan trọng của vùng. Ở cảnh có nhiều vùng tin cậy cao, chỉ những dải gần đường bao hoặc vùng có biến thiên bất thường mới cần qua các tầng sâu. Ở cảnh có nguồn sáng thay đổi nhanh, hệ thống có thể tạm thời tăng số nhánh được kích hoạt trong một vùng nhỏ thay vì tăng chi phí cho toàn ảnh. Chiến lược này phù hợp với thiết bị giám sát quang học, robot hoạt động trong hành lang tối và dây chuyền kiểm tra tự động. Tuy nhiên, ngưỡng kích hoạt cần được hiệu chuẩn theo độ phân giải, tốc độ chuyển động và ngân sách năng lượng của thiết bị. Nếu đặt ngưỡng quá cao, các đoạn biên mảnh sẽ bị bỏ qua; nếu đặt quá thấp, lợi ích tiết kiệm tính toán sẽ giảm. Có thể biểu diễn sự cân bằng này bằng mục tiêu $J=F1_{region}+\\rho F1_{edge}-\\eta T$, trong đó $T$ là thời gian và $\\rho$, $\\eta$ điều chỉnh ưu tiên chất lượng với chi phí. Hướng phân bổ nhánh theo độ tin cậy \\cite{10} và hướng thích nghi theo biến thiên chiếu sáng \\cite{9} cung cấp cơ sở để mở rộng cơ chế này."
+    },
+    {
+      "type": "paragraph",
+      "text": "Từ góc nhìn phương pháp, hợp nhất đa tỉ lệ không nên được hiểu là cộng đơn giản nhiều bản đồ. Giá trị của nó nằm ở việc cho phép mỗi mức phân giải đảm nhiệm một vai trò khác nhau, rồi dùng độ tin cậy không gian để quyết định mức đóng góp. Mức cao giữ chi tiết mảnh, mức trung gian mô tả bộ phận, còn mức thấp duy trì hình dạng tổng thể và quan hệ với nền. Khi những mức này được nối với thông tin bên trong vật thể, đường bao bị gián đoạn có thể được phục hồi mà không làm mặt nạ lan quá xa. Việc dùng trường biên mềm cũng làm cho quá trình tối ưu phù hợp hơn với tính mơ hồ vốn có của ảnh thiếu sáng. Những kết quả định lượng và phân tích loại bỏ thành phần cho thấy chuẩn hóa, mã hóa phân cấp, chú ý theo vùng và ràng buộc hình thái bổ trợ lẫn nhau thay vì trùng lặp hoàn toàn. Các quan sát về ổn định trong cảnh chạng vạng, che khuất và nguồn sáng ngược nhất quán với các hướng nghiên cứu về đặc trưng đa kênh và thích nghi điều kiện thu nhận \\cite{8}, \\cite{9}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Tóm lại, nghiên cứu trình bày một khung nhận dạng vùng vật thể có cấu trúc cho ảnh thiếu sáng dựa trên hợp nhất biên đa tỉ lệ. Khung kết hợp chuẩn hóa chiếu sáng, mã hóa đặc trưng phân cấp, tạo biên mềm, chú ý định hướng theo vùng và giải mã đa nhiệm. Hàm mục tiêu đồng thời thúc đẩy phân loại vùng, khớp đường bao, nhất quán hình thái và bảo toàn chi tiết tương phản thấp. Thực nghiệm trên bốn nhóm cảnh cho thấy mô hình tạo mặt nạ liền mạch hơn, giảm vùng thủng và duy trì đường viền mảnh với chi phí xử lý vẫn có thể kiểm soát. Các kết quả cũng xác nhận rằng đường bao cần được học như một tín hiệu có độ tin cậy thay đổi, không phải một hậu xử lý nhị phân. Về sau, việc kết hợp bộ nhớ thời gian, thông tin chiều sâu và cơ chế tự điều chỉnh theo điều kiện thu nhận có thể nâng cao độ bền của hệ thống. Cơ sở lý luận của hướng phát triển này được nối tiếp từ các nghiên cứu về hợp nhất biên \\cite{1}, trường chiếu sáng \\cite{2}, mã hóa phân cấp \\cite{3}, biên mềm \\cite{4}, chú ý hình học \\cite{5}, nhất quán hình thái \\cite{6}, bảo toàn chi tiết \\cite{7}, thích nghi chuỗi ảnh \\cite{12} và phục hồi mặt nạ trong bóng tối \\cite{11}. \\fn{Các phép đo thời gian được hiểu là thời gian suy luận của một ảnh ở độ phân giải cố định, không bao gồm thời gian truyền dữ liệu giữa các thiết bị.}"
+    }
+  ]
+}

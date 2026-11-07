@@ -25,7 +25,7 @@ def test_router_retries_only_transport_failures(tmp_path, monkeypatch):
     config.write_text(
         "endpoints:\n  test:\n    api: openai\n    model: test\n    api_key_env: TEST_API_KEY\n"
         "agents: {}\n"
-    )
+    , encoding="utf-8")
     monkeypatch.setenv("TEST_API_KEY", "test")
     router = client.Router(config=config, cache_dir=None)
     calls = 0
@@ -52,7 +52,7 @@ def test_router_does_not_nest_schema_retries(tmp_path, monkeypatch):
     config.write_text(
         "endpoints:\n  test:\n    api: openai\n    model: test\n    api_key_env: TEST_API_KEY\n"
         "agents: {}\n"
-    )
+    , encoding="utf-8")
     monkeypatch.setenv("TEST_API_KEY", "test")
     router = client.Router(config=config, cache_dir=None)
     calls = 0

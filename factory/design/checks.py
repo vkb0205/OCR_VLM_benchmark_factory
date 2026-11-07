@@ -8,6 +8,7 @@ import math
 from pathlib import Path
 
 from factory.contract.extract import parse_html
+from factory.render.blocks import SIZES
 
 
 CRITERIA = ("layout", "style", "reading_order", "orientation")
@@ -54,6 +55,63 @@ def _page_sizes(html: str) -> dict[str, str]:
             for index, node in enumerate(sections, 1)}
 
 
+def _check_backbone(folder: Path, spec: dict) -> list[str]:
+    from factory.design.backbone import BackboneError, validate_plan
+    from factory.design.fonts import get_font
+
+    problems = []
+    if not spec.get("content_id"):
+        problems.append("content_id missing from backbone design")
+    if spec.get("params"):
+        problems.append("backbone design must not contain code-drawn params")
+    if spec.get("draws"):
+        problems.append("backbone design must not contain code-drawn option draws")
+    style = spec.get("style") or {}
+    palette = style.get("palette") or []
+    if len(palette) < 3:
+        problems.append("style: background, ink, and accent colors are required")
+    for index, color in enumerate(palette, 1):
+        try:
+            rgb(color)
+        except (ValueError, AttributeError):
+            problems.append(f"style: palette color {index} must be #RRGGBB")
+    if len(palette) >= 2:
+        try:
+            ratio = contrast(palette[0], palette[1])
+            if ratio < 4.5:
+                problems.append(f"style: declared paper/ink contrast is {ratio:.2f}:1, below 4.5:1")
+        except (ValueError, IndexError):
+            problems.append("style: palette entries must be #RRGGBB colors")
+    families = style.get("fonts") or []
+    if len(families) != 2 or str(families[0]).casefold() == str(families[1]).casefold():
+        problems.append("style: distinct heading/body registry families are required")
+    else:
+        for family in families:
+            try:
+                get_font(str(family))
+            except KeyError:
+                problems.append(f"style: font family {family!r} is absent from the Vietnamese registry")
+    if spec.get("table_frame_type") not in {"full_line", "less_line", "fewer_line", "wireless_line"}:
+        problems.append("table_frame_type is not a supported frame type")
+    plan = spec.get("layout_plan") or {}
+    try:
+        validate_plan(plan, _academic_config())
+    except (BackboneError, ValueError, TypeError, KeyError) as exc:
+        problems.append(f"layout_plan: {exc}")
+    source_html = folder / "design" / "design.html"
+    if source_html.is_file():
+        actual = _page_sizes(source_html.read_text(encoding="utf-8"))
+        declared = (spec.get("orientation") or {}).get("pages") or {}
+        if declared != actual:
+            problems.append("orientation.pages does not match rendered design page sizes")
+    return problems
+
+
+def _academic_config():
+    from factory.content.config import load_config
+    return load_config().documents["academic_paper"].for_lang("vi")
+
+
 def check(folder, ledger=(), warnings: list | None = None):
     """Validate design choices and compare only with the four newest ledger entries.
 
@@ -67,6 +125,8 @@ def check(folder, ledger=(), warnings: list | None = None):
     if spec_path is None:
         return ["design_spec.json missing"]
     spec = json.loads(spec_path.read_text(encoding="utf-8"))
+    if spec.get("mode") == "backbone":
+        return _check_backbone(folder, spec)
     if "seed" not in spec:
         problems.append("seed missing")
 
@@ -191,14 +251,14 @@ def check(folder, ledger=(), warnings: list | None = None):
     return problems
 
 
-async def browser_checks(folder, browser):
+async def browser_checks(folder, browser, min_font_px: float = 9):
     problems = []
     for path in sorted((Path(folder) / "pages").glob("*.html")):
         async with browser.page(path) as (page, blocked, failed):
             if blocked or failed:
                 problems.append(f"{path.name}: blocked assets {blocked + failed}")
                 continue
-            found = await page.evaluate("""() => {
+            found = await page.evaluate("""(minFontPx) => {
               const out=[], els=[...document.querySelectorAll('[data-gt-id]')];
               const rgb=s=>(s.match(/[\\d.]+/g)||[]).slice(0,3).map(Number);
               const lum=c=>c.map(x=>{x/=255;return x<=.04045?x/12.92:((x+.055)/1.055)**2.4})
@@ -206,10 +266,10 @@ async def browser_checks(folder, browser):
               for(const e of els){
                 const s=getComputedStyle(e);
                 for(const child of e.querySelectorAll('*')){
-                  if(child.textContent.trim()&&parseFloat(getComputedStyle(child).fontSize)<9)
-                    out.push('font below 9px inside: '+e.dataset.gtId);
+                  if(child.textContent.trim()&&parseFloat(getComputedStyle(child).fontSize)<minFontPx)
+                    out.push('font below '+minFontPx+'px inside: '+e.dataset.gtId);
                 }
-                if(parseFloat(s.fontSize)<9)out.push('font below 9px: '+e.dataset.gtId);
+                if(parseFloat(s.fontSize)<minFontPx)out.push('font below '+minFontPx+'px: '+e.dataset.gtId);
                 let bg=e;while(bg.parentElement && getComputedStyle(bg).backgroundColor==='rgba(0, 0, 0, 0)')bg=bg.parentElement;
                 const a=lum(rgb(s.color)),b=lum(rgb(getComputedStyle(bg).backgroundColor));
                 if(e.textContent.trim()&&(Math.max(a,b)+.05)/(Math.min(a,b)+.05)<4.5)out.push('text contrast: '+e.dataset.gtId);
@@ -232,8 +292,62 @@ async def browser_checks(folder, browser):
                   out.push('overlap: '+a.dataset.gtId+' / '+b.dataset.gtId);
               }
               return out;
-            }""")
+            }""", min_font_px)
         problems.extend(f"{path.name}: {problem}" for problem in found)
+    return problems
+
+
+async def check_backbone_geometry(folder, layout_plan, content_config, browser):
+    """Check rendered sheet sizes and measured region boxes against a backbone plan."""
+    from factory.design.backbone import validate_plan
+    from factory.contract.models import DocumentManifest
+
+    folder = Path(folder)
+    manifest = DocumentManifest.model_validate_json((folder / "document.json").read_text(encoding="utf-8"))
+    plan = validate_plan(layout_plan, content_config)
+    problems = []
+    for entry in manifest.pages:
+        path = folder / entry.file
+        source = path.read_text(encoding="utf-8")
+        root = parse_html(source)
+        section = next((node for node in root.walk() if node.tag == "section" and "page" in node.attrs.get("class", "").split()), None)
+        if section is None:
+            problems.append(f"page {entry.index}: section.page is missing")
+            continue
+        is_wide = "data-wide-table-active" in section.attrs
+        role = entry.role
+        expected_size = plan["wide_table_page"]["size"] if is_wide and plan.get("wide_table_page") else plan["roles"][role]["size"]
+        expected_dims = SIZES[expected_size]
+        if abs(entry.width_mm - expected_dims[0]) > 0.01 or abs(entry.height_mm - expected_dims[1]) > 0.01:
+            problems.append(f"page {entry.index}: rendered size {(entry.width_mm, entry.height_mm)} != {expected_size} {expected_dims}")
+        expected_geometry = (plan["wide_table_page"]["_geometry"] if is_wide and plan.get("wide_table_page")
+                             else plan["_geometry"][role])
+        async with browser.page(path) as (page, blocked, failed):
+            if blocked or failed:
+                problems.append(f"page {entry.index}: blocked resources while measuring regions: {blocked + failed}")
+                continue
+            measured = await page.evaluate("""() => {
+              const main=document.querySelector('section.page>main');
+              if(!main) return null;
+              const m=main.getBoundingClientRect();
+              return [...main.querySelectorAll('[data-region]')].map(n=>{
+                const r=n.getBoundingClientRect();
+                return {chain:parseInt(n.dataset.chain||'0',10),box:[
+                  (r.left-m.left)*25.4/96,(r.top-m.top)*25.4/96,
+                  r.width*25.4/96,r.height*25.4/96
+                ]};
+              }).sort((a,b)=>a.chain-b.chain);
+            }""")
+        if measured is None or len(measured) != len(expected_geometry):
+            problems.append(f"page {entry.index}: rendered region count differs from the plan")
+            continue
+        for actual, (chain, name, expected_box) in zip(measured, expected_geometry):
+            if actual["chain"] != chain:
+                problems.append(f"page {entry.index}: region {name} chain {actual['chain']} != {chain}")
+                continue
+            differences = [abs(got - want) for got, want in zip(actual["box"], expected_box)]
+            if any(value > 1.0 for value in differences):
+                problems.append(f"page {entry.index}: region {name} differs from plan by {differences} mm")
     return problems
 
 

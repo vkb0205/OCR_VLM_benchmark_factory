@@ -1,0 +1,402 @@
+{
+  "content_id": "paper_04",
+  "variables": {
+    "lang": "en",
+    "field": "hydrology",
+    "paper_length": "short",
+    "citation_style": "author_year"
+  },
+  "lang": "en",
+  "values": {
+    "title": "Storm-memory controls on baseflow recession in a nested upland catchment",
+    "authors": [
+      {
+        "name": "Elian Veyr",
+        "affiliations": [
+          1
+        ],
+        "corresponding": true,
+        "email": "elian.veyr@aquenorhydro.org"
+      },
+      {
+        "name": "Mira Solven",
+        "affiliations": [
+          1,
+          2
+        ],
+        "corresponding": false
+      },
+      {
+        "name": "Tarin Ossel",
+        "affiliations": [
+          2
+        ],
+        "corresponding": false
+      }
+    ],
+    "affiliations": [
+      "Aquenor Centre for Catchment Science, Veyrholt",
+      "Orvane Institute of Water Systems, Neralis"
+    ],
+    "abstract": "Understanding how rainfall timing shapes baseflow is important for low-flow forecasting in headwater basins. We combine subhourly rainfall, stream-stage, and soil-moisture observations with a storage-discharge model to separate rapid drainage from delayed groundwater release. Across three nested reaches, recession behavior varied with antecedent wetness: dry periods produced steep initial declines, whereas wet periods sustained a longer tail. A memory index based on normalized recession slopes improved seven-day low-flow forecasts relative to a rainfall-only benchmark. The results indicate that catchment storage, rather than event total alone, governs the persistence of post-storm flow. The approach requires sparse field instrumentation and can support transferable screening of hydrologic drought risk.",
+    "abstract_alt": null,
+    "keywords": "baseflow recession; rainfall-runoff modelling; soil moisture; storage-discharge relations; low-flow forecasting; headwater catchment",
+    "keywords_alt": null,
+    "journal": "Hydrobasin Systems Journal",
+    "acknowledgement": "The authors thank the monitoring crew at the Aquenor Centre for Catchment Science for maintaining the gauges and the land stewards of the Veyrholt uplands for access to the research sites.",
+    "references": [
+      {
+        "text": "Veyr, E., Solven, M., & Ossel, T. (2034). Storm-memory controls on baseflow recession in a nested upland catchment. Hydrobasin Systems Journal, 14(2), 101–118.",
+        "cite": "(Veyr et al., 2034)"
+      },
+      {
+        "text": "Aldren, P. J., & Mervane, L. (2029). Threshold storage effects on low-flow persistence in steep headwater basins. Journal of Upland Hydrology, 11(3), 227–244.",
+        "cite": "(Aldren & Mervane, 2029)"
+      },
+      {
+        "text": "Brask, T. E., Norell, V. A., & Ilyen, S. (2031). Antecedent wetness and delayed groundwater release during seasonal drought. Catchment Processes Quarterly, 8(1), 39–57.",
+        "cite": "(Brask et al., 2031)"
+      },
+      {
+        "text": "Cavren, M. S. (2027). Recession-slope normalization for comparing nested stream gauges. Watercourse Dynamics, 19(4), 318–334.",
+        "cite": "(Cavren, 2027)"
+      },
+      {
+        "text": "Delyr, J. R., & Osven, K. M. (2030). Rainfall timing controls on shallow subsurface drainage in upland soils. Hydrologic Response Letters, 6(2), 85–102.",
+        "cite": "(Delyr & Osven, 2030)"
+      },
+      {
+        "text": "Evarn, C. L., Porsel, D. T., & Weren, A. (2028). Storage-discharge relations across contrasting headwater source areas. Basin Hydrology Review, 15(2), 144–163.",
+        "cite": "(Evarn et al., 2028)"
+      },
+      {
+        "text": "Faron, I. M. (2032). A state-memory index for short-lead low-flow prediction. Advances in Catchment Forecasting, 4(3), 201–219.",
+        "cite": "(Faron, 2032)"
+      },
+      {
+        "text": "Grelan, R. V., & Tessel, P. A. (2026). Soil-moisture controls on post-storm streamflow tails in humid uplands. Journal of Mountain Water Studies, 12(1), 17–35.",
+        "cite": "(Grelan & Tessel, 2026)"
+      },
+      {
+        "text": "Hovren, S. E., Malvek, J. D., & Orrel, N. (2033). Separating rapid drainage from groundwater release with subhourly flow records. River Basin Methods, 9(4), 276–295.",
+        "cite": "(Hovren et al., 2033)"
+      },
+      {
+        "text": "Kelvor, A. N., & Saren, E. V. (2025). Nested-catchment evidence for scale-dependent recession behaviour. Hydrology and Terrain, 21(2), 93–111.",
+        "cite": "(Kelvor & Saren, 2025)"
+      },
+      {
+        "text": "Lorven, D. P. (2031). Forecasting drought-sensitive discharge from recent recession trajectories. Low-Flow Hydrology Journal, 7(3), 156–174.",
+        "cite": "(Lorven, 2031)"
+      },
+      {
+        "text": "Marnel, F. R., Olyen, C. S., & Veylan, T. J. (2029). Persistence of storm-derived storage in small upland watersheds. Journal of Catchment Water Science, 18(4), 361–380.",
+        "cite": "(Marnel et al., 2029)"
+      }
+    ],
+    "body": [
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Study rationale"
+      },
+      {
+        "type": "paragraph",
+        "text": "Low-flow response in upland catchments is often treated as a direct consequence of recent rainfall, yet the persistence of discharge after a storm also reflects water retained in soil and shallow groundwater. This study examines that distinction across three nested reaches, with attention to how antecedent wetness changes the shape and duration of recession. The numerical controls summarized in \\ref{tab:recession_controls}, the forecast comparison in \\ref{tab:forecast_skill}, the duration contrast in \\ref{fig:chart}, and the pathway structure in \\ref{fig:diagram} are considered together rather than as separate results. The decay relation in \\ref{eq:recession_decay}, the state-memory formulation in \\ref{eq:memory_index}, and the error definition in \\ref{eq:forecast_error} provide the analytical thread. Earlier work has linked storage thresholds with low-flow persistence, delayed release, and nested-gauge contrasts \\cite{1} \\cite{2} \\cite{3} \\cite{4}."
+      },
+      {
+        "type": "paragraph",
+        "text": "The central question is whether a compact indicator derived from recent recession slopes can improve seven-day low-flow forecasts when rainfall totals alone provide weak information about stored water. Let discharge decline according to $Q(t) = Q_0 \\exp(-k t)$, where $Q_0$ is the flow at the onset of recession and $k$ is a local drainage coefficient. A large $k$ represents rapid depletion, whereas a small $k$ indicates a persistent tail. This interpretation is useful only when the flow record is separated into comparable recession phases and when measurement timing is consistent. \\fn{The monitoring interval was treated as a common clock so that slope comparisons were not confounded by unequal observation spacing.} The study therefore combines rainfall, stream-stage, and soil-moisture records with a storage-discharge model, following the principle that recent trajectory can carry information not visible in event totals \\cite{5} \\cite{6}."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Conceptual framework"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Storage, drainage, and hydrologic memory"
+      },
+      {
+        "type": "paragraph",
+        "text": "A storm affects low flow through several linked stores. Rain first raises surface and near-surface water content, then contributes to quick drainage, soil redistribution, and groundwater replenishment. These pathways do not respond at the same rate, so the same rainfall total can produce contrasting recession shapes when the initial soil state differs. The storage-discharge relation can be written as $Q = a S^b$, where $S$ is active catchment storage and $a$ and $b$ describe the local conversion from storage to discharge. When antecedent moisture is high, a larger portion of the available storage remains connected to the channel after the storm. This mechanism is consistent with reported controls from soil moisture, source-area contrasts, and post-storm tails in humid uplands \\cite{7} \\cite{8} \\cite{9}."
+      },
+      {
+        "type": "equation",
+        "id": "eq:recession_decay",
+        "latex": "Q(t) = Q_0 \\exp(-k t)",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "The proposed memory index summarizes recession behavior after normalization by a representative flow. For each phase, the slope $m_i$ is estimated over a stable falling limb, and the index is $M = \\frac{1}{n} \\sum_{i=1}^{n} \\frac{-m_i}{\\overline{Q}}$. A larger value indicates faster normalized decline and therefore weaker persistence, while a smaller value indicates that the catchment is releasing stored water gradually. Normalization matters because the nested reaches have different magnitudes of discharge and different contributing areas. Without it, a high-flow reach could appear to have greater memory merely because its absolute slope is larger. This procedure follows the argument that recession slopes should be compared on a common scale when gauges are nested and geomorphic settings vary \\cite{4} \\cite{10}."
+      },
+      {
+        "type": "paragraph",
+        "text": "The framework also distinguishes a storm response from a seasonal state. Rainfall timing determines when water enters the shallow subsurface, but antecedent wetness determines whether that input is rapidly transmitted or retained for later release. In a dry state, initial soil deficits can absorb much of the rainfall, while the remaining connected water may drain quickly through preferential pathways. In a wet state, the same pathways can remain active for longer because storage thresholds have already been crossed. A simple state relation is $S_{t+1} = S_t + P_t - Q_t - L_t$, where $P_t$ is rainfall input and $L_t$ combines evapotranspiration and unmeasured losses. The relation is not intended to reproduce every process; it establishes why rainfall-only prediction can miss the persistence created by prior storms."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Observations and analytical design"
+      },
+      {
+        "type": "table",
+        "id": "tab:recession_controls",
+        "caption": "Recession controls across nested reaches",
+        "header": [
+          [
+            "Reach",
+            "Phase",
+            "Rainfall mm",
+            "Wetness pct",
+            "Initial decline",
+            "Tail hours",
+            "Flow class"
+          ]
+        ],
+        "rows": [
+          [
+            "R1",
+            "Dry spell",
+            "18",
+            "31",
+            "Steep",
+            "46",
+            "Low"
+          ],
+          [
+            "R1",
+            "Wet spell",
+            "64",
+            "78",
+            "Moderate",
+            "119",
+            "Sustained"
+          ],
+          [
+            "R2",
+            "Dry spell",
+            "22",
+            "35",
+            "Steep",
+            "58",
+            "Low"
+          ],
+          [
+            "R2",
+            "Wet spell",
+            "71",
+            "81",
+            "Moderate",
+            "143",
+            "Sustained"
+          ],
+          [
+            "R3",
+            "Dry spell",
+            "26",
+            "39",
+            "Moderate",
+            "67",
+            "Low"
+          ],
+          [
+            "R3",
+            "Wet spell",
+            "83",
+            "86",
+            "Gentle",
+            "168",
+            "Sustained"
+          ]
+        ],
+        "note": "Wet antecedent conditions lengthened the recession tail at each reach."
+      },
+      {
+        "type": "paragraph",
+        "text": "The investigation uses subhourly rainfall, stream-stage, and soil-moisture observations collected along three nested reaches identified as R1, R2, and R3. The nested arrangement allows the analysis to ask whether the memory signal strengthens, weakens, or changes form with increasing contributing area. Rainfall records were aligned with stage observations, and stage was converted to discharge using reach-specific rating relations maintained through the monitoring period. Soil moisture was used as a state descriptor rather than as a direct predictor of discharge. This distinction reduces the risk that a single sensor response is mistaken for a basin-wide storage condition. Subhourly records are particularly useful because rapid drainage and delayed groundwater release can be separated more clearly than with daily observations \\cite{9}."
+      },
+      {
+        "type": "equation",
+        "id": "eq:memory_index",
+        "latex": "\\begin{aligned} M &= \\frac{1}{n} \\sum_{i=1}^{n} \\frac{-m_i}{\\overline{Q}} \\\\ \\widehat{Q}_{t+7} &= Q_t \\exp(-M t) \\end{aligned}",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Recession phases were selected after storm influence had begun to decline and were screened for interruptions caused by new rainfall. The analysis used the normalized slope of each accepted phase, its initial decline, and the duration of the low-flow tail. For a reach with observations $Q_1, Q_2, \\ldots, Q_n$, the median slope was retained when individual segments differed because of short-lived fluctuations. The resulting memory estimate was then paired with the current discharge to produce a seven-day trajectory, expressed as $\\widehat{Q}_{t+7} = Q_t \\exp(-M t)$. This formulation is deliberately parsimonious: it requires recent flow behavior and a modest amount of state information, but it does not require a fully distributed representation of subsurface geometry. Similar parsimonious state indicators have been proposed for short-lead prediction and drought-sensitive discharge \\cite{6} \\cite{7} \\cite{11}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Two comparison conditions were retained. The first used rainfall information without the recession-memory index, while the second incorporated the index and the current discharge state. Forecasts were evaluated at a seven-day lead using signed bias, normalized error, and the proportion of forecasts that correctly classified the low-flow condition. The error measure was $E_7 = \\frac{1}{7} \\sum_{d=1}^{7} \\frac{\\widehat{Q}_d - Q_d}{Q_d}$, with absolute values used when summarizing error magnitude. The design does not claim that a single index can replace process models. Instead, it tests whether a transparent indicator can add value when field instrumentation is sparse, operational decisions are time-limited, and a rapid screening method is needed."
+      },
+      {
+        "type": "chart",
+        "id": "fig:chart",
+        "caption": "Recession-tail duration by reach and wetness phase",
+        "chart_type": "bar",
+        "labels": [
+          "R1",
+          "R2",
+          "R3"
+        ],
+        "series": [
+          {
+            "name": "Dry spell",
+            "values": [
+              46,
+              58,
+              67
+            ]
+          },
+          {
+            "name": "Wet spell",
+            "values": [
+              119,
+              143,
+              168
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Recession behavior across nested reaches"
+      },
+      {
+        "type": "paragraph",
+        "text": "The observed controls show a consistent contrast between dry and wet antecedent phases. During dry spells, R1 and R2 displayed steep initial declines, while R3 showed a somewhat more moderate decline despite its larger contributing area. During wet spells, all three reaches shifted toward a more sustained response. Rainfall totals were higher in the wet phases, but the increase in tail duration was not proportional to rainfall alone: the tails extended to 119 hours at R1, 143 hours at R2, and 168 hours at R3. This pattern supports the interpretation that connected storage expanded as the catchment became wetter. It also agrees with findings that delayed groundwater release can become more important after threshold storage is exceeded \\cite{2} \\cite{3} \\cite{8}. The reach-level values are compiled in \\ref{tab:recession_controls}."
+      },
+      {
+        "type": "equation",
+        "id": "eq:forecast_error",
+        "latex": "E_7 = \\frac{1}{7} \\sum_{d=1}^{7} \\frac{\\widehat{Q}_d - Q_d}{Q_d}",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "The duration pattern is especially important because it changes the meaning of an apparently moderate recession slope. A moderate initial decline can still be followed by a long tail when groundwater contributions remain connected to the channel. The visual comparison in \\ref{fig:chart} makes this contrast clear across R1, R2, and R3, while \\ref{fig:diagram} links the observed signal to the sequence from storm input through soil storage and groundwater release. In normalized terms, a wet phase has a smaller effective $k$ even when its initial discharge is greater. The larger tail at R3 suggests that reach scale can amplify persistence through additional source areas, but it may also reflect longer travel paths and increased opportunity for delayed release. Thus, nested observations are not merely repeated measurements; they reveal how storage connectivity changes with scale."
+      },
+      {
+        "type": "table",
+        "id": "tab:forecast_skill",
+        "caption": "Seven-day low-flow forecast comparison",
+        "header": [
+          [
+            "Reach",
+            "Method",
+            "Bias pct",
+            "Error pct",
+            "Hit rate pct",
+            "Lead days",
+            "Rating"
+          ]
+        ],
+        "rows": [
+          [
+            "R1",
+            "Rainfall only",
+            "12.4",
+            "18.7",
+            "61",
+            "7",
+            "Fair"
+          ],
+          [
+            "R1",
+            "Memory index",
+            "4.8",
+            "10.9",
+            "79",
+            "7",
+            "Good"
+          ],
+          [
+            "R2",
+            "Rainfall only",
+            "14.1",
+            "21.3",
+            "57",
+            "7",
+            "Fair"
+          ],
+          [
+            "R2",
+            "Memory index",
+            "5.6",
+            "12.7",
+            "76",
+            "7",
+            "Good"
+          ],
+          [
+            "R3",
+            "Rainfall only",
+            "16.8",
+            "24.5",
+            "53",
+            "7",
+            "Weak"
+          ],
+          [
+            "R3",
+            "Memory index",
+            "6.2",
+            "13.8",
+            "74",
+            "7",
+            "Good"
+          ]
+        ],
+        "note": "The memory-index method reduced error and improved the seven-day hit rate across all reaches."
+      },
+      {
+        "type": "paragraph",
+        "text": "The dry-phase behavior provides a complementary result. Steep early declines indicate that water contributing to the channel was not held for long, but they do not prove that total catchment storage was low everywhere. Some water may have remained isolated from the channel or moved below the monitored response time. For this reason, the analysis treats initial decline and tail duration as separate descriptors rather than collapsing them into a single recession class. The distinction is also useful operationally: a steep first day may signal rapid loss of readily available flow, whereas a longer tail may still protect discharge from falling below a critical threshold. The combined interpretation is consistent with studies separating rapid drainage from groundwater release using high-frequency records \\cite{9} \\cite{10}."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Forecast skill and uncertainty"
+      },
+      {
+        "type": "paragraph",
+        "text": "The memory-index forecasts reduced error at every reach relative to the rainfall-only condition. At R1, normalized error declined from 18.7 percent to 10.9 percent and the hit rate increased from 61 percent to 79 percent. At R2, error declined from 21.3 percent to 12.7 percent, with the hit rate rising from 57 percent to 76 percent. At R3, the corresponding error values were 24.5 percent and 13.8 percent, while the hit rate increased from 53 percent to 74 percent. The direction of improvement is therefore stable even though absolute skill weakens toward the larger reach under the rainfall-only approach. The complete comparison appears in \\ref{tab:forecast_skill}. The result supports the use of recent recession trajectories as state information, as proposed for drought-sensitive discharge forecasting \\cite{11}."
+      },
+      {
+        "type": "figure",
+        "id": "fig:diagram",
+        "figure_type": "block_diagram",
+        "caption": "Storage pathways linking storm input to low-flow forecast",
+        "description": "The block diagram traces rainfall forcing through soil storage and groundwater release to reach flow, with the resulting recession signal informing the seven-day forecast.",
+        "labels": [
+          "Storm input",
+          "Soil storage",
+          "Groundwater release",
+          "Reach flow"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Bias was also reduced, although it did not vanish. The rainfall-only method produced positive bias at all reaches, indicating a tendency to forecast more flow than was observed during the declining period. Adding the memory index lowered the bias to 4.8 percent at R1, 5.6 percent at R2, and 6.2 percent at R3. These residual differences may arise from errors in rating relations, unobserved groundwater exchanges, or changes in evapotranspiration during the forecast window. If the index is interpreted as $M \\propto k$, then uncertainty in the fitted recession coefficient propagates exponentially through the seven-day trajectory. Small coefficient errors can therefore become material when the lead time is extended, even when the short-term slope estimate appears stable. Threshold-storage theory and recent work on storm-derived persistence both indicate that uncertainty grows when state transitions are only partly observed \\cite{2} \\cite{12}."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Implications and limitations"
+      },
+      {
+        "type": "paragraph",
+        "text": "The findings suggest a practical workflow for low-flow monitoring in headwater basins. A modest network can record rainfall, stage, and soil moisture, identify recession phases, and update the memory index after each relevant storm. The method is particularly suited to situations in which a full groundwater model would require parameters that cannot be estimated reliably from the available record. It also provides a diagnostic language for communication: a low index signals a persistent tail, while a high index signals rapid depletion. Because the index is normalized, it can support comparison among reaches without pretending that their absolute discharge scales are identical. The result extends the storage perspective emphasized in earlier catchment studies and makes it operational for short-lead forecasting \\cite{1} \\cite{5} \\cite{12}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Several limitations define the appropriate scope of inference. The three reaches represent a nested upland system, so transfer to basins with different geology, climate, or channel connectivity requires recalibration. The storage equation omits explicit snow, deep aquifer, and evapotranspiration states, and a single soil-moisture record may not represent spatially variable wetness. Rainfall totals and timing can also be misaligned with the most influential source areas when storm cells are localized. Future work should test whether separate memory indices for quick drainage and groundwater release improve forecasts during prolonged dry periods, and whether the index remains stable across successive seasons. Even with these qualifications, the consistent reduction in seven-day error indicates that recession shape contains actionable information beyond event rainfall. The approach therefore offers a defensible bridge between sparse observations and process-aware low-flow decisions \\cite{3} \\cite{10} \\cite{11}."
+      }
+    ]
+  },
+  "hash": "1154712e4b73311c03e18ce76b5e3dc84f986508897153290ebb8ff885c002a0"
+}

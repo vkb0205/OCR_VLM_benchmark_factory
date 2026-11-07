@@ -30,6 +30,8 @@ class LLMResult(BaseModel):
     model: str
     tokens_in: int = 0
     tokens_out: int = 0
+    tokens_cached: int = 0
+    tokens_reasoning: int = 0
     cost_usd: float = 0
     cached: bool = False
 
@@ -223,7 +225,7 @@ class Endpoint(BaseModel):
 def load_env(path: Path = ROOT / ".env"):
     """Read KEY=VALUE lines without overriding variables already exported."""
     if path.is_file():
-        for line in path.read_text().splitlines():
+        for line in path.read_text(encoding="utf-8").splitlines():
             if "=" in line and not line.lstrip().startswith("#"):
                 key, value = line.split("=", 1)
                 os.environ.setdefault(key.strip(), value.strip().strip("'\""))
@@ -249,7 +251,8 @@ async def call_anthropic(endpoint: Endpoint, messages):
         from factory.log import log
         log(f"{endpoint.model_name()} stopped at max_tokens={endpoint.max_tokens}; reply is incomplete")
     text = "".join(block.text for block in message.content if block.type == "text")
-    return text, message.usage.input_tokens, message.usage.output_tokens
+    return (text, message.usage.input_tokens, message.usage.output_tokens,
+            getattr(message.usage, "cache_read_input_tokens", 0) or 0, 0)
 
 
 async def call_openai(endpoint: Endpoint, messages):
@@ -272,7 +275,13 @@ async def call_openai(endpoint: Endpoint, messages):
         # Keep the partial text: it fails JSON parsing and the caller asks again with the same task.
         from factory.log import log
         log(f"{endpoint.model_name()} stopped at max_tokens={endpoint.max_tokens}; reply is incomplete")
-    return "".join(parts), getattr(usage, "prompt_tokens", 0), getattr(usage, "completion_tokens", 0)
+    prompt_details = getattr(usage, "prompt_tokens_details", None)
+    completion_details = getattr(usage, "completion_tokens_details", None)
+    return (
+        "".join(parts), getattr(usage, "prompt_tokens", 0), getattr(usage, "completion_tokens", 0),
+        getattr(prompt_details, "cached_tokens", 0) or 0,
+        getattr(completion_details, "reasoning_tokens", 0) or 0,
+    )
 
 
 CALLS = {"anthropic": call_anthropic, "openai": call_openai}
@@ -284,7 +293,7 @@ class Router:
     def __init__(self, config: Path = ROOT / "configs/models.yaml", cache_dir: Path | None = ROOT / ".cache/llm",
                  force: str | None = None):
         load_env()
-        data = yaml.safe_load(config.read_text()) or {}
+        data = yaml.safe_load(config.read_text(encoding="utf-8")) or {}
         self.endpoints = [Endpoint(name=name, **value) for name, value in (data.get("endpoints") or {}).items()]
         unknown = {e.api for e in self.endpoints} - set(CALLS)
         if unknown:
@@ -311,10 +320,10 @@ class Router:
         names = ", ".join(sorted({e.api_key_env for e in self.endpoints}))
         raise RuntimeError(f"No LLM credentials found; set one of {names} (shell or .env)")
 
-    async def generate(self, agent, messages, *, schema=None, images=(), temperature=None):
+    async def generate(self, agent, messages, *, schema=None, images=(), temperature=None, use_cache=True):
         endpoint = self.endpoint(agent)
         messages = _attach_images(list(messages), endpoint.api, images)
-        result = await self.complete(endpoint, messages)
+        result = await self.complete(endpoint, messages) if use_cache else await self.complete(endpoint, messages, use_cache=False)
         if schema is None:
             return result
         try:
@@ -328,7 +337,10 @@ class Router:
         endpoint = self.endpoint(agent)
         for attempt in range(3):
             try:
-                text, calls, message, tokens_in, tokens_out = await TOOL_CALLS[endpoint.api](endpoint, messages, tools)
+                response = await TOOL_CALLS[endpoint.api](endpoint, messages, tools)
+                text, calls, message, tokens_in, tokens_out = response[:5]
+                tokens_cached = response[5] if len(response) > 5 else 0
+                tokens_reasoning = response[6] if len(response) > 6 else 0
                 break
             except Exception as exc:
                 if attempt == 2 or not _retryable_transport_error(exc):
@@ -337,22 +349,30 @@ class Router:
                 log(f"transport error, retry {attempt + 1}/2: {short(exc, 120)}")
                 await asyncio.sleep(0.5 * (2 ** attempt))
         model = endpoint.model_name()
-        price_in, price_out = self.prices.get(model, (endpoint.price_in, endpoint.price_out))
+        rates = self.prices.get(model, (endpoint.price_in, endpoint.price_out))
+        price_in, price_out = rates[:2]
+        price_cached = rates[2] if len(rates) > 2 else price_in
         result = LLMResult(text=text, provider=endpoint.api, model=model, tokens_in=tokens_in, tokens_out=tokens_out,
-                           cost_usd=(tokens_in * price_in + tokens_out * price_out) / 1e6)
+                           tokens_cached=tokens_cached, tokens_reasoning=tokens_reasoning,
+                           cost_usd=((tokens_in - min(tokens_in, tokens_cached)) * price_in
+                                     + min(tokens_in, tokens_cached) * price_cached
+                                     + tokens_out * price_out) / 1e6)
         return ToolTurn(text=text, calls=calls, message=message, result=result)
 
-    async def complete(self, endpoint: Endpoint, messages) -> LLMResult:
+    async def complete(self, endpoint: Endpoint, messages, *, use_cache=True) -> LLMResult:
         request = {"api": endpoint.api, "model": endpoint.model_name(), "base_url": endpoint.url(),
                    "params": endpoint.params, "json_mode": endpoint.json_mode,
                    "max_tokens": endpoint.max_tokens, "messages": messages}
         digest = hashlib.sha256(json.dumps(request, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
-        path = self.cache_dir / f"{digest}.json" if self.cache_dir else None
+        path = self.cache_dir / f"{digest}.json" if self.cache_dir and use_cache else None
         if path and path.is_file():
-            return LLMResult.model_validate_json(path.read_text()).model_copy(update={"cached": True, "cost_usd": 0})
+            return LLMResult.model_validate_json(path.read_text(encoding="utf-8")).model_copy(update={"cached": True, "cost_usd": 0})
         for attempt in range(3):
             try:
-                text, tokens_in, tokens_out = await CALLS[endpoint.api](endpoint, messages)
+                response = await CALLS[endpoint.api](endpoint, messages)
+                text, tokens_in, tokens_out = response[:3]
+                tokens_cached = response[3] if len(response) > 3 else 0
+                tokens_reasoning = response[4] if len(response) > 4 else 0
                 break
             except Exception as exc:
                 if attempt == 2 or not _retryable_transport_error(exc):
@@ -361,14 +381,19 @@ class Router:
                 log(f"transport error, retry {attempt + 1}/2: {short(exc, 120)}")
                 await asyncio.sleep(0.5 * (2 ** attempt))
         model = endpoint.model_name()
-        price_in, price_out = self.prices.get(model, (endpoint.price_in, endpoint.price_out))
+        rates = self.prices.get(model, (endpoint.price_in, endpoint.price_out))
+        price_in, price_out = rates[:2]
+        price_cached = rates[2] if len(rates) > 2 else price_in
         if not (price_in or price_out) and model not in self.unpriced:
             self.unpriced.add(model)
             from factory.log import log
             log(f"no price for model {model}; add it under `prices` in configs/models.yaml (cost_usd will be 0)")
         result = LLMResult(text=text, provider=endpoint.api, model=model, tokens_in=tokens_in,
                            tokens_out=tokens_out,
-                           cost_usd=(tokens_in * price_in + tokens_out * price_out) / 1e6)
+                           tokens_cached=tokens_cached, tokens_reasoning=tokens_reasoning,
+                           cost_usd=((tokens_in - min(tokens_in, tokens_cached)) * price_in
+                                     + min(tokens_in, tokens_cached) * price_cached
+                                     + tokens_out * price_out) / 1e6)
         if path:
             path.parent.mkdir(parents=True, exist_ok=True)
             # Concurrent runs must never observe a partially written cache entry.
@@ -422,7 +447,11 @@ async def tool_openai(endpoint: Endpoint, messages, tools):
                                   "function": {"name": c.function.name, "arguments": c.function.arguments}}
                                  for c in choice.tool_calls]
     usage = response.usage
-    return choice.content or "", calls, message, getattr(usage, "prompt_tokens", 0), getattr(usage, "completion_tokens", 0)
+    prompt_details = getattr(usage, "prompt_tokens_details", None)
+    completion_details = getattr(usage, "completion_tokens_details", None)
+    return (choice.content or "", calls, message, getattr(usage, "prompt_tokens", 0),
+            getattr(usage, "completion_tokens", 0), getattr(prompt_details, "cached_tokens", 0) or 0,
+            getattr(completion_details, "reasoning_tokens", 0) or 0)
 
 
 def _to_anthropic(messages):
@@ -477,7 +506,8 @@ async def tool_anthropic(endpoint: Endpoint, messages, tools):
         out["tool_calls"] = [{"id": c.id, "type": "function",
                               "function": {"name": c.name, "arguments": json.dumps(c.arguments, ensure_ascii=False)}}
                              for c in calls]
-    return text, calls, out, message.usage.input_tokens, message.usage.output_tokens
+    return (text, calls, out, message.usage.input_tokens, message.usage.output_tokens,
+            getattr(message.usage, "cache_read_input_tokens", 0) or 0, 0)
 
 
 TOOL_CALLS = {"anthropic": tool_anthropic, "openai": tool_openai}
@@ -488,6 +518,12 @@ def _retryable_transport_error(exc: Exception) -> bool:
     if status is None:
         status = getattr(getattr(exc, "response", None), "status_code", None)
     if status == 429 or (isinstance(status, int) and 500 <= status <= 599):
+        return True
+    # Streaming SDK failures can be bare APIError, without an HTTP response.
+    # Never retry explicit client/authentication errors.
+    if isinstance(status, int) and 400 <= status < 500:
+        return False
+    if type(exc).__name__ == 'APIError' and status is None:
         return True
     name = type(exc).__name__.lower()
     return isinstance(exc, (ConnectionError, OSError, TimeoutError)) or any(

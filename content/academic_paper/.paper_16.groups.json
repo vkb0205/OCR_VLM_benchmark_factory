@@ -1,0 +1,424 @@
+{
+  "front": {
+    "title": "Nighttime Heat Retention Across Mixed-Height Urban Blocks",
+    "authors": [
+      {
+        "name": "Edrin Solvane",
+        "affiliations": [
+          1
+        ],
+        "corresponding": true,
+        "email": "edrin.solvane@civicatmo-northmere.org"
+      },
+      {
+        "name": "Nalia Quen",
+        "affiliations": [
+          1,
+          2
+        ],
+        "corresponding": false
+      }
+    ],
+    "affiliations": [
+      "Civic Atmosphere Research Unit, Northmere",
+      "Department of Environmental Mapping, Veloria Polytechnic"
+    ],
+    "abstract": "This study examines nighttime heat retention across mixed-height urban blocks using fixed-point observations and mobile temperature transects collected during clear summer evenings. Street geometry, building height variation, surface cover, and local wind exposure were compared across six residential districts. The strongest thermal persistence occurred in enclosed blocks with low sky-view factors and extensive masonry cover, while tree-lined corridors cooled more rapidly after sunset. A multivariable analysis identified sky-view factor and impervious surface fraction as the main predictors of near-surface temperature. The findings support block-scale planning measures that combine shade trees, permeable surfaces, and improved nocturnal ventilation.",
+    "abstract_alt": null,
+    "keywords": "urban heat island; nocturnal cooling; sky-view factor; street geometry; surface cover; mobile transects",
+    "keywords_alt": null,
+    "journal": "Journal of Street-Scale Climatology",
+    "acknowledgement": "The authors thank the field observers and municipal mapping staff of Northmere for assistance with evening measurements, access coordination, and preparation of the urban surface dataset."
+  },
+  "formulas": [
+    {
+      "after": 6,
+      "element": {
+        "type": "equation",
+        "id": "eq:nocturnal-retention",
+        "latex": "\\overline{\\Delta T}_{n}=\\frac{1}{N}\\sum_{i=1}^{N}\\left(T_{i,21:00}-T_{i,02:00}\\right)",
+        "numbered": true
+      }
+    },
+    {
+      "after": 10,
+      "element": {
+        "type": "equation",
+        "id": "eq:block-temperature-model",
+        "latex": "\\begin{aligned} T_{2m,i}&=\\beta_0+\\beta_1\\mathrm{SVF}_i+\\beta_2\\mathrm{ISF}_i+\\beta_3\\mathrm{Hvar}_i+\\beta_4\\mathrm{Wind}_i+\\epsilon_i \\\\ \\hat{T}_{2m,i}&=\\beta_0+\\beta_1\\mathrm{SVF}_i+\\beta_2\\mathrm{ISF}_i+\\beta_3\\mathrm{Hvar}_i+\\beta_4\\mathrm{Wind}_i \\end{aligned}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 14,
+      "element": {
+        "type": "equation",
+        "id": "eq:thermal-persistence",
+        "latex": "C_n=\\frac{1}{t_e-t_s}\\int_{t_s}^{t_e}\\frac{T(t)-T(t_e)}{T(t_s)-T(t_e)}dt",
+        "numbered": true
+      }
+    }
+  ],
+  "tables": [
+    {
+      "after": 9,
+      "element": {
+        "type": "table",
+        "id": "tab:block-observations",
+        "caption": "Nighttime thermal conditions by urban block",
+        "header": [
+          [
+            "Block",
+            "SVF",
+            "ISF (%)",
+            "Hvar (m)",
+            "Wind (m/s)",
+            "T21 (°C)",
+            "T02 (°C)",
+            "Ret (°C)"
+          ]
+        ],
+        "rows": [
+          [
+            "Briar East",
+            "0.31",
+            "78",
+            "11.4",
+            "0.8",
+            "27.6",
+            "24.9",
+            "2.7"
+          ],
+          [
+            "Cedar Court",
+            "0.44",
+            "69",
+            "8.7",
+            "1.2",
+            "26.8",
+            "23.7",
+            "3.1"
+          ],
+          [
+            "Linden Row",
+            "0.58",
+            "54",
+            "6.2",
+            "1.8",
+            "25.9",
+            "22.4",
+            "3.5"
+          ],
+          [
+            "Mallow Rise",
+            "0.27",
+            "84",
+            "14.1",
+            "0.6",
+            "28.1",
+            "25.8",
+            "2.3"
+          ],
+          [
+            "Orchard Lane",
+            "0.63",
+            "47",
+            "5.4",
+            "2.1",
+            "25.2",
+            "21.8",
+            "3.4"
+          ],
+          [
+            "Quarry Walk",
+            "0.36",
+            "73",
+            "9.8",
+            "1.0",
+            "27.3",
+            "24.6",
+            "2.7"
+          ]
+        ],
+        "note": "Values summarize fixed-point observations recorded between 21:00 and 02:00 during clear summer evenings. SVF denotes sky-view factor, ISF impervious surface fraction, Hvar height variation, and Ret the temperature difference across the observation period."
+      }
+    },
+    {
+      "after": 15,
+      "element": {
+        "type": "table",
+        "id": "tab:cooling-corridors",
+        "caption": "Cooling characteristics along mobile transects",
+        "header": [
+          [
+            "Route",
+            "Tree cover (%)",
+            "Pervious (%)",
+            "Cool rate (°C/h)",
+            "Night min (°C)",
+            "Wind (m/s)"
+          ]
+        ],
+        "rows": [
+          [
+            "Alder Loop",
+            "38",
+            "29",
+            "1.42",
+            "20.9",
+            "2.3"
+          ],
+          [
+            "Canal Spur",
+            "22",
+            "18",
+            "0.96",
+            "22.1",
+            "1.6"
+          ],
+          [
+            "Fern Passage",
+            "51",
+            "41",
+            "1.78",
+            "19.8",
+            "2.7"
+          ],
+          [
+            "Grove Link",
+            "44",
+            "36",
+            "1.63",
+            "20.2",
+            "2.5"
+          ],
+          [
+            "Hazel Circuit",
+            "17",
+            "14",
+            "0.71",
+            "22.7",
+            "1.1"
+          ],
+          [
+            "Willow Cut",
+            "47",
+            "39",
+            "1.69",
+            "20.0",
+            "2.8"
+          ]
+        ],
+        "note": "Cooling rates were derived from sequential mobile observations after sunset. Tree cover and pervious cover refer to the mapped corridor surface within the route buffer."
+      }
+    }
+  ],
+  "charts_figures": [
+    {
+      "after": 12,
+      "element": {
+        "type": "chart",
+        "id": "fig:chart",
+        "caption": "Temperature retention by urban block",
+        "chart_type": "bar",
+        "labels": [
+          "Briar East",
+          "Cedar Court",
+          "Linden Row",
+          "Mallow Rise",
+          "Orchard Lane",
+          "Quarry Walk"
+        ],
+        "series": [
+          {
+            "name": "Retention (°C)",
+            "values": [
+              2.7,
+              3.1,
+              3.5,
+              2.3,
+              3.4,
+              2.7
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "after": 18,
+      "element": {
+        "type": "figure",
+        "id": "fig:diagram",
+        "figure_type": "block_diagram",
+        "caption": "Pathways linking urban form to nighttime cooling",
+        "description": "The diagram links enclosed block geometry and impervious surface cover to stored nighttime heat, while a ventilated green corridor indicates the contrasting pathway toward faster cooling. The two pathways converge on block-scale planning decisions.",
+        "labels": [
+          "Enclosed block geometry",
+          "Impervious surface cover",
+          "Stored nighttime heat",
+          "Ventilated green corridor"
+        ]
+      }
+    }
+  ],
+  "code": [],
+  "references": [
+    {
+      "text": "Veyra, L. T., and Ormel, J. S. (2021). Sky-view geometry and nocturnal cooling across compact residential blocks. Journal of Urban Thermal Morphology, 8(2), 41–58.",
+      "cite": "(Veyra and Ormel 2021)"
+    },
+    {
+      "text": "Qalven, R. D., and Doreth, M. A. (2020). Impervious cover, masonry storage, and nighttime temperature persistence in dense districts. Built Environment Climate Dynamics, 6(1), 19–37.",
+      "cite": "(Qalven and Doreth 2020)"
+    },
+    {
+      "text": "Brinel, O. V., and Savax, T. E. (2022). Mobile transects for resolving street-scale thermal gradients after sunset. Journal of Nocturnal Urban Exchange, 11(3), 112–129.",
+      "cite": "(Brinel and Savax 2022)"
+    },
+    {
+      "text": "Neral, E. P., and Kest, O. R. (2019). Mixed-height urban canyons and the redistribution of nocturnal airflow. Street Morphology and Atmosphere, 5(4), 203–221.",
+      "cite": "(Neral and Kest 2019)"
+    },
+    {
+      "text": "Yulven, S. I., and Almor, D. Q. (2023). Tree cover, pervious ground, and post-sunset cooling in connected residential corridors. Green Corridor Climatology, 9(2), 67–86.",
+      "cite": "(Yulven and Almor 2023)"
+    },
+    {
+      "text": "Tervan, I. N., and Murek, S. O. (2021). Building-height variation as a control on heat release from urban surfaces. Urban Surface Energy Letters, 7(1), 1–18.",
+      "cite": "(Tervan and Murek 2021)"
+    },
+    {
+      "text": "Fendrel, A. V., and Qevra, N. L. (2024). Ventilation pathways and thermal contrasts between enclosed blocks and open corridors. Applied Urban Ventilation Research, 12(2), 88–106.",
+      "cite": "(Fendrel and Qevra 2024)"
+    },
+    {
+      "text": "Osen, V. R., and Pellor, T. M. (2018). A block-scale framework for comparing radiative exposure and nighttime heat storage. Thermal Geography of Cities, 4(3), 145–163.",
+      "cite": "(Osen and Pellor 2018)"
+    },
+    {
+      "text": "Dravik, E. S., and Leth, S. V. (2022). Fixed-point and route-based observations of near-surface temperature in residential districts. Microclimate Methods Quarterly, 10(4), 231–249.",
+      "cite": "(Dravik and Leth 2022)"
+    },
+    {
+      "text": "Kavor, N. E., and Brask, Y. A. (2020). Statistical separation of surface cover, wind exposure, and urban form effects on air temperature. District Climatology and Metrics, 3(2), 54–73.",
+      "cite": "(Kavor and Brask 2020)"
+    },
+    {
+      "text": "Elvar, N. O., and Quorin, V. S. (2023). Shade trees and permeable surfaces as components of block-scale heat adaptation. Planning Climates and Urban Form, 8(1), 27–46.",
+      "cite": "(Elvar and Quorin 2023)"
+    },
+    {
+      "text": "Marnel, O. A., and Zureth, K. V. (2019). Normalized thermal persistence indices for comparing urban cooling trajectories. Boundary-Layer District Studies, 6(2), 94–111.",
+      "cite": "(Marnel and Zureth 2019)"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Introduction"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nighttime heat retention is a block-scale outcome of radiative exposure, stored heat release, and the movement of air through streets. Understanding these components together matters because a district-wide temperature average can obscure contrasts between enclosed blocks and connected, vegetated routes. The block observations are summarized in Table \\ref{tab:block-observations}, and the mobile-route contrasts in Table \\ref{tab:cooling-corridors}; Figure \\ref{fig:chart} presents the block retention values, while Figure \\ref{fig:diagram} brings the proposed pathways together. Prior work has linked sky-view geometry to nocturnal cooling and developed block-scale ways to compare radiative exposure with heat storage \\cite{1} \\cite{8}. Here, fixed-point records and mobile transects are considered jointly to interpret how mixed-height urban form relates to evening cooling."
+    },
+    {
+      "type": "paragraph",
+      "text": "The central distinction is between a temperature difference across a defined observation window and the persistence of warmth through a cooling trajectory. A block can begin the evening warm and still show a substantial decline by early morning; another can remain comparatively warm despite a smaller endpoint difference. The endpoint measure is $R_i = T_{i,21:00} - T_{i,02:00}$, so it records change rather than an absolute thermal burden. This distinction helps interpret the observed variation without treating a single index as a complete description of nighttime conditions. Research on masonry storage and impervious cover provides a physical basis for examining these relationships, while work on mixed-height canyons highlights the importance of airflow redistribution \\cite{2} \\cite{4}."
+    },
+    {
+      "type": "paragraph",
+      "text": "The study therefore asks how sky-view factor (SVF), impervious surface fraction (ISF), height variation, and wind exposure align with near-surface temperature patterns, and whether green, permeable corridors show a contrasting cooling signal. These are linked but not interchangeable questions: surface properties influence energy release, while geometry and ventilation shape how released heat is exchanged and transported. Findings from tree-lined corridors and building-height studies motivate this combined view \\cite{5} \\cite{6}. The analysis is intended to inform block-scale interpretation rather than to assign a single cause to every measured temperature contrast."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Observational design and indicators"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Paired fixed-point and route observations"
+    },
+    {
+      "type": "paragraph",
+      "text": "Fixed-point observations and mobile temperature transects were collected during clear summer evenings across six residential districts. The fixed-point records provide repeated conditions at selected blocks between 21:00 and 02:00, whereas mobile measurements trace changing temperatures along routes after sunset. This pairing offers complementary spatial and temporal views: station records anchor the comparison to specific block settings, and transects show how local conditions vary along connected streets. Route-based measurements are useful for resolving street-scale gradients, but their interpretation depends on the timing and sequence of observations \\cite{3}. The combination of fixed and route-based methods follows a broader approach to describing residential microclimates \\cite{9}."
+    },
+    {
+      "type": "paragraph",
+      "text": "For each block, retention over the observation interval is expressed as $R_i = T_{i,21:00} - T_{i,02:00}$. A larger value means a greater difference between the two recorded times, not necessarily a higher temperature at every intermediate hour. The explanatory terms represent SVF, ISF, variation in building height, and measured wind exposure. In compact notation, the fitted structure is $T_{2m,i} = b_0 + b_1 SVF_i + b_2 ISF_i + b_3 Hvar_i + b_4 Wind_i + e_i$. The multivariable analysis identifies SVF and ISF as the principal predictors of near-surface temperature, while the other terms help represent the varied morphology and exposure of the blocks. Separating these influences is important because correlated urban features can otherwise be mistaken for independent controls \\cite{10}."
+    },
+    {
+      "type": "paragraph",
+      "text": "The route indicator describes the rate of temperature decline after sunset, interpreted together with the route minimum, tree cover, pervious cover, and wind conditions. If two routes differ in vegetation and exposure as well as cooling rate, the contrast is informative but does not isolate a single mechanism. Comparisons thus focus on consistency across the mapped conditions rather than on a simple ranking of route types. The use of both mapped surface properties and sequential mobile observations accords with work on connected residential corridors and fixed-point versus route-based measurements \\cite{5} \\cite{9}. \\fn{Wind measurements describe conditions at the observation locations and do not fully characterize circulation throughout each street canyon.}"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Block-scale thermal patterns"
+    },
+    {
+      "type": "paragraph",
+      "text": "The six blocks span a marked range of morphology: SVF varies from 0.27 to 0.63, ISF from 47% to 84%, and height variation from 5.4 to 14.1 m. Their recorded 21:00 temperatures range from 25.2 to 28.1 degrees C, while the 02:00 values range from 21.8 to 25.8 degrees C. Endpoint retention values range from 2.3 to 3.5 degrees C, with the mean across the six blocks close to 3.0 degrees C. These ranges establish that the observations capture different combinations of enclosure, surface cover, and thermal change rather than a uniform district condition. Block-scale frameworks for relating radiative exposure to heat storage provide context for reading such contrasts \\cite{8}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Linden Row has the largest endpoint difference at 3.5 degrees C, followed by Orchard Lane at 3.4 degrees C and Cedar Court at 3.1 degrees C. Mallow Rise has the smallest difference, 2.3 degrees C, despite its low SVF and high ISF. This apparent contrast is a reminder that endpoint change should not be read as a direct ranking of absolute nighttime warmth or of heat stored in building materials. Mallow Rise also begins at the highest recorded 21:00 temperature and remains the warmest block at 02:00. Its smaller difference therefore coexists with elevated temperatures at both observations. By contrast, Orchard Lane records the lowest 02:00 temperature and a relatively large endpoint difference. The separate values in Table \\ref{tab:block-observations} make these distinctions visible and caution against collapsing temperature level and temperature change into one measure."
+    },
+    {
+      "type": "paragraph",
+      "text": "The block temperatures are considered in relation to the multivariable analysis, which identifies sky-view factor and impervious cover as the leading predictors. In physical terms, restricted sky exposure can limit longwave radiative loss, while extensive impervious and masonry surfaces can contribute stored heat to the nighttime environment. The direction and strength of these processes need not be identical at every block, because building arrangement, material properties, and wind exposure vary together. Studies of compact residential geometry and masonry storage describe mechanisms consistent with this interpretation \\cite{1} \\cite{2}. Building-height variation may also redirect or disrupt local airflow, influencing the exchange of heat even where two blocks have similar surface fractions \\cite{4} \\cite{6}."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Cooling along mobile corridors"
+    },
+    {
+      "type": "paragraph",
+      "text": "The corridor observations show a consistent broad contrast between greener, more pervious routes and routes with lower mapped cover of these types. Fern Passage, Willow Cut, and Grove Link have tree cover of 44% or more and pervious cover of 36% or more; their cooling rates are 1.63 to 1.78 degrees C per hour. Hazel Circuit has 17% tree cover and 14% pervious cover, alongside the lowest listed cooling rate, 0.71 degrees C per hour, and the highest night minimum, 22.7 degrees C. Canal Spur also has comparatively low tree and pervious cover and a cooling rate below those of the greener routes. These observations accord with research linking tree cover and pervious ground to post-sunset cooling along residential corridors \\cite{5}."
+    },
+    {
+      "type": "paragraph",
+      "text": "A route cooling rate can be expressed as $q_j = -dT_j/dt$, where a larger positive value indicates a more rapid decline in temperature over the measured period. This summary remains sensitive to when the route was traversed and to short-term changes in wind or cloud conditions. The accompanying wind values provide context: the faster-cooling routes generally have higher listed wind speeds than Hazel Circuit, but this covariation does not establish that wind alone accounts for the differences. Mobile transects resolve spatial gradients that fixed stations cannot capture, while sequential route timing can also introduce temporal differences into the comparison \\cite{3}. The route results are therefore interpreted as evidence of combined surface and exposure contrasts, not as a controlled estimate of a single treatment effect."
+    },
+    {
+      "type": "paragraph",
+      "text": "The convergence of greater tree cover, more pervious ground, faster cooling, and lower night minima on several routes is consistent with a corridor pathway that supports heat release and ventilation. A conceptual persistence index can be written as $C_n = (1/(t_e - t_s)) int_{t_s}^{t_e} ((T(t) - T(t_e))/(T(t_s) - T(t_e))) dt$. This normalized form represents the average fraction of the initial temperature excess retained during the interval; a larger value signifies slower progress toward the end-period temperature. It also emphasizes why complete trajectories can add information beyond a two-time difference. Normalized measures of thermal persistence have been proposed for comparisons among urban cooling trajectories \\cite{12}."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Interpretation and planning implications"
+    },
+    {
+      "type": "paragraph",
+      "text": "Taken together, the block and corridor records suggest two interacting pathways. Enclosure and extensive impervious cover are associated with conditions favorable to nighttime heat retention, whereas connected green routes combine vegetation, pervious ground, and greater opportunities for air exchange. Figure \\ref{fig:diagram} expresses this contrast as a pathway from enclosed geometry and impervious surface cover toward stored nighttime heat, alongside a ventilated green corridor pathway toward faster cooling. This conceptual framing is consistent with research comparing ventilation and thermal contrasts between enclosed blocks and open corridors \\cite{7}. It does not imply that one design feature acts independently: geometry can affect radiative exposure and airflow at once, while surface cover can influence both heat storage and the availability of evaporative cooling."
+    },
+    {
+      "type": "paragraph",
+      "text": "For planning, the results support combining interventions rather than relying on a single indicator or measure. Shade trees may reduce daytime exposure and contribute to a cooler nighttime trajectory, while permeable surfaces can alter the thermal and moisture conditions of the street environment. Maintaining ventilation pathways can help connect these surface interventions to the movement of air through and between blocks. The corridor observations give practical grounds for considering tree cover and pervious ground together, while the block observations signal that highly enclosed settings warrant attention to both surface treatment and airflow. Prior work on block-scale adaptation similarly treats shade trees and permeable surfaces as complementary planning components \\cite{11}."
+    },
+    {
+      "type": "paragraph",
+      "text": "The retention chart, Figure \\ref{fig:chart}, is especially useful when read alongside the absolute temperatures: a high endpoint difference does not always identify the block with the greatest late-night warmth. Likewise, the tabulated corridor cooling rates are most informative when considered with tree cover, pervious cover, night minimum, and wind rather than in isolation. An operational assessment could therefore combine indicators of geometry, surface cover, and route connectivity, then use fixed-point and mobile observations to examine whether targeted changes correspond with altered nighttime conditions. Such an approach is compatible with statistical frameworks that distinguish surface-cover, wind-exposure, and urban-form effects \\cite{10}, while recognizing that this dataset supports interpretation of observed contrasts rather than definitive causal attribution."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Limitations and conclusion"
+    },
+    {
+      "type": "paragraph",
+      "text": "Several limitations shape the conclusions. The observations cover clear summer evenings and a limited set of residential blocks and routes, so they do not describe all weather regimes or urban settings. The fixed-point record is bounded by two principal observation times for the endpoint comparison, while mobile transects are sequential and may encounter changing conditions during a route. The mapped descriptors summarize block or corridor properties and cannot capture every local feature, including material condition, traffic heat, transient shade, or fine-scale airflow. In addition, the listed table values do not provide regression coefficients or uncertainty intervals, so the reported priority of SVF and ISF should not be converted into an unsupported numerical estimate of their separate effects."
+    },
+    {
+      "type": "paragraph",
+      "text": "These constraints do not erase the main pattern, but they define its scope. The block observations show diverse temperature levels and endpoint changes across settings with differing enclosure and surface cover. The mobile observations show faster cooling and lower night minima along several routes with greater tree and pervious cover. Together, they reinforce the value of distinguishing temperature level, endpoint change, and normalized persistence rather than treating these as equivalent. Future monitoring could extend the range of evening conditions, repeat routes at closely matched times, and pair temperature observations with more detailed measures of wind and surface properties. A persistence metric such as $C_n$ can then complement endpoint retention by describing the shape of the full cooling trajectory \\cite{12}."
+    },
+    {
+      "type": "paragraph",
+      "text": "In conclusion, nighttime thermal conditions across mixed-height blocks reflect interacting controls: sky exposure, impervious cover, height variation, and wind exposure shape block temperatures, while tree-lined and pervious corridors are associated with more rapid post-sunset cooling. The observations support planning that combines shade trees, permeable surfaces, and improved nocturnal ventilation, with the mix tailored to local block form. Rather than prescribing a universal intervention from a small set of contrasts, the findings provide a basis for targeted monitoring and block-scale decisions that account for both retained heat and pathways for cooling."
+    }
+  ]
+}

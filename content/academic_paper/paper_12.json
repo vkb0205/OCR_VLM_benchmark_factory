@@ -1,0 +1,580 @@
+{
+  "content_id": "paper_12",
+  "variables": {
+    "lang": "en",
+    "field": "network optimization",
+    "paper_length": "long",
+    "citation_style": "author_year"
+  },
+  "lang": "en",
+  "values": {
+    "title": "Topology-Aware Coordination for Robust Multi-Period Network Optimization",
+    "authors": [
+      {
+        "name": "Arel Veyran",
+        "affiliations": [
+          1,
+          2
+        ],
+        "corresponding": false
+      },
+      {
+        "name": "Mirel Quast",
+        "affiliations": [
+          1,
+          3
+        ],
+        "corresponding": true,
+        "email": "mirel.quast@aurevian-net.org"
+      },
+      {
+        "name": "Tavya Solen",
+        "affiliations": [
+          2
+        ],
+        "corresponding": false
+      },
+      {
+        "name": "Neris Oltan",
+        "affiliations": [
+          3
+        ],
+        "corresponding": false
+      }
+    ],
+    "affiliations": [
+      "Avenorix Institute for Network Science, Lyradis",
+      "Veylance Polytechnic of Applied Computation, Oris Vale",
+      "Caldrin Collegium for Resilient Infrastructure, Northmere"
+    ],
+    "abstract": "We develop a topology-aware framework for network optimization under changing link quality, demand intensity, and coordination cost. The method couples a robust flow-allocation layer with a graph-repair layer, allowing routing decisions and structural adjustments to be coordinated rather than optimized in isolation. Each candidate route receives a composite assessment based on service utility, congestion exposure, switching effort, and local redundancy. A proximal coordination routine then updates route priorities while preserving feasibility across capacity, balance, and reliability constraints. To represent operational uncertainty, the framework maintains a compact state summary that combines recent demand variation with observed link instability. This summary guides conservative decisions when information is incomplete and permits more responsive reconfiguration when network conditions become persistent. We further introduce a disagreement penalty that limits oscillation among neighboring controllers and a reserve mechanism that protects critical paths from aggressive utilization. Evaluation across sparse, clustered, and intermittently coupled network families, together with replayed demand traces, indicates that the proposed coordination policy improves service continuity while reducing unnecessary topology changes. The gains are most pronounced when demand shifts are localized but repeated, a setting in which static robust routing tends to overprotect the entire network and purely adaptive routing tends to react too quickly. Additional analysis shows that the graph-repair layer is effective when its intervention threshold is linked to local redundancy rather than global utilization. The resulting framework offers a practical basis for distributed network optimization in systems that must balance efficiency, resilience, and operational stability.",
+    "abstract_alt": null,
+    "keywords": "network optimization; robust routing; topology control; distributed coordination; time-varying demand; graph resilience; congestion management",
+    "keywords_alt": null,
+    "journal": "Aurevian Journal of Network Optimization",
+    "acknowledgement": "The authors thank the route-operations group at Avenorix Institute for constructive discussions on topology maintenance and the network systems colleagues at Veylance Polytechnic for careful comments on the coordination procedure. We also acknowledge the infrastructure analysts at Caldrin Collegium for their assistance with demand-trace preparation and operational interpretation.",
+    "references": [
+      {
+        "text": "Veyran, A., Quast, M., Solen, T., & Oltan, N. (2032). Topology-aware coordination for robust multi-period network optimization. Aurevian Journal of Network Optimization, 18(2), 117–139.",
+        "cite": "(Veyran et al., 2032)"
+      },
+      {
+        "text": "Quast, M., & Veyran, A. (2032). Reserve-aware route ranking for distributed network control. Aurevian Journal of Network Optimization, 18(1), 41–63.",
+        "cite": "(Quast & Veyran, 2032)"
+      },
+      {
+        "text": "Solen, T., & Oltan, N. (2031). Local state summaries for resilient coordination in time-varying networks. Aurevian Journal of Network Optimization, 17(4), 286–309.",
+        "cite": "(Solen & Oltan, 2031)"
+      },
+      {
+        "text": "Erlan, P., Mirev, S., & Tovek, R. (2030). Robust multicommodity flow allocation with localized demand uncertainty. Journal of Keldran Systems Optimization, 12(3), 155–179.",
+        "cite": "(Erlan et al., 2030)"
+      },
+      {
+        "text": "Narev, D., & Ysol, K. (2029). Adaptive topology control through redundancy-sensitive link activation. Veylance Review of Network Systems, 9(2), 88–112.",
+        "cite": "(Narev & Ysol, 2029)"
+      },
+      {
+        "text": "Calven, R., Orsik, L., & Meren, J. (2033). Proximal coordination methods for distributed congestion management. Transactions on Oris Computational Networks, 6(1), 23–49.",
+        "cite": "(Calven et al., 2033)"
+      },
+      {
+        "text": "Teral, I., & Vossan, E. (2028). Stability margins for flow routing over intermittently coupled graphs. Northmere Journal of Resilient Infrastructure, 11(4), 301–325.",
+        "cite": "(Teral & Vossan, 2028)"
+      },
+      {
+        "text": "Arelis, M., Fenor, P., & Quelin, S. (2034). Joint reserve placement and structural repair in capacitated communication networks. Lyradis Annals of Applied Optimization, 15(2), 97–126.",
+        "cite": "(Arelis et al., 2034)"
+      },
+      {
+        "text": "Varnel, C., & Dorev, N. (2031). Disagreement penalties for asynchronous network controllers. Journal of Distributed Oris Computation, 8(3), 174–198.",
+        "cite": "(Varnel & Dorev, 2031)"
+      },
+      {
+        "text": "Merovan, H., Teyl, A., & Ruvan, K. (2035). Persistent-disturbance detection for resilient route reassignment. Caldrin Journal of Network Analytics, 10(1), 52–78.",
+        "cite": "(Merovan et al., 2035)"
+      },
+      {
+        "text": "Olyen, F., & Sared, M. (2027). Decomposition strategies for multi-period network design under switching costs. Avenorix Studies in Optimization, 14(2), 129–154.",
+        "cite": "(Olyen & Sared, 2027)"
+      },
+      {
+        "text": "Kelvar, J., Rethan, U., & Solvar, D. (2036). Graph-repair policies for service continuity under changing link quality. Journal of Topological Systems Engineering, 7(4), 242–271.",
+        "cite": "(Kelvar et al., 2036)"
+      }
+    ],
+    "body": [
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "1. Introduction"
+      },
+      {
+        "type": "paragraph",
+        "text": "Networked services increasingly operate under conditions in which demand intensity, link quality, and available coordination effort change together. A route that is efficient during one interval may become fragile after a localized demand shift, while a structural repair that improves redundancy may impose switching costs on neighboring controllers. These interactions make it difficult to separate flow allocation from topology maintenance. This study develops a coordinated optimization framework in which routing and graph repair exchange compact state information at every decision interval. The approach extends the distributed perspective established in earlier topology-aware work \\cite{1}, while giving explicit treatment to the tension between short-term utilization and persistent resilience. A coordination period denotes a decision interval rather than a fixed wall-clock duration.\\fn{The period length may vary with the operational system, provided observations and feasible updates can be coordinated within it.}"
+      },
+      {
+        "type": "paragraph",
+        "text": "The main architecture is summarized in \\ref{fig:diagram}, and the quantitative outcomes are reported in \\ref{tab:coordination-results} and \\ref{tab:repair-policy}. The comparative trends are visible in \\ref{fig:chart}. The robust objective, route score, and reserve condition are respectively formalized in \\ref{eq:robust-objective}, \\ref{eq:route-assessment}, and \\ref{eq:reserve-constraint}; these references are used throughout to distinguish allocation, assessment, and protection decisions. The design combines robust multicommodity allocation \\cite{4}, redundancy-sensitive topology control \\cite{5}, and proximal coordination for congestion management \\cite{6} without treating any one layer as an independent post-processing step."
+      },
+      {
+        "type": "paragraph",
+        "text": "The central premise is that adaptation should be selective rather than uniformly defensive. A global reserve applied to every link can preserve feasibility but may reduce useful capacity, whereas an unrestricted response to current load can create repeated route changes and controller disagreement. We therefore distinguish persistent deterioration from transient variation. The first is handled through topology intervention, and the second is absorbed through robust flow margins and reserve protection. This distinction permits the coordination layer to remain stable when observations fluctuate while still allowing structural action when local evidence accumulates."
+      },
+      {
+        "type": "paragraph",
+        "text": "Related approaches generally emphasize one of three objectives: robust routing, adaptive topology control, or distributed agreement. Robust routing protects against uncertainty but often treats the graph as fixed. Topology control can restore alternate paths, yet may overlook the service cost of moving active flow. Agreement mechanisms reduce conflicting decisions, although excessive consensus can delay a needed repair. Local state summaries provide a useful basis for distributed decisions \\cite{3}, and reserve-aware route ranking offers a way to incorporate reliability into local priorities \\cite{2}. The present framework combines these directions and evaluates them under repeated, localized demand movement."
+      },
+      {
+        "type": "paragraph",
+        "text": "The contribution is methodological and operational. Methodologically, the framework couples a robust flow-allocation layer with a graph-repair layer through a shared route assessment and a bounded state summary. Operationally, it gives controllers a rule for deciding when to preserve the current graph, when to move flow, and when to request a structural change. The rule is deliberately local, but the resulting decisions are evaluated over a multi-period horizon. This temporal perspective matters because a locally attractive action may be harmful when it causes a neighboring controller to reverse its decision in the next interval."
+      },
+      {
+        "type": "equation",
+        "id": "eq:robust-objective",
+        "latex": "\\begin{aligned}\\mathrm{min}_{x,f,z} & \\sum_{t=1}^{T}\\left(\\sum_{e=1}^{E}c_e x_e^t+lambda\\sum_{r=1}^{R}q_r^t f_r^t+mu\\sum_{i=1}^{N}z_i^t\\right)\\\\&\\sum_{r=1}^{R}a_{er}f_r^t <= k_e^t\\end{aligned}",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "The study addresses five questions. First, can a compact history of demand variation and link instability identify persistent disturbances without imposing large communication costs? Second, can proximal route updates improve continuity while limiting unnecessary switching? Third, does local redundancy provide a more useful repair trigger than global utilization? Fourth, how does edge-level reserve protection affect the trade-off between service and resilience? Finally, do these mechanisms remain effective in sparse, clustered, and intermittently coupled network families? The analysis answers these questions through a common candidate-route set, common feasibility checks, and a controlled comparison of coordination and repair policies."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "2. Network Model and State Representation"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "2.1 Graph, commodities, and operating intervals"
+      },
+      {
+        "type": "table",
+        "id": "tab:coordination-results",
+        "caption": "Coordination outcomes across changing network conditions",
+        "header": [
+          [
+            "Family",
+            "Horizon",
+            "Continuity",
+            "Load balance",
+            "Repairs",
+            "Switch effort",
+            "Stability gain"
+          ]
+        ],
+        "rows": [
+          [
+            "Sparse",
+            "12 periods",
+            "0.942",
+            "0.881",
+            "3",
+            "0.176",
+            "0.214"
+          ],
+          [
+            "Clustered",
+            "12 periods",
+            "0.958",
+            "0.903",
+            "4",
+            "0.193",
+            "0.237"
+          ],
+          [
+            "Intermittent",
+            "12 periods",
+            "0.927",
+            "0.846",
+            "6",
+            "0.251",
+            "0.198"
+          ],
+          [
+            "Sparse",
+            "24 periods",
+            "0.951",
+            "0.889",
+            "5",
+            "0.184",
+            "0.229"
+          ],
+          [
+            "Clustered",
+            "24 periods",
+            "0.966",
+            "0.914",
+            "6",
+            "0.201",
+            "0.246"
+          ],
+          [
+            "Intermittent",
+            "24 periods",
+            "0.939",
+            "0.858",
+            "9",
+            "0.268",
+            "0.211"
+          ]
+        ],
+        "note": "Continuity and stability gain are normalized scores; lower switch effort indicates fewer topology changes."
+      },
+      {
+        "type": "paragraph",
+        "text": "We represent the communication structure as a directed graph with vertex set $V$ and edge set $E$. Each edge has a time-dependent capacity, a routing cost, and an observed quality state. Commodity $r$ is associated with an origin, a destination, and a demand level in each period $t$. Candidate routes are generated from the current graph and retained only when they satisfy basic reachability conditions. A route can receive flow, incur congestion exposure, or trigger a repair request when its local alternatives become insufficient. The graph-repair layer may activate or deactivate structural links, subject to switching limits and a minimum reserve on protected edges."
+      },
+      {
+        "type": "equation",
+        "id": "eq:route-assessment",
+        "latex": "A_r^t = a U_r^t - b C_r^t - g H_r^t - d W_r^t + h R_r^t",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Let $f_r^t$ denote the flow assigned to route $r$ in period $t$, and let $x_{ij}^t$ indicate the operational state of edge $(i,j)$. The feasible route set changes when links are unavailable, but the framework avoids rebuilding the entire optimization problem after every observation. Instead, each controller maintains a bounded collection of admissible routes and refreshes it when reachability, quality, or redundancy conditions change materially. For a period $t$, the aggregate load on edge $e$ can be written as $L_e^t=\\sum_{r: e in r} f_r^t$ conceptually, with the implemented constraint expressed using the route-edge incidence relation. This representation permits capacity, balance, and reserve checks to be performed with local information."
+      },
+      {
+        "type": "paragraph",
+        "text": "The operating horizon contains a finite set of periods, denoted by $\\mathcal{T}$. Demand is not assumed to be stationary, and link quality can deteriorate independently of demand. A route may therefore become undesirable because its traffic increases, because its underlying edges become unstable, or because a neighboring repair changes the available alternatives. The model records these causes separately before combining them in a route score. This separation is important for diagnosis: a route that is congested but structurally reliable should be treated differently from a lightly loaded route whose only alternate path has recently failed."
+      },
+      {
+        "type": "chart",
+        "id": "fig:chart",
+        "caption": "Continuity and stability gain across network families and horizons",
+        "chart_type": "bar",
+        "labels": [
+          "Sparse · 12",
+          "Clustered · 12",
+          "Intermittent · 12",
+          "Sparse · 24",
+          "Clustered · 24",
+          "Intermittent · 24"
+        ],
+        "series": [
+          {
+            "name": "Continuity",
+            "values": [
+              0.942,
+              0.958,
+              0.927,
+              0.951,
+              0.966,
+              0.939
+            ]
+          },
+          {
+            "name": "Stability gain",
+            "values": [
+              0.214,
+              0.237,
+              0.198,
+              0.229,
+              0.246,
+              0.211
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "The robust allocation objective balances routing cost, congestion exposure, and intervention effort over the horizon. In compact form, the principal terms are a weighted sum of edge activation cost, route exposure, and node or edge intervention. If $c_{ij}$ is the cost of operating an edge, $q_r^t$ is the congestion-related exposure of route $r$, and $z_i^t$ represents protected intervention capacity, then the objective has the structure $\\min\\sum_{t=1}^{T}(\\sum_{(i,j) in E}c_{ij}x_{ij}^t+\\lambda\\sum_r q_r^t f_r^t+\\mu\\sum_i z_i^t)$. The full relation is given in \\ref{eq:robust-objective}, including its edge-capacity condition."
+      },
+      {
+        "type": "paragraph",
+        "text": "The formulation does not interpret robustness as a requirement to protect every route equally. Instead, uncertainty is distributed according to observed instability, demand variation, and local redundancy. If a route has several credible alternatives, the allocation layer can use more of its nominal capacity while preserving a reserve on the most consequential edges. If a route is isolated, the same observed deterioration produces a more cautious response. This selective protection avoids the excessive conservatism that can arise when one global uncertainty margin is applied to all commodities and all periods."
+      },
+      {
+        "type": "equation",
+        "id": "eq:reserve-constraint",
+        "latex": "\\sum_{r=1}^{R}a_{er}f_r^t <= k_e^t-z_e^t, z_e^t >= rho_e k_e^t",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Two linked observations form the local state summary. Demand variation records the recent difference between requested and delivered flow, while link instability records quality changes that persist across neighboring intervals. For controller $i$, a compact state may be written as $s_i^t=(\\Delta_i^t,\\Gamma_i^t,\\rho_i^t)$, where $\\Delta_i^t$ represents demand variation, $\\Gamma_i^t$ represents instability, and $\\rho_i^t$ represents local reserve or redundancy information. The summary is intentionally smaller than the full history so that controllers can exchange it without substantial coordination overhead. Its role is not to predict every future condition; rather, it identifies whether a local disturbance is isolated, recurring, or spreading."
+      },
+      {
+        "type": "table",
+        "id": "tab:repair-policy",
+        "caption": "Local repair policy under repeated demand shifts",
+        "header": [
+          [
+            "Policy",
+            "Shift level",
+            "Redundancy",
+            "Path reserve",
+            "Repair delay",
+            "Service loss"
+          ]
+        ],
+        "rows": [
+          [
+            "Conservative",
+            "Low",
+            "High",
+            "0.24",
+            "4 periods",
+            "0.071"
+          ],
+          [
+            "Conservative",
+            "High",
+            "High",
+            "0.29",
+            "5 periods",
+            "0.084"
+          ],
+          [
+            "Adaptive",
+            "Low",
+            "Medium",
+            "0.18",
+            "2 periods",
+            "0.056"
+          ],
+          [
+            "Adaptive",
+            "High",
+            "Medium",
+            "0.22",
+            "3 periods",
+            "0.063"
+          ],
+          [
+            "Locality aware",
+            "High",
+            "Low",
+            "0.31",
+            "4 periods",
+            "0.076"
+          ]
+        ],
+        "note": "Repair delay is measured in coordination periods; service loss is the fraction of unmet flow."
+      },
+      {
+        "type": "paragraph",
+        "text": "The state update uses fading memory rather than an unweighted history. A recent observation receives greater influence, but repeated observations accumulate sufficiently to distinguish persistence from noise. One possible update is $s_i^t=\\theta s_i^{t-1}+(1-\\theta)o_i^t$, where $o_i^t$ is the current observation and $0\\le\\theta\\le1$ controls memory. The implementation can maintain separate components for demand and quality, allowing a persistent quality decline to be recognized even when demand is stable. This state design follows the rationale for local summaries in resilient coordination \\cite{3}, while adapting it to the joint routing and repair setting."
+      },
+      {
+        "type": "box",
+        "kind": "remark",
+        "title": "Interpretation of local state",
+        "text": "The state summary is a decision aid rather than a complete forecast. A high instability value does not automatically imply that a link should be removed, and a high demand variation does not automatically imply that flow should be moved. Structural action requires persistent evidence, insufficient local redundancy, and a feasible reserve condition. This separation keeps the state monitor informative without allowing one noisy observation to dominate the graph state."
+      },
+      {
+        "type": "paragraph",
+        "text": "The local redundancy measure is computed from the number and quality of alternate routes that remain available after excluding the route under consideration. It can be interpreted as a service buffer: a high value means that a temporary decline can be absorbed by nearby paths, while a low value means that even a modest decline may threaten continuity. Redundancy is therefore route-specific and time-dependent. It is not equivalent to degree, because parallel links that share a common bottleneck do not provide the same protection as genuinely independent paths."
+      },
+      {
+        "type": "figure",
+        "id": "fig:diagram",
+        "figure_type": "block_diagram",
+        "caption": "Information flow in the topology-aware coordination policy",
+        "description": "Demand and link observations enter a compact state monitor. The monitor supplies route priorities to the robust flow allocator and sends local redundancy information to the repair controller. A reserve gate checks proposed flows and structural changes before the graph state is updated. The revised graph returns link and route observations to the next coordination period, while neighboring controllers exchange bounded disagreement messages throughout the cycle.",
+        "labels": [
+          "Demand monitor",
+          "Route allocator",
+          "Repair controller",
+          "Reserve gate",
+          "Feedback state"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "The framework also records coordination cost. A route change may require flow migration, rule propagation, queue adjustment, or a structural message to a neighboring controller. These burdens are represented by switching effort rather than hidden in a generic operating cost. If $w_r^t$ denotes the movement of route priority between periods, then the effort term can be proportional to $|w_r^t-w_r^{t-1}|$. The proximal mechanism later limits this movement directly, so the model can distinguish a route that is theoretically better from one whose immediate adoption would destabilize the surrounding control system."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "3. Topology-Aware Coordination Method"
+      },
+      {
+        "type": "paragraph",
+        "text": "The coordination procedure has two interacting stages. The first stage solves a relaxed flow-allocation problem using current capacities, reserve levels, and state summaries. The second stage evaluates whether persistent route deterioration and insufficient redundancy justify a graph repair. Neither stage is allowed to finalize a decision without the other: the flow layer reports residual imbalance and switching effort to the repair layer, while the repair layer reports proposed structural changes and reserve consequences back to the flow layer. This exchange prevents routing from assuming an immutable graph and prevents repair from ignoring active service."
+      },
+      {
+        "type": "paragraph",
+        "text": "Rather than committing immediately to a single route, each controller maintains a priority for every admissible route. Priorities are updated through a proximal step that limits the distance from the previous decision. For a route-priority vector $a^t$, a generic update can be written as $a^t=\\operatorname{argmin}_a\\{F_t(a)+\\frac{\\gamma}{2}\\sum_k(a_k-a_k^{t-1})^2\\}$, where $F_t$ contains current service and exposure terms. The proximal term is not merely a numerical device. It gives the controller a principled reason to resist abrupt migrations when observations are noisy or when neighboring controllers have not yet converged."
+      },
+      {
+        "type": "paragraph",
+        "text": "Feasibility restoration is applied after the proximal step. Flow conservation is enforced for each commodity and period, edge capacity is checked against protected reserve, and route priorities are projected onto the admissible set. Any residual imbalance is reported to the graph-repair stage rather than concealed through an infeasible allocation. This sequence permits a temporary reduction in service to be diagnosed explicitly. It also means that a repair proposal can be evaluated against the actual post-projection flow rather than against a relaxed priority vector that might never be implementable."
+      },
+      {
+        "type": "paragraph",
+        "text": "Route assessment combines service utility with four forms of exposure. Utility reflects delivered demand and route suitability. Congestion exposure measures the pressure created by current and anticipated flow. Switching effort records the operational burden of moving flow between routes, while instability exposure captures recent quality variation. Local redundancy provides a positive correction because a route embedded in a richly connected neighborhood can tolerate temporary degradation more easily than an isolated route. The assessment relation in \\ref{eq:route-assessment} can be read as $\\widehat{A}_r^t=\\alpha U_r^t-\\beta C_r^t-\\gamma H_r^t-\\delta W_r^t+\\eta R_r^t$, where the coefficients regulate the relative influence of these terms."
+      },
+      {
+        "type": "paragraph",
+        "text": "The weights are calibrated jointly with the reserve level, preventing the assessment from favoring a nominally short route that has no practical alternative. Increasing the congestion weight makes the controller more willing to distribute flow, but doing so without a redundancy correction can produce needless movement in clustered regions. Increasing the switching weight improves stability but may delay a necessary response. The role of the state summary is to make these trade-offs conditional on persistence. A transient congestion increase should usually alter priority gradually, whereas a recurring quality decline combined with low redundancy should change the route ranking more decisively."
+      },
+      {
+        "type": "paragraph",
+        "text": "A controller exchanges three messages with each adjacent controller: a route-priority summary, a reserve status, and a repair signal. The message schedule is event-driven when instability persists and periodic otherwise. This arrangement limits communication during calm intervals while preserving rapid notification during a local failure. To avoid stale information, each message carries its originating period and is discarded when it falls outside the active coordination horizon. The update rule also includes a disagreement term, so a controller receiving conflicting recommendations moves toward a bounded compromise rather than selecting whichever message arrived first."
+      },
+      {
+        "type": "paragraph",
+        "text": "The disagreement penalty is especially important when controllers observe the same corridor at slightly different times. Without it, one controller may open a route after receiving a favorable observation while another closes that route because its observation still reflects the preceding deterioration. Such alternation consumes switching capacity and can reduce service even when the underlying graph remains feasible. The penalty can be expressed through neighboring priority differences, such as $D^t=\\sum_{(i,j) in E}(a_i^t-a_j^t)^2$, with a coefficient selected to avoid both oscillation and excessive consensus. This mechanism is related to disagreement control for asynchronous controllers \\cite{9}, but is integrated here with reserve and repair decisions."
+      },
+      {
+        "type": "paragraph",
+        "text": "Graph repair is triggered by a conjunction of conditions: persistent route deterioration, insufficient local redundancy, and a reserve state that can absorb the intervention. When the conditions hold, the controller proposes a structural change and estimates its switching effort. Neighboring controllers review the proposal through the disagreement mechanism before activation. A repair is accepted only if it improves the local service outlook without creating a new reserve violation elsewhere. This conservative sequence explains why the method can make fewer structural changes than a purely reactive policy while still responding to repeated demand movement."
+      },
+      {
+        "type": "paragraph",
+        "text": "The repair threshold is local rather than global. A network-wide utilization threshold would treat a lightly loaded but isolated corridor in the same way as a heavily loaded region with many alternates. By linking intervention to redundancy, the method directs structural effort toward locations where the loss of one route has a larger service consequence. The threshold can be written conceptually as $\\widehat{A}_r^t<tau(R_r^t)$, where the allowable assessment level depends on local redundancy. Lower redundancy produces a more sensitive threshold, while high redundancy gives the flow layer more time to absorb transient variation."
+      },
+      {
+        "type": "paragraph",
+        "text": "The coordination cycle can be summarized as a sequence of bounded operations:"
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "items": [
+          "Collect demand, quality, reserve, and neighboring-priority observations.",
+          "Update the compact state summary and classify the disturbance as isolated, recurring, or spreading.",
+          "Solve the relaxed flow-allocation problem and apply the proximal route-priority update.",
+          "Restore feasibility, calculate route exposure, and transmit residual imbalance to the repair layer.",
+          "Evaluate repair conditions, obtain bounded neighbor agreement, and check reserve impact.",
+          "Commit the revised flow and graph state for the next coordination period."
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "This sequence is compatible with distributed implementation because each controller needs only local edge information, route summaries, and a bounded set of messages from adjacent controllers. Global coordination is not eliminated, but it is confined to the evaluation horizon and to the interpretation of aggregate performance measures. The method therefore avoids requiring a central optimizer to know every instantaneous link state. At the same time, the bounded messages preserve enough context to prevent a local action from being evaluated without regard to neighboring reserve and switching conditions."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "4. Evaluation Design and Results"
+      },
+      {
+        "type": "paragraph",
+        "text": "Evaluation uses three graph families that differ in connectivity pattern and failure exposure: sparse, clustered, and intermittently coupled. Each family is observed over short and extended coordination horizons. Demand traces contain localized changes that recur after intervening periods, allowing the state summary to distinguish persistence from isolated noise. Link observations are updated alongside demand, so a controller must decide whether a route decline reflects congestion, quality loss, or both. All policies use the same feasibility checks and route candidate set; only the coordination and repair logic changes."
+      },
+      {
+        "type": "paragraph",
+        "text": "The sparse family has limited alternate paths and therefore places greater pressure on reserve protection. The clustered family contains neighborhoods with several comparable routes, allowing local flow redistribution before a structural action is needed. The intermittently coupled family alternates between stronger and weaker interconnection, creating conditions in which stale observations and delayed messages can cause oscillation. These families are not intended to represent distinct application sectors. They isolate structural properties that matter for coordination: redundancy, coupling persistence, and the degree to which local decisions affect distant service."
+      },
+      {
+        "type": "paragraph",
+        "text": "We report continuity, load balance, repair count, switching effort, stability gain, and service loss. Continuity measures the share of demand periods in which the required service remains available. Load balance captures the dispersion of utilized capacity across active routes. Repair count records accepted structural changes, while switching effort measures the operational burden associated with route movement. Stability gain summarizes the reduction in oscillatory decisions relative to an uncoordinated update. These measures are read together because a high continuity score can conceal excessive switching or an unsafe depletion of reserve."
+      },
+      {
+        "type": "paragraph",
+        "text": "The outcomes in \\ref{tab:coordination-results} show that clustered networks maintain the strongest continuity across both horizons, with the 24-period clustered case reaching 0.966 and a stability gain of 0.246. Sparse networks also improve over the longer horizon, rising from continuity 0.942 to 0.951 while keeping switch effort near 0.18. Intermittently coupled networks remain the most demanding, with continuity increasing from 0.927 to 0.939 and repair count increasing from 6 to 9 over the longer horizon. The increase in repairs is not by itself a failure: it indicates that the state summary recognizes recurring disturbances that a short horizon may treat as isolated."
+      },
+      {
+        "type": "paragraph",
+        "text": "The table also shows that load balance improves with horizon in every family. The clustered family moves from 0.903 to 0.914, the sparse family from 0.881 to 0.889, and the intermittently coupled family from 0.846 to 0.858. These changes suggest that coordination does more than preserve service through reserve withholding. It gradually places flow on routes that can sustain repeated demand movement. The corresponding switch effort increases only modestly, which indicates that the proximal term is limiting movement while still permitting useful redistribution."
+      },
+      {
+        "type": "paragraph",
+        "text": "The relationship between continuity and stability gain is visible in \\ref{fig:chart}. Clustered networks lead on both measures because alternate local paths allow the flow layer to absorb temporary variation before requesting repair. Intermittently coupled networks obtain lower continuity and require more repairs, yet their longer-horizon result improves as the state summary identifies recurring conditions. Sparse networks occupy the middle position: they benefit from coordination, but their limited redundancy makes each structural decision more consequential. The parallel movement of continuity and stability gain indicates that the policy is not achieving continuity solely by increasing switching activity."
+      },
+      {
+        "type": "paragraph",
+        "text": "The repair-policy comparison in \\ref{tab:repair-policy} clarifies the trade-off between reaction speed and protection. Under low shift level, the adaptive policy has a repair delay of 2 periods and service loss of 0.056, compared with 4 periods and 0.071 for the conservative policy. Under high shift level, adaptive repair still reduces delay to 3 periods and service loss to 0.063, but the locality-aware policy retains a path reserve of 0.31 and limits service loss to 0.076 despite lower redundancy. These results indicate that no single policy dominates every objective; the appropriate choice depends on the cost of delay, the value of reserve, and the severity of local coupling."
+      },
+      {
+        "type": "paragraph",
+        "text": "The reserve mechanism is applied at the edge level rather than as a single network-wide fraction. Critical edges receive a reserve requirement based on their role in connecting otherwise weakly linked regions. During ordinary allocation, protected capacity is unavailable to discretionary flow. During a repair review, the same reserve can be temporarily reassessed, but it cannot be consumed without an explicit feasibility check. The condition in \\ref{eq:reserve-constraint} can be read as $\\sum_{r:e in r}f_r^t\\le kappa_e^t-z_e^t$ together with $z_e^t\\ge\\rho_e kappa_e^t$. This treatment prevents the repair layer from solving a local shortage by transferring fragility to a neighboring corridor."
+      },
+      {
+        "type": "paragraph",
+        "text": "A larger reserve can reduce immediate throughput, but it lowers the chance that a critical route will become infeasible after a quality change. The evaluation therefore treats reserve as a controllable policy parameter rather than a fixed safety constant. When redundancy is high, a moderate reserve is often sufficient because alternate routes can absorb a temporary decline. When redundancy is low, the reserve must be interpreted together with the repair horizon: a larger protected margin may be justified if structural activation cannot occur quickly. This reasoning is consistent with joint reserve and repair analysis \\cite{8} and with stability margins for intermittently coupled graphs \\cite{7}."
+      },
+      {
+        "type": "paragraph",
+        "text": "The demand traces are constructed so that localized shifts recur after intervening periods. This design tests whether the state summary can accumulate evidence without treating every fluctuation as persistent. A purely current-observation policy reacts quickly to the first shift, often moving flow before the disturbance has been confirmed. A long-memory policy may delay action after a genuine deterioration has become clear. The proposed summary uses intermediate memory, combining recent demand mismatch with link instability and redundancy. Its value is therefore measured by the joint outcome of continuity, switching effort, and repair selectivity rather than by prediction error alone."
+      },
+      {
+        "type": "paragraph",
+        "text": "The evaluation also compares the proposed procedure with policies that remove one coordination mechanism at a time. All ablations retain the same candidate routes, capacities, demand traces, and feasibility restoration. This controls for the possibility that performance differences arise from a larger route set or a more permissive constraint system. The comparison focuses on four components: disagreement penalty, redundancy-sensitive repair, reserve protection, and compact history. The results are interpreted as evidence about interaction rather than as isolated rankings of individual terms."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "5. Analysis, Ablations, and Limitations"
+      },
+      {
+        "type": "paragraph",
+        "text": "Removing the disagreement penalty increases alternating route decisions, especially in intermittently coupled networks. In that setting, neighboring controllers often observe different phases of the same link-quality transition. Without a cost for divergent priorities, each controller can make a locally defensible decision that becomes globally disruptive when combined with the decision of its neighbor. The resulting oscillation does not necessarily violate capacity, so a feasibility-only evaluation would miss it. Stability gain is therefore a necessary measure for assessing distributed coordination, not an optional refinement."
+      },
+      {
+        "type": "paragraph",
+        "text": "Removing local redundancy from the repair threshold causes unnecessary structural action in clustered regions. Because clustered neighborhoods contain multiple routes, a temporary decline on one route should generally be absorbed through flow redistribution. A global utilization trigger cannot identify this distinction and may activate a link whose operational cost exceeds its service benefit. The redundancy term supplies precisely the missing context. It does not suppress repair in all clustered regions; rather, it raises the evidence required when the neighborhood has credible alternatives and lowers that evidence when the neighborhood is structurally exposed."
+      },
+      {
+        "type": "paragraph",
+        "text": "Disabling reserve protection improves immediate capacity use but increases service loss after a subsequent link decline. This result follows from the timing of the intervention. Capacity consumed by discretionary flow is unavailable when a critical route needs to absorb a quality change, and a repair may not be activated quickly enough to replace it. Reserve thus has an option value: it sacrifices some present throughput to preserve future feasible actions. The edge-level formulation is more effective than a uniform global reserve because it concentrates that option value on corridors whose failure would disconnect weakly linked regions."
+      },
+      {
+        "type": "paragraph",
+        "text": "Replacing the compact state summary with the current observation alone produces faster reactions but weaker continuity over the extended horizon. The current observation is informative when a failure is abrupt and unambiguous, but it is unreliable when demand and quality fluctuate around a threshold. Without memory, the controller cannot distinguish a recurring disturbance from a one-period deviation. The resulting route movement increases switching effort and can produce a repair before the local condition has been verified. Persistent-disturbance detection is therefore a central function of the state layer \\cite{10}, not merely a convenience for reducing message size."
+      },
+      {
+        "type": "paragraph",
+        "text": "The proximal update and disagreement penalty address different kinds of instability. The proximal term limits the movement of one controller relative to its own previous state. The disagreement term limits the divergence between neighboring controllers. A controller can therefore remain stable locally while disagreeing with its neighbors, or it can agree with its neighbors while all of them change too rapidly. Retaining both mechanisms is important in networks where a route crosses several administrative or operational boundaries. Proximal decomposition under switching costs provides a related optimization perspective \\cite{11}, while the present method adds an explicit graph-repair interpretation."
+      },
+      {
+        "type": "paragraph",
+        "text": "The observed results support a layered interpretation of resilience. The flow layer handles short-lived variation through route redistribution and reserve-aware feasibility. The state layer determines whether evidence is persistent enough to justify a stronger response. The repair layer changes the graph only when the local alternatives are inadequate and the reserve gate approves the intervention. If any layer is removed, another layer must compensate by becoming more conservative or more reactive. This explains why the combined policy can improve continuity without simply increasing reserve or accepting more structural changes."
+      },
+      {
+        "type": "paragraph",
+        "text": "There are practical limits to the framework. It assumes that controllers can exchange bounded messages within a coordination period and that candidate routes can be generated before the next allocation step. Very rapid failures may therefore require a separate emergency mechanism. The current repair layer also evaluates a restricted set of structural actions; enlarging that set would increase planning cost and might require a stronger agreement protocol. The method is consequently most appropriate when disturbances evolve over several coordination intervals rather than within a single unobservable instant."
+      },
+      {
+        "type": "paragraph",
+        "text": "The model also assumes that observed link quality can be summarized by a state variable that is useful for both routing and repair. In some systems, quality may have multiple causes with different recovery dynamics, such as interference, maintenance, or queue saturation. A single instability component may then hide distinctions that matter for intervention. Future extensions should separate causal quality modes, allow mode-specific memory, and connect each mode to a different repair action. Such extensions should preserve the current principle that structural intervention requires evidence of both route deterioration and inadequate local alternatives."
+      },
+      {
+        "type": "paragraph",
+        "text": "Asynchronous operation is another open issue. The present coordination cycle uses periods to bound message age and to define the active horizon. In a fully asynchronous network, messages may arrive in arbitrary order, and a controller may need to act before receiving all neighboring reserve states. A robust extension could use age-weighted priorities and conservative reserve envelopes, but this would introduce additional conservatism. The disagreement mechanism would also need to distinguish a genuinely conflicting recommendation from one that is merely delayed. These considerations motivate further work on asynchronous topology control and distributed feasibility certificates."
+      },
+      {
+        "type": "paragraph",
+        "text": "The repair-policy results suggest that policy selection should depend on the operational cost of both delay and switching. Adaptive repair is attractive when unmet flow is expensive and the network can tolerate moderate structural change. Conservative repair is suitable when interventions are costly or when a false repair could disrupt several stable routes. Locality-aware repair occupies an intermediate position by using local redundancy and path reserve to direct action where it has the greatest service value. This interpretation aligns graph-repair policy with the service objective rather than treating repair count as a standalone target."
+      },
+      {
+        "type": "paragraph",
+        "text": "The framework also has implications for planning reserve capacity. Reserve placement should not be based solely on mean utilization because low-use edges can still be structurally critical. A corridor that joins two weakly connected regions may carry modest ordinary flow but provide the only alternate path during a localized shift. The route assessment and repair threshold identify such corridors through redundancy and reachability. Joint reserve placement and structural repair can consequently be formulated as a planning layer above the operational coordination cycle, with the operational results supplying stress information for that planning problem."
+      },
+      {
+        "type": "paragraph",
+        "text": "The graph-repair layer follows policies in which structural changes are evaluated against both service continuity and local alternatives \\cite{12}. This complements the operational analyses above: accepted repairs should be judged by their effect on future feasible routes, not by repair count alone."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "6. Conclusions and Future Directions"
+      },
+      {
+        "type": "paragraph",
+        "text": "This study presented a topology-aware framework for robust multi-period network optimization under changing demand, link quality, and coordination cost. The method couples flow allocation with graph repair through a compact state summary, a proximal route-priority update, a disagreement penalty, and edge-level reserve protection. Its defining principle is selective adaptation: transient variation should be absorbed by robust allocation, while persistent deterioration in a weakly redundant neighborhood should motivate structural action. This principle avoids both the uniform defensiveness of static robust routing and the excessive reactivity of purely current-state control."
+      },
+      {
+        "type": "paragraph",
+        "text": "The evaluation across sparse, clustered, and intermittently coupled families showed that coordination improves service continuity while keeping structural intervention selective. Clustered networks benefited most from alternate local paths, sparse networks showed the value of reserve and careful switching, and intermittently coupled networks demonstrated why persistence detection and disagreement control are necessary. The longer horizon generally improved continuity and load balance, although intermittently coupled cases required more repairs as recurring disturbances became identifiable. The results support the view that topology awareness should enter route assessment itself rather than being added after independent routing decisions."
+      },
+      {
+        "type": "paragraph",
+        "text": "Several conclusions follow for network operators and model designers. First, local redundancy is a more informative repair trigger than global utilization when structural exposure varies across the graph. Second, reserve should be assigned at the edge level and evaluated together with the time required for repair. Third, route stability requires both self-proximal updates and neighbor disagreement control. Fourth, a compact history can improve long-horizon continuity without imposing the communication cost of full trajectory exchange. Finally, performance should be assessed with service, balance, repair, switching, and stability measures together, because no single metric captures the operational trade-off."
+      },
+      {
+        "type": "paragraph",
+        "text": "The framework can be extended in several directions. Asynchronous updates would test whether bounded disagreement messages remain sufficient under irregular communication. Richer link-quality models could distinguish independent deterioration modes and support mode-specific repair actions. Joint reserve placement could connect long-term infrastructure planning with short-term operational policy. A larger structural action set could address more complex topology changes, although it would require efficient screening and stronger agreement safeguards. Emergency control for abrupt failures should also be integrated without allowing rare events to make ordinary coordination unnecessarily conservative."
+      },
+      {
+        "type": "paragraph",
+        "text": "The broader implication is that resilient network optimization is not only a matter of adding capacity or selecting robust routes. It is a problem of coordinating decisions that operate on different time scales. Flow allocation acts within an interval, state summaries accumulate evidence across intervals, and graph repair changes the future option set. A useful policy must therefore account for the cost of acting now, the information gained by waiting, and the structural consequences of each intervention. By linking these considerations through local assessment and bounded coordination, the proposed framework offers a practical basis for balancing efficiency, resilience, and operational stability."
+      }
+    ]
+  },
+  "hash": "04c283ed4b4346e420b48492b8f06a6e6d855837b1ea7c66c6296f9c078410d9"
+}

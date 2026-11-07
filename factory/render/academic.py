@@ -63,7 +63,10 @@ def figure_svg(rng, value):
             out.append(_panel_content(rng, panel['figure_type'], panel.get('labels', []), 18, 34, 162, 96))
             out.append('</g>')
         return ''.join(out) + '</svg>'
+    count = len(value.get("labels", []))
     width, height = 440, 210
+    if kind in {"pipeline", "block_diagram"}: width = max(width, count * 105)
+    if kind == "flowchart": height = max(height, count * 62)
     out = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" role="img">']
     out.append(_panel_content(rng, kind, value.get('labels', []), 8, 8, width - 16, height - 16))
     return ''.join(out) + '</svg>'
@@ -72,23 +75,76 @@ def figure_svg(rng, value):
 def _panel_content(rng, kind, labels, x, y, width, height):
     labels = labels or ['input', 'process', 'output']
     out = []
-    if kind in {'block_diagram', 'architecture'}:
+    if kind in {'block_diagram', 'architecture', 'flowchart', 'pipeline'}:
         count = len(labels)
-        box_w = min(112, (width - (count - 1) * 24) / count)
-        y0 = y + height * .36
-        for index, label in enumerate(labels):
-            bx = x + index * (box_w + 18)
-            fill = ('#e8eef4', '#e9f0e9', '#f4eee2')[index % 3]
-            out.append(f'<rect x="{bx:.1f}" y="{y0:.1f}" width="{box_w:.1f}" height="{height * .30:.1f}" rx="5" fill="{fill}" stroke="#42566e"/>')
-            out.append(f'<text x="{bx + box_w / 2:.1f}" y="{y0 + height * .18:.1f}" text-anchor="middle" font-size="11">{escape(label)}</text>')
-            if index < count - 1:
-                ax = bx + box_w
-                out.append(f'<path d="M{ax + 2:.1f},{y0 + height * .15:.1f} H{ax + 15:.1f}" fill="none" stroke="#42566e" stroke-width="1.5" marker-end="url(#arrow)"/>')
-        out.insert(0, '<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7Z" fill="#42566e"/></marker></defs>')
-        if kind == 'architecture':
-            for index, label in enumerate(labels):
-                bx = x + index * (width / max(1, len(labels))) + 10
-                out.append(f'<text x="{bx:.1f}" y="{y + 14:.1f}" font-size="8" fill="#677487">layer {index + 1}</text>')
+        ink = '#42566e'
+        def edge(points, dashed=False):
+            dash = ' stroke-dasharray="4 3"' if dashed else ''
+            out.append(f'<path d="{points}" fill="none" stroke="{ink}" stroke-width="1.4"{dash} marker-end="url(#arrow)"/>')
+        def node(bx, by, bw, bh, label, shape='box'):
+            if shape == 'diamond':
+                outline = f'<path d="M{bx+bw/2},{by} L{bx+bw},{by+bh/2} L{bx+bw/2},{by+bh} L{bx},{by+bh/2}Z"'
+            elif shape == 'document':
+                outline = f'<path d="M{bx},{by} H{bx+bw} V{by+bh-5} Q{bx+bw*.75},{by+bh-12} {bx+bw/2},{by+bh-5} T{bx},{by+bh-5}Z"'
+            else:
+                outline = f'<rect x="{bx}" y="{by}" width="{bw}" height="{bh}" rx="3"'
+            out.append(outline + f' fill="#edf2f5" stroke="{ink}"/>')
+            if shape == 'cylinder':
+                out.append(f'<ellipse cx="{bx+bw/2}" cy="{by+4}" rx="{bw/2}" ry="4" fill="#edf2f5" stroke="{ink}"/>')
+            import textwrap
+            lines = textwrap.wrap(label, max(7, int(bw/5))) or ['']
+            for i,line in enumerate(lines):
+                out.append(f'<text x="{bx+bw/2}" y="{by+bh/2+(i-(len(lines)-1)/2)*10+3}" text-anchor="middle" font-size="9">{escape(line)}</text>')
+        out.append('<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7Z" fill="#42566e"/></marker></defs>')
+        if kind == 'flowchart':
+            step = height / count
+            bw, bh = width*.44, step*.65
+            bx = x+width*.22
+            for i,label in enumerate(labels):
+                by=y+i*step+2
+                decision = 0 < i < count-1 and i % 2 == 1
+                node(bx,by,bw,bh,label,'diamond' if decision else 'box')
+                if i < count-1:
+                    edge(f'M{bx+bw/2},{by+bh} V{y+(i+1)*step+2}')
+                if decision:
+                    right=x+width*.93
+                    edge(f'M{bx+bw},{by+bh/2} H{right} V{y+2} H{bx+bw/2}',True)
+                    out.append(f'<text x="{bx+bw+5}" y="{by+bh/2-4}" font-size="9">No</text><text x="{bx+bw/2+4}" y="{by+bh+9}" font-size="9">Yes</text>')
+        elif kind == 'pipeline':
+            step=width/count; bw=step*.78; bh=height*.30
+            for i,label in enumerate(labels):
+                bx=x+i*step+2; by=y+height*.30
+                node(bx,by,bw,bh,label,'cylinder' if i==0 else 'document' if i==count-1 else 'box')
+                if 0<i<count-1:
+                    for j in range(2):
+                        out.append(f'<rect x="{bx+4+j*3}" y="{by+bh+6+j*7}" width="{bw-8}" height="5" fill="#d7e1e8" stroke="{ink}"/>')
+                if i<count-1: edge(f'M{bx+bw},{by+bh/2} H{x+(i+1)*step+2}')
+        elif kind == 'architecture':
+            split=max(1,math.ceil(count/2))
+            gap=height*.08; rowh=(height-gap*3)/2
+            for row,group in enumerate((labels[:split],labels[split:])):
+                if not group: continue
+                gy=y+gap+row*(rowh+gap)
+                out.append(f'<rect x="{x+width*.06}" y="{gy}" width="{width*.83}" height="{rowh}" rx="6" fill="#f7f8fa" stroke="{ink}" stroke-dasharray="4 2"/>')
+                step=width*.77/len(group)
+                for i,label in enumerate(group):
+                    bx=x+width*.09+i*step
+                    node(bx,gy+rowh*.25,step*.87,rowh*.5,label)
+                    if i: edge(f'M{bx-step*.13},{gy+rowh/2} H{bx}')
+            if count>1:
+                edge(f'M{x+width*.47},{y+gap+rowh} V{y+2*gap+rowh}')
+                edge(f'M{x+width*.89},{y+gap+rowh/2} H{x+width*.97} V{y+2*gap+rowh*1.5} H{x+width*.89}',True)
+        else:
+            step=width/(count+1); bw=step*.75; bh=height*.28
+            cy=y+height*.43; junction=x+step*.45
+            out.append(f'<circle cx="{junction}" cy="{cy}" r="9" fill="white" stroke="{ink}"/><text x="{junction}" y="{cy+3}" text-anchor="middle" font-size="11">+</text>')
+            edge(f'M{junction+9},{cy} H{x+step}')
+            for i,label in enumerate(labels):
+                bx=x+(i+1)*step
+                node(bx,cy-bh/2,bw,bh,label)
+                if i<count-1: edge(f'M{bx+bw},{cy} H{bx+step}')
+            last=x+count*step+bw
+            edge(f'M{last},{cy} V{y+height*.88} H{junction} V{cy+9}')
         return ''.join(out)
     # Deterministic image-like evidence: a heat field with a synthetic contour.
     cols, rows = 16, 9

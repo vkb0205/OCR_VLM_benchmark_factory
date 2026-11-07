@@ -1,0 +1,130 @@
+{
+  "content_id": "paper_06",
+  "language": "en",
+  "citation_style": "numeric",
+  "length_class": "long",
+  "total_characters": 53798,
+  "section_tree": [
+    {
+      "level": 1,
+      "characters": 12
+    },
+    {
+      "level": 1,
+      "characters": 12
+    },
+    {
+      "level": 1,
+      "characters": 21
+    },
+    {
+      "level": 2,
+      "characters": 32
+    },
+    {
+      "level": 2,
+      "characters": 32
+    },
+    {
+      "level": 1,
+      "characters": 18
+    },
+    {
+      "level": 1,
+      "characters": 7
+    },
+    {
+      "level": 2,
+      "characters": 19
+    },
+    {
+      "level": 2,
+      "characters": 35
+    },
+    {
+      "level": 1,
+      "characters": 10
+    },
+    {
+      "level": 1,
+      "characters": 11
+    },
+    {
+      "level": 1,
+      "characters": 10
+    }
+  ],
+  "section_counts": {
+    "1": 8,
+    "2": 4
+  },
+  "tables": [
+    {
+      "rows": 4,
+      "columns": 6
+    },
+    {
+      "rows": 2,
+      "columns": 5
+    }
+  ],
+  "table_count": 2,
+  "widest_column_count": 6,
+  "figures_charts": {
+    "stacked_bar": 1,
+    "scatter": 1,
+    "line": 1,
+    "box": 1,
+    "histogram": 1,
+    "flowchart": 1,
+    "area": 1,
+    "block_diagram": 1
+  },
+  "chart_count": 6,
+  "figure_count": 2,
+  "box_count": 1,
+  "display_equations": 2,
+  "inline_equations": 15,
+  "element_plan": {
+    "archetype": "experimental",
+    "counts": {
+      "chart": 6,
+      "figure": 2,
+      "table": 2,
+      "equation": 2,
+      "code": 0,
+      "references": 23
+    },
+    "chart_types": [
+      "stacked_bar",
+      "scatter",
+      "line",
+      "box",
+      "histogram",
+      "area"
+    ],
+    "figure_types": [
+      "flowchart",
+      "block_diagram"
+    ],
+    "sections": [
+      "Introduction",
+      "Related Work",
+      "Materials and Methods",
+      "Experimental Setup",
+      "Results",
+      "Discussion",
+      "Limitations",
+      "Conclusion"
+    ]
+  },
+  "code_listing_count": 0,
+  "code_listing": false,
+  "footnote_count": 1,
+  "reference_count": 23,
+  "author_count": 3,
+  "affiliation_count": 2,
+  "title_characters": 85,
+  "longest_author_line": 54,
+  "longest_affiliation": 65
+}

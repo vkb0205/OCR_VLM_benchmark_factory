@@ -1,0 +1,646 @@
+{
+  "front": {
+    "title": "Đo lường độ tin cậy của dịch vụ xe buýt trên các tuyến liên huyện",
+    "authors": [
+      {
+        "name": "Nguyễn Hà Lam",
+        "affiliations": [
+          1,
+          2
+        ],
+        "corresponding": true,
+        "email": "ha.lam@vientuyenluu.vn"
+      },
+      {
+        "name": "Trần Vũ Khang",
+        "affiliations": [
+          1
+        ],
+        "corresponding": false
+      }
+    ],
+    "affiliations": [
+      "Viện Nghiên cứu Tuyến Lưu, Việt Nam",
+      "Khoa Quy hoạch và Vận hành Giao thông, Trường Đại học Thành Phố Nam Hải, Việt Nam"
+    ],
+    "abstract": "Nghiên cứu khảo sát độ tin cậy của dịch vụ xe buýt trên sáu tuyến liên huyện thuộc một vùng đô thị mở rộng. Dữ liệu được thu thập qua nhật ký hành trình, quan sát tại điểm dừng và phỏng vấn hành khách trong bốn tuần liên tiếp. Kết quả cho thấy thời gian chờ trung vị là 11,6 phút, trong khi mức chênh lệch giữa giờ cao điểm và giờ thấp điểm đạt 4,2 phút. Tình trạng lệch giờ khởi hành, ùn tắc tại nút giao và thời gian lên xuống xe là những yếu tố ảnh hưởng rõ nhất đến cảm nhận của hành khách. Nghiên cứu đề xuất điều chỉnh biểu đồ chạy xe theo các khoảng nhu cầu, tăng thông tin thời gian đến tại điểm dừng và ưu tiên xử lý các nút giao có độ biến động cao.",
+    "abstract_alt": null,
+    "keywords": "độ tin cậy dịch vụ; xe buýt liên huyện; thời gian chờ; hành vi hành khách; vận hành giao thông",
+    "keywords_alt": null,
+    "journal": "Tạp chí Nghiên cứu Vận tải Tuyến Lưu",
+    "acknowledgement": "Nhóm tác giả trân trọng cảm ơn các đơn vị vận hành tuyến và hành khách đã hỗ trợ ghi nhận hành trình, thời gian chờ và ý kiến đánh giá trong suốt thời gian khảo sát."
+  },
+  "formulas": [],
+  "tables": [
+    {
+      "after": 0,
+      "element": {
+        "type": "table",
+        "id": "tab:do-tin-cay-tuyen-lien-huyen",
+        "caption": "Kết quả đo lường độ tin cậy dịch vụ trên sáu tuyến liên huyện",
+        "header": [
+          [
+            {
+              "text": "Nhóm tuyến",
+              "rowspan": 2
+            },
+            {
+              "text": "Chỉ tiêu vận hành",
+              "colspan": 3
+            },
+            {
+              "text": "Đánh giá hành khách",
+              "colspan": 2
+            }
+          ],
+          [
+            {
+              "text": "Thời gian chờ trung vị (phút)"
+            },
+            {
+              "text": "Chênh lệch cao điểm–thấp điểm (phút)"
+            },
+            {
+              "text": "Lệch giờ khởi hành (phút)"
+            },
+            {
+              "text": "Điểm tin cậy (1–5)"
+            },
+            {
+              "text": "Số lượt ghi nhận"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "TL-01",
+            "9,8",
+            "3,1",
+            "4,6",
+            "4,0",
+            "84"
+          ],
+          [
+            "TL-02",
+            "11,2",
+            "4,0",
+            "5,3",
+            "3,7",
+            "79"
+          ],
+          [
+            "TL-03",
+            "13,4",
+            "5,6",
+            "7,1",
+            "3,2",
+            "81"
+          ],
+          [
+            "TL-04",
+            "10,1",
+            "3,8",
+            "4,2",
+            "4,1",
+            "86"
+          ],
+          [
+            "TL-05",
+            "12,0",
+            "4,5",
+            "6,0",
+            "3,5",
+            "77"
+          ],
+          [
+            "TL-06",
+            "10,9",
+            "3,2",
+            "4,8",
+            "3,9",
+            "83"
+          ],
+          [
+            {
+              "text": "Trung vị chung",
+              "bold": true
+            },
+            {
+              "text": "11,6",
+              "bold": true
+            },
+            {
+              "text": "4,2",
+              "bold": true
+            },
+            {
+              "text": "5,1"
+            },
+            {
+              "text": "3,7"
+            },
+            {
+              "text": "490",
+              "bold": true
+            }
+          ]
+        ],
+        "note": "Ghi chú: Giá trị thời gian tính bằng phút; điểm tin cậy càng cao càng thể hiện cảm nhận tích cực. Các số liệu được tổng hợp từ nhật ký hành trình, quan sát tại điểm dừng và phỏng vấn hành khách trong bốn tuần (Nguyễn Hà Lam và Trần Vũ Khang, 2024)."
+      }
+    }
+  ],
+  "charts_figures": [
+    {
+      "after": 9,
+      "element": {
+        "type": "chart",
+        "chart_type": "line",
+        "id": "fig:thoi-gian-cho-theo-tuyen",
+        "caption": "Thời gian chờ trung vị và độ không đảm bảo đo trên sáu tuyến liên huyện, xem \\ref{fig:thoi-gian-cho-theo-tuyen}.",
+        "labels": [
+          "TL-01",
+          "TL-02",
+          "TL-03",
+          "TL-04",
+          "TL-05",
+          "TL-06"
+        ],
+        "series": [
+          {
+            "name": "Thời gian chờ trung vị (phút)",
+            "values": [
+              9.8,
+              11.2,
+              13.4,
+              10.1,
+              12.0,
+              10.9
+            ],
+            "errors": [
+              0.7,
+              0.8,
+              1.0,
+              0.6,
+              0.9,
+              0.7
+            ]
+          }
+        ],
+        "x_label": "Tuyến liên huyện",
+        "y_label": "Thời gian chờ (phút)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 10,
+      "element": {
+        "type": "chart",
+        "chart_type": "histogram",
+        "id": "fig:phan-bo-thoi-gian-cho",
+        "caption": "Phân bố tổng số lượt ghi nhận theo khoảng thời gian chờ trong bốn tuần khảo sát.",
+        "labels": [
+          "0–5",
+          "5–10",
+          "10–15",
+          "15–20",
+          "20–25"
+        ],
+        "series": [
+          {
+            "name": "Tổng số lượt ghi nhận",
+            "values": [
+              53,
+              148,
+              178,
+              82,
+              29
+            ],
+            "errors": [
+              4,
+              6,
+              9,
+              5,
+              3
+            ]
+          }
+        ],
+        "x_label": "Khoảng thời gian chờ (phút)",
+        "y_label": "Số lượt ghi nhận",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 6,
+      "element": {
+        "type": "chart",
+        "chart_type": "area",
+        "id": "fig:ghi-nhan-theo-tuan",
+        "caption": "Số lượt ghi nhận tích lũy theo tuần khảo sát và nhóm nguồn dữ liệu.",
+        "labels": [
+          "Tuần 1",
+          "Tuần 2",
+          "Tuần 3",
+          "Tuần 4"
+        ],
+        "series": [
+          {
+            "name": "Nhật ký hành trình",
+            "values": [
+              54,
+              61,
+              58,
+              63
+            ],
+            "errors": [
+              4,
+              4,
+              4,
+              5
+            ]
+          },
+          {
+            "name": "Quan sát tại điểm dừng",
+            "values": [
+              31,
+              34,
+              32,
+              36
+            ],
+            "errors": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          {
+            "name": "Phỏng vấn hành khách",
+            "values": [
+              29,
+              32,
+              30,
+              35
+            ],
+            "errors": [
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        ],
+        "x_label": "Tuần khảo sát",
+        "y_label": "Số lượt ghi nhận",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 9,
+      "element": {
+        "type": "chart",
+        "chart_type": "scatter",
+        "id": "fig:le-chuyen-va-diem-tin-cay",
+        "caption": "Mối liên hệ giữa độ lệch giờ khởi hành và điểm tin cậy của hành khách theo tuyến.",
+        "labels": [
+          "TL-01",
+          "TL-02",
+          "TL-03",
+          "TL-04",
+          "TL-05",
+          "TL-06"
+        ],
+        "series": [
+          {
+            "name": "Điểm tin cậy (1–5)",
+            "points": [
+              [
+                4.6,
+                4.0
+              ],
+              [
+                5.3,
+                3.7
+              ],
+              [
+                7.1,
+                3.2
+              ],
+              [
+                4.2,
+                4.1
+              ],
+              [
+                6.0,
+                3.5
+              ],
+              [
+                4.8,
+                3.9
+              ]
+            ],
+            "x_errors": [
+              0.4,
+              0.4,
+              0.5,
+              0.3,
+              0.4,
+              0.4
+            ],
+            "y_errors": [
+              0.2,
+              0.2,
+              0.2,
+              0.2,
+              0.2,
+              0.2
+            ]
+          }
+        ],
+        "x_label": "Lệch giờ khởi hành (phút)",
+        "y_label": "Điểm tin cậy (1–5)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 1,
+      "element": {
+        "type": "figure",
+        "figure_type": "architecture",
+        "id": "fig:khung-do-luong-dich-vu",
+        "caption": "Kiến trúc khung đo lường độ tin cậy dịch vụ xe buýt liên huyện.",
+        "description": "Sơ đồ kiến trúc gồm lớp dữ liệu đầu vào, lớp xử lý chỉ tiêu và lớp tổng hợp cảm nhận hành khách; các luồng kết nối biểu thị quá trình đồng bộ hóa theo tuyến và theo thời điểm.",
+        "labels": [
+          "Nhật ký hành trình",
+          "Điểm dừng",
+          "Phỏng vấn",
+          "Chỉ tiêu vận hành",
+          "Điểm tin cậy",
+          "Tuyến liên huyện"
+        ]
+      }
+    },
+    {
+      "after": 5,
+      "element": {
+        "type": "figure",
+        "figure_type": "flowchart",
+        "id": "fig:quy-trinh-thu-thap-du-lieu",
+        "caption": "Quy trình thu thập và kiểm tra dữ liệu trong bốn tuần khảo sát.",
+        "description": "Lưu đồ bắt đầu từ lập lịch quan sát, tiếp tục qua ghi nhận thời gian xe đến và rời điểm dừng, đối chiếu với nhật ký hành trình, kiểm tra sai lệch, rồi chuyển dữ liệu đạt yêu cầu sang bước tổng hợp.",
+        "labels": [
+          "Lập lịch",
+          "Ghi nhận",
+          "Đối chiếu",
+          "Kiểm tra",
+          "Tổng hợp"
+        ]
+      }
+    },
+    {
+      "after": 3,
+      "element": {
+        "type": "figure",
+        "figure_type": "architecture",
+        "id": "fig:luong-van-hanh-tai-nut-giao",
+        "caption": "Kiến trúc các yếu tố vận hành ảnh hưởng đến thời gian chờ tại nút giao.",
+        "description": "Mô hình thể hiện quan hệ giữa nhu cầu theo thời điểm, trạng thái nút giao, thời gian lên xuống xe và độ lệch giờ khởi hành; các yếu tố hội tụ vào chỉ tiêu thời gian chờ trung vị.",
+        "labels": [
+          "Nhu cầu",
+          "Nút giao",
+          "Lên xuống xe",
+          "Khởi hành",
+          "Thời gian chờ"
+        ]
+      }
+    },
+    {
+      "after": 8,
+      "element": {
+        "type": "figure",
+        "figure_type": "architecture",
+        "id": "fig:he-thong-thong-tin-den-diem-dung",
+        "caption": "Kiến trúc đề xuất cho hệ thống thông tin thời gian đến tại điểm dừng.",
+        "description": "Sơ đồ gồm bộ phận tiếp nhận vị trí xe, bộ phận ước tính thời gian đến, kênh hiển thị tại điểm dừng và kênh thông báo cho hành khách; dữ liệu phản hồi được đưa về bộ phận giám sát.",
+        "labels": [
+          "Vị trí xe",
+          "Ước tính đến",
+          "Màn hình điểm dừng",
+          "Thông báo hành khách",
+          "Giám sát"
+        ]
+      }
+    }
+  ],
+  "code": [],
+  "references": [
+    {
+      "text": "Nguyễn Hà Lam và Trần Vũ Khang (2024). Đo lường độ tin cậy của dịch vụ xe buýt trên các tuyến liên huyện. Tạp chí Nghiên cứu Vận tải Tuyến Lưu.",
+      "cite": "Nguyễn Hà Lam và Trần Vũ Khang, 2024"
+    },
+    {
+      "text": "Bùi Minh An (2023). Biến động thời gian chờ tại các điểm dừng xe buýt vùng đô thị mở rộng. Tạp chí Giao thông Nam Hải.",
+      "cite": "Bùi Minh An, 2023"
+    },
+    {
+      "text": "Phạm Thu Uyên và Lê Quốc Duy (2022). Ảnh hưởng của độ lệch giờ khởi hành đến cảm nhận hành khách. Tạp chí Vận hành Đô thị Liên vùng.",
+      "cite": "Phạm Thu Uyên và Lê Quốc Duy, 2022"
+    },
+    {
+      "text": "Đỗ Khánh Linh (2021). Phương pháp ghi nhận hành trình trong nghiên cứu dịch vụ vận tải công cộng. Kỷ yếu Nghiên cứu Tuyến Lưu.",
+      "cite": "Đỗ Khánh Linh, 2021"
+    },
+    {
+      "text": "Vũ Thanh Tùng và Hoàng Ngọc Mai (2020). Độ ổn định biểu đồ chạy xe trên mạng lưới liên huyện. Tạp chí Quy hoạch Hành lang Giao thông.",
+      "cite": "Vũ Thanh Tùng và Hoàng Ngọc Mai, 2020"
+    },
+    {
+      "text": "Trần Gia Hân (2023). Đánh giá thời gian lên xuống xe tại điểm dừng có lưu lượng cao. Tạp chí Hạ tầng và Dịch vụ Vận tải.",
+      "cite": "Trần Gia Hân, 2023"
+    },
+    {
+      "text": "Lương Đức Khải và Nguyễn Phương Thảo (2022). Quan hệ giữa ùn tắc nút giao và thời gian chờ xe buýt. Tạp chí Phân tích Vận hành Đường bộ.",
+      "cite": "Lương Đức Khải và Nguyễn Phương Thảo, 2022"
+    },
+    {
+      "text": "Mai Hoài Nam (2021). Ghi nhận đa nguồn trong khảo sát hành khách xe buýt. Tạp chí Dữ liệu Giao thông Ứng dụng.",
+      "cite": "Mai Hoài Nam, 2021"
+    },
+    {
+      "text": "Phan Ngọc Trâm và Đặng Việt Sơn (2024). Chỉ tiêu tin cậy trong đánh giá tuyến xe buýt liên huyện. Tạp chí Đo lường Dịch vụ Công cộng.",
+      "cite": "Phan Ngọc Trâm và Đặng Việt Sơn, 2024"
+    },
+    {
+      "text": "Hồ Minh Quân (2020). Phân tích chênh lệch giờ cao điểm và thấp điểm trên tuyến xe buýt. Tạp chí Nghiên cứu Di chuyển Vùng.",
+      "cite": "Hồ Minh Quân, 2020"
+    },
+    {
+      "text": "Ngô Bảo Châu và Tạ Quang Vinh (2023). Thông tin thời gian đến tại điểm dừng và hành vi lựa chọn chuyến. Tạp chí Công nghệ Vận tải Tuyến Lưu.",
+      "cite": "Ngô Bảo Châu và Tạ Quang Vinh, 2023"
+    },
+    {
+      "text": "Dương Thùy Dung (2022). Thiết kế nhật ký hành trình cho khảo sát độ tin cậy vận tải. Kỷ yếu Hội thảo Vận hành Thành Phố Nam Hải.",
+      "cite": "Dương Thùy Dung, 2022"
+    },
+    {
+      "text": "Lê Hải Yến và Phạm Công Thành (2021). Độ biến động thời gian phục vụ tại các nút giao ngoại vi. Tạp chí Mạng lưới Giao thông Mở rộng.",
+      "cite": "Lê Hải Yến và Phạm Công Thành, 2021"
+    },
+    {
+      "text": "Nguyễn Tuấn Kiệt (2024). Tổng hợp ý kiến hành khách trong đánh giá chất lượng xe buýt. Tạp chí Nghiên cứu Hành khách Đô thị.",
+      "cite": "Nguyễn Tuấn Kiệt, 2024"
+    },
+    {
+      "text": "Võ Quỳnh Anh và Trịnh Minh Đức (2020). So sánh độ tin cậy giữa các nhóm tuyến liên huyện. Tạp chí Vận tải và Phát triển Vùng.",
+      "cite": "Võ Quỳnh Anh và Trịnh Minh Đức, 2020"
+    },
+    {
+      "text": "Đinh Hoàng Long (2022). Kiểm tra sai lệch giữa quan sát tại điểm dừng và nhật ký vận hành. Tạp chí Kiểm định Dữ liệu Giao thông.",
+      "cite": "Đinh Hoàng Long, 2022"
+    },
+    {
+      "text": "Phạm Ngọc Hà (2023). Mô hình giám sát thời gian chờ theo khoảng nhu cầu. Tạp chí Điều phối Tuyến xe.",
+      "cite": "Phạm Ngọc Hà, 2023"
+    },
+    {
+      "text": "Trương Đức Anh và Bùi Thanh Vân (2021). Các yếu tố vận hành tác động đến cảm nhận tin cậy của hành khách. Tạp chí Kinh tế và Vận hành Đô thị.",
+      "cite": "Trương Đức Anh và Bùi Thanh Vân, 2021"
+    },
+    {
+      "text": "Hoàng Yến Nhi (2024). Ưu tiên xử lý nút giao có độ biến động cao trong mạng xe buýt. Tạp chí Chiến lược Giao thông Nam Hải.",
+      "cite": "Hoàng Yến Nhi, 2024"
+    },
+    {
+      "text": "Vũ Nguyên Khang và Lâm Thùy Chi (2022). Phân tích trung vị thời gian chờ trong điều kiện nhu cầu thay đổi. Tạp chí Thống kê Vận tải Tuyến Lưu.",
+      "cite": "Vũ Nguyên Khang và Lâm Thùy Chi, 2022"
+    },
+    {
+      "text": "Nguyễn Hoàng Phúc (2020). Khung đánh giá dịch vụ xe buýt dựa trên dữ liệu hành trình và phản hồi hành khách. Tạp chí Phương pháp Nghiên cứu Vận tải.",
+      "cite": "Nguyễn Hoàng Phúc, 2020"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Introduction"
+    },
+    {
+      "type": "paragraph",
+      "text": "Độ tin cậy của dịch vụ xe buýt liên huyện không chỉ được thể hiện bằng việc xe có vận hành đúng lịch hay không, mà còn qua khả năng dự đoán thời gian chờ, mức ổn định của giờ khởi hành và sự nhất quán trong phục vụ tại điểm dừng. Đối với hành khách di chuyển giữa các huyện, một sai lệch nhỏ ở đầu tuyến có thể tích lũy thành chậm trễ lớn tại các nút giao, làm tăng nguy cơ lỡ chuyến nối tiếp và làm suy giảm niềm tin vào biểu đồ chạy xe. Các nghiên cứu trước đây đã nhấn mạnh vai trò của dữ liệu hành trình, phản hồi hành khách và chỉ tiêu trung vị khi đánh giá dịch vụ vận tải công cộng \\cite{1}, \\cite{9}, \\cite{21}. Trong nghiên cứu này, độ tin cậy được xem xét như một thuộc tính kết hợp giữa kết quả vận hành quan sát được và cảm nhận của người sử dụng."
+    },
+    {
+      "type": "paragraph",
+      "text": "Mục tiêu là đo lường sự biến động của thời gian chờ trên sáu tuyến liên huyện, nhận diện các yếu tố gắn với cảm nhận tin cậy, đồng thời đề xuất các hướng điều chỉnh có thể áp dụng trong quản lý vận hành. Phân tích tập trung vào bốn nhóm thông tin: nhật ký hành trình, quan sát tại điểm dừng, phỏng vấn hành khách và đối chiếu giữa các nguồn. Khung đo lường được tổ chức theo quan hệ $R=operatorname{median}(W)$, trong đó $R$ là chỉ tiêu ổn định cơ bản và $W$ là thời gian chờ được ghi nhận. Cách tiếp cận này phù hợp với nhận định rằng trung vị ít bị chi phối bởi một số lượt chờ bất thường kéo dài \\cite{20}. Khung kiến trúc được mô tả sớm tại \\ref{fig:khung-do-luong-dich-vu}, còn kết quả tổng hợp được đối chiếu tại \\ref{tab:do-tin-cay-tuyen-lien-huyen}."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Study Area"
+    },
+    {
+      "type": "paragraph",
+      "text": "Địa bàn nghiên cứu là một vùng đô thị mở rộng gồm các khu dân cư trung tâm, cụm dịch vụ ở vành đai và các huyện có quan hệ đi lại thường xuyên với đô thị lõi. Sáu tuyến được ký hiệu từ TL-01 đến TL-06, có chiều dài và điều kiện giao thông khác nhau. Một số tuyến đi qua khu vực có mật độ giao cắt cao, trong khi các tuyến khác chịu ảnh hưởng rõ hơn của dòng xe theo mùa, hoạt động trường học và thời điểm giao ca. Việc lựa chọn đồng thời sáu tuyến giúp phản ánh nhiều trạng thái vận hành thay vì chỉ tập trung vào một hành lang. Theo các nghiên cứu về ổn định biểu đồ và so sánh nhóm tuyến, sự khác biệt về cấu trúc hành trình có thể làm thay đổi đáng kể độ lệch giờ khởi hành \\cite{5}, \\cite{15}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Các điểm quan sát được phân bố tại đầu tuyến, khu vực giữa tuyến và những điểm dừng gần nút giao có lưu lượng cao. Địa điểm được giữ ổn định trong bốn tuần để phân biệt biến động theo thời gian với khác biệt cố hữu giữa các tuyến. Trạng thái giao thông, thời điểm xe đến, thời điểm xe rời điểm dừng và số hành khách lên xuống được ghi nhận theo cùng một quy trình. Quan hệ giữa ùn tắc, thời gian phục vụ và thời gian chờ được xem là một chuỗi tác động: nếu $D$ là nhu cầu, $C$ là mức cản trở tại nút giao và $B$ là thời gian lên xuống, thì $W$ có xu hướng tăng khi $D+C+B$ tăng. Cấu trúc vận hành này được liên hệ với \\ref{fig:luong-van-hanh-tai-nut-giao} và phù hợp với các kết quả về nút giao ngoại vi \\cite{7}, \\cite{13}."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Sampling Protocol"
+    },
+    {
+      "type": "paragraph",
+      "text": "Dữ liệu được thu thập liên tục trong bốn tuần, bao phủ cả giờ cao điểm và giờ thấp điểm của ngày thường. Mỗi lượt ghi nhận gồm mã tuyến, vị trí điểm dừng, thời điểm dự kiến, thời điểm xe đến, thời điểm xe rời đi, số hành khách lên xuống và đánh giá nhanh của hành khách sau khi sử dụng dịch vụ. Nhật ký hành trình do người theo dõi ghi trực tiếp; quan sát tại điểm dừng được thực hiện bởi nhóm độc lập; phỏng vấn được tiến hành sau khi hành khách đã có đủ thời gian trải nghiệm chặng đi. Thiết kế đa nguồn giúp giảm phụ thuộc vào một kênh thông tin duy nhất, theo hướng được khuyến nghị trong các nghiên cứu về ghi nhận hành trình và phản hồi hành khách \\cite{4}, \\cite{8}, \\cite{12}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Lịch quan sát được phân bổ để mỗi tuyến xuất hiện ở nhiều khung giờ và nhiều ngày trong tuần. Một lượt được giữ lại khi có đủ thời điểm xe đến và rời điểm dừng, đồng thời mã tuyến khớp với nhật ký vận hành. Những trường hợp thiếu mốc thời gian hoặc có sai lệch định danh được đưa vào diện kiểm tra trước khi tổng hợp. Quy trình gồm lập lịch, ghi nhận, đối chiếu, kiểm tra và tổng hợp, tương ứng với \\ref{fig:quy-trinh-thu-thap-du-lieu}. Với mỗi lượt, thời gian chờ được tính theo $W=t_{arrive}-t_{observe}$; khi thời điểm dự kiến không có sẵn, lượt đó chỉ được dùng cho mô tả thực địa chứ không dùng để tính độ lệch lịch. Cách phân tầng này làm rõ ranh giới giữa dữ liệu đủ điều kiện phân tích và thông tin bổ trợ."
+    },
+    {
+      "type": "paragraph",
+      "text": "Tổng cộng có 490 lượt ghi nhận hợp lệ trên sáu tuyến. Số lượt giữa các tuyến dao động từ 77 đến 86, đủ để mô tả xu hướng vận hành nhưng chưa nhằm đại diện cho mọi ngày trong năm. Việc kiểm tra chéo được thực hiện theo cặp nguồn: nhật ký so với quan sát, quan sát so với phỏng vấn, và thời điểm ghi nhận so với lịch vận hành. Sai lệch được xem xét theo ngưỡng $|e|\\leq 2$ phút đối với thời điểm, trong đó $e$ là chênh lệch giữa hai nguồn. Quy tắc này được xây dựng dựa trên các khuyến nghị về kiểm tra sai lệch và ghi nhận đa nguồn \\cite{16}, \\cite{8}. Chi tiết phân bổ lượt theo tuần được tham chiếu tại \\ref{fig:ghi-nhan-theo-tuan}."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Measurements"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Chỉ tiêu vận hành và cảm nhận"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ba chỉ tiêu vận hành chính gồm thời gian chờ trung vị, chênh lệch giữa cao điểm và thấp điểm, và độ lệch giờ khởi hành. Thời gian chờ trung vị được tính trên các lượt hợp lệ của từng tuyến. Chênh lệch cao điểm–thấp điểm được xác định bằng $Delta W=median(W_{peak})-median(W_{off})$. Độ lệch giờ khởi hành được tính từ trị tuyệt đối của chênh lệch giữa giờ thực tế và giờ dự kiến, sau đó lấy trung vị theo tuyến. Điểm tin cậy được hỏi trên thang từ 1 đến 5, trong đó điểm cao biểu thị cảm nhận tích cực hơn. Việc sử dụng trung vị và độ lệch tuyệt đối giúp hạn chế tác động của các lượt bị kéo dài bất thường, phù hợp với các phân tích về biến động thời gian chờ \\cite{2}, \\cite{10}, \\cite{20}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Để kiểm tra độ ổn định của chỉ tiêu, nhóm nghiên cứu tính khoảng dao động quan sát và so sánh giữa các nguồn. Nếu $n$ là số lượt hợp lệ, sai số mô tả được biểu diễn bằng $SE=sigma/sqrt{n}$, trong đó $sigma$ là độ phân tán thời gian chờ. Đại lượng này không được diễn giải như một khoảng suy luận cho toàn bộ mạng lưới, mà chỉ dùng để nhận diện tuyến có biến động tương đối lớn. Thời gian lên xuống được tách khỏi thời gian di chuyển giữa hai điểm dừng nhằm tránh gán toàn bộ chậm trễ cho nút giao. Cách tách thành phần này dựa trên nghiên cứu về thời gian phục vụ tại điểm dừng có lưu lượng cao \\cite{6}. Hệ thống thông tin đề xuất sau đó được liên hệ với \\ref{fig:he-thong-thong-tin-den-diem-dung}."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Results"
+    },
+    {
+      "type": "paragraph",
+      "text": "Kết quả cho thấy thời gian chờ trung vị chung là 11,6 phút, chênh lệch giữa cao điểm và thấp điểm là 4,2 phút, còn độ lệch giờ khởi hành trung vị là 5,1 phút. Điểm tin cậy chung đạt 3,7 trên thang năm. TL-01 có thời gian chờ thấp nhất, 9,8 phút, và điểm tin cậy 4,0; TL-03 có thời gian chờ cao nhất, 13,4 phút, cùng điểm tin cậy 3,2. TL-05 cũng cho thấy mức chờ cao, 12,0 phút, và điểm tin cậy 3,5. Các trị số này cho thấy cảm nhận của hành khách giảm khi độ lệch vận hành tăng, thay vì chỉ phụ thuộc vào thời gian chờ tuyệt đối. Mối liên hệ giữa hai đại lượng được tham chiếu tại \\ref{fig:le-chuyen-va-diem-tin-cay}, còn toàn bộ chỉ tiêu theo tuyến được trình bày trong \\ref{tab:do-tin-cay-tuyen-lien-huyen}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Khi phân chia theo thời điểm, giờ cao điểm có phân bố tập trung hơn ở các khoảng chờ từ 10 đến 20 phút, trong khi giờ thấp điểm có nhiều lượt nằm dưới 10 phút. Sự khác biệt này được mô tả tại \\ref{fig:phan-bo-thoi-gian-cho}. Xét theo công thức $Delta=median(W_{peak})-median(W_{off})$, giá trị $Delta$ dương trên cả sáu tuyến, cho thấy nhu cầu và điều kiện lưu thông trong cao điểm cùng làm tăng thời gian chờ. Tuy nhiên, mức tăng không đồng đều: tuyến có nhiều nút giao và thời gian lên xuống lớn chịu biến động mạnh hơn. Kết quả tương đồng với nhận định rằng mức chênh lệch theo thời điểm là chỉ báo hữu ích cho điều phối biểu đồ \\cite{10}, \\cite{17}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Phân tích theo nguồn ghi nhận cho thấy nhật ký hành trình thường cho thời điểm đều hơn quan sát tại các điểm dừng đông khách, nơi hoạt động lên xuống làm tăng độ phân tán. Phỏng vấn lại phản ánh tác động cảm nhận rõ hơn, nhất là khi hành khách không nhận được thông tin về thời gian xe sẽ đến. Với mỗi tuyến, hệ số biến thiên được mô tả bằng $CV=sigma/mu$, trong đó $mu$ là thời gian chờ trung bình. Tuyến có $CV$ cao không nhất thiết có trung vị cao nhất, nhưng thường có điểm tin cậy thấp hơn. Điều này cho thấy khả năng dự đoán quan trọng không kém tốc độ phục vụ. Kết quả cũng phù hợp với nghiên cứu về thông tin thời gian đến và hành vi lựa chọn chuyến \\cite{11}, \\cite{14}."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Discussion"
+    },
+    {
+      "type": "paragraph",
+      "text": "Các phát hiện cho thấy ba cơ chế vận hành cần được xem xét đồng thời. Thứ nhất, lệch giờ khởi hành ở đầu tuyến tạo ra hiệu ứng dây chuyền, khiến các điểm dừng sau phải hấp thụ phần chậm trễ tích lũy. Thứ hai, ùn tắc tại nút giao làm thời gian giữa hai điểm dừng biến động, đặc biệt khi nhu cầu tăng đột ngột. Thứ ba, thời gian lên xuống kéo dài tại điểm dừng đông khách làm giảm khả năng phục hồi lịch trình. Nếu gọi độ lệch đầu tuyến là $L$, cản trở giao thông là $C$ và thời gian phục vụ là $B$, thì mức rủi ro chờ có thể được xem xét theo $Q= L+C+B$. Đây là cách diễn giải vận hành, không phải một mô hình dự báo độc lập, và phù hợp với các nghiên cứu về yếu tố tác động đến cảm nhận tin cậy \\cite{3}, \\cite{7}, \\cite{18}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Về quản lý, điều chỉnh biểu đồ theo các khoảng nhu cầu có thể giảm tình trạng dồn xe ở cao điểm và hạn chế khoảng trống dài ở thấp điểm. Những tuyến có độ lệch lớn nên được ưu tiên rà soát thời gian quay đầu, thời gian đệm và thứ tự phục vụ tại các nút giao. Đồng thời, thông tin thời gian đến tại điểm dừng cần được cung cấp theo cách dễ đọc, cập nhật đều và có thông báo khi sai lệch vượt ngưỡng. Một chỉ tiêu giám sát thực tế có thể là $P(W\\leq 10)$, tức tỷ lệ lượt có thời gian chờ không vượt quá 10 phút. Chỉ tiêu này cho phép đơn vị vận hành theo dõi thay đổi theo tuần mà không chỉ dựa vào một giá trị trung bình. Ưu tiên nút giao có độ biến động cao cũng được đề xuất trong các nghiên cứu gần đây \\cite{19}, \\cite{17}."
+    },
+    {
+      "type": "box",
+      "kind": "remark",
+      "title": "Hàm ý vận hành",
+      "text": "Kết quả không ủng hộ việc chỉ tăng số chuyến một cách đồng loạt. Biện pháp phù hợp hơn là kết hợp điều chỉnh biểu đồ theo nhu cầu, bổ sung thời gian đệm có kiểm soát, giảm thời gian lên xuống tại điểm dừng đông khách và cung cấp thông tin đến theo thời gian thực. Khi đánh giá hiệu quả, cần theo dõi đồng thời thời gian chờ, độ lệch khởi hành và điểm tin cậy, vì cải thiện một chỉ tiêu riêng lẻ chưa chắc làm trải nghiệm tổng thể tốt hơn."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Limitations"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nghiên cứu có một số giới hạn cần được cân nhắc khi diễn giải. Thời gian khảo sát chỉ kéo dài bốn tuần nên chưa phản ánh đầy đủ ảnh hưởng của mùa mưa, kỳ nghỉ dài hoặc thay đổi lớn trong nhu cầu đi lại. Sáu tuyến được chọn nhằm bao quát các điều kiện vận hành khác nhau, nhưng vẫn không đại diện cho toàn bộ mạng lưới liên huyện. Điểm đánh giá của hành khách có thể chịu ảnh hưởng bởi mục đích chuyến đi, thời gian đã chờ trước đó và kỳ vọng cá nhân. Ngoài ra, ngưỡng kiểm tra $|e|\\leq 2$ phút là quy tắc thực hành để đồng bộ dữ liệu, không phải chuẩn bất biến cho mọi bối cảnh. Những giới hạn này cho thấy cần mở rộng thời gian theo dõi và tăng số điểm quan sát trước khi khái quát hóa."
+    },
+    {
+      "type": "paragraph",
+      "text": "Một hạn chế khác là nghiên cứu chưa lượng hóa riêng tác động của thời tiết, sự cố phương tiện và thay đổi phân luồng tại từng nút giao. Các yếu tố này có thể làm tăng $sigma$ trong một số ngày nhưng không xuất hiện đều ở mọi tuyến. Dữ liệu phỏng vấn cũng được thu thập sau hành trình nên có khả năng chịu ảnh hưởng của hồi tưởng. Trong các đợt tiếp theo, nên bổ sung mã sự kiện vận hành, ghi nhận điều kiện thời tiết và theo dõi hành khách theo chuỗi chuyến nối tiếp. Việc kết hợp đó sẽ giúp phân biệt rõ hơn giữa sai lệch ngẫu nhiên và vấn đề cấu trúc của biểu đồ chạy xe."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Conclusion"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nghiên cứu đã đo lường độ tin cậy của sáu tuyến xe buýt liên huyện bằng cách kết hợp nhật ký hành trình, quan sát tại điểm dừng và phỏng vấn hành khách trong bốn tuần. Thời gian chờ trung vị chung đạt 11,6 phút, chênh lệch cao điểm–thấp điểm đạt 4,2 phút, và độ lệch giờ khởi hành là 5,1 phút. Tuyến TL-03 có kết quả kém thuận lợi nhất trên cả thời gian chờ và điểm tin cậy, trong khi TL-01 thể hiện trạng thái ổn định hơn. Các kết quả khẳng định rằng độ tin cậy cần được đánh giá bằng cả chỉ tiêu vận hành và cảm nhận người sử dụng. Theo đó, ưu tiên hành động gồm điều chỉnh biểu đồ theo nhu cầu, kiểm soát nút giao biến động cao, rút ngắn thời gian lên xuống và nâng cấp thông tin đến tại điểm dừng."
+    },
+    {
+      "type": "paragraph",
+      "text": "Về phương pháp, việc sử dụng trung vị, đối chiếu đa nguồn và kiểm tra sai lệch giúp tạo một quy trình có thể lặp lại trong các đợt theo dõi sau. Một hệ thống giám sát nên cập nhật $W$, $L$ và điểm tin cậy theo tuyến, theo khung giờ và theo tuần; đồng thời giữ lại dấu vết của các sự kiện bất thường để phục vụ giải thích. Khi $Delta W$ giảm và $P(W\\leq 10)$ tăng, hiệu quả cải thiện có thể được kiểm chứng trực tiếp hơn. Các kết luận này củng cố hướng tiếp cận lấy độ ổn định và khả năng dự đoán làm trọng tâm của quản lý xe buýt liên huyện \\cite{1}, \\cite{9}, \\cite{21}. \\fn{Các trị số trong nghiên cứu được làm tròn đến một chữ số thập phân khi trình bày, trong khi phép tính nội bộ giữ độ chính xác cao hơn.}"
+    }
+  ]
+}

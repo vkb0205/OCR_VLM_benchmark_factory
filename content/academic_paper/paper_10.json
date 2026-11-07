@@ -1,0 +1,346 @@
+{
+  "content_id": "paper_10",
+  "variables": {
+    "lang": "en",
+    "field": "acoustics",
+    "paper_length": "short",
+    "citation_style": "numeric"
+  },
+  "lang": "en",
+  "values": {
+    "title": "Coupled-Mode Analysis of a Porous Resonator with a Graded Neck",
+    "authors": [
+      {
+        "name": "Elian Veyr",
+        "affiliations": [
+          1,
+          2
+        ],
+        "corresponding": true,
+        "email": "elian.veyr@narevix-acoustics.org"
+      },
+      {
+        "name": "Mara Quen",
+        "affiliations": [
+          1
+        ],
+        "corresponding": false
+      },
+      {
+        "name": "Tovin Arclen",
+        "affiliations": [
+          2
+        ],
+        "corresponding": false
+      }
+    ],
+    "affiliations": [
+      "Veylora Institute for Wave Studies, Department of Acoustic Systems",
+      "Orinthal Technical Conservatory, Laboratory of Resonant Structures"
+    ],
+    "abstract": "A coupled-mode model is developed for a porous resonator whose neck impedance varies gradually along its axis. The formulation combines a transfer description of the neck with a modal representation of the cavity field. An effective radiation term is introduced at the opening, while viscous and thermal losses are represented through a frequency-dependent resistance. The resulting expression predicts the resonance shift and bandwidth variation caused by the impedance gradient. Comparison with a finite-element solution shows close agreement across the principal resonance and indicates that graded neck profiles can broaden absorption without substantially reducing peak response.",
+    "abstract_alt": null,
+    "keywords": "acoustic resonator; coupled modes; porous neck; impedance gradient; sound absorption",
+    "keywords_alt": null,
+    "journal": "Veylora Journal of Acoustic Fields",
+    "acknowledgement": "The authors thank the Resonant Structures Laboratory at Orinthal Technical Conservatory for assistance with numerical verification.",
+    "references": [
+      {
+        "text": "[1] Ilyen, S., and D. Vaskor. “Transfer Matrices for Resonators with Slowly Varying Neck Impedance.” Journal of Wave Acoustics 18, no. 2 (2021): 117–129.",
+        "cite": "(Ilyen & Vaskor, 2021)"
+      },
+      {
+        "text": "[2] Merovan, T., and L. Kethri. “A Modal Description of Lossy Cavities Coupled to Porous Ducts.” Resonant Systems Letters 9, no. 1 (2020): 33–42.",
+        "cite": "(Merovan & Kethri, 2020)"
+      },
+      {
+        "text": "[3] Ordel, N., P. Ruvane, and E. Seln. “Radiation Corrections at the Mouth of Compact Acoustic Resonators.” Annals of Applied Sound 27, no. 3 (2022): 204–216.",
+        "cite": "(Ordel et al., 2022)"
+      },
+      {
+        "text": "[4] Tervin, A., and M. Oshal. “Thermoviscous Resistance in Narrow, Porous-Walled Acoustic Necks.” Journal of Porous Acoustics 14, no. 4 (2019): 281–294.",
+        "cite": "(Tervin & Oshal, 2019)"
+      },
+      {
+        "text": "[5] Veyr, E., M. Quen, and T. Arclen. “Coupled-Mode Analysis of a Porous Resonator with a Graded Neck.” Veylora Journal of Acoustic Fields 6, no. 2 (2025): 61–74.",
+        "cite": "(Veyr et al., 2025)"
+      },
+      {
+        "text": "[6] Sorellan, J., and R. Denvik. “Frequency-Dependent Neck Losses in Perforated Absorbers.” Applied Resonance Research 12, no. 1 (2023): 5–18.",
+        "cite": "(Sorellan & Denvik, 2023)"
+      },
+      {
+        "text": "[7] Caldrin, P., V. Noreth, and A. Belvar. “Finite-Element Assessment of Graded Impedance Ducts.” Computational Acoustics Review 21, no. 3 (2022): 146–160.",
+        "cite": "(Caldrin et al., 2022)"
+      },
+      {
+        "text": "[8] Edras, L., and K. Mavren. “Bandwidth Control in Single-Cavity Sound Absorbers.” Journal of Acoustic Design 16, no. 2 (2020): 88–101.",
+        "cite": "(Edras & Mavren, 2020)"
+      },
+      {
+        "text": "[9] Pellor, M., and S. Arveth. “Porosity and Neck Geometry Effects in Compact Resonant Absorbers.” Sound Materials Quarterly 8, no. 4 (2021): 237–249.",
+        "cite": "(Pellor & Arveth, 2021)"
+      },
+      {
+        "text": "[10] Nethari, D., J. Volsen, and I. Bralen. “Energy Balance and Scattering in Coupled Acoustic Modes.” Journal of Resonator Physics 11, no. 2 (2018): 72–85.",
+        "cite": "(Nethari et al., 2018)"
+      },
+      {
+        "text": "[11] Ruvan, C., and T. Elorin. “Impedance Gradients for Broadband Absorption in Short Ducts.” Advances in Sound Control 5, no. 1 (2024): 19–31.",
+        "cite": "(Ruvan & Elorin, 2024)"
+      },
+      {
+        "text": "[12] Oskel, F., M. Teryn, and B. Halven. “Experimental Characterization of Cavity-Neck Resonance Shifts.” Journal of Measured Acoustics 13, no. 3 (2019): 173–186.",
+        "cite": "(Oskel et al., 2019)"
+      }
+    ],
+    "body": [
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Introduction"
+      },
+      {
+        "type": "paragraph",
+        "text": "A porous resonator with a graded neck presents a useful case for examining how distributed impedance modifies a nominally compact acoustic mode. A uniform-neck approximation can locate the principal resonance, but it suppresses the axial variation that contributes both inertial loading and dissipation. Here, a coupled description retains the neck’s spatially varying resistance and mass while representing the cavity response with a single dominant mode. The organization of the predicted comparisons is indicated by \\ref{tab:resonance-comparison}, the profile-dependent absorption trends by \\ref{fig:chart}, the geometric configurations by \\ref{tab:neck-geometry}, and the relation among the model components by \\ref{fig:diagram}. These references identify the corresponding results and schematics without replacing the continuous discussion below."
+      },
+      {
+        "type": "paragraph",
+        "text": "The approach builds on transfer formulations for slowly varying ducts and modal descriptions of lossy cavities, which provide complementary accounts of propagation and energy storage [\\cite{1}, \\cite{2}]. A mouth correction is needed because radiation at a compact opening changes the effective loading seen by the neck [\\cite{3}]. Likewise, porous walls and narrow passages make the internal resistance dependent on frequency rather than a constant fitting term [\\cite{4}, \\cite{6}]. The central question is whether these contributions can be combined in a compact response law that preserves the location and width of the main absorption feature. We focus on a controlled family of profiles, varying the neck impedance gradient while holding the cavity concept and inlet area fixed, and compare the resulting predictions with a finite-element calculation. The coupled-mode formulation for a graded porous resonator provides a basis for this combined treatment [\\cite{5}]."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Physical model"
+      },
+      {
+        "type": "paragraph",
+        "text": "Let the neck occupy an axial interval from zero to length $L$, with local resistance per length $r(x)$ and inertial loading per length $m(x)$. A first-order representation of its input impedance is $Z_n(\\Omega)=\\int_0^L [r(x)+i\\Omega m(x)] dx$. This integral clarifies how a gradient enters the model: changing the cross-section or porous-wall properties alters the local functions, and the accumulated effect changes both the reactive and dissipative parts of the neck load. The distributed description is therefore more informative than assigning a single area and a single loss coefficient to the whole passage. It remains a reduced model, however; local wave reflections and higher axial modes are not resolved explicitly. Transfer-matrix treatments offer a route to retain more axial detail when the variation is too rapid for this integral approximation [\\cite{1}]."
+      },
+      {
+        "type": "paragraph",
+        "text": "The cavity is represented by an amplitude $a$ associated with its principal resonant mode. Its uncoupled angular frequency is denoted by $\\Omega_0$, while $\\Gamma_i$ and $\\Gamma_e$ represent internal and external decay rates. With incoming and outgoing wave amplitudes $s_+$ and $s_-$, the steady response follows $[i(\\Omega-\\Omega_0)+\\Gamma_i+\\Gamma_e]a=\\sqrt{2\\Gamma_e}s_+$ and $s_-=-s_+ + \\sqrt{2\\Gamma_e}a$. The neck impedance influences the effective resonance and the coupling to the exterior, while the porous cavity and neck walls contribute to internal loss. This separation is valuable because it makes the energy pathways legible: energy can be dissipated internally or returned to the surrounding field. Coupled-mode energy balances and lossy-cavity formulations motivate this partition [\\cite{2}, \\cite{10}]."
+      },
+      {
+        "type": "equation",
+        "id": "eq:graded-neck-impedance",
+        "latex": "Z_n(\\Omega)=\\int_0^L [r(x)+\\mathrm{i}\\Omega m(x)]\\,dx",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Radiation at the mouth is treated as an effective contribution to the external decay, rather than being folded indiscriminately into the porous resistance. That distinction matters when interpreting profile changes: a shift in neck inertance can move the resonance, whereas a change in the mouth loading alters how strongly the mode exchanges energy with the exterior. The resistance is allowed to vary with frequency in order to reflect thermoviscous boundary losses and porous-wall effects [\\cite{4}, \\cite{6}]. These terms are not independently observable from a single response curve without additional constraints, so the model uses geometric information and a consistent loss prescription to limit parameter ambiguity. Radiation corrections for compact resonators and frequency-dependent neck-loss models provide the relevant physical basis [\\cite{3}, \\cite{6}]."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Methods and validation"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Profile construction and numerical comparison"
+      },
+      {
+        "type": "table",
+        "id": "tab:resonance-comparison",
+        "caption": "Resonance predictions for neck profiles with increasing impedance gradient",
+        "header": [
+          [
+            "Profile",
+            "FEM (Hz)",
+            "Model (Hz)",
+            "Peak A",
+            "Width (Hz)",
+            "Error (%)"
+          ]
+        ],
+        "rows": [
+          [
+            "Uniform",
+            "486",
+            "484",
+            "0.91",
+            "48",
+            "0.4"
+          ],
+          [
+            "Mild",
+            "479",
+            "478",
+            "0.92",
+            "56",
+            "0.2"
+          ],
+          [
+            "Moderate",
+            "468",
+            "470",
+            "0.90",
+            "68",
+            "0.4"
+          ],
+          [
+            "Steep",
+            "452",
+            "449",
+            "0.88",
+            "83",
+            "0.7"
+          ]
+        ],
+        "note": "Width is the full frequency span at half peak absorption; error is relative to the FEM resonance frequency."
+      },
+      {
+        "type": "paragraph",
+        "text": "Four neck profiles were considered, ordered from uniform through mild and moderate variation to a steep gradient. The inlet open area was held at 42 mm2, while the outlet area decreased across the graded cases; porosity was also varied modestly for the two strongest gradients. This design gives a systematic progression rather than a comparison among unrelated geometries. For comparison, a simple geometric descriptor is $g=(A_{in}-A_{out})/L$, which records mean area contraction per axial distance but does not encode the detailed contour. The cavity response was calculated over a frequency interval spanning the principal resonance, and each profile was evaluated with the same coupled-mode structure. The finite-element calculation supplied a numerical reference for resonance location and absorption response, following established assessment practice for graded impedance ducts [\\cite{7}]. Earlier resonator characterizations indicate that geometry-driven shifts can be interpreted reliably when resonance extraction and boundary conditions are applied consistently [\\cite{12}]."
+      },
+      {
+        "type": "equation",
+        "id": "eq:coupled-mode-response",
+        "latex": "\\begin{aligned}\n[\\mathrm{i}(\\Omega-\\Omega_0)+\\Gamma_i+\\Gamma_e]a &= \\sqrt{2\\Gamma_e}\\,s_+,\\\\\ns_- &= -s_+ + \\sqrt{2\\Gamma_e}\\,a .\n\\end{aligned}",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "For each profile, the model response was evaluated by solving for $a$ and substituting it into the outgoing-wave relation. The resulting absorption is $\\mathcal{A}(\\Omega)=1-|s_-/s_+|^2=4\\Gamma_i\\Gamma_e/[(\\Gamma_i+\\Gamma_e)^2+(\\Omega-\\Omega_0)^2]$. In a one-port configuration, the expression makes the matching condition explicit: the peak reaches unity only when the internal and external decay rates are equal within the assumed model. Departures from that balance reduce the peak even if the resonance remains sharp. The linewidth is controlled by the sum of the decay rates, whereas the center frequency is governed by the effective reactive loading. This separation helps distinguish a genuine bandwidth increase from a mere displacement of the response curve, a distinction central to single-cavity absorber design [\\cite{8}]."
+      },
+      {
+        "type": "paragraph",
+        "text": "The numerical comparison used the resonance frequency, peak absorption, and full width at half peak as complementary measures. Agreement in frequency alone would not establish that the loss balance is represented adequately, while matching the peak alone could conceal an incorrect bandwidth. The relative frequency error was computed against the finite-element resonance for each geometry. No additional tuning was introduced profile by profile beyond the prescribed impedance and loss descriptions, so the comparison tests whether a common model structure can track the full progression. The calculated errors remain below one percent for all four profiles, and the reported widths increase as the gradient steepens. Finite-element comparison is particularly useful here because it can resolve spatial pressure and velocity fields that are compressed into effective parameters in the reduced model [\\cite{7}]."
+      },
+      {
+        "type": "chart",
+        "id": "fig:chart",
+        "caption": "Peak absorption across graded-neck profiles",
+        "chart_type": "bar",
+        "labels": [
+          "Uniform",
+          "Mild",
+          "Moderate",
+          "Steep"
+        ],
+        "series": [
+          {
+            "name": "Peak absorption",
+            "values": [
+              0.91,
+              0.92,
+              0.9,
+              0.88
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Results"
+      },
+      {
+        "type": "paragraph",
+        "text": "The uniform profile resonates near 486 Hz in the finite-element calculation and near 484 Hz in the reduced model. The mild gradient shifts the corresponding values to 479 and 478 Hz, and the moderate profile gives 468 and 470 Hz. For the steep profile, the predictions are 452 and 449 Hz. Thus both descriptions indicate a downward frequency progression as the outlet area contracts. The maximum relative discrepancy in the listed comparison is 0.7 percent, with the smaller values occurring for the mild and moderate cases. This agreement supports the use of the integrated neck impedance as an effective representation over the tested range, while the small sign changes in the frequency residual caution against treating the reduced model as a uniformly biased estimator."
+      },
+      {
+        "type": "equation",
+        "id": "eq:absorption-bandwidth",
+        "latex": "\\mathcal{A}(\\Omega)=1-\\left|\\frac{s_-}{s_+}\\right|^2=\\frac{4\\Gamma_i\\Gamma_e}{(\\Gamma_i+\\Gamma_e)^2+(\\Omega-\\Omega_0)^2}",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Peak absorption is comparatively stable: the model and numerical values lie between 0.88 and 0.92 across the profiles, with the mild gradient giving the largest listed peak. The half-peak width grows from 48 Hz for the uniform geometry to 56, 68, and 83 Hz as the gradient increases. This pattern indicates that the profile chiefly broadens the response over this range, even though the peak begins to decline for the steepest case. A useful interpretation is that the gradient changes both the effective coupling and the distribution of dissipation, and those changes do not preserve exact critical matching at every frequency. Porosity and neck geometry are known to jointly shape resonant absorption, so the modest porosity variation should be considered alongside the area gradient rather than as an isolated factor [\\cite{9}]."
+      },
+      {
+        "type": "table",
+        "id": "tab:neck-geometry",
+        "caption": "Geometric and absorption values for the graded-neck configurations",
+        "header": [
+          [
+            "Profile",
+            "Inlet (mm2)",
+            "Outlet (mm2)",
+            "Porosity (%)",
+            "Peak A"
+          ]
+        ],
+        "rows": [
+          [
+            "Uniform",
+            "42",
+            "42",
+            "36",
+            "0.91"
+          ],
+          [
+            "Mild",
+            "42",
+            "38",
+            "36",
+            "0.92"
+          ],
+          [
+            "Moderate",
+            "42",
+            "32",
+            "35",
+            "0.90"
+          ],
+          [
+            "Steep",
+            "42",
+            "26",
+            "34",
+            "0.88"
+          ]
+        ],
+        "note": "Inlet and outlet values denote open cross-sectional areas; porosity is the open fraction of the neck wall."
+      },
+      {
+        "type": "paragraph",
+        "text": "The geometrical progression and absorption values are consistent with a practical tradeoff: stronger grading widens the useful frequency span, but a small loss of peak response appears at the steep end. Broadband absorption in short ducts has similarly been associated with impedance-gradient design [\\cite{11}]. The present comparison does not establish that every gradient will improve bandwidth; rather, it shows that the tested progression can do so while retaining a high peak. The charted peak sequence also reveals that the mild configuration slightly exceeds the uniform case, whereas the moderate and steep profiles move progressively lower. Such a non-monotonic peak trend is compatible with the coupled-mode balance: a profile can bring internal and external losses closer to matching before further grading moves the system away from that condition."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Interpretation and design implications"
+      },
+      {
+        "type": "paragraph",
+        "text": "The model’s main value is interpretive as well as predictive. By separating internal loss from radiation loss, it distinguishes dissipation within the porous neck and cavity from energy coupling through the opening. For a resonator with a single dominant mode, the dimensionless quality measure can be written as $Q=\\Omega_0/[2(\\Gamma_i+\\Gamma_e)]$. Increasing either decay rate broadens the response, but only a suitable ratio between them preserves a high peak. Consequently, bandwidth optimization cannot be reduced to maximizing resistance or maximizing the impedance gradient. It requires coordinated adjustment of reactive neck loading, porous loss, and radiation coupling. The modal energy accounting used here follows established scattering descriptions for coupled acoustic modes [\\cite{10}], and it offers a direct basis for explaining why a broader response may coexist with a slight reduction in peak absorption."
+      },
+      {
+        "type": "figure",
+        "id": "fig:diagram",
+        "figure_type": "block_diagram",
+        "caption": "Coupled-mode path from neck impedance to absorption",
+        "description": "The graded neck impedance drives the cavity mode; radiation loss and internal loss shape the outgoing response and resulting absorption.",
+        "labels": [
+          "Neck impedance",
+          "Cavity mode",
+          "Radiation loss",
+          "Internal loss",
+          "Absorption"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Several limits delimit the interpretation. The single-mode assumption becomes questionable when another cavity mode enters the frequency interval, and the integral neck impedance is least reliable when the profile changes abruptly over a short distance. The effective mouth correction also assumes a stable radiation environment; nearby boundaries or strong mutual coupling could change the external decay. Finally, the profiles combine area and porosity changes, so their individual contributions cannot be separated from this comparison alone. A next investigation could hold porosity fixed while varying only the area law, then reverse the procedure, and could compare fitted decay rates with independently calculated field-energy fluxes. Such tests would determine whether the observed bandwidth change is dominated by altered inertance, thermoviscous dissipation, or radiation. The present results support the coupled interpretation without claiming that one parameter alone controls the trend."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Conclusion"
+      },
+      {
+        "type": "paragraph",
+        "text": "A compact coupled-mode formulation has been used to connect a graded porous neck to the resonance and absorption response of a cavity. Its distributed impedance retains the axial variation in resistance and inertial loading, while separate internal and external decay rates clarify the absorption balance. Across the four tested profiles, predicted resonance frequencies remain close to the finite-element values, and the calculated bandwidth increases from the uniform to the steep configuration. Peak absorption stays high but declines slightly at the steepest gradient, indicating a design tradeoff rather than an unconditional gain. The formulation is therefore suited to screening graded geometries and explaining their response trends; more detailed distributed or multimode treatment remains appropriate when rapid spatial variation or overlapping resonances are present."
+      },
+      {
+        "type": "paragraph",
+        "text": "The observed response is consistent with a design strategy that seeks a controlled increase in bandwidth while preserving near-critical coupling at the principal resonance. In practical terms, the gradient should be selected together with the porous-wall loss and opening radiation, not as an independent geometric adjustment. \\fn{The reported width is the full frequency span at half peak absorption, and the frequency error is measured relative to the finite-element resonance.} Further validation across independently varied geometries would strengthen the attribution of each contribution, but the present agreement demonstrates that the reduced description captures the leading resonance shift and bandwidth variation without requiring a full field solution for every design iteration."
+      }
+    ]
+  },
+  "hash": "5c0e8d88d0d1032238de25f2ae9d9b301c59d159e8fb8022165e22bbaff508de"
+}

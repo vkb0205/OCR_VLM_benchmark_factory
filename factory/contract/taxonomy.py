@@ -11,7 +11,7 @@ class Taxonomy:
     """Category sets and string-valued attributes from the shared YAML file."""
 
     def __init__(self, path: Path | None = None):
-        self.data = yaml.safe_load((path or ROOT / "configs/taxonomy.yaml").read_text())
+        self.data = yaml.safe_load((path or ROOT / "configs/taxonomy.yaml").read_text(encoding="utf-8"))
         self.version = self.data["version"]
         self.text = set(self.data["categories"]["text"]) | {"handwriting"}
         self.spans = set(self.data["categories"]["span"])

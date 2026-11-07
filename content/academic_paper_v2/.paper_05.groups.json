@@ -1,0 +1,843 @@
+{
+  "front": {
+    "title": "Biến thiên cách xưng hô trong giao tiếp thường nhật tại các cộng đồng ven sông",
+    "authors": [
+      {
+        "name": "Vũ Lâm Thảo Nghi",
+        "affiliations": [
+          1
+        ],
+        "corresponding": false
+      },
+      {
+        "name": "Đặng Khôi Minh Tường",
+        "affiliations": [
+          1,
+          2
+        ],
+        "corresponding": true,
+        "email": "minhtuong@luuvan-ngonngu.org"
+      },
+      {
+        "name": "Trần Hải Yên Chi",
+        "affiliations": [
+          2
+        ],
+        "corresponding": false
+      }
+    ],
+    "affiliations": [
+      "Nhóm Ngôn ngữ học thực địa Lưu Vân",
+      "Tổ Nghiên cứu Tương tác và Cộng đồng Bến Mây"
+    ],
+    "abstract": "Nghiên cứu khảo sát cách lựa chọn đại từ và danh từ thân tộc trong giao tiếp thường nhật tại ba điểm cư trú ven sông thuộc một vùng chuyển tiếp nông thôn–đô thị. Tư liệu gồm ghi âm các cuộc trò chuyện tự nhiên, ghi chép quan sát và phỏng vấn hồi cố với người tham gia thuộc nhiều nhóm tuổi. Phân tích tập trung vào quan hệ giữa cách xưng hô, mức độ thân quen, chênh lệch tuổi tác và hoạt động đang diễn ra. Kết quả cho thấy người nói thường duy trì một cặp xưng hô ổn định trong phạm vi gia đình, nhưng linh hoạt chuyển sang các danh từ thân tộc mở rộng khi giao tiếp với người ngoài hộ. Những chuyển đổi này không chỉ biểu thị khoảng cách xã hội mà còn góp phần điều phối lượt lời và giảm nhẹ bất đồng. Khác biệt giữa các nhóm tuổi thể hiện rõ nhất trong tương tác với người mới đến, nơi người trẻ dùng đại từ trung tính thường xuyên hơn. Phát hiện nhấn mạnh vai trò của ngữ cảnh tương tác trong việc giải thích biến thiên xưng hô ở cộng đồng có mạng lưới quan hệ đan xen.",
+    "abstract_alt": null,
+    "keywords": "xưng hô; đại từ nhân xưng; danh từ thân tộc; giao tiếp thường nhật; ngôn ngữ học thực địa",
+    "keywords_alt": null,
+    "journal": "Tạp chí Ngôn ngữ và Tương tác Lưu Vân",
+    "acknowledgement": "Nhóm tác giả trân trọng cảm ơn các thành viên cộng đồng đã dành thời gian tham gia trò chuyện và chia sẻ nhận xét về tư liệu. Những góp ý của các cộng tác viên địa phương giúp làm rõ bối cảnh sử dụng và cách diễn giải các lượt xưng hô."
+  },
+  "formulas": [
+    {
+      "after": 2,
+      "element": {
+        "type": "equation",
+        "id": "eq:xungho-model",
+        "latex": "\\operatorname{logit}(p_{ik}) = \\beta_0 + \\beta_1 F_{ik} + \\beta_2 A_{ik} + \\beta_3 C_{ik} + u_i",
+        "numbered": true
+      }
+    }
+  ],
+  "tables": [
+    {
+      "after": 2,
+      "element": {
+        "type": "table",
+        "id": "tab:dia-ban",
+        "caption": "Đặc điểm tư liệu tại ba điểm cư trú ven sông",
+        "header": [
+          [
+            "Điểm cư trú",
+            "Người tham gia (n)",
+            "Cuộc trò chuyện (n)",
+            "Thời lượng ghi âm"
+          ]
+        ],
+        "rows": [
+          [
+            "Điểm A",
+            "14",
+            "14",
+            "5 giờ 20 phút"
+          ],
+          [
+            "Điểm B",
+            "14",
+            "14",
+            "5 giờ 10 phút"
+          ],
+          [
+            "Điểm C",
+            "14",
+            "14",
+            "5 giờ 30 phút"
+          ],
+          [
+            "Tổng",
+            "42",
+            "42",
+            "16 giờ"
+          ]
+        ],
+        "note": "Người tham gia thuộc các nhóm tuổi từ 18 đến 73; mỗi cuộc trò chuyện được ghi âm trong bối cảnh sinh hoạt thường nhật."
+      }
+    },
+    {
+      "after": 4,
+      "element": {
+        "type": "table",
+        "id": "tab:lua-chon-xungho",
+        "caption": "Duy trì và chuyển đổi cách xưng hô theo quan hệ giữa người nói",
+        "header": [
+          [
+            {
+              "text": "Quan hệ giữa người nói",
+              "rowspan": 2
+            },
+            {
+              "text": "Duy trì cặp xưng hô",
+              "colspan": 2
+            },
+            {
+              "text": "Chuyển đổi cách xưng hô",
+              "colspan": 2
+            },
+            {
+              "text": "Tổng lượt",
+              "rowspan": 2
+            }
+          ],
+          [
+            "Số lượt",
+            "Tỉ lệ",
+            "Số lượt",
+            "Tỉ lệ"
+          ]
+        ],
+        "rows": [
+          [
+            "Người cùng hộ",
+            "340",
+            "82,5%",
+            "72",
+            "17,5%",
+            "412"
+          ],
+          [
+            "Họ hàng khác hộ",
+            "251",
+            "62,4%",
+            "151",
+            "37,6%",
+            "402"
+          ],
+          [
+            "Người quen cùng xóm",
+            "198",
+            "51,3%",
+            "188",
+            "48,7%",
+            "386"
+          ],
+          [
+            "Người mới đến",
+            "96",
+            "31,0%",
+            "214",
+            "69,0%",
+            "310"
+          ],
+          [
+            "Tổng",
+            "885",
+            "58,6%",
+            "625",
+            "41,4%",
+            "1.510"
+          ]
+        ],
+        "note": "Đơn vị phân tích là lượt xưng hô được mã hóa trong các cuộc trò chuyện. Tỉ lệ tính trong từng nhóm quan hệ; các giá trị cao nhất trong hai cột tỉ lệ được in đậm."
+      }
+    },
+    {
+      "after": 6,
+      "element": {
+        "type": "table",
+        "id": "tab:chuc-nang",
+        "caption": "Các hình thức xưng hô và chức năng tương tác trong tư liệu",
+        "header": [
+          [
+            "Hình thức được mã hóa",
+            "Chức năng thường gặp",
+            "Số lượt",
+            "Tỉ lệ"
+          ]
+        ],
+        "rows": [
+          [
+            "Duy trì cặp xưng hô",
+            "Thiết lập và giữ ổn định quan hệ",
+            "566",
+            "37,5%"
+          ],
+          [
+            "Danh từ thân tộc mở rộng",
+            "Định vị quan hệ xã hội với người ngoài hộ",
+            "392",
+            "25,9%"
+          ],
+          [
+            "Đại từ trung tính",
+            "Giảm mức độ áp đặt khi giao tiếp",
+            "301",
+            "19,9%"
+          ],
+          [
+            "Lược bỏ từ xưng hô",
+            "Nối tiếp lượt lời khi quan hệ đã rõ",
+            "251",
+            "16,6%"
+          ],
+          [
+            "Tổng",
+            "—",
+            "1.510",
+            "100,0%"
+          ]
+        ],
+        "note": "Mỗi lượt được gán một hình thức nổi trội; chức năng được xác định từ ngữ cảnh liền kề và ghi chép quan sát."
+      }
+    },
+    {
+      "after": 8,
+      "element": {
+        "type": "table",
+        "id": "tab:tuoi-dai-tu",
+        "caption": "Tần suất dùng đại từ trung tính khi trò chuyện với người mới đến theo nhóm tuổi",
+        "header": [
+          [
+            "Nhóm tuổi người nói",
+            "Lượt có đại từ trung tính",
+            "Tổng lượt được xét",
+            "Tỉ lệ"
+          ]
+        ],
+        "rows": [
+          [
+            "18–29",
+            "58",
+            "112",
+            "51,8%"
+          ],
+          [
+            "30–49",
+            "39",
+            "111",
+            "35,1%"
+          ],
+          [
+            "Từ 50 trở lên",
+            "20",
+            "87",
+            "23,0%"
+          ],
+          [
+            "Tổng",
+            "117",
+            "310",
+            "37,7%"
+          ]
+        ],
+        "note": "Tỉ lệ được tính trên tổng lượt xưng hô của từng nhóm tuổi trong các tương tác với người mới đến."
+      }
+    }
+  ],
+  "charts_figures": [
+    {
+      "after": 3,
+      "element": {
+        "type": "chart",
+        "chart_type": "box",
+        "id": "fig:phan-bo-chuyen-doi",
+        "caption": "Phân bố tỉ lệ chuyển đổi cách xưng hô theo điểm cư trú",
+        "labels": [
+          "Điểm A",
+          "Điểm B",
+          "Điểm C"
+        ],
+        "series": [
+          {
+            "name": "Tỉ lệ chuyển đổi trên mỗi người tham gia (%)",
+            "values": [
+              38,
+              41,
+              44
+            ],
+            "stats": [
+              {
+                "min": 12,
+                "q1": 27,
+                "median": 38,
+                "q3": 49,
+                "max": 71
+              },
+              {
+                "min": 15,
+                "q1": 31,
+                "median": 41,
+                "q3": 53,
+                "max": 76
+              },
+              {
+                "min": 13,
+                "q1": 34,
+                "median": 44,
+                "q3": 56,
+                "max": 79
+              }
+            ]
+          }
+        ],
+        "x_label": "Điểm cư trú",
+        "y_label": "Lượt chuyển đổi trên tổng lượt xưng hô (%)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 4,
+      "element": {
+        "type": "figure",
+        "figure_type": "image_panel",
+        "id": "fig:cau-hinh-tuong-tac",
+        "caption": "Sơ đồ các cấu hình tương tác và vị trí xuất hiện của lựa chọn xưng hô",
+        "description": "Ba khung minh họa bố trí người nói, người nghe và dòng trao đổi trong các bối cảnh giao tiếp thường nhật; mũi tên đánh dấu lượt lời, còn nhãn bên cạnh nêu vị trí có thể xuất hiện cách xưng hô.",
+        "labels": [
+          "người nói",
+          "người nghe",
+          "danh từ thân tộc",
+          "đại từ trung tính",
+          "lượt lời",
+          "điểm chuyển",
+          "ghi chép",
+          "bối cảnh"
+        ],
+        "panels": [
+          {
+            "label": "A",
+            "description": "Trao đổi trong hộ gia đình, với cặp xưng hô được duy trì qua các lượt liền kề."
+          },
+          {
+            "label": "B",
+            "description": "Trò chuyện giữa người quen cùng xóm, có chuyển đổi cách xưng hô khi chủ đề thay đổi."
+          },
+          {
+            "label": "C",
+            "description": "Gặp gỡ người mới đến, thể hiện vị trí dùng đại từ trung tính và cách tiếp nối lượt lời."
+          }
+        ]
+      }
+    },
+    {
+      "after": 5,
+      "element": {
+        "type": "chart",
+        "chart_type": "area",
+        "id": "fig:ti-le-theo-quan-he",
+        "caption": "Tỉ lệ duy trì và chuyển đổi theo quan hệ giữa người nói",
+        "labels": [
+          "Người cùng hộ",
+          "Họ hàng khác hộ",
+          "Người quen cùng xóm",
+          "Người mới đến"
+        ],
+        "series": [
+          {
+            "name": "Duy trì cặp xưng hô (%)",
+            "values": [
+              82.5,
+              62.4,
+              51.3,
+              31.0
+            ]
+          },
+          {
+            "name": "Chuyển đổi cách xưng hô (%)",
+            "values": [
+              17.5,
+              37.6,
+              48.7,
+              69.0
+            ]
+          }
+        ],
+        "x_label": "Quan hệ giữa người nói",
+        "y_label": "Tỉ lệ lượt xưng hô (%)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 6,
+      "element": {
+        "type": "chart",
+        "chart_type": "stacked_bar",
+        "id": "fig:so-luot-theo-quan-he",
+        "caption": "Số lượt duy trì và chuyển đổi theo quan hệ giữa người nói",
+        "labels": [
+          "Người cùng hộ",
+          "Họ hàng khác hộ",
+          "Người quen cùng xóm",
+          "Người mới đến"
+        ],
+        "series": [
+          {
+            "name": "Duy trì cặp xưng hô (lượt)",
+            "values": [
+              340,
+              251,
+              198,
+              96
+            ]
+          },
+          {
+            "name": "Chuyển đổi cách xưng hô (lượt)",
+            "values": [
+              72,
+              151,
+              188,
+              214
+            ]
+          }
+        ],
+        "x_label": "Quan hệ giữa người nói",
+        "y_label": "Số lượt xưng hô",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 7,
+      "element": {
+        "type": "chart",
+        "chart_type": "grouped_bar",
+        "id": "fig:dai-tu-theo-tuoi",
+        "caption": "Lượt có và không có đại từ trung tính khi trò chuyện với người mới đến",
+        "labels": [
+          "18–29",
+          "30–49",
+          "Từ 50 trở lên"
+        ],
+        "series": [
+          {
+            "name": "Có đại từ trung tính (%)",
+            "values": [
+              51.8,
+              35.1,
+              23.0
+            ],
+            "errors": [
+              9.2,
+              8.8,
+              8.8
+            ]
+          },
+          {
+            "name": "Không có đại từ trung tính (%)",
+            "values": [
+              48.2,
+              64.9,
+              77.0
+            ],
+            "errors": [
+              9.2,
+              8.8,
+              8.8
+            ]
+          }
+        ],
+        "x_label": "Nhóm tuổi người nói",
+        "y_label": "Tỉ lệ lượt được xét (%)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 8,
+      "element": {
+        "type": "chart",
+        "chart_type": "bar",
+        "id": "fig:hinh-thuc-xungho",
+        "caption": "Tỉ lệ các hình thức xưng hô trong toàn bộ lượt được mã hóa",
+        "labels": [
+          "Duy trì cặp xưng hô",
+          "Danh từ thân tộc mở rộng",
+          "Đại từ trung tính",
+          "Lược bỏ từ xưng hô"
+        ],
+        "series": [
+          {
+            "name": "Tỉ lệ lượt (%)",
+            "values": [
+              37.5,
+              25.9,
+              19.9,
+              16.6
+            ],
+            "errors": [
+              2.4,
+              2.2,
+              2.0,
+              1.9
+            ]
+          }
+        ],
+        "x_label": "Hình thức được mã hóa",
+        "y_label": "Tỉ lệ trên tổng lượt (%)",
+        "legend_position": "outside"
+      }
+    }
+  ],
+  "code": [],
+  "references": [
+    {
+      "text": "[1] Vũ Lâm Thảo Nghi, Đặng Khôi Minh Tường và Trần Hải Yên Chi (2024). Biến thiên cách xưng hô trong giao tiếp thường nhật tại các cộng đồng ven sông. Tạp chí Khảo cứu Ngôn ngữ Bến Mây, 8(2), 41–68.",
+      "cite": "Vũ Lâm Thảo Nghi et al. (2024)"
+    },
+    {
+      "text": "[2] Phan Ngọc Diệp Lam (2021). Danh từ thân tộc trong tương tác ngoài hộ gia đình ở vùng cửa nước. Ngôn ngữ và Đời sống Cộng đồng, 6(1), 17–39.",
+      "cite": "Phan Ngọc Diệp Lam (2021)"
+    },
+    {
+      "text": "[3] Lê Quỳnh Tường Vi và Bùi An Kha (2019). Đại từ nhân xưng và khoảng cách xã hội trong hội thoại thường nhật. Tạp chí Ngữ dụng học Đồi Sậy, 11(3), 92–116.",
+      "cite": "Lê Quỳnh Tường Vi and Bùi An Kha (2019)"
+    },
+    {
+      "text": "[4] Nguyễn Trúc Bảo Khanh (2018). Ghi âm và quan sát trong nghiên cứu ngôn ngữ tại cộng đồng cư trú ven sông. Phương pháp Ngôn ngữ học Hiện trường, 4(2), 55–78.",
+      "cite": "Nguyễn Trúc Bảo Khanh (2018)"
+    },
+    {
+      "text": "[5] Đỗ Minh Thạch và Hà Nguyệt Cầm (2020). Lượt lời, chuyển lượt và lựa chọn từ xưng hô trong trò chuyện tự nhiên. Tương tác Ngôn ngữ, 9(1), 23–47.",
+      "cite": "Đỗ Minh Thạch and Hà Nguyệt Cầm (2020)"
+    },
+    {
+      "text": "[6] Trần Vân Khánh (2017). Mạng lưới quan hệ và biến thể ngôn ngữ trong các xóm ven dòng Lạc Vân. Khảo cứu Xã hội Ngôn ngữ, 5(2), 101–126.",
+      "cite": "Trần Vân Khánh (2017)"
+    },
+    {
+      "text": "[7] Võ Hải Đường và Lâm Phúc Nguyên (2016). Giảm nhẹ bất đồng qua cách gọi người nghe trong hội thoại gia đình. Tạp chí Ngữ dụng và Quan hệ, 7(4), 66–89.",
+      "cite": "Võ Hải Đường and Lâm Phúc Nguyên (2016)"
+    },
+    {
+      "text": "[8] Phạm Cẩm Tú (2015). Quan hệ thân tộc và cách định vị người tham gia trong giao tiếp cộng đồng. Nhà xuất bản Triền Nước.",
+      "cite": "Phạm Cẩm Tú (2015)"
+    },
+    {
+      "text": "[9] Đinh Hoài Phương (2023). Đại từ trong các ngôn ngữ vùng chuyển tiếp: lựa chọn hình thức và hàm ý quan hệ. Ngôn ngữ học Khu vực, 12(1), 5–31.",
+      "cite": "Đinh Hoài Phương (2023)"
+    },
+    {
+      "text": "[10] Bùi Thanh Ý và Tạ Quang Viễn (2014). Hệ thống xưng hô tiếng Việt qua các ngữ cảnh giao tiếp liên thế hệ. Tạp chí Cấu trúc và Sử dụng Ngôn ngữ, 3(2), 44–70.",
+      "cite": "Bùi Thanh Ý and Tạ Quang Viễn (2014)"
+    },
+    {
+      "text": "[11] Lương Nhã Uyên (2022). Tuổi tác và lựa chọn đại từ trong tương tác giữa người quen và người mới đến. Ngôn ngữ, Tuổi đời và Cộng đồng, 5(3), 81–104.",
+      "cite": "Lương Nhã Uyên (2022)"
+    },
+    {
+      "text": "[12] Hoàng Mộc Miên và Dương Nhật Tân (2020). Gặp gỡ lần đầu trong không gian cư trú có quan hệ đan xen. Tạp chí Nghiên cứu Tương tác Bờ Lau, 2(1), 29–53.",
+      "cite": "Hoàng Mộc Miên and Dương Nhật Tân (2020)"
+    },
+    {
+      "text": "[13] Mai Thùy Liên (2013). Điền dã ngôn ngữ học: ghi chép, tham dự và diễn giải tại chỗ. Nhà xuất bản Dòng Bãi.",
+      "cite": "Mai Thùy Liên (2013)"
+    },
+    {
+      "text": "[14] Tống Gia Hân (2019). Thu thập lời nói tự nhiên trong sinh hoạt thường nhật: cân nhắc về người ghi âm và bối cảnh. Phương pháp và Tư liệu Ngôn ngữ, 8(3), 112–137.",
+      "cite": "Tống Gia Hân (2019)"
+    },
+    {
+      "text": "[15] Lê Bảo Thư (2016). Chủ đề hội thoại và sự thay đổi hình thức gọi người nghe. Tạp chí Diễn ngôn Thường nhật, 10(2), 58–82.",
+      "cite": "Lê Bảo Thư (2016)"
+    },
+    {
+      "text": "[16] Phùng Trà My và Nguyễn Khải Lộc (2021). Xưng hô như phương tiện tổ chức lượt lời trong trao đổi cộng đồng. Ngôn ngữ trong Tương tác, 13(1), 36–60.",
+      "cite": "Phùng Trà My and Nguyễn Khải Lộc (2021)"
+    },
+    {
+      "text": "[17] Đào Vĩnh Nghiêm (2018). Di chuyển cư trú và sự tái định hình quan hệ giao tiếp ở các cụm dân cư ven nước. Tạp chí Cộng đồng và Biến đổi, 6(4), 73–98.",
+      "cite": "Đào Vĩnh Nghiêm (2018)"
+    },
+    {
+      "text": "[18] Nguyễn Hạ Lam Chi (2022). Từ cách gọi đến vị thế: những chỉ dấu quan hệ trong lời nói đời thường. Ngữ nghĩa và Ngữ dụng, 7(2), 14–38.",
+      "cite": "Nguyễn Hạ Lam Chi (2022)"
+    },
+    {
+      "text": "[19] Trịnh Mẫn Nhi và Cao Đức Phú (2017). Xây dựng quy trình mã hóa hình thức xưng hô trong tư liệu hội thoại. Tạp chí Phân tích Ngôn liệu, 4(1), 90–113.",
+      "cite": "Trịnh Mẫn Nhi and Cao Đức Phú (2017)"
+    },
+    {
+      "text": "[20] Phạm Thảo Nguyên (2023). Kết hợp quan sát và phỏng vấn hồi cố trong nghiên cứu giao tiếp tại địa bàn. Khảo cứu Điền dã và Ngôn ngữ, 9(1), 25–49.",
+      "cite": "Phạm Thảo Nguyên (2023)"
+    },
+    {
+      "text": "[21] Vũ Trọng Uy và Lê Diệu Hằng (2015). Mô hình hồi quy trong phân tích lựa chọn biến thể ngôn ngữ. Phương pháp Định lượng trong Ngôn ngữ học, 2(3), 61–85.",
+      "cite": "Vũ Trọng Uy and Lê Diệu Hằng (2015)"
+    },
+    {
+      "text": "[22] Hà Ngọc Châu (2020). Đồng thuận tham gia và bảo mật tư liệu trong nghiên cứu lời nói cộng đồng. Đạo đức Điền dã, 3(2), 19–42.",
+      "cite": "Hà Ngọc Châu (2020)"
+    },
+    {
+      "text": "[23] Trần Mai Thư và Phan Duy Lân (2012). Phỏng vấn hồi cố về thói quen ngôn ngữ và quan hệ xóm giềng. Tạp chí Nhân học Lời nói, 5(1), 33–57.",
+      "cite": "Trần Mai Thư and Phan Duy Lân (2012)"
+    },
+    {
+      "text": "[24] Lâm Ngọc Ánh (2019). Thân mật, kính trọng và lựa chọn cách gọi trong giao tiếp tiếng Việt. Nhà xuất bản Ngữ cảnh.",
+      "cite": "Lâm Ngọc Ánh (2019)"
+    },
+    {
+      "text": "[25] Đặng Bích Trâm (2014). Cộng đồng nói và sự thương lượng quan hệ qua ngôn từ. Nghiên cứu Ngôn ngữ và Xã hội, 8(2), 121–145.",
+      "cite": "Đặng Bích Trâm (2014)"
+    },
+    {
+      "text": "[26] Tạ Minh Châu và Võ An Nhiên (2021). Tiếp xúc phương ngữ tại vùng chuyển tiếp nông thôn–đô thị: một khảo cứu hội thoại. Tạp chí Phương ngữ và Tiếp xúc, 6(3), 47–72.",
+      "cite": "Tạ Minh Châu and Võ An Nhiên (2021)"
+    },
+    {
+      "text": "[27] Nguyễn Phúc Thảo và Hoàng Như Quỳnh (2018). Thuật ngữ thân tộc mở rộng trong giao tiếp ngoài gia đình. Từ vựng và Văn hóa, 4(4), 88–109.",
+      "cite": "Nguyễn Phúc Thảo and Hoàng Như Quỳnh (2018)"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Mở đầu"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cách gọi người đối thoại trong tiếng Việt không chỉ phản ánh quan hệ đã có sẵn mà còn giúp người nói thiết lập, điều chỉnh và duy trì quan hệ ngay trong lúc trò chuyện. Đại từ, danh từ thân tộc và việc không nêu từ xưng hô đều có thể làm thay đổi cách hiểu về tuổi tác, mức độ thân quen, quyền được phát biểu và trách nhiệm đối với chủ đề. Nghiên cứu về xưng hô vì thế cần quan sát hình thức ngôn ngữ gắn với hoạt động cụ thể, thay vì chỉ lập danh mục từ ngữ hoặc quy chúng về một hệ thống quan hệ tĩnh. Các tiếp cận trước đã nhấn mạnh đồng thời vai trò của khoảng cách xã hội, quan hệ thân tộc và tổ chức lượt lời trong việc giải thích lựa chọn ấy \\cite{1}, \\cite{2}, \\cite{3}, \\cite{5}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Bài viết khảo sát biến thiên xưng hô tại ba điểm cư trú ven sông trong một vùng chuyển tiếp nông thôn–đô thị. Tư liệu gồm 42 cuộc trò chuyện, tổng thời lượng ghi âm 16 giờ, cùng ghi chép quan sát và phỏng vấn hồi cố. Đặc điểm tư liệu và cách phân bố người tham gia được khái quát trong \\ref{tab:dia-ban}; cách mô hình hóa khả năng chuyển đổi được định hướng bởi biểu thức \\ref{eq:xungho-model}. Những kết quả so sánh theo điểm cư trú được dẫn chiếu tại \\ref{fig:phan-bo-chuyen-doi}. Các đối chiếu này cho phép đặt câu hỏi không chỉ về hình thức nào xuất hiện nhiều, mà còn về lúc nào và vì sao người nói thay đổi cách gọi."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ba câu hỏi dẫn dắt phân tích là: người nói duy trì hay chuyển đổi cặp xưng hô theo quan hệ giữa họ như thế nào; những hình thức thay thế đảm nhiệm chức năng tương tác gì; và tuổi tác có liên hệ ra sao với việc dùng đại từ trung tính khi gặp người mới đến. Các lượt trao đổi được xem xét trong chuỗi trước và sau vị trí xưng hô, đồng thời đối chiếu với bối cảnh được ghi nhận tại chỗ. Sơ đồ các cấu hình tương tác được dẫn tại \\ref{fig:cau-hinh-tuong-tac}; đối chiếu chung về duy trì và chuyển đổi được đặt cạnh \\ref{tab:lua-chon-xungho} và \\ref{fig:ti-le-theo-quan-he}. Những dẫn chiếu này xác định phạm vi chứng cứ mà bài viết diễn giải, chứ không thay thế việc đọc ngữ cảnh hội thoại."
+    },
+    {
+      "type": "paragraph",
+      "text": "Một giả định quan trọng là lựa chọn xưng hô mang tính tuần tự: cùng một hình thức có thể biểu đạt thân mật trong một lượt, nhưng ở lượt khác lại làm dịu một yêu cầu hoặc mời người nghe tiếp nhận lượt lời. Bởi vậy, tỉ lệ tổng hợp chỉ nêu xu hướng, không tự giải thích động cơ của từng trường hợp. Ở cấp độ phân tích, có thể gọi hình thức xưng hô tại lượt $t$ là $h_t$; khi hình thức được duy trì qua hai lượt liền kề thì $h_t=h_{t-1}$, dù chức năng của nó vẫn có thể đổi theo hoạt động đang diễn ra. Nghiên cứu về cách gọi người nghe, quan hệ liên thế hệ và thương lượng vị thế cung cấp cơ sở để xem xét đồng thời ý nghĩa xã hội lẫn tác dụng tại chỗ \\cite{7}, \\cite{10}, \\cite{18}, \\cite{24}, \\cite{25}. Bài viết tiếp nối hướng tiếp cận đó bằng cách kết hợp mã hóa hình thức với quan sát diễn tiến tương tác."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Địa bàn nghiên cứu"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ba điểm cư trú được chọn trong một dải ven sông có sinh hoạt gắn với các tuyến đi lại, trao đổi hàng hóa và quan hệ xóm giềng. Đây là vùng chuyển tiếp, nơi mạng lưới gia đình lâu đời cùng tồn tại với những quan hệ hình thành qua di chuyển cư trú và công việc. Mỗi điểm có 14 người tham gia và 14 cuộc trò chuyện; tổng thời lượng giữa các điểm lần lượt là 5 giờ 20 phút, 5 giờ 10 phút và 5 giờ 30 phút. Người tham gia ở độ tuổi từ 18 đến 73. Có thể tóm lược quy mô theo phép cộng $14+14+14=42$, nhưng con số này chỉ mô tả số người tham gia, không hàm ý mỗi điểm cư trú có cấu trúc xã hội giống nhau. Các đặc điểm này tạo cơ sở so sánh mà không giả định rằng mỗi điểm cư trú đại diện cho một cộng đồng đồng nhất."
+    },
+    {
+      "type": "paragraph",
+      "text": "Phạm vi địa bàn có ý nghĩa đối với xưng hô vì quan hệ giữa người nói thường vượt ranh giới hộ gia đình. Một người có thể được nhận diện như họ hàng trong một tình huống, người quen cùng xóm trong tình huống khác, hoặc người mới đến khi chưa có lịch sử tương tác đủ rõ. Mạng lưới xã hội tại các cụm cư trú ven dòng có thể định hình cơ hội gặp gỡ và sự lưu hành của biến thể ngôn ngữ \\cite{6}, \\cite{17}. Nghiên cứu về tiếp xúc phương ngữ ở vùng chuyển tiếp cũng gợi ý rằng khác biệt giữa người nói không nhất thiết đi cùng một đường ranh địa lý đơn giản \\cite{26}. Do đó, phân tích tập trung vào quan hệ được thể hiện trong từng cuộc trò chuyện hơn là gán trước một kiểu xưng hô cố định cho từng địa điểm."
+    },
+    {
+      "type": "paragraph",
+      "text": "Địa bàn không được xem như một nền cảnh thụ động. Hoạt động thường nhật, sự có mặt của người thứ ba, và việc chủ đề chuyển từ chuyện gia đình sang việc chung có thể làm thay đổi cách người nói định vị nhau. Những ghi chép về quan sát tại chỗ giúp nhận diện các điều kiện này, đồng thời hạn chế việc diễn giải lời nói như thể nó tách rời khỏi sinh hoạt. Cách tiếp cận kết hợp tham dự, ghi chép và diễn giải tại địa bàn đã được thảo luận trong nghiên cứu điền dã \\cite{13}; các khảo cứu về bối cảnh giao tiếp ven sông cũng lưu ý rằng người ghi âm và vị trí quan sát có thể tác động đến tư liệu \\cite{4}, \\cite{14}."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Quy trình chọn người tham gia và thu thập tư liệu"
+    },
+    {
+      "type": "paragraph",
+      "text": "Việc mời người tham gia hướng tới sự đa dạng về tuổi và quan hệ xã hội tại từng điểm cư trú. Nhóm nghiên cứu làm rõ mục đích ghi âm, cách sử dụng tư liệu và quyền không tiếp tục tham gia trước khi bắt đầu thu thập. Cuộc trò chuyện được ghi trong bối cảnh sinh hoạt thường nhật, không áp đặt một bộ câu hỏi cố định lên toàn bộ tương tác. Cách tổ chức này giúp giữ được những đoạn trao đổi có chuyển chủ đề, ngắt lời, xác nhận hay sửa chữa cách hiểu—những vị trí thường cho thấy chức năng của xưng hô. Các cân nhắc về đồng thuận và bảo mật được đặt làm nguyên tắc xuyên suốt \\cite{22}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Mỗi cuộc trò chuyện được ghi âm và đi kèm ghi chép về người hiện diện, hoạt động đang diễn ra, quan hệ mà người tham gia tự nêu, cùng những sự kiện có thể liên quan đến cách gọi. Sau đó, phỏng vấn hồi cố được sử dụng để hỏi người tham gia về một số lựa chọn trong tư liệu, thay vì yêu cầu họ khái quát một quy tắc chung cho mọi hoàn cảnh. Phương pháp này cho phép đối chiếu lời giải thích sau cuộc trò chuyện với diễn biến thực tế, nhưng không xem lời hồi cố là bản tường thuật hoàn toàn độc lập với ký ức và cách tự trình bày. Nghiên cứu kết hợp quan sát và phỏng vấn đã nêu rõ lợi ích của việc đặt hai nguồn thông tin cạnh nhau \\cite{20}, \\cite{23}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Tổ chức thu thập tư liệu cũng chú ý đến sự hiện diện của người ghi âm và mức độ quen thuộc giữa người tham gia với người quan sát. Khi có thể, nhóm nghiên cứu dành thời gian làm quen trước khi ghi để cuộc trò chuyện bớt mang tính trình diễn. Tuy vậy, việc có thiết bị và người quan sát vẫn có thể làm thay đổi nhịp nói hoặc lựa chọn từ ngữ; đây là đặc điểm cần tính đến trong diễn giải chứ không thể xóa bỏ hoàn toàn. Các khuyến nghị về lời nói tự nhiên và quan sát trong cộng đồng nhấn mạnh giá trị của việc ghi nhận điều kiện tạo lập tư liệu một cách minh bạch \\cite{4}, \\cite{14}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Từ ghi âm, nhóm nghiên cứu xác định các lượt có từ xưng hô rõ ràng hoặc có vị trí mà việc gọi người nghe có thể được lược bỏ. Sau đó, mỗi lượt được đối chiếu với lượt liền trước và liền sau để xác định quan hệ tương tác, chủ đề và hành động đang thực hiện. Những điểm chưa thống nhất trong phân loại được rà soát bằng cách quay lại đoạn ghi âm và ghi chép, thay vì chỉ dựa vào trực giác về sắc thái từ ngữ. Quy trình xây dựng tiêu chí mã hóa và xử lý trường hợp ranh giới có vai trò quan trọng trong phân tích ngôn liệu hội thoại \\cite{19}."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Các phép đo"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Đơn vị phân tích và phân loại hình thức"
+    },
+    {
+      "type": "paragraph",
+      "text": "Đơn vị phân tích là lượt xưng hô được nhận diện trong cuộc trò chuyện. Mỗi lượt được gán một hình thức nổi trội: duy trì cặp xưng hô, dùng danh từ thân tộc mở rộng, dùng đại từ trung tính, hoặc lược bỏ từ xưng hô. Phân loại này nhằm mô tả lựa chọn thể hiện rõ nhất tại vị trí đang xét; nó không hàm ý rằng một lượt chỉ có một chức năng xã hội. Danh từ thân tộc có thể vừa định vị người nghe trong mạng lưới quan hệ vừa làm cho yêu cầu nghe bớt trực tiếp, còn đại từ trung tính có thể báo hiệu thận trọng, chưa xác lập quan hệ hoặc đơn giản là nối tiếp một chuỗi đã rõ chủ thể. Các mô tả về quan hệ thân tộc ngoài hộ và định vị người tham gia giúp làm sáng tỏ tính đa chức năng đó \\cite{2}, \\cite{8}, \\cite{27}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cặp xưng hô được xem là duy trì khi người nói tiếp tục sử dụng lựa chọn đã được thiết lập trong chuỗi tương tác, không kể những khác biệt nhỏ về cách phát âm. Chuyển đổi được ghi nhận khi hình thức thay đổi theo hướng có thể quan sát được, chẳng hạn chuyển từ một cách gọi quen thuộc sang danh từ thân tộc mở rộng, đại từ trung tính hoặc lược bỏ. Để tránh đánh đồng mọi biến đổi hình thức với thay đổi quan hệ, nhóm phân tích xét vị trí chuyển đổi trong chuỗi và các dấu hiệu như thay đổi chủ đề, người tham dự hoặc mức độ áp đặt của hành động. Nghiên cứu về chủ đề hội thoại cho thấy sự thay đổi cách gọi có thể gắn với bước chuyển trong hoạt động, chứ không nhất thiết biểu thị rạn nứt quan hệ \\cite{15}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Tỉ lệ duy trì hoặc chuyển đổi được tính trong từng nhóm quan hệ. Nếu $N_r$ là tổng lượt thuộc nhóm quan hệ $r$, còn $D_r$ và $C_r$ lần lượt là số lượt duy trì và chuyển đổi, thì $N_r = D_r + C_r$ và tỉ lệ chuyển đổi là $100C_r/N_r$. Cách chuẩn hóa này giúp so sánh nhóm có số lượt khác nhau, nhưng không loại bỏ ảnh hưởng của việc một số người hoặc một số cuộc trò chuyện đóng góp nhiều lượt hơn. Vì vậy, số lượt và tỉ lệ được đọc song song, không dùng tỉ lệ đơn lẻ để khẳng định một quy tắc chung cho toàn cộng đồng."
+    },
+    {
+      "type": "paragraph",
+      "text": "Mô hình phân tích khả năng chuyển đổi có thể biểu diễn bằng $\\operatorname{logit}(p_{ik}) = \\beta_0 + \\beta_1 F_{ik} + \\beta_2 A_{ik} + \\beta_3 C_{ik} + u_i$, trong đó $p_{ik}$ là xác suất chuyển đổi ở lượt $k$ của người nói $i$, còn $F$, $A$ và $C$ lần lượt chỉ mức độ thân quen, chênh lệch tuổi và bối cảnh tương tác. Thành phần $u_i$ biểu thị khác biệt giữa người nói chưa được giải thích bởi các yếu tố này. Biểu thức nêu cấu trúc phân tích, không phải bằng chứng rằng một biến có tác động cụ thể hoặc có ý nghĩa thống kê; diễn giải dưới đây dựa trên các phân bố được quan sát và chuỗi hội thoại."
+    },
+    {
+      "type": "paragraph",
+      "text": "Chức năng tương tác được mã hóa từ ngữ cảnh liền kề và ghi chép quan sát. Nhóm phân tích chú ý liệu hình thức có mở đầu một yêu cầu, tiếp nối thông tin đã biết, làm mềm phản đối, hay xuất hiện sau khi chủ đề đã đổi. Trường hợp không đủ dấu hiệu để gán một chức năng chắc chắn được diễn giải thận trọng, thay vì buộc vào một nhãn duy nhất. Phân biệt hình thức với chức năng đặc biệt cần thiết vì cùng một đại từ có thể thay đổi tác dụng theo vị trí, người nghe và quan hệ giữa những người tham dự \\cite{3}, \\cite{5}, \\cite{16}."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Kết quả"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Duy trì và chuyển đổi theo quan hệ"
+    },
+    {
+      "type": "paragraph",
+      "text": "Trong 1.510 lượt được mã hóa, 885 lượt duy trì cặp xưng hô và 625 lượt ghi nhận chuyển đổi, tương ứng 58,6% và 41,4%. Chênh lệch này cho thấy duy trì là xu hướng chung, nhưng chuyển đổi vẫn chiếm một phần đáng kể của tương tác. Phân bố theo quan hệ được trình bày trong \\ref{tab:lua-chon-xungho}, còn số lượt tuyệt đối có thể đối chiếu tại \\ref{fig:so-luot-theo-quan-he}. Việc đọc cả hai dạng thông tin cho thấy tỉ lệ chuyển đổi tăng đều từ người cùng hộ đến người mới đến, trong khi số lượt ở mỗi nhóm không bằng nhau."
+    },
+    {
+      "type": "paragraph",
+      "text": "Với người cùng hộ, 82,5% lượt duy trì cặp xưng hô; tỉ lệ chuyển đổi là 17,5%. Trong quan hệ họ hàng khác hộ, duy trì giảm còn 62,4%, còn chuyển đổi tăng lên 37,6%. Ở người quen cùng xóm, hai xu hướng gần nhau hơn: 51,3% duy trì và 48,7% chuyển đổi. Với người mới đến, chuyển đổi chiếm 69,0%, so với 31,0% duy trì. Mẫu hình này phù hợp với quan sát rằng quan hệ thân thuộc trong gia đình thường cung cấp một lựa chọn tương đối ổn định, trong khi giao tiếp ngoài hộ đòi hỏi người nói cân nhắc cách định vị người nghe. Xu hướng theo tỉ lệ được minh họa qua \\ref{fig:ti-le-theo-quan-he}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Tuy nhiên, quan hệ giữa người nói không tự động quyết định hình thức. Trong một số cuộc trò chuyện giữa người quen cùng xóm, cặp xưng hô ổn định được duy trì ngay cả khi chuyển từ chuyện sinh hoạt sang trao đổi công việc. Ngược lại, giữa người cùng hộ, một lượt chuyển đổi có thể xuất hiện khi người nói đưa ra lời nhắc, bày tỏ không đồng tình hoặc chuyển sang giọng đùa. Do đó, tỉ lệ cao hơn ở nhóm người mới đến không nên được hiểu như sự vắng mặt của quan hệ xã hội; nó phản ánh việc các bên thường cần thương lượng cách gọi trước khi có một khuôn tương tác quen thuộc."
+    },
+    {
+      "type": "paragraph",
+      "text": "Tỉ lệ chuyển đổi theo từng người tham gia có độ phân tán giữa các điểm cư trú. Phân bố này được dẫn tại \\ref{fig:phan-bo-chuyen-doi}; trung vị ghi nhận lần lượt là 38% ở Điểm A, 41% ở Điểm B và 44% ở Điểm C. Các khoảng phân bố cũng chồng lấn, nên không có cơ sở để xem các điểm như ba kiểu xưng hô tách biệt. Sự khác nhau vừa phải giữa trung vị, cùng với khoảng dao động đáng kể giữa cá nhân, gợi ý rằng cấu trúc mạng lưới và lịch sử tiếp xúc trong từng cuộc gặp có thể quan trọng hơn nhãn địa điểm đơn thuần."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Hình thức và chức năng trong tương tác"
+    },
+    {
+      "type": "paragraph",
+      "text": "Trong toàn bộ lượt được xét, duy trì cặp xưng hô là hình thức nổi trội nhất, chiếm 37,5%; danh từ thân tộc mở rộng chiếm 25,9%; đại từ trung tính chiếm 19,9%; và lược bỏ từ xưng hô chiếm 16,6%. Các tỉ lệ và chức năng thường gặp được tổng hợp tại \\ref{tab:chuc-nang}, với phân bố hình thức được dẫn ở \\ref{fig:hinh-thuc-xungho}. Các con số cho thấy tính ổn định của cặp xưng hô là một nguồn lực quan trọng, nhưng các lựa chọn khác không phải những ngoại lệ hiếm hoi. Chúng hiện diện đủ thường xuyên để tham gia vào cách người nói tổ chức quan hệ và tiến trình hội thoại."
+    },
+    {
+      "type": "paragraph",
+      "text": "Danh từ thân tộc mở rộng thường xuất hiện khi người nói tiếp xúc với người ngoài hộ mà vẫn muốn đặt cuộc gặp trong một khung quan hệ dễ hiểu. Cách gọi này có thể làm giảm cảm giác xa lạ, đồng thời tránh xác định quá sớm một quan hệ cá nhân cụ thể. Trong các đoạn ghi nhận được, hình thức thân tộc đôi khi xuất hiện ở đầu lượt có lời đề nghị, sau đó người nói chuyển sang lược bỏ từ xưng hô khi chủ đề và người nghe đã rõ. Cách chuyển tiếp đó cho thấy lựa chọn ngôn ngữ vừa định vị quan hệ vừa phối hợp với tiến trình lượt lời; nghiên cứu về từ xưng hô và tổ chức tương tác đã ghi nhận cơ chế tương tự \\cite{5}, \\cite{16}, \\cite{27}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Đại từ trung tính thường được dùng ở những vị trí mà người nói chưa biết rõ cách người nghe muốn được gọi, hoặc khi họ muốn tránh một giả định thân quen không được chia sẻ. Đôi khi, đại từ này làm cho lời hỏi hoặc đề nghị ít áp đặt hơn; ở trường hợp khác, nó đơn giản là hình thức thuận tiện để tiếp nối một lượt đã xác lập chủ đề. Bởi thế, chức năng giảm nhẹ không nên được quy cho mọi lần xuất hiện. Việc phân tích đặt đại từ cạnh ngữ điệu, lượt đáp và hoàn cảnh gặp gỡ giúp phân biệt sự dè dặt quan hệ với lựa chọn nối tiếp thông thường. Các khảo cứu về đại từ và vị thế xã hội cũng nhấn mạnh cần gắn hình thức với ngữ cảnh sử dụng \\cite{9}, \\cite{18}, \\cite{24}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Lược bỏ từ xưng hô thường thấy khi người nói và người nghe đã được nhận diện rõ trong chuỗi trao đổi. Việc không gọi tên người nghe không nhất thiết tạo khoảng cách; trong nhiều lượt, nó giúp lời nói gọn và duy trì nhịp hội thoại. Nhưng ở một vị trí khác, cùng sự lược bỏ có thể làm cho lời nói ít trực tiếp hơn, nhất là khi người nói đang phản hồi một ý kiến bất đồng. Các trường hợp này cho thấy lựa chọn xưng hô cần được đọc cùng cấu trúc lượt lời, chứ không thể giải thích chỉ bằng số lần xuất hiện của từng hình thức."
+    },
+    {
+      "type": "paragraph",
+      "text": "Sơ đồ cấu hình tương tác tại \\ref{fig:cau-hinh-tuong-tac} gợi chú ý đến vị trí của cách gọi trong chuỗi trao đổi: đầu lượt, điểm chuyển chủ đề hoặc ngay trước một phản hồi. Trong trao đổi gia đình, một cặp xưng hô duy trì qua các lượt liền kề thường làm nền cho việc phối hợp hoạt động. Giữa người quen cùng xóm, việc đổi cách gọi có thể đi cùng thay đổi chủ đề hoặc thay đổi người được hướng tới. Khi gặp người mới đến, lựa chọn đại từ trung tính hay danh từ thân tộc đôi khi xuất hiện trước khi quan hệ được xác định rõ. Những mô tả này phù hợp với cách tiếp cận xem lời gọi là một phần của tổ chức tương tác chứ không chỉ là dấu hiệu từ vựng \\cite{7}, \\cite{12}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Một lượt chuyển đổi có thể đồng thời làm nhiều việc. Chẳng hạn, thay đổi cách gọi trước một lời đề nghị vừa giúp người nghe nhận ra lượt mới, vừa giảm sức nặng của yêu cầu bằng cách đặt hai bên trong một quan hệ có thể chấp nhận. Trong tình huống bất đồng, cách gọi quen thuộc có thể khẳng định sự gần gũi và mở đường cho phản đối, còn một đại từ ít đặc định hơn có thể giữ khoảng cách cần thiết. Các phân tích về giảm nhẹ bất đồng và quan hệ giữa thân mật với kính trọng cho thấy chức năng này phụ thuộc vào lịch sử tương tác cụ thể \\cite{7}, \\cite{24}. Những trường hợp được quan sát vì thế được diễn giải như lựa chọn có tính chiến lược tại chỗ, không nhất thiết là chiến lược được người nói ý thức đầy đủ."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Thảo luận"
+    },
+    {
+      "type": "paragraph",
+      "text": "Kết quả nổi bật là độ ổn định của cách xưng hô giảm khi quan hệ giữa người nói ít được xác lập trong phạm vi hộ gia đình. Đây không đơn thuần là tương phản giữa thân mật và xa lạ. Họ hàng khác hộ và người quen cùng xóm nằm ở những vị trí trung gian, nơi người nói có thể dựa vào sự quen biết nhưng vẫn cần lựa chọn hình thức phù hợp với hoạt động, tuổi tác hoặc người thứ ba đang hiện diện. Điều này gợi ý một mô hình liên tục của mức độ xác lập quan hệ, thay vì chia người tham gia thành hai nhóm cứng nhắc. Các phân tích về thân tộc và khoảng cách xã hội cung cấp nền tảng để hiểu sự liên tục ấy \\cite{2}, \\cite{3}, \\cite{8}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Việc duy trì một cặp xưng hô trong hộ gia đình có thể được giải thích bằng lịch sử tương tác lặp lại. Khi các bên đã chia sẻ kỳ vọng về cách gọi, người nói ít cần làm rõ quan hệ ở từng lượt. Tuy nhiên, ổn định không đồng nghĩa bất biến: chủ đề, hành động lời nói và sự có mặt của người khác vẫn có thể tạo điều kiện cho chuyển đổi. Sự linh hoạt này phù hợp với quan điểm rằng hệ thống xưng hô tiếng Việt gắn với quan hệ liên thế hệ nhưng được hiện thực hóa qua các bối cảnh giao tiếp cụ thể \\cite{10}, \\cite{18}. Nghiên cứu về cộng đồng nói cũng lưu ý rằng quan hệ được thương lượng bằng ngôn từ, thay vì chỉ được phản ánh một chiều \\cite{25}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Danh từ thân tộc mở rộng đóng vai trò cầu nối đáng chú ý giữa quan hệ quen thuộc và cuộc gặp ngoài hộ. Hình thức này có thể làm cho người nghe được tiếp nhận như một thành viên trong không gian xã hội rộng hơn gia đình hạt nhân, mà không đòi hỏi phải xác định quan hệ huyết thống thật sự. Việc dùng các cách gọi thân tộc theo nghĩa mở rộng đã được ghi nhận trong tương tác cộng đồng và giao tiếp ngoài gia đình \\cite{2}, \\cite{27}. Trong tư liệu hiện tại, tác dụng của nó không chỉ nằm ở nội dung thân tộc, mà còn ở khả năng tạo một điểm khởi đầu cho sự hợp tác: người nói có thể đưa ra yêu cầu hoặc trao đổi thông tin trong một khung quan hệ ít xa cách hơn."
+    },
+    {
+      "type": "paragraph",
+      "text": "Khác biệt tuổi tác hiện lên rõ nhất trong các tương tác với người mới đến. Trong nhóm người nói 18–29 tuổi, 58 trên 112 lượt được xét có đại từ trung tính, tương ứng 51,8%; nhóm 30–49 tuổi có 39 trên 111 lượt, tương ứng 35,1%; nhóm từ 50 tuổi trở lên có 20 trên 87 lượt, tương ứng 23,0%. Các số liệu được trình bày tại \\ref{tab:tuoi-dai-tu}, và so sánh theo tuổi được dẫn tại \\ref{fig:dai-tu-theo-tuoi}. Chênh lệch này phù hợp với xu hướng người trẻ chọn hình thức ít đặc định hơn khi chưa biết rõ sở thích xưng hô của người nghe, nhưng số liệu tự nó không chứng minh tuổi là nguyên nhân duy nhất."
+    },
+    {
+      "type": "paragraph",
+      "text": "Một cách giải thích khả dĩ là người trẻ có nhiều trải nghiệm giao tiếp trong các bối cảnh mà đại từ trung tính được xem là lựa chọn khởi đầu an toàn. Cách giải thích khác là họ có ít thông tin về vai vế hoặc mạng lưới của người mới đến tại địa bàn, nên tránh chọn ngay một danh từ thân tộc cụ thể. Ngược lại, người lớn tuổi có thể dựa vào quy ước địa phương hoặc nhanh chóng định vị người gặp qua quan hệ quen biết chung. Nghiên cứu về tuổi tác trong tương tác với người mới đến cũng khuyến nghị xem xét cơ hội tiếp xúc và quan hệ chứ không chỉ nhóm tuổi \\cite{11}. Do vậy, kết quả ở đây được hiểu là khác biệt trong phân bố lựa chọn, cần được kiểm tra thêm bằng dữ liệu theo từng cuộc gặp."
+    },
+    {
+      "type": "paragraph",
+      "text": "Sự khác nhau giữa các nhóm tuổi cũng không nên được diễn giải thành một đường phân chia thế hệ tuyệt đối. Các nhóm tuổi vẫn có thể cùng sử dụng danh từ thân tộc, đại từ trung tính hoặc lược bỏ, nhưng với tần suất và điều kiện khác nhau. Quan hệ giữa tuổi và xưng hô có thể chịu ảnh hưởng của vai trò trong cuộc gặp, mức độ quen thuộc, cũng như kinh nghiệm di chuyển và tiếp xúc phương ngữ. Những nghiên cứu về ngôn ngữ vùng chuyển tiếp và gặp gỡ lần đầu giúp đặt biến tuổi trong mạng lưới rộng hơn của các yếu tố xã hội \\cite{12}, \\cite{26}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Từ góc độ phương pháp, kết hợp ghi âm, quan sát và phỏng vấn hồi cố cho phép đối chiếu hình thức nghe được với cách người tham gia diễn giải quan hệ. Lời giải thích sau cuộc trò chuyện đôi khi làm rõ vì sao một cách gọi được xem là lịch sự hoặc thân mật, nhưng cũng có thể phản ánh chuẩn mực mà người nói muốn trình bày về bản thân. Vì thế, dữ liệu hồi cố được sử dụng như một nguồn bổ sung chứ không làm trọng tài cuối cùng cho ý nghĩa của lượt lời. Cách phối hợp nguồn tư liệu này phù hợp với các thảo luận về điền dã và phỏng vấn thói quen ngôn ngữ \\cite{13}, \\cite{20}, \\cite{23}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Các kết quả cũng gợi ý rằng mô hình định lượng cần tính đến sự phụ thuộc giữa các lượt của cùng người nói và cùng cuộc trò chuyện. Nếu $p_{ik}$ là xác suất chuyển đổi tại lượt $k$ của người nói $i$, thì các lượt liền nhau không nhất thiết độc lập: một lựa chọn có thể tạo tiền đề cho lựa chọn kế tiếp. Thành phần $u_i$ trong \\ref{eq:xungho-model} biểu thị một cách khái quát khác biệt giữa người nói, nhưng phân tích đầy đủ còn cần đánh giá ảnh hưởng của cuộc trò chuyện, điểm cư trú và thứ tự lượt. Các nghiên cứu về mô hình hồi quy trong phân tích biến thể ngôn ngữ nhấn mạnh việc phân định rõ đơn vị quan sát và cấu trúc phụ thuộc \\cite{21}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Về mặt lý thuyết, kết quả củng cố cách nhìn xưng hô như một nguồn lực tổ chức quan hệ trong diễn tiến giao tiếp. Người nói không chỉ chọn một danh từ hoặc đại từ để gọi người nghe; họ còn dùng sự duy trì, thay thế hoặc lược bỏ để quản lý mức độ trực tiếp, thiết lập quyền tham gia và biểu thị cách hiểu về quan hệ. Cách gọi có thể vừa biểu đạt khoảng cách vừa góp phần điều chỉnh khoảng cách ấy. Điều này phù hợp với các phân tích xem xưng hô là phương tiện định vị người tham gia, tổ chức lượt lời và điều chỉnh quan hệ trong lời nói đời thường \\cite{5}, \\cite{16}, \\cite{18}."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Hạn chế"
+    },
+    {
+      "type": "paragraph",
+      "text": "Tư liệu gồm 42 cuộc trò chuyện tại ba điểm cư trú, nên không thể đại diện cho mọi cộng đồng ven sông hoặc toàn bộ vùng chuyển tiếp nông thôn–đô thị. Mỗi điểm có số người tham gia bằng nhau, nhưng đặc điểm mạng lưới, lịch sử cư trú và cơ hội gặp người mới có thể khác nhau. Số lượt trong từng nhóm quan hệ cũng không đồng đều; vì vậy, tỉ lệ cao hoặc thấp không nên được hiểu như một ước lượng chính xác cho mọi cư dân. Những khác biệt theo địa bàn cần được xem là gợi ý để nghiên cứu tiếp, không phải phân loại cố định về phong cách của từng nơi."
+    },
+    {
+      "type": "paragraph",
+      "text": "Việc ghi âm trong sinh hoạt thường nhật vẫn có thể làm thay đổi hành vi ngôn ngữ. Người tham gia có thể nói cẩn trọng hơn, tránh những cách gọi nhạy cảm hoặc chủ động giải thích quan hệ vì biết có người quan sát. Dù nhóm nghiên cứu đã chú ý đến thời gian làm quen và ghi lại bối cảnh, không thể xác định chắc chắn những lựa chọn nào sẽ khác nếu không có thiết bị. Đây là thách thức quen thuộc trong nghiên cứu lời nói tự nhiên \\cite{14}, đồng thời cho thấy cần mô tả điều kiện ghi âm cùng tư liệu thay vì coi chúng là yếu tố không đáng kể."
+    },
+    {
+      "type": "paragraph",
+      "text": "Mã hóa chức năng tương tác cũng phụ thuộc một phần vào diễn giải của nhóm nghiên cứu. Một lượt có thể vừa nối tiếp chủ đề vừa giảm nhẹ yêu cầu, trong khi nhãn duy nhất buộc phải làm nổi bật một chức năng. Đối chiếu lượt liền kề, ghi chép và phỏng vấn giúp hạn chế sự tùy tiện, nhưng không loại bỏ hoàn toàn bất đồng về cách hiểu. Các nghiên cứu tương lai có thể công bố quy trình xử lý trường hợp ranh giới chi tiết hơn và kiểm tra độ nhất quán giữa nhiều người mã hóa, trên cơ sở những quy trình đã được đề xuất cho tư liệu hội thoại \\cite{19}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cuối cùng, các phân bố được trình bày không cung cấp kết quả ước lượng hệ số cho mô hình nêu trong phương pháp, cũng không cho phép kết luận nhân quả về tuổi tác, mức độ thân quen hay bối cảnh. Các yếu tố này thường đồng biến: người mới đến có thể đồng thời khác tuổi, khác vị thế và ít chia sẻ lịch sử tương tác. Để tách các ảnh hưởng đó cần tư liệu rộng hơn, ghi nhận rõ hơn thành phần từng cuộc trò chuyện và phân tích các chuỗi tương tác dài hơn. Sự thận trọng này phù hợp với nguyên tắc không suy rộng quá mức từ quan sát tại một số địa bàn cụ thể."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Kết luận"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nghiên cứu cho thấy người nói thường duy trì cặp xưng hô trong phạm vi hộ gia đình, nhưng mức độ chuyển đổi tăng dần ở quan hệ họ hàng khác hộ, người quen cùng xóm và người mới đến. Danh từ thân tộc mở rộng giúp định vị người ngoài hộ trong một khung quan hệ dễ tiếp nhận; đại từ trung tính có thể giảm mức độ áp đặt hoặc tránh giả định thân quen; lược bỏ từ xưng hô thường nối tiếp lượt khi người nghe đã rõ. Các lựa chọn này không có một chức năng cố định mà thay đổi theo chủ đề, hành động và vị trí trong chuỗi hội thoại."
+    },
+    {
+      "type": "paragraph",
+      "text": "Khác biệt tuổi tác thể hiện rõ trong việc dùng đại từ trung tính khi trò chuyện với người mới đến: nhóm trẻ có tỉ lệ cao hơn nhóm lớn tuổi trong tư liệu được khảo sát. Tuy nhiên, kết quả cần được đặt cạnh sự khác biệt về mạng lưới quan hệ, kinh nghiệm tiếp xúc và tình huống giao tiếp. Từ đó, đóng góp chính của nghiên cứu là nhấn mạnh rằng biến thiên xưng hô có thể được giải thích tốt hơn khi phân tích hình thức ngôn ngữ cùng diễn tiến tương tác và quan hệ được người tham gia thiết lập tại chỗ."
+    },
+    {
+      "type": "paragraph",
+      "text": "Các bước tiếp theo nên mở rộng tư liệu sang những điểm cư trú có lịch sử di chuyển khác nhau, theo dõi các quan hệ qua nhiều lần gặp và phân tích sâu hơn cách người nói đáp lại một lựa chọn xưng hô mới. Việc kết hợp mô tả định lượng với phân tích tuần tự sẽ giúp phân biệt xu hướng chung với những tình huống đặc thù, đồng thời làm rõ cách lời gọi góp phần điều phối lượt lời và giảm nhẹ bất đồng. Qua đó, nghiên cứu xưng hô có thể tiếp tục nối kết biến thể ngôn ngữ, cấu trúc quan hệ và thực hành giao tiếp thường nhật trong một khung phân tích thống nhất. \\fn{Các cách gọi được phân tích theo ngữ cảnh tương tác; tên gọi tại địa bàn không được dùng để nhận diện cá nhân tham gia.}"
+    }
+  ]
+}

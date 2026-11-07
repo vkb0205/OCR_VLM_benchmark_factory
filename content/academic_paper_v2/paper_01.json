@@ -1,0 +1,849 @@
+{
+  "content_id": "paper_01",
+  "variables": {
+    "lang": "vi",
+    "field": "materials modelling",
+    "paper_length": "short",
+    "citation_style": "numeric",
+    "element_plan": {
+      "archetype": "theoretical",
+      "counts": {
+        "chart": 4,
+        "figure": 1,
+        "table": 2,
+        "equation": 9,
+        "code": 1,
+        "references": 40
+      },
+      "chart_types": [
+        "stacked_bar",
+        "grouped_bar",
+        "line",
+        "scatter"
+      ],
+      "figure_types": [
+        "block_diagram"
+      ],
+      "sections": [
+        "Introduction",
+        "Related Work",
+        "Definitions",
+        "Main Results",
+        "Proofs",
+        "Numerical Illustration",
+        "Limitations",
+        "Conclusion"
+      ]
+    }
+  },
+  "lang": "vi",
+  "values": {
+    "title": "Mô hình hóa thế năng phi địa phương trong mạng vật liệu dị hướng",
+    "authors": [
+      {
+        "name": "Nguyễn An Kha",
+        "affiliations": [
+          1
+        ],
+        "corresponding": true,
+        "email": "ankha@vattinhoc-lab.net"
+      },
+      {
+        "name": "Trần Bảo Uyên",
+        "affiliations": [
+          2
+        ],
+        "corresponding": false
+      },
+      {
+        "name": "Lê Minh Quân",
+        "affiliations": [
+          1,
+          2
+        ],
+        "corresponding": false
+      }
+    ],
+    "affiliations": [
+      "Bộ môn Mô hình Vật liệu, Viện Cấu trúc Tinh thể Lam Sơn, Thành phố Hạ Nguyên",
+      "Phòng Tính toán Khoa học, Trung tâm Vật chất Dị hướng Vân Hà, Thành phố Hạ Nguyên"
+    ],
+    "abstract": "Chúng tôi xây dựng một khung lý thuyết cho thế năng phi địa phương của mạng vật liệu dị hướng chịu biến dạng nhỏ. Mô hình kết hợp hạt nhân suy giảm theo khoảng cách với tensor định hướng cục bộ, nhờ đó mô tả được sự chuyển tiếp giữa đáp ứng đàn hồi và tương tác tầm trung. Một định lý ổn định được chứng minh dưới điều kiện dương xác định của toán tử tương tác. Các khảo sát số cho thấy năng lượng hội tụ đơn điệu khi miền cắt tăng, trong khi độ lệch biên giảm theo quy luật lũy thừa. Kết quả cung cấp một cách diễn giải thống nhất cho ảnh hưởng của định hướng vi mô lên mô đun hiệu dụng.",
+    "abstract_alt": null,
+    "keywords": "mô hình hóa vật liệu; thế năng phi địa phương; mạng dị hướng; hội tụ năng lượng; toán tử tương tác",
+    "keywords_alt": null,
+    "journal": "Tạp chí Cơ học Tính toán Lam Nguyên",
+    "acknowledgement": "Nhóm tác giả cảm ơn Phòng Tính toán Khoa học Vân Hà đã hỗ trợ tài nguyên tính toán và các trao đổi chuyên môn về giải tích biến phân.",
+    "references": [
+      {
+        "text": "[1] Vũ Tấn Lộc, Phạm Gia Hân. Phiếm hàm năng lượng trên mạng dị hướng. Kỷ yếu Cơ học Lam Nguyên, 2013, 6: 11–24.",
+        "cite": "Vũ Tấn Lộc và Phạm Gia Hân, 2013"
+      },
+      {
+        "text": "[2] Đỗ Hải Yến, Bùi Quang Thái. Tương tác tầm trung trong vật liệu mạng. Tạp chí Vật chất Vân Hà, 2014, 9: 37–49.",
+        "cite": "Đỗ Hải Yến và Bùi Quang Thái, 2014"
+      },
+      {
+        "text": "[3] Ngô Minh Triết. Toán tử hạt nhân suy giảm và cấu trúc vi mô. Chuyên san Tính toán Hạ Nguyên, 2012, 4: 5–19.",
+        "cite": "Ngô Minh Triết, 2012"
+      },
+      {
+        "text": "[4] Lâm Ngọc Phúc, Trịnh Uyên Nhi. Mô hình liên kết định hướng. Tạp chí Cơ học Lam Nguyên, 2015, 8: 51–66.",
+        "cite": "Lâm Ngọc Phúc và Trịnh Uyên Nhi, 2015"
+      },
+      {
+        "text": "[5] Phan Đức Thành. Biến phân trên mạng hữu hạn. Kỷ yếu Toán ứng dụng Vân Hà, 2011, 3: 72–84.",
+        "cite": "Phan Đức Thành, 2011"
+      },
+      {
+        "text": "[6] Mai Thanh Vân, Lê Quốc Bảo. Đáp ứng đàn hồi của mạng không đồng nhất. Tạp chí Vật liệu Hạ Nguyên, 2016, 10: 18–31.",
+        "cite": "Mai Thanh Vân và Lê Quốc Bảo, 2016"
+      },
+      {
+        "text": "[7] Hoàng Gia Minh. Hạt nhân tích phân cho vật liệu dị hướng. Chuyên san Mô hình Lam Nguyên, 2017, 5: 40–55.",
+        "cite": "Hoàng Gia Minh, 2017"
+      },
+      {
+        "text": "[8] Trần Nguyên Kỳ, Nguyễn Bích Liên. Ổn định năng lượng trong mạng rời rạc. Kỷ yếu Cơ học Vân Hà, 2013, 7: 26–39.",
+        "cite": "Trần Nguyên Kỳ và Nguyễn Bích Liên, 2013"
+      },
+      {
+        "text": "[9] Đặng Khánh Toàn. Phân tích khoảng tương tác hữu hiệu. Tạp chí Tính toán Hạ Nguyên, 2018, 11: 9–22.",
+        "cite": "Đặng Khánh Toàn, 2018"
+      },
+      {
+        "text": "[10] Phạm Ngọc Diệp. Định hướng cục bộ trong cấu trúc mạng. Tạp chí Vật chất Lam Nguyên, 2016, 12: 44–58.",
+        "cite": "Phạm Ngọc Diệp, 2016"
+      },
+      {
+        "text": "[11] Lê Thùy Dương, Võ Minh Khang. Cưỡng bức của dạng toàn phương. Kỷ yếu Giải tích Vân Hà, 2014, 2: 61–74.",
+        "cite": "Lê Thùy Dương và Võ Minh Khang, 2014"
+      },
+      {
+        "text": "[12] Bùi An Nhiên. Mô phỏng thế năng đa lớp. Chuyên san Cơ học Hạ Nguyên, 2019, 6: 13–29.",
+        "cite": "Bùi An Nhiên, 2019"
+      },
+      {
+        "text": "[13] Nguyễn Khôi Nguyên. Sai số rời rạc trong mô hình phi địa phương. Tạp chí Lam Nguyên, 2017, 9: 33–47.",
+        "cite": "Nguyễn Khôi Nguyên, 2017"
+      },
+      {
+        "text": "[14] Đỗ Hoài Nam, Trương Yến Chi. Tensor hướng và đáp ứng vĩ mô. Tạp chí Vân Hà, 2015, 14: 21–36.",
+        "cite": "Đỗ Hoài Nam và Trương Yến Chi, 2015"
+      },
+      {
+        "text": "[15] Lý Thanh Hà. Định lý tồn tại cho mạng liên thông. Kỷ yếu Phương trình Hạ Nguyên, 2012, 8: 3–17.",
+        "cite": "Lý Thanh Hà, 2012"
+      },
+      {
+        "text": "[16] Phan Minh Châu. Không gian thương của trường biến dạng. Tạp chí Giải tích Lam Nguyên, 2016, 7: 55–68.",
+        "cite": "Phan Minh Châu, 2016"
+      },
+      {
+        "text": "[17] Võ Quốc Huy. Tính nửa liên tục của phiếm hàm mạng. Chuyên san Vân Hà, 2013, 5: 28–42.",
+        "cite": "Võ Quốc Huy, 2013"
+      },
+      {
+        "text": "[18] Nguyễn Tường Vi, Lê Hà Phương. Cực tiểu năng lượng với biên hỗn hợp. Tạp chí Cơ học Hạ Nguyên, 2018, 9: 48–62.",
+        "cite": "Nguyễn Tường Vi và Lê Hà Phương, 2018"
+      },
+      {
+        "text": "[19] Trần Hoàng Phúc. Điều kiện dương xác định cho hạt nhân. Kỷ yếu Toán tính Lam Nguyên, 2015, 4: 16–30.",
+        "cite": "Trần Hoàng Phúc, 2015"
+      },
+      {
+        "text": "[20] Mai Quang Vinh. Liên thông định hướng trong mạng tinh thể. Tạp chí Vật liệu Vân Hà, 2017, 13: 70–83.",
+        "cite": "Mai Quang Vinh, 2017"
+      },
+      {
+        "text": "[21] Đinh Bảo Trâm. Đánh giá phổ của toán tử tương tác. Chuyên san Cơ học Lam Nguyên, 2019, 10: 7–20.",
+        "cite": "Đinh Bảo Trâm, 2019"
+      },
+      {
+        "text": "[22] Lê Minh Tân. Thế năng phi địa phương và chuyển vị bất biến. Tạp chí Hạ Nguyên, 2014, 6: 35–48.",
+        "cite": "Lê Minh Tân, 2014"
+      },
+      {
+        "text": "[23] Ngô Bảo Khánh. Phân hoạch vành trong tổng suy giảm. Kỷ yếu Giải tích Vân Hà, 2016, 3: 25–38.",
+        "cite": "Ngô Bảo Khánh, 2016"
+      },
+      {
+        "text": "[24] Phạm Uyên Trang. Bất đẳng thức cho trường mạng. Tạp chí Lam Nguyên, 2013, 9: 52–65.",
+        "cite": "Phạm Uyên Trang, 2013"
+      },
+      {
+        "text": "[25] Đào Minh Đức. Hội tụ của chuỗi khoảng cách. Chuyên san Toán ứng dụng Hạ Nguyên, 2015, 2: 14–27.",
+        "cite": "Đào Minh Đức, 2015"
+      },
+      {
+        "text": "[26] Vũ Ngọc Anh. Ước lượng chuẩn cho dạng toàn phương. Tạp chí Vân Hà, 2018, 8: 39–53.",
+        "cite": "Vũ Ngọc Anh, 2018"
+      },
+      {
+        "text": "[27] Trịnh Hải Long. Biên hữu hạn trong mô hình mạng. Kỷ yếu Cơ học Lam Nguyên, 2017, 11: 63–76.",
+        "cite": "Trịnh Hải Long, 2017"
+      },
+      {
+        "text": "[28] Bùi Thùy An. Hạt nhân suy giảm theo hướng. Tạp chí Vật chất Hạ Nguyên, 2016, 5: 12–26.",
+        "cite": "Bùi Thùy An, 2016"
+      },
+      {
+        "text": "[29] Hoàng Minh Khoa. Nghiệm cực tiểu và điều kiện biên. Chuyên san Vân Hà, 2019, 7: 46–59.",
+        "cite": "Hoàng Minh Khoa, 2019"
+      },
+      {
+        "text": "[30] Lê Quang Hòa. Thuật toán lặp cho phiếm hàm mạng. Tạp chí Tính toán Lam Nguyên, 2014, 10: 18–32.",
+        "cite": "Lê Quang Hòa, 2014"
+      },
+      {
+        "text": "[31] Nguyễn Hà My. Tốc độ giảm năng lượng trong giải số. Kỷ yếu Hạ Nguyên, 2015, 6: 41–54.",
+        "cite": "Nguyễn Hà My, 2015"
+      },
+      {
+        "text": "[32] Phan Thanh Tùng. Cấu hình mạng vuông biến dạng. Tạp chí Vân Hà, 2018, 12: 5–18.",
+        "cite": "Phan Thanh Tùng, 2018"
+      },
+      {
+        "text": "[33] Đỗ Minh Quân. Đo lường sai số chuẩn hóa. Chuyên san Lam Nguyên, 2016, 8: 29–43.",
+        "cite": "Đỗ Minh Quân, 2016"
+      },
+      {
+        "text": "[34] Trần Bảo Ngọc. Phân tích độ nhạy của bán kính tương tác. Tạp chí Vật liệu Hạ Nguyên, 2017, 4: 57–71.",
+        "cite": "Trần Bảo Ngọc, 2017"
+      },
+      {
+        "text": "[35] Lê Gia Bảo. Biến dạng lớn trong mạng dị hướng. Kỷ yếu Cơ học Vân Hà, 2019, 9: 22–35.",
+        "cite": "Lê Gia Bảo, 2019"
+      },
+      {
+        "text": "[36] Võ Thanh Hà. Tái định hướng và hạt nhân động. Tạp chí Lam Nguyên, 2018, 6: 64–78.",
+        "cite": "Võ Thanh Hà, 2018"
+      },
+      {
+        "text": "[37] Mai Đức Anh. Hiệu ứng mép của miền hữu hạn. Chuyên san Hạ Nguyên, 2015, 7: 30–44.",
+        "cite": "Mai Đức Anh, 2015"
+      },
+      {
+        "text": "[38] Nguyễn Thảo Linh. Mạng ba chiều và tương tác có dấu. Tạp chí Vân Hà, 2019, 13: 11–25.",
+        "cite": "Nguyễn Thảo Linh, 2019"
+      },
+      {
+        "text": "[39] Phạm Khánh Linh. Bộ giải đa cấp cho mạng nhiều lớp. Kỷ yếu Tính toán Lam Nguyên, 2016, 5: 36–50.",
+        "cite": "Phạm Khánh Linh, 2016"
+      },
+      {
+        "text": "[40] Trương Minh Kha. Ghép trường hướng với biến dạng động. Tạp chí Cơ học Hạ Nguyên, 2018, 10: 73–87.",
+        "cite": "Trương Minh Kha, 2018"
+      }
+    ],
+    "body": [
+      {
+        "type": "chart",
+        "id": "fig:energy-convergence",
+        "chart_type": "stacked_bar",
+        "labels": [
+          "A-R2",
+          "A-R3",
+          "A-R4",
+          "B-R2",
+          "B-R3",
+          "B-R4"
+        ],
+        "series": [
+          {
+            "name": "Năng lượng giữ lại",
+            "values": [
+              0.9412,
+              0.9904,
+              0.9991,
+              0.9368,
+              0.9897,
+              0.9994
+            ],
+            "errors": [
+              0.0041,
+              0.0028,
+              0.0012,
+              0.0046,
+              0.0031,
+              0.0011
+            ]
+          },
+          {
+            "name": "Phần thiếu hụt",
+            "values": [
+              0.0588,
+              0.0096,
+              0.0009,
+              0.0632,
+              0.0103,
+              0.0006
+            ],
+            "errors": [
+              0.0041,
+              0.0028,
+              0.0012,
+              0.0046,
+              0.0031,
+              0.0011
+            ]
+          }
+        ],
+        "x_label": "Cấu hình và bán kính cắt R",
+        "y_label": "Tỷ phần năng lượng",
+        "legend_position": "outside",
+        "caption": "Tỷ phần năng lượng giữ lại và phần thiếu hụt theo cấu hình mạng và bán kính cắt; thanh sai số biểu thị độ không đảm bảo."
+      },
+      {
+        "type": "table",
+        "id": "tab:convergence",
+        "caption": "Hội tụ năng lượng theo bán kính cắt và độ phân giải mạng",
+        "header": [
+          [
+            {
+              "text": "Cấu hình",
+              "rowspan": 2
+            },
+            {
+              "text": "Bán kính cắt R",
+              "rowspan": 2
+            },
+            {
+              "text": "Năng lượng chuẩn hóa",
+              "colspan": 2
+            },
+            {
+              "text": "Sai lệch biên",
+              "rowspan": 2
+            },
+            {
+              "text": "Số vòng lặp",
+              "rowspan": 2
+            }
+          ],
+          [
+            {
+              "text": "E_R"
+            },
+            {
+              "text": "E_R/E_infty"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "Mạng A",
+            "2.0",
+            "1.2846",
+            "0.9412",
+            "5.88e-2",
+            "18"
+          ],
+          [
+            "Mạng A",
+            "3.0",
+            "1.3518",
+            "0.9904",
+            "1.74e-2",
+            "24"
+          ],
+          [
+            "Mạng A",
+            "4.0",
+            "1.3651",
+            "0.9991",
+            {
+              "text": "3.21e-3",
+              "bold": true
+            },
+            "31"
+          ],
+          [
+            "Mạng B",
+            "2.0",
+            "1.1173",
+            "0.9368",
+            "6.47e-2",
+            "21"
+          ],
+          [
+            "Mạng B",
+            "3.0",
+            "1.1865",
+            "0.9897",
+            "1.92e-2",
+            "28"
+          ],
+          [
+            "Mạng B",
+            "4.0",
+            {
+              "text": "1.1988",
+              "bold": true
+            },
+            "0.9994",
+            "2.76e-3",
+            "35"
+          ]
+        ],
+        "note": "Các giá trị được tính với lambda = 0.80 và chuẩn hóa theo năng lượng của miền không cắt; sai lệch biên giảm đơn điệu khi R tăng."
+      },
+      {
+        "type": "equation",
+        "id": "eq:energy",
+        "latex": "\\mathcal{E}[u]=\\dfrac{1}{2}\\sum_{i,j}\\exp\\left(-\\dfrac{r_{ij}}{\\lambda}\\right)\\langle \\vec{u}_j-\\vec{u}_i,\\mathbf{A}_i\\cdot(\\vec{u}_j-\\vec{u}_i)\\rangle",
+        "numbered": true
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Introduction"
+      },
+      {
+        "type": "chart",
+        "id": "fig:orientation-modulus",
+        "chart_type": "grouped_bar",
+        "labels": [
+          "A1",
+          "A2",
+          "A3",
+          "A4",
+          "A5"
+        ],
+        "series": [
+          {
+            "name": "C_eff theo e_1",
+            "values": [
+              1.0,
+              1.184,
+              1.366,
+              1.547,
+              1.721
+            ],
+            "errors": [
+              0.012,
+              0.014,
+              0.016,
+              0.018,
+              0.02
+            ]
+          },
+          {
+            "name": "C_eff theo e_2",
+            "values": [
+              1.0,
+              0.962,
+              0.924,
+              0.891,
+              0.864
+            ],
+            "errors": [
+              0.012,
+              0.011,
+              0.011,
+              0.01,
+              0.01
+            ]
+          }
+        ],
+        "x_label": "Tensor định hướng",
+        "y_label": "Mô đun hiệu dụng",
+        "legend_position": "outside",
+        "caption": "Mô đun hiệu dụng theo hai phương biến dạng ở các cấu hình tensor định hướng; thanh sai số biểu thị độ không đảm bảo."
+      },
+      {
+        "type": "table",
+        "id": "tab:orientation",
+        "caption": "Ảnh hưởng của tensor định hướng lên mô đun hiệu dụng",
+        "header": [
+          [
+            {
+              "text": "Tensor định hướng",
+              "rowspan": 2
+            },
+            {
+              "text": "Tỷ số alpha_1/alpha_3",
+              "rowspan": 2
+            },
+            {
+              "text": "Phương biến dạng",
+              "colspan": 2
+            },
+            {
+              "text": "Mô đun hiệu dụng",
+              "colspan": 2
+            }
+          ],
+          [
+            {
+              "text": "e_1"
+            },
+            {
+              "text": "e_2"
+            },
+            {
+              "text": "C_eff theo e_1"
+            },
+            {
+              "text": "C_eff theo e_2"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "A1",
+            "1.00",
+            "0.214",
+            "0.214",
+            "1.000",
+            "1.000"
+          ],
+          [
+            "A2",
+            "1.50",
+            "0.238",
+            "0.205",
+            "1.184",
+            "0.962"
+          ],
+          [
+            "A3",
+            "2.00",
+            "0.261",
+            "0.197",
+            "1.366",
+            "0.924"
+          ],
+          [
+            "A4",
+            "2.50",
+            "0.284",
+            "0.191",
+            {
+              "text": "1.547",
+              "bold": true
+            },
+            "0.891"
+          ],
+          [
+            "A5",
+            "3.00",
+            "0.307",
+            "0.186",
+            "1.721",
+            {
+              "text": "0.864",
+              "bold": true
+            }
+          ]
+        ],
+        "note": "Mỗi hàng giữ cố định mật độ nút và bán kính tương tác; giá trị in đậm là cực trị trong cùng một cột mô đun hiệu dụng."
+      },
+      {
+        "type": "equation",
+        "id": "eq:distance",
+        "latex": "r_{ij}=\\sqrt{\\langle \\vec{x}_j-\\vec{x}_i,\\vec{x}_j-\\vec{x}_i\\rangle}",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Mạng vật liệu dị hướng có thể biểu hiện đáp ứng đàn hồi khác nhau theo từng phương, ngay cả khi mật độ nút và cấu trúc liên kết ở mức vĩ mô gần như không đổi. Mô hình cục bộ thường quy toàn bộ phản ứng về lân cận gần, nên có thể bỏ sót đóng góp của tương tác ở khoảng cách trung bình và ảnh hưởng của định hướng vi mô. Các nghiên cứu về phiếm hàm trên mạng dị hướng và tương tác tầm trung đã chỉ ra nhu cầu kết hợp hai thành phần này trong một mô tả thống nhất \\cite{1}, \\cite{2}. Bài viết xây dựng một thế năng phi địa phương trong đó trọng số liên kết suy giảm theo khoảng cách, còn tensor tại mỗi nút xác định độ nhạy của năng lượng theo hướng biến dạng. Mục tiêu là đưa ra điều kiện đủ cho ổn định, mô tả sai lệch do cắt miền tương tác và phân tích cách định hướng cục bộ làm thay đổi mô đun hiệu dụng."
+      },
+      {
+        "type": "chart",
+        "id": "fig:boundary-error",
+        "chart_type": "line",
+        "labels": [
+          "2.0",
+          "3.0",
+          "4.0"
+        ],
+        "series": [
+          {
+            "name": "Mạng A",
+            "values": [
+              0.0588,
+              0.0174,
+              0.00321
+            ],
+            "errors": [
+              0.0032,
+              0.0014,
+              0.00031
+            ]
+          },
+          {
+            "name": "Mạng B",
+            "values": [
+              0.0647,
+              0.0192,
+              0.00276
+            ],
+            "errors": [
+              0.0035,
+              0.0016,
+              0.00028
+            ]
+          }
+        ],
+        "x_label": "Bán kính cắt R",
+        "y_label": "Sai lệch biên",
+        "legend_position": "outside",
+        "caption": "Sai lệch biên giảm theo bán kính cắt trong hai cấu hình mạng; thanh sai số biểu thị độ không đảm bảo."
+      },
+      {
+        "type": "equation",
+        "id": "eq:orientation",
+        "latex": "\\mathbf{A}_i=\\mathbf{Q}_i\\cdot\\operatorname{diag}(\\alpha_1,\\alpha_2,\\alpha_3)\\cdot\\mathbf{Q}_i",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Cách tiếp cận được tổ chức quanh ba câu hỏi: khi nào năng lượng bị chặn dưới, tốc độ nào có thể kỳ vọng khi bán kính tương tác tăng, và bằng cách nào tensor định hướng truyền vào đáp ứng vĩ mô. Những câu hỏi này nối tiếp các phân tích về toán tử hạt nhân suy giảm, liên kết định hướng và biến phân trên mạng hữu hạn \\cite{3}, \\cite{4}, \\cite{5}. Các số liệu hội tụ theo bán kính cắt được dẫn chiếu tại \\ref{tab:convergence}, còn so sánh mô đun theo hướng được trình bày tại \\ref{tab:orientation}. Các đồ thị tỷ phần năng lượng, mô đun định hướng, sai lệch biên và quan hệ giữa số vòng lặp với tỷ số năng lượng được dẫn chiếu lần lượt tại \\ref{fig:energy-convergence}, \\ref{fig:orientation-modulus}, \\ref{fig:boundary-error} và \\ref{fig:iterations-energy}; sơ đồ khung mô hình được dẫn tại \\ref{fig:framework-diagram}. Thủ tục đánh giá năng lượng cắt và cận ổn định được dẫn tại \\ref{alg:stability}. Những đối chiếu này định hướng phần minh họa, nhưng không thay thế các giả thiết của định lý. Trọng tâm lý thuyết vẫn là tính dương của tensor tương tác và khả năng kiểm soát tổng phần đuôi của hạt nhân."
+      },
+      {
+        "type": "chart",
+        "id": "fig:iterations-energy",
+        "chart_type": "scatter",
+        "labels": [
+          "18",
+          "24",
+          "31",
+          "21",
+          "28",
+          "35"
+        ],
+        "series": [
+          {
+            "name": "Mạng A và mạng B",
+            "points": [
+              [
+                18,
+                0.9412
+              ],
+              [
+                24,
+                0.9904
+              ],
+              [
+                31,
+                0.9991
+              ],
+              [
+                21,
+                0.9368
+              ],
+              [
+                28,
+                0.9897
+              ],
+              [
+                35,
+                0.9994
+              ]
+            ],
+            "errors": [
+              0.0041,
+              0.0028,
+              0.0012,
+              0.0046,
+              0.0031,
+              0.0011
+            ]
+          }
+        ],
+        "x_label": "Số vòng lặp",
+        "y_label": "Tỷ số năng lượng E_R/E_infty",
+        "legend_position": "outside",
+        "caption": "Tỷ số năng lượng theo số vòng lặp ở hai cấu hình mạng; thanh sai số theo trục y biểu thị độ không đảm bảo."
+      },
+      {
+        "type": "equation",
+        "id": "eq:kernel",
+        "latex": "K(r)=\\dfrac{\\exp\\left(-\\dfrac{r}{\\lambda}\\right)}{\\int_{0}^{\\infty}\\exp\\left(-\\dfrac{s}{\\lambda}\\right)\\,ds}",
+        "numbered": true
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Related Work"
+      },
+      {
+        "type": "code",
+        "id": "alg:stability",
+        "language": "pseudocode",
+        "caption": "Thủ tục đánh giá năng lượng cắt và cận ổn định của mạng dị hướng",
+        "lines": [
+          "Nhận tọa độ x, trường chuyển vị u, tensor Q, hệ số alpha, lambda và bán kính R",
+          "Đặt E bằng 0; đặt S bằng 0",
+          "Đặt a_min bằng giá trị nhỏ nhất trong các hệ số alpha",
+          "Với mỗi cặp nút có thứ tự i, j, với i khác j:",
+          "    Tính khoảng cách r giữa x_i và x_j",
+          "    Nếu r không vượt quá R:",
+          "        Tính tensor A_i từ Q_i và các hệ số alpha",
+          "        Tính trọng số w bằng exp(-r/lambda)/lambda",
+          "        Tính d bằng u_j trừ u_i",
+          "        Cộng w nhân d^T A_i d / 2 vào E",
+          "        Cộng w nhân d^T d vào S",
+          "Đặt cận ổn định bằng a_min nhân S chia 2",
+          "Trả về E và cận ổn định"
+        ]
+      },
+      {
+        "type": "figure",
+        "id": "fig:framework-diagram",
+        "figure_type": "block_diagram",
+        "description": "Sơ đồ khối của khung thế năng phi địa phương: trường biến dạng đi qua hạt nhân suy giảm, tensor định hướng cục bộ và toán tử tương tác trước khi cho năng lượng hội tụ và mô đun hiệu dụng.",
+        "labels": [
+          "Trường biến dạng",
+          "Khoảng cách nút",
+          "Hạt nhân suy giảm",
+          "Tensor định hướng",
+          "Toán tử tương tác",
+          "Năng lượng hội tụ",
+          "Mô đun hiệu dụng"
+        ],
+        "panels": [],
+        "caption": "Sơ đồ khối của khung mô hình thế năng phi địa phương và các đại lượng đầu ra."
+      },
+      {
+        "type": "equation",
+        "id": "eq:positivity",
+        "latex": "\\langle \\vec{v},\\mathbf{A}_i\\cdot\\vec{v}\\rangle\\geq\\min(\\alpha_1,\\alpha_2,\\alpha_3)\\langle \\vec{v},\\vec{v}\\rangle",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Các mô hình đàn hồi mạng không đồng nhất cho thấy việc giữ lại khác biệt giữa các nút có ý nghĩa đối với đáp ứng tổng thể \\cite{6}. Một hướng bổ sung sử dụng hạt nhân tích phân để phân phối tương tác trên nhiều khoảng cách, thay vì chỉ xét các liên kết kề nhau \\cite{7}. Với mạng rời rạc, tính ổn định năng lượng thường được suy ra từ dạng toàn phương và cấu trúc liên thông; các kết quả này tạo nền tảng để thiết lập cận dưới cho thế năng hiện tại \\cite{8}. Việc lựa chọn khoảng tương tác hữu hiệu cũng không thuần túy là thao tác tính toán, bởi bán kính cắt quyết định đồng thời chi phí và sai số biên \\cite{9}. Do đó, một mô hình có ích cần cho phép đọc riêng vai trò của suy giảm khoảng cách và vai trò của tensor định hướng, thay vì gộp chúng vào một hệ số hiệu dụng duy nhất."
+      },
+      {
+        "type": "equation",
+        "id": "eq:operator",
+        "latex": "\\mathcal{L}_i[u]=\\dfrac{\\partial\\mathcal{E}[u]}{\\partial\\vec{u}_i}=\\sum_jK(r_{ij})\\mathbf{A}_i\\cdot(\\vec{u}_i-\\vec{u}_j)",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Các nghiên cứu về định hướng cục bộ và tensor hướng đã chỉ ra rằng tính dị hướng có thể lưu lại trong đại lượng vĩ mô sau khi lấy trung bình trên cấu trúc mạng \\cite{10}, \\cite{14}. Những lập luận về cưỡng bức của dạng toàn phương cung cấp công cụ để kiểm soát trường biến dạng, còn mô hình đa lớp mở rộng khả năng biểu diễn cấu trúc phức tạp \\cite{11}, \\cite{12}. Về sai số rời rạc, cần phân biệt sai số do rời rạc hóa không gian với sai số do loại bỏ các liên kết xa \\cite{13}. Bài viết này tập trung vào thành phần thứ hai, với giả thiết rằng trường biến dạng đã được xác định trên mạng hữu hạn. Điều kiện tồn tại trên mạng liên thông, lựa chọn không gian thương để loại bỏ chuyển vị cứng, và tính nửa liên tục của phiếm hàm là các chủ đề liên quan, nhưng được dùng ở đây như nền giải tích chứ không phải kết quả trung tâm \\cite{15}, \\cite{16}, \\cite{17}."
+      },
+      {
+        "type": "equation",
+        "id": "eq:truncation",
+        "latex": "\\mathcal{E}_{R}[u]=\\dfrac{1}{2}\\sum_{r_{ij}\\leq R}K(r_{ij})\\langle \\vec{u}_j-\\vec{u}_i,\\mathbf{A}_i\\cdot(\\vec{u}_j-\\vec{u}_i)\\rangle",
+        "numbered": true
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Definitions"
+      },
+      {
+        "type": "equation",
+        "id": "eq:boundary",
+        "latex": "\\left|\\mathcal{E}_{\\infty}[u]-\\mathcal{E}_{R}[u]\\right|\\leq C\\exp\\left(-\\dfrac{R}{\\lambda}\\right)",
+        "numbered": true
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Mạng, hạt nhân và tensor định hướng"
+      },
+      {
+        "type": "equation",
+        "id": "eq:effective",
+        "latex": "\\mathcal{C}_{\\mathrm{eff}}=\\dfrac{1}{\\langle \\vec{e},\\vec{e}\\rangle}\\sum_{i,j}K(r_{ij})\\langle \\vec{e},\\mathbf{A}_i\\cdot\\vec{e}\\rangle",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Xét tập nút hữu hạn với tọa độ $x_i$ và trường chuyển vị $u_i$ trong không gian ba chiều. Với mỗi cặp nút $i,j$, ký hiệu $r_{ij}$ là khoảng cách Euclid giữa hai tọa độ; trường hợp $i=j$ được loại khỏi tổng tương tác. Năng lượng được tạo bởi hiệu chuyển vị $u_j-u_i$, nên mọi chuyển vị cứng đồng nhất đều không làm thay đổi năng lượng. Đặt hạt nhân giảm dần $K(r)=\\exp(-r/\\lambda)/\\lambda$, trong đó $\\lambda>0$ là chiều dài đặc trưng. Chuẩn hóa này tương ứng với tích phân của $\\exp(-s/\\lambda)$ trên nửa trục dương. Khi cần xử lý miền hữu hạn, chỉ giữ những cặp thỏa $r_{ij}\\leq R$. Cách xác định năng lượng theo hiệu chuyển vị phù hợp với các mô tả thế năng bất biến theo chuyển vị và điều kiện biên hỗn hợp \\cite{18}, \\cite{22}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Tại mỗi nút $i$, tensor $\\mathbf{A}_i$ được tạo từ các phương chính địa phương và ba hệ số $\\alpha_1,\\alpha_2,\\alpha_3$. Ta giả sử tensor định hướng là trực giao và các hệ số đều dương, để có bất đẳng thức $v^T\\mathbf{A}_iv\\geq a_{\\min}|v|^2$ với $a_{\\min}=\\min(\\alpha_1,\\alpha_2,\\alpha_3)>0$. Đây là giả thiết đủ, không phải khẳng định rằng mọi vật liệu dị hướng thực đều có một tensor không đổi theo biến dạng. Điều kiện dương xác định cho hạt nhân và các đánh giá chuẩn của dạng toàn phương giải thích vì sao giả thiết này dẫn đến ổn định \\cite{19}, \\cite{26}. Liên thông định hướng của mạng còn ảnh hưởng đến những trường nào được kiểm soát bởi năng lượng; nếu mạng tách thành các thành phần rời nhau, mỗi thành phần có thể mang một chuyển vị cứng riêng \\cite{20}. Phân tích phổ của toán tử tương tác giúp nhận diện sự khác nhau giữa các mode mềm và mode bị cưỡng bức \\cite{21}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Với trường $u$ cố định, năng lượng không cắt được hiểu là tổng trên mọi cặp nút của tích giữa hạt nhân, hiệu chuyển vị và tensor tại nút đầu. Trong ký hiệu ngắn, đóng góp của một cặp có dạng $K(r_{ij})(u_j-u_i)^T\\mathbf{A}_i(u_j-u_i)/2$. Hệ số một nửa tránh đếm lặp trong quy ước tổng có thứ tự; khi tensor hai đầu không giống nhau, quy ước này cần được giữ nhất quán trong định nghĩa toán tử. Vì $K(r)>0$ và $\\mathbf{A}_i$ dương xác định, mỗi đóng góp năng lượng đều không âm. Ta dùng $C_{\\mathrm{eff}}(e)$ để chỉ đáp ứng theo hướng đơn vị $e$, sau khi chuẩn hóa theo độ lớn của $e$. Tính bất biến theo chuyển vị, các bất đẳng thức cho trường mạng và cách phân hoạch tổng suy giảm là những công cụ khái niệm liên quan \\cite{22}, \\cite{23}, \\cite{24}."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Main Results"
+      },
+      {
+        "type": "paragraph",
+        "text": "Kết quả chính thứ nhất là tính ổn định của phiếm hàm trên mọi trường biến dạng có năng lượng hữu hạn. Thật vậy, với từng cặp nút, điều kiện dương xác định cho ta $(u_j-u_i)^T\\mathbf{A}_i(u_j-u_i)\\geq a_{\\min}|u_j-u_i|^2$. Nhân hai vế với $K(r_{ij})>0$ rồi cộng trên các cặp cho thấy năng lượng không âm và khống chế tổng bình phương hiệu chuyển vị có trọng số. Cận này không nhất thiết khống chế chuẩn tuyệt đối của $u$, vì phép cộng một vectơ như nhau vào mọi nút không đổi năng lượng. Sau khi cố định một nút hoặc xét không gian thương theo các chuyển vị cứng, tính liên thông cho phép diễn giải cận năng lượng như một kiểm soát thực chất của biến dạng. Lập luận phù hợp với các bất đẳng thức trường mạng và các kết quả về cực tiểu dưới điều kiện biên \\cite{24}, \\cite{29}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Kết quả thứ hai là cận sai số do cắt tương tác. Giả sử hiệu chuyển vị bị chặn đồng đều và số nút hữu hạn. Khi loại bỏ những cặp có $r_{ij}>R$, phần năng lượng mất đi không vượt quá một hằng số nhân $\\exp(-R/\\lambda)$. Cụ thể, nếu $|u_j-u_i|\\leq M$ và chuẩn toán tử của $\\mathbf{A}_i$ không vượt quá $A_{\\max}$, thì mỗi số hạng bị bỏ có độ lớn không quá $A_{\\max}M^2\\exp(-r_{ij}/\\lambda)/(2\\lambda)$. Gom các cặp theo vành khoảng cách cho phép cộng phần đuôi bằng một chuỗi suy giảm; trên mạng có mật độ nút bị chặn, có thể hấp thụ hệ số hình học vào hằng số $C$. Hội tụ của chuỗi khoảng cách, ước lượng sai số chuẩn hóa và phân tích độ nhạy của bán kính tương tác hỗ trợ cách diễn giải cận này \\cite{25}, \\cite{33}, \\cite{34}. Với miền hữu hạn, cận vẫn cần điều chỉnh theo số nút gần biên và hình học của miền, như các phân tích về biên hữu hạn đã lưu ý \\cite{27}, \\cite{37}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Kết quả thứ ba liên quan đến tính đơn điệu theo $R$. Vì mọi số hạng được thêm khi bán kính tăng đều không âm, $E_R$ không giảm theo $R$ và tiến tới $E_{\\infty}$ khi tổng hội tụ. Tính đơn điệu này không khẳng định tốc độ giống nhau ở mọi cấu trúc: mạng có phân bố khoảng cách khác nhau sẽ có hệ số trước hàm suy giảm khác nhau, và điều kiện biên có thể làm thay đổi phần đuôi hữu hiệu. Các nhân tử hướng trong hạt nhân, tương tác có dấu hoặc sự tái định hướng theo trạng thái có thể làm mất tính đơn điệu nếu đưa vào mà không bảo toàn tính dương \\cite{28}, \\cite{36}, \\cite{38}. Vì thế định lý áp dụng cho hạt nhân dương và tensor cố định trong cấu hình đang xét. Những mở rộng sang trường hướng động hay biến dạng lớn cần một phân tích riêng \\cite{35}, \\cite{40}."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Proofs"
+      },
+      {
+        "type": "paragraph",
+        "text": "Chứng minh ổn định bắt đầu từ bất đẳng thức phổ của $\\mathbf{A}_i$. Với mỗi hiệu $d_{ij}=u_j-u_i$, ta có $d_{ij}^T\\mathbf{A}_id_{ij}\\geq a_{\\min}d_{ij}^Td_{ij}$. Do trọng số $K(r_{ij})$ dương, phép nhân không đổi chiều bất đẳng thức; phép cộng hữu hạn giữ nguyên quan hệ và chứng minh năng lượng không âm. Trong trường hợp mạng vô hạn, lấy dãy miền hữu hạn tăng dần: các tổng từng phần không giảm và bị chặn nếu tổng bình phương hiệu có trọng số hữu hạn. Khi đó giới hạn tồn tại theo định nghĩa tổng các số hạng không âm. Lập luận này không đòi hỏi tensor tại hai đầu liên kết phải bằng nhau, nhưng toán tử đạo hàm tương ứng cần được suy ra từ đúng phiếm hàm, thay vì áp dụng hình thức đối xứng của mạng. Phân tích ổn định rời rạc và tính nửa liên tục cung cấp bối cảnh cho bước lấy giới hạn \\cite{8}, \\cite{17}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Để chứng minh cận cắt, viết hiệu $E_{\\infty}-E_R$ thành tổng trên các cặp có $r_{ij}>R$. Tách tổng này thành các vành có bề rộng cố định. Trên vành thứ $k$, mỗi trọng số bị chặn bởi $\\exp(-(R+k)/\\lambda)/\\lambda$ sau khi chọn đơn vị khoảng cách tương ứng; số liên kết trên vành bị khống chế bởi giả thiết mật độ. Do tổng hình học theo $k$ hội tụ, toàn bộ phần đuôi được chặn bởi $C\\exp(-R/\\lambda)$. Nếu mật độ nút tăng theo bán kính hoặc trường biến dạng không bị chặn, hằng số $C$ có thể không hữu hạn và kết luận cần giả thiết mạnh hơn. Thủ tục tính cận và năng lượng cắt được dẫn tại \\ref{alg:stability}; nó triển khai trực tiếp phép cộng các đóng góp dương và kiểm tra $a_{\\min}$. Các thuật toán lặp và bộ giải đa cấp có thể tăng tốc phép tính, nhưng không làm thay đổi lập luận phân tích \\cite{30}, \\cite{39}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Cuối cùng, tính liên tục theo trường $u$ trên mạng hữu hạn suy ra từ việc năng lượng là tổng hữu hạn các dạng toàn phương. Với miền vô hạn, hội tụ đều của phần đuôi trên tập trường bị chặn cho phép chuyển tính liên tục từ tổng cắt sang giới hạn. Bởi vậy, với điều kiện biên đóng và tập khả thi không rỗng, một dãy cực tiểu có thể được xử lý bằng lập luận compact thích hợp; việc tồn tại còn phụ thuộc vào cách loại bỏ các mode chuyển vị cứng. Kết quả này gần với các định lý tồn tại trên mạng liên thông và các bài toán cực tiểu với biên hỗn hợp \\cite{15}, \\cite{18}, \\cite{29}. Phần chứng minh không khẳng định duy nhất nghiệm: nếu cấu trúc có đối xứng hoặc tensor có các hướng suy biến, nhiều cấu hình có thể cùng đạt năng lượng tối thiểu."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Numerical Illustration"
+      },
+      {
+        "type": "paragraph",
+        "text": "Minh họa số sử dụng hai cấu hình mạng với $\\lambda=0.80$ và so sánh ba bán kính cắt $R=2.0,3.0,4.0$. Trong \\ref{tab:convergence}, tỷ số $E_R/E_{\\infty}$ tăng từ 0.9412 lên 0.9991 ở mạng A, và từ 0.9368 lên 0.9994 ở mạng B. Sai lệch biên tương ứng giảm từ 5.88e-2 xuống 3.21e-3 và từ 6.47e-2 xuống 2.76e-3. Kết quả phù hợp với tính đơn điệu đã chứng minh, đồng thời cho thấy hai mạng có hệ số tiền nhân khác nhau dù xu hướng suy giảm nhất quán. Số vòng lặp tăng theo bán kính cắt, từ 18 lên 31 ở mạng A và từ 21 lên 35 ở mạng B; đây là đánh đổi tính toán trực tiếp khi đưa thêm các tương tác xa. Các đồ thị tỷ phần năng lượng và sai lệch biên được đối chiếu tại \\ref{fig:energy-convergence} và \\ref{fig:boundary-error}. Những nghiên cứu về tốc độ giảm năng lượng và cấu hình mạng vuông biến dạng nêu các yếu tố có thể làm thay đổi mức hội tụ quan sát được \\cite{31}, \\cite{32}; quan hệ giữa số vòng lặp và tỷ số năng lượng được thể hiện tại \\ref{fig:iterations-energy}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Khảo sát định hướng giữ cố định mật độ nút và bán kính tương tác, rồi thay đổi tỷ số $\\alpha_1/\\alpha_3$. Như thể hiện ở \\ref{tab:orientation}, mô đun theo $e_1$ tăng từ 1.000 lên 1.721 khi tỷ số tăng từ 1.00 đến 3.00, trong khi mô đun theo $e_2$ giảm từ 1.000 xuống 0.864. Đây không phải mâu thuẫn với tính dương của năng lượng: dương xác định chỉ bảo đảm phản ứng không âm, chứ không buộc các hướng phải có độ cứng bằng nhau. Thay đổi tensor làm dịch chuyển trọng số tương đối của các thành phần biến dạng, và vì vậy tạo ra xu thế đối nghịch giữa hai hướng. Cách đọc này phù hợp với các phân tích về tensor hướng và đáp ứng vĩ mô \\cite{14}. Đồ thị mô đun theo hai hướng được dẫn tại \\ref{fig:orientation-modulus}. Sai số đo và quy trình chuẩn hóa vẫn cần được xem xét khi so sánh các cấu hình \\cite{33}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Các trị số hội tụ không đủ để nhận diện duy nhất số mũ suy giảm trong một miền $R$ hẹp. Ba điểm bán kính cho thấy sai lệch giảm mạnh, nhưng ước lượng số mũ từ các điểm này nhạy với sai số số học và phân bố nút gần biên. Vì vậy, minh họa được xem như kiểm tra định tính cho cận hàm mũ, không phải phép khớp chính xác một định luật lũy thừa hay một tốc độ phổ quát. Độ nhạy theo bán kính, hiệu ứng mép và sai số chuẩn hóa là những nguồn bất định đáng kể \\cite{34}, \\cite{37}. Các mạng khác, đặc biệt mạng ba chiều có tương tác mang dấu, có thể đòi hỏi kiểm tra lại điều kiện dương thay vì ngoại suy trực tiếp các xu hướng trên \\cite{38}."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Limitations"
+      },
+      {
+        "type": "paragraph",
+        "text": "Khung lý thuyết giả sử biến dạng nhỏ, tensor định hướng cố định và hạt nhân suy giảm theo khoảng cách Euclid. Giả thiết tensor dương xác định loại trừ một số cơ chế vật liệu có liên kết yếu, mất ổn định cục bộ hoặc tương tác có dấu. Cận đuôi cũng dựa vào điều kiện chặn trường biến dạng và mật độ nút; nếu một trong hai điều kiện không đúng, hằng số $C$ trong ước lượng có thể phụ thuộc vào kích thước miền. Ngoài ra, điều kiện biên được coi là đã xác định khi xây dựng không gian khả thi, nên bài viết không mô hình hóa chi tiết sự ghép nối với môi trường ngoài. Các mở rộng sang biến dạng lớn, hạt nhân động hoặc ghép trường hướng với chuyển động cần xử lý thêm tính phi tuyến và tính phụ thuộc lịch sử \\cite{35}, \\cite{36}, \\cite{40}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Một giới hạn khác là kết quả cho mô đun hiệu dụng được diễn giải trên các hướng đã chọn, chứ không tạo ra một tensor vĩ mô đầy đủ cho mọi cấu hình tải. Việc suy rộng đòi hỏi tối ưu hóa trường vi mô dưới nhiều điều kiện biên và đánh giá ảnh hưởng của hình học mạng. Mạng có các thành phần không liên thông hoặc các mode mềm có thể khiến chuẩn hóa bằng một hướng đơn vị không đủ để xác định đáp ứng ổn định. Cuối cùng, minh họa số khảo sát một khoảng tham số hẹp; những kết luận định lượng về vật liệu cụ thể cần dữ liệu cấu trúc và hiệu chuẩn độc lập. Các giới hạn này xác định rõ ranh giới giữa định lý về phiếm hàm và diễn giải vật lý của một cấu hình được tính."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Conclusion"
+      },
+      {
+        "type": "paragraph",
+        "text": "Bài viết đã trình bày thế năng phi địa phương cho mạng dị hướng bằng cách kết hợp hạt nhân suy giảm và tensor định hướng cục bộ. Tính dương của tensor tạo ra cận ổn định, còn phần đuôi của hạt nhân cho cận sai số cắt giảm theo bán kính tương tác dưới các giả thiết chặn thích hợp. Trên cơ sở đó, năng lượng cắt không giảm khi bán kính tăng và hội tụ về năng lượng không cắt. Minh họa số cho thấy năng lượng giữ lại tiến gần giá trị giới hạn, trong khi thay đổi tỷ số định hướng làm mô đun theo hai hướng biến thiên trái chiều. Các kết quả tạo một nền tảng phân tích gọn cho việc tách ảnh hưởng của khoảng cách và định hướng vi mô. Hướng phát triển tiếp theo là đưa vào tensor phụ thuộc trạng thái, kiểm soát tương tác có dấu và mở rộng phân tích sang chế độ biến dạng lớn, đồng thời duy trì các điều kiện bảo đảm ổn định."
+      },
+      {
+        "type": "paragraph",
+        "text": "\\fn{Trong toàn bộ phân tích, bán kính cắt $R$ là tham số xấp xỉ của phép tính, không phải ranh giới vật lý tuyệt đối của tương tác.}"
+      }
+    ]
+  },
+  "hash": "0c14ea0743c4192f8cf48a261249cd5abab67c946f1569a55adab1b08bbe2a85"
+}

@@ -24,25 +24,7 @@ from factory.contract.taxonomy import Taxonomy
 MAP = dict(title='title', section_header='title', text_block='text_block', list_item='text_block', reference='reference', header='header', footer='footer', page_number='page_number', caption_table='table_caption', caption_figure='figure_caption', caption_chart='figure_caption', caption_equation='equation_caption', table='table', figure='figure', chart='figure', equation_isolated='equation_isolated', code_block='code_txt', seal='figure', signature='figure', qr_code='figure', barcode='figure', form_field='abandon', checkbox='abandon', handwriting='text_block', footnote='page_footnote')
 
 
-async def capture(browser, path):
-    """Capture labelled block geometry, a PNG, and a PDF from one rendered page."""
-    async with browser.page(path, device_scale_factor=200 / 96) as (page, blocked, failed):
-        if blocked or failed:
-            raise ValueError(f"Failed resources: {blocked + failed}")
-        boxes = await page.evaluate('''() => {
-          const b=document.body.getBoundingClientRect(), s=200/96;
-          const poly=r=>[r.left-b.left,r.top-b.top,r.right-b.left,r.top-b.top,r.right-b.left,r.bottom-b.top,r.left-b.left,r.bottom-b.top].map(v=>Math.round(v*s*100)/100);
-          return [...document.querySelectorAll('[data-gt-id]')].map(e=>{
-            const spans=[], w=document.createTreeWalker(e,NodeFilter.SHOW_TEXT);
-            while(w.nextNode()){const n=w.currentNode;if(!n.textContent.trim())continue;
-              const r=document.createRange();r.selectNodeContents(n);
-              for(const box of r.getClientRects())spans.push({category_type:'text_span',poly:poly(box),ignore:false,text:n.textContent});}
-            return {id:e.dataset.gtId,category:e.dataset.gtCat,order:Number(e.dataset.gtRo),part:e.dataset.gtPart,
-              poly:poly(e.getBoundingClientRect()),text:e.innerText,html:e.querySelector('table')?.outerHTML || (e.tagName==='TABLE'?e.outerHTML:null),spans};});
-        }''')
-        image = await page.screenshot(clip=await page.locator('body').bounding_box(), animations='disabled')
-        pdf = await page.pdf(prefer_css_page_size=True, print_background=True)
-        return boxes, image, pdf
+from factory.runner.capture import CAPTURE, capture, measure_blocks
 
 VERSION = '0.1.0'
 DPI = 200
@@ -53,48 +35,7 @@ NO_MD = {'abandon', 'header', 'footer', 'page_number'}
 GENERATED = ['dataset.json', 'images', 'pdfs', 'mds', 'configs', 'source_content', 'README.md', 'VERSION',
              'checksums.sha256', 'metadata/languages.json', 'metadata/documents.csv', 'metadata/pages.csv', 'metadata/stats.json']
 
-CAPTURE = '''(textCats) => {
-  const text = new Set(textCats), b = document.body.getBoundingClientRect(), s = 200 / 96;
-  const R = v => Math.round(v * s * 100) / 100;
-  const poly = r => [r.left-b.left, r.top-b.top, r.right-b.left, r.top-b.top, r.right-b.left, r.bottom-b.top, r.left-b.left, r.bottom-b.top].map(R);
-  const nonwhite = c => { const m = (c || '').match(/[\\d.]+/g) || []; const [r, g, bl, a = 1] = m.map(Number); return a > 0.05 && !(r > 244 && g > 244 && bl > 244); };
-  return [...document.querySelectorAll('[data-gt-id]')].map(e => {
-    const cat = e.dataset.gtCat;
-    const out = {id: e.dataset.gtId, category: cat, order: Number(e.dataset.gtRo), part: e.dataset.gtPart || null,
-                 poly: poly(e.getBoundingClientRect()), text: e.innerText};
-    if (cat === 'table') {
-      const t = e.tagName === 'TABLE' ? e : e.querySelector('table');
-      out.html = t.outerHTML;
-      out.shaded = [...t.querySelectorAll('th,td')].some(c => nonwhite(getComputedStyle(c).backgroundColor));
-    } else if (text.has(cat)) {
-      const items = [], skip = n => n.parentElement.closest('[data-gt-ignore],[data-gt-cat="equation_inline"]');
-      const w = document.createTreeWalker(e, NodeFilter.SHOW_TEXT);
-      while (w.nextNode()) {
-        const n = w.currentNode, t = n.textContent;
-        if (!t.trim() || skip(n)) continue;
-        const re = /\\S+/g; let m, cur = null;
-        while ((m = re.exec(t))) {
-          const r = document.createRange(); r.setStart(n, m.index); r.setEnd(n, m.index + m[0].length);
-          const q = r.getClientRects()[0]; if (!q) continue;
-          if (cur && Math.abs(q.top - cur.top) < q.height * 0.5 && q.left >= cur.left - 1) {
-            cur.right = Math.max(cur.right, q.right); cur.bottom = Math.max(cur.bottom, q.bottom); cur.top = Math.min(cur.top, q.top);
-            cur.text += t.slice(cur.end, m.index) + m[0]; cur.end = m.index + m[0].length;
-          } else { if (cur) items.push(cur); cur = {top: q.top, bottom: q.bottom, left: q.left, right: q.right, text: m[0], end: m.index + m[0].length}; }
-        }
-        if (cur) items.push(cur);
-      }
-      const spans = items.map(i => ({top: i.top, left: i.left, category_type: 'text_span', ignore: false, text: i.text,
-        poly: poly({left: i.left, top: i.top, right: i.right, bottom: i.bottom})}));
-      for (const q of e.querySelectorAll('[data-gt-cat="equation_inline"]')) {
-        const r = q.getBoundingClientRect();
-        spans.push({top: r.top, left: r.left, category_type: 'equation_inline', ignore: false, latex: q.dataset.gtLatex, poly: poly(r)});
-      }
-      spans.sort((a, b2) => Math.round(a.top / 3) - Math.round(b2.top / 3) || a.left - b2.left);
-      out.spans = spans.map(({top, left, ...rest}) => rest);
-    }
-    return out;
-  });
-}'''
+
 
 
 def nfc(text):
@@ -133,32 +74,47 @@ def is_colorful(image):
     return sum(1 for p in px if min(p) < 225) / len(px) > 0.6
 
 
-async def process(browser, taxonomy, folder, staging, gate, source_content):
+async def process(browser, taxonomy, folder, staging, gate, source_content, review=None, prefix=""):
     async with gate:
-        manifest = json.loads((folder / 'document.json').read_text())
+        manifest = json.loads((folder / 'document.json').read_text(encoding="utf-8"))
         doc_id = manifest['doc_id']
         issues = await lint_document(folder, browser, taxonomy)
         if issues:
             return None, [f'{doc_id}: lint {issues[0].rule_id} {issues[0].message}']
-        content = {b['id']: b for b in json.loads((folder / 'content.json').read_text())['blocks']}
-        spec = json.loads((folder / 'spec.json').read_text())
+        content = {b['id']: b for b in json.loads((folder / 'content.json').read_text(encoding="utf-8"))['blocks']}
+        spec = json.loads((folder / 'spec.json').read_text(encoding="utf-8"))
         lang = spec.get('lang', 'vi')
         pages, problems = [], []
         for p in manifest['pages']:
             async with browser.page(folder / p['file'], device_scale_factor=DPI / 96) as (page, blocked, failed):
                 if blocked or failed:
                     return None, [f'{doc_id}: resources failed {blocked + failed}']
-                boxes = await page.evaluate(CAPTURE, sorted(taxonomy.text))
+                boxes = await measure_blocks(page, taxonomy.text)
                 png = await page.screenshot(clip=await page.locator('body').bounding_box(), animations='disabled')
                 pdf = await page.pdf(prefer_css_page_size=True, print_background=True)
-            image_id = f"{doc_id}_p{p['index']:03}"
+            if review:
+                decision = review.pages.get(str(p['index']))
+                if decision:
+                    for box in boxes:
+                        saved = decision.blocks.get(box['id'])
+                        if saved and saved.fix:
+                            fix = saved.fix
+                            if fix.poly is not None: box['poly'] = list(fix.poly)
+                            if fix.cat is not None: box['category'] = fix.cat
+                    if decision.order:
+                        for box in boxes: box['order'] = decision.order.index(box['id'])+1
+            image_id = f"{prefix}{doc_id}_p{p['index']:03}"
             im = Image.open(io.BytesIO(png)).convert('RGB')
             W, H = im.size
             im.save(staging / 'images' / f'{image_id}.jpg', quality=95)
             (staging / 'pdfs' / f'{image_id}.pdf').write_bytes(pdf)
             dets, md, ids, relations = [], [], {}, []
             for i, b in enumerate(sorted(boxes, key=lambda b: b['order']), 1):
-                src = content[b['id']]
+                src = dict(content[b['id']])
+                if review:
+                    page_review = review.pages.get(str(p['index']))
+                    saved = page_review.blocks.get(b['id']) if page_review else None
+                    if saved and saved.fix and saved.fix.attrs is not None: src['attrs'] = saved.fix.attrs
                 if b['category'] not in MAP:
                     problems.append(f'{image_id}: unmapped category {b["category"]}'); continue
                 cat = MAP[b['category']]
@@ -370,7 +326,29 @@ def end2end():
 '''
 
 
-async def export(source, root, allow_imbalance=False):
+def export_prefix(source, folder):
+    """Scope all exported artifacts by subset in both review modes."""
+    relative = folder.parents[2].relative_to(source).as_posix()
+    return relative.replace('/', '__').replace('.', 'root') + '__'
+
+
+def eligible_documents(source, include_unreviewed=False):
+    from factory.runner.reviews import load_review, status
+    candidates = sorted(source.glob('**/documents/*/*/document.json'))
+    selected = {}
+    folders = []
+    for path in candidates:
+        manifest = json.loads(path.read_text(encoding='utf-8'))
+        folder = path.parent
+        review = None if include_unreviewed else load_review(folder)
+        if include_unreviewed and folder.parents[2] == source:
+            if json.loads((folder/'spec.json').read_text(encoding='utf-8')).get('design') != 'agent': continue
+        elif not include_unreviewed and status(review,manifest['page_count']) != 'approved': continue
+        folders.append(folder);selected[folder]=review
+    return folders, selected
+
+
+async def export(source, root, allow_imbalance=False, include_unreviewed=False):
     root = root.resolve()
     from factory.runner.languages import stats,balance_problems
     report=stats(source)
@@ -381,19 +359,20 @@ async def export(source, root, allow_imbalance=False):
     shutil.rmtree(staging, ignore_errors=True)
     for name in ('images', 'pdfs', 'mds', 'configs', 'source_content', 'metadata'):
         (staging / name).mkdir(parents=True)
-    folders = [p.parent for p in sorted((source/'documents').glob('*/*/document.json')) if json.loads((p.parent/'spec.json').read_text()).get('design') == 'agent']
-    if not folders: raise ValueError('No accepted agent-designed bundles')
+    from factory.runner.reviews import load_review, status
+    folders, selected = eligible_documents(source, include_unreviewed)
+    if not folders: raise ValueError('No eligible documents: approve all pages before export')
     gate = asyncio.Semaphore(JOBS)
     raw = {}
     for f in folders:
-        spec = json.loads((f / 'spec.json').read_text())
+        spec = json.loads((f / 'spec.json').read_text(encoding="utf-8"))
         src = f / 'source_content.json'
         if src.exists():
             (staging / 'source_content' / spec['doc_type']).mkdir(exist_ok=True)
-            shutil.copy(src, staging / 'source_content' / spec['doc_type'] / f'{f.name}.json')
-            raw[f.name] = json.loads(src.read_text())['values']
+            shutil.copy(src, staging / 'source_content' / spec['doc_type'] / (export_prefix(source, f) + f.name + '.json'))
+            raw[f] = json.loads(src.read_text(encoding="utf-8"))['values']
     async with Browser() as browser:
-        results = await asyncio.gather(*(process(browser, taxonomy, f, staging, gate, raw.get(f.name, {})) for f in folders))
+        results = await asyncio.gather(*(process(browser, taxonomy, f, staging, gate, raw.get(f, {}), selected[f], export_prefix(source, f)) for f in folders))
     pages, docs, problems = [], [], []
     for result, issues in results:
         problems += issues
@@ -404,10 +383,10 @@ async def export(source, root, allow_imbalance=False):
                'table_footnote', 'equation_isolated', 'equation_caption', 'header', 'footer', 'page_number', 'page_footnote',
                'abandon', 'code_txt', 'code_txt_caption', 'reference'])
     problems += check(staging, pages, omni)
-    (staging/'metadata/languages.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
+    (staging/'metadata/languages.json').write_text(json.dumps(report,ensure_ascii=False,indent=2), encoding='utf-8')
     (staging / 'dataset.json').write_text(json.dumps(pages, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-    (staging / 'VERSION').write_text(VERSION + '\n')
-    (staging / 'configs/end2end.yaml').write_text(end2end())
+    (staging / 'VERSION').write_text(VERSION + '\n', encoding='utf-8')
+    (staging / 'configs/end2end.yaml').write_text(end2end(), encoding='utf-8')
     with open(staging / 'metadata/documents.csv', 'w', newline='', encoding='utf-8') as f:
         w = csv.DictWriter(f, fieldnames=list(docs[0]))
         w.writeheader(); w.writerows(docs)
@@ -426,7 +405,7 @@ async def export(source, root, allow_imbalance=False):
     (staging / 'metadata/stats.json').write_text(json.dumps(stats, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     (staging / 'README.md').write_text(readme(pages, docs, counts), encoding='utf-8')
     if problems:
-        (staging / 'BUILD_PROBLEMS.txt').write_text('\n'.join(problems) + '\n')
+        (staging / 'BUILD_PROBLEMS.txt').write_text('\n'.join(problems) + '\n', encoding='utf-8')
         print(f'{len(problems)} problems; staging kept at {staging}')
         print('\n'.join(problems[:25]))
         return 1
@@ -441,7 +420,7 @@ async def export(source, root, allow_imbalance=False):
     shutil.rmtree(staging)
     sums = ''.join(f'{hashlib.sha256(p.read_bytes()).hexdigest()}  {p.relative_to(root).as_posix()}\n'
                    for p in sorted(root.rglob('*')) if p.is_file() and p.name not in ('checksums.sha256', '.DS_Store'))
-    (root / 'checksums.sha256').write_text(sums)
+    (root / 'checksums.sha256').write_text(sums, encoding='utf-8')
     print(f'built {len(docs)} documents, {len(pages)} pages, {sum(counts.values())} blocks')
     print(json.dumps(stats['layouts']), 'colorful', stats['colorful_background'])
     return 0

@@ -1,0 +1,1069 @@
+{
+  "front": {
+    "title": "Tidal Mixing and Cross-Shelf Exchange in a Wind-Driven Coastal Embayment",
+    "authors": [
+      {
+        "name": "Mara Veylen",
+        "affiliations": [
+          1
+        ],
+        "corresponding": true,
+        "email": "mara.veylen@thaloridge-research.net"
+      },
+      {
+        "name": "Jonas Quill",
+        "affiliations": [
+          2
+        ],
+        "corresponding": false
+      },
+      {
+        "name": "Elian Sorev",
+        "affiliations": [
+          1,
+          2
+        ],
+        "corresponding": false
+      }
+    ],
+    "affiliations": [
+      "Pelagis Coastal Systems Unit, Thaloridge Marine Institute, 18 Neritic Way, Veyra Coast",
+      "Department of Earth and Ocean Processes, Lumerin Technical University, 42 Estuary Crescent, Oris Bay"
+    ],
+    "abstract": "Field observations from a tidally energetic coastal embayment were used to examine how wind stress and tidal phase regulate cross-shelf exchange. Current velocity, temperature, salinity, and near-bed turbulence were recorded along three transects during four spring-neap cycles. During spring tides, vertically integrated exchange increased by 38 percent and the position of the frontal zone shifted 1.7 kilometers toward the inner shelf. Northeasterly winds strengthened the surface outflow while producing a compensating inflow below 18 meters. The strongest mixing occurred during ebb acceleration, when bed stress and shear interacted with a sharp salinity gradient. Results indicate that tidal straining establishes the short-period structure of exchange, whereas wind forcing determines its net direction over several days. The observations provide a basis for resolving coastal transport pathways in numerical studies of shallow shelf seas.",
+    "abstract_alt": null,
+    "keywords": "ocean dynamics; tidal mixing; cross-shelf exchange; coastal circulation; wind stress; salinity fronts; turbulence",
+    "keywords_alt": null,
+    "journal": "Journal of Neritic Flow Dynamics",
+    "acknowledgement": "The authors thank the crew of the research vessel Aster Vale and the coastal monitoring team at the Veyra station for their careful assistance during instrument deployment, recovery, and current-meter calibration. We also acknowledge the residents of Oris Bay for access to the eastern shoreline and their support during the observation periods."
+  },
+  "formulas": [
+    {
+      "after": 0,
+      "element": {
+        "type": "equation",
+        "id": "eq:cross_shelf_exchange",
+        "latex": "\\mathcal{Q}_{x}=\\int_{-H}^{0}u(z)\\,dz",
+        "numbered": true
+      }
+    },
+    {
+      "after": 1,
+      "element": {
+        "type": "equation",
+        "id": "eq:bed_stress",
+        "latex": "\\tau_{b}=\\rho C_{D}\\lvert U\\rvert U",
+        "numbered": true
+      }
+    },
+    {
+      "after": 2,
+      "element": {
+        "type": "equation",
+        "id": "eq:gradient_richardson",
+        "latex": "Ri_{g}=\\frac{g\\partial\\rho/\\partial z}{\\rho_{0}(\\partial u/\\partial z)^{2}}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 3,
+      "element": {
+        "type": "equation",
+        "id": "eq:spring_neap_change",
+        "latex": "\\Delta\\mathcal{Q}=\\frac{\\mathcal{Q}_{sp}-\\mathcal{Q}_{n}}{\\mathcal{Q}_{n}}\\times100",
+        "numbered": true
+      }
+    },
+    {
+      "after": 4,
+      "element": {
+        "type": "equation",
+        "id": "eq:wind_stress",
+        "latex": "\\vec{\\tau}_{w}=\\rho_{a}C_{D}\\lvert\\vec{U}_{10}\\rvert\\vec{U}_{10}",
+        "numbered": true
+      }
+    }
+  ],
+  "tables": [
+    {
+      "after": 0,
+      "element": {
+        "type": "table",
+        "id": "tab:transect_observations",
+        "caption": "Hydrographic and turbulence observations across the three cross-shelf transects",
+        "header": [
+          [
+            {
+              "text": "Transect",
+              "rowspan": 2
+            },
+            {
+              "text": "Position",
+              "rowspan": 2
+            },
+            {
+              "text": "Depth range",
+              "rowspan": 2
+            },
+            {
+              "text": "Velocity (m s−1)",
+              "rowspan": 2
+            },
+            {
+              "text": "Hydrography",
+              "colspan": 2
+            }
+          ],
+          [
+            {
+              "text": "Temperature (degrees C)"
+            },
+            {
+              "text": "Salinity"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "T1",
+            "inner shelf",
+            "0–24 m",
+            "0.42",
+            "16.8",
+            "33.7"
+          ],
+          [
+            "T2",
+            "frontal zone",
+            "0–31 m",
+            "0.58",
+            "15.9",
+            "34.1"
+          ],
+          [
+            "T3",
+            "outer shelf",
+            "0–38 m",
+            {
+              "text": "0.63",
+              "bold": true
+            },
+            "15.4",
+            {
+              "text": "34.4",
+              "bold": true
+            }
+          ]
+        ],
+        "note": "Velocity is the depth-mean along-shelf speed; hydrographic values are cycle medians."
+      }
+    },
+    {
+      "after": 2,
+      "element": {
+        "type": "table",
+        "id": "tab:tide_phase_exchange",
+        "caption": "Cross-shelf exchange and mixing metrics by tidal phase",
+        "header": [
+          [
+            {
+              "text": "Tidal condition",
+              "colspan": 2
+            },
+            {
+              "text": "Exchange transport",
+              "colspan": 2
+            },
+            {
+              "text": "Mixing indicators",
+              "colspan": 2
+            }
+          ],
+          [
+            {
+              "text": "Phase"
+            },
+            {
+              "text": "Cycle"
+            },
+            {
+              "text": "Qx (m² s−1)"
+            },
+            {
+              "text": "Change (%)"
+            },
+            {
+              "text": "u* (cm s−1)"
+            },
+            {
+              "text": "Rig median"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "Spring",
+            "S1",
+            "184",
+            "38",
+            "1.92",
+            "0.18"
+          ],
+          [
+            "Spring",
+            "S2",
+            {
+              "text": "191",
+              "bold": true
+            },
+            "42",
+            "2.06",
+            "0.16"
+          ],
+          [
+            "Neap",
+            "N1",
+            "138",
+            "0",
+            "1.21",
+            "0.31"
+          ],
+          [
+            "Neap",
+            "N2",
+            "141",
+            "2",
+            {
+              "text": "1.27",
+              "bold": true
+            },
+            {
+              "text": "0.29",
+              "bold": true
+            }
+          ]
+        ],
+        "note": "Exchange transport is vertically integrated; positive values denote outward transport. The Richardson metric is dimensionless."
+      }
+    },
+    {
+      "after": 4,
+      "element": {
+        "type": "table",
+        "id": "tab:wind_response",
+        "caption": "Response of surface and subsurface transport to prevailing wind stress",
+        "header": [
+          [
+            {
+              "text": "Wind regime",
+              "rowspan": 2
+            },
+            {
+              "text": "Wind stress",
+              "colspan": 2
+            },
+            {
+              "text": "Surface layer",
+              "colspan": 2
+            },
+            {
+              "text": "Subsurface layer"
+            }
+          ],
+          [
+            {
+              "text": "Direction"
+            },
+            {
+              "text": "Pa"
+            },
+            {
+              "text": "Outflow (m² s−1)"
+            },
+            {
+              "text": "Depth (m)"
+            },
+            {
+              "text": "Inflow (m² s−1)"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "Northeasterly",
+            "0.084",
+            "0.71",
+            "0–18",
+            {
+              "text": "−0.46",
+              "bold": true
+            },
+            "below 18"
+          ],
+          [
+            "Easterly",
+            "0.061",
+            "0.49",
+            "0–17",
+            "−0.31",
+            "below 17"
+          ],
+          [
+            "Variable",
+            "0.037",
+            "0.22",
+            "0–15",
+            "−0.14",
+            "below 15"
+          ]
+        ],
+        "note": "Layer transports are cycle-averaged values. Negative subsurface values indicate compensating inflow."
+      }
+    }
+  ],
+  "charts_figures": [
+    {
+      "after": 0,
+      "element": {
+        "type": "chart",
+        "chart_type": "histogram",
+        "id": "fig:velocity_distribution",
+        "caption": "Distribution of depth-mean along-shelf velocity across all transect occupations",
+        "labels": [
+          "0.20–0.29",
+          "0.30–0.39",
+          "0.40–0.49",
+          "0.50–0.59",
+          "0.60–0.69",
+          "0.70–0.79"
+        ],
+        "series": [
+          {
+            "name": "Observations",
+            "values": [
+              6,
+              14,
+              21,
+              18,
+              11,
+              4
+            ],
+            "errors": [
+              1,
+              2,
+              3,
+              2,
+              2,
+              1
+            ]
+          }
+        ],
+        "x_label": "Velocity (m s−1)",
+        "y_label": "Observations (count)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 1,
+      "element": {
+        "type": "chart",
+        "chart_type": "line",
+        "id": "fig:tidal_exchange",
+        "caption": "Vertically integrated cross-shelf exchange through spring and neap tidal cycles",
+        "labels": [
+          "Flood onset",
+          "Flood maximum",
+          "Slack water",
+          "Ebb onset",
+          "Ebb maximum",
+          "Ebb relaxation"
+        ],
+        "series": [
+          {
+            "name": "Spring S1",
+            "values": [
+              112,
+              156,
+              128,
+              149,
+              184,
+              137
+            ],
+            "errors": [
+              8,
+              10,
+              9,
+              9,
+              12,
+              8
+            ]
+          },
+          {
+            "name": "Spring S2",
+            "values": [
+              118,
+              163,
+              132,
+              155,
+              191,
+              143
+            ],
+            "errors": [
+              7,
+              11,
+              8,
+              10,
+              13,
+              9
+            ]
+          },
+          {
+            "name": "Neap mean",
+            "values": [
+              91,
+              117,
+              103,
+              121,
+              140,
+              108
+            ],
+            "errors": [
+              6,
+              8,
+              7,
+              8,
+              9,
+              7
+            ]
+          }
+        ],
+        "x_label": "Tidal phase",
+        "y_label": "Exchange transport (m² s−1)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 2,
+      "element": {
+        "type": "chart",
+        "chart_type": "area",
+        "id": "fig:vertical_shear",
+        "caption": "Vertical structure of along-shelf velocity during ebb acceleration",
+        "labels": [
+          "0",
+          "3",
+          "6",
+          "9",
+          "12",
+          "15",
+          "18",
+          "21",
+          "24",
+          "30",
+          "36"
+        ],
+        "series": [
+          {
+            "name": "T1",
+            "values": [
+              0.51,
+              0.49,
+              0.46,
+              0.43,
+              0.39,
+              0.34,
+              0.28,
+              0.22,
+              0.17,
+              0.12,
+              0.08
+            ],
+            "errors": [
+              0.03,
+              0.03,
+              0.03,
+              0.02,
+              0.02,
+              0.02,
+              0.02,
+              0.02,
+              0.01,
+              0.01,
+              0.01
+            ]
+          },
+          {
+            "name": "T2",
+            "values": [
+              0.66,
+              0.64,
+              0.61,
+              0.57,
+              0.52,
+              0.46,
+              0.39,
+              0.31,
+              0.24,
+              0.16,
+              0.11
+            ],
+            "errors": [
+              0.04,
+              0.04,
+              0.03,
+              0.03,
+              0.03,
+              0.03,
+              0.02,
+              0.02,
+              0.02,
+              0.01,
+              0.01
+            ]
+          },
+          {
+            "name": "T3",
+            "values": [
+              0.71,
+              0.69,
+              0.66,
+              0.62,
+              0.57,
+              0.51,
+              0.44,
+              0.37,
+              0.29,
+              0.2,
+              0.14
+            ],
+            "errors": [
+              0.04,
+              0.04,
+              0.04,
+              0.03,
+              0.03,
+              0.03,
+              0.03,
+              0.02,
+              0.02,
+              0.02,
+              0.01
+            ]
+          }
+        ],
+        "x_label": "Depth (m)",
+        "y_label": "Along-shelf velocity (m s−1)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 3,
+      "element": {
+        "type": "chart",
+        "chart_type": "grouped_bar",
+        "id": "fig:mixing_phase_comparison",
+        "caption": "Tidal-phase comparison of bed friction velocity and stratification",
+        "labels": [
+          "Spring S1",
+          "Spring S2",
+          "Neap N1",
+          "Neap N2"
+        ],
+        "series": [
+          {
+            "name": "Bed friction velocity",
+            "values": [
+              1.92,
+              2.06,
+              1.21,
+              1.27
+            ],
+            "errors": [
+              0.11,
+              0.12,
+              0.08,
+              0.08
+            ]
+          },
+          {
+            "name": "Richardson number multiplied by 5",
+            "values": [
+              0.9,
+              0.8,
+              1.55,
+              1.45
+            ],
+            "errors": [
+              0.08,
+              0.07,
+              0.1,
+              0.09
+            ]
+          }
+        ],
+        "x_label": "Tidal cycle",
+        "y_label": "Metric value (cm s−1; scaled dimensionless value)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 4,
+      "element": {
+        "type": "chart",
+        "chart_type": "box",
+        "id": "fig:salinity_front",
+        "caption": "Salinity distributions on the inner, frontal, and outer shelf transects",
+        "labels": [
+          "T1 inner shelf",
+          "T2 frontal zone",
+          "T3 outer shelf"
+        ],
+        "series": [
+          {
+            "name": "Salinity",
+            "stats": [
+              {
+                "min": 33.42,
+                "q1": 33.58,
+                "median": 33.7,
+                "q3": 33.82,
+                "max": 33.96
+              },
+              {
+                "min": 33.79,
+                "q1": 33.96,
+                "median": 34.1,
+                "q3": 34.23,
+                "max": 34.38
+              },
+              {
+                "min": 34.08,
+                "q1": 34.25,
+                "median": 34.4,
+                "q3": 34.52,
+                "max": 34.66
+              }
+            ]
+          }
+        ],
+        "x_label": "Transect",
+        "y_label": "Salinity (practical salinity units)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 5,
+      "element": {
+        "type": "chart",
+        "chart_type": "bar",
+        "id": "fig:wind_transport",
+        "caption": "Layer-integrated transport response to observed wind regimes",
+        "labels": [
+          "Northeasterly",
+          "Easterly",
+          "Variable"
+        ],
+        "series": [
+          {
+            "name": "Surface outflow",
+            "values": [
+              0.71,
+              0.49,
+              0.22
+            ],
+            "errors": [
+              0.05,
+              0.04,
+              0.03
+            ]
+          },
+          {
+            "name": "Subsurface inflow magnitude",
+            "values": [
+              0.46,
+              0.31,
+              0.14
+            ],
+            "errors": [
+              0.04,
+              0.03,
+              0.02
+            ]
+          }
+        ],
+        "x_label": "Wind regime",
+        "y_label": "Transport magnitude (m² s−1)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 6,
+      "element": {
+        "type": "chart",
+        "chart_type": "stacked_bar",
+        "id": "fig:exchange_partition",
+        "caption": "Partitioning of outward and compensating inward transport across the water column",
+        "labels": [
+          "Northeasterly",
+          "Easterly",
+          "Variable"
+        ],
+        "series": [
+          {
+            "name": "Surface outflow",
+            "values": [
+              0.71,
+              0.49,
+              0.22
+            ],
+            "errors": [
+              0.05,
+              0.04,
+              0.03
+            ]
+          },
+          {
+            "name": "Subsurface inflow magnitude",
+            "values": [
+              0.46,
+              0.31,
+              0.14
+            ],
+            "errors": [
+              0.04,
+              0.03,
+              0.02
+            ]
+          }
+        ],
+        "x_label": "Wind regime",
+        "y_label": "Layer transport magnitude (m² s−1)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 7,
+      "element": {
+        "type": "figure",
+        "figure_type": "multi_panel",
+        "id": "fig:cross_shelf_processes",
+        "caption": "Multi-panel view of hydrographic structure, tidal mixing, and wind-driven exchange",
+        "description": "Four coordinated panels show the cross-shelf salinity front, vertical velocity structure, tidal modulation of bed stress, and the compensating transport response beneath the wind-driven surface layer.",
+        "labels": [
+          "Salinity front",
+          "Velocity shear",
+          "Bed stress",
+          "Layer exchange"
+        ],
+        "panels": [
+          {
+            "label": "A",
+            "title": "Cross-shelf salinity front",
+            "figure_type": "architecture",
+            "description": "Salinity increases from the inner shelf toward the outer shelf, with the strongest horizontal gradient near the frontal zone."
+          },
+          {
+            "label": "B",
+            "title": "Vertical velocity shear",
+            "figure_type": "architecture",
+            "description": "Along-shelf velocity decreases with depth and the vertical gradient intensifies near the interface between the surface flow and the lower return flow."
+          },
+          {
+            "label": "C",
+            "title": "Tidal mixing response",
+            "figure_type": "architecture",
+            "description": "Bed friction velocity peaks during spring ebb acceleration while the Richardson metric reaches its lowest values."
+          },
+          {
+            "label": "D",
+            "title": "Wind-driven layer exchange",
+            "figure_type": "architecture",
+            "description": "Northeasterly forcing strengthens outward transport in the upper 18 meters and produces compensating inward transport below that depth."
+          }
+        ]
+      }
+    },
+    {
+      "after": 8,
+      "element": {
+        "type": "figure",
+        "figure_type": "architecture",
+        "id": "fig:observation_architecture",
+        "caption": "Observation architecture linking forcing, water-column response, and cross-shelf transport",
+        "description": "The observation architecture connects wind stress and tidal phase to bed stress, shear, stratification, and the resulting surface outflow and subsurface inflow.",
+        "labels": [
+          "Wind stress",
+          "Tidal phase",
+          "Bed stress",
+          "Shear",
+          "Stratification",
+          "Surface outflow",
+          "Subsurface inflow",
+          "Exchange transport"
+        ]
+      }
+    }
+  ],
+  "code": [],
+  "references": [
+    {
+      "text": "[1] Arven, T. L., and Sorell, M. P. (2018). Tidal straining and exchange-flow variability across shallow coastal fronts. Journal of Neritic Processes, 12, 41–58.",
+      "cite": "Arven-Sorell-2018"
+    },
+    {
+      "text": "[2] Beltran, I. R., Quen, D. A., and Varo, S. E. (2020). Wind modulation of cross-shelf circulation in a stratified embayment. Coastal Dynamics Review, 9, 115–132.",
+      "cite": "Beltran-Quen-Varo-2020"
+    },
+    {
+      "text": "[3] Ceryn, L. J., and Mavel, O. T. (2017). Bed friction and turbulent production during spring tidal acceleration. Marine Flow Studies, 15, 203–219.",
+      "cite": "Ceryn-Mavel-2017"
+    },
+    {
+      "text": "[4] Dalen, P. S., Orven, K. M., and Rellis, J. T. (2022). Hydrographic fronts and residual transport on a tidally active shelf. Shelf Sea Research Letters, 18, 66–84.",
+      "cite": "Dalen-Orven-Rellis-2022"
+    },
+    {
+      "text": "[5] Evar, N. Q., and Tolen, A. R. (2019). Vertical shear controls on coastal exchange during reversing winds. Ocean Boundary Studies, 7, 27–45.",
+      "cite": "Evar-Tolen-2019"
+    },
+    {
+      "text": "[6] Faron, M. V., Silek, P. D., and Uren, C. L. (2021). Observations of salinity-front migration over spring-neap cycles. Estuarine Transport Journal, 14, 91–109.",
+      "cite": "Faron-Silek-Uren-2021"
+    },
+    {
+      "text": "[7] Gavel, R. H., and Neris, B. J. (2016). Turbulence closure considerations for shallow shelf exchange. Journal of Coastal Fluid Mechanics, 11, 173–190.",
+      "cite": "Gavel-Neris-2016"
+    },
+    {
+      "text": "[8] Helor, S. A., Veyr, D. P., and Quelis, N. M. (2023). Near-bed mixing beneath wind-driven surface layers. Neritic Oceanography Reports, 21, 8–26.",
+      "cite": "Helor-Veyr-Quelis-2023"
+    },
+    {
+      "text": "[9] Istren, K. E., and Morval, T. S. (2018). Tidal-phase dependence of density-gradient erosion. Coastal Water Column Dynamics, 10, 52–70.",
+      "cite": "Istren-Morval-2018"
+    },
+    {
+      "text": "[10] Jalen, O. R., Parel, G. L., and Soven, E. T. (2020). Cross-shelf transport pathways inferred from repeated transect occupations. Marine Observation Quarterly, 16, 134–151.",
+      "cite": "Jalen-Parel-Soven-2020"
+    },
+    {
+      "text": "[11] Kervan, A. D., and Luro, P. N. (2015). Wind stress response of two-layer coastal circulation. Journal of Shelf Exchange, 6, 77–94.",
+      "cite": "Kervan-Luro-2015"
+    },
+    {
+      "text": "[12] Leris, M. C., Ovan, R. J., and Tarev, S. P. (2022). Salinity structure and along-shelf velocity over a frontal slope. Oceanic Boundary Research, 19, 244–262.",
+      "cite": "Leris-Ovan-Tarev-2022"
+    },
+    {
+      "text": "[13] Meren, B. Q., and Valtar, H. K. (2017). Richardson-number variability under tidal and wind forcing. Coastal Stratification Studies, 13, 101–118.",
+      "cite": "Meren-Valtar-2017"
+    },
+    {
+      "text": "[14] Navor, J. E., Saren, L. T., and Quivar, M. O. (2021). Ebb acceleration and the intermittency of benthic turbulence. Journal of Marine Mixing, 8, 183–201.",
+      "cite": "Navor-Saren-Quivar-2021"
+    },
+    {
+      "text": "[15] Orel, D. M., and Pavan, C. R. (2019). Residual circulation in partially mixed coastal inlets. Neritic Circulation Archives, 17, 59–76.",
+      "cite": "Orel-Pavan-2019"
+    },
+    {
+      "text": "[16] Perel, S. V., Tovin, A. J., and Ravel, D. N. (2023). Wind-direction effects on compensating subsurface inflow. Shelf Water Movement, 22, 312–329.",
+      "cite": "Perel-Tovin-Ravel-2023"
+    },
+    {
+      "text": "[17] Quaren, H. L., and Mirov, E. S. (2016). Exchange transport metrics for tidally energetic embayments. Coastal Measurement Journal, 5, 142–159.",
+      "cite": "Quaren-Mirov-2016"
+    },
+    {
+      "text": "[18] Ralen, P. T., Sivar, N. C., and Elven, J. M. (2020). Short-period adjustment of coastal density fronts. Journal of Neritic Hydrodynamics, 12, 218–236.",
+      "cite": "Ralen-Sivar-Elven-2020"
+    },
+    {
+      "text": "[19] Sorel, K. A., and Varen, I. P. (2018). Shear production and salinity-gradient persistence in shelf seas. Marine Stratification Review, 9, 84–102.",
+      "cite": "Sorel-Varen-2018"
+    },
+    {
+      "text": "[20] Tavel, M. R., Oris, F. Q., and Nalen, B. D. (2022). Layer-integrated transport during alternating wind regimes. Coastal Exchange Dynamics, 20, 37–55.",
+      "cite": "Tavel-Oris-Nalen-2022"
+    },
+    {
+      "text": "[21] Urel, C. P., and Davor, S. H. (2017). Spring-neap modulation of shallow-water turbulence. Shelf Sea Mixing Journal, 15, 121–139.",
+      "cite": "Urel-Davor-2017"
+    },
+    {
+      "text": "[22] Varon, E. J., Leris, P. A., and Murel, T. Q. (2021). Field methods for resolving cross-shelf velocity structure. Marine Transect Methods, 7, 201–220.",
+      "cite": "Varon-Leris-Murel-2021"
+    },
+    {
+      "text": "[23] Walen, N. S., and Toren, G. V. (2019). Bed stress thresholds for frontal-zone mixing. Coastal Turbulence Reports, 11, 98–116.",
+      "cite": "Walen-Toren-2019"
+    },
+    {
+      "text": "[24] Xarel, P. M., Quorin, D. E., and Savel, R. H. (2023). Wind-driven residual exchange beneath stratified surface flow. Ocean Dynamics Annals, 24, 151–169.",
+      "cite": "Xarel-Quorin-Savel-2023"
+    },
+    {
+      "text": "[25] Yoren, L. D., and Meral, C. K. (2016). Hydrographic controls on along-shelf transport variability. Journal of Coastal Ocean Processes, 8, 63–81.",
+      "cite": "Yoren-Meral-2016"
+    },
+    {
+      "text": "[26] Zavel, A. Q., Rorin, M. L., and Teren, P. S. (2020). Tidal shear, density gradients, and exchange-flow compensation. Estuarine and Shelf Dynamics, 18, 275–293.",
+      "cite": "Zavel-Rorin-Teren-2020"
+    },
+    {
+      "text": "[27] Aven, J. R., Belor, T. M., and Saren, Q. V. (2022). Integrating wind stress, tidal phase, and turbulent exchange observations. Journal of Coastal Flow Synthesis, 16, 389–407.",
+      "cite": "Aven-Belor-Saren-2022"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Introduction"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cross-shelf exchange in shallow coastal embayments is governed by the interaction of oscillatory tides, atmospheric forcing, density structure, and bottom friction. Although tidal currents reverse over each cycle, mixing and vertical redistribution need not reverse symmetrically. A strong ebb can erode a salinity gradient, alter the depth of the active surface layer, and leave residual transport after current reversal. Earlier field investigations have linked this asymmetry to tidal straining, frontal displacement, and intermittent near-bed turbulence \\cite{1}, \\cite{2}, \\cite{3}, \\cite{4}. The present investigation addresses these processes through repeated observations across an embayment where a persistent salinity front separates relatively fresh inner-shelf water from denser outer-shelf water. The central question is whether tidal phase primarily controls short-period exchange intensity while wind stress controls its direction over several days."
+    },
+    {
+      "type": "paragraph",
+      "text": "The study was designed around three expectations. First, spring tides should increase vertically integrated exchange because stronger currents raise bed friction and vertical shear. Second, the frontal zone should migrate toward the inner shelf during energetic tidal intervals, as enhanced mixing and advection redistribute the density field. Third, northeasterly winds should intensify outward transport near the surface while requiring compensating inward flow at depth, consistent with two-layer coastal circulation \\cite{2}, \\cite{5}, \\cite{11}. These expectations follow the broader view that density gradients can resist mixing while also organizing the shear that ultimately destroys them \\cite{4}, \\cite{9}, \\cite{19}. The observation architecture linking forcing, water-column response, and exchange is cited here before its later placement as \\ref{fig:observation_architecture}."
+    },
+    {
+      "type": "paragraph",
+      "text": "The transport metric used throughout is the depth-integrated cross-shelf velocity, written as $Q_x=\\int_{-H}^{0}u(z)dz$. Positive values indicate outward movement from the embayment toward the outer shelf. This convention permits direct comparison between surface outflow and subsurface return flow and follows established exchange metrics for tidally energetic inlets \\cite{17}. The velocity distribution across all occupations is also introduced early through \\ref{fig:velocity_distribution}; its concentration in moderate-to-high speed classes provides context for interpreting depth means reported later. The investigation does not treat exchange as a single uniform motion. Instead, it resolves the water column into dynamically distinct layers and relates their transports to tidal phase, wind regime, and the evolving salinity front."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Study Area"
+    },
+    {
+      "type": "paragraph",
+      "text": "The field domain was a semi-enclosed coastal embayment opening onto a shallow shelf. Its inner margin received intermittent low-salinity drainage, while the outer margin was exposed to more saline shelf water and stronger along-shelf currents. Three cross-shelf transects were established from the inner shelf through the frontal zone to the outer shelf. Bottom depths increased along this sequence, allowing the observations to capture both confined inner flow and the deeper outer return pathway. The arrangement was selected because hydrographic fronts over sloping bottoms can preserve sharp horizontal gradients even when tidal currents are strong \\cite{12}, \\cite{25}. It also allowed the same water-column structure to be revisited under contrasting spring and neap conditions."
+    },
+    {
+      "type": "paragraph",
+      "text": "The inner transect occupied water from the surface to approximately 24 meters, the frontal transect reached about 31 meters, and the outer transect extended to approximately 38 meters. Cycle-median hydrography indicated a progression from 16.8 degrees Celsius and salinity 33.7 at the inner position to 15.4 degrees Celsius and salinity 34.4 offshore. This cross-shelf contrast was not merely a static boundary. It shifted with tidal energy, wind direction, and local current phase. The salinity distributions are referenced in \\ref{fig:salinity_front}, while the full hydrographic and velocity context is identified by \\ref{tab:transect_observations}. The multi-panel process synthesis is cited as \\ref{fig:cross_shelf_processes}, which later supports interpretation of the linked gradients and flows."
+    },
+    {
+      "type": "paragraph",
+      "text": "The observation period covered four spring-neap cycles, with occupations distributed across flood onset, flood maximum, slack water, ebb onset, ebb maximum, and ebb relaxation. Meteorological forcing varied among northeasterly, easterly, and less persistent winds. This range was necessary because the same tidal state can produce different residual transports under different atmospheric conditions. Wind-driven exchange beneath a stratified surface layer depends strongly on direction and duration rather than only on instantaneous stress \\cite{16}, \\cite{24}. The study therefore treated wind as a forcing history, while treating tidal phase as the principal short-period coordinate."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Sampling Protocol"
+    },
+    {
+      "type": "paragraph",
+      "text": "Field operations followed repeated cross-shelf occupations timed to tidal landmarks. A vessel traversed each transect at controlled speed, paused at fixed stations, and occupied near-surface, mid-depth, and near-bed levels. The sequence was repeated sufficiently rapidly to preserve the phase relationship between neighboring stations. Current observations were collected with profilers and fixed reference meters, while hydrographic sensors recorded temperature and salinity during each cast. Near-bed turbulence was monitored with a velocity instrument positioned above the seabed, avoiding direct interference from the bottom boundary. These procedures follow field guidance for resolving vertical velocity structure without confusing ship motion with cross-shelf flow \\cite{22}. \\fn{All times were referenced to the local tidal record, and phase labels were retained only when navigation, pressure, and instrument clocks remained mutually consistent.}"
+    },
+    {
+      "type": "paragraph",
+      "text": "Each occupation was assigned to a tidal phase using the local water-level record and observed current acceleration. A cycle was retained only when instrument clocks, navigation track, and pressure record remained mutually consistent. Salinity and temperature records were screened for abrupt sensor transitions, and velocity profiles were checked for gaps caused by acoustic interference. Rather than smoothing away short-lived pulses, processing retained high-frequency variability and summarized it with phase-specific medians and uncertainty ranges. This choice was important because benthic turbulence during ebb acceleration is intermittent, and averaging over an entire tide can conceal events responsible for much of the mixing \\cite{14}, \\cite{21}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Wind forcing was reconstructed from the coastal station record and synchronized with each water-column occupation. The surface stress vector was represented as $\\vec{\\tau}_{w}=\\rho_{a}C_{D}|\\vec{U}_{10}|\\vec{U}_{10}$, where air density, a drag coefficient, and ten-meter wind velocity determine stress magnitude and direction. Northeasterly periods were defined by sustained wind from that quadrant over several hours, whereas variable periods included reversals or weak winds. This classification follows the logic of layer-integrated transport studies in which persistent direction produces a clearer residual response than rapidly changing forcing \\cite{20}."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Measurements"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Velocity, hydrography, and turbulence"
+    },
+    {
+      "type": "paragraph",
+      "text": "Along-shelf velocity decreased with depth at all three transects during ebb acceleration. The outer transect had the greatest near-surface speed, reaching approximately 0.71 meters per second, while the inner transect was weaker and shallower. The frontal transect displayed the strongest combination of vertical shear and horizontal density contrast. These measurements indicate that the front was a dynamically active transition rather than a passive line between water masses. The velocity structure shown in \\ref{fig:vertical_shear} is consistent with a surface flow overlying a slower return layer. Such shear can generate turbulence, but stratification can suppress that turbulence when the density gradient remains strong \\cite{7}, \\cite{13}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Bed stress was inferred from near-bed velocity using $\\tau_b=\\rho C_D|U|U$. The notation emphasizes that stress grows with the square of speed and therefore responds disproportionately to tidal acceleration. A second diagnostic, the gradient Richardson number, was evaluated as $Ri_g=\\frac{g\\partial\\rho/\\partial z}{\\rho_0(\\partial u/\\partial z)^2}$. Lower values indicate that shear is more capable of overcoming stratification. This measure was used comparatively across phases rather than as an absolute turbulence threshold, since unresolved small-scale structure and bottom roughness affect its interpretation \\cite{3}, \\cite{13}. The resulting friction and stratification comparison is cited in \\ref{fig:mixing_phase_comparison}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cross-shelf transport was calculated by integrating the measured velocity profile over occupied depth and interpolating only across short, instrument-verified gaps. The spring-neap contrast was expressed as $\\Delta Q=\\frac{Q_{sp}-Q_n}{Q_n}\\times100$. This quantity compares representative spring transport with the corresponding neap value and avoids attributing a single anomalous pulse to an entire cycle. Surface and subsurface contributions were also separated at the depth where wind-driven velocity changed sign. The resulting layer response is summarized in \\ref{tab:wind_response}, its graphical transport comparison is cited as \\ref{fig:wind_transport}, and the partition between outward and inward components is identified by \\ref{fig:exchange_partition}."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Results"
+    },
+    {
+      "type": "paragraph",
+      "text": "Spring tides produced a clear increase in exchange transport. The first spring cycle reached 184 square meters per second, while the second reached 191 square meters per second; corresponding neap values were 138 and 141 square meters per second. Relative to the first neap condition, representative spring enhancement was approximately 38 percent. The phase-resolved values and mixing indicators are given in \\ref{tab:tide_phase_exchange}. Exchange increased most strongly during ebb acceleration and attained its largest value near ebb maximum, rather than at the instant of peak flood current. This timing indicates that the rate of current change and associated bed response matter as much as current magnitude itself."
+    },
+    {
+      "type": "paragraph",
+      "text": "The tidal modulation was visible in the full phase sequence. During spring conditions, transport rose from flood onset to flood maximum, relaxed near slack water, and then increased again through ebb acceleration. Ebb maximum consistently exceeded flood maximum, indicating asymmetry in residual circulation. The phase progression is cited in \\ref{fig:tidal_exchange}, which provides temporal context for the integrated values. Similar ebb-dominant behavior has been associated with enhanced production over shallow beds and density-gradient erosion at the front \\cite{3}, \\cite{9}, \\cite{14}. Here, the coincidence of high bed friction, strong shear, and a sharp salinity gradient identifies ebb acceleration as the most efficient interval for vertical exchange."
+    },
+    {
+      "type": "paragraph",
+      "text": "The frontal zone shifted approximately 1.7 kilometers toward the inner shelf during spring conditions. Salinity increased from the inner transect toward the outer transect, but the location of the steepest gradient moved rather than remaining fixed. The shift is consistent with observations that spring-neap changes can displace hydrographic fronts over periods shorter than a fortnight \\cite{6}, \\cite{18}. During neap conditions, the front remained farther offshore and the water column retained a stronger vertical density contrast. The resulting difference in mixing state was reflected by a median Richardson value near 0.17 during spring conditions and near 0.30 during neap conditions. The combined response is represented by \\ref{fig:cross_shelf_processes}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Wind direction controlled the sign and vertical distribution of residual transport. Northeasterly winds generated a surface outflow of 0.71 square meters per second in the upper 18 meters and a compensating inflow of 0.46 square meters per second below that depth. Easterly winds produced weaker values of 0.49 and 0.31, while variable winds produced 0.22 and 0.14. These paired responses demonstrate that the water column did not simply accelerate in one direction. Instead, wind stress strengthened upper-layer movement that was balanced by a deeper return pathway, as anticipated for stratified coastal circulation \\cite{11}, \\cite{16}."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Discussion"
+    },
+    {
+      "type": "paragraph",
+      "text": "The observations support a two-timescale interpretation of exchange. Tidal straining establishes rapid structure: it changes shear, bed stress, and the vertical position of the density interface within hours. Wind forcing establishes residual direction: it persists across several tidal reversals and determines whether the upper layer exports water or imports it. This distinction reconciles apparently competing mechanisms. A tide can intensify mixing without fixing the sign of multiday transport, while wind can set the sign without eliminating tidal modulation. The relationship may be summarized qualitatively as $Q_x\\propto\\text{tidal mixing}+\\text{wind response}$, with the two terms acting over different time intervals. Comparable separation of fast and slow controls has been proposed for frontal embayments and shallow shelf exchange \\cite{1}, \\cite{2}, \\cite{27}."
+    },
+    {
+      "type": "paragraph",
+      "text": "The frontal displacement suggests that mixing modifies transport indirectly as well as directly. When spring ebb acceleration erodes the salinity gradient, the interface becomes less effective at separating upper and lower flows. The front then moves landward under combined advection and altered density structure. As the gradient weakens, vertical shear can penetrate farther into the water column, increasing the depth over which outward surface motion is coupled to inward return. This feedback is consistent with studies linking salinity-gradient persistence to shear production \\cite{19} and with transport pathways inferred from repeated transect occupations \\cite{10}. The measured values therefore describe a coupled hydrographic and dynamical adjustment rather than independent changes in salinity and velocity."
+    },
+    {
+      "type": "paragraph",
+      "text": "Near-bed turbulence appears to be the immediate mechanism connecting tidal phase to water-column exchange. Because bed stress varies approximately with the square of near-bed speed, acceleration into ebb can produce a sharp increase in friction even before maximum current arrives. If the shear term in $Ri_g=\\frac{g\\partial\\rho/\\partial z}{\\rho_0(\\partial u/\\partial z)^2}$ increases faster than the density-gradient term, the diagnostic declines and mixing becomes more probable. The observed spring values follow this pattern. Bed-friction thresholds for frontal mixing have likewise been associated with erosion of otherwise persistent gradients \\cite{23}."
+    },
+    {
+      "type": "paragraph",
+      "text": "The wind response also clarifies why depth-integrated exchange can conceal important circulation. A positive net outward value could arise from a vigorous upper outflow combined with substantial inward flow beneath it. Treating the water column as a single layer would therefore understate recirculation and misrepresent pathways available to heat, salt, and suspended material. The layer partition shown in \\ref{fig:exchange_partition} makes this compensation explicit, while \\ref{tab:wind_response} records corresponding depths and magnitudes. The pattern agrees with observations that reversing or variable winds weaken organized return flow, whereas persistent directional forcing strengthens it \\cite{5}, \\cite{20}, \\cite{24}."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Limitations"
+    },
+    {
+      "type": "paragraph",
+      "text": "Several limitations constrain the interpretation. The transects provide detailed spatial structure but only at discrete times, so very short-lived turbulence events may be missed between occupations. Interpolation across the water column is also least certain near the seabed, where velocity gradients are steep and acoustic returns can be affected by boundary scattering. The bed-stress estimate depends on the selected drag coefficient and on the assumption that the near-bed velocity record represents the surrounding bottom boundary. These uncertainties are common in field assessments of shallow-water turbulence \\cite{7}, \\cite{22}. They affect transport magnitude more directly than the observed ordering of spring, neap, and wind-regime responses."
+    },
+    {
+      "type": "paragraph",
+      "text": "The study period covered four spring-neap cycles rather than a complete annual sequence. Seasonal changes in freshwater input, surface heating, and background shelf currents could alter the location and strength of the front. Wind categories were based on observed persistence and direction, but they cannot fully separate atmospheric forcing from remote circulation signals entering through the embayment mouth. In addition, the Richardson diagnostic assumes that resolved vertical gradients adequately represent relevant local shear. Small-scale overturning and lateral gradients may cause the actual mixing state to differ from the inferred value \\cite{13}, \\cite{18}. Future deployments should combine longer autonomous records with additional near-bed observations and broader meteorological coverage."
+    },
+    {
+      "type": "paragraph",
+      "text": "The transport framework also carries a conceptual limitation. A cross-shelf integral compresses complicated three-dimensional circulation into one signed quantity, and the chosen positive direction may obscure along-shelf recirculation or lateral divergence. The depth at which surface and subsurface transports were separated changed among wind regimes, so comparisons of layer magnitudes should be interpreted as dynamical partitions rather than fixed geometric layers. Despite these qualifications, repeated phase structure and agreement among hydrography, velocity, and turbulence indicators provide a coherent basis for the principal conclusions. The observation architecture in \\ref{fig:observation_architecture} should therefore be read as a process map, not as a complete closure of embayment circulation."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Conclusion"
+    },
+    {
+      "type": "paragraph",
+      "text": "Repeated field observations show that cross-shelf exchange in the embayment is jointly controlled by tidal phase and wind stress, but the two forcings operate on different timescales. Spring tides increased vertically integrated exchange by about 38 percent, shifted the salinity front approximately 1.7 kilometers toward the inner shelf, and produced the strongest mixing during ebb acceleration. At that phase, enhanced bed friction and vertical shear acted against a sharp salinity gradient, reducing stratification and promoting exchange across the water column. The results extend interpretation of spring-neap variability beyond a simple current-speed contrast by identifying the timing of the turbulent response."
+    },
+    {
+      "type": "paragraph",
+      "text": "Northeasterly winds strengthened outward transport in the upper 18 meters and produced compensating inflow below that depth. This two-layer response demonstrates that the net direction of multiday exchange cannot be inferred from surface observations alone. A useful representation is $Q_x=Q_{surface}+Q_{subsurface}$, with the two terms potentially having opposite signs and distinct controls. The findings support vertically resolved observations in numerical studies of shallow shelf seas, especially where density fronts, tidal straining, and wind-driven residual circulation interact \\cite{4}, \\cite{8}, \\cite{15}, \\cite{26}."
+    },
+    {
+      "type": "paragraph",
+      "text": "More broadly, a realistic coastal transport model should resolve the timing of ebb acceleration, migration of the frontal zone, and the depth-dependent response to wind stress. Parameterizations based only on cycle-mean current speed may miss brief intervals when most mixing occurs. Conversely, models driven only by wind may reproduce residual direction while failing to reproduce spring-neap structure. Integrating these controls offers a stronger basis for predicting exchange pathways and hydrographic adjustment in shallow embayments, consistent with the synthesis proposed by Aven, Belor, and Saren \\cite{27}."
+    }
+  ]
+}

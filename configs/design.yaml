@@ -40,3 +40,14 @@ slot_format: |
   rules, arcs) that you place with CSS position:absolute in the margins; they must not overlap any text.
   No @import, no other files, no text in CSS content:. Keep text at least 8 pt with contrast 4.5:1, and
   avoid clipping or overlap.
+
+direction:
+  history: 12
+  title_repeat_gap: 5
+  max_matches: 7
+  # Reject matching grid/title even when sheet size, fonts or hue differ.
+  # Sheet size and hue cannot rescue a repeated grid/title arrangement.
+  reject_same_grid_title: true
+
+novelty:
+  struct_min: 0.15

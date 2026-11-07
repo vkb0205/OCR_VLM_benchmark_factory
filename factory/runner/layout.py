@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import re
 from pathlib import Path
 
@@ -55,7 +56,7 @@ def _check_bundle(folder: Path, kind: str) -> list[str]:
             "design": {"design_spec.json", "design.html"},
             "pages": None,
             "images": None,
-            "extra": {"statements.json"},
+            "extra": None,
         }
         for name, files in expected_dirs.items():
             child = folder / name
@@ -70,6 +71,20 @@ def _check_bundle(folder: Path, kind: str) -> list[str]:
                 for item in child.iterdir():
                     if not item.is_file() or not _IMAGE.fullmatch(item.name):
                         problems.append(f"unexpected entry: {item}")
+            elif name == "extra":
+                entries = list(child.iterdir())
+                actual = {item.name for item in entries}
+                allowed = {"statements.json", "boxes.json", "lint.json"}
+                required = {"statements.json"}
+                manifest = json.loads((folder / "document.json").read_text(encoding="utf-8"))
+                if manifest.get("contract_version") == "0.3.0":
+                    required.update({"boxes.json", "lint.json"})
+                if actual - allowed:
+                    problems.append(f"unexpected entries in {child}: {sorted(actual - allowed)}")
+                if required - actual:
+                    problems.append(f"missing entries in {child}: {sorted(required - actual)}")
+                if any(not item.is_file() for item in entries):
+                    problems.append(f"expected files in {child}")
             elif files is not None:
                 entries = list(child.iterdir())
                 actual = {item.name for item in entries}
@@ -85,7 +100,8 @@ def _check_bundle(folder: Path, kind: str) -> list[str]:
             if not (folder / name).is_file():
                 problems.append(f"missing file: {folder / name}")
         problems.extend(_unexpected_entries(
-            folder, {"spec.json", "trace.json", "problems.json"}, {"replies", "design"}
+            folder, {"spec.json", "trace.json", "problems.json", "source_content.json"},
+            {"replies", "design"}
         ))
         replies = folder / "replies"
         if replies.exists() and replies.is_dir():

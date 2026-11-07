@@ -48,6 +48,7 @@ from factory.runner.dataset import rebuild_index, verify_output
 from factory.runner.languages import stats
 from factory.runner.layout import check_tree
 from factory.runner.writer import write_bundle
+from factory.runner.sidecars import bundles, write_boxes, write_lint
 from factory import log as progress
 from factory.log import log, short
 
@@ -114,10 +115,18 @@ def _record(trace: Trace, doc_id: str, lang: str, status: str, seconds: float,
         calls=sum(event.kind == "llm_call" for event in trace.events),
         tokens_in=sum(event.tokens_in or 0 for event in trace.events),
         tokens_out=sum(event.tokens_out or 0 for event in trace.events),
+        tokens_cached=sum(event.tokens_cached or 0 for event in trace.events),
+        tokens_reasoning=sum(event.tokens_reasoning or 0 for event in trace.events),
         cost_usd=round(sum(event.cost_usd or 0 for event in trace.events), 6),
         seconds=seconds,
         failure_stage=failure_stage,
     )
+
+
+def _design_archive(doc_type: str, output: Path) -> list[dict]:
+    config = load_config().documents.get(doc_type)
+    limit = None if config and config.design.get("mode") == "backbone" else 4
+    return design_entries(doc_type, output, limit=limit)
 
 
 def _clean_tmp(output: Path) -> None:
@@ -244,24 +253,13 @@ async def _default_design(item: dict, browser, taxonomy):
     spec = item["spec"]
     content = item["content"]
     target = item["target"]
-    template = ROOT / "designs" / spec.doc_type / "default.html"
-    html = template.read_text(encoding="utf-8")
-    if spec.doc_type == "academic_paper":
-        root = parse_html(html)
-        labels = content.config.design.get("fixed_labels", {}).get(content.lang or spec.lang, {})
-        sections = [node for node in root.walk()
-                    if node.tag == "section" and "page" in node.attrs.get("class", "").split()]
-        for section in sections:
-            role = section.attrs.get("data-page-role", "")
-            nodes = [node for node in section.walk() if "data-label" in node.attrs]
-            role_labels = labels.get(role, [])
-            if len(nodes) != len(role_labels):
-                raise ValueError(
-                    f"academic_paper {role}: expected {len(nodes)} fixed labels, got {len(role_labels)}"
-                )
-            for node, label in zip(nodes, role_labels):
-                node.children = [str(label)]
-        html = serialize(root)
+    if content.config.design.get("mode") == "backbone":
+        from factory.design.backbone import build, default_plan
+        html = build(default_plan(content.config), content.lang or spec.lang,
+                     content.config.design.get("fixed_labels", {}), content.config)
+    else:
+        template = ROOT / "designs" / spec.doc_type / "default.html"
+        html = template.read_text(encoding="utf-8")
     result = await fill(html, content, spec, taxonomy, browser)
     result.trace = item["trace"]
     write_bundle(result, target)
@@ -389,7 +387,7 @@ async def _generate(a, output: Path, browser, taxonomy) -> int:
                 context = Context(plan["rng"], router, browser, taxonomy, plan["trace"])
                 agent = DocumentAgent(
                     plan["config"], plan["variables"], context, plan["lang"],
-                    design_seed(plan["seed"], 0), design_entries(a.doc_type, output),
+                    design_seed(plan["seed"], 0), _design_archive(a.doc_type, output),
                     doc_type=a.doc_type, conversation=conversation,
                 )
                 try:
@@ -438,7 +436,7 @@ async def _generate(a, output: Path, browser, taxonomy) -> int:
                     context = Context(plan["rng"], router, browser, taxonomy, trace)
                     agent = DocumentAgent(
                         plan["config"], plan["variables"], context, plan["lang"],
-                        design_seed(plan["seed"], 0), design_entries(a.doc_type, output),
+                        design_seed(plan["seed"], 0), _design_archive(a.doc_type, output),
                         doc_type=a.doc_type, conversation=conversation,
                     )
                     target = output / ".tmp" / a.doc_type / doc_id
@@ -459,12 +457,12 @@ async def _generate(a, output: Path, browser, taxonomy) -> int:
                 replies = {}
                 batch_error = None
                 if a.design == "agent":
-                    ledger = design_entries(a.doc_type, output)
+                    ledger = _design_archive(a.doc_type, output)
                     for item in design_items:
                         item["agent"].ledger_entries = ledger
                         item["agent"].ledger = [ledger_summary(row) for row in ledger]
                 if a.design == "legacy":
-                    ledger = design_entries(a.doc_type, output)
+                    ledger = _design_archive(a.doc_type, output)
                     for item in design_items:
                         item["agent"].ledger_entries = ledger
                         item["agent"].ledger = [ledger_summary(row) for row in ledger]
@@ -562,6 +560,8 @@ async def _generate(a, output: Path, browser, taxonomy) -> int:
                         item["trace"].status = "ok"
                         item["trace"].finished = datetime.now(timezone.utc)
                         _write_trace(target / "trace.json", item["trace"])
+                        await write_boxes(target, browser, taxonomy)
+                        await write_lint(target, browser, taxonomy)
                         destination = output / "documents" / a.doc_type / spec.doc_id
                         destination.parent.mkdir(parents=True, exist_ok=True)
                         shutil.move(str(target), str(destination))
@@ -570,7 +570,7 @@ async def _generate(a, output: Path, browser, taxonomy) -> int:
                                 (destination / "design" / "design_spec.json").read_text(encoding="utf-8")
                             )
                             append_design(a.doc_type, saved_spec, output, spec.doc_id)
-                            refreshed = design_entries(a.doc_type, output)
+                            refreshed = _design_archive(a.doc_type, output)
                             for pending in design_items[ordinal:]:
                                 pending["agent"].ledger_entries = refreshed
                                 pending["agent"].ledger = [ledger_summary(row) for row in refreshed]
@@ -632,6 +632,19 @@ async def _generate(a, output: Path, browser, taxonomy) -> int:
 
 
 async def execute(args) -> int:
+    if args.command == 'content':
+        from factory.content.bank import build_bank
+        result = await build_bank(args.n, args.out, args.jobs, max_usd=args.max_usd)
+        record_path = args.out / 'bank_run.json'
+        if record_path.exists():
+            record = json.loads(record_path.read_text(encoding='utf-8'))
+            if record.get('status') == 'FAIL' or record.get('failures'):
+                return 1
+        return result
+    if args.command == 'reviews':
+        from factory.runner.reviews import report
+        print(json.dumps(report(args.path.resolve()), ensure_ascii=False, indent=2))
+        return 0
     taxonomy = Taxonomy()
     output = args.output.resolve()
     if args.command == "gallery":
@@ -641,9 +654,18 @@ async def execute(args) -> int:
         rebuild_index(output)
         print(LanguageStats.model_validate(stats(output)).model_dump_json(indent=2))
         return 0
-    if args.command == "lint":
+    if args.command in {"lint", "boxes"}:
+        folders = bundles(args.path.resolve())
+        if not folders:
+            raise ValueError(f"No document bundles found under {args.path}")
+        issues = []
         async with Browser() as browser:
-            issues = await lint_document(args.path, browser, taxonomy)
+            for folder in folders:
+                if args.command == "boxes":
+                    result = await write_boxes(folder, browser, taxonomy)
+                    print(f"{folder}: {len(result.pages)} pages")
+                else:
+                    issues.extend(await write_lint(folder, browser, taxonomy))
         print("\n".join(map(str, issues)))
         return int(bool(issues))
     if args.command == "preview":
@@ -658,7 +680,7 @@ async def execute(args) -> int:
     async with Browser() as browser:
         if args.command == "export":
             from factory.runner.export import export
-            return await export(output, args.to, args.allow_imbalance)
+            return await export(output, args.to, args.allow_imbalance, args.include_unreviewed)
         if args.command == "verify":
             errors = await verify_output(output, browser, taxonomy)
             print(json.dumps(errors, ensure_ascii=False))
@@ -669,6 +691,12 @@ async def execute(args) -> int:
 def main() -> None:
     parser = argparse.ArgumentParser(prog="factory")
     subcommands = parser.add_subparsers(dest="command", required=True)
+    content_command = subcommands.add_parser('content')
+    content_command.add_argument('doc_type', choices=['academic_paper'])
+    content_command.add_argument('--n', type=int, default=16)
+    content_command.add_argument('--out', type=Path, default=ROOT / 'content/academic_paper')
+    content_command.add_argument('--jobs', type=int, default=4)
+    content_command.add_argument('--max-usd', type=float, help='Stop starting calls when run spend reaches this USD amount')
     for name in ("generate", "redesign"):
         command = subcommands.add_parser(name)
         if name == "generate":
@@ -688,16 +716,22 @@ def main() -> None:
         command.add_argument("--model")
         command.add_argument("--lang", choices=["vi", "en"])
         command.add_argument("--quiet", action="store_true", help="no progress log")
-    for name in ("lint", "preview", "gallery"):
+    for name in ("lint", "boxes", "preview", "gallery"):
         subcommands.add_parser(name).add_argument("path", type=Path)
     for name in ("index", "verify"):
         subcommands.add_parser(name)
     export = subcommands.add_parser("export")
     export.add_argument("--to", type=Path, required=True)
     export.add_argument("--allow-imbalance", action="store_true")
+    export.add_argument("--include-unreviewed", action="store_true")
+    review_command = subcommands.add_parser('reviews')
+    review_sub = review_command.add_subparsers(dest='review_command', required=True)
+    review_sub.add_parser('report').add_argument('path', type=Path)
     for command in subcommands.choices.values():
         command.add_argument("--output", type=Path, default=ROOT / "out")
     args = parser.parse_args()
+    if args.command == 'content' and args.jobs < 1:
+        parser.error('--jobs must be positive')
     if args.command in {"generate", "redesign"} and min(args.n, args.designs, args.batch, args.jobs) < 1:
         parser.error("--n, --designs, --batch and --jobs must be positive")
     progress.QUIET = getattr(args, "quiet", False)

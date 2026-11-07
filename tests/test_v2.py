@@ -9,7 +9,7 @@ import json
 
 def test_fixture():
     config=load_config().documents['financial_report']
-    values=json.loads(Path('tests/fixtures/financial_report_content.json').read_text())['values']
+    values=json.loads(Path('tests/fixtures/financial_report_content.json').read_text(encoding="utf-8"))['values']
     validate_content(config,values,lang='vi',variables={k:v[0] for k,v in config.variables.items()})
 def test_balance():
     counts={'vi':0,'en':0}
@@ -31,14 +31,14 @@ def test_design_rejects_off_draw_and_copied_ledger(tmp_path):
         spec[name]={'options':options,'index':index,'chosen':options[index],'details':{}}
     spec['style'].update(palette=['#ffffff','#111111','#1155aa'],fonts=['Example Head','Example Body'])
     spec['orientation']['pages']={'page_001':'a4'}
-    (tmp_path/'design_spec.json').write_text(json.dumps(spec))
+    (tmp_path/'design_spec.json').write_text(json.dumps(spec), encoding="utf-8")
     (tmp_path/'design').mkdir()
-    (tmp_path/'design/design.html').write_text('<section class="page" data-size="a4"></section>')
+    (tmp_path/'design/design.html').write_text('<section class="page" data-size="a4"></section>', encoding="utf-8")
     (tmp_path/'pages').mkdir()
     assert check(tmp_path)==[]
     assert any('too similar to a recent design' in p for p in check(tmp_path,[spec]))
     spec['layout']['index']=(spec['layout']['index']+1)%10
-    (tmp_path/'design_spec.json').write_text(json.dumps(spec))
+    (tmp_path/'design_spec.json').write_text(json.dumps(spec), encoding="utf-8")
     warnings=[]
     assert check(tmp_path,warnings=warnings)==[] and any('does not follow' in w for w in warnings)
 

@@ -75,6 +75,14 @@ lang:
       - computer vision research
       - acoustics research
 language_variable: lang
+elements:
+  - {id: front, fields: [title, authors, affiliations, abstract, abstract_alt, keywords, keywords_alt, journal, acknowledgement]}
+  - {id: body, fields: [body], after: [front], types: [heading, paragraph, list, box]}
+  - {id: formulas, fields: [], after: [front], types: [equation]}
+  - {id: tables, fields: [], after: [front], types: [table]}
+  - {id: charts_figures, fields: [], after: [front], types: [chart, figure]}
+  - {id: code, fields: [], after: [front], types: [code]}
+  - {id: references, fields: [references], after: [front]}
 variables:
   lang:
   - vi
@@ -100,6 +108,7 @@ variables:
 prompt: Write an academic paper in {{ lang }} about {{ field }}, with {{ paper_length
   }} length and {{ citation_style }} citations.
 design:
+  mode: backbone
   fixed_labels:
     vi:
       title_page: ['{n} / {total}']

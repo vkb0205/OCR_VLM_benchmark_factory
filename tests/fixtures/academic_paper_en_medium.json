@@ -1,269 +1,418 @@
 {
+  "content_id": "paper_02",
   "variables": {
     "lang": "en",
-    "field": "information retrieval",
+    "field": "signal processing",
     "paper_length": "medium",
-    "citation_style": "author_year"
+    "citation_style": "numeric"
   },
+  "lang": "en",
   "values": {
-    "title": "Queue-Stability Estimates for a Computational Dispatch Network",
+    "title": "Phase-Consistent Sparse Reconstruction for Nonstationary Sensor Streams",
     "authors": [
       {
-        "name": "R. Aurora-Arc",
+        "name": "Mira Solven",
+        "affiliations": [
+          1,
+          2
+        ],
+        "corresponding": true,
+        "email": "mira.solven@qivora-research.org"
+      },
+      {
+        "name": "Tavian Orrek",
         "affiliations": [
           1
         ],
         "corresponding": false
       },
       {
-        "name": "C. Example-Wren",
+        "name": "Liora Venn",
         "affiliations": [
-          1,
           2
         ],
-        "email": "cw@auroraresearch.org",
-        "corresponding": true
+        "corresponding": false
       }
     ],
     "affiliations": [
-      "Computational Network Unit, Example North-4",
-      "Procedural Systems Cell, Observation Arc Lab"
+      "Department of Computational Acoustics, Qivora Institute of Technology",
+      "Laboratory for Adaptive Inference, Velmora Research Centre"
     ],
-    "abstract": "This study compares three dispatch policies in a procedural queue network. Paired traces hold arrivals and service requirements constant across policies, while calibration and evaluation traces are separated by seed. The load-aware policy reduces median delay at intermediate load, whereas a reserved service slot improves recovery after bursts. Tail delay and recovery provide information that throughput alone misses. All results come from an explicitly generated system and do not describe a real institution or service.",
-    "abstract_alt": "Nghiên cứu giả lập này so sánh ba quy tắc điều phối trong mạng hàng đợi được tạo theo thủ tục. Các vết ghép cặp giữ nguyên yêu cầu đến và thời gian phục vụ giữa các quy tắc, còn tập hiệu chỉnh được tách theo hạt giống. Quy tắc nhận biết tải giảm thời gian chờ trung vị ở tải vừa; một suất phục vụ dự phòng giúp hàng đợi phục hồi sau đợt tăng đột biến. Mọi kết quả đều được tạo từ mô hình tổng hợp, không mô tả tổ chức hay dịch vụ thật.",
-    "keywords": "computational queues; paired traces; dispatch policies; tail delay; recovery",
-    "keywords_alt": "hàng đợi giả lập; vết ghép cặp; điều phối; độ trễ đuôi; phục hồi",
+    "abstract": "This paper presents a phase-consistent reconstruction method for nonstationary sensor streams affected by sparse impulsive interference and slowly varying noise. The method combines a locally adaptive time-frequency representation with a structured regularizer that preserves phase continuity across neighboring bands. A reliability measure derived from local energy concentration controls the balance between data fidelity and sparse correction, allowing the procedure to respond to abrupt transients without suppressing persistent oscillations. An alternating optimization scheme is formulated with bounded updates and a stopping rule based on reconstruction stability. Evaluations on multichannel acoustic and vibration recordings show improved recovery of transient timing, spectral concentration, and cross-channel coherence compared with fixed-penalty sparse reconstruction and median-based denoising. The gains remain consistent under changes in interference density and background noise, indicating that phase continuity provides a useful prior for robust signal restoration.",
+    "abstract_alt": null,
+    "keywords": "signal reconstruction; sparse interference; time-frequency analysis; phase continuity; adaptive regularization; multichannel denoising",
+    "keywords_alt": null,
+    "journal": "Annals of Resonant Signal Inference",
+    "acknowledgement": "The authors thank the Signal Analytics Group at Velmora Research Centre for constructive discussions on time-frequency regularization and the technical staff of Qivora Institute of Technology for assistance with the recording apparatus.",
+    "references": [
+      {
+        "text": "[1] E. Varnet and L. Qorren, Window-local phase tracking for nonstationary spectral analysis, Transactions on Time-Frequency Inference, vol. 8, no. 1, pp. 21-39, 2018.",
+        "cite": "Varnet & Qorren, 2018"
+      },
+      {
+        "text": "[2] R. Dalmek and N. Ovrin, Reliability-weighted sparse correction of impulsive sensor noise, Journal of Robust Signal Recovery, vol. 14, no. 3, pp. 201-219, 2020.",
+        "cite": "Dalmek & Ovrin, 2020"
+      },
+      {
+        "text": "[3] A. Selvarn, I. Morith, and P. Elnor, Complex-domain regularization for phase-stable spectrogram recovery, Signal Reconstruction Letters, vol. 6, no. 2, pp. 73-88, 2019.",
+        "cite": "Selvarn et al., 2019"
+      },
+      {
+        "text": "[4] D. Kervel and I. Mornet, Alternating minimization with bounded updates in multichannel denoising, Methods in Multichannel Estimation, vol. 12, no. 4, pp. 311-329, 2022.",
+        "cite": "Kervel & Mornet, 2022"
+      },
+      {
+        "text": "[5] S. Velkor and M. Avarn, Energy concentration measures for adaptive time-frequency estimation, Journal of Adaptive Spectral Analysis, vol. 9, no. 1, pp. 44-61, 2017.",
+        "cite": "Velkor & Avarn, 2017"
+      },
+      {
+        "text": "[6] T. Orvek, J. Peldan, and C. Ruvet, Cross-channel coherence constraints in acoustic transient restoration, Resonant Data Processing Review, vol. 5, no. 3, pp. 118-136, 2021.",
+        "cite": "Orvek et al., 2021"
+      },
+      {
+        "text": "[7] F. Neral and G. Tovrek, Median filtering for vibration telemetry with sparse outliers, Vibration Signal Methods Quarterly, vol. 10, no. 2, pp. 95-112, 2018.",
+        "cite": "Neral & Tovrek, 2018"
+      },
+      {
+        "text": "[8] B. Elvorn, H. Sendrek, and Y. Marven, Transient timing and spectral concentration measures for restored sensor streams, Proceedings of the Forum on Sparse Signal Models, pp. 62-70, 2023.",
+        "cite": "Elvorn et al., 2023"
+      },
+      {
+        "text": "[9] C. Ralden and V. Omreth, Nonstationary frame design with overlap-controlled spectral leakage, Journal of Frame-Based Processing, vol. 7, no. 4, pp. 247-265, 2020.",
+        "cite": "Ralden & Omreth, 2020"
+      },
+      {
+        "text": "[10] P. Drovik and E. Lethan, Block-sparse interference models for compact sensor arrays, Array Signal Inference, vol. 13, no. 1, pp. 15-34, 2024.",
+        "cite": "Drovik & Lethan, 2024"
+      },
+      {
+        "text": "[11] M. Qelvar, A. Torvek, and R. Ildren, Stopping criteria for nonconvex signal restoration algorithms, Optimization Notes in Signal Restoration, vol. 4, no. 2, pp. 83-101, 2022.",
+        "cite": "Qelvar et al., 2022"
+      },
+      {
+        "text": "[12] L. Vennor and D. Askel, Joint acoustic and mechanical stream reconstruction under drifting noise, Journal of Nonstationary Sensor Analytics, vol. 3, no. 1, pp. 29-48, 2025.",
+        "cite": "Vennor & Askel, 2025"
+      }
+    ],
     "body": [
       {
         "type": "heading",
         "level": 1,
-        "text": "1. Introduction"
+        "text": "Introduction"
       },
       {
         "type": "paragraph",
-        "text": "Procedural courier studies make it possible to test queue policies while keeping every route, arrival, and service time under control. This paper studies a computational campus-like network with no connection to a real institution. We compare a fixed dispatch rule, a load-aware rule, and a conservative rule that reserves capacity for delayed tasks. The same arrival traces are replayed for each policy, and the split between calibration and evaluation traces is frozen before any threshold is selected. The central quantity is the wait residual $r_i = wait_i - target_i$. We report its median together with a high quantile, because an acceptable average can coexist with a small set of severe delays. The full trace generator is specified so that the experiment can be reconstructed without outside data."
+        "text": "Nonstationary sensor streams are difficult to restore when brief impulsive disturbances overlap with persistent oscillations. A correction that removes a large local excursion may also erase a genuine onset, while a method that follows every observed fluctuation can retain interference as if it were part of the underlying process. The difficulty is compounded across channels: a transient may appear at slightly different amplitudes or phases at neighboring sensors, and independent channelwise decisions can turn those modest differences into incoherent reconstructions. This paper develops a sparse reconstruction procedure in which a locally adaptive time-frequency representation, an energy-based reliability gate, and a phase-continuity regularizer jointly guide the separation of signal and impulsive correction. The motivation for local phase tracking and overlap-aware frame design is consistent with prior analyses of nonstationary spectral representations \\cite{1} \\cite{9}. In contrast to a fixed penalty, the proposed gate adjusts its strength according to the concentration of local energy, while the phase term discourages implausible changes across neighboring time-frequency locations."
       },
       {
         "type": "paragraph",
-        "text": "The first question concerns stability under a gradual increase in requests. If a dispatch rule only performs well at one load, its apparent advantage may be an artifact of a chosen scenario. We therefore vary the arrival rate across a prespecified grid and keep the service-time distribution fixed within each comparison. Prior computational queue exercises have often summarized throughput alone, which hides who waits longest and whether the queue drains after a burst \\cite{1,2}. Our evaluation records both completed tasks and the longest sustained backlog. A normalized load $rho = arrivals / capacity$ provides a common axis for the experiments. The interpretation remains conditional on this generator: no measurement from a real building or service team is used."
+        "text": "The design is intended to address three linked questions. First, can sparse interference be reduced without displacing the timing of a genuine transient? Second, can the reconstruction preserve band concentration and relationships across channels when the background level changes? Third, can alternating updates be stopped in a reproducible way without requiring an unnecessarily long iteration sequence? Earlier work has considered reliability-weighted sparse correction, complex-domain phase regularization, and bounded alternating optimization separately \\cite{2} \\cite{3} \\cite{4}. Here they are joined in one procedure so that the local confidence estimate affects the correction while phase continuity constrains the recovered component. The experimental presentation is organized around the six stream conditions in Table \\ref{tab:stream-settings}; pooled timing, concentration, coherence, and residual measures appear in Table \\ref{tab:recovery-metrics}. Figure \\ref{fig:chart} summarizes relative gain by condition, and Figure \\ref{fig:diagram} gives the processing path. The central premise is that a reconstruction should treat local energy as evidence, not as a complete decision: a concentrated region may be a meaningful oscillation or an impulse, and neighboring phase behavior supplies additional information for distinguishing them."
       },
       {
         "type": "heading",
         "level": 1,
-        "text": "2. Computational queue model"
+        "text": "Signal Model and Representation"
+      },
+      {
+        "type": "paragraph",
+        "text": "Let $y_{t,k}$ denote the observed coefficient at frame $t$ and frequency band $k$. We represent it as the sum of a structured component $x_{t,k}$ and a sparse correction $z_{t,k}$, with residual variation absorbed by the data-fidelity term. This decomposition does not assert that every large coefficient is corrupt. Instead, it asks whether a candidate correction can reduce the residual while avoiding unnecessary alteration of a phase-consistent component. A local transform is useful because an abrupt event and a slowly changing oscillation occupy different temporal and spectral neighborhoods. For a window $w$ and hop $H$, a coefficient is denoted by $\\widehat{X}_{m,k}$ and is obtained from the windowed Fourier sum $\\widehat{X}_{m,k}=\\sum_{n=0}^{N-1}x_n w_{n-mH}\\exp(-2\\pi i kn/N)$. The transform in the method uses a windowed Fourier sum, with overlap selected to retain temporal detail while controlling leakage between neighboring bands. The corresponding formal expression is provided with the paper's equation group. Energy concentration measures provide a natural basis for local confidence, as investigated in adaptive time-frequency estimation \\cite{5}. Frame overlap and leakage must nevertheless be considered together: a window that is too brief can broaden a stable component, whereas a long window can blur a short onset."
+      },
+      {
+        "type": "paragraph",
+        "text": "The representation is computed for aligned channels, but the optimization need not assume identical signals across sensors. Instead, it permits amplitude and phase variation while favoring coherent structure where evidence supports it. This distinction matters in acoustic and vibration streams, where a physical event may reach sensors through different paths and with different local gains. If the observed coefficient is denoted by $y_{t,k}$, then the residual for a proposed reconstruction is $r_{t,k}=y_{t,k}-x_{t,k}-z_{t,k}$. The first term in the objective penalizes this residual, and a smoothed absolute-value penalty encourages most entries of $z$ to remain small while permitting a limited number of substantial corrections. Smoothing with a small positive $\\epsilon$ avoids an unstable derivative at zero. The structured component is further constrained by a phase difference between adjacent frames and bands, rather than by a requirement that all channels share one phase. This local relation is deliberately modest: it encodes continuity where the time-frequency path is meaningful, without imposing a global sinusoidal model on a stream whose spectral content may change."
+      },
+      {
+        "type": "equation",
+        "id": "eq:local-time-frequency",
+        "latex": "X_{m,k}=\\sum_{n=0}^{N-1}x_n w_{n-mH}\\exp\\left(-2 pi i kn/N\\right)",
+        "numbered": true
       },
       {
         "type": "heading",
         "level": 2,
-        "text": "2.1. Event generation and split"
+        "text": "Local reliability and phase structure"
       },
       {
         "type": "paragraph",
-        "text": "Each trace contains a warm-up interval followed by a scoring interval. Warm-up observations initialize the queue state but are excluded from reported errors, so the first empty-queue period does not make the policy look artificially fast. We use paired traces: every policy sees the same arrival sequence and the same service requirements. This reduces irrelevant variation between runs and makes a policy difference easier to interpret. The simulator records an event whenever a task joins, begins service, or leaves the queue. A queue state $q_t$ is updated after each event, rather than at fixed time steps, to avoid discretization artifacts. The event list is sorted by a stable tie-breaking rule that is included in the fixture description."
+        "text": "For each frame, define local energy as $E_t=\\sum_{k=1}^{K}|\\widehat{X}_{t,k}|^2$. The reliability score is a bounded ratio, $\\rho_t=E_t/(E_t+\\epsilon)$, with a small stabilizing constant in the denominator. The resulting penalty is set between lower and upper bounds, with the precise mapping specified in the method's objective group. In qualitative terms, greater concentration reduces the penalty applied to sparse correction, giving the optimizer room to explain a sharply localized excursion as interference when the remaining structure supports that interpretation. Less concentrated energy raises the correction cost, protecting broad or persistent content from being removed merely because it is energetic. This direction of adaptation is important: a reliability score is not a probability that a coefficient is clean, and it should not be read as one. It is a local control signal whose effect is tempered by the residual fit and the phase regularizer. The bounded schedule also prevents extreme scores from driving the optimizer to a degenerate all-correction or no-correction solution.\\fn{The energy ratio controls a bounded penalty; it is not a calibrated probability of signal integrity.}"
       },
       {
         "type": "paragraph",
-        "text": "The calibration split is grouped by trace seed. No two windows cut from the same generated trace appear on opposite sides of the split, because nearby windows share the same burst structure. Dispatch thresholds are selected on calibration traces only and then held constant for all evaluation runs. We also repeat the comparison with a second set of seeds to estimate variability from trace generation. Let $m_g$ be the median wait for group $g$; we compare groups rather than treating each event as independent evidence. These safeguards make the reported uncertainty broader than a naive event-level interval and prevent the same burst from being counted twice. The split rule is simple enough to reproduce from the seed list alone."
-      },
-      {
-        "type": "paragraph",
-        "text": "Three dispatch policies share the same task priority and differ only in how they allocate the next available courier. The fixed rule selects the oldest eligible task. The load-aware rule chooses a task from the most congested zone, while the conservative rule holds one service slot when recent delays exceed a fixed calibration threshold. We do not change the threshold during evaluation. A score $S_j = wait_j + penalty_j$ ranks eligible tasks, and the penalty is zero for the fixed rule. The other policies use bounded penalties so that a task cannot be postponed indefinitely solely because its zone is busy. This bound is stated in the configuration and is identical across all seeds."
-      },
-      {
-        "type": "equation",
-        "id": "eq:wait",
-        "latex": "W_i = T_i - A_i",
-        "numbered": true
-      },
-      {
-        "type": "paragraph",
-        "text": "The wait decomposition is checked against the event log after each replay. A task cannot begin before it arrives, and the recorded service interval cannot overlap another task on the same resource. We use $W_i = B_i - A_i$ for the observed wait, with arrival time $A_i$ and service start $B_i$. The queue length after event k is $Q_k = Q_{k-1} + arrivals_k - starts_k$. These identities detect bookkeeping errors before the policy metrics are calculated. Each check is applied to every trace, including traces with no burst, so that the most difficult scenarios do not receive special handling."
-      },
-      {
-        "type": "equation",
-        "id": "eq:aligned",
-        "latex": "\\begin{aligned}\\bar W &= \\frac{1}{n}\\sum_i W_i \\\\ Q_k &= Q_{k-1}+a_k-s_k\\end{aligned}",
-        "numbered": true
-      },
-      {
-        "type": "heading",
-        "level": 1,
-        "text": "3. Evaluation measures"
-      },
-      {
-        "type": "paragraph",
-        "text": "The outcome table summarizes median wait, the upper-tail wait, and the proportion of traces that return to an empty queue after a burst. These measures answer different questions: median wait describes a typical task, the upper tail describes difficult cases, and recovery indicates whether congestion persists. The largest load level is retained even when all policies degrade there, since removing it would conceal the operating boundary. We show each policy separately rather than ranking them with a composite score. The table is referenced as \\ref{tab:queue}, and its values should be read with the load curve in \\ref{fig:load}. The units are simulation ticks, not clock minutes, and the scale has no real-world calibration."
+        "text": "Phase continuity is evaluated along a diagonal neighborhood in the time-frequency plane, linking nearby frames and bands. This path is useful when an evolving component drifts across frequency, but it is not assumed to describe every event. The regularization weight therefore determines how strongly the algorithm trusts that local relation relative to the data and sparse correction. A compact statement of the balance is that the objective combines residual fit, a smoothed sparse penalty, and squared phase differences; its updates alternate between minimizing over $\\mathbf{x}$ and over $\\mathbf{z}$. Complex-domain regularization has previously been used to stabilize recovered spectrogram structure \\cite{3}, while coherence constraints have been studied for acoustic transient restoration \\cite{6}. The present formulation uses local phase continuity as a regularizer rather than a rigid equality, allowing a transient to depart from its neighbors when the observed coefficients justify that departure. The distinction between a soft prior and a hard phase lock is consequential: a hard lock could shift a genuine event toward the phase trajectory of a longer-lived component, whereas a soft term can preserve the event while still discouraging isolated, unsupported phase jumps."
       },
       {
         "type": "table",
-        "id": "tab:queue",
-        "caption": "Wait and recovery summaries across computational load settings",
+        "id": "tab:stream-settings",
+        "caption": "Stream conditions used for reconstruction assessment",
         "header": [
           [
-            "Policy",
-            "Median wait",
-            "Upper tail",
-            "Recovery"
+            "Trial",
+            "Mode",
+            "Channels",
+            "Rate",
+            "Noise",
+            "Impulse",
+            "Gain"
           ]
         ],
         "rows": [
           [
-            "Fixed",
-            "8.4",
-            "21.0",
-            "0.71"
+            "A1",
+            "Acoustic",
+            "8",
+            "16 kHz",
+            "-18 dB",
+            "4 percent",
+            "1.8 dB"
           ],
           [
-            "Load-aware",
-            "7.2",
-            "23.8",
-            "0.74"
+            "A2",
+            "Acoustic",
+            "8",
+            "16 kHz",
+            "-12 dB",
+            "8 percent",
+            "2.1 dB"
           ],
           [
-            "Conservative",
-            "9.1",
-            "18.6",
-            "0.86"
+            "V1",
+            "Vibration",
+            "6",
+            "12 kHz",
+            "-20 dB",
+            "5 percent",
+            "1.5 dB"
+          ],
+          [
+            "V2",
+            "Vibration",
+            "6",
+            "12 kHz",
+            "-14 dB",
+            "10 percent",
+            "1.9 dB"
+          ],
+          [
+            "M1",
+            "Mixed",
+            "10",
+            "20 kHz",
+            "-16 dB",
+            "6 percent",
+            "2.4 dB"
+          ],
+          [
+            "M2",
+            "Mixed",
+            "10",
+            "20 kHz",
+            "-10 dB",
+            "12 percent",
+            "2.7 dB"
           ]
         ],
-        "table_style": "shaded_header"
+        "note": "Each condition contains 24 multichannel records with matched duration and aligned sensor timing."
       },
       {
-        "type": "chart",
-        "id": "fig:load",
-        "caption": "Wait summaries by normalized request load",
-        "chart_type": "line",
-        "labels": [
-          "low",
-          "moderate",
-          "high",
-          "peak"
-        ],
-        "series": [
-          {
-            "name": "median",
-            "values": [
-              4.0,
-              7.2,
-              12.8,
-              21.1
-            ],
-            "errors": [
-              0.8,
-              1.0,
-              1.8,
-              2.9
-            ]
-          },
-          {
-            "name": "upper tail",
-            "values": [
-              11.2,
-              18.4,
-              32.0,
-              49.5
-            ]
-          }
-        ],
-        "x_label": "normalized load",
-        "y_label": "simulation ticks"
-      },
-      {
-        "type": "paragraph",
-        "text": "In the middle of the tested load range, the load-aware policy reduces the median wait while preserving a similar recovery rate. At the highest level its upper-tail wait grows faster, suggesting that routing by congestion can concentrate work in one zone. The conservative policy has a slightly higher median in quiet scenarios but limits the longest backlog after burst arrivals. This trade-off is visible in the computational line chart, where the median and tail curves separate as load rises. The chart uses the same fixed seeds as the table; error bars represent the central spread across trace batches. The expression $delta = wait_policy - wait_fixed$ is computed within each paired trace before the aggregate summary is formed."
-      },
-      {
-        "type": "figure",
-        "id": "fig:queue",
-        "figure_type": "architecture",
-        "caption": "Computational queue and dispatch sequence",
-        "description": "A procedural diagram shows arrival events passing through a shared queue, a policy selector, and a service pool.",
-        "labels": [
-          "Arrival stream",
-          "Shared queue",
-          "Policy rule",
-          "Service pool"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "The diagram at \\ref{fig:queue} separates the queue state from the dispatch rule so that a policy change does not alter event generation. A task enters the shared queue with its arrival timestamp and fixed service requirement. The selector chooses among eligible tasks, then the service pool updates its state when a task completes. This separation is important for paired replay: the same arrival trace can be evaluated under several dispatch policies without regenerating the workload. The figure is a schematic of code structure, not a map of a real site. Its labels identify only the components needed to understand the simulation."
+        "type": "heading",
+        "level": 1,
+        "text": "Adaptive Reconstruction Procedure"
       },
       {
         "type": "equation",
-        "id": "eq:recovery",
-        "latex": "R = empty_traces / all_traces",
+        "id": "eq:adaptive-objective",
+        "latex": "\\begin{aligned}\nJ(x,z)&=\\sum_{t=1}^{T}\\sum_{k=1}^{K}\\left(y_{t,k}-x_{t,k}-z_{t,k}\\right)^2+lambda_s\\sum_{t=1}^{T}\\sum_{k=1}^{K}\\left|z_{t,k}\\right|\\\\\n&+lambda_p\\sum_{t=2}^{T}\\sum_{k=2}^{K}\\left(phi(x_{t,k})-phi(x_{t-1,k-1})\\right)^2,\\\\\nx^{(r+1)}&=\\mathrm{argmin}_{x}J(x,z^{(r)}),\\\\\nz^{(r+1)}&=\\mathrm{argmin}_{z}J(x^{(r+1)},z).\n\\end{aligned}",
         "numbered": true
       },
       {
         "type": "paragraph",
-        "text": "The result does not identify a universal best policy. A deployment with strict tail constraints might prefer the conservative rule, whereas a system judged primarily by typical delay could prefer load-aware dispatch at moderate load. Such a choice would require real service objectives and measurements, neither of which is included here. We instead state the conditional finding: under the computational arrival process, load-aware dispatch improves typical delay at intermediate load, while the conservative reserve recovers more reliably after bursts. The queue model assumes that every task is served once and that service requirements are known to the simulator. It excludes cancellations, human decisions, and correlated equipment failure, all of which could change the ranking \\cite{3,4}."
+        "text": "The optimizer alternates between the structured reconstruction and the sparse correction. Holding the correction fixed, the structured update reduces the residual and phase cost; holding the structured component fixed, the correction update reduces the remaining residual subject to sparsity. A bounded step is used in each update so that a strong local gradient cannot abruptly replace an otherwise stable estimate. This choice follows the general rationale for bounded alternating methods in multichannel denoising \\cite{4}. The two blocks are coupled: a correction that is too permissive can absorb the transient of interest, while a phase term that is too strong can force the structured estimate to smooth across a real change. The adaptive penalty moderates this interaction by adjusting the correction cost from frame to frame. In implementation, each update is evaluated against the same local representation and aligned channel ordering, so changes in the objective reflect the proposed estimates rather than a change in coordinate convention."
+      },
+      {
+        "type": "paragraph",
+        "text": "The reliability schedule uses the local energy ratio to select a penalty within a preset interval. In symbols, the relationship is represented by $\\lambda_t=\\lambda_{\\min}+(\\lambda_{\\max}-\\lambda_{\\min})\\exp(-\\rho_t)$. The bounds are essential operational safeguards: they limit the influence of an unusually concentrated frame and retain a nonzero correction cost even when energy is diffuse. The rule is intentionally simple enough to audit, yet responsive enough to distinguish frames with different local structure. It also avoids making the correction decision from amplitude alone. A high-energy band contributes to the reliability estimate, but the optimizer must still explain the full set of coefficients with a combination of data fit, sparse correction, and phase continuity. This construction is related to reliability-weighted sparse correction \\cite{2}, but adds an explicit continuity term and a bounded, locally varying schedule. The practical result is that the same global procedure can respond differently to neighboring frames without introducing a separate hand-tuned threshold for every channel."
+      },
+      {
+        "type": "chart",
+        "id": "fig:chart",
+        "caption": "Relative recovery gain across stream conditions",
+        "chart_type": "bar",
+        "labels": [
+          "A1",
+          "A2",
+          "V1",
+          "V2",
+          "M1",
+          "M2"
+        ],
+        "series": [
+          {
+            "name": "Adaptive gain",
+            "values": [
+              18.4,
+              21.7,
+              16.9,
+              24.6,
+              20.8,
+              27.1
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Stopping is based on stability of the reconstructed component rather than on the iteration count alone. If $x^{(r)}$ is the estimate at update $r$, a normalized change can be expressed as $\\delta_r=\\sqrt{\\sum_{t,k}|x_{t,k}^{(r)}-x_{t,k}^{(r-1)}|^2}/(\\sqrt{\\sum_{t,k}|x_{t,k}^{(r-1)}|^2}+\\epsilon)$. The procedure stops when this change remains below a tolerance over the prescribed stability check, or when a conservative update limit is reached. A short stability check reduces sensitivity to a single fortuitous small step, while the limit prevents pathological runs on difficult records. Stopping criteria for nonconvex restoration are known to influence both reproducibility and computational cost \\cite{11}; accordingly, stability is treated here as a diagnostic of the actual reconstruction, not as proof of a global optimum. The objective need not be convex in all its components for this operational rule to be useful. We retain the best finite estimate encountered, monitor the residual and correction magnitudes, and reject an update if it violates the bounded-step condition. These safeguards make the iteration behavior interpretable across changing noise conditions."
       },
       {
         "type": "heading",
         "level": 1,
-        "text": "4. Sensitivity and limitations"
+        "text": "Evaluation Protocol"
+      },
+      {
+        "type": "equation",
+        "id": "eq:reliability-penalty",
+        "latex": "r_t=\\frac{\\sum_{k=1}^{K}\\left|X_{t,k}\\right|^2}{\\sum_{k=1}^{K}\\left|X_{t,k}\\right|^2+epsilon}, l_t=l_min+(l_max-l_min)\\exp\\left(-r_t\\right)",
+        "numbered": true
       },
       {
         "type": "paragraph",
-        "text": "A further sensitivity check changes the duration of the warm-up interval and the size of the calibration group. Short warm-up periods leave more initial-state influence in the score; longer periods make the estimate less sensitive but reduce the fraction of each trace available for evaluation. Increasing calibration size stabilizes the threshold for the conservative rule, although the benefit becomes small after the principal burst patterns have appeared. We report the tested settings rather than extrapolating beyond them. The confidence width $w = q95 - q05$ is included as a descriptive spread and is not presented as a guarantee for unobserved traces. These comparisons help separate simulation noise from a policy effect without claiming that the generator represents a particular service network."
+        "text": "The assessment uses acoustic, vibration, and mixed multichannel records with aligned sensor timing. As detailed in Table \\ref{tab:stream-settings}, the acoustic conditions contain eight channels at 16 kHz, the vibration conditions contain six channels at 12 kHz, and the mixed conditions contain ten channels at 20 kHz. Each condition comprises 24 records of matched duration. Across the six conditions, the stated impulse proportion ranges from 4 to 12 percent, while background noise and gain vary by condition. This spread allows the method to be considered under both comparatively mild and more demanding interference settings without treating the records as interchangeable. The adaptive procedure is compared with fixed-penalty sparse reconstruction and median-based denoising. A fixed penalty provides a useful reference for the contribution of local adaptation; the median method provides a distinct robust baseline that does not use the same phase model. Median filtering has been examined for vibration telemetry with sparse outliers \\cite{7}, while block-sparse models offer another view of interference structure in compact arrays \\cite{10}. The comparison is intended to assess recovery behavior, not to claim that one estimator is universally preferable for every sensor process."
+      },
+      {
+        "type": "table",
+        "id": "tab:recovery-metrics",
+        "caption": "Recovery metrics across signal conditions",
+        "header": [
+          [
+            "Metric",
+            "Fixed",
+            "Adaptive",
+            "Median",
+            "Change",
+            "Spread"
+          ]
+        ],
+        "rows": [
+          [
+            "Timing error",
+            "8.6 ms",
+            "4.1 ms",
+            "6.9 ms",
+            "52.3 percent",
+            "1.2 ms"
+          ],
+          [
+            "Band concentration",
+            "0.71",
+            "0.84",
+            "0.76",
+            "18.3 percent",
+            "0.04"
+          ],
+          [
+            "Coherence",
+            "0.68",
+            "0.81",
+            "0.73",
+            "19.1 percent",
+            "0.05"
+          ],
+          [
+            "Residual energy",
+            "0.29",
+            "0.17",
+            "0.23",
+            "41.4 percent",
+            "0.03"
+          ],
+          [
+            "Stable updates",
+            "14",
+            "9",
+            "11",
+            "35.7 percent",
+            "1"
+          ]
+        ],
+        "note": "Values are pooled across channels; lower timing error and residual energy indicate better recovery."
       },
       {
         "type": "paragraph",
-        "text": "The study has several limits. The computational network has a small number of zones, fixed travel costs, and no route conflicts. Service times are drawn independently of task type, so the experiment cannot assess specialist workload or priority rules that depend on task content. The arrival generator includes bursts but not long-term seasonality. We also compare only three policies and do not tune them against a common operational objective. The effect size may therefore change under a different graph or cost model. Our purpose is to show a transparent comparison pattern: paired traces, group-based splitting, separate typical and tail metrics, and explicit reporting of recovery. Any follow-up should first define its target setting and validate the simulator against data collected for that purpose."
+        "text": "Four principal quantities are considered: transient timing error, band concentration, cross-channel coherence, and residual energy. Timing error measures whether the restored event remains near its reference time; lower values indicate less displacement. Band concentration summarizes how strongly recovered energy remains localized in its relevant spectral region. Coherence measures agreement in the cross-channel structure, and residual energy records the portion not explained by the reconstruction and sparse correction. These measures are interpreted jointly because a method can improve one while damaging another. A median operation may suppress isolated excursions but broaden a transient, while aggressive spectral concentration can improve a band score yet disrupt relationships among channels. The definitions and pooled values are collected in Table \\ref{tab:recovery-metrics}; the relative gain by stream condition is shown in Figure \\ref{fig:chart}. Metric choices follow work on timing and spectral concentration for restored streams \\cite{8}, with coherence included because independent channelwise quality does not guarantee a plausible multichannel result. The reported spread is retained to show variability alongside the pooled comparisons. We do not infer a universal ranking from a single score, and each measure is read in the context of the others and of the stated signal condition."
       },
       {
         "type": "paragraph",
-        "text": "The procedure is deliberately compact. It creates a trace, locks its split, calibrates thresholds, replays each dispatch rule, and records wait and recovery outcomes. The pseudocode lists the sequence without hiding a second optimization step inside the evaluation loop. The event trace and parameter record are retained for every computational run, allowing a reviewer to inspect why a task waited or why a queue remained nonempty. We cite the auxiliary design notes for the event ordering and uncertainty summaries \\cite{5,6,7,8}. The result is a small benchmark example rather than a recommendation about courier staffing. Its main contribution is that every reported value can be traced back to an explicit generated scenario."
+        "text": "All methods receive the same aligned input records and are assessed using the same definitions of the four measures. This matched arrangement limits the possibility that a difference in preprocessing or timing convention will be mistaken for a reconstruction gain. The fixed-penalty comparator uses one correction strength across a run, whereas the adaptive procedure changes its penalty by local frame reliability. Median-based denoising is included as a methodologically different reference, not as a phase-aware optimizer. Record-level processing preserves each stream's temporal order, and pooled reporting summarizes behavior across channels without suggesting that every channel has identical difficulty. The design also includes mixed streams, where acoustic and mechanical content can coexist and local background behavior may drift. Joint acoustic and mechanical reconstruction under drifting noise has been treated in related work \\cite{12}. Here that setting tests whether the adaptive rule remains useful when one global background description would be inadequate. The protocols therefore support comparisons across mode, channel count, noise, impulse proportion, and gain, while keeping the interpretation of the measures consistent."
       },
       {
         "type": "heading",
         "level": 1,
-        "text": "5. Conclusion"
+        "text": "Results and Interpretation"
+      },
+      {
+        "type": "figure",
+        "id": "fig:diagram",
+        "figure_type": "block_diagram",
+        "caption": "Processing flow for phase-consistent sparse reconstruction",
+        "description": "The multichannel sensor streams enter a local time-frequency transform. A reliability gate estimates local energy concentration and sets the adaptive penalty. Sparse correction is then combined with a phase regularizer in alternating updates, producing the reconstructed output after the stability criterion is met.",
+        "labels": [
+          "Sensor streams",
+          "TF transform",
+          "Reliability gate",
+          "Sparse correction",
+          "Phase regularizer",
+          "Reconstructed output"
+        ]
       },
       {
         "type": "paragraph",
-        "text": "This comparison shows how paired computational traces can distinguish typical delay from tail delay and recovery after a burst. The load-aware rule performs well at intermediate load, while a reserved service slot reduces persistent backlog in the tested scenarios. The choice depends on which outcome a future system values and on whether a validated simulator reproduces its operating conditions. We provide a reproducible event sequence, fixed calibration rule, and separate outcome measures so the example can be audited. No estimate in this paper describes a real institution, route, or service team."
+        "text": "The pooled results in Table \\ref{tab:recovery-metrics} show that the adaptive reconstruction has a timing error of 4.1 ms, compared with 8.6 ms for the fixed-penalty method and 6.9 ms for median denoising. Its band concentration is 0.84, versus 0.71 and 0.76, respectively, and its coherence is 0.81, versus 0.68 and 0.73. Residual energy is also lower for the adaptive method, at 0.17 compared with 0.29 and 0.23. These measures point in a consistent direction: the gain is not limited to suppressing unexplained energy but coincides with improved transient timing and preservation of spectral and cross-channel structure. The timing change is particularly relevant for transient restoration, since a low residual alone could be achieved by smoothing or displacing a short event. The pooled results do not imply that every record improves by the same amount; the reported spreads make that limitation visible. Rather, they indicate that the joint objective performs favorably across the aggregated assessment while maintaining the qualities that motivated phase-consistent reconstruction."
       },
       {
         "type": "paragraph",
-        "text": "One footnote records the time convention used throughout the experiment\\fn{A simulation tick is a unit defined by the fixture and is not converted to minutes.}."
+        "text": "Figure \\ref{fig:chart} presents the relative recovery gain across the six conditions. The reported gains range from 16.9 for V1 to 27.1 for M2, with positive gains also shown for A1, A2, V2, and M1. The ordering suggests that the response is not restricted to a single stream mode or to the lowest stated noise level. In particular, the mixed conditions provide a useful test of the local schedule because noise and content can vary across channels and time. The adaptive method's stable-update count is 9, compared with 14 for fixed-penalty reconstruction and 11 for median denoising, as shown in the pooled metrics. This lower count is consistent with the stability rule reaching its criterion sooner in the reported assessment; it should not be interpreted as a general runtime guarantee, since per-update cost and implementation details also matter. The relative gains and iteration counts together suggest an operational benefit, but the primary evidence remains the joint pattern in timing, concentration, coherence, and residual energy."
+      },
+      {
+        "type": "paragraph",
+        "text": "The processing flow in Figure \\ref{fig:diagram} clarifies where the components interact. Sensor streams first enter the local transform; the reliability gate then sets the adaptive penalty; sparse correction and phase regularization are resolved through alternating updates; and the stability criterion determines when the reconstructed output is emitted. This sequence explains why neither the gate nor the phase term acts as a stand-alone classifier. The gate changes the balance of the optimization, while the phase regularizer supplies a structural preference that can counteract excessive correction. Cross-channel coherence is preserved as an outcome to be measured, rather than enforced through a single shared waveform. That choice avoids imposing a common amplitude or phase on channels that may observe the same event through different paths. The diagram also highlights a practical dependency: if sensor timing is misaligned before the transform, a phase-consistent objective could faithfully preserve the wrong relative structure. Alignment is therefore part of the evaluation assumptions, and extending the method to uncertain timing would require an additional estimation component rather than simply increasing the regularization weight."
+      },
+      {
+        "type": "paragraph",
+        "text": "The observed trade-off is best understood as controlled flexibility. A fixed penalty has the virtue of simplicity, but a value appropriate for a quiet, diffuse frame may be inappropriate for a concentrated transient. A median filter is robust to isolated excursions, but its local order-statistic operation does not directly account for phase trajectories or cross-channel relationships. By letting the penalty depend on local concentration and by regularizing phase differences softly, the proposed method can use both local and neighborhood evidence. This mechanism is consistent with the changes in the pooled measures, but several qualifications remain. Energy concentration can be ambiguous when a true impulse is itself the signal of interest; a smooth phase path can be misleading near a genuine abrupt transition; and the chosen window and hop determine which neighborhoods are compared. The method's advantage therefore depends on an appropriate representation and on bounds that are sensible for the stream. The present results support the combined design under the evaluated conditions, not an assertion that either energy gating or phase continuity alone explains all observed gains."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Limitations and Practical Considerations"
+      },
+      {
+        "type": "paragraph",
+        "text": "The evaluation spans several channel counts, rates, noise levels, and impulse proportions, but it remains a finite set of conditions. In particular, the local reliability score is derived from transformed energy and does not explicitly model sensor-specific failure modes, changing transfer paths, or uncertainty in channel alignment. Where a sensor has a persistent bias or a drifting response, a sparse correction may not be the right representation: a slowly changing calibration error is not sparse in time. Similarly, structured interference that recurs at regular intervals may be better represented by a periodic or block-sparse model than by independent local corrections. The block-sparse perspective in prior array work \\cite{10} suggests one possible extension, namely grouping corrections when interference is shared among related channels. Such an extension would have to preserve the present method's ability to handle channel-specific events rather than treating all simultaneous activity as common contamination. A further issue is the interpretation of a pooled coherence score: it can hide a small subset of channels whose relationships are substantially worse than the aggregate."
+      },
+      {
+        "type": "paragraph",
+        "text": "Several practical checks follow from these limitations. The window, hop, penalty bounds, and stability tolerance should be recorded with each analysis, since each influences the neighborhood and update behavior. Reliability scores should be inspected alongside the reconstructed and corrected components rather than used as standalone quality labels. If the sparse correction contains a broad, persistent pattern, that is evidence that the assumed decomposition may be mismatched and that the result warrants review. Likewise, convergence in the normalized change does not establish that the solution is unique or physically correct. The bounded updates and stability check are safeguards against erratic optimization, not substitutes for validation against known timing or channel relationships. Drift-aware joint restoration \\cite{12} indicates that explicit treatment of changing background structure may be valuable in settings beyond those represented here. Future work can investigate how to combine such a model with the present phase prior, how to estimate reliability when a genuine transient dominates local energy, and how to calibrate penalty bounds across sensor families without sacrificing the transparent local rule."
+      },
+      {
+        "type": "box",
+        "kind": "remark",
+        "title": "Interpretation of the reliability gate",
+        "text": "The gate modulates a regularization weight; it does not declare a time-frequency region clean or corrupted. Decisions arise from the interaction of local fit, sparse cost, and phase continuity, and should be assessed using the reconstructed stream and the correction component together."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Conclusion"
+      },
+      {
+        "type": "paragraph",
+        "text": "This work has presented a phase-consistent sparse reconstruction procedure for nonstationary multichannel streams affected by impulsive interference and slowly varying noise. Its main design choice is to combine a local time-frequency representation with an energy-derived reliability gate, a bounded adaptive penalty, and a soft phase-continuity regularizer. Alternating updates separate the structured reconstruction from sparse correction, while a stability-based stopping rule limits unnecessary iteration. Across the assessed acoustic, vibration, and mixed conditions, the adaptive method shows lower pooled timing error and residual energy, and higher band concentration and coherence than the two reported comparators. The pattern across the condition-specific gain chart reinforces the pooled comparison without implying identical performance on every record. The results support the value of using local energy and phase neighborhood information together, particularly when a single fixed correction strength must serve changing stream conditions."
+      },
+      {
+        "type": "paragraph",
+        "text": "The method also makes its assumptions visible: aligned sensor timing, a useful local representation, and interference that can be captured by a sparse correction are important to the formulation. Its reliability score is a control quantity rather than a semantic label, and its phase term is a preference rather than a hard constraint. These properties make the procedure adaptable, but they also define where additional modeling may be needed, including persistent calibration drift, recurring structured interference, and uncertain sensor alignment. Future evaluation should broaden the range of such conditions and examine channel-specific outcomes in addition to pooled measures. Within the present scope, the combined objective offers a practical way to reduce impulsive contamination while retaining transient timing, spectral concentration, and cross-channel structure. The approach is therefore most useful when restoration must balance local robustness with continuity, rather than optimize residual reduction in isolation."
       }
-    ],
-    "references": [
-      {
-        "text": "Arc, R. S. (2021). Event traces for procedural queues. Queue Notes, 1(1), 1–7.",
-        "cite": "Arc, 2021"
-      },
-      {
-        "text": "Wren, C. E. (2022). Tail summaries in generated service systems. Observation Systems Review, 2(2), 8–15.",
-        "cite": "Wren, 2022"
-      },
-      {
-        "text": "Vale, M. (2020). Paired comparisons under fixed arrivals. Computational Methods Record, 3(1), 16–23.",
-        "cite": "Vale, 2020"
-      },
-      {
-        "text": "North, T. (2023). Recovery measures for finite queues. Imaginary Operations Journal, 1(3), 24–31.",
-        "cite": "North, 2023"
-      },
-      {
-        "text": "Example, C. and Arc, R. (2021). Grouped calibration traces. Data Proceedings, 4(1), 32–39.",
-        "cite": "Example and Arc, 2021"
-      },
-      {
-        "text": "Morrow, S. (2024). Event ordering in computational simulations. Example Research Ledger, 2(4), 40–47.",
-        "cite": "Morrow, 2024"
-      },
-      {
-        "text": "Kite, A. (2022). Describing uncertainty across generated batches. Observation Statistics Pages, 5(2), 48–55.",
-        "cite": "Kite, 2022"
-      },
-      {
-        "text": "Field, P. (2023). Reproducibility records for procedural benchmarks. Systems Archive, 6(1), 56–63.",
-        "cite": "Field, 2023"
-      }
-    ],
-    "journal": "Journal of Procedural Queues, volume 3, issue 2, pages 14–36; submitted 08 January 2026, accepted 22 March 2026"
-  }
+    ]
+  },
+  "hash": "7f5aa3aadd7abd58ee68e28bf668b5591ca62d30f2f5b44eef944e76d0b99a92"
 }

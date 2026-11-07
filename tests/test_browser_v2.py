@@ -16,12 +16,12 @@ from factory.design.draws import draws
 from factory.agent import DesignReply
 from factory.contract.extract import parse_html
 async def run_design(tmp_path):
- c=load_config().documents['financial_report'];v={k:x[0] for k,x in c.variables.items()};content=validate_content(c,json.loads(Path('tests/fixtures/financial_report_content.json').read_text())['values'],variables=v,lang='vi')
+ c=load_config().documents['financial_report'];v={k:x[0] for k,x in c.variables.items()};content=validate_content(c,json.loads(Path('tests/fixtures/financial_report_content.json').read_text(encoding="utf-8"))['values'],variables=v,lang='vi')
  d=draws(99);design={'skipped':[]}
  for name,nums in d.items():
   opts=[f'{name} option {i}' for i in range(10)];index=int(round(nums[0],4)*10);design[name]={'options':opts,'index':index,'chosen':opts[index],'details':{}}
  design['style'].update(palette=['#ffffff','#111111','#1155aa'],fonts=['Noto Serif','Be Vietnam Pro'])
- html=Path('designs/financial_report/default.html').read_text()
+ html=Path('designs/financial_report/default.html').read_text(encoding="utf-8")
  sections=[node for node in parse_html(html).walk() if node.tag=='section' and 'page' in node.attrs.get('class','').split()]
  design['orientation']['pages']={f'page_{i:03}':node.attrs.get('data-size','a4') for i,node in enumerate(sections,1)}
  async with Browser() as b:
@@ -43,9 +43,16 @@ def test_export_fixture_image_sizes(tmp_path):
         bundle=tmp_path/'documents/financial_report/financial_report_000999'
         bundle.parent.mkdir(parents=True)
         shutil.move(str(tmp_path/'bundle'),str(bundle))
-        fixture=json.loads(Path('tests/fixtures/financial_report_content.json').read_text())
+        fixture=json.loads(Path('tests/fixtures/financial_report_content.json').read_text(encoding="utf-8"))
         source=SourceContent(variables=fixture.get('variables',{}),lang='vi',pool_entry=None,values=fixture['values'])
-        (bundle/'source_content.json').write_text(source.model_dump_json(indent=2)+'\n')
+        (bundle/'source_content.json').write_text(source.model_dump_json(indent=2)+'\n', encoding="utf-8")
+        from factory.contract.models.review import PageReview, Review
+        from factory.runner.reviews import bundle_hash
+        manifest=json.loads((bundle/'document.json').read_text(encoding='utf-8'))
+        review=Review(subset='test',doc_id=bundle.name,bundle_hash=bundle_hash(bundle),status='approved',
+                      pages={page['page_id']:PageReview(decision='approved') for page in manifest['pages']})
+        review_folder=tmp_path/'reviews';review_folder.mkdir()
+        (review_folder/(bundle.name+'.json')).write_text(review.model_dump_json(indent=2)+'\n',encoding='utf-8')
         assert await export(tmp_path,tmp_path/'dataset',allow_imbalance=True)==0
         assert (tmp_path/'dataset/dataset.json').exists()
     asyncio.run(run())

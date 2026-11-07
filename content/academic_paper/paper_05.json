@@ -1,0 +1,471 @@
+{
+  "content_id": "paper_05",
+  "variables": {
+    "lang": "vi",
+    "field": "linguistics",
+    "paper_length": "medium",
+    "citation_style": "numeric"
+  },
+  "lang": "vi",
+  "values": {
+    "title": "Cấu trúc thông tin và dấu hiệu ngắt quãng trong lời kể tiếng Việt đương đại",
+    "authors": [
+      {
+        "name": "Đỗ An Khuê",
+        "affiliations": [
+          1,
+          2
+        ],
+        "corresponding": true,
+        "email": "doankhue@ngonngu-bacvan.vn"
+      },
+      {
+        "name": "Vũ Minh Tảo",
+        "affiliations": [
+          1
+        ],
+        "corresponding": false
+      }
+    ],
+    "affiliations": [
+      "Viện Nghiên cứu Ngôn ngữ Bắc Vân, Khu học thuật Lam Khê, Việt Nam",
+      "Phòng Thí nghiệm Ngữ điệu và Tương tác, Đại học Đông Lưu, Việt Nam"
+    ],
+    "abstract": "Bài viết khảo sát quan hệ giữa cấu trúc thông tin và các dấu hiệu ngắt quãng trong lời kể tiếng Việt đương đại. Dựa trên tập ngữ liệu hội thoại được biên âm và chú giải theo lớp ngữ điệu, nghiên cứu tập trung vào vị trí của các khoảng dừng, âm kéo dài, tự sửa và tiểu từ ở ranh giới giữa chủ đề với phần thuyết minh. Kết quả cho thấy ngắt quãng không chỉ phản ánh quá trình lập kế hoạch phát ngôn mà còn tham gia tổ chức sự chuyển tiếp của tiêu điểm. Khoảng dừng dài thường xuất hiện trước đơn vị mang thông tin mới, trong khi âm kéo dài và tự sửa có xu hướng duy trì lượt lời khi người nói đang điều chỉnh phạm vi quy chiếu. Các dấu hiệu này được phân bố khác nhau tùy theo kiểu lời kể và mức độ quen thuộc giữa những người tham gia tương tác. Phân tích cũng cho thấy sự kết hợp giữa ngữ điệu, trật tự thành phần và tiểu từ tạo nên một cơ chế linh hoạt để người nói quản lý tính liên tục của diễn ngôn. Những phát hiện này góp phần làm rõ vai trò của ngắt quãng trong ngữ pháp tương tác tiếng Việt.",
+    "abstract_alt": null,
+    "keywords": "ngữ điệu; cấu trúc thông tin; ranh giới diễn ngôn; chủ đề–tiêu điểm; hội thoại tiếng Việt",
+    "keywords_alt": null,
+    "journal": "Tạp chí Ngôn ngữ và Nhận thức Bắc Vân",
+    "acknowledgement": "Nhóm tác giả trân trọng cảm ơn các cộng tác viên đã hỗ trợ khâu thu thập, biên âm và đối chiếu ngữ liệu. Những nhận xét chuyên môn từ các đồng nghiệp tại Phòng Thí nghiệm Ngữ điệu và Tương tác đã giúp bài viết hoàn thiện hơn.",
+    "references": [
+      {
+        "text": "[1] Tạ Uyên Mộc. 2087. Ngữ điệu và ranh giới diễn ngôn trong lời kể tiếng Việt. Kỷ yếu Ngữ dụng Lam Khê, 4(2), 15–39.",
+        "cite": "(Mộc, 2087)"
+      },
+      {
+        "text": "[2] Nghiêm Lam Vị. 2089. Tự sửa và duy trì lượt lời trong tương tác kể chuyện. Tập san Ngữ âm Đông Lưu, 7(1), 41–68.",
+        "cite": "(Vị, 2089)"
+      },
+      {
+        "text": "[3] Sở Tĩnh Kha. 2090. Chủ đề, tiêu điểm và liên kết trong hội thoại tiếng Việt. Chuyên san Ngôn ngữ Tương tác Bắc Vân, 5(3), 22–47.",
+        "cite": "(Kha, 2090)"
+      },
+      {
+        "text": "[4] Uyển Trạch Ninh. 2092. Dấu hiệu ngắt quãng trong ngữ pháp tương tác. Tuyển tập Nghiên cứu Lời nói Lam Khê, 9(2), 73–101.",
+        "cite": "(Ninh, 2092)"
+      },
+      {
+        "text": "[5] Cao Nhã Túc. 2084. Âm kéo dài và quản lý quyền phát ngôn trong hội thoại tự sự. Tạp chí Ngữ âm Vân Chi, 6(1), 9–32.",
+        "cite": "(Túc, 2084)"
+      },
+      {
+        "text": "[6] Đàm Vân Thước. 2086. Trật tự thành phần và tiêu điểm trong câu kể tiếng Việt. Tạp chí Cú pháp Tương tác Hạ Nghi, 3(4), 44–71.",
+        "cite": "(Thước, 2086)"
+      },
+      {
+        "text": "[7] Lạc Minh Tồn. 2088. Khoảng dừng, nhịp điệu và dự báo chuyển lượt. Nghiên cứu Lời nói Vân Tịch, 8(2), 101–128.",
+        "cite": "(Tồn, 2088)"
+      },
+      {
+        "text": "[8] Phan Khuê Ngạn. 2091. Tiểu từ cuối lượt và sự điều chỉnh quan hệ liên kết. Kỷ yếu Ngữ dụng Hạ Nghi, 5(3), 57–82.",
+        "cite": "(Ngạn, 2091)"
+      },
+      {
+        "text": "[9] Quách Tịnh Dao. 2085. Biên âm đa tầng cho ngữ liệu hội thoại tiếng Việt. Tập san Ngữ liệu Vân Chi, 2(1), 18–46.",
+        "cite": "(Dao, 2085)"
+      },
+      {
+        "text": "[10] Mạc Duy Hàn. 2093. Mô hình xác suất của ranh giới ngắt quãng trong lời kể. Chuyên san Phân tích Hội thoại Lam Khê, 7(2), 33–60.",
+        "cite": "(Hàn, 2093)"
+      },
+      {
+        "text": "[11] Tống Nguyệt Sâm. 2083. Thông tin đã biết, thông tin mới và cấu trúc câu trong diễn ngôn kể. Tạp chí Ngữ pháp Vân Tịch, 4(3), 26–54.",
+        "cite": "(Sâm, 2083)"
+      },
+      {
+        "text": "[12] Hạ Vĩnh Trầm. 2094. Phối hợp giữa cao độ, trường độ và chức năng tương tác trong tiếng Việt. Chuyên khảo Ngôn ngữ Hạ Nghi, 2(2), 87–119.",
+        "cite": "(Trầm, 2094)"
+      }
+    ],
+    "body": [
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Cấu trúc thông tin và dấu hiệu ngắt quãng trong lời kể tiếng Việt đương đại"
+      },
+      {
+        "type": "paragraph",
+        "text": "Đỗ An Khuê, Vũ Minh Tảo. Đỗ An Khuê thuộc Viện Nghiên cứu Ngôn ngữ Bắc Vân, Khu học thuật Lam Khê, Việt Nam và Phòng Thí nghiệm Ngữ điệu và Tương tác, Đại học Đông Lưu, Việt Nam; Vũ Minh Tảo thuộc Viện Nghiên cứu Ngôn ngữ Bắc Vân, Khu học thuật Lam Khê, Việt Nam. Tác giả liên hệ: Đỗ An Khuê, doankhue@ngonngu-bacvan.vn. Công trình được thực hiện trong khuôn khổ Tạp chí Ngôn ngữ và Nhận thức Bắc Vân."
+      },
+      {
+        "type": "paragraph",
+        "text": "Bài viết khảo sát quan hệ giữa cấu trúc thông tin và các dấu hiệu ngắt quãng trong lời kể tiếng Việt đương đại. Dựa trên tập ngữ liệu hội thoại được biên âm và chú giải theo lớp ngữ điệu, nghiên cứu tập trung vào vị trí của các khoảng dừng, âm kéo dài, tự sửa và tiểu từ ở ranh giới giữa chủ đề với phần thuyết minh. Kết quả cho thấy ngắt quãng không chỉ phản ánh quá trình lập kế hoạch phát ngôn mà còn tham gia tổ chức sự chuyển tiếp của tiêu điểm. Khoảng dừng dài thường xuất hiện trước đơn vị mang thông tin mới, trong khi âm kéo dài và tự sửa có xu hướng duy trì lượt lời khi người nói đang điều chỉnh phạm vi quy chiếu. Các dấu hiệu này được phân bố khác nhau tùy theo kiểu lời kể và mức độ quen thuộc giữa những người tham gia tương tác. Sự kết hợp giữa ngữ điệu, trật tự thành phần và tiểu từ tạo nên một cơ chế linh hoạt để người nói quản lý tính liên tục của diễn ngôn."
+      },
+      {
+        "type": "paragraph",
+        "text": "Từ khóa: ngữ điệu; cấu trúc thông tin; ranh giới diễn ngôn; chủ đề–tiêu điểm; hội thoại tiếng Việt."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "1. Mở đầu"
+      },
+      {
+        "type": "paragraph",
+        "text": "Trong lời kể hội thoại, người nói không chỉ sắp xếp các thành phần theo quan hệ cú pháp mà còn liên tục điều chỉnh cách đưa thông tin vào dòng tương tác. Khoảng dừng, âm kéo dài, tự sửa và tiểu từ thường xuất hiện tại những điểm mà người nói phải lựa chọn giữa việc tiếp tục lượt lời và việc tái cấu trúc nội dung. Vì vậy, các dấu hiệu ngắt quãng cần được xem như một bộ phận của tổ chức diễn ngôn, thay vì chỉ là biểu hiện của sự thiếu trôi chảy. Một khoảng dừng có thể mở ra không gian để người nghe dự đoán hướng phát triển của lời kể, đồng thời giúp người nói xác lập ranh giới giữa phần đã được chia sẻ và phần sắp được giới thiệu. Cách nhìn này đặt trọng tâm vào chức năng phối hợp của hình thức âm thanh, cấu trúc thông tin và diễn tiến lượt lời."
+      },
+      {
+        "type": "equation",
+        "id": "eq:boundary-probability",
+        "latex": "\\operatorname{Pr}(B_i=1)=\\frac{\\exp(\\beta_0+\\beta_1 N_i+\\beta_2 F_i)}{1+\\exp(\\beta_0+\\beta_1 N_i+\\beta_2 F_i)}",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Nghiên cứu tập trung vào ranh giới giữa chủ đề và phần thuyết minh, đồng thời xem xét sự chuyển tiếp của tiêu điểm trong các kiểu lời kể khác nhau. Hai câu hỏi chính được đặt ra: vị trí nào của ngắt quãng gắn với sự xuất hiện của thông tin mới, và các dấu hiệu khác nhau đảm nhiệm chức năng tương tác nào? Việc phân biệt khoảng dừng dài với khoảng dừng ngắn cho phép nhận diện rõ hơn sự khác biệt giữa lập kế hoạch phát ngôn và tổ chức lượt lời. Câu hỏi thứ ba có tính bổ trợ là liệu sự quen thuộc giữa những người tham gia có làm thay đổi cách người nói sử dụng tiểu từ, kéo dài âm hoặc tự sửa hay không. Từ đó, bài viết hướng đến một mô tả vừa có cơ sở định lượng vừa giữ được tính nhạy cảm đối với ngữ cảnh."
+      },
+      {
+        "type": "paragraph",
+        "text": "Các công trình về ngữ điệu tương tác đã chỉ ra rằng ranh giới cao độ và trường độ có thể báo hiệu sự hoàn tất cục bộ, nhưng mối liên hệ với cấu trúc thông tin vẫn chưa được mô tả đầy đủ trong tiếng Việt \\cite{1}. Một hướng tiếp cận khác nhấn mạnh vai trò của tự sửa như chiến lược duy trì quyền phát ngôn khi phạm vi quy chiếu đang được thu hẹp \\cite{2}. Những khảo sát về chủ đề và tiêu điểm cũng cho thấy trật tự thành phần có thể làm thay đổi cách người nghe phân bổ sự chú ý \\cite{3}. Bài viết kế thừa các hướng này và đặt chúng trong một mô hình kết hợp giữa vị trí thông tin, đặc điểm ngữ điệu và chức năng liên kết. Điểm nhấn của nghiên cứu là xem ngắt quãng như một nguồn lực tổ chức, qua đó người nói vừa xử lý áp lực lập kế hoạch vừa định hướng cách tiếp nhận của người nghe."
+      },
+      {
+        "type": "paragraph",
+        "text": "Giả thuyết trung tâm cho rằng ranh giới sau một chủ đề đã biết sẽ có khả năng xuất hiện dừng dài nếu phần tiếp theo mang thông tin mới. Trong trường hợp tiêu điểm chưa được định hình hoàn toàn, người nói có thể chọn kéo dài âm hoặc tự sửa để giữ quyền phát ngôn. Giả thuyết này phù hợp với quan sát rằng âm kéo dài không nhất thiết biểu thị do dự; nó còn có thể là tín hiệu yêu cầu người nghe chờ đợi một thành phần sắp được hoàn thiện. Tương tự, tự sửa không chỉ là sự thay thế từ ngữ mà còn là thao tác điều chỉnh phạm vi quy chiếu, mức độ cam kết và hướng lập luận. Các dự đoán đó được đối chiếu với phân bố theo kiểu lời kể và với những trường hợp có quan hệ thân thuộc khác nhau giữa người nói và người nghe."
+      },
+      {
+        "type": "table",
+        "id": "tab:interruption-distribution",
+        "caption": "Phân bố các dấu hiệu ngắt quãng theo kiểu lời kể",
+        "header": [
+          [
+            "Kiểu lời kể",
+            "Số lượt",
+            "Dừng dài",
+            "Kéo dài",
+            "Tự sửa",
+            "Tiểu từ"
+          ]
+        ],
+        "rows": [
+          [
+            "Kể sự kiện",
+            "48",
+            "31,2%",
+            "18,7%",
+            "14,6%",
+            "35,4%"
+          ],
+          [
+            "Kể hồi ức",
+            "42",
+            "26,8%",
+            "24,1%",
+            "19,5%",
+            "29,7%"
+          ],
+          [
+            "Kể trải nghiệm",
+            "51",
+            "34,5%",
+            "21,6%",
+            "16,8%",
+            "38,2%"
+          ],
+          [
+            "Kể giải thích",
+            "37",
+            "22,4%",
+            "15,9%",
+            "23,7%",
+            "41,6%"
+          ],
+          [
+            "Kể đánh giá",
+            "29",
+            "28,9%",
+            "19,3%",
+            "27,4%",
+            "46,1%"
+          ],
+          [
+            "Tổng cộng",
+            "207",
+            "29,1%",
+            "20,2%",
+            "20,0%",
+            "37,8%"
+          ]
+        ],
+        "note": "Tỷ lệ được tính trên số lượt lời trong từng kiểu kể; một lượt có thể đồng thời chứa nhiều dấu hiệu."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "2. Cơ sở lý thuyết và mô hình phân tích"
+      },
+      {
+        "type": "equation",
+        "id": "eq:information-shift",
+        "latex": "\\begin{aligned} \\Delta I_i &= \\sum_{k=1}^{m} \\delta_{ik} F_k \\\\ C_i &= \\frac{\\Delta I_i}{\\max(\\Delta I_1,\\ldots,\\Delta I_n)} \\end{aligned}",
+        "numbered": true
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "2.1. Ngắt quãng như tín hiệu tổ chức thông tin"
+      },
+      {
+        "type": "paragraph",
+        "text": "Cấu trúc thông tin được hiểu ở đây là sự phân bố giữa nội dung đã có trong nền tương tác và nội dung được đưa lên như một đóng góp mới. Chủ đề thường cung cấp miền quy chiếu, còn tiêu điểm làm nổi bật phần mà người nói muốn người nghe cập nhật hoặc đánh giá. Tuy nhiên, ranh giới giữa hai phần không phải lúc nào cũng trùng với một ranh giới cú pháp rõ ràng. Trong lời kể tự nhiên, người nói có thể dùng dừng, kéo dài hoặc tiểu từ để làm cho một ranh giới chức năng trở nên nhận biết được. Theo hướng đó, khoảng dừng không bị xem là khoảng trống giữa các đơn vị, mà là thành tố có vị trí và thời lượng mang ý nghĩa. Các nghiên cứu về âm kéo dài nhấn mạnh khả năng duy trì quyền phát ngôn của hình thức này \\cite{5}, trong khi các phân tích về trật tự thành phần cho thấy tiêu điểm có thể được định vị bằng nhiều phương tiện phối hợp \\cite{6}."
+      },
+      {
+        "type": "chart",
+        "id": "fig:chart",
+        "caption": "Tỷ lệ dừng dài theo kiểu lời kể",
+        "chart_type": "bar",
+        "labels": [
+          "Kể sự kiện",
+          "Kể hồi ức",
+          "Kể trải nghiệm",
+          "Kể giải thích",
+          "Kể đánh giá"
+        ],
+        "series": [
+          {
+            "name": "Dừng dài (%)",
+            "values": [
+              31.2,
+              26.8,
+              34.5,
+              22.4,
+              28.9
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Trong phân tích định lượng, mỗi vị trí được mã hóa theo mức độ mới của đơn vị kế tiếp và trạng thái nổi bật của tiêu điểm. Nếu $N_i \\geq 0$ biểu thị độ mới tại vị trí $i$ và $F_i$ biểu thị mức độ tập trung của tiêu điểm, xác suất xuất hiện ranh giới có thể tăng theo cả hai biến. Cách mã hóa này không giả định rằng mọi thông tin mới đều tạo ra dừng dài; nó chỉ cho phép kiểm tra xu hướng chung sau khi đã xét kiểu lời kể, độ dài lượt và tốc độ nói. Những trường hợp có nhiều dấu hiệu đồng thời được giữ nguyên để phân tích, bởi việc loại bỏ chúng sẽ làm mất đi đặc điểm phối hợp vốn phổ biến trong hội thoại. Mô hình cũng phân biệt vị trí trước tiêu điểm với vị trí sau tiêu điểm nhằm tránh đồng nhất chức năng chuẩn bị với chức năng điều chỉnh."
+      },
+      {
+        "type": "paragraph",
+        "text": "Trong công trình này, ranh giới được xem là một hiện tượng có tính liên tục. Dừng ngắn có thể chỉ đánh dấu việc mở lượt hoặc thay đổi nhịp; dừng dài thường tạo kỳ vọng về một đơn vị mới hoặc một chuyển tiếp nội dung. Kéo dài âm thanh duy trì đường phát ngôn trong khi người nói còn đang lựa chọn biểu thức. Tự sửa làm lộ ra quá trình kiểm tra và điều chỉnh, nhưng không nhất thiết gây đứt gãy tương tác. Tiểu từ, nhất là ở cuối hoặc gần cuối đơn vị, kết nối nội dung với thái độ, sự nhượng bộ, xác nhận hoặc dự kiến phản hồi. Cách phân biệt này tiếp thu quan sát về khoảng dừng và dự báo chuyển lượt \\cite{7}, đồng thời mở rộng nó bằng cách gắn thời điểm chuyển lượt với cấu trúc chủ đề–tiêu điểm."
+      },
+      {
+        "type": "equation",
+        "id": "eq:duration-focus",
+        "latex": "D_i=\\alpha+\\beta_1 R_i+\\beta_2 N_i+\\beta_3 F_i+\\epsilon_i",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Một điểm quan trọng là chức năng của cùng một dấu hiệu có thể thay đổi theo vị trí. Dừng dài trước một thành phần mới có thể báo hiệu sự chuyển tiếp, nhưng dừng dài giữa hai thành phần đã quen thuộc lại có thể phản ánh việc tìm kiếm từ ngữ. Âm kéo dài trước tiêu điểm thường duy trì quyền phát ngôn, còn kéo dài sau một đơn vị hoàn chỉnh có thể tạo sắc thái đánh giá. Tự sửa sau tiêu điểm có thể thu hẹp quy chiếu, thay đổi mức độ chính xác hoặc giảm trách nhiệm đối với nhận định vừa nêu. Tiểu từ không chỉ nối các mệnh đề mà còn điều chỉnh quan hệ giữa người nói và người nghe, phù hợp với các phân tích về tiểu từ cuối lượt \\cite{8}. Do đó, việc diễn giải phải dựa trên chuỗi dấu hiệu, chứ không thể dựa vào một hình thức đơn lẻ."
+      },
+      {
+        "type": "table",
+        "id": "tab:information-boundaries",
+        "caption": "Tương quan giữa ranh giới thông tin và chức năng tương tác",
+        "header": [
+          [
+            "Vị trí",
+            "Chủ đề",
+            "Tiêu điểm",
+            "Dấu hiệu",
+            "Chức năng"
+          ]
+        ],
+        "rows": [
+          [
+            "Trước chủ đề",
+            "Đã biết",
+            "Không nổi bật",
+            "Dừng ngắn",
+            "Mở lượt lời"
+          ],
+          [
+            "Sau chủ đề",
+            "Đã biết",
+            "Mới",
+            "Dừng dài",
+            "Báo hiệu chuyển tiếp"
+          ],
+          [
+            "Trước tiêu điểm",
+            "Đã biết",
+            "Mới",
+            "Kéo dài",
+            "Duy trì lượt lời"
+          ],
+          [
+            "Sau tiêu điểm",
+            "Mới",
+            "Đã biết",
+            "Tự sửa",
+            "Thu hẹp quy chiếu"
+          ],
+          [
+            "Giữa hai đơn vị",
+            "Mới",
+            "Mới",
+            "Tiểu từ",
+            "Điều chỉnh quan hệ liên kết"
+          ]
+        ],
+        "note": "Các chức năng được xác định từ sự phối hợp giữa vị trí ngắt quãng, cấu trúc thông tin và diễn tiến lượt lời."
+      },
+      {
+        "type": "paragraph",
+        "text": "Sự phối hợp giữa các lớp chú giải được xem là điều kiện để tránh cách giải thích giản đơn. Một ranh giới chỉ được coi là có ý nghĩa thông tin khi vị trí âm điệu, trạng thái của nội dung trước và sau đó, cùng với hướng vận động của lượt lời cùng chỉ về một chức năng tương đối ổn định. Quy ước này cũng cho phép phân biệt ngắt quãng có chủ đích với những biến động không mang giá trị tổ chức. \\fn{Việc giữ lại những trường hợp có dấu hiệu chồng lấn giúp phản ánh sát hơn tính đồng thời của các nguồn lực trong lời nói tự nhiên.} Về mặt khái niệm, sự đồng thời ấy cho thấy cấu trúc thông tin không tồn tại như một lớp trừu tượng tách rời, mà được người nói kiến tạo trong chính quá trình phát âm và phối hợp với người nghe."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "3. Ngữ liệu và phương pháp"
+      },
+      {
+        "type": "paragraph",
+        "text": "Ngữ liệu gồm 207 lượt lời kể được thu từ các cuộc trò chuyện bán tự nhiên giữa những người nói tiếng Việt ở nhiều mức độ quen biết. Mỗi lượt được phân loại theo năm kiểu kể gồm kể sự kiện, kể hồi ức, kể trải nghiệm, kể giải thích và kể đánh giá. Bản biên âm giữ lại các khoảng dừng, đoạn kéo dài, lần tự sửa và tiểu từ ở vị trí nguyên thủy trong dòng lời nói. Việc giữ nguyên thứ tự tuyến tính giúp phân tích được mối liên hệ giữa dấu hiệu ngắt quãng và điểm chuyển nội dung. Số lượt giữa các kiểu kể không hoàn toàn bằng nhau, nhưng đủ để nhận diện những xu hướng tương phản về dừng dài, kéo dài, tự sửa và tiểu từ."
+      },
+      {
+        "type": "figure",
+        "id": "fig:diagram",
+        "figure_type": "block_diagram",
+        "caption": "Cơ chế phối hợp giữa cấu trúc thông tin và ngắt quãng",
+        "description": "Sơ đồ mô tả chuỗi xử lý từ ngữ cảnh kể đến tổ chức thông tin, lựa chọn dấu hiệu ngắt quãng và chuyển tiếp tiêu điểm. Các khối cuối cùng quy tụ vào việc quản lý lượt lời trong tương tác.",
+        "labels": [
+          "Ngữ cảnh kể",
+          "Tổ chức thông tin",
+          "Dấu hiệu ngắt quãng",
+          "Chuyển tiếp tiêu điểm",
+          "Quản lý lượt lời"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Công tác chú giải được tiến hành theo ba lớp. Lớp thứ nhất ghi nhận ranh giới âm điệu và độ dài tương đối của khoảng dừng. Lớp thứ hai xác định chủ đề, tiêu điểm, thông tin đã biết và thông tin mới. Lớp thứ ba gán chức năng tương tác như mở lượt lời, báo hiệu chuyển tiếp, duy trì lượt lời, thu hẹp quy chiếu hoặc điều chỉnh quan hệ liên kết. Hai người chú giải đối chiếu độc lập trước khi thống nhất những trường hợp còn bất đồng. Các quyết định được kiểm tra lại trên toàn bộ lượt kể để bảo đảm một dấu hiệu được hiểu nhất quán trong những ngữ cảnh tương tự. Phương pháp biên âm đa tầng này kế thừa các nguyên tắc được đề xuất cho ngữ liệu hội thoại tiếng Việt \\cite{9}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Để ước lượng khả năng xuất hiện ranh giới ngắt quãng, nghiên cứu sử dụng mô hình nhị thức với các biến chỉ báo mức độ mới của thông tin và vị trí tiêu điểm. Biến phụ thuộc nhận giá trị một khi tại vị trí đang xét có dấu hiệu ngắt quãng nổi bật. Dạng mô hình được trình bày trong công thức \\ref{eq:boundary-probability}, trong đó $P_i=\\operatorname{Pr}(B_i=1)$ tăng theo tổ hợp của $N_i$ và $F_i$. Cách mã hóa này giúp tách ảnh hưởng của cấu trúc thông tin khỏi ảnh hưởng riêng của kiểu lời kể. Mô hình xác suất về ranh giới được sử dụng như một khung kiểm tra xu hướng, không thay thế cho việc đọc sát từng lượt lời \\cite{10}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Để mô tả mức chuyển dịch thông tin, mỗi đơn vị được gán trọng số theo trạng thái đã biết hoặc mới. Chỉ số chuẩn hóa trong công thức \\ref{eq:information-shift} được dùng để so sánh các lượt có độ dài khác nhau. Với $C_i=\\frac{\\Delta I_i}{\\max(\\Delta I_1,\\ldots,\\Delta I_n)}$, vị trí có giá trị cao được xem là nơi sự thay đổi thông tin tập trung mạnh. Phép chuẩn hóa này không khẳng định rằng thông tin mới luôn quan trọng hơn thông tin đã biết; nó chỉ mô tả mức chuyển tiếp tương đối trong phạm vi từng lượt. Các kết quả định tính sau đó được dùng để kiểm tra những vị trí mà chỉ số cao nhưng dấu hiệu âm thanh không rõ rệt."
+      },
+      {
+        "type": "paragraph",
+        "text": "Các bảng tổng hợp được dự kiến đọc cùng với phần phân tích thay vì tách khỏi lập luận. Phân bố theo kiểu lời kể được quy chiếu tại \\ref{tab:interruption-distribution}, còn quan hệ giữa vị trí thông tin và chức năng tương tác được quy chiếu tại \\ref{tab:information-boundaries}. Sơ đồ khái niệm tại \\ref{fig:diagram} được dùng để định hướng chuỗi xử lý từ ngữ cảnh kể đến quản lý lượt lời. Những quy chiếu này được đưa vào từ phần phương pháp để nhấn mạnh rằng kết quả không chỉ dựa trên một chỉ số đơn lẻ mà trên sự liên kết giữa dữ liệu, chú giải và diễn giải."
+      },
+      {
+        "type": "paragraph",
+        "text": "Việc phân loại kiểu kể dựa trên mục đích nổi trội của đoạn thoại, không dựa đơn thuần vào nội dung từ vựng. Một câu chuyện về một sự kiện có thể chuyển sang đánh giá, và một đoạn hồi ức có thể chứa phần giải thích. Khi có chuyển hướng như vậy, đơn vị vẫn được gán nhãn theo phần chiếm ưu thế, đồng thời ghi chú điểm chuyển trong lớp chức năng. Cách làm này cho phép nhận diện sự linh hoạt của lời kể mà không làm mất khả năng so sánh giữa các nhóm. Mức độ quen biết được xác định từ thông tin tương tác đi kèm, chẳng hạn cách xưng hô, lịch sử cùng tham gia hoạt động và mức độ giải thích nền được người nói cung cấp."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "4. Kết quả và bàn luận"
+      },
+      {
+        "type": "paragraph",
+        "text": "Các dấu hiệu không phân bố đồng đều giữa năm kiểu lời kể. Kể trải nghiệm có tỷ lệ dừng dài cao nhất, đạt 34,5%, trong khi kể giải thích có tỷ lệ thấp nhất, đạt 22,4%. Kể đánh giá nổi bật ở tự sửa và tiểu từ, lần lượt đạt 27,4% và 46,1%; kể giải thích cũng có tỷ lệ tiểu từ cao, đạt 41,6%. Kể sự kiện có 48 lượt, kể hồi ức 42 lượt, kể trải nghiệm 51 lượt, kể giải thích 37 lượt và kể đánh giá 29 lượt. Toàn bộ các tỷ lệ này cần được đọc theo ghi chú rằng một lượt có thể đồng thời chứa nhiều dấu hiệu. Vì vậy, tổng các tỷ lệ không biểu thị số lượt độc lập mà phản ánh mức độ cùng xuất hiện của những nguồn lực khác nhau."
+      },
+      {
+        "type": "paragraph",
+        "text": "Kết quả trên cho thấy kiểu kể có liên hệ với yêu cầu tổ chức nội dung. Trong kể trải nghiệm, người nói thường dựng lại chuỗi sự việc theo các điểm chuyển cảnh, nên dừng dài có thể tạo ranh giới giữa các pha của diễn tiến. Trong kể giải thích, quan hệ nguyên nhân và kết quả thường được chuẩn bị theo cấu trúc ổn định hơn, nhưng tiểu từ lại xuất hiện nhiều do người nói phải điều chỉnh hướng tiếp nhận và mức độ liên kết. Kể đánh giá đòi hỏi người nói liên tục định vị thái độ, vì thế tự sửa và tiểu từ cùng tăng. Mô hình này phù hợp với quan niệm rằng thông tin đã biết và thông tin mới được tổ chức theo mục tiêu diễn ngôn \\cite{11}, chứ không chỉ theo hình thức câu."
+      },
+      {
+        "type": "paragraph",
+        "text": "Khi chỉ số chuyển dịch thông tin cao, dấu hiệu nổi bật nhất thường xuất hiện ngay trước một tiêu điểm mới. Trong trường hợp đó, dừng dài tạo ra một khoảng dự báo để người nghe nhận biết rằng đơn vị tiếp theo có vai trò cập nhật. Nếu người nói chưa hoàn tất việc lựa chọn biểu thức, âm kéo dài hoặc một tiểu từ có thể thay thế dừng dài. Mối quan hệ này được mô tả bằng $\\Delta I_i=\\sum_{k=1}^{m}\\delta_{ik}F_k$, trong đó các thành phần đóng góp được cộng lại theo từng vị trí. Chỉ số cao không tự động quyết định hình thức ngắt quãng; nó chỉ làm tăng nhu cầu tổ chức, còn hình thức cụ thể phụ thuộc vào việc người nói muốn nhường lượt hay tiếp tục giữ lượt."
+      },
+      {
+        "type": "paragraph",
+        "text": "Biểu đồ về tỷ lệ dừng dài theo kiểu lời kể được quy chiếu tại \\ref{fig:chart}. Kể trải nghiệm có mức cao nhất, tiếp theo là kể sự kiện, kể đánh giá, kể hồi ức và kể giải thích. Thứ tự này gợi ý rằng dừng dài gắn với mức độ tái dựng và chuyển cảnh nhiều hơn là với độ dài tuyệt đối của lượt. Một lượt kể ngắn vẫn có thể chứa dừng dài nếu người nói phải chuyển từ phần nền sang một chi tiết mới. Ngược lại, một lượt dài có thể ít dừng dài nếu người nói đang trình bày theo chuỗi nguyên nhân đã được chuẩn bị. Do đó, cần thận trọng khi quy dừng dài trực tiếp cho tốc độ nói hoặc năng lực trôi chảy."
+      },
+      {
+        "type": "paragraph",
+        "text": "Phân tích thời lượng cho thấy ranh giới sau chủ đề đã biết có xu hướng kéo dài khi tiêu điểm mới xuất hiện. Mô hình thời lượng trong công thức \\ref{eq:duration-focus} biểu diễn đóng góp của vị trí ranh giới, mức độ mới và trạng thái tiêu điểm. Với $D_i=\\alpha+\\beta_1R_i+\\beta_2N_i+\\beta_3F_i+\\epsilon_i$, thành phần sai số giữ lại những khác biệt cá nhân chưa được giải thích bởi ba biến chính. Trong diễn giải định tính, hệ số liên quan đến thông tin mới không nên được hiểu như tác động cơ học; người nói có thể dùng tiểu từ hoặc kéo dài thay cho một khoảng dừng nếu muốn tránh tạo ấn tượng đã kết thúc lượt."
+      },
+      {
+        "type": "paragraph",
+        "text": "Quan hệ giữa ranh giới và chức năng được trình bày tại \\ref{tab:information-boundaries}. Trước chủ đề, dừng ngắn thường mở lượt lời khi thông tin nền đã biết và tiêu điểm chưa nổi bật. Sau chủ đề, dừng dài báo hiệu chuyển tiếp khi phần thuyết minh mang thông tin mới. Trước tiêu điểm, kéo dài duy trì lượt lời; sau tiêu điểm, tự sửa thu hẹp quy chiếu hoặc điều chỉnh nội dung vừa nêu. Giữa hai đơn vị, tiểu từ điều chỉnh quan hệ liên kết khi cả hai phía đều có thành phần mới. Bảng này cho thấy vị trí tuyến tính và chức năng tương tác cần được phân tích đồng thời, bởi cùng một dấu hiệu sẽ có cách giải thích khác nhau nếu đặt ở vị trí khác."
+      },
+      {
+        "type": "paragraph",
+        "text": "Một phát hiện đáng chú ý là sự kết hợp giữa tiểu từ và ngữ điệu trong các đoạn có quan hệ liên kết phức tạp. Tiểu từ cung cấp tín hiệu về thái độ, sự xác nhận, nhượng bộ hoặc hướng tiếp nhận, trong khi đường nét ngữ điệu định vị tín hiệu ấy trên dòng thời gian của lời nói. Sự phối hợp này giải thích vì sao tiểu từ xuất hiện dày trong kể đánh giá và kể giải thích. Nó cũng phù hợp với nhận định rằng cao độ, trường độ và chức năng tương tác tạo thành một hệ thống liên kết \\cite{12}. Về mặt xử lý, người nghe không chỉ nhận diện từng tiểu từ mà còn sử dụng vị trí, thời lượng và hướng điệu để dự đoán liệu người nói đang đóng đơn vị hay mở rộng nó."
+      },
+      {
+        "type": "paragraph",
+        "text": "Tự sửa có chức năng đặc biệt trong việc quản lý phạm vi quy chiếu. Một người kể có thể bắt đầu bằng một danh ngữ rộng, sau đó thay bằng biểu thức hẹp hơn khi nhận ra rằng người nghe cần một định danh chính xác. Trong tình huống ấy, lần sửa không làm mất tính liên tục của lượt lời; trái lại, nó cho thấy người nói đang chủ động kiểm soát cách nội dung được cập nhật. Nếu tự sửa xuất hiện sau một tiêu điểm đã hoàn thành, nó còn có thể làm giảm mức độ cam kết hoặc mở ra một cách diễn giải khác. Điều này phân biệt tự sửa với sự đứt quãng thuần túy do tìm kiếm từ, dù hai hiện tượng có thể cùng xuất hiện trong một đoạn ngắn."
+      },
+      {
+        "type": "paragraph",
+        "text": "Mức độ quen biết giữa những người tham gia cũng làm thay đổi cách các dấu hiệu được triển khai. Khi người nghe quen thuộc với bối cảnh, người nói có thể dùng dừng ngắn và tiểu từ để dựa vào tri thức chung. Khi bối cảnh ít được chia sẻ, người nói thường kéo dài phần chuẩn bị, bổ sung tự sửa hoặc dùng dừng dài trước chi tiết cần giới thiệu. Tuy nhiên, sự khác biệt này không nên được hiểu như một quy luật cứng. Một người kể có thể chủ động tạo dừng dài dù người nghe đã biết câu chuyện, nhằm làm nổi bật cách đánh giá mới. Vì vậy, mức độ quen biết là biến điều chỉnh, không phải nguyên nhân duy nhất của sự phân bố dấu hiệu."
+      },
+      {
+        "type": "paragraph",
+        "text": "Nhìn từ phương diện ngữ pháp tương tác, các kết quả củng cố quan niệm rằng ngắt quãng là một cơ chế đa chức năng. Dừng dài tổ chức sự chuyển tiếp, kéo dài bảo vệ quyền phát ngôn, tự sửa điều chỉnh quy chiếu và tiểu từ nối nội dung với quan hệ liên kết. Mỗi chức năng chỉ trở nên rõ khi được đặt trong chuỗi hành động rộng hơn. Một dừng dài sau thông tin mới có thể được người nghe tiếp nhận như dấu hiệu hoàn tất; nhưng nếu ngay sau đó xuất hiện tự sửa, dừng ấy lại được hiểu như không gian chuẩn bị cho việc tái cấu trúc. Tính linh hoạt này giải thích vì sao mô hình thống kê cần được bổ sung bằng phân tích tuần tự và đọc sát ngữ cảnh."
+      },
+      {
+        "type": "paragraph",
+        "text": "Một giới hạn của nghiên cứu là số lượng kiểu tương tác chưa hoàn toàn cân bằng, đồng thời việc nhận diện thông tin đã biết vẫn phụ thuộc vào ngữ cảnh trước đó. Một số quyết định chú giải có thể chịu ảnh hưởng của cách người phân tích đánh giá mức độ nổi bật của tiêu điểm. Ngoài ra, dữ liệu hiện tại chủ yếu tập trung vào lời kể hai người, nên chưa phản ánh đầy đủ trường hợp nhiều người cùng tranh quyền phát ngôn. Các nghiên cứu tiếp theo có thể mở rộng sang hội thoại tranh luận và đối thoại kể chuyện nhiều người, đồng thời kết hợp phân tích cao độ với theo dõi thời điểm chuyển lượt. Khi đó, đại lượng $R_i$ có thể được bổ sung bằng chỉ báo về mức cạnh tranh lượt, còn $N_i$ có thể được kiểm tra qua phản hồi trực tiếp của người nghe."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "5. Kết luận và hướng nghiên cứu"
+      },
+      {
+        "type": "paragraph",
+        "text": "Nghiên cứu đã chỉ ra rằng các dấu hiệu ngắt quãng tham gia trực tiếp vào việc tổ chức cấu trúc thông tin trong lời kể tiếng Việt đương đại. Dừng dài gắn với sự xuất hiện của thông tin mới và chuyển tiếp tiêu điểm; kéo dài duy trì lượt lời khi người nói đang điều chỉnh phạm vi quy chiếu; tự sửa thu hẹp hoặc tái định hướng nội dung; còn tiểu từ củng cố quan hệ liên kết giữa các đơn vị. Mô hình kết hợp giữa vị trí, ngữ điệu và chức năng tương tác vì thế cung cấp một cách nhìn linh hoạt về tính liên tục của diễn ngôn \\cite{4}. Kết luận này không phủ nhận vai trò của lập kế hoạch phát ngôn, mà cho thấy áp lực lập kế hoạch được chuyển hóa thành những tín hiệu có thể được người nghe nhận biết và xử lý."
+      },
+      {
+        "type": "paragraph",
+        "text": "Về phương diện lý thuyết, kết quả góp phần nối kết nghiên cứu cấu trúc thông tin với nghiên cứu ngữ pháp tương tác. Chủ đề và tiêu điểm không chỉ được biểu thị bằng trật tự thành phần hoặc lựa chọn từ vựng, mà còn được định vị qua thời lượng, nhịp điệu và các điểm ngắt. Người nói sử dụng những nguồn lực này để duy trì tính liên tục của lượt lời, đồng thời tạo ra các mốc cập nhật cho người nghe. Về phương diện phương pháp, việc kết hợp biên âm đa tầng, mô hình xác suất và phân tích tuần tự giúp tránh hai xu hướng cực đoan: giản lược ngắt quãng thành lỗi trôi chảy, hoặc gán ý nghĩa ổn định cho mọi lần dừng và kéo dài."
+      },
+      {
+        "type": "paragraph",
+        "text": "Các hướng tiếp theo cần kiểm tra xem những chức năng đã nhận diện có duy trì trong các miền diễn ngôn khác hay không. Hội thoại tranh luận có thể làm tăng tự sửa vì người nói phải bảo vệ phạm vi khẳng định; hội thoại kể chuyện nhiều người có thể làm tăng dừng báo hiệu chuyển quyền phát ngôn. Cũng cần khảo sát sự khác biệt giữa các nhóm tuổi, vùng giao tiếp và mức độ trang trọng, nhưng phải bảo đảm rằng các biến xã hội được đặt trong quan hệ với ngữ cảnh cụ thể. Một hướng khác là xây dựng mô hình dự báo kết hợp $P_i \\propto \\exp(\\beta_0+\\beta_1N_i+\\beta_2F_i)$ với đặc trưng cao độ, trường độ và phản hồi của người nghe. Mục tiêu không phải thay thế phân tích ngôn ngữ bằng tính toán, mà là làm rõ hơn các điều kiện để một dấu hiệu được diễn giải như chuyển tiếp, giữ lượt hoặc điều chỉnh."
+      },
+      {
+        "type": "paragraph",
+        "text": "Sau cùng, nghiên cứu cho thấy lời kể tiếng Việt có một hệ thống tổ chức tinh tế ở nơi thường bị coi là phần ngoài ngữ pháp. Khoảng dừng, âm kéo dài, tự sửa và tiểu từ cùng tham gia phân chia nền thông tin, làm nổi bật tiêu điểm và duy trì quan hệ giữa những người tương tác. Khi được phân tích theo vị trí và chức năng, ngắt quãng trở thành bằng chứng về cách người nói quản lý sự liên tục của diễn ngôn trong thời gian thực. Phát hiện này mở ra khả năng mô tả ngữ pháp tương tác không chỉ bằng cấu trúc câu hoàn chỉnh, mà còn bằng những dấu hiệu chuyển tiếp, trì hoãn và điều chỉnh xuất hiện trong quá trình lời nói được hình thành."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Tài liệu tham khảo"
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "items": [
+          "Tạ Uyên Mộc. 2087. Ngữ điệu và ranh giới diễn ngôn trong lời kể tiếng Việt. Kỷ yếu Ngữ dụng Lam Khê, 4(2), 15–39.",
+          "Nghiêm Lam Vị. 2089. Tự sửa và duy trì lượt lời trong tương tác kể chuyện. Tập san Ngữ âm Đông Lưu, 7(1), 41–68.",
+          "Sở Tĩnh Kha. 2090. Chủ đề, tiêu điểm và liên kết trong hội thoại tiếng Việt. Chuyên san Ngôn ngữ Tương tác Bắc Vân, 5(3), 22–47.",
+          "Uyển Trạch Ninh. 2092. Dấu hiệu ngắt quãng trong ngữ pháp tương tác. Tuyển tập Nghiên cứu Lời nói Lam Khê, 9(2), 73–101.",
+          "Cao Nhã Túc. 2084. Âm kéo dài và quản lý quyền phát ngôn trong hội thoại tự sự. Tạp chí Ngữ âm Vân Chi, 6(1), 9–32.",
+          "Đàm Vân Thước. 2086. Trật tự thành phần và tiêu điểm trong câu kể tiếng Việt. Tạp chí Cú pháp Tương tác Hạ Nghi, 3(4), 44–71."
+        ]
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "items": [
+          "Lạc Minh Tồn. 2088. Khoảng dừng, nhịp điệu và dự báo chuyển lượt. Nghiên cứu Lời nói Vân Tịch, 8(2), 101–128.",
+          "Phan Khuê Ngạn. 2091. Tiểu từ cuối lượt và sự điều chỉnh quan hệ liên kết. Kỷ yếu Ngữ dụng Hạ Nghi, 5(3), 57–82.",
+          "Quách Tịnh Dao. 2085. Biên âm đa tầng cho ngữ liệu hội thoại tiếng Việt. Tập san Ngữ liệu Vân Chi, 2(1), 18–46.",
+          "Mạc Duy Hàn. 2093. Mô hình xác suất của ranh giới ngắt quãng trong lời kể. Chuyên san Phân tích Hội thoại Lam Khê, 7(2), 33–60.",
+          "Tống Nguyệt Sâm. 2083. Thông tin đã biết, thông tin mới và cấu trúc câu trong diễn ngôn kể. Tạp chí Ngữ pháp Vân Tịch, 4(3), 26–54.",
+          "Hạ Vĩnh Trầm. 2094. Phối hợp giữa cao độ, trường độ và chức năng tương tác trong tiếng Việt. Chuyên khảo Ngôn ngữ Hạ Nghi, 2(2), 87–119."
+        ]
+      },
+      {
+        "type": "box",
+        "kind": "remark",
+        "title": "Lời cảm ơn",
+        "text": "Nhóm tác giả trân trọng cảm ơn các cộng tác viên đã hỗ trợ khâu thu thập, biên âm và đối chiếu ngữ liệu. Những nhận xét chuyên môn từ các đồng nghiệp tại Phòng Thí nghiệm Ngữ điệu và Tương tác đã giúp bài viết hoàn thiện hơn."
+      }
+    ]
+  },
+  "hash": "9c8ad1b15bb57d4ce693117486baa17b00319c1d1c8d124f8ec4f3e32c36d409"
+}

@@ -1,0 +1,925 @@
+{
+  "front": {
+    "title": "Robust Phase Tracking for Sparse Multichannel Resonance Measurements",
+    "authors": [
+      {
+        "name": "Elian Veyra",
+        "affiliations": [
+          1
+        ],
+        "corresponding": true,
+        "email": "elian.veyra@norvane-research.org"
+      },
+      {
+        "name": "Mira Solenne",
+        "affiliations": [
+          2
+        ],
+        "corresponding": false
+      },
+      {
+        "name": "Taren Quill",
+        "affiliations": [
+          1,
+          2
+        ],
+        "corresponding": false
+      }
+    ],
+    "affiliations": [
+      "Norvane Institute for Acoustic Computation, Department of Signal Inference, Velmora",
+      "Quenric Polytechnic Center, Laboratory for Distributed Measurements, Aster Vale"
+    ],
+    "abstract": "This study presents a robust phase-tracking method for sparse multichannel resonance measurements affected by impulsive interference and slowly varying oscillator drift. The procedure combines a locally weighted spectral estimator with an adaptive state update whose confidence is governed by interchannel coherence. A reliability gate suppresses abrupt phase corrections when the observed coherence falls below a data-dependent threshold. Evaluation on controlled acoustic records and field-acquired vibration records shows lower phase deviation and improved cycle continuity than three conventional tracking procedures. The method retains low computational demand because its update uses short sliding windows and avoids repeated matrix factorization. Sensitivity analysis indicates that performance remains stable across moderate changes in channel density, disturbance rate, and carrier separation. These results support deployment in compact monitoring devices where signal quality and processing capacity vary over time.",
+    "abstract_alt": null,
+    "keywords": "phase tracking; multichannel signal processing; sparse sensing; spectral estimation; oscillator drift; coherence weighting; vibration monitoring",
+    "keywords_alt": null,
+    "journal": "Quenvale Journal of Signal Methods",
+    "acknowledgement": "The authors thank the Resonant Systems Workshop at Norvane Institute for Acoustic Computation for equipment access and the Quenric Polytechnic Center for assistance with field measurements."
+  },
+  "formulas": [
+    {
+      "after": 0,
+      "element": {
+        "type": "equation",
+        "id": "eq:weighted-spectrum",
+        "latex": "\\widehat{S}_{m}(f)=\\frac{\\sum_{n=1}^{L}w_{m,n}X_{n}(f)}{\\sum_{n=1}^{L}w_{m,n}}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 1,
+      "element": {
+        "type": "equation",
+        "id": "eq:coherence",
+        "latex": "\\gamma_{ij}(f)=\\frac{\\left|\\sum_{n=1}^{L}X_{i,n}(f)\\overline{X_{j,n}(f)}\\right|^{2}}{\\sum_{n=1}^{L}\\left|X_{i,n}(f)\\right|^{2}\\sum_{n=1}^{L}\\left|X_{j,n}(f)\\right|^{2}}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 2,
+      "element": {
+        "type": "equation",
+        "id": "eq:phase-residual",
+        "latex": "\\delta_{m}=\\widetilde{\\theta}_{m}-\\widehat{\\theta}_{m-1}-\\widehat{\\omega}_{m-1}\\Delta t",
+        "numbered": true
+      }
+    },
+    {
+      "after": 3,
+      "element": {
+        "type": "equation",
+        "id": "eq:reliability-gate",
+        "latex": "g_{m}=\\max\\left(0,\\min\\left(1,\\frac{\\overline{\\gamma}_{m}-\\tau_{m}}{1-\\tau_{m}}\\right)\\right)",
+        "numbered": true
+      }
+    },
+    {
+      "after": 4,
+      "element": {
+        "type": "equation",
+        "id": "eq:state-update",
+        "latex": "\\widehat{\\theta}_{m}=\\widehat{\\theta}_{m-1}+\\widehat{\\omega}_{m-1}\\Delta t+g_{m}\\delta_{m}",
+        "numbered": true
+      }
+    },
+    {
+      "after": 5,
+      "element": {
+        "type": "equation",
+        "id": "eq:phase-error",
+        "latex": "E_{\\theta}=\\sqrt{\\frac{1}{M}\\sum_{m=1}^{M}\\left(\\widehat{\\theta}_{m}-\\theta_{m}\\right)^{2}}",
+        "numbered": true
+      }
+    }
+  ],
+  "tables": [
+    {
+      "after": 0,
+      "element": {
+        "type": "table",
+        "id": "tab:processing-config",
+        "caption": "Processing configurations used in the resonance tracking evaluation.",
+        "header": [
+          [
+            {
+              "text": "Configuration",
+              "rowspan": 2
+            },
+            {
+              "text": "Windowing",
+              "colspan": 2
+            },
+            {
+              "text": "Channel selection",
+              "colspan": 2
+            },
+            {
+              "text": "Update control",
+              "rowspan": 2
+            }
+          ],
+          [
+            {
+              "text": "Length (ms)"
+            },
+            {
+              "text": "Taper"
+            },
+            {
+              "text": "Active channels"
+            },
+            {
+              "text": "Coherence threshold"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "Proposed tracker",
+            "48",
+            "Tukey, 0.25",
+            "3 of 8",
+            "0.62",
+            "Adaptive gate"
+          ],
+          [
+            "Fixed-weight tracker",
+            "48",
+            "Hann",
+            "3 of 8",
+            "0.50",
+            "Constant gain"
+          ],
+          [
+            "Recursive phase tracker",
+            "32",
+            "Hann",
+            "4 of 8",
+            "0.70",
+            "Fixed innovation"
+          ],
+          [
+            "Unwrapped spectral tracker",
+            "64",
+            "Blackman",
+            "8 of 8",
+            "0.55",
+            "No gate"
+          ]
+        ],
+        "note": "All configurations used a 16 kHz acquisition rate, 50% window overlap, and a 1.5 s initialization interval."
+      }
+    },
+    {
+      "after": 2,
+      "element": {
+        "type": "table",
+        "id": "tab:tracking-results",
+        "caption": "Phase-tracking accuracy and continuity across evaluation conditions.",
+        "header": [
+          [
+            {
+              "text": "Condition",
+              "rowspan": 2
+            },
+            {
+              "text": "Method",
+              "rowspan": 2
+            },
+            {
+              "text": "Phase error (rad)",
+              "colspan": 2
+            },
+            {
+              "text": "Cycle continuity (%)",
+              "colspan": 2
+            }
+          ],
+          [
+            {
+              "text": "Median"
+            },
+            {
+              "text": "90th percentile"
+            },
+            {
+              "text": "Mean"
+            },
+            {
+              "text": "Lowest run"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "Controlled acoustic",
+            "Proposed tracker",
+            {
+              "text": "0.084",
+              "bold": true
+            },
+            "0.173",
+            {
+              "text": "98.6",
+              "bold": true
+            },
+            "96.9"
+          ],
+          [
+            "Controlled acoustic",
+            "Fixed-weight tracker",
+            "0.129",
+            "0.284",
+            "96.8",
+            "92.7"
+          ],
+          [
+            "Controlled acoustic",
+            "Recursive phase tracker",
+            "0.117",
+            "0.251",
+            "97.3",
+            "93.8"
+          ],
+          [
+            "Controlled acoustic",
+            "Unwrapped spectral tracker",
+            "0.143",
+            "0.319",
+            "95.9",
+            "90.4"
+          ],
+          [
+            "Field vibration",
+            "Proposed tracker",
+            {
+              "text": "0.112",
+              "bold": true
+            },
+            {
+              "text": "0.241",
+              "bold": true
+            },
+            {
+              "text": "97.4",
+              "bold": true
+            },
+            {
+              "text": "94.1",
+              "bold": true
+            }
+          ],
+          [
+            "Field vibration",
+            "Fixed-weight tracker",
+            "0.168",
+            "0.356",
+            "94.9",
+            "87.6"
+          ],
+          [
+            "Field vibration",
+            "Recursive phase tracker",
+            "0.151",
+            "0.328",
+            "95.8",
+            "89.2"
+          ],
+          [
+            "Field vibration",
+            "Unwrapped spectral tracker",
+            "0.184",
+            "0.402",
+            "93.7",
+            "85.3"
+          ]
+        ],
+        "note": "Lower phase error is preferred; higher continuity is preferred. Bold values identify the best result within each condition and metric."
+      }
+    },
+    {
+      "after": 4,
+      "element": {
+        "type": "table",
+        "id": "tab:sensitivity",
+        "caption": "Sensitivity of the proposed tracker to channel density, disturbance rate, and carrier separation.",
+        "header": [
+          [
+            {
+              "text": "Factor",
+              "rowspan": 2
+            },
+            {
+              "text": "Setting",
+              "rowspan": 2
+            },
+            {
+              "text": "Median phase error (rad)",
+              "colspan": 2
+            },
+            {
+              "text": "Continuity (%)",
+              "colspan": 2
+            }
+          ],
+          [
+            {
+              "text": "Mean"
+            },
+            {
+              "text": "Change from nominal"
+            },
+            {
+              "text": "Mean"
+            },
+            {
+              "text": "Change from nominal"
+            }
+          ]
+        ],
+        "rows": [
+          [
+            "Active channels",
+            "2",
+            "0.126",
+            "+0.014",
+            "96.8",
+            "-1.1"
+          ],
+          [
+            "Active channels",
+            "3",
+            "0.112",
+            "0.000",
+            "97.4",
+            "0.0"
+          ],
+          [
+            "Active channels",
+            "5",
+            {
+              "text": "0.103",
+              "bold": true
+            },
+            "-0.009",
+            {
+              "text": "97.9",
+              "bold": true
+            },
+            "+0.5"
+          ],
+          [
+            "Impulse rate",
+            "0.05 per s",
+            "0.105",
+            "-0.007",
+            "97.8",
+            "+0.4"
+          ],
+          [
+            "Impulse rate",
+            "0.15 per s",
+            "0.112",
+            "0.000",
+            "97.4",
+            "0.0"
+          ],
+          [
+            "Impulse rate",
+            "0.30 per s",
+            "0.137",
+            "+0.025",
+            "95.9",
+            "-1.5"
+          ],
+          [
+            "Carrier separation",
+            "18 Hz",
+            "0.129",
+            "+0.017",
+            "96.5",
+            "-0.9"
+          ],
+          [
+            "Carrier separation",
+            "30 Hz",
+            "0.112",
+            "0.000",
+            "97.4",
+            "0.0"
+          ],
+          [
+            "Carrier separation",
+            "48 Hz",
+            {
+              "text": "0.098",
+              "bold": true
+            },
+            "-0.014",
+            {
+              "text": "98.1",
+              "bold": true
+            },
+            "+0.7"
+          ]
+        ],
+        "note": "Nominal settings were three active channels, an impulse rate of 0.15 per s, and 30 Hz carrier separation. Negative error change indicates improvement relative to nominal."
+      }
+    }
+  ],
+  "charts_figures": [
+    {
+      "after": 5,
+      "element": {
+        "type": "figure",
+        "id": "fig:processing-flow",
+        "figure_type": "image_panel",
+        "description": "A four-stage signal-processing schematic shows sparse channel acquisition feeding a locally weighted spectral estimate, interchannel coherence controlling a reliability gate, and the gated state update producing a continuous phase trace. Thin arrows indicate data flow; a muted branch marks the suppression of low-coherence corrections.",
+        "labels": [
+          "Sparse channels",
+          "Weighted spectrum",
+          "Coherence gate",
+          "Phase output"
+        ]
+      }
+    },
+    {
+      "after": 12,
+      "element": {
+        "type": "chart",
+        "chart_type": "histogram",
+        "caption": "Distribution of absolute phase deviation across field vibration records; error bars show one standard error of the window-share estimate.",
+        "labels": [
+          "0-0.05",
+          "0.05-0.10",
+          "0.10-0.15",
+          "0.15-0.25",
+          ">0.25"
+        ],
+        "series": [
+          {
+            "name": "Proposed tracker",
+            "values": [
+              8,
+              34,
+              36,
+              17,
+              5
+            ],
+            "errors": [
+              0.7,
+              1.2,
+              1.2,
+              0.9,
+              0.5
+            ]
+          },
+          {
+            "name": "Fixed-weight tracker",
+            "values": [
+              5,
+              23,
+              31,
+              26,
+              15
+            ],
+            "errors": [
+              0.5,
+              1.1,
+              1.2,
+              1.1,
+              0.9
+            ]
+          },
+          {
+            "name": "Recursive phase tracker",
+            "values": [
+              6,
+              27,
+              32,
+              23,
+              12
+            ],
+            "errors": [
+              0.6,
+              1.1,
+              1.2,
+              1.1,
+              0.8
+            ]
+          },
+          {
+            "name": "Unwrapped spectral tracker",
+            "values": [
+              3,
+              18,
+              27,
+              30,
+              22
+            ],
+            "errors": [
+              0.4,
+              1.0,
+              1.1,
+              1.1,
+              1.0
+            ]
+          }
+        ],
+        "x_label": "Absolute phase deviation (rad)",
+        "y_label": "Window share (%)",
+        "legend_position": "outside"
+      }
+    },
+    {
+      "after": 13,
+      "element": {
+        "type": "chart",
+        "chart_type": "stacked_bar",
+        "caption": "Mean cycle continuity and complementary cycle-break share by condition and tracker; error bars show one standard error across evaluation runs.",
+        "labels": [
+          "Controlled: proposed",
+          "Controlled: fixed-weight",
+          "Controlled: recursive",
+          "Controlled: unwrapped",
+          "Field: proposed",
+          "Field: fixed-weight",
+          "Field: recursive",
+          "Field: unwrapped"
+        ],
+        "series": [
+          {
+            "name": "Continuous tracking (%)",
+            "values": [
+              98.6,
+              96.8,
+              97.3,
+              95.9,
+              97.4,
+              94.9,
+              95.8,
+              93.7
+            ],
+            "errors": [
+              0.3,
+              0.5,
+              0.4,
+              0.6,
+              0.4,
+              0.7,
+              0.6,
+              0.8
+            ]
+          },
+          {
+            "name": "Cycle breaks (%)",
+            "values": [
+              1.4,
+              3.2,
+              2.7,
+              4.1,
+              2.6,
+              5.1,
+              4.2,
+              6.3
+            ],
+            "errors": [
+              0.3,
+              0.5,
+              0.4,
+              0.6,
+              0.4,
+              0.7,
+              0.6,
+              0.8
+            ]
+          }
+        ],
+        "x_label": "Evaluation condition and tracker",
+        "y_label": "Record duration (%)",
+        "legend_position": "outside"
+      }
+    }
+  ],
+  "code": [
+    {
+      "after": 3,
+      "element": {
+        "type": "code",
+        "id": "alg:weighted-coherence",
+        "language": "pseudocode",
+        "caption": "Locally weighted spectral estimation and coherence assessment.",
+        "lines": [
+          "Input: channel spectra X, weights w, active channels A",
+          "For each active channel i:",
+          "    For each frequency bin f:",
+          "        numerator <- 0",
+          "        denominator <- 0",
+          "        For each window n:",
+          "            numerator <- numerator + w[i,n] * X[i,n,f]",
+          "            denominator <- denominator + w[i,n]",
+          "        S[i,f] <- numerator / max(denominator, epsilon)",
+          "For each active channel pair (i,j):",
+          "    For each frequency bin f:",
+          "        C[i,j,f] <- normalized squared cross-spectrum magnitude",
+          "Return S, C"
+        ]
+      }
+    },
+    {
+      "after": 7,
+      "element": {
+        "type": "code",
+        "id": "alg:reliability-phase-update",
+        "language": "pseudocode",
+        "caption": "Coherence-gated phase and frequency state update.",
+        "lines": [
+          "Input: phase state theta, frequency state omega, coherence C, threshold tau",
+          "For each update interval m:",
+          "    phase_observation <- phase of weighted spectrum at interval m",
+          "    coherence_level <- aggregate C across active channel pairs",
+          "    gate <- clamp((coherence_level - tau) / (1 - tau), 0, 1)",
+          "    predicted_phase <- theta + omega * interval_duration",
+          "    residual <- wrapped_difference(phase_observation, predicted_phase)",
+          "    theta_new <- predicted_phase + gate * residual",
+          "    omega_new <- frequency_correction(omega, residual, gate)",
+          "    If coherence_level < tau:",
+          "        retain conservative frequency correction",
+          "    theta <- theta_new",
+          "    omega <- omega_new",
+          "Return theta, omega"
+        ]
+      }
+    }
+  ],
+  "references": [
+    {
+      "text": "[1] Veyra, E., Solenne, M., and Quill, T. (2026). Robust phase tracking for sparse multichannel resonance measurements. *Quenvale Journal of Signal Methods*, 12(3), 141–159.",
+      "cite": "Veyra et al., 2026"
+    },
+    {
+      "text": "[2] Odrane, P., and Vellic, S. (2022). Local spectral weighting under impulsive interference in resonant channels. *Journal of Adaptive Signal Practice*, 8(2), 67–82.",
+      "cite": "Odrane & Vellic, 2022"
+    },
+    {
+      "text": "[3] Kelmora, D., and Thesrin, A. (2021). Short-window frequency estimation for drifting acoustic oscillators. *Annals of Computational Acoustics*, 15(1), 23–39.",
+      "cite": "Kelmora & Thesrin, 2021"
+    },
+    {
+      "text": "[4] Bravelle, N., and Iskaro, F. (2023). Coherence measures for sparse arrays with intermittent channel corruption. *Multichannel Inference Letters*, 6(4), 201–217.",
+      "cite": "Bravelle & Iskaro, 2023"
+    },
+    {
+      "text": "[5] Renvar, L., and Ombric, J. (2020). Phase continuity assessment in narrowband vibration monitoring. *Vibration Signal Review*, 11(2), 88–103.",
+      "cite": "Renvar & Ombric, 2020"
+    },
+    {
+      "text": "[6] Caldrin, M., and Yevora, T. (2019). Weighted periodograms for nonstationary resonant measurements. *Spectral Methods Quarterly*, 7(3), 115–130.",
+      "cite": "Caldrin & Yevora, 2019"
+    },
+    {
+      "text": "[7] Tervane, R., and Luthic, O. (2024). Confidence-modulated state updates for phase and frequency tracking. *Journal of Sequential Signal Analysis*, 10(1), 1–18.",
+      "cite": "Tervane & Luthic, 2024"
+    },
+    {
+      "text": "[8] Merovan, I., and Qasrel, B. (2018). Reliable phase unwrapping with transient phase disturbances. *Signal Reconstruction Studies*, 9(4), 277–293.",
+      "cite": "Merovan & Qasrel, 2018"
+    },
+    {
+      "text": "[9] Elvane, C., and Dorric, P. (2022). Interchannel agreement as a control statistic for distributed sensing. *Distributed Measurement Methods*, 5(2), 54–70.",
+      "cite": "Elvane & Dorric, 2022"
+    },
+    {
+      "text": "[10] Varneth, U., and Sorellan, K. (2025). Low-cost resonance tracking for embedded vibration monitors. *Compact Instrumentation Research*, 4(1), 31–46.",
+      "cite": "Varneth & Sorellan, 2025"
+    },
+    {
+      "text": "[11] Pellorin, A., and Zenvik, R. (2017). Robust frequency-following loops under impulsive acoustic noise. *Applied Oscillation Processing*, 13(3), 162–178.",
+      "cite": "Pellorin & Zenvik, 2017"
+    },
+    {
+      "text": "[12] Hadrien, M., and Voskel, E. (2021). Adaptive window selection for sparse spectral estimation. *Journal of Time-Frequency Computation*, 9(2), 94–110.",
+      "cite": "Hadrien & Voskel, 2021"
+    },
+    {
+      "text": "[13] Norevik, S., and Dralune, Y. (2023). Phase residual statistics for slowly varying carrier systems. *Signal State Estimation Journal*, 14(2), 73–89.",
+      "cite": "Norevik & Dralune, 2023"
+    },
+    {
+      "text": "[14] Quenlor, A., and Breskin, M. (2020). Interference-resistant phase extraction from multichannel spectra. *Methods in Resonance Analytics*, 3(4), 188–204.",
+      "cite": "Quenlor & Breskin, 2020"
+    },
+    {
+      "text": "[15] Istrane, P., and Velquor, D. (2019). Coherence thresholds for adaptive sensor fusion in vibration records. *Journal of Field Signal Methods*, 6(1), 40–56.",
+      "cite": "Istrane & Velquor, 2019"
+    },
+    {
+      "text": "[16] Maldris, E., and Othven, S. (2024). Cycle-slip detection with gated innovations in oscillator tracking. *Tracking and Inference Reports*, 12(2), 101–118.",
+      "cite": "Maldris & Othven, 2024"
+    },
+    {
+      "text": "[17] Selvarn, J., and Corthil, N. (2018). Window-share metrics for phase-tracking continuity. *Measurement Signal Studies*, 8(3), 219–234.",
+      "cite": "Selvarn & Corthil, 2018"
+    },
+    {
+      "text": "[18] Dorevan, T., and Kelvori, A. (2025). Stability of sparse-channel estimators under changing carrier separation. *Journal of Resonant Systems Analysis*, 7(1), 9–25.",
+      "cite": "Dorevan & Kelvori, 2025"
+    },
+    {
+      "text": "[19] Orvane, F., and Trelmic, C. (2022). Median error summaries for robust oscillatory signal evaluation. *Practical Signal Metrics*, 5(3), 133–148.",
+      "cite": "Orvane & Trelmic, 2022"
+    },
+    {
+      "text": "[20] Velsorin, G., and Ambric, D. (2023). Lightweight recursive corrections for multichannel phase estimators. *Embedded Signal Processing Notes*, 10(4), 245–261.",
+      "cite": "Velsorin & Ambric, 2023"
+    },
+    {
+      "text": "[21] Nethvar, O., and Calvane, R. (2021). Field evaluation protocols for resonance and vibration tracking. *Journal of Applied Measurement Inference*, 9(3), 172–189.",
+      "cite": "Nethvar & Calvane, 2021"
+    }
+  ],
+  "body": [
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Introduction"
+    },
+    {
+      "type": "paragraph",
+      "text": "Resonance monitoring often depends on estimating the phase of a narrowband response while the carrier drifts, channels are intermittently corrupted, and only a subset of sensors is available. These conditions are common in compact acoustic and vibration systems: the signal may remain informative overall even as individual intervals become unreliable. A tracker that responds strongly to every local phase observation can accumulate abrupt corrections, while a tracker that suppresses all variation may lag the actual oscillator. The design problem is therefore not simply to reduce average phase error, but to decide when an observation merits influence on the evolving phase and frequency states."
+    },
+    {
+      "type": "paragraph",
+      "text": "This paper develops a coherence-gated phase tracker for sparse multichannel resonance measurements. A locally weighted spectral estimate first limits the contribution of disturbed windows. Interchannel coherence then provides a reliability statistic for an adaptive gate, which scales the phase innovation before the state is updated. The central premise is that agreement across channels can distinguish a genuine common oscillatory change from corruption localized to a channel or interval. Related uses of local weighting, coherence statistics, and confidence-modulated updates motivate this combination, though their interaction in a low-cost sparse-channel tracker requires explicit evaluation \\cite{2} \\cite{4} \\cite{7}. The four-stage processing architecture is summarized in \\ref{fig:processing-flow}."
+    },
+    {
+      "type": "paragraph",
+      "text": "The proposed procedure is assessed on controlled acoustic records and field-acquired vibration records, using phase deviation and cycle continuity as complementary outcomes. The first captures the magnitude of phase mismatch; the second emphasizes persistence without cycle breaks. The distinction matters because a tracker can show a tolerable central error while occasionally losing cycle alignment, a failure that may be consequential in long monitoring runs. Robust phase tracking for sparse resonance measurements has been studied from several perspectives, and the present work combines a short-window estimator with a confidence-controlled state correction rather than relying on spectral unwrapping alone \\cite{1} \\cite{5} \\cite{8}."
+    },
+    {
+      "type": "paragraph",
+      "text": "The contribution is methodological and evaluative. The estimator uses a modest number of active channels, short sliding windows, and scalar update operations. Its gate attenuates rather than categorically rejects uncertain observations, allowing a graded transition between confident tracking and conservative prediction. We compare this approach with fixed-weight, recursive phase, and unwrapped spectral procedures, then examine sensitivity to channel density, impulse rate, and carrier separation. The resulting evidence supports a practical claim: coherence can be used as an operational reliability signal, but its value depends on threshold calibration, the distribution of disturbances, and the observability of the carrier."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Related Work"
+    },
+    {
+      "type": "paragraph",
+      "text": "Local spectral weighting addresses the fact that a short-time transform may include windows with very different signal quality. Weighting can reduce the effect of impulsive interference without discarding the temporal information needed for drift tracking. Earlier studies of nonstationary resonant measurements and sparse spectral estimation discuss weighted periodograms and adaptive window selection as ways to balance frequency resolution against transient sensitivity \\cite{6} \\cite{12}. Work on local weighting under impulsive interference likewise motivates assigning unequal influence to adjacent observations rather than treating each window as equally trustworthy \\cite{2}. In the present setting, however, spectral weighting alone does not indicate whether the active channels support the same phase interpretation."
+    },
+    {
+      "type": "paragraph",
+      "text": "A second line of work uses interchannel agreement to assess whether a multichannel observation is reliable. Coherence measures can be useful in sparse arrays, but intermittent corruption and unequal channel quality complicate their interpretation \\cite{4} \\cite{9}. Thresholds for adaptive sensor fusion offer a practical decision mechanism, while field protocols emphasize that operating conditions can change across runs \\cite{15} \\cite{21}. The method here treats coherence as a bounded control statistic, not as a direct estimate of phase accuracy. This distinction prevents an overly strong assumption that high coherence guarantees an unbiased observation; rather, coherence modulates how much the observation can move the current state."
+    },
+    {
+      "type": "paragraph",
+      "text": "State-based phase and frequency tracking provides another relevant foundation. Confidence-modulated updates have been proposed for sequential estimation, and lightweight recursive corrections are attractive where processing capacity is constrained \\cite{7} \\cite{20}. Frequency-following loops under impulsive noise and short-window estimation for drifting oscillators address related dynamics, though their correction rules do not necessarily exploit sparse multichannel agreement \\cite{3} \\cite{11}. Gated innovations have also been used to detect or limit cycle slips, while phase-residual statistics help characterize slowly varying carriers \\cite{13} \\cite{16}. The present method combines these ideas through a single gate driven by aggregate coherence."
+    },
+    {
+      "type": "paragraph",
+      "text": "Evaluation practice also shapes the design. Phase continuity metrics describe how often a tracker preserves cycle alignment over a record, complementing pointwise error summaries \\cite{17}. Median-based summaries are less dominated by rare large deviations than averages, while carrier-separation studies show why robustness should be assessed across multiple operating regimes \\cite{18} \\cite{19}. These considerations motivate reporting both median and upper-tail phase errors, as well as mean continuity and the lowest continuity across runs. The selected measures are not interchangeable: a method can improve the typical interval while still experiencing occasional severe loss of alignment."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Method"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Weighted spectral observation and coherence control"
+    },
+    {
+      "type": "paragraph",
+      "text": "Let $X_{i,n}(f)$ denote the transform for channel $i$, window $n$, and frequency bin $f$. For each active channel, the estimator combines the window transforms using nonnegative local weights $w_{i,n}$. The weighted spectral estimate is a normalized sum, so a low-weight window contributes less without being removed from the record. This formulation retains a simple computational structure: the numerator and denominator can be accumulated as windows arrive, avoiding repeated matrix factorization. The normalization also makes the estimate less sensitive to an overall rescaling of the weights, provided their sum remains positive."
+    },
+    {
+      "type": "paragraph",
+      "text": "The weights are chosen to downweight windows that depart from the local signal profile, with a short taper applied within each analysis window to limit spectral leakage. The design is intended to preserve a stable carrier component while reducing the influence of transient interference. In notation, the estimate may be read as $\\widehat{S}_{m}(f)=\\sum_{n=1}^{L}w_{m,n}X_{n}(f)/\\sum_{n=1}^{L}w_{m,n}$. The implementation guards the denominator against values near zero, because a nearly empty effective window set should not create an unbounded estimate. Locally weighted periodograms and interference-resistant multichannel phase extraction provide related precedents for this stage \\cite{6} \\cite{14}."
+    },
+    {
+      "type": "paragraph",
+      "text": "For a channel pair, coherence is computed from the squared magnitude of the accumulated cross-spectrum divided by the product of the channel energies. The resulting quantity lies between zero and one under the usual finite-energy conditions. At update interval $m$, the tracker aggregates pairwise coherence over the active channels and relevant frequency neighborhood to form $\\overline{\\gamma}_{m}$. This aggregation reduces dependence on any single pair, although it cannot fully protect against a disturbance shared by every active channel. Sparse-array coherence work highlights precisely this tradeoff between robustness to isolated faults and sensitivity to common-mode corruption \\cite{4}."
+    },
+    {
+      "type": "paragraph",
+      "text": "The phase observation is extracted from the weighted spectrum near the tracked carrier. The predicted phase advances from the preceding state using the current frequency estimate and elapsed time. The residual is the wrapped difference between the observation and that prediction, preventing an arbitrary $2\\pi$ branch choice from appearing as a large physical phase jump. In compact notation, the residual is $\\delta_m=\\tilde{\\theta}_m-\\widehat{\\theta}_{m-1}-\\widehat{\\omega}_{m-1}\\Delta t$, interpreted with wrapping to the principal phase interval. Residual-based tracking for slowly varying carriers supports this separation of prediction error from cycle ambiguity \\cite{13}."
+    },
+    {
+      "type": "paragraph",
+      "text": "A data-dependent threshold $\\tau_m$ defines the onset of trust in the coherence statistic. The reliability gate is clipped to the unit interval: $g_m=\\max(0,\\min(1,(\\overline{\\gamma}_m-\\tau_m)/(1-\\tau_m)))$. Thus, coherence below threshold produces no phase correction, while sufficiently high coherence permits the full residual to influence the update. Intermediate values yield a proportional correction. Adaptive thresholds are preferable to a single unexamined constant when channel density and noise conditions vary, although the threshold remains a tuning parameter rather than a guarantee of optimality \\cite{15}."
+    },
+    {
+      "type": "paragraph",
+      "text": "The phase state advances according to its predicted value plus the gated residual, or $\\widehat{\\theta}_{m}=\\widehat{\\theta}_{m-1}+\\widehat{\\omega}_{m-1}\\Delta t+g_m\\delta_m$. The frequency state is updated from the same residual with a conservative gain that is also reduced when coherence is poor. This coupling matters: a large phase correction can contaminate the frequency estimate if both states react independently to a transient. Confidence-modulated updates and gated-innovation methods motivate making the observation influence explicit in both parts of the state transition \\cite{7} \\cite{16}. The frequency correction is held conservative below threshold rather than being treated as a second, unfiltered observation."
+    },
+    {
+      "type": "paragraph",
+      "text": "The procedure runs on overlapping windows, updating the running spectral quantities and state at each interval. Its main operations consist of weighted accumulation across windows and pairwise coherence calculations for active channels. With $A$ active channels, $L$ windows, and $F$ bins, the accumulation scales with the data volume and the pair calculations with the number of channel pairs; no dense factorization is required. This structure is suited to embedded monitoring, where computational economy and stability under changing signal quality are both important \\cite{10} \\cite{20}. The processing configurations, including window lengths, channel counts, and thresholds, are summarized in \\ref{tab:processing-config}. The weighted estimation and coherence stage is further specified by \\ref{alg:weighted-coherence}, and the gated update by \\ref{alg:reliability-phase-update}."
+    },
+    {
+      "type": "paragraph",
+      "text": "The footnote clarifies an implementation detail: \\fn{When the effective weight sum is below the numerical floor, the previous spectral estimate is retained for that bin so that a single empty update cannot create an artificial phase observation.} This fallback does not assert that the retained value is current evidence; the coherence gate remains responsible for limiting its influence. For clarity, define the phase error over $M$ valid intervals as $E_{\\theta}=\\sqrt{(1/M)\\sum_{m=1}^{M}(\\widehat{\\theta}_m-\\theta_m)^2}$. Error summaries are computed after phase alignment to a common reference, while continuity is evaluated separately to identify cycle breaks."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Experimental Setup"
+    },
+    {
+      "type": "paragraph",
+      "text": "Evaluation used two record classes: controlled acoustic records and field-acquired vibration records. The former provide repeatable conditions for comparing tracking behavior, while the latter include variation in disturbance and operating environment. The acquisition rate was 16 kHz, with 50% overlap and a 1.5 s initialization interval across the listed configurations. The proposed tracker used a 48 ms Tukey window with a 0.25 taper parameter, three active channels out of eight, and an adaptive coherence gate. Comparator settings are retained as specified in \\ref{tab:processing-config}; the alternatives differ in window length, taper, channel selection, or update control, so the comparison reflects complete tracker configurations rather than an isolated gate change."
+    },
+    {
+      "type": "paragraph",
+      "text": "The four methods were the proposed tracker, a fixed-weight tracker, a recursive phase tracker, and an unwrapped spectral tracker. The fixed-weight procedure keeps a constant gain and uses a Hann window; the recursive procedure uses a fixed innovation and four active channels; the unwrapped spectral procedure uses all eight channels and no gate. These choices provide contrasting mechanisms: uniform weighting, direct recursive correction, and spectral unwrapping. They are not intended to exhaust all available algorithms, but they expose how different choices about windowing, channel use, and update restraint behave under the same acquisition framework."
+    },
+    {
+      "type": "paragraph",
+      "text": "For accuracy, we report median phase error and its 90th percentile in radians. For continuity, we report mean cycle continuity and the lowest run value, expressed as a percentage. The median emphasizes typical behavior, the upper percentile reveals a heavier error tail, and the lowest run highlights vulnerability that may be obscured by an average. Window-share continuity metrics have been used to distinguish sustained tracking from isolated breaks, while robust error summaries provide an interpretable companion statistic \\cite{17} \\cite{19}. All metrics are interpreted within condition; they do not imply that acoustic and vibration records have identical disturbance distributions."
+    },
+    {
+      "type": "paragraph",
+      "text": "Sensitivity analysis varied one factor at a time around nominal settings of three active channels, an impulse rate of 0.15 per second, and carrier separation of 30 Hz. The channel-density comparison used two, three, and five active channels; the impulse-rate comparison used 0.05, 0.15, and 0.30 per second; and carrier separation used 18, 30, and 48 Hz. The design isolates directional response to each factor but does not estimate every possible interaction. The tested ranges are therefore treated as bounded operating conditions rather than as a complete characterization of all sparse sensing deployments."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Results"
+    },
+    {
+      "type": "paragraph",
+      "text": "The proposed tracker achieved the lowest median phase error and the highest mean continuity in both record classes. In controlled acoustic records, its median error was 0.084 rad and mean continuity was 98.6%; in field vibration records, the corresponding values were 0.112 rad and 97.4%. The full comparison, including upper-percentile error and the lowest run continuity, appears in \\ref{tab:tracking-results}. These results show that the advantage was not confined to a single summary: the proposed method also had the best reported upper-tail error and lowest-run continuity in the field condition."
+    },
+    {
+      "type": "paragraph",
+      "text": "Relative to the fixed-weight tracker, the proposed approach reduced median error from 0.129 to 0.084 rad in the controlled condition and from 0.168 to 0.112 rad in the field condition. The corresponding continuity gains were 1.8 and 2.5 percentage points. Compared with the recursive phase tracker, median errors fell from 0.117 to 0.084 rad and from 0.151 to 0.112 rad. The unwrapped spectral tracker had the largest median error and lowest continuity among the compared methods in both conditions. The direction of these comparisons is consistent with the expectation that local weighting and a reliability gate can mitigate abrupt disturbances, although the complete configurations differ in more than one component."
+    },
+    {
+      "type": "paragraph",
+      "text": "The field condition was more difficult for all methods: each showed higher median phase error and lower continuity than in the controlled acoustic condition. Even so, the proposed tracker retained a field median error of 0.112 rad and a mean continuity of 97.4%. Its lowest run continuity was 94.1%, compared with 87.6% for the fixed-weight tracker, 89.2% for the recursive tracker, and 85.3% for the unwrapped spectral tracker. The spread between mean and lowest-run continuity underscores why reporting only a pooled central value would understate the worst observed run."
+    },
+    {
+      "type": "paragraph",
+      "text": "The observed pattern is compatible with coherence acting as a useful control statistic: when channels agree, phase observations can correct prediction; when agreement declines, the tracker avoids a large immediate correction. Interchannel agreement has been proposed as a control signal in distributed sensing, and the present comparison extends that intuition to phase-state updating \\cite{9}. However, the results do not establish that coherence is a sufficient statistic for observation quality. A disturbance shared across channels may preserve coherence while shifting phase, and a genuine local change confined to one channel may reduce coherence despite containing useful information."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Ablation"
+    },
+    {
+      "type": "paragraph",
+      "text": "The sensitivity results in \\ref{tab:sensitivity} show that performance changed gradually over the tested channel-density range. With two active channels, median error increased to 0.126 rad and continuity fell to 96.8%, relative to the nominal 0.112 rad and 97.4%. Five active channels reduced median error to 0.103 rad and raised continuity to 97.9%. This pattern suggests that additional independent evidence can improve the aggregate coherence estimate, but the gain is modest across the tested range. Sparse-channel estimator stability under changing carrier separation has also been identified as an important deployment concern \\cite{18}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Increasing impulse rate from 0.15 to 0.30 per second raised median error by 0.025 rad and lowered continuity by 1.5 percentage points. At the lower rate of 0.05 per second, performance improved slightly relative to nominal. The deterioration at the higher rate is expected because frequent impulsive corruption leaves fewer clean windows for both the weighted spectrum and coherence estimate. This does not mean that weighting removes the disturbance; rather, it reduces its leverage when neighboring evidence remains informative. Earlier work on robust frequency-following under impulsive noise similarly treats disturbance rejection as a matter of limiting correction rather than assuming perfect removal \\cite{11}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Carrier separation produced a distinct trend. At 18 Hz, median error was 0.129 rad and continuity 96.5%; at 48 Hz, these values improved to 0.098 rad and 98.1%. Greater separation can ease discrimination among nearby components, but this result should not be generalized beyond the tested records or interpreted as a monotonic law for arbitrary spectra. A denser frequency environment may introduce different forms of leakage and ambiguity. Adaptive window selection and short-window oscillator estimation both emphasize that time and frequency resolution should be matched to the underlying dynamics \\cite{3} \\cite{12}."
+    },
+    {
+      "type": "paragraph",
+      "text": "This sensitivity analysis is not a strict component ablation in which every internal operation is independently removed while all else is held fixed. Instead, it perturbs the proposed method's principal operating factors to show whether its behavior is fragile near nominal settings. The overall results and these perturbations support the practical utility of coherence gating, but they do not isolate the numerical contribution of every weighting or state-update choice. In particular, a direct factorial comparison of window weighting, coherence aggregation, and frequency correction would be needed to attribute gains to individual operations with stronger causal confidence."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Limitations"
+    },
+    {
+      "type": "paragraph",
+      "text": "First, the coherence gate relies on interchannel evidence. If all active channels experience the same phase disturbance, coherence can remain high and the tracker may accept a misleading observation. Conversely, if a genuine resonant change appears unevenly across channels, low coherence can suppress useful information. The present data do not establish how often either case occurs in other deployments. A system designer should therefore consider whether the active channels are exposed to sufficiently independent disturbances and whether their physical responses should reasonably share a phase trajectory."
+    },
+    {
+      "type": "paragraph",
+      "text": "Second, the threshold and weighting rules remain design choices. Although the tested threshold and sensitivity settings yielded stable performance over the reported range, unusual channel geometries or carrier dynamics may require recalibration. Adaptive thresholds can track changes in the coherence distribution, but they can also lag sudden regime changes or follow a persistent corruption pattern. Threshold selection for sensor fusion and confidence modulation is consequently an operational issue as much as an algorithmic one \\cite{15} \\cite{7}. A deployment should monitor gate occupancy and residual distributions rather than treating a nominal threshold as universally suitable."
+    },
+    {
+      "type": "paragraph",
+      "text": "Third, the comparison involves complete configurations with different windows and channel counts. Therefore, the observed improvements cannot be attributed exclusively to the gate. The controlled and field record classes also cover limited conditions, and the reported factor variations do not explore all interactions among disturbance rate, carrier spacing, and channel density. Future evaluation should include longer operation, broader carrier trajectories, and explicit tests of common-mode disturbances. Field protocols for resonance tracking emphasize the value of evaluating under varied operating states, and that need remains for this method \\cite{21}."
+    },
+    {
+      "type": "paragraph",
+      "text": "Finally, computational simplicity does not eliminate practical implementation constraints. Short windows favor responsiveness but may reduce frequency resolution; longer windows may better separate close components but increase latency. Fixed-point arithmetic, missing channels, and asynchronous acquisition could also affect coherence and gate behavior. The present evaluation establishes neither a universal hardware budget nor a guarantee of performance under arbitrary channel failure. Lightweight tracking methods are attractive for embedded monitors, but resource savings must be measured on the intended device alongside estimation quality \\cite{10}."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Conclusion"
+    },
+    {
+      "type": "paragraph",
+      "text": "This study presented a sparse multichannel phase tracker that combines locally weighted spectral estimation with a coherence-controlled state update. Its gate scales the phase residual according to interchannel agreement, limiting abrupt corrections when the observation is weakly supported. Across controlled acoustic and field vibration records, the proposed configuration achieved lower phase error and higher continuity than the three compared procedures. Sensitivity tests showed moderate changes with channel density and impulse rate, and improved performance at the larger tested carrier separation."
+    },
+    {
+      "type": "paragraph",
+      "text": "The results support coherence as a useful, computationally inexpensive reliability signal for tracking, provided it is treated as evidence rather than certainty. The method is most appropriate where several channels observe a common resonance and disturbances are not entirely shared. Its most important next tests are common-mode corruption, broader dynamics, and controlled component ablations that separate the contributions of weighting and gating. Within these limits, the combination offers a practical approach for monitoring systems that must preserve phase continuity while adapting to uneven signal quality."
+    }
+  ]
+}

@@ -1,0 +1,713 @@
+{
+  "content_id": "paper_16",
+  "variables": {
+    "lang": "en",
+    "field": "urban climatology",
+    "paper_length": "short",
+    "citation_style": "author_year",
+    "element_plan": {
+      "archetype": "field_study",
+      "counts": {
+        "chart": 6,
+        "figure": 4,
+        "table": 3,
+        "equation": 3,
+        "code": 0,
+        "references": 22
+      },
+      "chart_types": [
+        "stacked_bar",
+        "area",
+        "grouped_bar",
+        "box",
+        "bar",
+        "histogram"
+      ],
+      "figure_types": [
+        "architecture",
+        "block_diagram",
+        "flowchart",
+        "architecture"
+      ],
+      "sections": [
+        "Introduction",
+        "Study Area",
+        "Sampling Protocol",
+        "Measurements",
+        "Results",
+        "Discussion",
+        "Limitations",
+        "Conclusion"
+      ]
+    }
+  },
+  "lang": "en",
+  "values": {
+    "title": "Street-Canyon Shade and Afternoon Heat Exposure in a Coastal District",
+    "authors": [
+      {
+        "name": "Ilyra Venn",
+        "affiliations": [
+          1
+        ],
+        "corresponding": true,
+        "email": "i.venn@veylandrift-lab.org"
+      },
+      {
+        "name": "Tomas Elwick",
+        "affiliations": [
+          1,
+          2
+        ],
+        "corresponding": false
+      },
+      {
+        "name": "Maren Sola",
+        "affiliations": [
+          2
+        ],
+        "corresponding": false
+      }
+    ],
+    "affiliations": [
+      "Veylan Institute for Street Climate",
+      "Aurel Fen Centre for Urban Atmosphere Studies"
+    ],
+    "abstract": "We examined how street-canyon shade relates to afternoon heat exposure across 24 routes in a coastal district during 18 clear-sky summer days. Mobile air-temperature and globe-temperature measurements were paired with shade duration and sky-view estimates at 5-minute intervals. Routes with shade for at least half of the observation period had a median globe temperature 3.1 °C lower than routes with less shade, while air-temperature differences were smaller at 0.8 °C. The association persisted after accounting for wind speed and distance from the waterfront. Results indicate that continuous shade can reduce radiant heat exposure along walking routes, even where neighborhood air temperatures vary little.",
+    "abstract_alt": null,
+    "keywords": "urban heat; street canyons; shade; mobile measurement; coastal climate",
+    "keywords_alt": null,
+    "journal": "Street Climate and City Form",
+    "acknowledgement": "We thank the route observers and district residents for their time, and the field team for careful instrument checks throughout the campaign.",
+    "references": [
+      {
+        "text": "Aven, R. and Drel, S. (2091). Shade continuity and radiant heat along narrow urban corridors. Journal of Applied Street Climatology, 14, 41–58.",
+        "cite": "Aven and Drel 2091"
+      },
+      {
+        "text": "Brelan, T., Orvik, M. and Senn, L. (2092). Coastal airflow controls on pedestrian thermal exposure. Urban Atmosphere Field Notes, 7, 19–34.",
+        "cite": "Brelan et al. 2092"
+      },
+      {
+        "text": "Corda, N. and Velm, P. (2093). Sky-view geometry and afternoon warming in compact districts. Journal of Urban Boundary Conditions, 11, 77–93.",
+        "cite": "Corda and Velm 2093"
+      },
+      {
+        "text": "Deyra, I., Fenn, O. and Kalm, R. (2094). Mobile observations of globe temperature across shaded walking routes. Street Climate Methods, 9, 102–119.",
+        "cite": "Deyra et al. 2094"
+      },
+      {
+        "text": "Elnor, V. and Sarin, J. (2095). Radiant exposure gradients beneath mixed-height street walls. Coastal City Climate Review, 16, 5–22.",
+        "cite": "Elnor and Sarin 2095"
+      },
+      {
+        "text": "Farel, M., Tovin, E. and Rusk, A. (2096). Route-scale variability in urban shade duration. Field Studies in City Atmospheres, 12, 63–81.",
+        "cite": "Farel et al. 2096"
+      },
+      {
+        "text": "Gavra, L. and Nerin, D. (2097). Comparing air and globe temperatures in pedestrian environments. Journal of Thermal Streets, 18, 28–46.",
+        "cite": "Gavra and Nerin 2097"
+      },
+      {
+        "text": "Halen, P., Veyr, C. and Ostra, M. (2098). Waterfront distance, wind movement, and thermal comfort along urban paths. Urban Climate Observations, 10, 88–105.",
+        "cite": "Halen et al. 2098"
+      },
+      {
+        "text": "Ivara, S. and Bren, K. (2099). Shade thresholds for interpreting route-level heat exposure. Journal of Microclimate Surveying, 13, 12–29.",
+        "cite": "Ivara and Bren 2099"
+      },
+      {
+        "text": "Jorel, A., Mavin, T. and Edrin, P. (2100). Time-resolved thermal mapping by walking observers. Methods in Street Atmosphere Research, 8, 54–72.",
+        "cite": "Jorel et al. 2100"
+      },
+      {
+        "text": "Kera, D. and Ulven, F. (2101). Building shade, sky opening, and radiant load in coastal canyons. City Form and Heat, 15, 91–108.",
+        "cite": "Kera and Ulven 2101"
+      },
+      {
+        "text": "Loran, E., Pessa, N. and Varek, J. (2102). Route-clustered assessment of local heat contrasts. Urban Field Analytics, 6, 36–51.",
+        "cite": "Loran et al. 2102"
+      },
+      {
+        "text": "Meral, O. and Teyr, H. (2103). Clear-sky observation protocols for pedestrian climate surveys. Journal of Outdoor Urban Measurement, 17, 116–132.",
+        "cite": "Meral and Teyr 2103"
+      },
+      {
+        "text": "Navel, R., Orsen, I. and Damar, V. (2104). Instrument shielding and globe thermometry during mobile surveys. Thermal Measurement in Cities, 5, 24–40.",
+        "cite": "Navel et al. 2104"
+      },
+      {
+        "text": "Orel, C. and Vanta, S. (2105). Interpreting shade persistence in narrow pedestrian corridors. Journal of Street Radiation, 19, 70–86.",
+        "cite": "Orel and Vanta 2105"
+      },
+      {
+        "text": "Parel, J., Soran, B. and Lume, E. (2106). Local wind modulation of afternoon thermal conditions. Coastal Urban Meteorology, 9, 44–60.",
+        "cite": "Parel et al. 2106"
+      },
+      {
+        "text": "Querin, M. and Doval, R. (2107). Street-canyon form and spatial differences in radiant temperature. Urban Surface Climate, 21, 7–25.",
+        "cite": "Querin and Doval 2107"
+      },
+      {
+        "text": "Ravel, S., Teren, P. and Vilor, A. (2108). Linking route observations with shade and exposure metrics. Field Methods for Urban Heat, 4, 83–99.",
+        "cite": "Ravel et al. 2108"
+      },
+      {
+        "text": "Selen, D. and Arven, M. (2109). Afternoon thermal contrasts across shaded and sunlit paths. Journal of Coastal Street Environments, 20, 101–117.",
+        "cite": "Selen and Arven 2109"
+      },
+      {
+        "text": "Tovar, E., Neral, K. and Vessin, O. (2110). Robust summaries of mobile temperature observations. Urban Climate Statistics, 3, 15–31.",
+        "cite": "Tovar et al. 2110"
+      },
+      {
+        "text": "Ulen, F. and Cevra, L. (2111). Pedestrian-level heat exposure under variable street shade. Journal of Human-Scale Climatology, 22, 58–74.",
+        "cite": "Ulen and Cevra 2111"
+      },
+      {
+        "text": "Veyra, M., Doren, S. and Kel, I. (2112). Coastal district morphology and daytime thermal exposure. Advances in Street Climate, 18, 121–138.",
+        "cite": "Veyra et al. 2112"
+      }
+    ],
+    "body": [
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Introduction"
+      },
+      {
+        "type": "figure",
+        "figure_type": "architecture",
+        "id": "fig:mobile_measurement_setup",
+        "caption": "Mobile measurement arrangement used to pair thermal observations with route-level shade conditions.",
+        "description": "A walking observer carries a shielded air-temperature probe and a globe thermometer along a mapped street route. A time-synchronized logger records readings, while route segments are linked to shade duration, sky-view estimates, wind speed, and waterfront distance.",
+        "labels": [
+          "Observer",
+          "Air probe",
+          "Globe thermometer",
+          "Logger",
+          "Route segment",
+          "Street shade"
+        ]
+      },
+      {
+        "type": "chart",
+        "chart_type": "stacked_bar",
+        "id": "fig:shade_exposure_share",
+        "caption": "Mean shaded and sun-exposed route fractions in the two shade strata; fractions sum to 100% within each stratum.",
+        "labels": [
+          "Low shade (<50%)",
+          "High shade (50% or more)"
+        ],
+        "series": [
+          {
+            "name": "Shaded",
+            "values": [
+              22,
+              56
+            ]
+          },
+          {
+            "name": "Sun-exposed",
+            "values": [
+              78,
+              44
+            ]
+          }
+        ],
+        "x_label": "Shade stratum",
+        "y_label": "Route interval share (%)",
+        "legend_position": "outside"
+      },
+      {
+        "type": "table",
+        "id": "tab:shade_temperature",
+        "caption": "Route shade duration and median afternoon temperatures by shade stratum.",
+        "header": [
+          [
+            {
+              "text": "Shade stratum",
+              "rowspan": 2
+            },
+            {
+              "text": "Route coverage",
+              "colspan": 2
+            },
+            {
+              "text": "Median temperature (°C)",
+              "colspan": 2
+            },
+            {
+              "text": "Globe contrast vs low-shade (°C)",
+              "rowspan": 2
+            }
+          ],
+          [
+            "Routes (n)",
+            "Mean shade duration (%)",
+            "Air",
+            "Globe"
+          ]
+        ],
+        "rows": [
+          [
+            "Low shade (<50%)",
+            "13",
+            "22",
+            "31.9",
+            "35.8",
+            "Reference"
+          ],
+          [
+            "High shade (>=50%)",
+            "11",
+            "56",
+            {
+              "text": "31.1",
+              "bold": true
+            },
+            {
+              "text": "32.7",
+              "bold": true
+            },
+            {
+              "text": "−3.1",
+              "bold": true
+            }
+          ]
+        ],
+        "note": "Route-level medians pooled across 18 clear-sky summer days. The corresponding air-temperature contrast for high versus low shade was −0.8 °C."
+      },
+      {
+        "type": "equation",
+        "id": "eq:shade_fraction",
+        "latex": "f_r = \\frac{1}{N_r}\\sum_{t=1}^{N_r} s_{rt}",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Heat exposure along walking routes is shaped not only by air temperature but also by the radiant environment created by walls, paving, vegetation, and direct solar access. In compact coastal districts, shade can persist over one portion of a route while disappearing only a few metres away, producing conditions that are poorly represented by a single fixed weather station. Earlier work links shade continuity with lower radiant load in narrow corridors \\cite{1}, while studies of coastal airflow indicate that wind can either moderate or redistribute pedestrian heat exposure \\cite{2}. Sky-view geometry provides a complementary explanation because a smaller opening can reduce direct solar access while also restricting long-wave exchange with the exposed sky \\cite{3}. Mobile observations are therefore useful when the question concerns conditions experienced sequentially along a route rather than a district-wide mean \\cite{4}. The route-level contrast and the processing sequence are introduced before their later placement through \\ref{tab:shade_temperature}, \\ref{fig:shade_exposure_share}, \\ref{fig:mobile_measurement_setup}, and \\ref{fig:analysis_pipeline}."
+      },
+      {
+        "type": "chart",
+        "chart_type": "box",
+        "id": "fig:globe_temperature_spread",
+        "caption": "Route-level afternoon globe-temperature distributions by shade stratum; whiskers show the observed range across routes.",
+        "labels": [
+          "Low shade (<50%)",
+          "High shade (50% or more)"
+        ],
+        "series": [
+          {
+            "name": "Globe temperature",
+            "stats": [
+              {
+                "min": 33.8,
+                "q1": 34.9,
+                "median": 35.8,
+                "q3": 36.8,
+                "max": 38.0
+              },
+              {
+                "min": 30.9,
+                "q1": 31.8,
+                "median": 32.7,
+                "q3": 33.5,
+                "max": 34.4
+              }
+            ]
+          }
+        ],
+        "x_label": "Shade stratum",
+        "y_label": "Globe temperature (°C)",
+        "legend_position": "outside"
+      },
+      {
+        "type": "chart",
+        "chart_type": "grouped_bar",
+        "id": "fig:temperature_by_shade",
+        "caption": "Route-level median afternoon temperatures by shade stratum; error bars indicate instrument uncertainty of ±0.2 °C.",
+        "labels": [
+          "Low shade (<50%)",
+          "High shade (50% or more)"
+        ],
+        "series": [
+          {
+            "name": "Air temperature",
+            "values": [
+              31.9,
+              31.1
+            ],
+            "errors": [
+              0.2,
+              0.2
+            ]
+          },
+          {
+            "name": "Globe temperature",
+            "values": [
+              35.8,
+              32.7
+            ],
+            "errors": [
+              0.2,
+              0.2
+            ]
+          }
+        ],
+        "x_label": "Shade stratum",
+        "y_label": "Median temperature (°C)",
+        "legend_position": "outside"
+      },
+      {
+        "type": "chart",
+        "chart_type": "area",
+        "id": "fig:afternoon_globe_profile",
+        "caption": "Illustrative afternoon globe-temperature profiles by route shade stratum; error bars show instrument uncertainty of ±0.2 °C at each time point.",
+        "labels": [
+          "12:00",
+          "13:00",
+          "14:00",
+          "15:00",
+          "16:00"
+        ],
+        "series": [
+          {
+            "name": "Low shade",
+            "values": [
+              34.2,
+              35.1,
+              35.8,
+              35.5,
+              34.7
+            ],
+            "errors": [
+              0.2,
+              0.2,
+              0.2,
+              0.2,
+              0.2
+            ]
+          },
+          {
+            "name": "High shade",
+            "values": [
+              31.8,
+              32.4,
+              32.7,
+              32.6,
+              32.0
+            ],
+            "errors": [
+              0.2,
+              0.2,
+              0.2,
+              0.2,
+              0.2
+            ]
+          }
+        ],
+        "x_label": "Local time",
+        "y_label": "Globe temperature (°C)",
+        "legend_position": "outside"
+      },
+      {
+        "type": "table",
+        "id": "tab:route_covariates",
+        "caption": "Route characteristics and local conditions by shade stratum.",
+        "header": [
+          [
+            "Shade stratum",
+            "Sky-view factor, median [IQR]",
+            "Wind speed (m s−1), median [IQR]",
+            "Waterfront distance (km), median [IQR]"
+          ]
+        ],
+        "rows": [
+          [
+            "Low shade (<50%)",
+            "0.57 [0.46, 0.68]",
+            "1.7 [1.3, 2.1]",
+            "0.66 [0.39, 0.95]"
+          ],
+          [
+            "High shade (>=50%)",
+            "0.31 [0.24, 0.38]",
+            "1.8 [1.4, 2.2]",
+            "0.62 [0.40, 0.91]"
+          ]
+        ],
+        "note": "Values summarize 24 walking routes; IQR denotes the interquartile range."
+      },
+      {
+        "type": "equation",
+        "id": "eq:temperature_contrast",
+        "latex": "dT_g = \\mathrm{median}_{f_r >= 0.5}(T_g) - \\mathrm{median}_{f_r < 0.5}(T_g) = -3.1 \\mathrm{C}",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "This field study assessed whether persistent street shade was associated with lower afternoon globe temperature across a coastal district. The primary outcome was globe temperature, used as an indicator of combined radiant and convective loading, and the secondary outcome was air temperature. We expected the shade association to be larger for globe temperature than for air temperature because direct radiation should affect the former more strongly. For route r, the shade fraction was treated as a proportion, $0 \\leq f_r \\leq 1$, and the principal comparison separated routes with $f_r \\geq 0.5$ from routes with $f_r < 0.5$. This threshold follows prior discussion of operational shade thresholds for route interpretation \\cite{9}. The analysis also considered wind speed and distance from the waterfront, which may confound or modify the shade relationship."
+      },
+      {
+        "type": "chart",
+        "chart_type": "histogram",
+        "id": "fig:route_shade_fraction",
+        "caption": "Distribution of route shade fractions across the 24 walking routes; bin counts sum to 24 routes.",
+        "labels": [
+          "0.0–0.2",
+          "0.2–0.4",
+          "0.4–0.6",
+          "0.6–0.8",
+          "0.8–1.0"
+        ],
+        "series": [
+          {
+            "name": "Routes",
+            "values": [
+              4,
+              6,
+              6,
+              5,
+              3
+            ]
+          }
+        ],
+        "x_label": "Route shade fraction",
+        "y_label": "Number of routes",
+        "legend_position": "outside"
+      },
+      {
+        "type": "chart",
+        "chart_type": "bar",
+        "id": "fig:waterfront_distance",
+        "caption": "Median waterfront distance by shade stratum; distance-reading uncertainty is ±0.02 km.",
+        "labels": [
+          "Low shade (<50%)",
+          "High shade (50% or more)"
+        ],
+        "series": [
+          {
+            "name": "Waterfront distance",
+            "values": [
+              0.66,
+              0.62
+            ],
+            "errors": [
+              0.02,
+              0.02
+            ]
+          }
+        ],
+        "x_label": "Shade stratum",
+        "y_label": "Waterfront distance (km)",
+        "legend_position": "outside"
+      },
+      {
+        "type": "figure",
+        "figure_type": "block_diagram",
+        "id": "fig:analysis_pipeline",
+        "caption": "Processing sequence from field observations to the adjusted temperature association.",
+        "description": "Time-stamped mobile readings are aligned with route shade and local covariates, summarized by route, then entered into a route-clustered regression model.",
+        "labels": [
+          "Field readings",
+          "Time alignment",
+          "Shade fraction",
+          "Wind and distance",
+          "Route summaries",
+          "Adjusted model"
+        ]
+      },
+      {
+        "type": "table",
+        "id": "tab:adjusted_model",
+        "caption": "Adjusted association between route shade fraction and interval globe temperature.",
+        "header": [
+          [
+            "Predictor",
+            "Scale",
+            "Estimate (°C)",
+            "Route-clustered SE",
+            "95% CI",
+            "p value"
+          ]
+        ],
+        "rows": [
+          [
+            "Intercept",
+            "—",
+            "35.9",
+            "0.7",
+            "34.5 to 37.3",
+            "<0.001"
+          ],
+          [
+            "Shade fraction",
+            "Per 1.0 increase",
+            "−5.9",
+            "1.2",
+            "−8.3 to −3.5",
+            "<0.001"
+          ],
+          [
+            "Wind speed",
+            "Per 1 m s−1 increase",
+            "−0.46",
+            "0.16",
+            "−0.78 to −0.14",
+            "0.006"
+          ],
+          [
+            "Waterfront distance",
+            "Per 1 km increase",
+            "0.18",
+            "0.15",
+            "−0.12 to 0.48",
+            "0.24"
+          ]
+        ],
+        "note": "Model includes route shade fraction, interval wind speed, and route distance from the waterfront. Standard errors are clustered by route."
+      },
+      {
+        "type": "equation",
+        "id": "eq:adjusted_association",
+        "latex": "T_{g,rt} = b_0 + b_1 f_r + b_2 u_{rt} + b_3 d_r + e_{rt}",
+        "numbered": true
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Study Area"
+      },
+      {
+        "type": "figure",
+        "figure_type": "architecture",
+        "id": "fig:street_canyon_context",
+        "caption": "Street-canyon features considered when interpreting route shade and radiant heat exposure.",
+        "description": "The cross-section shows building walls framing a walking corridor, with building shade affecting direct solar exposure. The route observer moves near the pedestrian level; sky-view opening, airflow, and waterfront proximity characterize the surrounding conditions.",
+        "labels": [
+          "Building wall",
+          "Building shade",
+          "Pedestrian route",
+          "Sky-view opening",
+          "Airflow",
+          "Waterfront"
+        ]
+      },
+      {
+        "type": "figure",
+        "figure_type": "flowchart",
+        "id": "fig:route_selection",
+        "caption": "Route and observation screening used to assemble the field-study dataset.",
+        "description": "Routes were checked for safe access and complete coverage, then clear-sky summer observation days were retained. Synchronized thermal records were paired with route shade and covariate measurements before analysis.",
+        "labels": [
+          "Route access check",
+          "24 routes retained",
+          "Day conditions",
+          "18 clear-sky days",
+          "Synchronize records",
+          "Analysis dataset"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "The study district consisted of a connected set of paved pedestrian corridors near a sheltered coast, with buildings of mixed height enclosing sections of varying width. The built form produced alternating shaded and sun-exposed segments during the afternoon. A route could therefore have a high overall shade fraction while still containing brief intervals of strong solar exposure. This distinction is important because radiant load responds to immediate surface and sky conditions, whereas route-level air temperature may retain greater spatial continuity. Research on mixed-height walls reports similar gradients in radiant exposure \\cite{5}, and studies of canyon form emphasize the joint role of wall geometry and sky opening \\cite{11}. The physical context used for interpretation is referenced by \\ref{fig:street_canyon_context}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Routes were selected to span the observed range of building enclosure, shade persistence, and proximity to the waterfront. The final set comprised 24 walking routes, each long enough to include several contrasting street segments but short enough for repeated traversal during an afternoon period. Route distance from the water was recorded as a covariate because marine airflow may vary over relatively small inland distances. Previous coastal morphology work suggests that such distance can influence daytime exposure even when routes share broad regional weather \\cite{8}. The route distribution was retained as a continuous range rather than being restricted to only the most shaded and least shaded corridors, allowing the association to be assessed without discarding intermediate conditions."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Sampling Protocol"
+      },
+      {
+        "type": "paragraph",
+        "text": "Observations were conducted on 18 clear-sky summer days. Clear conditions were required so that shade boundaries and solar exposure could be identified consistently, while repeated visits reduced dependence on one unusual afternoon. The route and day screening sequence is referenced through \\ref{fig:route_selection}. Clear-sky protocols of this kind are recommended when the aim is to compare direct exposure across pedestrian environments \\cite{13}. Each route was traversed during the afternoon window, and the observer maintained a steady walking pace. The logger clock was checked before each traverse, and route landmarks were used to identify segment transitions."
+      },
+      {
+        "type": "paragraph",
+        "text": "At five-minute intervals, the observer recorded shielded air temperature, globe temperature, wind speed, shade state, and position along the route. Shade state was coded as one when the pedestrian-level sensor was beneath direct building or structural shade and zero when direct solar exposure was present. The route fraction was then calculated conceptually as $f_r = N_r^{-1}\\sum_{t=1}^{N_r}s_{rt}$, where $N_r$ is the number of valid intervals and $s_{rt}$ is the shade indicator. This formulation gives each observed interval equal weight and avoids assigning disproportionate importance to a long segment merely because it contains more mapped detail. Mobile walking observations and time alignment followed procedures described by Jorel and colleagues \\cite{10} and Ravel and colleagues \\cite{18}. A footnote records that route observers paused only when necessary for safe crossing or instrument checks \\fn{All pauses were logged and excluded from interval summaries when they exceeded the prespecified observation interval.}"
+      },
+      {
+        "type": "paragraph",
+        "text": "Instrument arrangement was standardized across routes. The air probe was shielded from direct radiation, while the globe thermometer was mounted at approximately pedestrian torso height and kept clear of the observer's clothing. Shielding and globe placement are consequential because poor ventilation or partial solar obstruction can bias the contrast between air and globe temperature \\cite{14}. Before the campaign, instruments were compared under common outdoor conditions; during the campaign, readings were checked for abrupt discontinuities. The paired arrangement allowed each interval to retain both a thermal measurement and a contemporaneous description of its street setting."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Measurements"
+      },
+      {
+        "type": "paragraph",
+        "text": "Air temperature and globe temperature were summarized at route level using the median of valid afternoon intervals. The median was selected because mobile records can include brief disturbances from passing vehicles, sheltered doorways, or transient gusts. Robust summaries are particularly appropriate when routes contain heterogeneous micro-sites \\cite{20}. For route r, the afternoon median can be represented as $\\operatorname{median}(T_{g,rt})$, with the same operation applied to air temperature. Sky-view factor was estimated at route checkpoints and summarized by its route median. Wind speed was averaged over the corresponding interval, and waterfront distance was assigned once per route from the mapped route centre."
+      },
+      {
+        "type": "paragraph",
+        "text": "The principal contrast was defined as the high-shade median minus the low-shade median. In notation, $\\Delta T_g = \\operatorname{median}(T_g, f_r \\geq 0.5)-\\operatorname{median}(T_g, f_r < 0.5)$. The same contrast was computed for air temperature. This paired interpretation follows evidence that globe and air temperatures respond differently to solar exposure \\cite{7}. Shade persistence was treated as an exposure characteristic rather than as a binary physical property of every instant; this approach is consistent with route-scale work on duration and continuity \\cite{6} and with studies of persistent shade in narrow corridors \\cite{15}."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Results"
+      },
+      {
+        "type": "paragraph",
+        "text": "The 24 routes divided into 13 low-shade routes and 11 high-shade routes. Mean shade duration was 22% in the low-shade group and 56% in the high-shade group. Median air temperature was 31.9 °C for low shade and 31.1 °C for high shade, a difference of 0.8 °C. Median globe temperature was 35.8 °C and 32.7 °C, respectively, giving a high-shade contrast of -3.1 °C. The comparison is referenced by \\ref{tab:shade_temperature} and \\ref{fig:temperature_by_shade}, while the route-level spread is referenced by \\ref{fig:globe_temperature_spread}. The afternoon progression is additionally referenced by \\ref{fig:afternoon_globe_profile}. These results support the expectation that radiant exposure responds more strongly than air temperature to persistent shade."
+      },
+      {
+        "type": "paragraph",
+        "text": "Covariate distributions were reasonably similar between the two strata, although their sky-view conditions differed as expected. Median sky-view factor was 0.57 in the low-shade group and 0.31 in the high-shade group. Median wind speed was 1.7 and 1.8 m s$^{-1}$, respectively, while median waterfront distance was 0.66 and 0.62 km. The covariate summary is given through \\ref{tab:route_covariates} and the distance comparison through \\ref{fig:waterfront_distance}. The small difference in waterfront distance reduces concern that the unadjusted thermal contrast simply reflects a broad inland gradient."
+      },
+      {
+        "type": "paragraph",
+        "text": "An adjusted route-clustered model related interval globe temperature to route shade fraction, interval wind speed, and route waterfront distance. In compact form, $T_{g,rt}=\\beta_0+\\beta_1f_r+\\beta_2u_{rt}+\\beta_3d_r+\\epsilon_{rt}$. The shade coefficient was -5.9 °C per unit increase in shade fraction, with a route-clustered standard error of 1.2 °C and a 95% confidence interval from -8.3 to -3.5 °C. Wind speed had a coefficient of -0.46 °C per 1 m s$^{-1}$ increase, whereas waterfront distance had a small, uncertain coefficient of 0.18 °C per kilometre. Full model values are referenced by \\ref{tab:adjusted_model}. The continuous route distribution used for this analysis is referenced by \\ref{fig:route_shade_fraction}, and the analytical sequence by \\ref{fig:analysis_pipeline}. The model specification follows route-clustered approaches to local heat contrasts \\cite{12}."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Discussion"
+      },
+      {
+        "type": "paragraph",
+        "text": "The central result is that routes with more persistent shade had substantially lower globe temperature despite only a modest difference in air temperature. This pattern is physically plausible: shade reduces short-wave input to the globe and often coincides with cooler wall and pavement surfaces. Coastal airflow may further reduce heat load, but the two shade strata had closely matched median wind speeds. The observed relationship therefore appears to be primarily associated with radiant exposure rather than a simple ventilation separation. Comparable contrasts between shaded and sunlit paths have been reported in coastal pedestrian settings \\cite{19}, while work on local wind modulation supports retaining wind as an adjustment variable \\cite{16}."
+      },
+      {
+        "type": "paragraph",
+        "text": "The lower sky-view factor in high-shade routes provides a second interpretation. Enclosure can reduce direct solar access, but it can also restrict nocturnal and daytime long-wave exchange depending on surface temperatures and wall orientation. Consequently, shade fraction should not be interpreted as a complete substitute for geometry. The present findings are consistent with research linking sky opening to afternoon warming \\cite{3} and with analyses of street-canyon form and radiant temperature \\cite{17}. They also support a pedestrian-scale view of thermal comfort in which continuity matters: a sequence of shaded intervals may be more useful to a walker than a district mean that conceals repeated short exposures."
+      },
+      {
+        "type": "paragraph",
+        "text": "The adjusted coefficient suggests that moving from fully sun-exposed to fully shaded route conditions would be associated with approximately 5.9 °C lower globe temperature under the fitted covariate values, although the observed routes did not span every possible combination. The estimate should therefore be interpreted as a route-scale association rather than a universal causal response. Waterfront distance was not strongly associated with globe temperature after adjustment, which may indicate that local walls and shade structures overwhelmed the broad coastal gradient during the observation window. Coastal district morphology remains relevant, however, because it governs both the availability of shade and the pathways through which wind reaches pedestrians \\cite{22}."
+      },
+      {
+        "type": "paragraph",
+        "text": "The findings also extend the distinction between exposure measurement and thermal comfort interpretation. Globe temperature integrates radiative and convective influences at the instrument, making it responsive to shade transitions that may be muted in air-temperature records. This does not mean that every pedestrian experiences the same reduction, since clothing, movement, hydration, and duration of exposure shape physiological response. Rather, the route contrast identifies an environmental opportunity: connected shaded segments may reduce the intensity and recurrence of radiant loading during ordinary walking. Such continuity is especially relevant to street design because it can be evaluated along routes rather than only at isolated points \\cite{21}."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Limitations"
+      },
+      {
+        "type": "paragraph",
+        "text": "Several limitations qualify the interpretation. First, observations were restricted to clear-sky summer afternoons, so the relationship may differ under cloud, rain, cooler seasons, or morning solar angles. Second, route-level shade fraction compresses fine-scale sequence information; two routes with equal $f_r$ can expose walkers to very different alternations of sun and shade. Third, the number of routes was modest, and route-clustered uncertainty cannot remove all effects of route selection. Fourth, globe temperature is an exposure indicator rather than a complete physiological heat-stress measure. Humidity, clothing, walking speed, and personal adaptation were not included."
+      },
+      {
+        "type": "paragraph",
+        "text": "Measurement uncertainty also deserves attention. A moving observer can alter local airflow around the probes, and brief shade transitions may not be perfectly represented by five-minute intervals. Globe response time can smooth abrupt changes, while position estimates may lag behind the actual route segment. Although instrument checks and synchronized logging reduced these problems, they cannot eliminate them. The study also did not quantify surface temperature, mean radiant temperature from multiple directions, or tree canopy density. These omissions limit mechanistic separation of building shade, reflected radiation, and airflow. Future work should combine repeated routes with finer positional logging, broader weather conditions, and physiological or survey-based indicators."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Conclusion"
+      },
+      {
+        "type": "paragraph",
+        "text": "Across 24 coastal walking routes observed on 18 clear-sky summer days, persistent shade was associated with lower afternoon radiant heat exposure. Routes shaded for at least half of their observation intervals had a median globe temperature 3.1 °C below that of routes with less shade, while the corresponding air-temperature difference was 0.8 °C. The association remained after accounting for wind speed and waterfront distance. These results indicate that continuity of shade is a meaningful design and assessment attribute for pedestrian corridors, especially where district air temperatures vary little. Route-scale shade metrics can therefore complement conventional fixed-station monitoring when evaluating practical heat exposure along streets."
+      }
+    ]
+  },
+  "hash": "ecf98fc28cd2de7c24e0fa0ef5ea1d71a6d549f6b2c6c053de73988267ccd993"
+}

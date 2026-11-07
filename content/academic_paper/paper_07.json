@@ -1,0 +1,389 @@
+{
+  "content_id": "paper_07",
+  "variables": {
+    "lang": "vi",
+    "field": "transport",
+    "paper_length": "short",
+    "citation_style": "author_year"
+  },
+  "lang": "vi",
+  "values": {
+    "title": "Điều phối làn đường thích ứng cho xe buýt đô thị trong điều kiện nhu cầu biến động",
+    "authors": [
+      {
+        "name": "Nguyễn Khải Minh",
+        "affiliations": [
+          1
+        ],
+        "corresponding": true,
+        "email": "khai.minh@tudongvantai-lacviet.vn"
+      },
+      {
+        "name": "Trần Yến Nhi",
+        "affiliations": [
+          1,
+          2
+        ],
+        "corresponding": false
+      }
+    ],
+    "affiliations": [
+      "Khoa Kỹ thuật Giao thông, Viện Nghiên cứu Vận tải Nam Lĩnh",
+      "Trung tâm Dữ liệu Đô thị và Hạ tầng, Thành phố An Phú"
+    ],
+    "abstract": "Nghiên cứu đề xuất một phương pháp điều phối làn đường thích ứng dành cho mạng lưới xe buýt đô thị có nhu cầu biến động theo thời gian. Phương pháp kết hợp dữ liệu vị trí, mật độ phương tiện và thời gian chờ tại điểm dừng để điều chỉnh chu kỳ ưu tiên theo từng đoạn tuyến. Mô hình gồm bộ ước lượng trạng thái giao thông, bộ dự báo nhu cầu ngắn hạn và bộ điều khiển ưu tiên, qua đó hạn chế xung đột giữa xe buýt và dòng xe chung. Kết quả đánh giá cho thấy phương pháp giúp cải thiện độ ổn định của thời gian hành trình, giảm thời gian chờ và duy trì mức sử dụng làn đường cân bằng hơn so với quy tắc điều phối cố định. Nghiên cứu cũng xác định các điều kiện cần thiết để triển khai hệ thống trong môi trường đô thị có dữ liệu không đồng nhất.",
+    "abstract_alt": null,
+    "keywords": "điều phối giao thông; làn đường thích ứng; xe buýt đô thị; dự báo nhu cầu; ưu tiên phương tiện công cộng",
+    "keywords_alt": null,
+    "journal": "Tạp chí Hệ thống Vận tải Đô thị",
+    "acknowledgement": "Nhóm tác giả trân trọng cảm ơn Phòng Thí nghiệm Điều khiển Giao thông Nam Lĩnh và các cán bộ vận hành tuyến đã hỗ trợ cung cấp dữ liệu, góp ý cho thiết kế đánh giá và kiểm tra khả năng triển khai của phương pháp.",
+    "references": [
+      {
+        "text": "Minh, Nguyễn Khải, và Trần Yến Nhi. (2024). Điều phối làn đường thích ứng cho xe buýt đô thị trong điều kiện nhu cầu biến động. Tạp chí Hệ thống Vận tải Đô thị, 8(2), 41–58.",
+        "cite": "(Minh & Nhi, 2024)"
+      },
+      {
+        "text": "Lê Tấn Vực, và Bùi Hoài Lam. (2023). Ước lượng trạng thái giao thông từ dữ liệu không đồng nhất trên tuyến xe buýt. Tạp chí Mô hình Giao thông Động, 6(1), 17–33.",
+        "cite": "(Vực & Lam, 2023)"
+      },
+      {
+        "text": "Phạm Ngọc Kha, Đặng Tử Lộc, và Bùi Gia Mẫn. (2022). Dự báo nhu cầu ngắn hạn cho mạng lưới vận tải hành khách đô thị. Tạp chí Dữ liệu Lưu thông, 5(4), 88–105.",
+        "cite": "(Kha et al., 2022)"
+      },
+      {
+        "text": "Vũ Thanh Sâm, và Đinh Hạ Uyên. (2021). Điều khiển ưu tiên xe buýt theo trạng thái nút giao và thời gian chờ. Kỷ yếu Điều khiển Nút giao, 3(2), 27–44.",
+        "cite": "(Sâm & Uyên, 2021)"
+      },
+      {
+        "text": "Cao Minh Triều, Hoàng Diệp Chi, và Lưu Tấn Nguyên. (2024). Đánh giá cân bằng giữa ưu tiên phương tiện công cộng và năng lực dòng xe chung. Tạp chí Phân tích Vận tải Hành khách, 9(1), 63–79.",
+        "cite": "(Triều et al., 2024)"
+      },
+      {
+        "text": "Hồ Nhật Tường, và Trương Hải Mạch. (2020). Đồng bộ dữ liệu vị trí và thời gian dừng cho điều phối vận tải theo thời gian thực. Tạp chí Hạ tầng Kết nối, 4(3), 101–118.",
+        "cite": "(Tường & Mạch, 2020)"
+      },
+      {
+        "text": "Nguyễn Tố Quyên, Lê Vĩnh Thạch, và Phan Uy Vũ. (2022). Ổn định thời gian hành trình trong mạng lưới xe buýt có dao động nhu cầu. Tạp chí Ổn định Mạng lưới Đô thị, 7(2), 11–29.",
+        "cite": "(Quyên et al., 2022)"
+      },
+      {
+        "text": "Đỗ Mộc An, và Phan Lưu Quỳnh. (2023). Mô hình phân bổ chu kỳ ưu tiên theo mức cản trở trên từng đoạn tuyến. Tạp chí Giao thông Tích hợp, 5(1), 52–68.",
+        "cite": "(An & Quỳnh, 2023)"
+      },
+      {
+        "text": "Tạ Vĩnh Khang, Trịnh Mộc Hân, và Võ Nhật Lâm. (2019). Tối ưu hóa sử dụng làn đường trong điều kiện lưu lượng phương tiện biến thiên. Kỷ yếu Quy hoạch Làn đường, 2(4), 73–90.",
+        "cite": "(Khang et al., 2019)"
+      },
+      {
+        "text": "Lương Bảo Khuê, và Võ Huyền Trâm. (2021). Độ bền của bộ điều khiển ưu tiên khi dữ liệu giao thông bị thiếu. Tạp chí Vận hành Bền vững, 6(3), 35–51.",
+        "cite": "(Khuê & Trâm, 2021)"
+      },
+      {
+        "text": "Bạch Quang Lộ, và Mai Thảo Nguyên. (2020). Khai thác cảm biến hiện trường cho giám sát tải làn và độ trễ xe buýt. Tạp chí Cảm biến và Điều phối, 3(1), 94–110.",
+        "cite": "(Lộ & Nguyên, 2020)"
+      },
+      {
+        "text": "Võ Nhật Duy, Lê Hoàng Phúc, và Đỗ Thanh Mẫn. (2024). Triển khai hệ thống điều phối thích ứng trong môi trường đô thị có nhiều nguồn dữ liệu. Tạp chí Triển khai Hệ thống Giao thông, 8(4), 19–37.",
+        "cite": "(Duy et al., 2024)"
+      }
+    ],
+    "body": [
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "1. Bối cảnh và câu hỏi nghiên cứu"
+      },
+      {
+        "type": "paragraph",
+        "text": "Điều phối xe buýt trong đô thị thường phải xử lý đồng thời hai mục tiêu khó dung hòa: giảm thời gian chờ và trễ của hành khách, nhưng không làm suy giảm quá mức năng lực của dòng xe chung. Khi nhu cầu tăng nhanh theo khung giờ hoặc phân bố không đều giữa các đoạn tuyến, một chu kỳ ưu tiên cố định có thể cấp quá ít thời gian cho nơi đang ùn tắc, đồng thời chiếm dụng năng lực ở nơi nhu cầu thấp. Nghiên cứu này xem xét một cơ chế cập nhật theo trạng thái hiện trường, tập trung vào độ ổn định của hành trình, độ trễ tại nút và cách sử dụng làn. Bốn đối tượng được liên kết trong phần phân tích gồm phân bố chu kỳ ở \\\\ref{tab:adaptive-priority}, kết quả toàn mạng ở \\\\ref{tab:performance-comparison}, quan hệ giữa chu kỳ và thời gian chờ ở \\\\ref{fig:chart}, cùng luồng xử lý ở \\\\ref{fig:diagram}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Câu hỏi trung tâm không chỉ là liệu ưu tiên động có rút ngắn hành trình hay không, mà còn là liệu lợi ích có duy trì được khi chất lượng dữ liệu và nhu cầu thay đổi. Các nghiên cứu về điều phối thích ứng đã nhấn mạnh vai trò của ước lượng trạng thái và sự liên kết giữa dữ liệu giao thông với quyết định tại nút giao \\\\cite{1} \\\\cite{2}. Dự báo nhu cầu ngắn hạn giúp chuyển phản ứng từ trạng thái xử lý sự cố sang chuẩn bị trước cho biến động sắp tới \\\\cite{3}. Vì vậy, đánh giá ở đây xem mỗi đoạn tuyến như một đơn vị điều khiển có liên hệ với các đoạn lân cận, chứ không xem từng lần xe đến nút là một quyết định tách rời."
+      },
+      {
+        "type": "paragraph",
+        "text": "Điểm xuất phát của phương pháp là ba nguồn thông tin có tính bổ trợ: vị trí xe buýt, mật độ phương tiện và thời gian xe chờ tại điểm dừng. Vị trí cho biết xe đang ở đâu và tốc độ tiến triển ra sao; mật độ phản ánh mức cản trở của dòng xe; thời gian chờ thể hiện nhu cầu chưa được phục vụ. Các nguồn này có chu kỳ cập nhật và sai số khác nhau, do đó việc hợp nhất trực tiếp có thể làm quyết định nhạy quá mức với một tín hiệu nhất thời. Công trình về đồng bộ dữ liệu vị trí và thời gian dừng cho thấy cần thống nhất mốc thời gian trước khi đưa tín hiệu vào điều phối \\\\cite{6}. Nghiên cứu về ổn định hành trình cũng cho thấy biến động nhỏ tại một đoạn có thể lan thành sai lệch lớn ở các đoạn kế tiếp \\\\cite{7}."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "2. Cấu trúc phương pháp điều phối"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "2.1. Ước lượng trạng thái và dự báo nhu cầu"
+      },
+      {
+        "type": "equation",
+        "id": "eq:priority-cycle",
+        "latex": "T_i^{\\mathrm{pri}}=\\min\\left(T_{\\max},\\max\\left(T_{\\min},T_i^0+\\lambda_q\\hat{q}_i(t)+\\lambda_w w_i(t)-\\lambda_c c_i(t)\\right)\\right)",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Bộ ước lượng trạng thái làm trơn các quan sát mới bằng cách kết hợp chúng với ước lượng ở chu kỳ trước. Với đoạn tuyến i, trạng thái nhu cầu có thể mô tả khái quát bằng $\\\\hat{q}_i(t+\\\\Delta t)=\\\\rho\\\\hat{q}_i(t)+(1-\\\\rho)q_i(t)$; giá trị rho lớn tạo độ ổn định cao hơn nhưng phản ứng chậm hơn trước biến động đột ngột. Một phép ước lượng tương tự được áp dụng cho thời gian chờ, sau đó hai tín hiệu được kết hợp để hình thành chỉ báo nhu cầu tổng hợp, chẳng hạn $\\\\hat{d}_i(t)=\\\\alpha\\\\hat{q}_i(t)+\\\\beta\\\\hat{w}_i(t)$. Cách đặt trọng số cần phản ánh đặc điểm khai thác của tuyến và độ tin cậy của từng nguồn đo."
+      },
+      {
+        "type": "paragraph",
+        "text": "Việc làm trơn không nhằm che khuất biến động thực mà nhằm phân biệt xu thế với nhiễu đo ngắn hạn. Nếu cảm biến mật độ ghi nhận một đợt tăng tức thời do xe chuyển làn, bộ điều khiển không nên lập tức kéo dài ưu tiên ở mọi chu kỳ kế tiếp. Ngược lại, nếu thời gian chờ tăng đều trong nhiều lần cập nhật, trạng thái cần ghi nhận tín hiệu tích lũy đó dù mật độ xe chưa đạt ngưỡng cao. Các nghiên cứu về dữ liệu không đồng nhất và độ bền của bộ điều khiển khi thiếu quan sát gợi ý rằng cần duy trì ước lượng có thể cập nhật từng phần thay vì phụ thuộc vào một tín hiệu duy nhất \\\\cite{2} \\\\cite{10}. Dự báo ngắn hạn bổ sung hướng biến đổi để hệ thống có thể chuẩn bị cho nhu cầu đang tiến đến."
+      },
+      {
+        "type": "paragraph",
+        "text": "Bộ dự báo không cần tái tạo toàn bộ hành vi đi lại của thành phố; mục tiêu thực tiễn là ước lượng đủ tốt tải sắp tới trong khoảng thời gian mà quyết định ưu tiên còn có thể điều chỉnh. Có thể diễn giải sai số dự báo ở đoạn i là $e_i(t)=|d_i(t)-\\\\hat{d}_i(t)|$, rồi theo dõi sai số qua nhiều cửa sổ vận hành để phát hiện thiên lệch. Sai số có hệ thống theo giờ trong ngày có thể chỉ ra rằng trọng số hoặc lịch cập nhật chưa phù hợp, trong khi sai số ngẫu nhiên lớn có thể bắt nguồn từ mất gói dữ liệu hoặc biến động bất thường. Các phương pháp dự báo nhu cầu hành khách đô thị nhấn mạnh lợi ích của việc kết hợp xu thế gần nhất với nhịp đi lại lặp lại \\\\cite{3}."
+      },
+      {
+        "type": "table",
+        "id": "tab:adaptive-priority",
+        "caption": "Chu kỳ ưu tiên theo đoạn tuyến trong giờ biến động",
+        "header": [
+          [
+            "Đoạn",
+            "Nhu cầu",
+            "Chờ",
+            "Chu kỳ",
+            "Ưu tiên",
+            "Tải làn"
+          ]
+        ],
+        "rows": [
+          [
+            "A1",
+            "Cao",
+            "42 giây",
+            "78 giây",
+            "Mức 3",
+            "0,71"
+          ],
+          [
+            "A2",
+            "Vừa",
+            "31 giây",
+            "64 giây",
+            "Mức 2",
+            "0,66"
+          ],
+          [
+            "B1",
+            "Cao",
+            "48 giây",
+            "82 giây",
+            "Mức 3",
+            "0,76"
+          ],
+          [
+            "B2",
+            "Thấp",
+            "19 giây",
+            "52 giây",
+            "Mức 1",
+            "0,58"
+          ],
+          [
+            "C1",
+            "Vừa",
+            "35 giây",
+            "69 giây",
+            "Mức 2",
+            "0,63"
+          ]
+        ],
+        "note": "Các giá trị được tổng hợp theo cửa sổ quan sát 15 phút; tải làn tính trên tỷ lệ sử dụng của đoạn tuyến."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "2.2. Phân bổ chu kỳ ưu tiên có ràng buộc"
+      },
+      {
+        "type": "equation",
+        "id": "eq:state-estimation",
+        "latex": "\\begin{aligned}\n\\hat{q}_i(t+\\Delta t)&=\\rho\\hat{q}_i(t)+(1-\\rho)q_i(t),\\\\\n\\hat{w}_i(t+\\Delta t)&=\\rho\\hat{w}_i(t)+(1-\\rho)w_i(t),\\\\\n\\hat{d}_i(t+\\Delta t)&=\\alpha\\hat{q}_i(t+\\Delta t)+\\beta\\hat{w}_i(t+\\Delta t)\n\\end{aligned}",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Từ trạng thái và dự báo, bộ điều khiển điều chỉnh chu kỳ ưu tiên cho từng đoạn tuyến trong một khoảng cho phép. Dạng quyết định có thể viết gọn là $T_i^{pri}=\\\\min(T_{max},\\\\max(T_{min},T_i^0+\\\\lambda_q\\\\hat{q}_i(t)+\\\\lambda_w w_i(t)-\\\\lambda_c c_i(t)))$. Trong đó, nhu cầu và thời gian chờ làm tăng ưu tiên, còn mức cản trở đối với dòng xe chung có tác dụng hạn chế việc kéo dài chu kỳ. Giới hạn dưới và trên bảo vệ tính khả thi của vận hành: chu kỳ không bị rút ngắn đến mức xe buýt mất cơ hội phục vụ, cũng không tăng đến mức gây tắc nghẽn kéo dài cho các hướng khác. Cách phân bổ dựa trên mức cản trở phù hợp với yêu cầu điều khiển có xét đến điều kiện của từng đoạn \\\\cite{4} \\\\cite{8}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Các trọng số không nên được lựa chọn chỉ nhằm giảm trung bình thời gian hành trình. Nếu mức phạt cho cản trở dòng xe chung quá thấp, ưu tiên xe buýt có thể tạo ra hàng chờ bất lợi trên hướng giao cắt; nếu mức phạt quá cao, cơ chế thích ứng gần như trở lại một lịch cố định và bỏ qua nhu cầu thực. Việc cân bằng này cần xét cả tải làn và độ trễ, thay vì sử dụng một chỉ tiêu đơn lẻ. Nghiên cứu về cân bằng giữa ưu tiên phương tiện công cộng và năng lực dòng xe chung đề nghị đánh giá cả hai phía của nút giao \\\\cite{5}. Các công trình về tối ưu sử dụng làn cũng cho thấy hiệu quả phụ thuộc vào mức biến thiên lưu lượng và phân bố tải giữa các đoạn \\\\cite{9}."
+      },
+      {
+        "type": "chart",
+        "id": "fig:chart",
+        "caption": "Chu kỳ ưu tiên và thời gian chờ theo đoạn tuyến",
+        "chart_type": "bar",
+        "labels": [
+          "A1",
+          "A2",
+          "B1",
+          "B2",
+          "C1"
+        ],
+        "series": [
+          {
+            "name": "Chu kỳ ưu tiên (giây)",
+            "values": [
+              78,
+              64,
+              82,
+              52,
+              69
+            ]
+          },
+          {
+            "name": "Thời gian chờ (giây)",
+            "values": [
+              42,
+              31,
+              48,
+              19,
+              35
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Để hạn chế việc chu kỳ thay đổi liên tục, bộ điều khiển có thể áp dụng vùng ổn định: chỉ cập nhật mạnh khi chênh lệch giữa trạng thái hiện tại và ngưỡng quyết định vượt một mức định trước. Mức thay đổi giữa hai chu kỳ liên tiếp có thể được giám sát bằng $|T_i^{pri}(t+\\\\Delta t)-T_i^{pri}(t)|\\\\leq \\\\delta_T$. Ràng buộc này làm tín hiệu gửi tới nút giao dễ thực thi hơn và giảm nguy cơ dao động do dữ liệu nhiễu. Tuy vậy, vùng ổn định không được rộng đến mức bỏ qua một đợt tăng nhu cầu đáng kể. Do đó, ngưỡng điều chỉnh nên được kiểm tra theo nhiều trạng thái vận hành, gồm cả tình huống lưu lượng tăng đột ngột và tình huống quan sát bị thiếu trong một số chu kỳ."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "3. Thiết kế đánh giá và thước đo"
+      },
+      {
+        "type": "equation",
+        "id": "eq:lane-utilization",
+        "latex": "\\eta_{\\mathrm{lane}}(t)=\\frac{\\sum_{i=1}^{N}b_i(t)x_i(t)}{\\sum_{i=1}^{N}b_i(t)x_i(t)+\\sum_{i=1}^{N}c_i(t)x_i(t)}",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Đánh giá được tổ chức theo các cửa sổ quan sát liên tiếp, trong đó dữ liệu vị trí, mật độ và thời gian chờ được đồng bộ trước khi tính trạng thái. Mỗi cửa sổ cung cấp một cơ hội cập nhật, nhưng quyết định mới chỉ được chấp nhận nếu còn phù hợp với ràng buộc vận hành tại nút giao. Cách tiếp cận này phân biệt rõ ba khâu: quan sát, ước lượng và hành động; nhờ đó có thể truy nguyên nguyên nhân khi chỉ tiêu đầu ra xấu đi. Việc khai thác cảm biến hiện trường để theo dõi tải làn và độ trễ cần đi kèm kiểm tra chất lượng đo, bao gồm tính liên tục, độ trễ truyền và mức sai khác giữa các thiết bị \\\\cite{11}. Mốc thời gian của các thiết bị được quy đổi về đồng hồ điều phối trước mỗi lần cập nhật.\\\\fn{Dữ liệu đến muộn được ghi nhận riêng để kiểm tra trước khi đưa vào ước lượng trạng thái.}"
+      },
+      {
+        "type": "table",
+        "id": "tab:performance-comparison",
+        "caption": "So sánh kết quả điều phối trên mạng lưới xe buýt",
+        "header": [
+          [
+            "Kịch bản",
+            "Hành trình",
+            "Chờ điểm",
+            "Biến thiên",
+            "Tải làn",
+            "Trễ xe"
+          ]
+        ],
+        "rows": [
+          [
+            "Cố định",
+            "26,4 phút",
+            "5,8 phút",
+            "7,1 phút",
+            "0,69",
+            "4,6 phút"
+          ],
+          [
+            "Thích ứng",
+            "23,7 phút",
+            "3,9 phút",
+            "4,2 phút",
+            "0,67",
+            "2,8 phút"
+          ],
+          [
+            "Nhu cầu thấp",
+            "21,1 phút",
+            "2,6 phút",
+            "3,5 phút",
+            "0,54",
+            "1,9 phút"
+          ],
+          [
+            "Nhu cầu cao",
+            "28,9 phút",
+            "4,7 phút",
+            "5,1 phút",
+            "0,78",
+            "3,4 phút"
+          ]
+        ],
+        "note": "Số liệu là trung vị của các lượt quan sát; biến thiên biểu thị độ phân tán thời gian hành trình."
+      },
+      {
+        "type": "paragraph",
+        "text": "Các chỉ tiêu đầu ra gồm thời gian hành trình, thời gian chờ tại điểm dừng, độ phân tán thời gian hành trình, tải làn và độ trễ xe buýt. Trung vị được dùng cho các đại lượng thời gian để tránh một số lượt vận hành bất thường chi phối toàn bộ kết quả; độ phân tán được giữ riêng vì hành khách quan tâm đến tính dự đoán được chứ không chỉ thời gian trung bình. Tải làn được hiểu là tỷ lệ sử dụng tương đối giữa phần phục vụ xe buýt và phần dành cho dòng xe chung, có thể khái quát bằng $\\\\eta_{lane}(t)=B(t)/(B(t)+C(t))$. Chỉ tiêu này cần được đọc cùng với độ trễ, bởi cùng một mức tải có thể đi kèm chất lượng phục vụ khác nhau tùy cấu trúc nhu cầu."
+      },
+      {
+        "type": "paragraph",
+        "text": "Kịch bản cố định cung cấp mốc đối chiếu với một lịch ưu tiên không cập nhật theo trạng thái; kịch bản thích ứng cho phép bộ điều khiển phản ứng với dữ liệu và dự báo. Hai trạng thái nhu cầu thấp và cao được xem xét riêng để nhận diện liệu lợi ích có phụ thuộc vào mức tải hay không. So sánh theo cùng các chỉ tiêu giúp tránh kết luận vội từ một biến duy nhất, chẳng hạn giảm thời gian chờ nhưng tăng mạnh độ phân tán hành trình. Thiết kế này cũng cho phép kiểm tra xem cải thiện có đồng thời xuất hiện trên nhiều đoạn tuyến hay chỉ tập trung ở những nơi được cấp chu kỳ dài hơn. Kết quả cần được diễn giải trong giới hạn của cửa sổ quan sát, không suy rộng máy móc sang mọi mạng lưới."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "4. Kết quả và diễn giải"
+      },
+      {
+        "type": "figure",
+        "id": "fig:diagram",
+        "figure_type": "block_diagram",
+        "caption": "Sơ đồ khối của phương pháp điều phối thích ứng",
+        "description": "Dữ liệu vị trí, mật độ phương tiện và thời gian chờ được đồng bộ trước khi đưa vào bộ ước lượng trạng thái. Trạng thái ước lượng chuyển sang bộ dự báo nhu cầu ngắn hạn, sau đó bộ điều khiển ưu tiên tính chu kỳ cho từng đoạn tuyến. Tín hiệu điều phối được gửi tới nút giao và kết quả vận hành được đưa trở lại vòng giám sát để cập nhật lần kế tiếp.",
+        "labels": [
+          "Dữ liệu hiện trường",
+          "Ước lượng trạng thái",
+          "Dự báo nhu cầu",
+          "Điều khiển ưu tiên",
+          "Giám sát làn"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Ở các đoạn tuyến có nhu cầu cao, chu kỳ ưu tiên dài hơn đi cùng thời gian chờ lớn hơn, cho thấy cơ chế phản ứng với áp lực phục vụ thay vì phân bổ đồng đều. Các đoạn có nhu cầu vừa hoặc thấp nhận chu kỳ ngắn hơn, nhờ đó thời gian dành cho hướng xe buýt không vượt quá mức cần thiết. Quan hệ này không có nghĩa thời gian chờ quyết định duy nhất chu kỳ; mức cản trở và tải làn vẫn đóng vai trò giới hạn. Khi đọc phân bố từng đoạn cùng với chỉ tiêu toàn mạng, có thể nhận biết liệu ưu tiên có được đặt đúng nơi cần thiết hay chỉ dịch chuyển chậm trễ từ đoạn này sang đoạn khác."
+      },
+      {
+        "type": "paragraph",
+        "text": "So với điều phối cố định, kịch bản thích ứng cho thấy thời gian hành trình trung vị giảm từ 26,4 xuống 23,7 phút, thời gian chờ tại điểm dừng giảm từ 5,8 xuống 3,9 phút, còn độ phân tán hành trình giảm từ 7,1 xuống 4,2 phút. Độ trễ xe buýt cũng giảm từ 4,6 xuống 2,8 phút. Tải làn thay đổi nhẹ từ 0,69 xuống 0,67, cho thấy cải thiện không đi kèm việc mở rộng tỷ lệ sử dụng dành cho xe buýt trên toàn mạng. Đây là điểm đáng chú ý: bộ điều khiển có thể cải thiện tính ổn định bằng phân bổ có mục tiêu, thay vì luôn tăng phần thời gian dành cho ưu tiên."
+      },
+      {
+        "type": "paragraph",
+        "text": "Khi nhu cầu thấp, thời gian hành trình và chờ giảm hơn nữa, trong khi tải làn ở mức thấp hơn; khi nhu cầu cao, hành trình dài hơn và tải làn tăng, nhưng thời gian chờ vẫn được kiểm soát ở mức thấp hơn mốc cố định. Mẫu kết quả này cho thấy hệ thống thích ứng không loại bỏ tác động của ùn tắc, mà giảm phần bất định có thể xử lý bằng phân bổ chu kỳ tốt hơn. Kết quả phù hợp với lập luận rằng mục tiêu ổn định hành trình cần được tách khỏi mục tiêu rút ngắn hành trình tuyệt đối \\\\cite{7}. Cũng cần lưu ý rằng trung vị che khuất một phần các lượt cực đoan; vận hành thực tế nên theo dõi thêm các phân vị cao để phát hiện rủi ro đối với nhóm chuyến chịu trễ lớn."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "5. Điều kiện triển khai trong đô thị"
+      },
+      {
+        "type": "paragraph",
+        "text": "Triển khai đòi hỏi quy ước dữ liệu chung cho đồng hồ thiết bị, vị trí nút giao, nhận dạng đoạn tuyến và trạng thái điểm dừng. Nếu một nguồn gửi dữ liệu chậm hơn các nguồn khác, bộ ước lượng có thể ghép quan sát thuộc hai thời điểm khác nhau rồi tạo ra trạng thái không tồn tại trong thực tế. Vì vậy, hệ thống cần gắn dấu thời gian, ghi nhận độ trễ truyền và có cơ chế đánh dấu dữ liệu không hợp lệ trước khi cập nhật. Kinh nghiệm triển khai trong môi trường có nhiều nguồn dữ liệu nhấn mạnh rằng khả năng tích hợp và quy trình vận hành quan trọng ngang với độ chính xác của thuật toán \\\\cite{12}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Khi dữ liệu bị thiếu, bộ điều khiển nên chuyển sang chế độ suy giảm có kiểm soát: giữ ước lượng gần nhất trong thời hạn giới hạn, giảm mức điều chỉnh và quay về chu kỳ an toàn nếu trạng thái không thể xác nhận. Quy tắc này giúp tránh hai thái cực, gồm dừng toàn bộ ưu tiên khi một cảm biến gặp lỗi hoặc tiếp tục hành động mạnh trên cơ sở thông tin đã lỗi thời. Nhân viên vận hành cần được cung cấp dấu hiệu dễ hiểu về nguồn dữ liệu thiếu, mức tin cậy và lý do thay đổi chu kỳ. Độ bền của điều khiển không chỉ là khả năng vẫn tạo ra tín hiệu, mà còn là khả năng giới hạn hậu quả khi tín hiệu không còn đáng tin."
+      },
+      {
+        "type": "paragraph",
+        "text": "Một lộ trình thận trọng nên bắt đầu bằng giám sát thụ động, tiếp tục bằng khuyến nghị chu kỳ cho người vận hành, rồi mới chuyển sang điều khiển tự động trong phạm vi nút giao đã được kiểm tra. Ở mỗi giai đoạn cần lưu lại trạng thái đầu vào, quyết định và kết quả để có thể phân tích sai lệch sau vận hành. Việc mở rộng từ một số đoạn sang toàn mạng nên dựa trên bằng chứng rằng lợi ích vẫn tồn tại khi các tuyến tương tác với nhau. Cách triển khai theo bước cũng tạo cơ hội điều chỉnh ngưỡng ưu tiên, giới hạn chu kỳ và quy trình xử lý sự cố mà không làm gián đoạn dịch vụ thường nhật."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "6. Kết luận"
+      },
+      {
+        "type": "paragraph",
+        "text": "Nghiên cứu trình bày một phương pháp điều phối làn thích ứng kết hợp ước lượng trạng thái, dự báo nhu cầu và điều khiển ưu tiên có ràng buộc. Kết quả cho thấy việc cập nhật chu kỳ theo điều kiện từng đoạn có thể đồng thời giảm thời gian chờ, thời gian hành trình và độ phân tán so với lịch cố định, trong khi tải làn toàn mạng không tăng. Lợi ích đến từ việc phân bổ đúng thời điểm và đúng nơi, chứ không phải từ ưu tiên tối đa cho mọi xe buýt. Cách tiếp cận này đặc biệt hữu ích khi nhu cầu thay đổi theo thời gian nhưng vẫn cần duy trì năng lực phục vụ các hướng giao thông khác."
+      },
+      {
+        "type": "paragraph",
+        "text": "Kết luận cần được giới hạn bởi chất lượng dữ liệu, cấu trúc tuyến và phạm vi quan sát. Các bước tiếp theo nên kiểm tra độ nhạy của trọng số, đánh giá trường hợp mất dữ liệu kéo dài và xem xét tương tác giữa nhiều nút giao trong cùng hành lang. Cần bổ sung phân tích theo nhóm chuyến và phân vị thời gian cao để xác định ai được hưởng lợi, ai còn chịu chậm trễ, và liệu cải thiện có ổn định qua các khung nhu cầu khác nhau hay không. Sau cùng, một hệ thống có thể triển khai bền vững phải kết hợp hiệu quả định lượng với khả năng giải thích quyết định, giám sát an toàn và quy trình can thiệp của người vận hành."
+      }
+    ]
+  },
+  "hash": "d9b7ee941300369aaa53f0bed9f0535db49e9f24f5abce69b9ec51f0a5389272"
+}

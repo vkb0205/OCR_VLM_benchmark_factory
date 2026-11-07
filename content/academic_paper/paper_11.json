@@ -1,0 +1,534 @@
+{
+  "content_id": "paper_11",
+  "variables": {
+    "lang": "vi",
+    "field": "soil mechanics",
+    "paper_length": "medium",
+    "citation_style": "author_year"
+  },
+  "lang": "vi",
+  "values": {
+    "title": "Đánh giá biến dạng lún của nền đất sét cố kết dưới tải trọng chu kỳ bằng mô hình đàn nhớt",
+    "authors": [
+      {
+        "name": "Đỗ Vân Khuê",
+        "affiliations": [
+          1
+        ],
+        "corresponding": false
+      },
+      {
+        "name": "Phan Tố Nghiêm",
+        "affiliations": [
+          1,
+          2
+        ],
+        "corresponding": true,
+        "email": "to.nghiem@nenhluu-geo.vn"
+      },
+      {
+        "name": "Lê Khánh Duyệt",
+        "affiliations": [
+          2
+        ],
+        "corresponding": false
+      }
+    ],
+    "affiliations": [
+      "Bộ môn Cơ học Đất, Viện Kỹ thuật Nền Hạ Lưu",
+      "Phòng Thí nghiệm Địa kỹ thuật, Trường Đại học Kết cấu Đông Lam"
+    ],
+    "abstract": "Bài báo trình bày phương pháp đánh giá biến dạng lún của nền đất sét cố kết chịu tải trọng chu kỳ thông qua mô hình đàn nhớt có xét đến sự thay đổi áp lực nước lỗ rỗng. Chương trình thí nghiệm nén ba trục được thực hiện với các mức ứng suất lệch và tần số gia tải khác nhau, đồng thời theo dõi biến thiên biến dạng trục, áp lực nước lỗ rỗng và độ cứng chu kỳ của đất. Kết quả cho thấy biến dạng tích lũy tăng nhanh trong các chu kỳ đầu, sau đó giảm dần khi cấu trúc đất đạt trạng thái ổn định tương đối. Mô hình đề xuất mô tả tốt xu hướng suy giảm độ cứng và sự gia tăng biến dạng dư, đặc biệt trong vùng ứng suất gần giới hạn cố kết. Phân tích độ nhạy chỉ ra rằng hệ số nhớt và tham số tiêu tán áp lực nước lỗ rỗng có ảnh hưởng chi phối đến dự báo lún lâu dài. Kết quả nghiên cứu cung cấp cơ sở cho việc lựa chọn tham số tính toán nền đường, bệ máy và công trình chịu rung động trên đất sét yếu.",
+    "abstract_alt": null,
+    "keywords": "cơ học đất; đất sét cố kết; tải trọng chu kỳ; biến dạng lún; mô hình đàn nhớt; áp lực nước lỗ rỗng",
+    "keywords_alt": null,
+    "journal": "Tạp chí Cơ học Đất và Công trình Nền",
+    "acknowledgement": "Nhóm tác giả trân trọng cảm ơn Phòng Thí nghiệm Địa kỹ thuật thuộc Trường Đại học Kết cấu Đông Lam đã hỗ trợ thiết bị thí nghiệm và các trao đổi chuyên môn trong quá trình nghiên cứu.",
+    "references": [
+      {
+        "text": "Khuất, L. N., và Phạm, U. T. (2023). Mô hình đàn nhớt cho dự báo lún tích lũy của đất sét cố kết dưới tải trọng chu kỳ. Tạp chí Cơ học Nền Hạ Lưu, 18(2), 41–58.",
+        "cite": "(Khuất & Phạm, 2023)"
+      },
+      {
+        "text": "Đinh, M. T., và Lê, T. Q. (2021). Ảnh hưởng của áp lực cố kết đến biến dạng dư trong thí nghiệm nén ba trục chu kỳ. Tạp chí Đất và Tải trọng Chu kỳ, 7(3), 15–29.",
+        "cite": "(Đinh & Lê, 2021)"
+      },
+      {
+        "text": "Vương, K. D., Cao, N. T., và Bạch, T. K. (2024). Quan hệ giữa biên độ ứng suất lệch và áp lực nước lỗ rỗng của đất sét bão hòa. Kỷ yếu Nghiên cứu Nền Đất Đông Lam, 11, 67–82.",
+        "cite": "(Vương et al., 2024)"
+      },
+      {
+        "text": "Hà, D. M., và Nghiêm, P. L. (2020). Đặc trưng tiêu tán áp lực nước lỗ rỗng trong đất sét chịu tải lặp. Tạp chí Địa kỹ thuật Ứng dụng, 9(1), 23–38.",
+        "cite": "(Hà & Nghiêm, 2020)"
+      },
+      {
+        "text": "Trần, U. N., và Lâm, Q. N. (2022). Hiệu chỉnh tham số độ cứng chu kỳ từ kết quả nén ba trục không thoát nước. Tạp chí Phân tích Nền Móng, 14(4), 91–106.",
+        "cite": "(Trần & Lâm, 2022)"
+      },
+      {
+        "text": "Đỗ, H. S., Mạc, T. V., và Tạ, H. K. (2025). Dự báo lún lâu dài của nền đất yếu bằng hàm biến dạng tiến tới giới hạn. Tạp chí Mô phỏng Cơ học Đất, 6(2), 34–51.",
+        "cite": "(Đỗ et al., 2025)"
+      },
+      {
+        "text": "Nguyễn, T. L., và Võ, K. N. (2019). Ảnh hưởng của tần số gia tải đến độ cứng động của đất sét cố kết. Tạp chí Nền Công trình Chịu Rung, 5(2), 52–66.",
+        "cite": "(Nguyễn & Võ, 2019)"
+      },
+      {
+        "text": "Phan, L. M., và Bùi, D. K. (2023). Mối liên hệ giữa biến dạng thể tích và độ lún tích lũy trong nền đất sét bão hòa. Tạp chí Cơ học Địa môi trường, 12(3), 74–89.",
+        "cite": "(Phan & Bùi, 2023)"
+      },
+      {
+        "text": "Chu, K. L., Lý, A. H., và Tăng, L. Q. (2021). Phân tích độ nhạy của tham số nhớt trong mô hình nền đất chịu tải tuần hoàn. Kỷ yếu Cơ học Nền và Công trình, 8, 103–118.",
+        "cite": "(Chu et al., 2021)"
+      },
+      {
+        "text": "Đỗ, T. V., và Hồ, N. K. (2024). Suy giảm mô đun biến dạng của đất sét dưới tác động kết hợp giữa tải trọng và tiêu tán chậm. Tạp chí Thực hành Địa kỹ thuật, 16(1), 9–25.",
+        "cite": "(Đỗ & Hồ, 2024)"
+      },
+      {
+        "text": "Dương, K. M., và Nghiêm, L. P. (2022). Mô tả ứng suất hữu hiệu trong phân tích lún nền chịu tải chu kỳ. Tạp chí Ứng xử Đất và Nước, 10(4), 46–61.",
+        "cite": "(Dương & Nghiêm, 2022)"
+      },
+      {
+        "text": "Lâm, V. T., Phạm, K. N., và Khuất, M. D. (2025). Đánh giá khả năng phục vụ của nền đất sét yếu dưới tải trọng rung động nhiều giai đoạn. Tạp chí Kỹ thuật Nền Đất Chuyên sâu, 4(1), 27–44.",
+        "cite": "(Lâm et al., 2025)"
+      }
+    ],
+    "body": [
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "1. Phạm vi và mục tiêu nghiên cứu"
+      },
+      {
+        "type": "paragraph",
+        "text": "Nền đất sét cố kết dưới tải trọng chu kỳ có thể phát sinh lún tích lũy dù biên độ ứng suất chưa đạt điều kiện phá hoại tức thời. Để đặt kết quả trong cùng một hệ quy chiếu, các điều kiện ban đầu được đối chiếu với \\ref{tab:dieukien-thi-nghiem}, đáp ứng lún cuối giai đoạn được đối chiếu với \\ref{tab:ketqua-lun}, xu hướng giữa các tổ hợp được kiểm tra qua \\ref{fig:chart}, còn trình tự xử lý được liên hệ với \\ref{fig:diagram}. Việc tham chiếu sớm này cho phép phân biệt rõ ba lớp thông tin: trạng thái đất trước gia tải, diễn biến cơ học trong chu kỳ và kết quả chuyển đổi sang lún công trình. Cách tiếp cận cũng phù hợp với hướng mô hình hóa biến dạng tiến tới giới hạn được đề xuất trong nghiên cứu về nền đất sét chịu tải lặp \\cite{1}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Trong công trình nền đường, bệ máy và kết cấu chịu rung động, chuyển vị dư không chỉ phụ thuộc vào giá trị lớn nhất của ứng suất mà còn phụ thuộc vào số lần tác dụng, tốc độ gia tải và khả năng tiêu tán áp lực nước lỗ rỗng. Một chuỗi tải có biên độ vừa phải nhưng kéo dài có thể gây hậu quả lớn hơn một đợt tải ngắn có biên độ cao, bởi khung hạt liên tục điều chỉnh vị trí và mất dần khả năng phục hồi. Khi áp lực nước lỗ rỗng tăng, ứng suất truyền qua tiếp xúc hạt giảm; vì vậy độ cứng chu kỳ và khả năng chống biến dạng của nền cũng suy giảm. Ảnh hưởng của áp lực cố kết đến biến dạng dư đã được ghi nhận trong các phép nén ba trục chu kỳ \\cite{2}, trong khi mối liên hệ giữa biên độ ứng suất lệch và áp lực dư được phân tích cho đất sét bão hòa \\cite{3}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Mục tiêu của nghiên cứu là xây dựng một quy trình đàn nhớt có thể mô tả đồng thời biến dạng trục, áp lực nước lỗ rỗng và sự suy giảm độ cứng theo số chu kỳ. Hai nhánh trạng thái được sử dụng: nhánh thứ nhất mô tả phần biến dạng tiến tới giới hạn, nhánh thứ hai mô tả áp lực dư hình thành khi thời gian tiêu tán giữa các lần gia tải không đủ dài. Trên cơ sở đó, nghiên cứu xác định ảnh hưởng riêng và ảnh hưởng kết hợp của áp lực cố kết, biên độ lệch và tần số gia tải; hiệu chỉnh các tham số từ sáu tổ hợp thí nghiệm; rồi chuyển biến dạng thể tích thành lún tích lũy phục vụ kiểm tra khả năng làm việc."
+      },
+      {
+        "type": "paragraph",
+        "text": "Một điểm quan trọng của quy trình là không xem trạng thái cuối như đại diện duy nhất cho toàn bộ lịch sử chịu tải. Với cùng một giá trị lún cuối, hai nền có thể có độ dốc biến dạng ban đầu, áp lực dư và mức suy giảm độ cứng rất khác nhau. Vì thế, đại lượng $N$ được giữ như một biến độc lập trong suốt quá trình phân tích. Biến dạng tích lũy được xem là hàm của $N$, biên độ ứng suất và trạng thái cố kết, còn áp lực dư được xem là hàm của $N$, tần số và điều kiện thoát nước. Cấu trúc này giúp mô hình phản ánh cả quá trình tiến triển nhanh ở các chu kỳ đầu lẫn vùng ổn định tương đối về sau."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "2. Cơ sở cơ học và dạng mô hình đàn nhớt"
+      },
+      {
+        "type": "equation",
+        "id": "eq:effective-stress",
+        "latex": "\\sigma_{v}^{eff} = \\sigma_v - u",
+        "numbered": true
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "2.1. Ứng suất hữu hiệu và cơ chế biến dạng"
+      },
+      {
+        "type": "paragraph",
+        "text": "Đối với đất sét bão hòa, ứng suất tổng không truyền nguyên vẹn qua khung hạt. Phần áp lực do nước lỗ rỗng chiếm giữ làm giảm ứng suất có hiệu lực lên các tiếp xúc hạt, từ đó tác động đến độ cứng, sức chống cắt và tốc độ cố kết. Trong phân tích một chiều theo phương đứng, quan hệ cơ bản được tham chiếu bằng \\ref{eq:effective-stress}, có thể viết dưới dạng $\\sigma_v^{eff} = \\sigma_v - u$. Ký hiệu $\\sigma_v$ là ứng suất tổng, $u$ là áp lực nước lỗ rỗng và $\\sigma_v^{eff}$ là ứng suất hữu hiệu. Khi $u$ tăng do tải chu kỳ, cùng một mức ứng suất tổng sẽ tương ứng với trạng thái khung hạt mềm hơn."
+      },
+      {
+        "type": "paragraph",
+        "text": "Cơ chế này không chỉ là phép trừ đại số giữa hai đại lượng. Trong đất sét có độ bão hòa cao, sự thay đổi áp lực nước lỗ rỗng làm thay đổi lực tiếp xúc, hướng trượt cục bộ và khả năng tái sắp xếp của các cụm hạt. Nếu thời gian giữa hai đỉnh tải ngắn hơn thời gian tiêu tán đặc trưng, áp lực dư sẽ được cộng dồn qua nhiều chu kỳ. Ngược lại, khi tần số thấp hoặc đường thoát nước thuận lợi, một phần áp lực dư có thể giảm trước khi chu kỳ kế tiếp bắt đầu. Đặc trưng tiêu tán chậm dưới tải lặp được xem là yếu tố quyết định trong việc giải thích sự khác biệt giữa đáp ứng tức thời và đáp ứng dài hạn \\cite{4}."
+      },
+      {
+        "type": "table",
+        "id": "tab:dieukien-thi-nghiem",
+        "caption": "Điều kiện thí nghiệm nén ba trục chu kỳ",
+        "header": [
+          [
+            "Mã thí nghiệm",
+            "Áp lực cố kết (kPa)",
+            "Biên độ lệch (kPa)",
+            "Tần số (Hz)",
+            "Độ ẩm (%)",
+            "Hệ số rỗng",
+            "Độ bão hòa (%)"
+          ]
+        ],
+        "rows": [
+          [
+            "T01",
+            "80",
+            "18",
+            "0,20",
+            "47,6",
+            "1,24",
+            "96"
+          ],
+          [
+            "T02",
+            "120",
+            "18",
+            "0,20",
+            "45,9",
+            "1,18",
+            "97"
+          ],
+          [
+            "T03",
+            "160",
+            "18",
+            "0,20",
+            "44,1",
+            "1,12",
+            "98"
+          ],
+          [
+            "T04",
+            "120",
+            "12",
+            "0,50",
+            "45,5",
+            "1,17",
+            "97"
+          ],
+          [
+            "T05",
+            "120",
+            "24",
+            "0,50",
+            "46,2",
+            "1,21",
+            "96"
+          ],
+          [
+            "T06",
+            "160",
+            "24",
+            "1,00",
+            "43,8",
+            "1,10",
+            "98"
+          ]
+        ],
+        "note": "Các trị số độ ẩm và hệ số rỗng được xác định trước khi gia tải chu kỳ; mẫu đất được bão hòa đến trạng thái ổn định."
+      },
+      {
+        "type": "paragraph",
+        "text": "Trong mô hình, biến dạng trục gồm phần tức thời và phần phát triển theo lịch sử gia tải. Phần tức thời liên quan đến độ cứng ở trạng thái hiện hành, còn phần tiến triển phản ánh sự điều chỉnh cấu trúc và biến dạng nhớt của khung hạt. Có thể biểu diễn độ cứng chu kỳ bằng $K_c = \\Delta q / \\Delta \\epsilon_a$, trong đó $\\Delta q$ là biên độ ứng suất lệch và $\\Delta \\epsilon_a$ là biên độ biến dạng trục tương ứng. Khi áp lực dư tăng, $K_c$ thường giảm; tuy nhiên mức giảm còn chịu chi phối bởi áp lực cố kết ban đầu, độ rỗng và lịch sử nén trước đó. Cách hiệu chỉnh độ cứng từ thí nghiệm không thoát nước đã được thảo luận trong một nghiên cứu chuyên về nén ba trục chu kỳ \\cite{5}."
+      },
+      {
+        "type": "equation",
+        "id": "eq:cyclic-viscoelastic",
+        "latex": "\\begin{aligned}\n\\epsilon_a(N) &= \\epsilon_{a,0} + \\epsilon_{a,\\infty}(1-\\exp(-N/\\lambda)) \\\\\nu(N) &= u_0 + \\Delta u_{\\infty}(1-\\exp(-N/\\eta))\n\\end{aligned}",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Mô hình đàn nhớt được chọn vì có khả năng mô tả độ trễ giữa tải và biến dạng mà không cần giả định rằng toàn bộ chuyển vị là không phục hồi. Trong mỗi chu kỳ, một phần biến dạng trở lại khi ứng suất giảm, còn phần còn lại duy trì do sự dịch chuyển không hoàn toàn của khung hạt. Tỷ lệ giữa hai phần thay đổi theo số chu kỳ và theo áp lực nước lỗ rỗng. Nếu chỉ sử dụng mô hình đàn hồi, đường cong biến dạng sẽ khép kín quá nhanh và không thể hiện lún dư. Nếu chỉ sử dụng quan hệ dẻo đơn giản, sự suy giảm dần của tốc độ biến dạng và ảnh hưởng của tần số sẽ bị giản lược quá mức."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "2.2. Hàm tiến tới giới hạn và các tham số điều khiển"
+      },
+      {
+        "type": "chart",
+        "id": "fig:chart",
+        "caption": "Lún tích lũy ở cuối giai đoạn gia tải chu kỳ",
+        "chart_type": "bar",
+        "labels": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06"
+        ],
+        "series": [
+          {
+            "name": "Lún tích lũy (mm)",
+            "values": [
+              1.82,
+              2.16,
+              2.63,
+              1.74,
+              2.48,
+              3.05
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Biến dạng trục và áp lực nước lỗ rỗng được mô tả bằng các hàm tiến tới giới hạn. Dạng hàm được tham chiếu bằng \\ref{eq:cyclic-viscoelastic}; về mặt diễn giải, biến dạng có thể viết là $\\epsilon_a(N) = \\epsilon_{a,0} + \\epsilon_{a,\\infty}(1-\\exp(-N/\\lambda))$. Trong đó $\\epsilon_{a,0}$ là phần biến dạng ban đầu, $\\epsilon_{a,\\infty}$ là phần tăng thêm ở trạng thái giới hạn và $\\lambda$ là tham số điều khiển tốc độ phát triển. Khi $\\lambda$ nhỏ, biến dạng đạt phần lớn giá trị giới hạn trong ít chu kỳ; khi $\\lambda$ lớn, quá trình diễn ra chậm hơn và lún tiếp tục tăng trong khoảng lịch sử dài hơn."
+      },
+      {
+        "type": "paragraph",
+        "text": "Nhánh áp lực nước lỗ rỗng được viết dưới dạng $u(N) = u_0 + \\Delta u_{\\infty}(1-\\exp(-N/\\eta))$. Ở đây $u_0$ là áp lực ban đầu, $\\Delta u_{\\infty}$ là mức tăng dư tiến tới giới hạn và $\\eta$ là tham số phản ánh quá trình tiêu tán tương đối. Giá trị $\\eta$ không phải là thời gian tiêu tán thuần túy, bởi biến độc lập của mô hình là số chu kỳ chứ không phải thời gian liên tục. Tuy vậy, khi tần số được giữ cố định, $\\eta$ có thể liên hệ với thời gian đặc trưng thông qua $t = N/f$\\fn{Quy đổi này giả định tần số không đổi trong khoảng xét; khi tải biến thiên theo thời gian, cần tính thời gian thực từ lịch sử gia tải.}. Cách diễn đạt này cho phép so sánh các thí nghiệm có tần số khác nhau mà vẫn giữ được ý nghĩa cơ học của tham số."
+      },
+      {
+        "type": "equation",
+        "id": "eq:cumulative-settlement",
+        "latex": "S(N) = H \\int_0^N \\epsilon_v(n)dn",
+        "numbered": true
+      },
+      {
+        "type": "paragraph",
+        "text": "Từ hai nhánh trên, độ cứng chu kỳ được cập nhật theo ứng suất hữu hiệu và mức biến dạng đã tích lũy. Một dạng chuẩn hóa có thể dùng là $K_c(N) / K_{c,0} = 1 - \\alpha \\Delta u(N)/\\sigma_v$, trong đó $K_{c,0}$ là độ cứng ban đầu và $\\alpha$ là hệ số nhạy cảm với áp lực dư. Quan hệ này chỉ được sử dụng trong miền khảo sát, nơi mẫu vẫn duy trì tính liên tục và chưa xuất hiện phá hoại cục bộ. Khi $\\Delta u$ tiến gần ứng suất tổng, cần kiểm tra điều kiện $\\sigma_v^{eff} \\geq 0$ để tránh diễn giải vật lý không phù hợp. Mô tả ứng suất hữu hiệu trong phân tích lún chu kỳ cũng nhấn mạnh điều kiện giới hạn này \\cite{11}."
+      },
+      {
+        "type": "table",
+        "id": "tab:ketqua-lun",
+        "caption": "Biến dạng lún và đáp ứng áp lực nước lỗ rỗng ở cuối giai đoạn gia tải",
+        "header": [
+          [
+            "Mã thí nghiệm",
+            "Số chu kỳ",
+            "Lún tích lũy (mm)",
+            "Áp lực dư (kPa)",
+            "Độ cứng chu kỳ (kPa)"
+          ]
+        ],
+        "rows": [
+          [
+            "T01",
+            "100",
+            "1,82",
+            "12,4",
+            "410"
+          ],
+          [
+            "T02",
+            "100",
+            "2,16",
+            "15,1",
+            "386"
+          ],
+          [
+            "T03",
+            "100",
+            "2,63",
+            "18,7",
+            "352"
+          ],
+          [
+            "T04",
+            "100",
+            "1,74",
+            "11,8",
+            "428"
+          ],
+          [
+            "T05",
+            "100",
+            "2,48",
+            "17,2",
+            "365"
+          ],
+          [
+            "T06",
+            "100",
+            "3,05",
+            "21,6",
+            "331"
+          ]
+        ],
+        "note": "Lún tích lũy được quy đổi theo chiều cao lớp đất ban đầu; áp lực dư và độ cứng chu kỳ là giá trị trung bình ở chu kỳ cuối."
+      },
+      {
+        "type": "paragraph",
+        "text": "Các tham số được xác định theo trình tự phân cấp. Trước hết, phần biến dạng ở chu kỳ đầu được dùng để ước lượng độ cứng ban đầu và $\\epsilon_{a,0}$. Tiếp theo, độ dốc giảm dần của đường biến dạng dùng để xác định $\\lambda$, còn đường áp lực dư dùng để xác định $\\eta$ và $\\Delta u_{\\infty}$. Sau đó, toàn bộ chuỗi số liệu được tối ưu đồng thời nhằm tránh tình trạng một nhánh được khớp tốt nhưng nhánh còn lại bị lệch đáng kể. Phân tích độ nhạy của tham số nhớt cho thấy $\\lambda$ thường chi phối độ dốc ở giai đoạn đầu, trong khi tham số gắn với tiêu tán quyết định sai khác ở giai đoạn dài hơn \\cite{9}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Hàm mũ được lựa chọn vì bảo đảm biến dạng tăng nhanh lúc đầu rồi giảm tốc độ mà không tạo ra giá trị vô hạn. Tuy nhiên, dạng hàm này không hàm ý rằng mọi loại đất đều có cùng cơ chế vi mô. Đối với đất có cấu trúc phân lớp, tính thấm dị hướng hoặc lịch sử tải phức tạp, có thể cần nhiều nhánh thời gian, chẳng hạn một nhánh nhanh cho tái sắp xếp hạt và một nhánh chậm cho tiêu tán nước. Trong phạm vi hiện tại, một nhánh cho mỗi quá trình là đủ để kiểm tra xu hướng chủ đạo và giữ cho số tham số không vượt quá khả năng nhận dạng từ chương trình thí nghiệm."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "3. Thiết kế thí nghiệm và quy trình xử lý"
+      },
+      {
+        "type": "figure",
+        "id": "fig:diagram",
+        "figure_type": "block_diagram",
+        "caption": "Quy trình đánh giá lún nền đất sét dưới tải trọng chu kỳ",
+        "description": "Sơ đồ gồm các khối liên tiếp: xác định trạng thái đất và điều kiện cố kết, thực hiện gia tải chu kỳ, ghi nhận biến dạng cùng áp lực nước lỗ rỗng, hiệu chỉnh tham số đàn nhớt, sau đó tính lún tích lũy và đánh giá đáp ứng nền.",
+        "labels": [
+          "Trạng thái đất",
+          "Gia tải chu kỳ",
+          "Đo đáp ứng",
+          "Hiệu chỉnh tham số",
+          "Đánh giá lún"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "3.1. Chuẩn bị trạng thái ban đầu"
+      },
+      {
+        "type": "paragraph",
+        "text": "Đất sét được chuẩn bị với độ bão hòa cao, sau đó đưa vào buồng ba trục và cố kết dưới áp lực quy định. Trước khi gia tải chu kỳ, chiều cao, đường kính, độ ẩm, hệ số rỗng và áp lực nước lỗ rỗng ban đầu được kiểm tra. Mục đích của bước này là giảm sai khác do trạng thái xuất phát, bởi chỉ một thay đổi nhỏ về độ rỗng cũng có thể làm biến đổi đáng kể độ cứng và khả năng tiêu tán. Việc giữ quy trình bão hòa đến trạng thái ổn định giúp tín hiệu áp lực dư phản ánh chủ yếu tác động của tải lặp thay vì sự nén khí còn sót."
+      },
+      {
+        "type": "paragraph",
+        "text": "Sáu tổ hợp T01 đến T06 được bố trí để tách ảnh hưởng của từng yếu tố. T01, T02 và T03 cùng có biên độ lệch 18 kPa và tần số 0,20 Hz, trong khi áp lực cố kết lần lượt là 80, 120 và 160 kPa. T04 và T05 cùng ở mức áp lực cố kết 120 kPa và tần số 0,50 Hz, nhưng biên độ lệch thay đổi từ 12 đến 24 kPa. T06 kết hợp áp lực cố kết 160 kPa, biên độ lệch 24 kPa và tần số 1,00 Hz. Toàn bộ các trạng thái này được tổng hợp trong \\ref{tab:dieukien-thi-nghiem}, qua đó tạo cơ sở so sánh có kiểm soát."
+      },
+      {
+        "type": "paragraph",
+        "text": "Các trị số ban đầu cho thấy khi áp lực cố kết tăng, độ ẩm và hệ số rỗng nhìn chung giảm, còn độ bão hòa duy trì trong khoảng cao. T01 có độ ẩm 47,6 phần trăm và hệ số rỗng 1,24; T03 có độ ẩm 44,1 phần trăm và hệ số rỗng 1,12. Sự thay đổi này cần được tính đến khi diễn giải ảnh hưởng của áp lực cố kết, bởi các tổ hợp không hoàn toàn đồng nhất về cấu trúc ban đầu. T05 có hệ số rỗng 1,21, cao hơn T04 ở mức 1,17, nên chênh lệch lún giữa hai tổ hợp phản ánh đồng thời tác động của biên độ lệch và trạng thái lỗ rỗng."
+      },
+      {
+        "type": "paragraph",
+        "text": "Trong quá trình cố kết, áp lực buồng được giữ ổn định cho đến khi tốc độ biến dạng giảm dưới ngưỡng kiểm soát. Sau đó, tải lệch tuần hoàn được áp dụng theo dạng đều với tần số đã chọn. Biên độ ứng suất được hiểu là độ lệch quanh mức ứng suất trung bình, không phải tổng khoảng dao động từ giá trị nhỏ nhất đến giá trị lớn nhất. Cách định nghĩa này đặc biệt quan trọng khi so sánh T04 với T05, vì thay đổi biên độ từ 12 lên 24 kPa có thể làm tăng mạnh năng lượng biến dạng trong mỗi chu kỳ. Lịch sử gia tải được ghi đủ để tính cả đáp ứng thuận nghịch và phần dư."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "3.2. Đo lường, lọc tín hiệu và hiệu chỉnh"
+      },
+      {
+        "type": "paragraph",
+        "text": "Ba nhóm tín hiệu được ghi đồng bộ: biến dạng trục, áp lực nước lỗ rỗng và lực dọc trục. Với mỗi chu kỳ, giá trị cực đại, cực tiểu và giá trị trung bình được lưu riêng. Biến dạng tích lũy được tách khỏi dao động đàn hồi bằng cách theo dõi vị trí tương ứng ở cùng pha của các chu kỳ liên tiếp. Áp lực dư được xác định từ chênh lệch giữa mức áp lực cuối chu kỳ và mức nền trước khi gia tải. Độ cứng chu kỳ được tính từ tỷ số biên độ ứng suất lệch trên biên độ biến dạng, sau đó lấy trung bình ở giai đoạn cuối nhằm giảm ảnh hưởng của nhiễu đo."
+      },
+      {
+        "type": "paragraph",
+        "text": "Việc lọc tín hiệu được thực hiện theo chu kỳ thay vì làm trơn toàn bộ chuỗi theo thời gian. Cách này bảo toàn các đỉnh tải và cho phép nhận biết hiện tượng lệch pha giữa ứng suất, biến dạng và áp lực nước lỗ rỗng. Nếu lọc quá mạnh, biên độ biến dạng sẽ bị thu nhỏ và độ cứng tính toán sẽ bị đánh giá cao hơn thực tế. Ngược lại, nếu giữ toàn bộ dao động nhiễu, tham số $\\lambda$ có thể bị kéo về giá trị nhỏ một cách giả tạo. Vì vậy, dữ liệu sau lọc được kiểm tra bằng cả đường cong từng chu kỳ và xu hướng trung bình theo $N$."
+      },
+      {
+        "type": "paragraph",
+        "text": "Hàm mục tiêu dùng cho hiệu chỉnh có thể viết dưới dạng $J = \\sum_N [w_\\epsilon(\\epsilon_{a,obs}-\\epsilon_{a,cal})^2 + w_u(u_{obs}-u_{cal})^2]$. Trọng số $w_\\epsilon$ và $w_u$ được chọn để hai nhóm đại lượng có ảnh hưởng tương đương trong quá trình tối ưu. Các giá trị tham số không được chọn chỉ dựa vào sai số cuối cùng, mà còn phải thỏa điều kiện đơn điệu phù hợp: biến dạng tích lũy không giảm theo $N$, áp lực dư không vượt quá miền vật lý và độ cứng không tăng đột ngột sau khi đã suy giảm. Nhờ đó, kết quả hiệu chỉnh có thể dùng cho dự báo chứ không chỉ mô tả lại số liệu đã đo."
+      },
+      {
+        "type": "paragraph",
+        "text": "Một quy trình xử lý gồm bốn bước liên tiếp được duy trì cho mọi tổ hợp:"
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "items": [
+          "Kiểm tra trạng thái cố kết, độ bão hòa và mức ổn định của áp lực nước lỗ rỗng trước tải chu kỳ.",
+          "Tách biến dạng thuận nghịch, biến dạng dư và áp lực dư theo từng chu kỳ gia tải.",
+          "Hiệu chỉnh các tham số đàn nhớt bằng đồng thời đường biến dạng và đường áp lực nước lỗ rỗng.",
+          "Tính lún tích lũy, so sánh độ cứng cuối giai đoạn và đánh giá độ nhạy của từng tham số."
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Sai số đo được xem xét theo cả sai số tuyệt đối và sai số tương đối. Với lún nhỏ, sai số tuyệt đối vài phần trăm milimét có thể tạo ra sai số tương đối lớn; do đó không nên chỉ dùng một chỉ tiêu duy nhất để xếp hạng mô hình. Ngoài ra, các giá trị ở cuối giai đoạn chỉ phản ánh 100 chu kỳ và chưa đủ để khẳng định trạng thái dài hạn vô hạn. Kết quả phải được diễn giải trong miền số chu kỳ đã khảo sát, đồng thời dùng xu hướng của tham số giới hạn để dự báo có kiểm soát."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "4. Kết quả và diễn giải cơ học"
+      },
+      {
+        "type": "paragraph",
+        "text": "Đường cong hiệu chỉnh cho thấy biến dạng tăng nhanh trong các chu kỳ đầu rồi chuyển dần sang vùng tăng chậm. Mức tăng ban đầu gắn với sự đóng kín các khoảng rỗng dễ biến dạng và sự điều chỉnh nhanh của cấu trúc hạt. Sau đó, khi các tiếp xúc chính đã chịu tải ổn định hơn, mỗi chu kỳ bổ sung một lượng biến dạng nhỏ hơn. Dạng tiến triển này phù hợp với quan hệ $\\partial \\epsilon_a / \\partial N > 0$ và $\\partial^2 \\epsilon_a / \\partial N^2 < 0$ trong miền khảo sát. Mô hình vì vậy không chỉ tái hiện giá trị cuối mà còn mô tả được sự chuyển tiếp giữa hai giai đoạn."
+      },
+      {
+        "type": "paragraph",
+        "text": "So sánh T01, T02 và T03 cho thấy khi áp lực cố kết tăng từ 80 lên 160 kPa, biến dạng ở cùng biên độ lệch có xu hướng giảm tương đối do khung đất được nén chặt hơn. Tuy nhiên, áp lực cố kết cao không loại bỏ hoàn toàn lún tích lũy. Ở trạng thái gần giới hạn cố kết, một phần cấu trúc vẫn có thể tiếp tục điều chỉnh dưới tác dụng lặp, đặc biệt khi tải lệch duy trì đủ lâu. Kết quả này cho thấy không nên suy luận rằng nền có áp lực cố kết lớn sẽ luôn có độ cứng không đổi. Sự giảm biến dạng tức thời và sự giảm tốc độ tích lũy là hai biểu hiện cần được tách riêng."
+      },
+      {
+        "type": "paragraph",
+        "text": "Ảnh hưởng của biên độ lệch thể hiện rõ khi so sánh T04 và T05. Khi biên độ tăng từ 12 lên 24 kPa, lún cuối giai đoạn tăng từ 1,74 lên 2,48 mm, áp lực dư tăng từ 11,8 lên 17,2 kPa và độ cứng chu kỳ giảm từ 428 xuống 365 kPa. Sự thay đổi đồng thời của ba đại lượng cho thấy biên độ không chỉ làm tăng biến dạng trực tiếp mà còn làm giảm ứng suất hữu hiệu, qua đó tạo vòng tương tác giữa mềm hóa và tích lũy áp lực dư. Quan hệ này phù hợp với nhận xét về tác động của biên độ ứng suất lên đất sét bão hòa \\cite{3}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Tần số gia tải điều chỉnh lượng thời gian có sẵn cho tiêu tán. T06 có tần số 1,00 Hz, cao hơn các tổ hợp còn lại, đồng thời có biên độ lệch lớn; kết quả là áp lực dư cuối giai đoạn đạt 21,6 kPa và độ cứng chu kỳ chỉ còn 331 kPa. Không thể quy toàn bộ mức tăng lún của T06 cho tần số, bởi biên độ và trạng thái cố kết cũng thay đổi. Dù vậy, sự kết hợp này cho thấy tải nhanh có thể duy trì áp lực dư ở mức cao, làm giảm $\\sigma_v^{eff}$ và kéo theo tốc độ biến dạng lớn hơn. Ảnh hưởng của tần số đến độ cứng động đã được nhận diện trong các khảo sát đất sét cố kết chịu tải lặp \\cite{7}."
+      },
+      {
+        "type": "paragraph",
+        "text": "T01 có lún tích lũy 1,82 mm, áp lực dư 12,4 kPa và độ cứng 410 kPa. T02 tăng lên 2,16 mm, 15,1 kPa và 386 kPa; T03 đạt 2,63 mm, 18,7 kPa và 352 kPa. Các giá trị này cho thấy sự thay đổi áp lực cố kết có thể làm biến đổi cả lún lẫn áp lực dư, bởi trạng thái cấu trúc ban đầu thay đổi theo quá trình nén. T04 có lún nhỏ nhất, 1,74 mm, nhờ biên độ thấp; T05 và T06 lần lượt tăng lên 2,48 và 3,05 mm. Các đại lượng cuối giai đoạn được kiểm tra trực tiếp với \\ref{tab:ketqua-lun}, còn thứ tự giữa các tổ hợp được thể hiện trong \\ref{fig:chart}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Mối quan hệ giữa lún và áp lực dư có thể xem xét qua tỷ số $R_s = S / \\Delta u$. Tỷ số này không phải là hằng số vật liệu, bởi nó phụ thuộc vào chiều cao lớp đất, biến dạng thể tích và lịch sử tải. Nếu $R_s$ tăng theo số chu kỳ, biến dạng khung hạt đang phát triển nhanh hơn tốc độ tạo áp lực dư; nếu giảm, áp lực nước lỗ rỗng đang đóng vai trò chi phối. Việc theo dõi tỷ số này giúp tránh đánh đồng mọi trường hợp lún lớn với cùng một cơ chế. Trong các tổ hợp có tần số cao, cần đặc biệt kiểm tra xem sự gia tăng lún xuất phát từ biến dạng trực tiếp hay từ sự suy giảm ứng suất hữu hiệu."
+      },
+      {
+        "type": "paragraph",
+        "text": "Độ cứng cuối giai đoạn giảm theo mức áp lực dư, nhưng quan hệ không hoàn toàn tuyến tính. T06 có áp lực dư cao nhất và độ cứng thấp nhất, trong khi T01 có áp lực dư 12,4 kPa nhưng độ cứng 410 kPa. Chênh lệch này phản ánh ảnh hưởng của biên độ lệch và lịch sử nén bên cạnh vai trò của nước lỗ rỗng. Khi biên độ lớn, các vòng trễ ứng suất - biến dạng mở rộng, làm tăng năng lượng tiêu tán trong mỗi chu kỳ. Mô hình đàn nhớt có thể biểu diễn hiện tượng này thông qua sự thay đổi của $\\lambda$, $\\eta$ và mức giới hạn biến dạng thay vì dùng một mô đun duy nhất cho toàn bộ lịch sử."
+      },
+      {
+        "type": "paragraph",
+        "text": "Lún được chuyển đổi từ biến dạng thể tích theo công thức tham chiếu \\ref{eq:cumulative-settlement}, tức $S(N) = H \\int_0^N \\epsilon_v(n)dn$. Trong đó $H$ là chiều cao lớp đất ban đầu và $\\epsilon_v$ là biến dạng thể tích trung bình theo số chu kỳ. Với tải nhiều giai đoạn, tích phân được chia thành các đoạn tương ứng rồi cộng lại. Cách làm này có ưu điểm là giữ được sự khác biệt giữa giai đoạn tải nhanh, giai đoạn nghỉ và giai đoạn tải tiếp theo. Nó cũng cho phép đưa kết quả thí nghiệm quy mô nhỏ vào bài toán nền có chiều dày lớn hơn, miễn là điều kiện đồng nhất và quy luật chuyển đổi được kiểm tra."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "5. Bàn luận, độ nhạy và ý nghĩa thiết kế"
+      },
+      {
+        "type": "paragraph",
+        "text": "Phân tích độ nhạy cho thấy hệ số nhớt là tham số quan trọng đối với độ dốc biến dạng trong giai đoạn đầu. Khi $\\lambda$ giảm, phần lớn biến dạng giới hạn xuất hiện sớm, làm tăng dự báo lún tại các chu kỳ nhỏ. Khi $\\lambda$ tăng, đường cong phẳng hơn và mô hình có xu hướng phân bổ biến dạng vào giai đoạn sau. Tham số này cần được hiệu chỉnh từ nhiều điểm trên đường cong, không nên suy ra chỉ từ giá trị ở chu kỳ cuối. Kết luận tương tự đã được nêu trong nghiên cứu về tham số nhớt của nền chịu tải tuần hoàn \\cite{9}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Tham số $\\eta$ kiểm soát tốc độ tiến tới áp lực dư giới hạn. Khi $\\eta$ nhỏ, áp lực dư tăng nhanh và ứng suất hữu hiệu giảm sớm; khi $\\eta$ lớn, nước có thêm thời gian để tiêu tán tương đối giữa các chu kỳ. Độ nhạy của dự báo lún đối với $\\eta$ thường tăng khi số chu kỳ mở rộng, bởi sai khác nhỏ trong áp lực dư có thể tích lũy thành sai khác lớn về biến dạng. Phân tích tiêu tán chậm cho đất sét chịu tải lặp cũng cho thấy cần tách rõ tốc độ phát sinh áp lực dư khỏi tốc độ biến dạng khung hạt \\cite{4}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Một vấn đề cần chú ý là sự tương quan giữa các tham số. Tăng biến dạng giới hạn có thể tạo hiệu ứng trên đường cong tương tự như giảm $\\lambda$ trong một khoảng số chu kỳ ngắn. Tương tự, tăng $\\Delta u_{\\infty}$ có thể bù cho việc chọn $\\eta$ lớn khi chỉ xét vài chu kỳ đầu. Vì vậy, cần hiệu chỉnh trên phạm vi đủ rộng và sử dụng đồng thời biến dạng, áp lực dư cùng độ cứng. Nếu chỉ dùng một đại lượng quan sát, nghiệm tham số có thể không duy nhất. Việc hiệu chỉnh nhiều mục tiêu giúp giảm tình trạng tham số có giá trị toán học phù hợp nhưng thiếu ý nghĩa cơ học."
+      },
+      {
+        "type": "paragraph",
+        "text": "Đối với nền đường chịu tải lặp, quy trình nên bắt đầu bằng xác định áp lực cố kết và điều kiện thoát nước tại cao trình khảo sát. Sau đó, biên độ và tần số tải cần được chuyển thành chuỗi chu kỳ tương đương, thay vì chỉ dùng một ứng suất đại diện. Nếu nền có lớp đất thay đổi theo chiều sâu, chiều cao $H$ trong phép tích phân phải được chia theo từng lớp với tham số riêng. Độ lún tổng được tính bằng tổng các đóng góp, nhưng áp lực dư ở ranh giới lớp cần được truyền liên tục. Cách tổ chức này phù hợp với việc đánh giá khả năng phục vụ của nền yếu chịu rung động nhiều giai đoạn \\cite{12}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Đối với bệ máy, biên độ dao động thường nhỏ hơn nhưng số chu kỳ có thể rất lớn. Trong trường hợp đó, phần biến dạng tăng chậm sau chu kỳ 100 vẫn đáng quan tâm, dù giá trị cuối thí nghiệm có vẻ ổn định. Cần ngoại suy bằng hàm tiến tới giới hạn và kiểm tra sự thay đổi của độ cứng qua từng khoảng chu kỳ. Nếu độ cứng giảm liên tục, tần số riêng và biên độ rung của hệ kết cấu - nền có thể thay đổi theo thời gian. Vì vậy, kiểm tra lún cần được thực hiện đồng thời với kiểm tra chuyển vị dao động và điều kiện làm việc của thiết bị."
+      },
+      {
+        "type": "paragraph",
+        "text": "Mối liên hệ giữa biến dạng thể tích và lún tích lũy cho thấy việc chỉ đo biến dạng trục có thể chưa đủ trong các trường hợp biến dạng ngang đáng kể. Trong điều kiện ba trục, biến dạng thể tích có thể được suy ra từ ba thành phần biến dạng, nhưng cần bảo đảm các cảm biến được đồng bộ và hiệu chuẩn. Khi có thoát nước không hoàn toàn, sự thay đổi thể tích đo được bao gồm cả phần do khung hạt và phần do nước dịch chuyển. Vì vậy, tham số chuyển đổi từ $\\epsilon_a$ sang $\\epsilon_v$ cần được kiểm tra riêng. Quan hệ giữa biến dạng thể tích và độ lún tích lũy đã được thảo luận trong nghiên cứu về đất sét bão hòa \\cite{8}."
+      },
+      {
+        "type": "paragraph",
+        "text": "Các giới hạn của mô hình cần được nêu rõ khi áp dụng. Chương trình hiện tập trung vào đất sét có độ bão hòa cao, số chu kỳ hữu hạn và một số tần số cố định. Mô hình chưa phân tách đầy đủ ảnh hưởng của tính thấm dị hướng, cấu trúc phân lớp, biến thiên nhiệt độ hoặc tải không điều hòa. Ngoài ra, áp lực dư được gom vào một nhánh hàm duy nhất nên có thể chưa mô tả được trường hợp xuất hiện đồng thời tiêu tán nhanh và tiêu tán rất chậm. Các hàm tiến tới giới hạn vẫn hữu ích cho dự báo ban đầu, nhưng cần được kiểm chứng bằng quan trắc dài hạn trước khi dùng cho thiết kế quan trọng \\cite{6}."
+      },
+      {
+        "type": "box",
+        "kind": "remark",
+        "title": "Lưu ý khi chuyển tham số sang bài toán nền",
+        "text": "Tham số hiệu chỉnh từ nén ba trục chu kỳ chỉ nên được sử dụng trong miền ứng suất, tần số và trạng thái cố kết tương đương với điều kiện đã khảo sát. Khi thay đổi chiều cao lớp đất hoặc điều kiện thoát nước, cần tính lại biến dạng thể tích, thời gian tiêu tán và độ cứng chu kỳ thay vì sao chép trực tiếp một giá trị cuối giai đoạn. Việc kiểm tra đồng thời lún, áp lực dư và độ cứng sẽ làm giảm nguy cơ đánh giá thiếu chuyển vị dài hạn."
+      },
+      {
+        "type": "paragraph",
+        "text": "So sánh với các hướng tiếp cận trước cho thấy mô hình hiện tại có ưu điểm ở cấu trúc gọn và khả năng liên kết trực tiếp với số chu kỳ. Mô hình đàn nhớt cho dự báo lún tích lũy dưới tải lặp cung cấp cơ sở cho nhánh biến dạng, trong khi các nghiên cứu về suy giảm mô đun nhấn mạnh vai trò của tiêu tán chậm \\cite{1} \\cite{10}. Sự kết hợp hai khía cạnh này làm rõ vì sao cùng một biên độ tải có thể tạo ra lún khác nhau khi lịch sử cố kết hoặc tần số thay đổi. Tuy nhiên, mô hình không thay thế cho phân tích ứng suất - biến dạng đầy đủ trong vùng gần phá hoại, mà nên được xem là công cụ đánh giá biến dạng phục vụ."
+      },
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "6. Kết luận và hướng phát triển"
+      },
+      {
+        "type": "paragraph",
+        "text": "Nghiên cứu đã xây dựng một quy trình đánh giá lún tích lũy của đất sét cố kết chịu tải trọng chu kỳ bằng mô hình đàn nhớt hai nhánh. Nhánh biến dạng mô tả sự tăng nhanh ở các chu kỳ đầu và tiến tới giới hạn, còn nhánh áp lực nước lỗ rỗng mô tả sự hình thành và duy trì áp lực dư khi tiêu tán bị hạn chế. Quan hệ ứng suất hữu hiệu được dùng làm cầu nối giữa áp lực nước lỗ rỗng, độ cứng chu kỳ và biến dạng. Cách xây dựng này phù hợp với mục tiêu theo dõi lịch sử tải thay vì chỉ kiểm tra trạng thái cuối."
+      },
+      {
+        "type": "paragraph",
+        "text": "Kết quả sáu tổ hợp cho thấy biên độ lệch lớn làm tăng lún và áp lực dư, đồng thời làm giảm độ cứng chu kỳ. Áp lực cố kết cao hơn thường làm giảm biến dạng ở cùng biên độ, nhưng không loại bỏ biến dạng dư do tải lặp. Tần số cao làm rút ngắn thời gian tiêu tán giữa các lần gia tải; khi kết hợp với biên độ lớn, tác động này làm áp lực dư duy trì ở mức cao. T06 có lún 3,05 mm, áp lực dư 21,6 kPa và độ cứng 331 kPa, thể hiện rõ sự tương tác giữa ba yếu tố điều khiển."
+      },
+      {
+        "type": "paragraph",
+        "text": "Các tham số $\\lambda$ và $\\eta$ có vai trò khác nhau trong dự báo. $\\lambda$ chi phối tốc độ phát triển biến dạng trong giai đoạn đầu, còn $\\eta$ chi phối mức tiến tới áp lực dư và ảnh hưởng gián tiếp đến độ cứng ở giai đoạn sau. Vì vậy, việc hiệu chỉnh cần dùng đồng thời đường cong biến dạng và đường cong áp lực nước lỗ rỗng. Công thức $S(N) = H \\int_0^N \\epsilon_v(n)dn$ cho phép chuyển đáp ứng vật liệu thành lún của lớp đất, đồng thời mở rộng được cho tải nhiều giai đoạn nếu các đoạn tích phân được xử lý riêng."
+      },
+      {
+        "type": "paragraph",
+        "text": "Về ứng dụng, quy trình có thể hỗ trợ lựa chọn tham số nền đường, bệ máy và công trình chịu rung động trên đất sét yếu. Khi đưa vào tính toán, cần xác định đúng trạng thái cố kết, điều kiện thoát nước và miền tần số của tải thực tế. Các kết quả không nên được dùng như một giá trị cố định cho mọi lớp đất, vì độ rỗng, lịch sử nén và cấu trúc địa tầng có thể làm thay đổi đáng kể đáp ứng. Nên kết hợp mô phỏng với quan trắc áp lực nước lỗ rỗng và chuyển vị trong giai đoạn khai thác để cập nhật tham số."
+      },
+      {
+        "type": "paragraph",
+        "text": "Hướng phát triển tiếp theo gồm mở rộng số chu kỳ, bổ sung tải không điều hòa, khảo sát thoát nước không hoàn toàn và xây dựng mô hình nhiều nhánh thời gian. Một nhánh nhanh có thể mô tả tái sắp xếp khung hạt, trong khi nhánh chậm mô tả tiêu tán áp lực nước lỗ rỗng và cố kết thứ cấp. Ngoài ra, cần đánh giá sự thay đổi của tham số theo chiều sâu và theo lịch sử tải nhiều giai đoạn. Khi các dữ liệu hiện trường được bổ sung, mô hình có thể được kiểm tra không chỉ bằng lún cuối mà còn bằng độ lệch pha, áp lực dư và suy giảm độ cứng trong suốt vòng đời công trình."
+      },
+      {
+        "type": "paragraph",
+        "text": "Tóm lại, lún dưới tải trọng chu kỳ là kết quả của tương tác giữa biến dạng nhớt, tái sắp xếp cấu trúc, áp lực nước lỗ rỗng và trạng thái ứng suất hữu hiệu. Việc mô tả riêng từng cơ chế rồi liên kết chúng theo số chu kỳ tạo ra cách đánh giá minh bạch hơn so với việc dùng một mô đun đàn hồi không đổi. Sơ đồ quy trình tại \\ref{fig:diagram} có thể được dùng như trình tự thực hành: xác định trạng thái đất, thực hiện gia tải, ghi nhận đáp ứng, hiệu chỉnh tham số và đánh giá lún. Với việc kiểm soát miền áp dụng và kiểm chứng bổ sung, mô hình cung cấp cơ sở định lượng cho dự báo chuyển vị dài hạn trong nền đất sét yếu."
+      }
+    ]
+  },
+  "hash": "2b1023aa2090af2d6a59c33eda7d1b941b8b9e567cf6c5b50c26f44c67880faa"
+}
